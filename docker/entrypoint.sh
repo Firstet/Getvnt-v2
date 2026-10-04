@@ -9,10 +9,11 @@ fi
 # Ensure storage and database directories exist
 mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache database storage/logs
 touch database/database.sqlite
+touch storage/logs/laravel.log
 
-# Set permissions for www-data
+# Initial permission set for setup commands
 chown -R www-data:www-data storage bootstrap/cache database .env
-chmod -R 777 storage bootstrap/cache database database/database.sqlite .env
+chmod -R 777 storage bootstrap/cache database database/database.sqlite storage/logs/laravel.log .env
 
 # Generate application key if missing
 php artisan key:generate --force || true
@@ -25,6 +26,11 @@ php artisan config:clear
 php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
+
+# Re-apply full write permissions to storage, logs, and database after artisan commands
+touch storage/logs/laravel.log
+chown -R www-data:www-data storage bootstrap/cache database .env
+chmod -R 777 storage bootstrap/cache database database/database.sqlite storage/logs/laravel.log .env
 
 # Execute Supervisord
 exec /usr/bin/supervisord -c /etc/supervisord.conf

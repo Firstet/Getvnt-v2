@@ -52,10 +52,12 @@ RUN chmod +x docker/entrypoint.sh
 # Verify Nginx configuration syntax at build time
 RUN nginx -t
 
-# Create storage, cache folders, and sqlite DB if missing & set full permissions
-RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache \
+# Create storage, cache folders, logs, and sqlite DB if missing & set full permissions
+RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions storage/logs bootstrap/cache \
     && touch database/database.sqlite \
-    && chmod -R 777 storage bootstrap/cache database/database.sqlite
+    && touch storage/logs/laravel.log \
+    && chown -R www-data:www-data storage bootstrap/cache database \
+    && chmod -R 777 storage bootstrap/cache database database/database.sqlite storage/logs/laravel.log
 
 EXPOSE 80
 
