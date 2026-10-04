@@ -11,6 +11,15 @@ services:
       - "80"
     ports:
       - "80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.getvnt-http.rule=Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
+      - "traefik.http.routers.getvnt-http.entrypoints=web"
+      - "traefik.http.routers.getvnt-http.service=getvnt-service"
+      - "traefik.http.routers.getvnt-https.rule=Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
+      - "traefik.http.routers.getvnt-https.entrypoints=websecure"
+      - "traefik.http.routers.getvnt-https.service=getvnt-service"
+      - "traefik.http.services.getvnt-service.loadbalancer.server.port=80"
     environment:
       - APP_NAME=Getvnt
       - APP_ENV=production
