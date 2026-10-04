@@ -844,7 +844,12 @@ if (! function_exists('app_url')) {
             return url($path);
         }
 
-        return 'https://app.'._base_domain().$path;
+        $appHost = parse_url(config('app.url'), PHP_URL_HOST);
+        if ($appHost && str_starts_with($appHost, 'app.')) {
+            return 'https://'.$appHost.$path;
+        }
+
+        return url($path);
     }
 }
 

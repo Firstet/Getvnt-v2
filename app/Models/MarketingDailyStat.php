@@ -176,6 +176,17 @@ class MarketingDailyStat extends Model
             return;
         }
 
+        $driver = \Illuminate\Support\Facades\DB::connection()->getDriverName();
+        if ($driver === 'sqlite') {
+            CounterUtils::statement(
+                "INSERT INTO marketing_daily_stats (date, {$column})
+                 VALUES (?, 1)
+                 ON CONFLICT(date) DO UPDATE SET {$column} = {$column} + 1",
+                [now()->toDateString()]
+            );
+            return;
+        }
+
         CounterUtils::statement(
             "INSERT INTO marketing_daily_stats (date, {$column})
              VALUES (?, 1)

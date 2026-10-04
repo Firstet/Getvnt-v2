@@ -1198,6 +1198,10 @@ if (config('app.is_nexus')) {
         Route::get('/examples', [MarketingController::class, 'demos'])->name('marketing.demos');
         Route::get('/search', [MarketingController::class, 'search'])->name('marketing.search');
         Route::get('/browse', [MarketingController::class, 'browse'])->name('marketing.browse');
+        Route::get('/events', [MarketingController::class, 'browse'])->name('marketing.events');
+        Route::get('/schedules', [MarketingController::class, 'search'])->name('marketing.schedules');
+        Route::get('/explore', [MarketingController::class, 'browse']);
+        Route::get('/calendar', [MarketingController::class, 'browse']);
         Route::post('/browse/event/{hash}/toggle-discovery', [MarketingController::class, 'toggleEventDiscovery'])->name('marketing.discovery.toggle')->middleware('auth');
         Route::post('/browse/federated/{hash}/block', [MarketingController::class, 'toggleFederatedBlock'])->name('marketing.federation.block')->middleware('auth');
         // Beacon target for outbound clicks on a federated listing. The card link
@@ -1435,18 +1439,18 @@ if (config('app.is_nexus')) {
         Route::get('/docs/referral-program', [MarketingController::class, 'docsReferralProgram'])->name('marketing.docs.referral_program');
         Route::get('/docs/fan-content', fn () => redirect('/docs/creating-events#fan-content', 301))->name('marketing.docs.fan_content');
         Route::get('/docs/polls', fn () => redirect('/docs/creating-events#polls', 301))->name('marketing.docs.polls');
-        // Selfhost section
-        Route::get('/docs/selfhost', [MarketingController::class, 'docsSelfhostIndex'])->name('marketing.docs.selfhost');
-        Route::get('/docs/selfhost/installation', [MarketingController::class, 'docsSelfhostInstallation'])->name('marketing.docs.selfhost.installation');
-        Route::get('/docs/selfhost/stripe', [MarketingController::class, 'docsSelfhostStripe'])->name('marketing.docs.selfhost.stripe');
-        Route::get('/docs/selfhost/google-calendar', [MarketingController::class, 'docsSelfhostGoogleCalendar'])->name('marketing.docs.selfhost.google_calendar');
-        Route::get('/docs/selfhost/google-wallet', [MarketingController::class, 'docsSelfhostGoogleWallet'])->name('marketing.docs.selfhost.google_wallet');
-        Route::get('/docs/selfhost/microsoft-calendar', [MarketingController::class, 'docsSelfhostMicrosoftCalendar'])->name('marketing.docs.selfhost.microsoft_calendar');
-        Route::get('/docs/selfhost/boost', [MarketingController::class, 'docsSelfhostBoost'])->name('marketing.docs.selfhost.boost');
-        Route::get('/docs/selfhost/admin', [MarketingController::class, 'docsSelfhostAdmin'])->name('marketing.docs.selfhost.admin');
-        Route::get('/docs/selfhost/email', [MarketingController::class, 'docsSelfhostEmail'])->name('marketing.docs.selfhost.email');
-        Route::get('/docs/selfhost/ai', [MarketingController::class, 'docsSelfhostAi'])->name('marketing.docs.selfhost.ai');
-        Route::get('/docs/selfhost/accessibility', [MarketingController::class, 'docsSelfhostAccessibility'])->name('marketing.docs.selfhost.accessibility');
+        // Selfhost section (redirected to docs)
+        Route::get('/docs/selfhost', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost');
+        Route::get('/docs/selfhost/installation', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.installation');
+        Route::get('/docs/selfhost/stripe', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.stripe');
+        Route::get('/docs/selfhost/google-calendar', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.google_calendar');
+        Route::get('/docs/selfhost/google-wallet', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.google_wallet');
+        Route::get('/docs/selfhost/microsoft-calendar', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.microsoft_calendar');
+        Route::get('/docs/selfhost/boost', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.boost');
+        Route::get('/docs/selfhost/admin', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.admin');
+        Route::get('/docs/selfhost/email', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.email');
+        Route::get('/docs/selfhost/ai', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.ai');
+        Route::get('/docs/selfhost/accessibility', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.accessibility');
         // SaaS section
         Route::get('/docs/saas', [MarketingController::class, 'docsSaasSetup'])->name('marketing.docs.saas.setup');
         Route::get('/docs/saas/custom-domains', [MarketingController::class, 'docsSaasCustomDomains'])->name('marketing.docs.saas.custom_domains');
@@ -1476,8 +1480,13 @@ if (config('app.is_nexus')) {
             Route::get('/pricing', fn () => redirect('/', 301))->name('marketing.pricing');
             Route::get('/about', [MarketingController::class, 'about'])->name('marketing.about');
             Route::get('/examples', [MarketingController::class, 'demos'])->name('marketing.demos');
+            Route::get('/demos', fn () => redirect()->route('marketing.demos', [], 301));
             Route::get('/search', [MarketingController::class, 'search'])->name('marketing.search');
             Route::get('/browse', [MarketingController::class, 'browse'])->name('marketing.browse');
+            Route::get('/events', [MarketingController::class, 'browse'])->name('marketing.events');
+            Route::get('/schedules', [MarketingController::class, 'search'])->name('marketing.schedules');
+            Route::get('/explore', [MarketingController::class, 'browse']);
+            Route::get('/calendar', [MarketingController::class, 'browse']);
             Route::post('/browse/event/{hash}/toggle-discovery', [MarketingController::class, 'toggleEventDiscovery'])->name('marketing.discovery.toggle')->middleware('auth');
             Route::post('/browse/federated/{hash}/block', [MarketingController::class, 'toggleFederatedBlock'])->name('marketing.federation.block')->middleware('auth');
             // Beacon target for outbound clicks on a federated listing. The card link
@@ -1717,18 +1726,18 @@ if (config('app.is_nexus')) {
             Route::get('/docs/referral-program', [MarketingController::class, 'docsReferralProgram'])->name('marketing.docs.referral_program');
             Route::get('/docs/fan-content', fn () => redirect('/docs/creating-events#fan-content', 301))->name('marketing.docs.fan_content');
             Route::get('/docs/polls', fn () => redirect('/docs/creating-events#polls', 301))->name('marketing.docs.polls');
-            // Selfhost section
-            Route::get('/docs/selfhost', [MarketingController::class, 'docsSelfhostIndex'])->name('marketing.docs.selfhost');
-            Route::get('/docs/selfhost/installation', [MarketingController::class, 'docsSelfhostInstallation'])->name('marketing.docs.selfhost.installation');
-            Route::get('/docs/selfhost/stripe', [MarketingController::class, 'docsSelfhostStripe'])->name('marketing.docs.selfhost.stripe');
-            Route::get('/docs/selfhost/google-calendar', [MarketingController::class, 'docsSelfhostGoogleCalendar'])->name('marketing.docs.selfhost.google_calendar');
-            Route::get('/docs/selfhost/google-wallet', [MarketingController::class, 'docsSelfhostGoogleWallet'])->name('marketing.docs.selfhost.google_wallet');
-            Route::get('/docs/selfhost/microsoft-calendar', [MarketingController::class, 'docsSelfhostMicrosoftCalendar'])->name('marketing.docs.selfhost.microsoft_calendar');
-            Route::get('/docs/selfhost/boost', [MarketingController::class, 'docsSelfhostBoost'])->name('marketing.docs.selfhost.boost');
-            Route::get('/docs/selfhost/admin', [MarketingController::class, 'docsSelfhostAdmin'])->name('marketing.docs.selfhost.admin');
-            Route::get('/docs/selfhost/email', [MarketingController::class, 'docsSelfhostEmail'])->name('marketing.docs.selfhost.email');
-            Route::get('/docs/selfhost/ai', [MarketingController::class, 'docsSelfhostAi'])->name('marketing.docs.selfhost.ai');
-            Route::get('/docs/selfhost/accessibility', [MarketingController::class, 'docsSelfhostAccessibility'])->name('marketing.docs.selfhost.accessibility');
+            // Selfhost section (redirected to docs)
+            Route::get('/docs/selfhost', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost');
+            Route::get('/docs/selfhost/installation', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.installation');
+            Route::get('/docs/selfhost/stripe', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.stripe');
+            Route::get('/docs/selfhost/google-calendar', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.google_calendar');
+            Route::get('/docs/selfhost/google-wallet', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.google_wallet');
+            Route::get('/docs/selfhost/microsoft-calendar', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.microsoft_calendar');
+            Route::get('/docs/selfhost/boost', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.boost');
+            Route::get('/docs/selfhost/admin', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.admin');
+            Route::get('/docs/selfhost/email', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.email');
+            Route::get('/docs/selfhost/ai', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.ai');
+            Route::get('/docs/selfhost/accessibility', fn () => redirect('/docs', 301))->name('marketing.docs.selfhost.accessibility');
             // SaaS section
             Route::get('/docs/saas', [MarketingController::class, 'docsSaasSetup'])->name('marketing.docs.saas.setup');
             Route::get('/docs/saas/custom-domains', [MarketingController::class, 'docsSaasCustomDomains'])->name('marketing.docs.saas.custom_domains');

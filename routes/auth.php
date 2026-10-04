@@ -33,6 +33,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['app_subdomain', 'guest'])->group(function () {
     Route::get('sign_up', [RegisteredUserController::class, 'create'])
         ->name('sign_up');
+    Route::get('signup', fn () => redirect()->route('sign_up'));
+    Route::get('register', fn () => redirect()->route('sign_up'));
 
     Route::post('sign_up/send-code', [RegisteredUserController::class, 'sendVerificationCode'])
         ->name('sign_up.send_code')
@@ -47,12 +49,16 @@ Route::middleware(['app_subdomain', 'guest'])->group(function () {
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('login');
+    Route::get('signin', fn () => redirect()->route('login'));
+    Route::get('log-in', fn () => redirect()->route('login'));
 
     Route::post('login', [AuthenticatedSessionController::class, 'store'])
         ->middleware('throttle:30,1,login');
 
     Route::get('reset-password', [PasswordResetLinkController::class, 'create'])
         ->name('password.request');
+    Route::get('forgot-password', fn () => redirect()->route('password.request'));
+    Route::get('forgot_password', fn () => redirect()->route('password.request'));
 
     Route::post('reset-password', [PasswordResetLinkController::class, 'store'])
         ->name('password.email')

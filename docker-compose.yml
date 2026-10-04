@@ -30,10 +30,10 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=dokploy-network"
-      - "traefik.http.routers.getvnt-web.rule=Host(`getvnt.com`) || Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
+      - "traefik.http.routers.getvnt-web.rule=Host(`getvnt.com`) || Host(`www.getvnt.com`) || Host(`app.getvnt.com`) || Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
       - "traefik.http.routers.getvnt-web.entrypoints=web"
       - "traefik.http.routers.getvnt-web.service=getvnt-service"
-      - "traefik.http.routers.getvnt-websecure.rule=Host(`getvnt.com`) || Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
+      - "traefik.http.routers.getvnt-websecure.rule=Host(`getvnt.com`) || Host(`www.getvnt.com`) || Host(`app.getvnt.com`) || Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
       - "traefik.http.routers.getvnt-websecure.entrypoints=websecure"
       - "traefik.http.routers.getvnt-websecure.service=getvnt-service"
       - "traefik.http.routers.getvnt-websecure.tls.certresolver=letsencrypt"

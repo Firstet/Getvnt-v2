@@ -10,13 +10,17 @@ class RedirectToAppSubdomain
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $host = $request->getHost();
-        if (config('app.is_testing') || config('app.env') === 'local' || ! config('app.hosted') || str_contains($host, 'sslip.io') || filter_var($host, FILTER_VALIDATE_IP)) {
-            return $next($request);
-        }
+        $appHost = parse_url(config('app.url'), PHP_URL_HOST);
 
-        if (! str_starts_with($request->getHost(), 'app.')) {
-            return redirect(app_url($request->getRequestUri()), 302);
+        if ($appHost && str_starts_with($appHost, 'app.')) {
+            $host = $request->getHost();
+            if (config('app.is_testing') || config('app.env') === 'local' || ! config('app.hosted') || str_contains($host, 'sslip.io') || filter_var($host, FILTER_VALIDATE_IP)) {
+                return $next($request);
+            }
+
+            if (! str_starts_with($host, 'app.')) {
+                return redirect(app_url($request->getRequestUri()), 302);
+            }
         }
 
         return $next($request);

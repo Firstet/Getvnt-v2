@@ -58,6 +58,7 @@ class LegalDocument extends Model
     public const BUILTIN_VIEWS = [
         self::PRIVACY => 'marketing.privacy',
         self::TERMS => 'marketing.terms',
+        self::COOKIES => 'marketing.privacy',
     ];
 
     private const INDEX_CACHE_KEY = 'legal_documents_index';

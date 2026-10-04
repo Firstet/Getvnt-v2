@@ -33,10 +33,13 @@ fi
 # Run database migrations
 php artisan migrate --force || true
 
-# Clear all caches
-php artisan config:clear
-php artisan cache:clear
-php artisan route:clear
+# Ensure PHP-FPM preserves environment variables
+echo "clear_env = no" >> /usr/local/etc/php-fpm.d/www.conf 2>/dev/null || true
+echo "clear_env = no" >> /etc/php82/php-fpm.d/www.conf 2>/dev/null || true
+
+# Cache config and routes for high performance and consistent env values
+php artisan config:cache
+php artisan route:cache
 php artisan view:clear
 
 # Re-apply write permissions

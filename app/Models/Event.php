@@ -1540,9 +1540,11 @@ class Event extends Model
     public static function constrainNotPasswordProtected($query, string $table = 'events')
     {
         $column = $table.'.event_password';
+        $driver = $query->getConnection()->getDriverName();
+        $lenFunc = $driver === 'sqlite' ? 'LENGTH' : 'CHAR_LENGTH';
 
         return $query->where(fn ($q) => $q->whereNull($column)
-            ->orWhereRaw('CHAR_LENGTH('.$q->getGrammar()->wrap($column).') = 0'));
+            ->orWhereRaw($lenFunc.'('.$q->getGrammar()->wrap($column).') = 0'));
     }
 
     public function isAtVenue($subdomain)
@@ -1961,8 +1963,10 @@ class Event extends Model
      */
     private static function afterEventsEndSql(string $table): string
     {
+        $driver = \Illuminate\Support\Facades\DB::connection()->getDriverName();
+        $lenFunc = $driver === 'sqlite' ? 'LENGTH' : 'CHAR_LENGTH';
         $occurrences = "LEAST(GREATEST(CAST({$table}.recurring_end_value AS DECIMAL(65,0)), 0), 100000)"
-            ." + COALESCE(FLOOR(CHAR_LENGTH({$table}.recurring_exclude_dates) / 13), 0)";
+            ." + COALESCE(FLOOR({$lenFunc}({$table}.recurring_exclude_dates) / 13), 0)";
 
         $sub12 = sql_date_sub("{$table}.starts_at", 12, 'HOUR');
         $add14 = sql_date_add("{$table}.starts_at", 14, 'HOUR');
