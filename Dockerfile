@@ -12,6 +12,7 @@ FROM php:8.2-fpm-alpine
 # Install Nginx, Supervisor, and required system libraries
 RUN apk add --no-cache \
     nginx \
+    supervisor \
     freetype-dev \
     libjpeg-turbo-dev \
     libpng-dev \
@@ -21,7 +22,7 @@ RUN apk add --no-cache \
     unzip \
     oniguruma-dev
 
-# Install PHP extensions required by Laravel & Getvnt (gd, intl, pdo_mysql, zip, opcache, etc.)
+# Install PHP extensions required by Laravel & Getvnt
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd intl pdo pdo_mysql bcmath zip opcache
 
@@ -41,29 +42,10 @@ COPY --from=node-builder /app/public/build ./public/build
 # Optimize Autoloader
 RUN composer dump-autoload --optimize
 
-# Configure Nginx for Laravel public directory
-RUN mkdir -p /etc/nginx/http.d
-RUN echo 'server { \
-    listen 80; \
-    server_name _; \
-    root /var/www/html/public; \
-    index index.php index.html; \
-    charset utf-8; \
-    location / { \
-        try_files $uri $uri/ /index.php?$query_string; \
-    } \
-    location = /favicon.ico { access_log off; log_not_found off; } \
-    location = /robots.txt  { access_log off; log_not_found off; } \
-    error_page 404 /index.php; \
-    location ~ \.php$ { \
-        fastcgi_pass 127.0.0.1:9000; \
-        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name; \
-        include fastcgi_params; \
-    } \
-    location ~ /\.(?!well-known).* { \
-        deny all; \
-    } \
-}' > /etc/nginx/http.d/default.conf
+# Copy Nginx & Supervisor Configs
+COPY docker/nginx.conf /etc/nginx/http.d/default.conf
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/supervisord.conf /etc/supervisord.conf
 
 # Set permissions for Laravel storage & bootstrap/cache
 RUN chown -R www-data:www-data storage bootstrap/cache \
@@ -71,5 +53,5 @@ RUN chown -R www-data:www-data storage bootstrap/cache \
 
 EXPOSE 80
 
-# Start PHP-FPM and Nginx
-CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
+# Start Supervisor (manages both PHP-FPM and Nginx)
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
