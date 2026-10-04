@@ -9,6 +9,7 @@ export QUEUE_CONNECTION=sync
 export APP_KEY="${APP_KEY:-base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=}"
 export SESSION_DOMAIN=""
 export SESSION_SECURE_COOKIE=false
+export IS_NEXUS=true
 
 # Ensure .env file exists for self-hosted setup check in public/index.php
 if [ ! -f .env ]; then
@@ -27,10 +28,15 @@ if grep -q 'DB_CONNECTION="mysql"' .env || grep -q 'DB_CONNECTION=mysql' .env; t
     sed -i 's/QUEUE_CONNECTION=database/QUEUE_CONNECTION=sync/g' .env
 fi
 
-# Clear placeholder SESSION_DOMAIN and enforce SESSION_SECURE_COOKIE=false
+# Clear placeholder SESSION_DOMAIN, enforce SESSION_SECURE_COOKIE=false, and enable IS_NEXUS=true
 sed -i 's/SESSION_DOMAIN=.*/SESSION_DOMAIN=/g' .env || true
 sed -i 's/SESSION_SECURE_COOKIE=.*/SESSION_SECURE_COOKIE=false/g' .env || true
 sed -i 's|APP_URL=.*|APP_URL=https://getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io|g' .env || true
+if grep -q 'IS_NEXUS=' .env; then
+    sed -i 's/IS_NEXUS=.*/IS_NEXUS=true/g' .env || true
+else
+    echo "IS_NEXUS=true" >> .env
+fi
 
 # Ensure APP_KEY is valid base64 key
 if ! grep -q 'APP_KEY=base64:' .env; then
