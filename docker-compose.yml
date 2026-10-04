@@ -5,7 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: getvnt-app
     restart: always
+    expose:
+      - "80"
     ports:
       - "80"
     environment:
@@ -20,3 +23,10 @@ services:
       - DB_DATABASE=${DB_DATABASE}
       - DB_USERNAME=${DB_USERNAME}
       - DB_PASSWORD=${DB_PASSWORD}
+    networks:
+      - default
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true
