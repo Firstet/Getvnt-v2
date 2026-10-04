@@ -1,19 +1,22 @@
 #!/bin/sh
 set -e
 
-# Ensure storage directories exist and are writable
-mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache database
+# Ensure storage and database directories exist
+mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache database storage/logs
 touch database/database.sqlite
-chmod -R 777 storage bootstrap/cache database/database.sqlite
 
-# Run database migrations automatically
+# Set permissions for www-data
+chown -R www-data:www-data storage bootstrap/cache database
+chmod -R 777 storage bootstrap/cache database database/database.sqlite
+
+# Run database migrations
 php artisan migrate --force || true
 
-# Clear and optimize Laravel caches
+# Clear all caches
 php artisan config:clear
 php artisan cache:clear
-php artisan route:cache
-php artisan view:cache
+php artisan route:clear
+php artisan view:clear
 
-# Execute Supervisord (manages PHP-FPM and Nginx)
+# Execute Supervisord
 exec /usr/bin/supervisord -c /etc/supervisord.conf
