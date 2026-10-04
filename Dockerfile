@@ -9,23 +9,19 @@ RUN npm run build
 # Step 2: Production PHP 8.2 + Nginx Image
 FROM php:8.2-fpm-alpine
 
+# Install pre-compiled PHP extension installer helper
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
 # Install Nginx, Supervisor, SQLite and required system libraries
 RUN apk add --no-cache \
     nginx \
     supervisor \
     sqlite \
-    freetype-dev \
-    libjpeg-turbo-dev \
-    libpng-dev \
-    icu-dev \
-    libzip-dev \
     zip \
-    unzip \
-    oniguruma-dev
+    unzip
 
-# Install PHP extensions required by Laravel & Getvnt
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd intl pdo pdo_sqlite pdo_mysql bcmath zip opcache
+# Fast install pre-compiled PHP extensions
+RUN install-php-extensions gd intl pdo_mysql pdo_sqlite bcmath zip opcache
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
