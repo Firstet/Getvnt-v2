@@ -1,6 +1,13 @@
 #!/bin/sh
 set -e
 
+# Force default DB_CONNECTION to sqlite
+export DB_CONNECTION=sqlite
+export DB_DATABASE=/var/www/html/database/database.sqlite
+export DB_HOST=127.0.0.1
+export QUEUE_CONNECTION=sync
+export APP_KEY="${APP_KEY:-base64:dXBkYXRlZGFwcGtleWZvcmdldnZudGxhcmF2ZWwxMTIzNA==}"
+
 # Ensure .env file exists for self-hosted setup check in public/index.php
 if [ ! -f .env ]; then
     cp .env.example .env
