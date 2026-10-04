@@ -10,7 +10,8 @@ class RedirectToAppSubdomain
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (config('app.is_testing') || config('app.env') === 'local' || ! config('app.hosted')) {
+        $host = $request->getHost();
+        if (config('app.is_testing') || config('app.env') === 'local' || ! config('app.hosted') || str_contains($host, 'sslip.io') || filter_var($host, FILTER_VALIDATE_IP)) {
             return $next($request);
         }
 
