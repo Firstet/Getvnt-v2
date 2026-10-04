@@ -409,7 +409,7 @@ class GoogleCalendarController extends Controller
     }
 
     /**
-     * Clear owner outbound Google sync mappings for this schedule, then push all events to Google again (Event Schedule to Google only; never imports from Google).
+     * Clear owner outbound Google sync mappings for this schedule, then push all events to Google again (Getvnt to Google only; never imports from Google).
      */
     public function forceSyncToGoogle(Request $request, string $subdomain)
     {

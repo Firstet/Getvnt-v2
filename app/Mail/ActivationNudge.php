@@ -47,7 +47,7 @@ class ActivationNudge extends Mailable
     {
         return new Envelope(
             subject: __('messages.activation_nudge_subject_'.$this->nudgeKey, ['schedule' => $this->role->name]),
-            // Replies reach a person on eventschedule.com. An operator platform runs this command
+            // Replies reach a person on getvnt.com. An operator platform runs this command
             // too, and support_email defaults to our address, which must not reach their owners.
             replyTo: config('app.is_nexus') && config('app.support_email')
                 ? [new Address((string) config('app.support_email'))]

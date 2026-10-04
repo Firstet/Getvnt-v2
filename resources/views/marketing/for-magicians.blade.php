@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Magicians | Gigs, Residencies</x-slot>
+    <x-slot name="title">Free Getvnt for Magicians | Gigs, Residencies</x-slot>
     <x-slot name="description">Every show, residency and private booking on one link. Sell tickets with zero platform fees and keep corporate gigs off your public schedule. Free forever.</x-slot>
     <x-slot name="breadcrumbTitle">For Magicians</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Magicians"
+        name="Getvnt for Magicians"
         description="Every show, residency and private booking on one link. Sell tickets with zero platform fees and keep corporate gigs off your public schedule. Free forever."
         audience="Magicians"
         keywords="magician schedule, magic show calendar, magician booking platform, magic event management, free magician scheduling, private event magician booking, close-up magic schedule, corporate magician calendar, mentalist show scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How magicians get their performance schedule online with Event Schedule",
+        "name": "How magicians get their performance schedule online with Getvnt",
         "description": "Get your performance schedule online in three steps.",
         "step": [
             {
@@ -525,7 +525,7 @@
                         'rank' => 'A', 'suit' => 'spade', 'pip' => 'es-pick-pip-black', 'delay' => '0s',
                         'icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />',
                         'title' => 'Zero-fee ticketing',
-                        'copy' => 'Take payment through Stripe or PayPal, or cash at the door, for general admission, VIP, and meet-and-greet tickets. Every ticket carries a QR code for the door, and Event Schedule takes no platform fee.',
+                        'copy' => 'Take payment through Stripe or PayPal, or cash at the door, for general admission, VIP, and meet-and-greet tickets. Every ticket carries a QR code for the door, and Getvnt takes no platform fee.',
                         'url' => '/features/ticketing', 'link' => 'Sell tickets',
                     ],
                     [
@@ -927,7 +927,7 @@
                 @foreach ([['/for-comedians', 'Comedians'], ['/for-circus-acrobatics', 'Circus & Acrobatics'], ['/for-theater-performers', 'Theater Performers'], ['/for-spoken-word', 'Spoken Word Artists']] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-pick-hover group flex items-center justify-between rounded-2xl border border-gray-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                         <div>
-                            <div class="text-sm text-gray-500 dark:text-gray-400">Event Schedule for</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Getvnt for</div>
                             <div class="es-pick-hover-title text-lg font-semibold text-gray-900 transition-colors dark:text-white">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-pick-hover-arrow w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -961,20 +961,20 @@
                     Frequently asked <span class="es-pick-red">questions</span>
                 </h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Everything magicians ask about Event Schedule.
+                    Everything magicians ask about Getvnt.
                 </p>
             </div>
 
             <div class="space-y-4" data-reveal-group="80">
                 @php
                     $faqs = [
-                        ['q' => 'Is Event Schedule free for magicians?', 'a' => 'Yes. Event Schedule is free forever for sharing your show schedule, building a following, and syncing with Google Calendar. Free registration is unlimited on it, and the QR on each place is scanned at the door on any plan. Putting a price on a ticket is the Pro half. Newsletters are free at 10 a month, counted per recipient rather than per send. Zero platform fees on ticket sales, on any plan.'],
+                        ['q' => 'Is Getvnt free for magicians?', 'a' => 'Yes. Getvnt is free forever for sharing your show schedule, building a following, and syncing with Google Calendar. Free registration is unlimited on it, and the QR on each place is scanned at the door on any plan. Putting a price on a ticket is the Pro half. Newsletters are free at 10 a month, counted per recipient rather than per send. Zero platform fees on ticket sales, on any plan.'],
                         ['q' => 'Can I keep private and corporate bookings off my public schedule?', 'a' => 'Yes. Save any booking as a draft and it stays off your public schedule until you publish it. Drafts are free and unlimited, so you can hold close-up gigs and corporate dates privately. On the Enterprise plan you can also make events internal or unlisted with an optional password for private and corporate clients.'],
-                        ['q' => 'Can I sell gift cards or season passes for my shows?', 'a' => 'Yes. On the Pro plan, once your schedule has its own email settings on eventschedule.com, you can sell balance-tracked gift cards that buyers send to a recipient by email, redeemable toward tickets for any show on your schedule. You can also sell multi-use passes like a parlor-show season pass, with usage tracked automatically. Zero platform fees apply to both.'],
+                        ['q' => 'Can I sell gift cards or season passes for my shows?', 'a' => 'Yes. On the Pro plan, once your schedule has its own email settings on getvnt.com, you can sell balance-tracked gift cards that buyers send to a recipient by email, redeemable toward tickets for any show on your schedule. You can also sell multi-use passes like a parlor-show season pass, with usage tracked automatically. Zero platform fees apply to both.'],
                         ['q' => 'Can I sell tickets to my magic shows?', 'a' => 'Yes, on the Pro plan, which is what a ticket carrying a price needs; free registration for a show you are not charging for is unlimited without it. Take payment through Stripe or PayPal straight to your own account, or through Payfast (rand only), Invoice Ninja, a payment link or cash. Create ticket types for general admission, VIP, and meet-and-greet packages, each with a QR code for check-in at the door. On Pro, a waitlist tells fans when a sold-out show frees a seat. If a show is called off, a Stripe or PayPal sale can be refunded in full or in part from the Sales page, and the money goes back through the provider. Zero platform fees, so the only deduction is your payment provider\'s own.'],
                         ['q' => 'Can I run a weekly residency without re-entering the same show?', 'a' => 'Yes. Set up your show once as a recurring event with a day-of-week pattern, and add date exceptions for the weeks you are away. On the Pro plan you can also save any event as a template, so repeat corporate formats take two clicks instead of a blank form.'],
                         ['q' => 'How do planners and fans find my shows?', 'a' => 'Share one schedule link in your bio, EPK, and booking website, or embed the calendar on any page, and planners send a booking request from the same link. Fans who sign up for email get a digest automatically when you add a show, and newsletters reach their inboxes directly. Fans who would rather not give an email can subscribe to your calendar feed instead. On a single show, once you switch on the "Notify me" card, anyone can leave just an email address to hear when its tickets go on sale, if it is cancelled, and shortly before it starts, plus any change notice you send. Two-way Google, Outlook, and CalDAV sync keeps your own calendar current.'],
-                        ['q' => 'A venue listed my show before I signed up. Is there a page for me already?', 'a' => 'There may be. When a venue or promoter names an act that is not on Event Schedule, its event page still shows that act on the bill by name, and the app creates a page for the act. That page says which schedule created it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. If it carries your email address, create an account or sign in with that address and press Claim this page: it becomes your schedule, and the venues that already listed you keep listing you without asking again, while anyone new sends a request you accept. If it is not you, This is not me takes it down.'],
+                        ['q' => 'A venue listed my show before I signed up. Is there a page for me already?', 'a' => 'There may be. When a venue or promoter names an act that is not on Getvnt, its event page still shows that act on the bill by name, and the app creates a page for the act. That page says which schedule created it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. If it carries your email address, create an account or sign in with that address and press Claim this page: it becomes your schedule, and the venues that already listed you keep listing you without asking again, while anyone new sends a request you accept. If it is not you, This is not me takes it down.'],
                     ];
                 @endphp
                 @foreach ($faqs as ['q' => $q, 'a' => $a])
@@ -1024,7 +1024,7 @@
                                 <div class="es-pick-index-flip es-pick-pip-red"><span>A</span>{!! $suitHeart !!}</div>
                                 <div class="es-pick-pip-red mb-4 h-9 w-9">{!! $suitHeart !!}</div>
                                 <div class="es-pick-sign text-2xl sm:text-3xl"><span id="es-pick-signtext">your-name</span></div>
-                                <div class="mt-3 font-mono text-xs text-gray-500">.eventschedule.com</div>
+                                <div class="mt-3 font-mono text-xs text-gray-500">.getvnt.com</div>
                             </div>
                             <div class="es-pick-face es-pick-face-back es-pick-back">
                                 <div class="es-pick-back-inner">{!! $suitHeart !!}</div>
@@ -1037,7 +1037,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-pick-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

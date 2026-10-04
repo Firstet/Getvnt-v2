@@ -103,7 +103,7 @@ New Feature-test suites added this session (all use `tests/Feature/Concerns/Crea
 | Schedule / venue merge | ✓ | `ScheduleFeaturesTest` |
 | Schedule audit log (owner) | ✓ | `ScheduleFeaturesTest` |
 | YouTube video matching (Talent) | ✓ | `ScheduleFeaturesTest` |
-| List a schedule on the Event Schedule network (selfhost) | ✓ | `FederationListingPromptTest` (dashboard + schedule prompt, owned-only offer, dismissal), `FederationSettingsCardTest` (settings checklist, contact-email re-register, withdraw) |
+| List a schedule on the Getvnt network (selfhost) | ✓ | `FederationListingPromptTest` (dashboard + schedule prompt, owned-only offer, dismissal), `FederationSettingsCardTest` (settings checklist, contact-email re-register, withdraw) |
 
 ### Sub-schedules (Groups)
 | Feature | Tested | Test |

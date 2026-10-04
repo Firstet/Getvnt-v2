@@ -1,9 +1,9 @@
 <x-docs-page
     key="creating-schedules"
-    title="Creating Schedules: Settings, Links, Sync - Event Schedule"
-    description="Configure a schedule in Event Schedule: details, address, short links, sub-schedules, notifications, event requests, event sources and calendar sync."
+    title="Creating Schedules: Settings, Links, Sync - Getvnt"
+    description="Configure a schedule in Getvnt: details, address, short links, sub-schedules, notifications, event requests, event sources and calendar sync."
     lede="Set up and configure your schedule - from basic details and contact info to short links, sub-schedules, notifications, event requests and calendar sync."
-    article-description="Configure a schedule in Event Schedule: details, address, contact info, short links, sub-schedules, settings and notifications, event requests, event sources, selfhost auto import and calendar integrations."
+    article-description="Configure a schedule in Getvnt: details, address, contact info, short links, sub-schedules, settings and notifications, event requests, event sources, selfhost auto import and calendar integrations."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#schedule-types">Schedule Types</x-doc-nav-link>
@@ -58,7 +58,7 @@
             </svg>
             Schedule Types
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Event Schedule supports three types of schedules, each designed for different use cases:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Getvnt supports three types of schedules, each designed for different use cases:</p>
 
         <div class="doc-table-wrap">
             <table class="doc-table">
@@ -328,7 +328,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-6">Importing events tends to create the same venue twice, once as "The Anchor" and again as "Anchor Bar". Rather than leave your calendar pointing at two half-empty pages, merge them. Every event moves to the schedule you keep and the duplicate goes away.</p>
 
         <h3 class="doc-subheading">Merge Venue</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">A <strong class="text-gray-900 dark:text-white">Merge Venue</strong> section appears on the edit page when a schedule looks mergeable. The <strong class="text-gray-900 dark:text-white">Merge into</strong> dropdown lists the other venues you manage; pick one and confirm. All of this schedule's events move to the target and this one is removed. If Event Schedule spots a likely match by name, city and country, it names it for you above the dropdown, so usually you only have to confirm.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">A <strong class="text-gray-900 dark:text-white">Merge Venue</strong> section appears on the edit page when a schedule looks mergeable. The <strong class="text-gray-900 dark:text-white">Merge into</strong> dropdown lists the other venues you manage; pick one and confirm. All of this schedule's events move to the target and this one is removed. If Getvnt spots a likely match by name, city and country, it names it for you above the dropdown, so usually you only have to confirm.</p>
         <div class="doc-callout mb-6">
             <div class="doc-callout-title">Only unclaimed schedules can be merged</div>
             <p>Merging is offered for schedules nobody has claimed yet, which is exactly the kind an import creates - the pages described under <a href="{{ route('marketing.docs.creating_events') }}#claim" class="doc-link">Pages Created for Others</a>. Once someone claims a schedule it has a real operator behind it, so it can no longer be absorbed into another. Both schedules must also be the same type, so a venue merges into a venue and never into a talent.</p>
@@ -391,11 +391,11 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Social Links</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Add profile URLs (Instagram, Facebook, X, TikTok, Bandcamp, Spotify and so on), or the address of any other site, so visitors can find you elsewhere. A platform Event Schedule recognises is detected from the URL and its icon is used automatically.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Add profile URLs (Instagram, Facebook, X, TikTok, Bandcamp, Spotify and so on), or the address of any other site, so visitors can find you elsewhere. A platform Getvnt recognises is detected from the URL and its icon is used automatically.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Short links</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Every link on the Social Links tab gets a short forwarding address under your own schedule URL automatically, with a copy button next to it. A recognised platform is named after the platform, for example <code class="doc-inline-code">yourname.eventschedule.com/instagram</code>, and any other site after its brand name, as long as that name is still free on your schedule: a ticketing partner at <code class="doc-inline-code">promee.co.il/?r=33221</code> answers to <code class="doc-inline-code">yourname.eventschedule.com/promee</code>. Short links are handy in printed material and bios. Each one shows how many times it has been clicked, and the same clicks are counted in <a href="{{ route('marketing.docs.analytics') }}" class="doc-link">Analytics</a>; clicks by you and your team are left out.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Every link on the Social Links tab gets a short forwarding address under your own schedule URL automatically, with a copy button next to it. A recognised platform is named after the platform, for example <code class="doc-inline-code">yourname.getvnt.com/instagram</code>, and any other site after its brand name, as long as that name is still free on your schedule: a ticketing partner at <code class="doc-inline-code">promee.co.il/?r=33221</code> answers to <code class="doc-inline-code">yourname.getvnt.com/promee</code>. Short links are handy in printed material and bios. Each one shows how many times it has been clicked, and the same clicks are counted in <a href="{{ route('marketing.docs.analytics') }}" class="doc-link">Analytics</a>; clicks by you and your team are left out.</p>
                 <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Click <strong>Edit</strong> under a link to choose a different address. For a recognised platform the platform address keeps working alongside yours, so a <code class="doc-inline-code">/instagram</code> already printed on a poster never breaks. For any other site your choice replaces the brand-name address. If a link has already been clicked, the editor shows how often and warns you before you change its address. Clear the box to go back to the automatic address. A short link cannot reuse the name of another platform, of a <a href="#customize-subschedules" class="doc-link">sub-schedule</a>, or of a page the app already uses, and where the automatic name is already taken the link simply has none until you pick one.</p>
             </div>
         </div>
@@ -421,7 +421,7 @@
             <li>Open the <strong class="text-gray-900 dark:text-white">Customize</strong> section and stay on the <strong class="text-gray-900 dark:text-white">Sub-schedules</strong> tab.</li>
             <li>Click <strong class="text-gray-900 dark:text-white">+ Add sub-schedule</strong> and give it a <strong class="text-gray-900 dark:text-white">Name</strong>. If your schedule is not written in English, an <strong class="text-gray-900 dark:text-white">English Name</strong> field appears beneath it; leave it blank and the translation fills it in.</li>
             <li>Pick a <strong class="text-gray-900 dark:text-white">Color</strong> from the 14-color palette, or use <strong class="text-gray-900 dark:text-white">Clear</strong> to leave it uncolored. The color is what distinguishes sub-schedules in calendar views and on the filter buttons.</li>
-            <li>Save. The sub-schedule now has an address such as <code class="doc-inline-code">yourname.eventschedule.com/live-music</code>, shown with a copy button. <strong class="text-gray-900 dark:text-white">Edit</strong> changes that last part.</li>
+            <li>Save. The sub-schedule now has an address such as <code class="doc-inline-code">yourname.getvnt.com/live-music</code>, shown with a copy button. <strong class="text-gray-900 dark:text-white">Edit</strong> changes that last part.</li>
         </ol>
 
         <div class="doc-callout mb-6">
@@ -592,7 +592,7 @@
     <section>
         <h3 id="customize-custom-labels" class="doc-subheading">Custom Labels <x-doc-badge plan="pro" /></h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Override the wording Event Schedule uses on your public schedule page. For example, change "Events" to "Shows", "Follow" to "Subscribe", or "Free entry" to "No cover charge".
+            Override the wording Getvnt uses on your public schedule page. For example, change "Events" to "Shows", "Follow" to "Subscribe", or "Free entry" to "No cover charge".
         </p>
         <div class="doc-fields">
             <div class="doc-field">
@@ -628,7 +628,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Schedule URL</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Your schedule's address, shown with a copy button. Click <strong class="text-gray-900 dark:text-white">Edit</strong> to change it. On the hosted platform it is a subdomain, <code class="doc-inline-code">yourname.eventschedule.com</code>; on a selfhosted install it is a path, <code class="doc-inline-code">yoursite.com/yourname</code>. Between 4 and 50 characters, lowercase letters, numbers and dashes only. Choose something memorable and easy to type, because changing it later breaks any link people have already saved.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Your schedule's address, shown with a copy button. Click <strong class="text-gray-900 dark:text-white">Edit</strong> to change it. On the hosted platform it is a subdomain, <code class="doc-inline-code">yourname.getvnt.com</code>; on a selfhosted install it is a path, <code class="doc-inline-code">yoursite.com/yourname</code>. Between 4 and 50 characters, lowercase letters, numbers and dashes only. Choose something memorable and easy to type, because changing it later breaks any link people have already saved.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Custom Domain <x-doc-badge plan="enterprise" /></h4>
@@ -852,7 +852,7 @@
 
         <h4 class="text-md font-semibold text-gray-900 dark:text-white mb-3">Redirect Mode (Cloudflare)</h4>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Your custom domain redirects visitors to your <code class="doc-inline-code">eventschedule.com</code> URL. Use this if your domain's DNS is managed by Cloudflare. Cloudflare's free plan is sufficient.
+            Your custom domain redirects visitors to your <code class="doc-inline-code">getvnt.com</code> URL. Use this if your domain's DNS is managed by Cloudflare. Cloudflare's free plan is sufficient.
         </p>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>In your schedule settings, enter your domain and select <strong class="text-gray-900 dark:text-white">Redirect</strong>.</li>
@@ -874,9 +874,9 @@
                     <li><strong class="text-gray-900 dark:text-white">URL pattern:</strong> <code class="doc-inline-code">*yourdomain.com/*</code></li>
                     <li><strong class="text-gray-900 dark:text-white">Setting:</strong> Forwarding URL</li>
                     <li><strong class="text-gray-900 dark:text-white">Status code:</strong> 301 - Permanent Redirect</li>
-                    <li><strong class="text-gray-900 dark:text-white">Destination URL:</strong> <code class="doc-inline-code">https://yourname.eventschedule.com/$2</code></li>
+                    <li><strong class="text-gray-900 dark:text-white">Destination URL:</strong> <code class="doc-inline-code">https://yourname.getvnt.com/$2</code></li>
                 </ul>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">The <code class="doc-inline-code">$2</code> wildcard preserves the URL path, so <code class="doc-inline-code">yourdomain.com/some-event</code> correctly redirects to <code class="doc-inline-code">yourname.eventschedule.com/some-event</code>.</p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">The <code class="doc-inline-code">$2</code> wildcard preserves the URL path, so <code class="doc-inline-code">yourdomain.com/some-event</code> correctly redirects to <code class="doc-inline-code">yourname.getvnt.com/some-event</code>.</p>
             </li>
             <li>Changes may take a few minutes to several hours to propagate. Once active, visitors who go to your custom domain will be seamlessly redirected to your schedule.</li>
         </ol>
@@ -926,7 +926,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-4">The same notifications can also reach you as browser and mobile push, on top of email rather than instead of it. Choose <strong class="text-gray-900 dark:text-white">Enable push on this device</strong>, allow notifications when your browser asks, then use <strong class="text-gray-900 dark:text-white">Send test push</strong> to confirm it works. Push is per device, so repeat it on your phone and your laptop. Enabling it sends notification data to OneSignal, a third-party service.</p>
         <div class="doc-callout mb-6">
             <div class="doc-callout-title">Two things have to be true</div>
-            <p>The panel only appears once the operator of your Event Schedule site has configured push, which is <a href="{{ route('marketing.docs.selfhost.installation') }}#push-notifications" class="doc-link">off by default</a>. On iPhone and iPad, web push only works for sites added to the home screen (iOS 16.4 and later); Android and desktop browsers need no such step.</p>
+            <p>The panel only appears once the operator of your Getvnt site has configured push, which is <a href="{{ route('marketing.docs.selfhost.installation') }}#push-notifications" class="doc-link">off by default</a>. On iPhone and iPad, web push only works for sites added to the home screen (iOS 16.4 and later); Android and desktop browsers need no such step.</p>
         </div>
 
         <!-- Advanced Tab -->
@@ -943,11 +943,11 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Do not show other schedules' promotions</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Some Event Schedule sites run a promotions network, where schedules pay to have an event featured on other schedules' public pages. Turn this on and your pages carry nothing of the sort: no other schedule's promotions, and no ads either. It is free on every plan, and it does not stop you buying promotions of your own. See <a href="{{ route('marketing.docs.boost') }}#on-network" class="doc-link">on-network promotions</a> and <a href="{{ route('marketing.docs.managing_schedules') }}#plan" class="doc-link">ads on free schedules</a>. The toggle only appears on sites that have this switched on.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Some Getvnt sites run a promotions network, where schedules pay to have an event featured on other schedules' public pages. Turn this on and your pages carry nothing of the sort: no other schedule's promotions, and no ads either. It is free on every plan, and it does not stop you buying promotions of your own. See <a href="{{ route('marketing.docs.boost') }}#on-network" class="doc-link">on-network promotions</a> and <a href="{{ route('marketing.docs.managing_schedules') }}#plan" class="doc-link">ads on free schedules</a>. The toggle only appears on sites that have this switched on.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">List this schedule on the network</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Share this schedule's public events with the listings on eventschedule.com, where each listing links back to the event on your own site. Three choices: leave it undecided, list the schedule, or keep it hidden. The setting only appears once an administrator has enabled federation for the whole installation, so you will not see it on eventschedule.com itself. You do not have to come here to answer it: once the schedule has an upcoming public event with an image, a <strong class="text-gray-900 dark:text-white">List on the network</strong> prompt on the schedule's page, and on your dashboard for schedules you own, does it in one click. A listed schedule shows <strong class="text-gray-900 dark:text-white">Listed on the network</strong> on its page, which links back to this setting. See <a href="{{ route('marketing.docs.selfhost.federation') }}#per-schedule" class="doc-link">Federation</a>.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Share this schedule's public events with the listings on getvnt.com, where each listing links back to the event on your own site. Three choices: leave it undecided, list the schedule, or keep it hidden. The setting only appears once an administrator has enabled federation for the whole installation, so you will not see it on getvnt.com itself. You do not have to come here to answer it: once the schedule has an upcoming public event with an image, a <strong class="text-gray-900 dark:text-white">List on the network</strong> prompt on the schedule's page, and on your dashboard for schedules you own, does it in one click. A listed schedule shows <strong class="text-gray-900 dark:text-white">Listed on the network</strong> on its page, which links back to this setting. See <a href="{{ route('marketing.docs.selfhost.federation') }}#per-schedule" class="doc-link">Federation</a>.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Hide Videos</h4>
@@ -959,7 +959,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Show Sign-Up Panel</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">On unless you turn it off. Signed-out visitors see the <strong class="text-gray-900 dark:text-white">Stay up to date</strong> panel on your schedule page and near the foot of each event page, where they can sign up for <a href="{{ route('marketing.docs.sharing') }}#followers" class="doc-link">email updates</a>. Turning it off also removes the calendar feed link under the form. A link made to open the form, like the QR code on the Followers tab, still shows the panel. The switch only hides it: sign-ups through such a link, and on eventschedule.com through the <strong class="text-gray-900 dark:text-white">Follow</strong> button, still arrive. Free on every plan.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">On unless you turn it off. Signed-out visitors see the <strong class="text-gray-900 dark:text-white">Stay up to date</strong> panel on your schedule page and near the foot of each event page, where they can sign up for <a href="{{ route('marketing.docs.sharing') }}#followers" class="doc-link">email updates</a>. Turning it off also removes the calendar feed link under the form. A link made to open the form, like the QR code on the Followers tab, still shows the panel. The switch only hides it: sign-ups through such a link, and on getvnt.com through the <strong class="text-gray-900 dark:text-white">Follow</strong> button, still arrive. Free on every plan.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Show &ldquo;Notify Me&rdquo; Card</h4>
@@ -1145,7 +1145,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Stay22 affiliate ID</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Add your own Stay22 affiliate ID to earn the commission from bookings on your pages. A Stay22 account is free. If you leave this blank, the commission goes to whoever runs this Event Schedule instance instead.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Add your own Stay22 affiliate ID to earn the commission from bookings on your pages. A Stay22 account is free. If you leave this blank, the commission goes to whoever runs this Getvnt instance instead.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Venue address required</h4>
@@ -1159,7 +1159,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Availability</div>
-            <p>This section only appears if the operator of your Event Schedule instance has enabled the integration. It is available on <strong class="text-gray-900 dark:text-white">all plans</strong>, including Free.</p>
+            <p>This section only appears if the operator of your Getvnt instance has enabled the integration. It is available on <strong class="text-gray-900 dark:text-white">all plans</strong>, including Free.</p>
         </div>
     </section>
 
@@ -1214,7 +1214,7 @@
             </svg>
             Auto Import <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400 ml-2">Selfhost</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Point Event Schedule at a page that lists events and it reads them once a day, so a venue calendar or a tour page keeps your schedule current without you retyping anything. This section only exists on selfhosted installs, and it needs an AI key configured on the server.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Point Getvnt at a page that lists events and it reads them once a day, so a venue calendar or a tour page keeps your schedule current without you retyping anything. This section only exists on selfhosted installs, and it needs an AI key configured on the server.</p>
 
         <x-doc-screenshot id="creating-schedules--section-auto-import" alt="Auto import settings" />
 
@@ -1272,7 +1272,7 @@
 
         <div class="doc-callout mb-6">
             <div class="doc-callout-title">A recurring event syncs as one entry</div>
-            <p>Event Schedule does not send a repeat rule to a connected calendar, so a weekly event arrives there as a single entry on its start date. If you want every date to show up in someone's calendar app, give them the <a href="#integrations-advanced" class="doc-link">iCal feed</a> instead, which lists each occurrence.</p>
+            <p>Getvnt does not send a repeat rule to a connected calendar, so a weekly event arrives there as a single entry on its start date. If you want every date to show up in someone's calendar app, give them the <a href="#integrations-advanced" class="doc-link">iCal feed</a> instead, which lists each occurrence.</p>
         </div>
 
         <!-- Email -->
@@ -1296,7 +1296,7 @@
         </ol>
 
         <h4 class="text-md font-semibold text-gray-900 dark:text-white mb-4 mt-8">Troubleshooting</h4>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">If a message fails to send, click <strong class="text-gray-900 dark:text-white">Send Test Email</strong> to see the exact error returned by your email provider. A <strong class="text-gray-900 dark:text-white">"permission denied"</strong> error almost always comes from the provider rejecting your credentials or sender address, not from Event Schedule. Most problems fall into one of these categories:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">If a message fails to send, click <strong class="text-gray-900 dark:text-white">Send Test Email</strong> to see the exact error returned by your email provider. A <strong class="text-gray-900 dark:text-white">"permission denied"</strong> error almost always comes from the provider rejecting your credentials or sender address, not from Getvnt. Most problems fall into one of these categories:</p>
 
         <div class="doc-fields">
             <div class="doc-field">
@@ -1336,12 +1336,12 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">When email settings stop working</div>
-            <p>If your SMTP credentials start failing, an amber dot appears beside the <strong class="text-gray-900 dark:text-white">Email Settings</strong> tab and a warning banner inside it, with a <strong class="text-gray-900 dark:text-white">Show error details</strong> link carrying the provider's own message. Delivery is paused while settings are failing; Event Schedule retries after 24 hours, or immediately once a test email succeeds. Fix the underlying problem, then send a test email to resume delivery right away.</p>
+            <p>If your SMTP credentials start failing, an amber dot appears beside the <strong class="text-gray-900 dark:text-white">Email Settings</strong> tab and a warning banner inside it, with a <strong class="text-gray-900 dark:text-white">Show error details</strong> link carrying the provider's own message. Delivery is paused while settings are failing; Getvnt retries after 24 hours, or immediately once a test email succeeds. Fix the underlying problem, then send a test email to resume delivery right away.</p>
         </div>
 
         <!-- Google Calendar -->
         <h3 id="integrations-google" class="doc-subheading">Google Calendar</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Keep your schedule and a Google Calendar in step. Google tells Event Schedule about changes as they happen, so an edit made on either side shows up on the other without waiting for a poll.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Keep your schedule and a Google Calendar in step. Google tells Getvnt about changes as they happen, so an edit made on either side shows up on the other without waiting for a poll.</p>
 
         <p class="text-gray-600 dark:text-gray-300 mb-4">Connect your Google account first, in <a href="{{ route('marketing.docs.account_settings') }}#google" class="doc-link">Account Settings</a>. Then:</p>
         <ol class="doc-list doc-list-numbered mb-6">
@@ -1425,7 +1425,7 @@ Central Park | New York
 
 Join us for a night of music...
 
-example.eventschedule.com/summer-concert</code></pre>
+example.getvnt.com/summer-concert</code></pre>
         </div>
 
         <h4 class="text-md font-semibold text-gray-900 dark:text-white mb-3" id="available-variables">Available Variables</h4>
@@ -1760,7 +1760,7 @@ example.eventschedule.com/summer-concert</code></pre>
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Create and Configure Your Event Schedule",
+            "name": "How to Create and Configure Your Getvnt",
             "description": "Set up your schedule with details, address, contact info, settings, sub-schedules, auto import, and calendar integrations.",
             "totalTime": "PT10M",
             "step": [

@@ -754,7 +754,7 @@ function initClaim() {
             input.value = slug;
         }
 
-        // The box promises "your-name.eventschedule.com", so the name has to reach sign-up:
+        // The box promises "your-name.getvnt.com", so the name has to reach sign-up:
         // it used to be thrown away at the click. RegisteredUserController::create() keeps it
         // in the session (through Google too) and the new-schedule form starts with it.
         // Trailing hyphens are dropped here, not above, or typing "blue-" could never

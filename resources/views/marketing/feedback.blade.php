@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Post-Event Feedback and Attendee Reviews - Event Schedule</x-slot>
+    <x-slot name="title">Post-Event Feedback and Attendee Reviews - Getvnt</x-slot>
     <x-slot name="description">Post-event feedback for ticket holders: a day after the event ends, everyone who booked gets a card with a one-to-five rating and an optional comment.</x-slot>
     <x-slot name="breadcrumbTitle">Event Feedback</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Post-Event Feedback"
+        name="Getvnt Post-Event Feedback"
         description="After an event ends, everyone who held a booking for that date is emailed a private feedback link: a required rating from one to five and an optional comment of up to 2,000 characters. One card per booking. Read them on the Feedback tab, export to CSV, or publish them on the event page." />
     </x-slot>
 
@@ -554,7 +554,7 @@
                 'a' => 'Yes. Post-event feedback is a Pro feature at '.plan_price($proMonthly).' a month, included on Enterprise, and selfhosted installations have it too. On the hosted platform it also needs your schedule\'s own email settings, because the request is sent from your address rather than ours. Once those are saved the toggle unlocks, and there is a button to send yourself a test card before you turn it loose on real attendees.',
             ],
             [
-                'q' => 'Can I get the feedback out of Event Schedule?',
+                'q' => 'Can I get the feedback out of Getvnt?',
                 'a' => 'Three ways. Export the lot to CSV from the Feedback tab. Subscribe a webhook to feedback.submitted and get the event, the date, the attendee\'s name and email, the rating and the comment posted to your endpoint as each card lands. Or read GET /api/feedback with an API key, filtering by event, subdomain, date, minimum rating and a date range. All three are on the same Pro plan.',
             ],
         ];
@@ -1332,7 +1332,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-comment-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

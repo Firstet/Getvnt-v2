@@ -1,6 +1,6 @@
 # Nexus release runbook
 
-How code reaches the hosted install (eventschedule.com), one section per version, **newest at the
+How code reaches the hosted install (getvnt.com), one section per version, **newest at the
 top**. Each version lists what it needs: what ships, the migrations and env vars, what to do
 before and after the deploy, what to watch, and how to undo it.
 
@@ -82,7 +82,7 @@ for exactly this, because a blank value looks identical to a set one in the cons
 `APP_NAME` and `SESSION_COOKIE` are both absent, and have to stay that way unless v1.0.130's step 4
 Cloudflare rule changes with them.
 
-`config('app.name')` is the hardcoded string `Event Schedule`, so `APP_NAME` is never the display
+`config('app.name')` is the hardcoded string `Getvnt`, so `APP_NAME` is never the display
 name. It is read in exactly three places, each as an input to a *default* for something else: the
 session cookie name (`config/session.php`), the cache key prefix (`config/cache.php`) and the
 Redis key prefix (`config/database.php`). Setting it renames the session cookie to
@@ -218,7 +218,7 @@ Consent categories, erasure, export, retention, and a rewritten privacy policy a
    and the terms (clause 15) take effect 7 days after notice. Send an admin newsletter to all
    users linking `/privacy` and `/terms-of-service`.
 5. **Open the cookie banner** on the marketing site, the app and a schedule page, choose, then
-   withdraw on another of them: the choice is one cookie on `.eventschedule.com`, so it should
+   withdraw on another of them: the choice is one cookie on `.getvnt.com`, so it should
    hold everywhere.
 
 ### Conversion, churn and owner emails
@@ -301,7 +301,7 @@ hours.
 - Cached marketing pages start reporting within ten minutes (or purge Cloudflare): pages cached
   before the deploy carry no beacon, so expect no marketing-site rows at all until they expire.
 - Check the country column fills in (Cloudflare's `CF-IPCountry`, else GeoIP).
-- `curl -sI https://eventschedule.com/pricing` still shows `cf-cache-status: HIT` and no
+- `curl -sI https://getvnt.com/pricing` still shows `cf-cache-status: HIT` and no
   `set-cookie`.
 - In Cloudflare **Security > Events**, make sure `POST /api/realtime` is not being challenged:
   a challenged beacon fails silently and the page just looks empty.
@@ -419,7 +419,7 @@ effect as flipping the store, described under v1.0.130).
 ## v1.0.133
 
 **Tagged 2026-09-25.** SEO round 3 and its fixes, plus five commits after them:
-- the embeddable signup form ([#125](https://github.com/eventschedule/eventschedule/issues/125));
+- the embeddable signup form ([#125](https://github.com/Firstet/Getvnt-v2/issues/125));
 - notification email settings.
 
 **Two migrations, both cheap:**
@@ -467,10 +467,10 @@ FROM roles r
 LEFT JOIN users u ON u.id = r.user_id
 WHERE r.subdomain LIKE 'demo-%'
   AND r.subdomain <> 'simpsons'
-  AND (u.email IS NULL OR u.email <> 'contact@eventschedule.com');
+  AND (u.email IS NULL OR u.email <> 'contact@getvnt.com');
 ```
 
-`contact@eventschedule.com` is `DemoService::DEMO_EMAIL`.
+`contact@getvnt.com` is `DemoService::DEMO_EMAIL`.
 - On v1.0.132, `app:setup-demo` deletes every `demo-*` schedule within the hour, along with the
   tickets and sales of every event attached to one. So this can only show schedules created since
   the last run.
@@ -562,7 +562,7 @@ Console, then Deploy, as in [Every deploy](#every-deploy).
    done) the index can list the old code's ranges for up to 3 hours. Forget it:
 
    ```
-   php artisan cache:forget "sitemap:sections:https://eventschedule.com"
+   php artisan cache:forget "sitemap:sections:https://getvnt.com"
    ```
 
    On the `file` store there is nothing to do: the new web container started with an empty cache.
@@ -571,7 +571,7 @@ Console, then Deploy, as in [Every deploy](#every-deploy).
    served now, instead of within 10 minutes plus serve-stale.
 
 **Verify:**
-- `curl -s https://eventschedule.com/robots.txt` lists `/ticket/view/`, `/appointment/view/` and
+- `curl -s https://getvnt.com/robots.txt` lists `/ticket/view/`, `/appointment/view/` and
   `/feedback/`.
 - A schedule host's robots.txt lists `/ticket/view/` but not `/feedback/`. There `/feedback/{id}`
   can be a real event page.
@@ -738,7 +738,7 @@ unset** on the nexus. Each has a working default:
 | `EVENT_INTEREST_RECIPIENT_BATCH` | `2000`, the cap that bounds outbound interest mail |
 | `EVENT_INTEREST_TICKETS_MAX_AGE_DAYS` | `180` |
 | `PAYPAL_CLIENT_ID` / `PAYPAL_CLIENT_SECRET` / `PAYPAL_SANDBOX` / `PAYPAL_WEBHOOK_ID` | unset. `PayPalGateway::platformCredentials()` returns `[]` when hosted, so these are selfhost-only by construction - each owner connects their own account |
-| `GOOGLE_WALLET_ISSUER_ID` / `GOOGLE_WALLET_SERVICE_ACCOUNT` | unset. Wallet passes are opt-in **per install**, and `GoogleWalletService::isConfigured()` gates everything about them: every button, the route handler, the confirmation email, the privacy page's processor row and every marketing claim about the button. Unset, eventschedule.com neither offers passes nor says it does; `GoogleWalletMarketingClaimTest` pins the claims |
+| `GOOGLE_WALLET_ISSUER_ID` / `GOOGLE_WALLET_SERVICE_ACCOUNT` | unset. Wallet passes are opt-in **per install**, and `GoogleWalletService::isConfigured()` gates everything about them: every button, the route handler, the confirmation email, the privacy page's processor row and every marketing claim about the button. Unset, getvnt.com neither offers passes nor says it does; `GoogleWalletMarketingClaimTest` pins the claims |
 | `GOOGLE_WALLET_ID_PREFIX` | `es`. Irrelevant until the two above are set |
 
 Switching wallet passes on later takes only those env vars; setup is `docs/GOOGLE_WALLET_SETUP.md`.
@@ -779,9 +779,9 @@ the three `events` migrations run by hand first if the table is large.
 The pre-deploy baseline, confirmed live:
 
 ```
-curl -sI https://eventschedule.com/pricing
+curl -sI https://getvnt.com/pricing
   cache-control: no-cache, private
-  set-cookie: laravel_session=...; domain=.eventschedule.com
+  set-cookie: laravel_session=...; domain=.getvnt.com
   cf-cache-status: BYPASS
 ```
 
@@ -883,7 +883,7 @@ release - so read the table once now and revisit P4 as soon as step 2 is `ACTIVE
 |---|---|---|
 | P1 | **Snapshot the database.** | `2026_08_28_000000_replace_federated_event_url_with_is_online.php` **drops `federated_events.event_url`**. Its own `down()` recreates the column empty: the stored links are not recoverable, which is the point of the change. `2026_09_02_000000_reset_blog_post_updated_at.php` rewrites `updated_at` on ~161 blog rows with a no-op `down()`. Neither is reversible by a deployment rollback. |
 | P2 | Watch the step 2 deploy log | **Four** migrations land on `events`, not two. Two are ALTERs: `widen_events_event_url` (varchar 255 to 500, a table rebuild on MySQL 8) and `add_image_variants_to_events` (a JSON column at the end, so INSTANT). The other two WRITE rows, and neither indexes the columns it filters on - so each scans `events` inside the start command's `migrate --force`. `reset_untouched_coupon_discount_types` has a small write set (the columns only exist since 2026-08-21), but the scan is not small. `backfill_events_published_at` stamps every already-public row, and says so in its own docblock, which points back at this row. `federated_events` is separately rebuilt **twice** in one migration: `replace_federated_event_url_with_is_online` adds `is_online` positionally with `->after()`, which forfeits `ALGORITHM=INSTANT`, then drops `event_url`. On large tables, run those four migrations by hand from the console *before* triggering the deploy. |
-| P3 | Read the app spec in the DO console | Production config is the app spec, not any `.env`. Confirm `QUEUE_CONNECTION=database`, `APP_URL=https://eventschedule.com`, `IS_HOSTED=true` and `IS_NEXUS=true`; note whether `CACHE_STORE` is set (step 5 sets it); and confirm the web service is **`instance_count: 1`** - more than one container on the `file` cache store means every lock in the app serialises against nothing. Note the active deployment ID while you are there: it is what a rollback targets. |
+| P3 | Read the app spec in the DO console | Production config is the app spec, not any `.env`. Confirm `QUEUE_CONNECTION=database`, `APP_URL=https://getvnt.com`, `IS_HOSTED=true` and `IS_NEXUS=true`; note whether `CACHE_STORE` is set (step 5 sets it); and confirm the web service is **`instance_count: 1`** - more than one container on the `file` cache store means every lock in the app serialises against nothing. Note the active deployment ID while you are there: it is what a rollback targets. |
 | P4 | `/admin` tells you, permanently | **The highest-value check in this table, and the one that was missing.** The legacy price recognition mechanism was removed this release, so `PlanPriceUtils` now matches a tier *only* against the four `STRIPE_PRICE_*` IDs on the spec. `AdminAlertService` compares every live subscription's price ID against those four using `PlanPriceUtils` itself, so the alert cannot drift from what the app believes, and `/admin` &rarr; Revenue lists the affected schedules. Anything it flags is a customer whose card is still being charged while `hasActiveEnterpriseSubscription()` returns false, both webhook handlers decline to write and ARR counts them at zero - the cost is spelled out in `PlanPriceUtils::tierFor()`'s docblock. Note the four configured IDs all share a `price_1T3s...` prefix, i.e. one creation batch, so anyone predating it is already stranded. **This is a post-deploy check, unavoidably**: the alert ships in this release, so it cannot report before step 2. That is acceptable because the condition predates the deploy rather than being caused by it - but look at `/admin` as soon as step 2 is `ACTIVE`, because the release also removes the `STRIPE_LEGACY_*` mechanism that used to absorb it. |
 | P5 | `/admin` &rarr; Revenue after the deploy | The *defaults* changed from 9/90/29/290 to 5/50/15/150. **The env vars are named `STRIPE_PRICE_MONTHLY_AMOUNT`, `STRIPE_PRICE_YEARLY_AMOUNT`, `STRIPE_ENTERPRISE_PRICE_MONTHLY_AMOUNT` and `STRIPE_ENTERPRISE_PRICE_YEARLY_AMOUNT`** - earlier revisions of this file named `STRIPE_PRO_MONTHLY_AMOUNT`, which exists nowhere in the codebase. But config is only the *second* layer: `PlatformPricing` reads the `settings` row first, so what the site advertises is decided by that row, not by the spec. As of writing production already advertises 5/50/15/150, so the config change is an alignment and the displayed price does not move. Note ARR, MRR and renewal emails deliberately read **config**, never `PlatformPricing` - so those figures *will* restate on deploy. That is a reporting artefact, not lost revenue. |
 | P6 | Run `php artisan app:pull-growth --range=last_30_days` on your machine (before the release that added it, `/admin/growth/export?range=last_30_days`) and keep the JSON | **Not `/admin/users`** - its funnel carries only "Visited site". The page-view, docs and pricing counters live in `GrowthExportService::traffic()`, which reaches neither the users funnel nor the growth dashboard, so the JSON export is the only place all four are readable. Record the "Visited site", page-view, docs and pricing funnel numbers. After the Cloudflare rule, origin-side counting stops and the beacon takes over; without a before-number a broken beacon is indistinguishable from normal variance. |
@@ -982,10 +982,10 @@ contract in CI on every push, so a surprise here means the deploy did not land, 
 contract is wrong:
 
 ```
-curl -sI https://eventschedule.com/pricing
+curl -sI https://getvnt.com/pricing
   -> cache-control: public, max-age=0, s-maxage=600
   -> NO set-cookie for laravel_session or XSRF-TOKEN
-curl -sI 'https://eventschedule.com/pricing?lang=fr'
+curl -sI 'https://getvnt.com/pricing?lang=fr'
   -> cache-control: no-cache, private, plus a set-cookie
 ```
 
@@ -1099,7 +1099,7 @@ Click **Edit expression** and paste the following as ONE line.
 [`CACHING.md`](CACHING.md) explains the reasoning behind every clause if you need to change one:
 
 ```
-http.host eq "eventschedule.com" and not starts_with(http.request.uri.path, "/admin") and not starts_with(http.request.uri.path, "/api") and not starts_with(http.request.uri.path, "/sitemap") and not starts_with(http.request.uri.path, "/login") and not starts_with(http.request.uri.path, "/sign_up") and not (http.cookie contains "laravel_session") and not (http.cookie contains "remember_")
+http.host eq "getvnt.com" and not starts_with(http.request.uri.path, "/admin") and not starts_with(http.request.uri.path, "/api") and not starts_with(http.request.uri.path, "/sitemap") and not starts_with(http.request.uri.path, "/login") and not starts_with(http.request.uri.path, "/sign_up") and not (http.cookie contains "laravel_session") and not (http.cookie contains "remember_")
 ```
 
 **If Deploy and Save as Draft both do nothing** - no message anywhere on the page, and clearing
@@ -1160,16 +1160,16 @@ default. Third, that the edge TTL really is 600 s: request a cached page repeate
 `CACHING.md`'s "up to 10 minutes past a deploy" are 2 hours instead.
 
 ```
-curl -sI https://eventschedule.com/pricing           # cf-cache-status MISS, then HIT on repeat
-curl -sI 'https://eventschedule.com/pricing?lang=fr' # stays private, cf-cache-status BYPASS
-curl -sI -X POST https://eventschedule.com/marketing/visit
-curl -sI https://eventschedule.com/docs/search-index.json
+curl -sI https://getvnt.com/pricing           # cf-cache-status MISS, then HIT on repeat
+curl -sI 'https://getvnt.com/pricing?lang=fr' # stays private, cf-cache-status BYPASS
+curl -sI -X POST https://getvnt.com/marketing/visit
+curl -sI https://getvnt.com/docs/search-index.json
   -> no set-cookie on either. One laravel_session on those takes the visitor off the edge for
      the rest of their session, which is the failure the stateless-route handling exists to stop.
 ```
 
 The homepage headline A/B test (`App\Utils\HeroExperiment`) beacons to its own route, so check
-it the same way: `curl -sI -X POST https://eventschedule.com/marketing/hero` must carry no
+it the same way: `curl -sI -X POST https://getvnt.com/marketing/hero` must carry no
 `set-cookie` (a 422 is expected with no body). Within a day, the "Homepage headline test" card
 on `/admin/growth` should show visitors for every variant.
 
@@ -1178,13 +1178,13 @@ never see the guest header. This is the one failure mode no code can defend agai
 
 *Undo:* disable the rule, then purge the zone (Caching, Configuration, Purge Everything).
 
-**Optional and separate: the `www` to apex redirect.** `http://www.eventschedule.com/...`
+**Optional and separate: the `www` to apex redirect.** `http://www.getvnt.com/...`
 currently takes two hops - `http` to `https://www.`, then `www.` to the apex. One Cloudflare
 redirect rule collapses it to a single 301. Rules, then Redirect Rules, then Create rule.
 
-Match: `(http.host eq "www.eventschedule.com")`. Then, as a Dynamic redirect:
+Match: `(http.host eq "www.getvnt.com")`. Then, as a Dynamic redirect:
 
-- Expression: `concat("https://eventschedule.com", http.request.uri.path)`
+- Expression: `concat("https://getvnt.com", http.request.uri.path)`
 - Status: `301`
 - Preserve query string: on
 
@@ -1236,7 +1236,7 @@ post exists today, `SendSubscriptionReminders` gates on `*_reminder_sent_at`,
 `NotifyRequestChanges` on `last_notified_*_count`). Still, **do not do this between 00:00 and
 00:05 UTC**, where it would land on top of the day's genuine daily pass and read as a fault.
 
-**Verify:** `curl -sI https://eventschedule.com/up` returns 200 - it round-trips the cache
+**Verify:** `curl -sI https://getvnt.com/up` returns 200 - it round-trips the cache
 store, so it fails if the new value is unusable. Then the backup round-trip: full export, emailed link, download, import into a throwaway schedule, and
 finally confirm the object is **not** readable at its Spaces origin URL.
 
@@ -1368,7 +1368,7 @@ Then the things a page cannot tell you:
   is the one failure mode no response header can defend against - the origin refuses to *mark* a
   signed-in visitor's page public, but nothing in a response stops a shared cache *serving* them
   one it stored earlier for somebody else. Only the Cloudflare cookie-bypass rule does that.
-- `cf-cache-status: MISS` then `HIT` on a second `curl -sI https://eventschedule.com/pricing`.
+- `cf-cache-status: MISS` then `HIT` on a second `curl -sI https://getvnt.com/pricing`.
   A cold edge legitimately MISSes once, so it is the second call that means anything.
 - Worker logs showing `Running [...] DONE` lines each minute.
 - Backup export, download and import round-trip works, and the object is not public at its origin

@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - PayPal Integration"
+        name="Getvnt - PayPal Integration"
         description="Sell event tickets through your own PayPal business account, with no platform fee on any plan, credentials verified before they are stored and every payment confirmed by reading the capture back from PayPal." />
     </x-slot>
 
@@ -25,7 +25,7 @@
            here is called after the money has already moved. PayPal is
            the one where the capture IS the money, so there is a real
            moment - after the buyer approves and before anything is
-           taken - in which the room can be read again. Event Schedule
+           taken - in which the room can be read again. Getvnt
            uses it: if the seats went while the buyer was away, nothing
            is captured. The page is that moment, drawn as the short
            ladder of steps it actually is.
@@ -190,7 +190,7 @@
                             Take the money <span class="es-pp-accent">into your own account.</span>
                         </h1>
                         <p class="es-pp-muted mt-6 text-lg" data-reveal style="--reveal-delay: 0.1s;">
-                            Connect the PayPal business account you already have and sell tickets through it. Taking money for a ticket is the Pro plan, and it comes with every payment method, this one included. Whatever you charge, Event Schedule takes no platform fee and never holds the money on its way to you.
+                            Connect the PayPal business account you already have and sell tickets through it. Taking money for a ticket is the Pro plan, and it comes with every payment method, this one included. Whatever you charge, Getvnt takes no platform fee and never holds the money on its way to you.
                         </p>
                         <div class="mt-8 flex flex-wrap gap-3" data-reveal style="--reveal-delay: 0.15s;">
                             <a href="{{ app_url('/sign_up') }}" class="inline-flex items-center gap-2 rounded-xl bg-[#854d0e] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#6f4009]">
@@ -288,7 +288,7 @@
 
                 @php
                     $ppFacts = [
-                        ['Included, not an add-on', 'PayPal comes with paid ticketing on Pro, at no extra cost, and the same on Enterprise or a selfhosted install. What you pay for is the plan that lets a ticket carry a price; Event Schedule still adds no fee of its own on top of what you charge.'],
+                        ['Included, not an add-on', 'PayPal comes with paid ticketing on Pro, at no extra cost, and the same on Enterprise or a selfhosted install. What you pay for is the plan that lets a ticket carry a price; Getvnt still adds no fee of its own on top of what you charge.'],
                         ['Refunds move real money', 'From the Sales page, a full or partial refund is issued against the capture PayPal actually took, and the sale only changes once the money has gone back. A partial refund leaves the sale paid and its tickets valid.'],
                         ['One order, one capture', 'A multi-event cart pays as a single amount, so a buyer taking tickets for three of your nights approves once and is charged once.'],
                         ['What it does not do', 'Installment plans are Stripe-only, and gift cards and appointment bookings cannot be paid through PayPal either. HUF, JPY and TWD are excluded deliberately, because PayPal rejects a decimal amount in all three and our pricing path can produce one.'],
@@ -319,7 +319,7 @@
         <!-- ============================================================ -->
         @php
             $ppFaqs = [
-                ['q' => 'Does Event Schedule take a cut of my ticket sales?', 'a' => 'No. There is no platform fee on any plan. The only deduction is PayPal\'s own processing fee, which is between you and PayPal, and the money goes into your own PayPal account rather than through ours.'],
+                ['q' => 'Does Getvnt take a cut of my ticket sales?', 'a' => 'No. There is no platform fee on any plan. The only deduction is PayPal\'s own processing fee, which is between you and PayPal, and the money goes into your own PayPal account rather than through ours.'],
                 ['q' => 'Do I need a paid plan to use PayPal?', 'a' => 'Yes. Selling a ticket that carries a price is Pro or Enterprise, and PayPal comes with it, at no extra cost and with no fee of ours on top. A free schedule has nothing to charge for, so it has nothing for a gateway to settle. Free registration stays unlimited on every plan, and those places need no payment method at all.'],
                 ['q' => 'Can one event offer both PayPal and Stripe?', 'a' => 'No. An event uses one payment method at a time, chosen on the event itself, so you pick per event rather than showing a row of buttons at checkout. You can connect several accounts and use different ones on different events.'],
                 ['q' => 'What happens if I paste the wrong secret?', 'a' => 'The settings form refuses it. Your client ID and secret are tried against PayPal before they are stored, so a typo is caught by you rather than by the first person who tries to buy a ticket. If the check cannot be run at all, the keys are saved and you are told that we could not verify them.'],
@@ -375,7 +375,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#17130c] transition-colors hover:bg-gray-100">
                                 Get Started Free

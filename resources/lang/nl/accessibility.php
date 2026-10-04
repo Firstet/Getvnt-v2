@@ -2,17 +2,17 @@
 
 return [
 
-    'page_title' => 'Toegankelijkheid - Event Schedule',
-    'meta_description' => 'Toegankelijkheidsverklaring en weergave-opties voor Event Schedule.',
+    'page_title' => 'Toegankelijkheid - Getvnt',
+    'meta_description' => 'Toegankelijkheidsverklaring en weergave-opties voor Getvnt.',
     'breadcrumb' => 'Toegankelijkheid',
 
     'h1' => 'Toegankelijkheidsverklaring',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Deze pagina is algemene service-informatie, geen juridisch advies. Wetten verschillen per land. Bevestig verplichtingen met gekwalificeerd advies.',
 
     'section_scope_title' => 'Reikwijdte',
-    'section_scope_body' => 'Deze verklaring geldt voor de marketingwebsite en de Event Schedule-webapp (ingelogde tools en openbare agendapagina\'s) onder het primaire domein en subdomeinen van Event Schedule, tenzij anders vermeld.',
+    'section_scope_body' => 'Deze verklaring geldt voor de marketingwebsite en de Getvnt-webapp (ingelogde tools en openbare agendapagina\'s) onder het primaire domein en subdomeinen van Getvnt, tenzij anders vermeld.',
 
     'section_commitment_title' => 'Toewijding',
     'section_commitment_body' => 'We werken aan bruikbaarheid voor mensen met een beperking. We streven naar betere aansluiting bij WCAG, gedocumenteerd als :wcag_target, en respect voor richtlijnen rond de Israëlische standaard 5568 waar van toepassing.',

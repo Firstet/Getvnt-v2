@@ -1,6 +1,6 @@
 <x-docs-page
     key="schedule-styling"
-    title="Schedule Styling: Colors, Fonts and Headers - Event Schedule"
+    title="Schedule Styling: Colors, Fonts and Headers - Getvnt"
     description="Style your public schedule page: default layout, header style, profile and header images, backgrounds, accent color, fonts, animations, custom CSS and branding."
     lede="Customize your schedule's visual appearance with colors, fonts, backgrounds, and more. Most changes show in a live preview before you save."
 >
@@ -140,7 +140,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Your social preview</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">It becomes the preview image when your schedule page is shared to a chat app or social network, unless your header image is one you uploaded, which is wider and so goes first. With neither, a background image you uploaded is used, and with none of them the page offers no preview image, so most apps show the link without a picture (Facebook may pick one from the page itself). It is never an Event Schedule image.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">It becomes the preview image when your schedule page is shared to a chat app or social network, unless your header image is one you uploaded, which is wider and so goes first. With neither, a background image you uploaded is used, and with none of them the page offers no preview image, so most apps show the link without a picture (Facebook may pick one from the page itself). It is never an Getvnt image.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Talent and venue logo walls</h4>
@@ -153,7 +153,7 @@
         </div>
 
         <h3 class="doc-subheading">It becomes your favicon too <x-doc-badge plan="pro" /></h3>
-        <p class="text-gray-600 dark:text-gray-300">On Pro, your profile image also becomes the icon in the browser tab on your public pages, including ticket pages. On every plan it becomes the home-screen icon when a visitor saves your schedule to their phone, and a schedule that has uploaded no image gets a plain calendar glyph there rather than the Event Schedule logo. Nothing to configure: upload a profile image and it is used automatically. This is the same reason a square image matters, since a tab icon is cropped to a square either way.</p>
+        <p class="text-gray-600 dark:text-gray-300">On Pro, your profile image also becomes the icon in the browser tab on your public pages, including ticket pages. On every plan it becomes the home-screen icon when a visitor saves your schedule to their phone, and a schedule that has uploaded no image gets a plain calendar glyph there rather than the Getvnt logo. Nothing to configure: upload a profile image and it is used automatically. This is the same reason a square image matters, since a tab icon is cropped to a square either way.</p>
     </section>
 
     <!-- Header Images -->
@@ -248,7 +248,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Text on top of it is calculated</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Event Schedule measures the brightness of your accent color and puts black text on light accents and white text on dark ones, so a button label stays readable whatever you choose. There is nothing to set.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Getvnt measures the brightness of your accent color and puts black text on light accents and white text on dark ones, so a button label stays readable whatever you choose. There is nothing to set.</p>
             </div>
         </div>
         <div class="doc-callout doc-callout-tip">
@@ -394,7 +394,7 @@
             </svg>
             Remove Branding <x-doc-badge plan="pro" />
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Free schedules on eventschedule.com carry a small "Event Schedule" credit chip in the corner of their public pages. There is no switch for it: it is removed automatically the moment the schedule is on <strong class="text-gray-900 dark:text-white">Pro</strong> or <strong class="text-gray-900 dark:text-white">Enterprise</strong>, and it returns if the plan lapses. The one exception is an Enterprise plan an admin granted by hand, which keeps it.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Free schedules on getvnt.com carry a small "Getvnt" credit chip in the corner of their public pages. There is no switch for it: it is removed automatically the moment the schedule is on <strong class="text-gray-900 dark:text-white">Pro</strong> or <strong class="text-gray-900 dark:text-white">Enterprise</strong>, and it returns if the plan lapses. The one exception is an Enterprise plan an admin granted by hand, which keeps it.</p>
         <div class="doc-fields">
             <div class="doc-field">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">What a paid plan removes</h3>
@@ -402,11 +402,11 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">White-label your schedule</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">With those gone, a hosted schedule reads entirely as your own to visitors. Pair it with a <a href="{{ route('marketing.docs.creating_schedules') }}#custom-domain" class="doc-link">custom domain</a> on Enterprise and nothing on the page points back at Event Schedule. <a href="{{ route('marketing.docs.event_graphics') }}" class="doc-link">Event graphics</a> are the exception: an image generated on the hosted platform carries a small eventschedule.com credit in its bottom-right corner on every plan.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">With those gone, a hosted schedule reads entirely as your own to visitors. Pair it with a <a href="{{ route('marketing.docs.creating_schedules') }}#custom-domain" class="doc-link">custom domain</a> on Enterprise and nothing on the page points back at Getvnt. <a href="{{ route('marketing.docs.event_graphics') }}" class="doc-link">Event graphics</a> are the exception: an image generated on the hosted platform carries a small getvnt.com credit in its bottom-right corner on every plan.</p>
             </div>
         </div>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">A single-tenant <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install has no plan tiers at all, so the event-page card, the embed and newsletter lines and ads are all absent by default, with nothing to buy. If instead you run your own multi-tenant platform on Event Schedule, those surfaces follow each tenant's tier exactly as they do on eventschedule.com, and your free tier also carries a footer strip pointing at your own marketing site, because that strip is the growth prompt of whoever runs the platform.</p>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">On every install that is not eventschedule.com itself, upgrading never removes that corner chip. It is the attribution the Attribution Assurance License asks for in return for the application, so there is no setting that removes it. On a single-tenant selfhost it is on every page. On a platform of your own it is on every schedule you charge for, and a free schedule there carries the operator's footer strip in its place, because a page never shows both credits at once.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">A single-tenant <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install has no plan tiers at all, so the event-page card, the embed and newsletter lines and ads are all absent by default, with nothing to buy. If instead you run your own multi-tenant platform on Getvnt, those surfaces follow each tenant's tier exactly as they do on getvnt.com, and your free tier also carries a footer strip pointing at your own marketing site, because that strip is the growth prompt of whoever runs the platform.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">On every install that is not getvnt.com itself, upgrading never removes that corner chip. It is the attribution the Attribution Assurance License asks for in return for the application, so there is no setting that removes it. On a single-tenant selfhost it is on every page. On a platform of your own it is on every schedule you charge for, and a free schedule there carries the operator's footer strip in its place, because a page never shows both credits at once.</p>
     </section>
 
     <!-- Custom CSS -->
@@ -481,7 +481,7 @@
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">Hiding a panel is not the same as turning a feature off</div>
-            <p>A <code class="doc-inline-code">display: none</code> rule removes a panel from the page. It does not disable what sits behind it. People who already signed up to be notified are still notified, a hidden subscribe panel still accepts a submission posted to its address, and a hidden reviews panel does not delete the reviews. Where a real on/off setting exists, use that instead: videos, fan photos, fan comments, feedback, carpooling, accommodation and the &ldquo;Notify me&rdquo; card each have their own switch on the schedule edit page, and the sponsor grid disappears on its own once you remove the logos. The <strong>Show Sign-Up Panel</strong> switch is the exception: like this rule, it only hides the panel, and sign-ups through your follow link, and on eventschedule.com the Follow button, still arrive.</p>
+            <p>A <code class="doc-inline-code">display: none</code> rule removes a panel from the page. It does not disable what sits behind it. People who already signed up to be notified are still notified, a hidden subscribe panel still accepts a submission posted to its address, and a hidden reviews panel does not delete the reviews. Where a real on/off setting exists, use that instead: videos, fan photos, fan comments, feedback, carpooling, accommodation and the &ldquo;Notify me&rdquo; card each have their own switch on the schedule edit page, and the sponsor grid disappears on its own once you remove the logos. The <strong>Show Sign-Up Panel</strong> switch is the exception: like this rule, it only hides the panel, and sign-ups through your follow link, and on getvnt.com the Follow button, still arrive.</p>
         </div>
 
         <h3 class="doc-subheading">Schedule page sections</h3>
@@ -612,7 +612,7 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Style Your Event Schedule",
+            "name": "How to Style Your Getvnt",
             "description": "Customize your schedule's appearance with colors, fonts, backgrounds, and more. Most changes show in a live preview before you save.",
             "totalTime": "PT5M",
             "step": [

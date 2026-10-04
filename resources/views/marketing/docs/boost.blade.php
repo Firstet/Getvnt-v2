@@ -1,6 +1,6 @@
 <x-docs-page
     key="boost"
-    title="Boost Setup Guide: Meta Ads and Promotions - Event Schedule"
+    title="Boost Setup Guide: Meta Ads and Promotions - Getvnt"
     plan="pro"
     description="Learn how to promote your events with Boost: Facebook and Instagram ad campaigns, and promoted cards on other schedules on the same site."
     lede="Promote your events two ways from one page: Facebook and Instagram ads bought through Meta, and promoted cards shown on other schedules on the same site."
@@ -51,7 +51,7 @@
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">On this site</span></td>
-                        <td>A promoted card on other schedules' public pages on the same Event Schedule site</td>
+                        <td>A promoted card on other schedules' public pages on the same Getvnt site</td>
                         <td>Per 1,000 views or per click, with no service fee</td>
                     </tr>
                 </tbody>
@@ -98,11 +98,11 @@
             On-Network Promotions
         </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Alongside Facebook and Instagram, some Event Schedule sites run their own promotions network. Your event appears as a promoted card on other schedules' public pages, in front of people already browsing events on the same site. The channel is called <strong class="text-gray-900 dark:text-white">On this site</strong> in the Boost Event dialog.
+            Alongside Facebook and Instagram, some Getvnt sites run their own promotions network. Your event appears as a promoted card on other schedules' public pages, in front of people already browsing events on the same site. The channel is called <strong class="text-gray-900 dark:text-white">On this site</strong> in the Boost Event dialog.
         </p>
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Availability</div>
-            <p>This is a per-site feature: it only appears if the operator of your Event Schedule site has switched it on. If you do not see an <strong>On this site</strong> button when you press Boost Event, the site is not running a promotions network.</p>
+            <p>This is a per-site feature: it only appears if the operator of your Getvnt site has switched it on. If you do not see an <strong>On this site</strong> button when you press Boost Event, the site is not running a promotions network.</p>
             <p class="mt-2">Promoted cards are only ever shown on <strong>free-plan</strong> schedules' public pages. Pro and Enterprise schedules never carry them, so the pool of pages your promotion can appear on is smaller than the site's total traffic.</p>
         </div>
 
@@ -600,7 +600,7 @@
             Billing &amp; Refunds
         </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Facebook and Instagram campaigns are billed as your ad budget plus a service fee, 20% on eventschedule.com. The fee covers running the campaign on your behalf; the rest is real ad spend on Meta. The full total is shown before you commit.
+            Facebook and Instagram campaigns are billed as your ad budget plus a service fee, 20% on getvnt.com. The fee covers running the campaign on your behalf; the rest is real ad spend on Meta. The full total is shown before you commit.
         </p>
 
         <h3 class="doc-subheading">How Pricing Works</h3>
@@ -710,8 +710,8 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Boost Events with Event Schedule",
-            "description": "Promote your events with Facebook and Instagram ad campaigns, or promoted cards on other schedules, using Event Schedule's Boost feature.",
+            "name": "How to Boost Events with Getvnt",
+            "description": "Promote your events with Facebook and Instagram ad campaigns, or promoted cards on other schedules, using Getvnt's Boost feature.",
             "totalTime": "PT5M",
             "step": [
                 {

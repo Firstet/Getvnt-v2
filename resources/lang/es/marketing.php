@@ -1,25 +1,25 @@
 <?php
 
 return [
-    'home_title' => 'Event Schedule - Calendario de eventos, entradas y reservas, gratis',
+    'home_title' => 'Getvnt - Calendario de eventos, entradas y reservas, gratis',
     'home_description' => 'Publica tus eventos en una sola página de calendario, acepta inscripciones gratuitas sin límite y recibe reservas de citas. Las entradas de pago son de Pro.',
 
-    'pricing_title' => 'Precios de Event Schedule: gratis y sin comisión de plataforma',
+    'pricing_title' => 'Precios de Getvnt: gratis y sin comisión de plataforma',
     'pricing_description' => 'Empieza gratis: eventos e inscripciones ilimitados. Pro añade la venta de entradas de pago y Enterprise los asientos numerados. Sin comisión de plataforma.',
 
     'features_title' => 'Software de gestión de eventos: todas las funciones, sin comisiones de plataforma',
     'features_description' => 'Todas las funciones en cinco capítulos: entradas con Stripe o PayPal sin comisión de plataforma, sincronización bidireccional del calendario, boletines, importación con IA y analíticas.',
 
-    'about_title' => 'Acerca de Event Schedule | Plataforma de gestión de eventos de código abierto',
-    'about_description' => 'Quién desarrolla Event Schedule, con qué licencia se publica, dónde está el código fuente y una lista de lo que no hace. Código abierto y sin comisiones de plataforma.',
+    'about_title' => 'Acerca de Getvnt | Plataforma de gestión de eventos de código abierto',
+    'about_description' => 'Quién desarrolla Getvnt, con qué licencia se publica, dónde está el código fuente y una lista de lo que no hace. Código abierto y sin comisiones de plataforma.',
 
     'selfhost_title' => 'Calendario de eventos autoalojado | Todas las funciones gratis en tu servidor',
-    'selfhost_description' => 'Autoaloja Event Schedule en tu propio servidor y todas las funciones Pro y Enterprise están incluidas gratis. Código abierto, instalación con un clic, sin comisiones de plataforma, y tus datos nunca salen de tu infraestructura.',
+    'selfhost_description' => 'Autoaloja Getvnt en tu propio servidor y todas las funciones Pro y Enterprise están incluidas gratis. Código abierto, instalación con un clic, sin comisiones de plataforma, y tus datos nunca salen de tu infraestructura.',
 
-    'ticketing_title' => 'Software de venta de entradas para eventos, sin comisiones de plataforma - Event Schedule',
+    'ticketing_title' => 'Software de venta de entradas para eventos, sin comisiones de plataforma - Getvnt',
     'ticketing_description' => 'Vende entradas desde la página de tu evento sin comisiones de plataforma. Cobra con Stripe o PayPal, reembolsa total o parcialmente y registra asistentes con QR.',
 
-    'ai_title' => 'Importación de eventos con IA: de un cartel a un evento | Event Schedule',
+    'ai_title' => 'Importación de eventos con IA: de un cartel a un evento | Getvnt',
     'ai_description' => 'Pega el texto o suelta un cartel y la IA completa los datos del evento: fecha, lugar, artistas y precio. Gratis en todos los planes, con traducción a 12 idiomas.',
 
     'calendar_sync_title' => 'Sincronización bidireccional de calendario con Google, Outlook y CalDAV',

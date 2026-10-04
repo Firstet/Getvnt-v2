@@ -304,7 +304,7 @@ class PromotionPurchaseTest extends TestCase
 
     public function test_the_nexus_cannot_sell_inventory_it_can_never_serve(): void
     {
-        // Role::showAds() returns false on the nexus, so eventschedule.com can never render a
+        // Role::showAds() returns false on the nexus, so getvnt.com can never render a
         // promotion. Selling has to be gated on the same condition, or a schedule prepays, goes
         // active, never serves, and - with no scheduled_end - never completes or refunds either.
         config(['app.is_nexus' => true]);

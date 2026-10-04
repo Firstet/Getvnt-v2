@@ -10,7 +10,7 @@
            ================================================================== */
 
         // --- The scoreline ------------------------------------------------
-        // $row[3] is the "Event Schedule has the edge" flag the controller
+        // $row[3] is the "Getvnt has the edge" flag the controller
         // already publishes for each row, so this tally summarises claims the
         // page is making anyway rather than inventing a new one.
         $lineTotal = 0;
@@ -171,7 +171,7 @@
     {{-- Each competitor carries its own meta_title (the "X alternative" phrase
          plus the one difference that decides it), so the titles are not one
          pattern with a name swapped in. The fallback keeps a new entry safe. --}}
-    <x-slot name="title">{{ $meta_title ?? $name.' Alternative | Event Schedule' }}</x-slot>
+    <x-slot name="title">{{ $meta_title ?? $name.' Alternative | Getvnt' }}</x-slot>
     <x-slot name="description">{{ $description }}</x-slot>
     <x-slot name="keywords">{{ $keywords }}</x-slot>
     <x-slot name="breadcrumbTitle">{{ $name }} Alternative</x-slot>
@@ -180,14 +180,14 @@
     {{-- The page, about the product (the layout's SeoUtils::softwareApplication()) and
          mentioning the competitor it is compared with. --}}
     <x-seo.webpage
-        :name="'Event Schedule vs '.$name"
+        :name="'Getvnt vs '.$name"
         :description="$description"
         :keywords="$keywords"
         :mentions="[$name]" />
     {{-- Through the component, which encodes with SeoUtils::jsonLd(). The block this replaces
          escaped quotes by hand inside {{ }}, which then HTML-escaped the quote it had just
          escaped, so a name or step with a " in it produced invalid JSON. --}}
-    <x-seo.howto-schema :name="'How to switch from '.$name.' to Event Schedule'" :steps="$switchHowTo" />
+    <x-seo.howto-schema :name="'How to switch from '.$name.' to Getvnt'" :steps="$switchHowTo" />
     </x-slot>
 
     {{-- Motion gate: hidden pre-reveal states only apply when this class is present,
@@ -373,7 +373,7 @@
         }
 
         /* --- The tally: one tick per compared line, filled where the row
-               is flagged as an Event Schedule edge. --- */
+               is flagged as an Getvnt edge. --- */
         .es-score-tally {
             display: flex;
             align-items: flex-end;
@@ -568,7 +568,7 @@
         }
         .dark .es-score-wedge { background: #9cc0ff; }
         /* A neutral list mark. The diamond above is spoken for by the legend
-           ("Event Schedule has the edge"), so the competitor's strengths get
+           ("Getvnt has the edge"), so the competitor's strengths get
            their own mark rather than borrowing ours. */
         .es-score-bullet {
             width: 0.55rem;
@@ -832,7 +832,7 @@
 
                     <h1 class="es-balance es-score-ink mb-7 text-[2.6rem] font-black leading-[1.05] tracking-tight sm:text-6xl">
                         <x-marketing.hero-eyebrow class="block es-fade-up es-d-1 es-score-tag mb-5">{{ $name }} alternative scorecard</x-marketing.hero-eyebrow>
-                        <span class="es-mask"><span class="es-mask-line">Event Schedule</span></span>
+                        <span class="es-mask"><span class="es-mask-line">Getvnt</span></span>
                         <span class="es-mask es-mask-2"><span class="es-mask-line"><span class="es-score-vs">vs</span> <span class="es-score-accent">{{ $name }}</span></span></span>
                     </h1>
 
@@ -859,7 +859,7 @@
                 <div class="es-fade-up es-d-4" data-reveal>
                     <div class="es-score-card p-6 sm:p-7">
                         <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
-                            <span class="es-score-plate es-score-plate-ours">Event Schedule</span>
+                            <span class="es-score-plate es-score-plate-ours">Getvnt</span>
                             <span class="es-score-vs" aria-hidden="true">vs</span>
                             <span class="es-score-plate es-score-plate-theirs">{{ $name }}</span>
                         </div>
@@ -982,21 +982,21 @@
                     Scored <span class="es-score-accent">line by line.</span>
                 </h2>
                 <p class="es-score-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    A feature-by-feature comparison of Event Schedule and {{ $name }}, in {{ $lineTotal }} lines across {{ count($sections) }} sections. Our column names the plan behind every gated feature, because a comparison that hides the tier is not a comparison.
+                    A feature-by-feature comparison of Getvnt and {{ $name }}, in {{ $lineTotal }} lines across {{ count($sections) }} sections. Our column names the plan behind every gated feature, because a comparison that hides the tier is not a comparison.
                 </p>
             </div>
 
             <div class="es-score-card overflow-hidden" data-reveal="panel">
                 <div class="es-score-scroll">
                     <table class="es-score-table">
-                        <caption class="sr-only">Feature-by-feature comparison of Event Schedule and {{ $name }}. A diamond in the margin marks a line where Event Schedule has the edge.</caption>
+                        <caption class="sr-only">Feature-by-feature comparison of Getvnt and {{ $name }}. A diamond in the margin marks a line where Getvnt has the edge.</caption>
                         <thead>
                             <tr>
                                 <th scope="col">
                                     <span class="es-score-tag">Line</span>
                                 </th>
                                 <th scope="col" class="es-score-ours">
-                                    <span class="es-score-plate es-score-plate-ours">Event Schedule</span>
+                                    <span class="es-score-plate es-score-plate-ours">Getvnt</span>
                                 </th>
                                 <th scope="col">
                                     <span class="es-score-plate es-score-plate-theirs">{{ $name }}</span>
@@ -1011,7 +1011,7 @@
                                         <span class="es-score-secgroup">
                                             <span class="es-score-tag">{{ $sectionName }}</span>
                                             <span class="es-score-note">
-                                                {{ $sectionScore[$sectionName]['edge'] }} of {{ $sectionScore[$sectionName]['total'] }} to Event Schedule
+                                                {{ $sectionScore[$sectionName]['edge'] }} of {{ $sectionScore[$sectionName]['total'] }} to Getvnt
                                             </span>
                                         </span>
                                     </th>
@@ -1037,7 +1037,7 @@
                                                 <span class="es-score-ink min-w-0 text-sm font-semibold">
                                                     {{ $row[0] }}
                                                     @if ($won)
-                                                        <span class="sr-only">(Event Schedule has the edge on this line)</span>
+                                                        <span class="sr-only">(Getvnt has the edge on this line)</span>
                                                     @endif
                                                 </span>
                                             </span>
@@ -1100,7 +1100,7 @@
                 </span>
                 <span class="flex items-center gap-2">
                     <span class="es-score-gutter"><span class="es-score-wedge" aria-hidden="true"></span></span>
-                    <span class="es-score-note">Event Schedule has the edge on this line</span>
+                    <span class="es-score-note">Getvnt has the edge on this line</span>
                 </span>
                 <span class="flex items-center gap-2">
                     <span class="es-score-plan es-score-plan-free">Free</span>
@@ -1109,7 +1109,7 @@
             </div>
 
             <p class="es-score-muted mx-auto mt-8 max-w-3xl text-center text-sm" data-reveal>
-                Selfhost Event Schedule and every one of those plan chips opens: a selfhosted install resolves to Enterprise, so no line on the card is held back by a plan. Either way, ticket sales run through your own Stripe or PayPal account and Event Schedule takes 0%.
+                Selfhost Getvnt and every one of those plan chips opens: a selfhosted install resolves to Enterprise, so no line on the card is held back by a plan. Either way, ticket sales run through your own Stripe or PayPal account and Getvnt takes 0%.
             </p>
         </div>
     </section>
@@ -1131,7 +1131,7 @@
                         Three lines <span class="es-score-lit">we do not claim.</span>
                     </h2>
                     <p class="es-score-band-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                        A card you can trust has to name what is missing from it. These three are true about Event Schedule no matter which platform you are holding it against.
+                        A card you can trust has to name what is missing from it. These three are true about Getvnt no matter which platform you are holding it against.
                     </p>
                 </div>
 
@@ -1139,7 +1139,7 @@
                     <div class="es-score-card flex flex-col p-6" data-reveal="panel">
                         <p class="es-score-tag mb-3">No marketplace</p>
                         <h3 class="es-score-band-ink mb-2 text-lg font-bold">You bring the audience</h3>
-                        <p class="es-score-band-muted text-sm">Your public events can be listed on the Event Schedule browse and search pages, but a listing is not a marketplace's built-in audience. What actually fills a room is your own schedule page, an embeddable calendar, a follower QR code, newsletters, and an interest list that emails people when tickets go on sale.</p>
+                        <p class="es-score-band-muted text-sm">Your public events can be listed on the Getvnt browse and search pages, but a listing is not a marketplace's built-in audience. What actually fills a room is your own schedule page, an embeddable calendar, a follower QR code, newsletters, and an interest list that emails people when tickets go on sale.</p>
                     </div>
                     <div class="es-score-card flex flex-col p-6" data-reveal="panel">
                         <p class="es-score-tag mb-3">Seat maps are Enterprise</p>
@@ -1233,9 +1233,9 @@
 
                 <div class="es-score-facing" data-reveal style="--reveal-delay: 0.1s;">
                     <div class="mb-5">
-                        <span class="es-score-plate es-score-plate-ours">Event Schedule</span>
+                        <span class="es-score-plate es-score-plate-ours">Getvnt</span>
                     </div>
-                    <h3 class="es-score-ink mb-4 text-2xl font-bold">Why choose Event Schedule?</h3>
+                    <h3 class="es-score-ink mb-4 text-2xl font-bold">Why choose Getvnt?</h3>
                     <p class="es-score-muted mb-6">{{ $whyChooseSummary }}</p>
                     <p class="es-score-tag mb-4">What you get</p>
                     <ul class="space-y-3">
@@ -1345,7 +1345,7 @@
             <div class="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3" data-reveal-group="80">
                 @foreach ($cross_links as $link)
                     <a href="{{ route($link['route']) }}" class="es-score-card es-score-hover group flex flex-col p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-md" data-reveal>
-                        <span class="es-score-tag mb-2">Event Schedule vs</span>
+                        <span class="es-score-tag mb-2">Getvnt vs</span>
                         <span class="es-score-hover-title es-score-ink mb-4 text-lg font-bold transition-colors">{{ $link['name'] }}</span>
                         <span class="es-score-hover-arrow es-score-muted mt-auto inline-flex items-center gap-1 text-xs font-medium transition-colors">
                             Read the card
@@ -1410,7 +1410,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="es-score-band-muted shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-score-band-muted shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-score-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

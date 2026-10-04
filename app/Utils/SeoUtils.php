@@ -81,7 +81,7 @@ class SeoUtils
         return [
             '@type' => 'Organization',
             '@id' => self::siteUrl().'/#organization',
-            'name' => 'Event Schedule',
+            'name' => 'Getvnt',
             'url' => self::siteUrl(),
             'logo' => [
                 '@type' => 'ImageObject',
@@ -104,7 +104,7 @@ class SeoUtils
         return [
             '@type' => 'Organization',
             '@id' => self::siteUrl().'/#organization',
-            'name' => 'Event Schedule',
+            'name' => 'Getvnt',
         ];
     }
 
@@ -127,7 +127,7 @@ class SeoUtils
      * The product, as one SoftwareApplication node that the marketing layout emits once per page.
      *
      * Every marketing page used to carry a product node of its own - 92 of them, named "Event
-     * Schedule for Bars and Pubs", "Event Schedule - Gift Cards" and so on, with their own offers
+     * Schedule for Bars and Pubs", "Getvnt - Gift Cards" and so on, with their own offers
      * and feature lists - so to a crawler the site described 92 different applications. Now there
      * is one, with the @id {site}/#software, and each page describes ITSELF with a WebPage that is
      * `about` it (<x-seo.webpage>).
@@ -174,7 +174,7 @@ class SeoUtils
             '@context' => 'https://schema.org',
             '@type' => 'SoftwareApplication',
             '@id' => $site.'/#software',
-            'name' => 'Event Schedule',
+            'name' => 'Getvnt',
             'url' => $site,
             'description' => 'Event calendar and booking platform. One calendar that takes the bookings, collects free registrations, sells tickets with zero platform fees through Stripe or PayPal, emails the people who follow you and scans tickets at the door. Free plan, open source and selfhostable.',
             'featureList' => [

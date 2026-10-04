@@ -1,9 +1,9 @@
 <x-docs-page
     key="selfhost/ai"
-    title="AI Setup with Gemini or OpenAI (Selfhost) - Event Schedule"
-    description="Add a Google Gemini or OpenAI key to a selfhosted Event Schedule for AI import, a daily auto import from URLs, agenda scanning, translation and images."
+    title="AI Setup with Gemini or OpenAI (Selfhost) - Getvnt"
+    description="Add a Google Gemini or OpenAI key to a selfhosted Getvnt for AI import, a daily auto import from URLs, agenda scanning, translation and images."
     lede="Add one API key and every AI feature turns on: event importing, agenda scanning, translation, generated details, flyers and schedule styling."
-    article-description="Configure Google Gemini and OpenAI for your selfhosted Event Schedule instance. Enable AI event importing, a daily auto import from a list of URLs, agenda scanning, automatic translations, AI-generated text on event graphics, and image generation."
+    article-description="Configure Google Gemini and OpenAI for your selfhosted Getvnt instance. Enable AI event importing, a daily auto import from a list of URLs, agenda scanning, automatic translations, AI-generated text on event graphics, and image generation."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#overview">Overview</x-doc-nav-link>
@@ -23,7 +23,7 @@
             </svg>
             Overview
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Event Schedule talks to two AI providers: <a href="https://ai.google.dev/" target="_blank" rel="noopener noreferrer" class="doc-link">Google Gemini</a> and <a href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" class="doc-link">OpenAI</a>. Either key on its own turns on every AI feature, text and images alike, because each request falls back to whichever provider is configured. When both keys are present the defaults split the work: Gemini answers text requests and OpenAI draws images. Nothing else changes if you skip this page, so treat AI as an accelerator rather than a dependency.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Getvnt talks to two AI providers: <a href="https://ai.google.dev/" target="_blank" rel="noopener noreferrer" class="doc-link">Google Gemini</a> and <a href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" class="doc-link">OpenAI</a>. Either key on its own turns on every AI feature, text and images alike, because each request falls back to whichever provider is configured. When both keys are present the defaults split the work: Gemini answers text requests and OpenAI draws images. Nothing else changes if you skip this page, so treat AI as an accelerator rather than a dependency.</p>
 
         <div class="doc-fields">
             <div class="doc-field">
@@ -32,7 +32,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">No daily AI caps</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">The per-day allowances that apply on eventschedule.com, one on event parsing and one on generated images, are switched off when the app is not hosted, so no schedule is ever told it has reached a daily limit. Your only ceilings are the quota and billing on your own provider account.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">The per-day allowances that apply on getvnt.com, one on event parsing and one on generated images, are switched off when the app is not hosted, so no schedule is ever told it has reached a daily limit. Your only ceilings are the quota and billing on your own provider account.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Requests leave your server</h4>
@@ -108,7 +108,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Import URLs</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Add the address of a page that lists events, such as a venue calendar or a tour page. Each run fetches the page, follows the event links it finds, and asks the AI to pull the details out of each one. The crawler identifies itself as <code class="doc-inline-code">Event Schedule Bot</code>, honours the site's <code class="doc-inline-code">robots.txt</code>, refuses addresses that fail the outbound URL safety check, remembers event pages it has already imported so nothing arrives twice, and skips events whose date has passed or whose name or start time it could not read.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Add the address of a page that lists events, such as a venue calendar or a tour page. Each run fetches the page, follows the event links it finds, and asks the AI to pull the details out of each one. The crawler identifies itself as <code class="doc-inline-code">Getvnt Bot</code>, honours the site's <code class="doc-inline-code">robots.txt</code>, refuses addresses that fail the outbound URL safety check, remembers event pages it has already imported so nothing arrives twice, and skips events whose date has passed or whose name or start time it could not read.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Import Cities</h4>
@@ -193,7 +193,7 @@
             <li>Go to <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" class="doc-link">OpenAI Platform</a></li>
             <li>Sign in or create an OpenAI account</li>
             <li>Click <strong class="text-gray-900 dark:text-white">Create new secret key</strong></li>
-            <li>Give it a name (for example "Event Schedule") and copy the key</li>
+            <li>Give it a name (for example "Getvnt") and copy the key</li>
         </ol>
 
         <div class="doc-callout doc-callout-info">
@@ -400,7 +400,7 @@
                     <li>Both APIs have rate limits. If you are hitting them, wait a few minutes and try again.</li>
                     <li>For Gemini, the free tier limits are published on <a href="https://ai.google.dev/pricing" target="_blank" rel="noopener noreferrer" class="doc-link">Google's pricing page</a>.</li>
                     <li>For OpenAI, rate limits depend on your account tier. Check <a href="https://platform.openai.com/account/limits" target="_blank" rel="noopener noreferrer" class="doc-link">your account limits</a> for details.</li>
-                    <li>These come from the provider, not from Event Schedule: a selfhosted install applies no daily AI allowance of its own.</li>
+                    <li>These come from the provider, not from Getvnt: a selfhosted install applies no daily AI allowance of its own.</li>
                 </ul>
             </div>
         </div>

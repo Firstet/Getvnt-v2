@@ -1,6 +1,6 @@
 <x-docs-page
     key="subscriptions"
-    title="Subscriptions & Passes: Multi-Visit Tickets - Event Schedule"
+    title="Subscriptions & Passes: Multi-Visit Tickets - Getvnt"
     description="Sell one pass a guest buys once and reuses across many events. Set up visit passes, memberships, festival passes, and season passes, then redeem and track them."
     lede="Sell one pass that a guest pays for once and reuses across many of your events - like a class pack, a membership, or a festival wristband."
     article-description="How to sell a multi-use pass or subscription: one purchase, one QR code, valid across many events. Includes setup, redeeming at the door, and usage tracking."
@@ -42,8 +42,8 @@
         </ul>
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Two different things are called a subscription</div>
-            <p><strong class="text-gray-900 dark:text-white">This page is about the pass you sell to guests.</strong> The buyer pays once. Event Schedule never bills them again - a pass here is a multi-use ticket, not an auto-renewing card on file. When it runs out of visits or expires, they simply buy another.</p>
-            <p class="mt-2"><strong class="text-gray-900 dark:text-white">Your own plan is also called a subscription.</strong> That is what you pay Event Schedule for Pro or Enterprise, and it is managed on the <a href="{{ route('marketing.docs.managing_schedules') }}#plan" class="doc-link">Plan tab</a> of your schedule, not here. Nothing on this page changes your billing.</p>
+            <p><strong class="text-gray-900 dark:text-white">This page is about the pass you sell to guests.</strong> The buyer pays once. Getvnt never bills them again - a pass here is a multi-use ticket, not an auto-renewing card on file. When it runs out of visits or expires, they simply buy another.</p>
+            <p class="mt-2"><strong class="text-gray-900 dark:text-white">Your own plan is also called a subscription.</strong> That is what you pay Getvnt for Pro or Enterprise, and it is managed on the <a href="{{ route('marketing.docs.managing_schedules') }}#plan" class="doc-link">Plan tab</a> of your schedule, not here. Nothing on this page changes your billing.</p>
         </div>
         <div class="doc-callout doc-callout-plan">
             <div class="doc-callout-title">Passes need a Pro plan</div>
@@ -196,7 +196,7 @@
         </div>
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">One pass per order</div>
-            <p>A pass is a single redeemable unit: one QR code with one visit counter. Event Schedule enforces that for you by fixing <strong class="text-gray-900 dark:text-white">Max Per Order</strong> at 1 on any pass ticket, so the buyer cannot select more than one and you never need to set that field yourself. To buy passes as gifts, place a separate order for each.</p>
+            <p>A pass is a single redeemable unit: one QR code with one visit counter. Getvnt enforces that for you by fixing <strong class="text-gray-900 dark:text-white">Max Per Order</strong> at 1 on any pass ticket, so the buyer cannot select more than one and you never need to set that field yourself. To buy passes as gifts, place a separate order for each.</p>
             <p class="mt-2">A pass also cannot share an order with normal single-date tickets. Trying it shows "A season pass cannot be purchased together with single-date tickets", so buy them in separate orders.</p>
         </div>
     </section>

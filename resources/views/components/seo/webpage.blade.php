@@ -5,7 +5,7 @@
     product; see SeoUtils::softwareApplication() for why.
 
     Props:
-      name        - the page's subject, e.g. "Event Schedule for Bars and Pubs"
+      name        - the page's subject, e.g. "Getvnt for Bars and Pubs"
       description - one or two sentences on what the page covers
       audience    - who it is for, as schema.org Audience.audienceType
       keywords    - comma-separated, as the page's own keyword list

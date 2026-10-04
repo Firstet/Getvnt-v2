@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for DJs | Set Times & Residencies</x-slot>
+    <x-slot name="title">Free Getvnt for DJs | Set Times & Residencies</x-slot>
     <x-slot name="description">Put your DJ set times, residencies and guest spots on one link. Reach fans direct, no promoter middleman, and sell tickets with zero platform fees.</x-slot>
     <x-slot name="breadcrumbTitle">For DJs</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for DJs"
+        name="Getvnt for DJs"
         description="Put your DJ set times, residencies and guest spots on one link. Reach fans direct, no promoter middleman, and sell tickets with zero platform fees."
         audience="DJs"
         keywords="DJ schedule, DJ set times, DJ residency schedule, DJ booking platform, DJ event calendar, DJ gig management, club DJ calendar, DJ link in bio, free DJ scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How DJs share their set times with Event Schedule",
+        "name": "How DJs share their set times with Getvnt",
         "description": "Three steps from your next set to a packed dancefloor.",
         "step": [
             {
@@ -437,7 +437,7 @@
             <h1 class="es-balance mb-8 text-[2.6rem] font-black leading-[1.05] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl">
                 <x-marketing.hero-eyebrow class="es-fade-up es-d-1 inline-flex items-center gap-3 rounded-full glass px-5 py-2.5 mb-8">
                     <span class="es-vinyl" aria-hidden="true"></span>
-                    <span class="text-sm font-medium tracking-wide text-gray-600 dark:text-gray-300">Event Schedule for DJs & Producers</span>
+                    <span class="text-sm font-medium tracking-wide text-gray-600 dark:text-gray-300">Getvnt for DJs & Producers</span>
                 </x-marketing.hero-eyebrow>
                 <span class="es-mask"><span class="es-mask-line">Fill the dancefloor.</span></span>
                 <span class="es-mask es-mask-2"><span class="es-mask-line"><span class="es-dj-display es-dj-tube">Skip the a<span class="es-dj-flicker">l</span>gorithm.</span></span></span>
@@ -515,7 +515,7 @@
                     </div>
                     <div class="es-dj-sign-night rounded-2xl p-7 text-center" data-reveal="panel">
                         <div class="es-dj-display es-dj-tube-lit-amber mb-3 text-2xl">10-20%</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">of the door lost to ticket platform fees elsewhere. Event Schedule takes zero.</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">of the door lost to ticket platform fees elsewhere. Getvnt takes zero.</p>
                     </div>
                 </div>
 
@@ -682,7 +682,7 @@
                                     <svg aria-hidden="true" class="h-4 w-4 shrink-0 text-amber-700 dark:text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                     </svg>
-                                    <span class="truncate font-mono text-sm text-gray-900 dark:text-white">djnova.eventschedule.com</span>
+                                    <span class="truncate font-mono text-sm text-gray-900 dark:text-white">djnova.getvnt.com</span>
                                 </div>
                                 <div class="mt-3 flex gap-2">
                                     <div class="flex-1 rounded-lg bg-gray-100 p-2 text-center text-xs font-medium text-amber-700 dark:bg-white/5 dark:text-amber-300">Resident Advisor</div>
@@ -833,7 +833,7 @@
                     Whether you spin vinyl or <span class="es-dj-display es-dj-tube">push buttons</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Event Schedule works for every type of DJ.
+                    Getvnt works for every type of DJ.
                 </p>
             </div>
 
@@ -1081,7 +1081,7 @@
                 @foreach ([['/for-musicians', 'Musicians'], ['/for-nightclubs', 'Nightclubs'], ['/for-bars', 'Bars'], ['/for-live-concerts', 'Live Concerts']] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="group es-dj-hover flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 p-5 hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                         <div>
-                            <div class="text-sm text-gray-500 dark:text-gray-400">Event Schedule for</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Getvnt for</div>
                             <div class="es-dj-hover-title text-lg font-semibold text-gray-900 transition-colors dark:text-white">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-dj-hover-arrow w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1111,7 +1111,7 @@
                     Frequently asked <span class="es-dj-display es-dj-tube">questions</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Everything DJs ask about Event Schedule.
+                    Everything DJs ask about Getvnt.
                 </p>
             </div>
 
@@ -1119,9 +1119,9 @@
                 @php
                     $faqs = [
                         ['q' => 'Can I track both residencies and one-off bookings?', 'a' => 'Yes. Set up recurring events for your weekly or monthly residencies and they auto-repeat on your schedule. Add guest spots and festival bookings as one-off events. Everything shows up in one clean calendar that fans can follow.'],
-                        ['q' => 'Does it handle late-night sets that cross midnight?', 'a' => 'Yes. Event Schedule handles overnight events correctly. A set that starts at 11 PM Saturday and ends at 4 AM Sunday displays properly on the Saturday listing, so fans know when to show up.'],
+                        ['q' => 'Does it handle late-night sets that cross midnight?', 'a' => 'Yes. Getvnt handles overnight events correctly. A set that starts at 11 PM Saturday and ends at 4 AM Sunday displays properly on the Saturday listing, so fans know when to show up.'],
                         ['q' => 'What happens when a club adds me to their lineup?', 'a' => 'It arrives as a request on your schedule. Accept it and the set shows on your link too, with no double entry, and because both schedules share one event, a changed set time shows on both. The event page lists the whole lineup, whether or not every DJ on it has signed up.'],
-                        ['q' => 'A promoter listed me before I joined. Is that page mine?', 'a' => 'It can be. Naming a DJ who is not on Event Schedule creates a page for them, so the name can appear on the lineup. The page says who created it and that you have not claimed it yet, credits each date to the club or promoter that added it, and stays out of search engines. Press Claim this page, sign in with the email address it carries, and it becomes your schedule, with those promoters still listing you. If it is not you, press This is not me.'],
+                        ['q' => 'A promoter listed me before I joined. Is that page mine?', 'a' => 'It can be. Naming a DJ who is not on Getvnt creates a page for them, so the name can appear on the lineup. The page says who created it and that you have not claimed it yet, credits each date to the club or promoter that added it, and stays out of search engines. Press Claim this page, sign in with the email address it carries, and it becomes your schedule, with those promoters still listing you. If it is not you, press This is not me.'],
                         ['q' => 'Can I sell advance tickets to my sets?', 'a' => 'Yes. Connect your own Stripe or PayPal account, or take cash at the door, and sell tickets directly from your schedule with zero platform fees. Each ticket includes a unique QR code for check-in at the door, and you keep 100% of the sale minus your payment provider\'s fee. A Stripe or PayPal sale can be refunded in full or in part from the Sales page, and the money goes back through the provider. Not on sale yet? Switch on the "Notify me" card and fans can leave just an email address on the event page to hear when tickets go on sale.'],
                         ['q' => 'Can fans add my set times to their own calendar?', 'a' => 'Yes. Your page offers a live calendar feed that fans can subscribe to in Google Calendar, Apple Calendar or Outlook, with no email address needed. Unlike a one-off download, it updates itself when a set time moves. Each event page also has its own Add to Calendar button.'],
                         ['q' => 'Can I keep private gigs and secret parties off my public schedule?', 'a' => 'Yes. Draft events are free and stay hidden until you publish them. On the Enterprise plan you can also mark events internal for your team only, or unlisted with an optional password, so a wedding, corporate booking, or secret location party is reachable only by direct link.'],
@@ -1182,7 +1182,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="dj-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl es-dj-cta px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-cyan-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/40">
                             <span class="relative z-10 flex items-center gap-2">

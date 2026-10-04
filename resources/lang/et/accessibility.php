@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Juurdepääsetavus - Event Schedule',
-    'meta_description' => 'Juurdepääsetavuse avaldus ja kuvavalikud Event Schedule\'i jaoks.',
+    'page_title' => 'Juurdepääsetavus - Getvnt',
+    'meta_description' => 'Juurdepääsetavuse avaldus ja kuvavalikud Getvnt\'i jaoks.',
     'breadcrumb' => 'Juurdepääsetavus',
 
     'h1' => 'Juurdepääsetavuse avaldus',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'See leht on üldine teenuseinfo, mitte juriidiline nõustamine. Seadused erinevad riigiti. Kinnitage kohustused kvalifitseeritud nõustajaga.',
 
     'section_scope_title' => 'Ulatus',
-    'section_scope_body' => 'See avaldus hõlmab turundussaiti ja Event Schedule\'i veebirakendust (sisse logitud tööriistu ja avalikke kalendrilehti) peadomeeni ja alamdomeenide all, kui pole teisiti märgitud.',
+    'section_scope_body' => 'See avaldus hõlmab turundussaiti ja Getvnt\'i veebirakendust (sisse logitud tööriistu ja avalikke kalendrilehti) peadomeeni ja alamdomeenide all, kui pole teisiti märgitud.',
 
     'section_commitment_title' => 'Kohustus',
-    'section_commitment_body' => 'Töötame selle nimel, et Event Schedule oleks kasutatav puuetega inimestele. Püüame paremini vastata WCAG suunistele, dokumenteeritult :wcag_target, ja austada Iisraeli standardiga 5568 seotud juhiseid, kui need meie teenustele kehtivad.',
+    'section_commitment_body' => 'Töötame selle nimel, et Getvnt oleks kasutatav puuetega inimestele. Püüame paremini vastata WCAG suunistele, dokumenteeritult :wcag_target, ja austada Iisraeli standardiga 5568 seotud juhiseid, kui need meie teenustele kehtivad.',
 
     'section_commitment_is5568_note' => 'Arvestame ka veebi juurdepääsetavuse tavadega, mis on seotud Iisraeli standardiga 5568, kui need meie teenustele kehtivad.',
 

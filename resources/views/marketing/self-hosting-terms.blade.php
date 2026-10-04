@@ -1,6 +1,6 @@
 <x-marketing-layout>
-    <x-slot name="title">Self-Hosting Terms - Event Schedule</x-slot>
-    <x-slot name="description">Terms for self-hosting Event Schedule - the rules and guidelines for running your own instance, including data ownership, your obligations, and liability.</x-slot>
+    <x-slot name="title">Self-Hosting Terms - Getvnt</x-slot>
+    <x-slot name="description">Terms for self-hosting Getvnt - the rules and guidelines for running your own instance, including data ownership, your obligations, and liability.</x-slot>
     <x-slot name="breadcrumbTitle">Selfhosting Terms</x-slot>
 
     <x-slot name="structuredData">
@@ -8,12 +8,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Self-Hosting Terms - Event Schedule",
-        "description": "Terms for self-hosting Event Schedule - the rules and guidelines for running your own instance, including data ownership, your obligations, and liability.",
+        "name": "Self-Hosting Terms - Getvnt",
+        "description": "Terms for self-hosting Getvnt - the rules and guidelines for running your own instance, including data ownership, your obligations, and liability.",
         "url": "{{ url()->current() }}",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         },
         "about": {
@@ -33,10 +33,10 @@
 
            WHY THIS CONCEPT ARGUES THE PRODUCT. The whole point of the
            selfhost terms is a boundary: you hold the database, so most
-           of the clauses describe what Event Schedule *cannot* do. So
+           of the clauses describe what Getvnt *cannot* do. So
            the signature device is a hard vertical rule down the middle
            of a real <table> - "on your infrastructure" against "on
-           eventschedule.com" - and a short list of everything that
+           getvnt.com" - and a short list of everything that
            crosses it: REPORT_ERRORS (config/sentry.php leaves the DSN
            null without it), federation (FederationService::isEnabled()
            needs Setting::get('federation_enabled'), off by default),
@@ -49,7 +49,7 @@
            REVIEW NOTE: federation was missing from that list in the
            first pass, which made "this is that list" false - it is
            the one crossing that transmits actual event content to
-           eventschedule.com, and it is exactly the "cloud-relay
+           getvnt.com, and it is exactly the "cloud-relay
            feature" the Data Use clause names. Any future edit to the
            crossings must keep the count in the heading, the cards and
            the boundary table in agreement.
@@ -457,7 +457,7 @@
         // both return true when config('app.hosted') is false.
         $docket = [
             ['Applies to', 'Any instance you run yourself'],
-            ['Counterparty', 'Event Schedule LLC'],
+            ['Counterparty', 'Getvnt LLC'],
             ['Code license', 'Attribution Assurance License'],
             ['Governs', 'Support, connected services, future releases'],
             ['Does not govern', 'The data on your own server'],
@@ -465,7 +465,7 @@
         ];
 
         // THE LINE. Left column: what lives on the operator's own
-        // infrastructure. Right column: what Event Schedule sees. Backed by
+        // infrastructure. Right column: what Getvnt sees. Backed by
         // config/sentry.php (a null DSN unless REPORT_ERRORS is true),
         // config/self-update.php (release checks against the public GitHub
         // repository), FederationService::isEnabled() (off until an admin sets
@@ -490,17 +490,17 @@
             [
                 'label' => 'Off by default',
                 'title' => 'Crash reports',
-                'body' => 'Error reporting is off out of the box. Until REPORT_ERRORS is set to true there is no reporting endpoint configured at all, so nothing is sent when something breaks. Turned on, it sends the server\'s errors and the errors your visitors\' browsers hit to Event Schedule\'s Sentry project: the error, the browser and the IP address it connects from, and the page address with its query string and its ticket and unsubscribe secrets removed and email addresses masked. Never form contents. An install that sets IS_HOSTED to run its own hosted service reports nowhere either, unless it sets REPORT_ERRORS or names its own project in SENTRY_BROWSER_DSN.',
+                'body' => 'Error reporting is off out of the box. Until REPORT_ERRORS is set to true there is no reporting endpoint configured at all, so nothing is sent when something breaks. Turned on, it sends the server\'s errors and the errors your visitors\' browsers hit to Getvnt\'s Sentry project: the error, the browser and the IP address it connects from, and the page address with its query string and its ticket and unsubscribe secrets removed and email addresses masked. Never form contents. An install that sets IS_HOSTED to run its own hosted service reports nowhere either, unless it sets REPORT_ERRORS or names its own project in SENTRY_BROWSER_DSN.',
             ],
             [
                 'label' => 'Off by default',
                 'title' => 'Public listings',
-                'body' => 'Federation shares your public events with the eventschedule.com listings, and every listing links back to the event on your own site. Turning it on also registers your instance: its address, its name and the contact email the admin enters. An admin has to turn it on, and a schedule is only listed once someone who manages it chooses to list it.',
+                'body' => 'Federation shares your public events with the getvnt.com listings, and every listing links back to the event on your own site. Turning it on also registers your instance: its address, its name and the contact email the admin enters. An admin has to turn it on, and a schedule is only listed once someone who manages it chooses to list it.',
             ],
             [
                 'label' => 'Your keys',
                 'title' => 'Anything you connect',
-                'body' => 'Stripe, PayPal, Google and Microsoft calendars, CalDAV, Google Wallet passes, AI parsing: each one runs on credentials you add yourself, and each one talks to that provider directly rather than through Event Schedule.',
+                'body' => 'Stripe, PayPal, Google and Microsoft calendars, CalDAV, Google Wallet passes, AI parsing: each one runs on credentials you add yourself, and each one talks to that provider directly rather than through Getvnt.',
             ],
             [
                 'label' => 'Off by default',
@@ -510,7 +510,7 @@
             [
                 'label' => 'Read only',
                 'title' => 'Update checks',
-                'body' => 'The updater compares your installed version against the public releases of the eventschedule/eventschedule repository. It reads a version number; it does not send your data anywhere.',
+                'body' => 'The updater compares your installed version against the public releases of the getvnt/getvnt repository. It reads a version number; it does not send your data anywhere.',
             ],
         ];
 
@@ -524,19 +524,19 @@
             [
                 'id' => 'data-ownership',
                 'title' => 'Data Ownership & Access',
-                'body' => 'Self-hosters own their data and bear full responsibility for it. <strong>Event Schedule cannot access, modify, or remove self-hosted data</strong> stored on your private infrastructure. Users must handle any losses or damages affecting their clients independently.',
+                'body' => 'Self-hosters own their data and bear full responsibility for it. <strong>Getvnt cannot access, modify, or remove self-hosted data</strong> stored on your private infrastructure. Users must handle any losses or damages affecting their clients independently.',
                 'gloss' => 'Your database, your uploads, your backups. There is no support tunnel into a selfhosted instance, so recovery is yours to plan: the settings screen exports a backup archive you download and keep somewhere other than the server.',
             ],
             [
                 'id' => 'amendment-rights',
                 'title' => 'Amendment Rights',
-                'body' => 'Event Schedule may modify these terms regarding support, connected services, and future releases with notice via email, dashboards, or websites. Changes become binding seven days after notice, unless longer periods apply by law. While the open-source license for a specific version of the code is permanent, users must accept updated Terms to continue receiving official updates or technical support.',
+                'body' => 'Getvnt may modify these terms regarding support, connected services, and future releases with notice via email, dashboards, or websites. Changes become binding seven days after notice, unless longer periods apply by law. While the open-source license for a specific version of the code is permanent, users must accept updated Terms to continue receiving official updates or technical support.',
                 'gloss' => 'The license on the copy you already run does not expire. What can change is the arrangement around it: support, connected services and future releases.',
             ],
             [
                 'id' => 'eligibility',
                 'title' => 'Eligibility',
-                'body' => 'Users must be 18 years of age or older and confirm compliance with applicable laws. Prior suspension or removal from Event Schedule services disqualifies new access to our official support and update channels.',
+                'body' => 'Users must be 18 years of age or older and confirm compliance with applicable laws. Prior suspension or removal from Getvnt services disqualifies new access to our official support and update channels.',
                 'gloss' => 'Eighteen or older, and an account removed before does not get the official support and update channels back.',
             ],
             [
@@ -554,37 +554,37 @@
             [
                 'id' => 'customer-service',
                 'title' => 'Customer Service',
-                'body' => 'Users provide their own customer support. Event Schedule only assists account users with platform functionality on the hosted version or via specific enterprise support agreements.',
-                'gloss' => 'Guests write to your address, not ours. Direct help from Event Schedule covers hosted accounts, or a selfhosted deployment under an enterprise support agreement.',
+                'body' => 'Users provide their own customer support. Getvnt only assists account users with platform functionality on the hosted version or via specific enterprise support agreements.',
+                'gloss' => 'Guests write to your address, not ours. Direct help from Getvnt covers hosted accounts, or a selfhosted deployment under an enterprise support agreement.',
             ],
             [
                 'id' => 'data-use',
                 'title' => 'Data Use & Privacy',
-                'body' => 'For self-hosted instances, <strong>this section applies only to data explicitly transmitted to Event Schedule</strong> (e.g., via opted-in crash reports, update checks, or cloud-relay features). In such cases, you grant Event Schedule a non-exclusive, fully sublicensable, worldwide, royalty-free right to use, copy, and store that specific data solely for the purpose of providing services to your instance.',
+                'body' => 'For self-hosted instances, <strong>this section applies only to data explicitly transmitted to Getvnt</strong> (e.g., via opted-in crash reports, update checks, or cloud-relay features). In such cases, you grant Getvnt a non-exclusive, fully sublicensable, worldwide, royalty-free right to use, copy, and store that specific data solely for the purpose of providing services to your instance.',
                 'gloss' => 'This clause can only reach what your instance actually sends. Leave crash reporting, federation and translation sharing switched off and there is nothing for it to act on: the release check reads a version number from GitHub, not from us.',
             ],
             [
                 'id' => 'restricted-businesses',
                 'title' => 'Restricted Businesses & Sanctions',
-                'body' => 'Illegal activities and use in high-risk jurisdictions (Cuba, Iran, North Korea, Crimea, Syria) are prohibited. While the software is open source, Event Schedule does not provide support or services to prohibited categories, including gambling, telemarketing, unauthorized multi-level marketing, or weapons sales.',
-                'gloss' => 'The clause is about who Event Schedule will support and serve, and it names the categories plainly.',
+                'body' => 'Illegal activities and use in high-risk jurisdictions (Cuba, Iran, North Korea, Crimea, Syria) are prohibited. While the software is open source, Getvnt does not provide support or services to prohibited categories, including gambling, telemarketing, unauthorized multi-level marketing, or weapons sales.',
+                'gloss' => 'The clause is about who Getvnt will support and serve, and it names the categories plainly.',
             ],
             [
                 'id' => 'indemnity',
                 'title' => 'Indemnity & Liability',
-                'body' => 'Users indemnify Event Schedule against claims arising from platform use, agreement violations, or third-party rights infringement. Event Schedule disclaims liability for damages, lost profits, or data loss, as further detailed in the Attribution Assurance License.',
+                'body' => 'Users indemnify Getvnt against claims arising from platform use, agreement violations, or third-party rights infringement. Getvnt disclaims liability for damages, lost profits, or data loss, as further detailed in the Attribution Assurance License.',
                 'gloss' => 'As is, with all faults. If the server falls over mid-sale, that risk sits with the operator, which is the other half of holding all of the data.',
             ],
             [
                 'id' => 'communication',
                 'title' => 'Communication & Resolution',
-                'body' => 'For privacy and data concerns, contact: <a href="mailto:legal@eventschedule.com" class="es-fine-link">legal@eventschedule.com</a>',
+                'body' => 'For privacy and data concerns, contact: <a href="mailto:legal@getvnt.com" class="es-fine-link">legal@getvnt.com</a>',
                 'gloss' => 'One address for privacy and data questions.',
             ],
         ];
 
         $documents = [
-            ['/terms-of-service', 'Terms of Service', 'The terms for the hosted app at eventschedule.com.'],
+            ['/terms-of-service', 'Terms of Service', 'The terms for the hosted app at getvnt.com.'],
             ['/privacy', 'Privacy Policy', 'What the hosted app collects, and how to have it deleted.'],
             ['/selfhost', 'Selfhosting', 'What you get when you run it yourself, and what it costs to run.'],
             ['/docs/selfhost/installation', 'Installation guide', 'Requirements, install steps and the scheduler.'],
@@ -624,7 +624,7 @@
                     </div>
 
                     <p class="es-fade-up es-d-2 es-fine-muted mt-6 max-w-xl text-lg">
-                        Event Schedule LLC
+                        Getvnt LLC
                     </p>
                     <p class="es-fade-up es-d-3 es-fine-muted mt-3 max-w-xl">
                         These are the terms for running your own instance. The clauses below are reproduced word for word; the notes in the margin are a plain-language summary and are not part of them.
@@ -683,12 +683,12 @@
                     <div>
                         <h2 class="es-fine-tag mb-4">Recital</h2>
                         <p class="es-fine-serif es-fine-body es-fine-drop">
-                            All features from the hosted app are included in the open-source code. By self-hosting Event Schedule, you accept the platform "as is" and "with all faults," assuming all risks associated with running and maintaining your own instance. Use of the source code is governed by the <strong>Attribution Assurance License</strong>; these Terms govern your relationship with Event Schedule as a service and support provider.
+                            All features from the hosted app are included in the open-source code. By self-hosting Getvnt, you accept the platform "as is" and "with all faults," assuming all risks associated with running and maintaining your own instance. Use of the source code is governed by the <strong>Attribution Assurance License</strong>; these Terms govern your relationship with Getvnt as a service and support provider.
                         </p>
                     </div>
                     <aside class="es-fine-gloss">
                         <span class="es-fine-gloss-label">In plain terms</span>
-                        Two separate things. The code is yours under the Attribution Assurance License. These terms cover the relationship with Event Schedule around it: support, connected services and updates. Everything in this margin is a summary for reading convenience and forms no part of the terms.
+                        Two separate things. The code is yours under the Attribution Assurance License. These terms cover the relationship with Getvnt around it: support, connected services and updates. Everything in this margin is a summary for reading convenience and forms no part of the terms.
                     </aside>
                 </div>
             </div>
@@ -707,20 +707,20 @@
                     Most of these clauses exist because of <span class="es-fine-accent">one line.</span>
                 </h2>
                 <p class="es-fine-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    On a selfhosted instance the data sits on your side of it. That single fact is why the clauses below spend most of their words on what Event Schedule cannot do.
+                    On a selfhosted instance the data sits on your side of it. That single fact is why the clauses below spend most of their words on what Getvnt cannot do.
                 </p>
             </div>
 
             <div class="es-fine-sheet p-4 sm:p-6" data-reveal="panel">
                 <p class="es-fine-muted mb-2 px-1 text-xs sm:hidden">Scroll the table sideways for the second column.</p>
-                <div class="es-fine-scroll" tabindex="0" role="region" aria-label="What runs on your infrastructure and what Event Schedule sees">
+                <div class="es-fine-scroll" tabindex="0" role="region" aria-label="What runs on your infrastructure and what Getvnt sees">
                     <table class="es-fine-table">
-                        <caption class="sr-only">What runs on your infrastructure and what Event Schedule sees, item by item</caption>
+                        <caption class="sr-only">What runs on your infrastructure and what Getvnt sees, item by item</caption>
                         <thead>
                             <tr>
                                 <th scope="col" class="es-fine-tag">Item</th>
                                 <th scope="col" class="es-fine-tag">On your infrastructure</th>
-                                <th scope="col" class="es-fine-tag es-fine-divide">On eventschedule.com</th>
+                                <th scope="col" class="es-fine-tag es-fine-divide">On getvnt.com</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -735,7 +735,7 @@
                     </table>
                 </div>
                 <p class="es-fine-muted mt-4 px-1 text-xs">
-                    The rule between the last two columns is the whole argument of this page. Nothing on the left of it is reachable from eventschedule.com. Only the last four rows reach anyone other than you and the providers whose keys you add, and the three that carry any of your own data are off until you turn them on.
+                    The rule between the last two columns is the whole argument of this page. Nothing on the left of it is reachable from getvnt.com. Only the last four rows reach anyone other than you and the providers whose keys you add, and the three that carry any of your own data are off until you turn them on.
                 </p>
             </div>
         </div>
@@ -838,7 +838,7 @@
             </div>
 
             <p class="es-fine-muted mx-auto mt-6 max-w-3xl text-center text-sm" data-reveal>
-                Running the hosted app at eventschedule.com instead? The
+                Running the hosted app at getvnt.com instead? The
                 <a href="{{ marketing_url('/terms-of-service') }}" class="es-fine-link font-medium">Terms of Service</a>
                 and
                 <a href="{{ marketing_url('/privacy') }}" class="es-fine-link font-medium">Privacy Policy</a>
@@ -890,9 +890,9 @@
                     </p>
 
                     <div class="mx-auto mb-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-                        <a href="mailto:legal@eventschedule.com" class="es-fine-ghost inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5">
+                        <a href="mailto:legal@getvnt.com" class="es-fine-ghost inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5">
                             <svg aria-hidden="true" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                            legal@eventschedule.com
+                            legal@getvnt.com
                         </a>
                         <a href="{{ marketing_url('/docs/selfhost/installation') }}" class="es-fine-btn group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-7 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5">
                             <span class="relative z-10 flex items-center gap-2">
@@ -909,7 +909,7 @@
                         <div class="es-fine-rule mb-6"></div>
                         <div class="grid gap-6 sm:grid-cols-2">
                             <div>
-                                <p class="es-fine-tag mb-2">Event Schedule LLC</p>
+                                <p class="es-fine-tag mb-2">Getvnt LLC</p>
                                 <p class="text-sm leading-relaxed text-gray-400">
                                     Provides the code under the Attribution Assurance License, and the support, connected services and releases these terms govern.
                                 </p>

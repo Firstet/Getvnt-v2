@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Outlook Calendar Sync"
+        name="Getvnt - Outlook Calendar Sync"
         description="Two-way Outlook and Microsoft 365 calendar sync, free on every plan, with Graph change notifications, a delete policy and optional Teams meetings." />
     </x-slot>
 
@@ -574,8 +574,8 @@
         // values of roles.microsoft_sync_direction; the fourth is the unset default,
         // which the app labels "No sync".
         $directions = [
-            ['To Outlook', 'to', 'Events from Event Schedule appear in Outlook. Nothing in Outlook is read.', false],
-            ['From Outlook', 'from', 'Events from Outlook appear in Event Schedule. Nothing is written back.', false],
+            ['To Outlook', 'to', 'Events from Getvnt appear in Outlook. Nothing in Outlook is read.', false],
+            ['From Outlook', 'from', 'Events from Outlook appear in Getvnt. Nothing is written back.', false],
             ['Both ways', 'both', 'Create, edit or delete in either place and the other side follows.', true],
             ['Off', 'no sync', 'The account stays connected, the sync simply does not run. Every schedule starts here, so nothing moves until you answer.', false],
         ];
@@ -601,7 +601,7 @@
 
         // How a change actually gets across, in the order it is tried.
         $ladder = [
-            ['push', 'Microsoft Graph says something moved', 'Event Schedule holds a change-notification subscription on the calendar you picked. Outlook posts to it the moment an item changes, and Event Schedule then asks Graph what changed.', true],
+            ['push', 'Microsoft Graph says something moved', 'Getvnt holds a change-notification subscription on the calendar you picked. Outlook posts to it the moment an item changes, and Getvnt then asks Graph what changed.', true],
             ['60 hrs', 'The subscription has a shelf life', 'Graph subscriptions expire. This one is created for about sixty hours and a nightly job renews it before it lapses, or recreates it if it already has.', false],
             ['15 min', 'A poll, every quarter hour', 'The safety net. A notification that never arrived is not a change that never lands, because the poll comes round anyway.', false],
             ['1 request', 'And the poll is cheap', 'Each schedule keeps a delta token, so the poll asks only for what changed since last time. A calendar with nothing new costs a single request.', false],
@@ -614,11 +614,11 @@
         $deletions = [
             ['Keep it', 'ignore', 'The event stays exactly as it is. Outlook was tidied, your public calendar was not.'],
             ['Mark it cancelled', 'cancel', 'The event is flagged cancelled, which takes the date off your public calendar but keeps the record.'],
-            ['Delete it', 'delete', 'The event is removed from Event Schedule as well. One with ticket sales on it is hidden instead, so the sales records survive.'],
+            ['Delete it', 'delete', 'The event is removed from Getvnt as well. One with ticket sales on it is hidden instead, so the sales records survive.'],
         ];
 
         $steps = [
-            ['01', 'Sign in with Microsoft', 'One OAuth round trip from your account settings. Event Schedule asks for calendar read and write, never sees a password, and keeps a refresh token so the connection does not need redoing.'],
+            ['01', 'Sign in with Microsoft', 'One OAuth round trip from your account settings. Getvnt asks for calendar read and write, never sees a password, and keeps a refresh token so the connection does not need redoing.'],
             ['02', 'Pick the calendar and the direction', 'Your Outlook calendars are listed for you. Choose one, choose to, from, both or off, and optionally turn on Teams meetings and a deletion policy.'],
             ['03', 'Save an event', 'Saving, editing or deleting an event goes straight out to Outlook. Anything coming the other way arrives by notification, with the fifteen-minute poll behind it.'],
         ];
@@ -641,7 +641,7 @@
             ],
             [
                 'q' => 'How quickly do changes sync?',
-                'a' => 'Outbound, the Outlook item is written when you save the event. Inbound, usually within a minute or two: Event Schedule holds a Microsoft Graph change-notification subscription on your calendar, so Outlook reports a change as it happens and the change is read in the background. Behind that sits a poll every fifteen minutes, so a notification that goes missing does not cost you the change. The subscription itself lasts about sixty hours and is renewed nightly.',
+                'a' => 'Outbound, the Outlook item is written when you save the event. Inbound, usually within a minute or two: Getvnt holds a Microsoft Graph change-notification subscription on your calendar, so Outlook reports a change as it happens and the change is read in the background. Behind that sits a poll every fifteen minutes, so a notification that goes missing does not cost you the change. The subscription itself lasts about sixty hours and is renewed nightly.',
             ],
             [
                 'q' => 'Does it work with personal Microsoft accounts and work accounts?',
@@ -649,7 +649,7 @@
             ],
             [
                 'q' => 'What happens if I delete an event in Outlook?',
-                'a' => 'That is your call, set once per schedule: keep the event, mark it cancelled so the date leaves your public calendar, or delete it here too. Delete has one brake: an event with ticket sales on it is hidden instead, so its sales records survive. The same setting governs Google Calendar inbound sync. Event Schedule also checks why Graph reported the event as gone, and only applies the policy to a real deletion, so an event that merely moved out of the sync window is left alone.',
+                'a' => 'That is your call, set once per schedule: keep the event, mark it cancelled so the date leaves your public calendar, or delete it here too. Delete has one brake: an event with ticket sales on it is hidden instead, so its sales records survive. The same setting governs Google Calendar inbound sync. Getvnt also checks why Graph reported the event as gone, and only applies the policy to a real deletion, so an event that merely moved out of the sync window is left alone.',
             ],
             [
                 'q' => 'Can I sync a single event rather than the whole schedule?',
@@ -664,7 +664,7 @@
                 'a' => 'Yes, and that is a separate thing from sync, with nothing to connect on your side. Your pages offer Subscribe to all events from your schedule, in the Add to Calendar menu and beside the email sign-up. It is the schedule\'s live iCal feed, which Outlook adds as a calendar subscribed from the web and keeps re-reading, so a date you move moves for them too. It carries your public events, with each date of a recurring event for the next ninety days, and it asks for no email address and no account.',
             ],
             [
-                'q' => 'Does Outlook Calendar sync work with selfhosted Event Schedule?',
+                'q' => 'Does Outlook Calendar sync work with selfhosted Getvnt?',
                 'a' => 'Yes. Register your own application in Microsoft Entra, then set the client ID, client secret, redirect URI, tenant and webhook secret in your environment file. The selfhost guide walks through the app registration, the permission scope and the webhook endpoint.',
             ],
         ];
@@ -717,7 +717,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-req-muted mb-8 max-w-xl text-lg sm:text-xl">
-                        Subject, when, where, a body, sometimes a Teams link. Outlook already has a format for this, and Event Schedule writes it when you save an event and reads it when you edit one in Outlook.
+                        Subject, when, where, a body, sometimes a Teams link. Outlook already has a format for this, and Getvnt writes it when you save an event and reads it when you edit one in Outlook.
                     </p>
 
                     <div class="es-fade-up es-d-3 mb-8 flex flex-wrap gap-2">
@@ -769,7 +769,7 @@
                         </div>
                         <p class="es-req-doc-foot">
                             <span class="es-req-doc-pill">One record</span>
-                            One event in Event Schedule, one item on your Outlook calendar, and a mapping row that remembers they are the same thing. Every schedule starts unanswered, so nothing moves until you pick a direction.
+                            One event in Getvnt, one item on your Outlook calendar, and a mapping row that remembers they are the same thing. Every schedule starts unanswered, so nothing moves until you pick a direction.
                         </p>
                     </div>
                 </div>
@@ -881,13 +881,13 @@
                     Field by field, <span class="es-req-accent">both ways.</span>
                 </h2>
                 <p class="es-req-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    No mystery mapping. This is the request Event Schedule sends, and what it takes back out of one that arrives.
+                    No mystery mapping. This is the request Getvnt sends, and what it takes back out of one that arrives.
                 </p>
             </div>
 
             <div class="es-req-card overflow-x-auto p-5 sm:p-7" data-reveal="panel">
                 <table class="es-req-table">
-                    <caption class="sr-only">How each meeting request field maps to an Event Schedule event, outbound and inbound</caption>
+                    <caption class="sr-only">How each meeting request field maps to an Getvnt event, outbound and inbound</caption>
                     <thead>
                         <tr>
                             <th scope="col" class="es-req-th">Request field</th>
@@ -926,7 +926,7 @@
                         The one platform we <span class="es-req-accent">name.</span>
                     </h2>
                     <p class="es-req-muted mb-5 text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.15s;">
-                        An online event in Event Schedule carries a single link field, and that is deliberate: there are no streaming integrations to configure and nothing to break when a platform changes its API. Teams is the exception, and it arrives through this sync rather than through a settings page of its own.
+                        An online event in Getvnt carries a single link field, and that is deliberate: there are no streaming integrations to configure and nothing to break when a platform changes its API. Teams is the exception, and it arrives through this sync rather than through a settings page of its own.
                     </p>
                     <p class="es-req-muted" data-reveal style="--reveal-delay: 0.2s;">
                         Turn the toggle on and an online event synced to Outlook from a work or school account gets a Teams meeting created with it. The join link is written into the event link field while that field is still empty, so your public page has it too.
@@ -1025,11 +1025,11 @@
             <div class="mt-6 grid gap-6 md:grid-cols-2" data-reveal-group="90">
                 <div class="es-req-caution p-6" data-reveal="panel">
                     <p class="es-req-tag mb-3">Caution</p>
-                    <p class="es-req-muted text-sm">Delete means delete. The other two choices are reversible; that one removes the event from Event Schedule, so the setting is worth reading twice before you pick it.</p>
+                    <p class="es-req-muted text-sm">Delete means delete. The other two choices are reversible; that one removes the event from Getvnt, so the setting is worth reading twice before you pick it.</p>
                 </div>
                 <div class="es-req-card p-6" data-reveal="panel">
                     <p class="es-req-tag mb-3">A quieter guard</p>
-                    <p class="es-req-muted text-sm">Graph also reports an item as gone when it simply moves out of the window being watched. Event Schedule checks the reason and applies your policy only to a genuine deletion, so a show pushed out to next spring is not quietly taken down.</p>
+                    <p class="es-req-muted text-sm">Graph also reports an item as gone when it simply moves out of the window being watched. Getvnt checks the reason and applies your policy only to a genuine deletion, so a show pushed out to next spring is not quietly taken down.</p>
                 </div>
             </div>
 
@@ -1123,7 +1123,7 @@
                     <dl class="es-req-rows">
                         <div class="es-req-row">
                             <dt class="es-req-label">Feed URL</dt>
-                            <dd class="es-req-value">your-schedule.eventschedule.com/feed/ical
+                            <dd class="es-req-value">your-schedule.getvnt.com/feed/ical
                                 <p class="es-req-note">Offered to guests in the Add to Calendar menu and beside the email sign-up, and copyable from your schedule settings alongside an RSS version.</p>
                             </dd>
                         </div>
@@ -1287,7 +1287,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-req-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

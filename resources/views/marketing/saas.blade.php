@@ -5,18 +5,18 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule White-Label Ticketing Platform"
+        name="Getvnt White-Label Ticketing Platform"
         description="Free, open source white-label ticketing platform with multi-tenant subscription billing built in. Selfhost it and set your own prices: only Stripe's fee comes off what your customers pay." />
     @php
         $howToSteps = [
-            ['name' => 'Deploy the platform', 'text' => 'Install Event Schedule on your own server with Docker or the Softaculous one-click installer, then point wildcard DNS at it so every customer can get a subdomain.'],
+            ['name' => 'Deploy the platform', 'text' => 'Install Getvnt on your own server with Docker or the Softaculous one-click installer, then point wildcard DNS at it so every customer can get a subdomain.'],
             ['name' => 'Apply your branding', 'text' => 'Point APP_LOGO_LIGHT and APP_LOGO_DARK at your own logos, run the install on your own domain, and set APP_MARKETING_URL so the platform runs under your brand, bar the small attribution link the license asks for.'],
             ['name' => 'Connect Stripe and set your prices', 'text' => 'Connect your Stripe account, create prices for your Pro and Enterprise tiers, set the trial length with TRIAL_DAYS, and open sign-ups.'],
         ];
     @endphp
     <x-seo.howto-schema
         name="How to Launch a White-Label Ticketing SaaS"
-        description="Deploy the open source Event Schedule platform, brand it, and start charging your own customers in three steps."
+        description="Deploy the open source Getvnt platform, brand it, and start charging your own customers in three steps."
         :steps="$howToSteps" />
     </x-slot>
 
@@ -524,11 +524,11 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 mx-auto mb-8 max-w-xl text-lg text-gray-500 dark:text-gray-400 sm:text-xl lg:mx-0">
-                        Event Schedule is a free, open source white-label ticketing platform with the multi-tenant SaaS layer built in. Selfhost it under your brand: your servers, your Stripe, your prices, and what your customers pay stays yours, less only Stripe's own fee.
+                        Getvnt is a free, open source white-label ticketing platform with the multi-tenant SaaS layer built in. Selfhost it under your brand: your servers, your Stripe, your prices, and what your customers pay stays yours, less only Stripe's own fee.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-                        <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-center gap-2 rounded-2xl glass px-7 py-4 text-lg font-semibold text-gray-800 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:text-white">
+                        <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-center gap-2 rounded-2xl glass px-7 py-4 text-lg font-semibold text-gray-800 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:text-white">
                             <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -868,7 +868,7 @@
 
                         <div class="flex items-center justify-between gap-4 rounded-2xl border border-amber-200 bg-amber-50/60 p-6 dark:border-amber-500/25 dark:bg-amber-500/[0.06]">
                             <div>
-                                <div class="font-semibold text-gray-900 dark:text-white">What Event Schedule takes</div>
+                                <div class="font-semibold text-gray-900 dark:text-white">What Getvnt takes</div>
                                 <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">No license fee, no revenue share, no per-ticket fees.</div>
                             </div>
                             <div class="es-ghost shrink-0 text-6xl font-black" aria-hidden="true">$0</div>
@@ -924,7 +924,7 @@
                     </h3>
                     <p class="mt-3 max-w-3xl text-gray-600 dark:text-gray-400">
                         Three more rails ship in the box, all of them off until you switch them on, and none of them
-                        available to us on eventschedule.com because we do not run them.
+                        available to us on getvnt.com because we do not run them.
                     </p>
                     @php
                         $saasMeters = [
@@ -1020,7 +1020,7 @@
                 <div class="relative flex flex-col rounded-3xl border border-blue-300 bg-white p-8 ring-2 ring-blue-500/30 dark:border-blue-500/40 dark:bg-white/[0.06] dark:ring-blue-400/25" data-reveal>
                     <div class="absolute -top-3 ltr:right-6 rtl:left-6 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-lg shadow-blue-500/30">Own it</div>
                     <div class="mb-4 flex items-center justify-between">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Selfhost Event Schedule</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Selfhost Getvnt</h3>
                         <span class="shrink-0 whitespace-nowrap rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Days to launch</span>
                     </div>
                     <ul class="mb-6 space-y-3 text-sm text-gray-600 dark:text-gray-300">
@@ -1043,7 +1043,7 @@
                 </div>
             </div>
 
-            <p class="mx-auto mt-10 max-w-3xl text-center text-sm text-gray-500 dark:text-gray-400" data-reveal>As far as we know, Event Schedule is one of the few open source ticketing platforms with the multi-tenant subscription layer built in. Don't take our word for it: <x-link href="https://github.com/eventschedule/eventschedule" target="_blank">read the code</x-link></p>
+            <p class="mx-auto mt-10 max-w-3xl text-center text-sm text-gray-500 dark:text-gray-400" data-reveal>As far as we know, Getvnt is one of the few open source ticketing platforms with the multi-tenant subscription layer built in. Don't take our word for it: <x-link href="https://github.com/Firstet/Getvnt-v2" target="_blank">read the code</x-link></p>
         </div>
     </section>
 
@@ -1076,7 +1076,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-white">The AAL license</h3>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400">Event Schedule is open source under the Attribution Assurance License. Use it commercially at no cost; just keep the attribution intact.</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Getvnt is open source under the Attribution Assurance License. Use it commercially at no cost; just keep the attribution intact.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1085,7 +1085,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-white">A small backlink</h3>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400">Public schedule pages carry a small, discreet link back to eventschedule.com, on every tier you sell, the paid ones included. Your free tier carries your own footer strip in its place, so no page shows two credits. That link is how the project grows, which keeps the software maintained for everyone.</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Public schedule pages carry a small, discreet link back to getvnt.com, on every tier you sell, the paid ones included. Your free tier carries your own footer strip in its place, so no page shows two credits. That link is how the project grows, which keeps the software maintained for everyone.</p>
                                 </div>
                             </div>
                         </div>
@@ -1099,11 +1099,11 @@
                         </div>
 
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                            <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
                                 <svg aria-hidden="true" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                 Contribute on GitHub
                             </a>
-                            <a href="https://github.com/eventschedule/eventschedule/discussions" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                            <a href="https://github.com/Firstet/Getvnt-v2/discussions" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
                                 <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
                                 Join the Discussions
                             </a>
@@ -1140,7 +1140,7 @@
                                      tenant here would show the operator's strip and no chip. --}}
                                 <span id="es-backlink-chip" class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-1.5 py-0.5 text-[9px] font-medium text-gray-700 ring-1 ring-black/5">
                                     <span class="flex h-3 w-3 items-center justify-center rounded-[3px] bg-gradient-to-br from-[#4E81FA] to-[#22D3EE] text-[6px] font-black leading-none text-white">ES</span>
-                                    Event Schedule
+                                    Getvnt
                                 </span>
                             </div>
                         </div>
@@ -1218,7 +1218,7 @@
                                 <!-- Scene 1: deploy -->
                                 <div class="es-scene es-scene-0 p-6">
                                     <div class="h-full rounded-xl bg-[#0b0f19] p-5 font-mono text-sm leading-8 text-gray-200">
-                                        <div class="es-pop" style="--i: 0;"><span class="text-emerald-400">$</span> git clone eventschedule/eventschedule</div>
+                                        <div class="es-pop" style="--i: 0;"><span class="text-emerald-400">$</span> git clone getvnt/getvnt</div>
                                         <div class="es-pop" style="--i: 1;"><span class="text-emerald-400">$</span> docker compose up -d</div>
                                         <div class="es-pop text-gray-300" style="--i: 2;">Pulling images... done</div>
                                         <div class="es-pop text-gray-300" style="--i: 3;">Running migrations... done</div>
@@ -1368,7 +1368,7 @@
                         </div>
                         <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">The guest portal</h3>
                         <p class="mb-6 flex-grow text-sm text-gray-500 dark:text-gray-400">The public schedule their attendees see: browse events, buy tickets, RSVP, and carry the QR code that gets scanned at the door.</p>
-                        <a href="https://simpsons.eventschedule.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 px-6 py-3 font-medium text-white transition-colors hover:from-blue-500 hover:to-sky-500">
+                        <a href="https://simpsons.getvnt.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 px-6 py-3 font-medium text-white transition-colors hover:from-blue-500 hover:to-sky-500">
                             Open the Guest Demo
                             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                         </a>
@@ -1423,7 +1423,7 @@
                     </div>
                     <h2 class="es-balance mb-4 text-3xl font-black tracking-tight text-gray-900 dark:text-white md:text-5xl"><span class="text-gradient-saas">Federation</span> sends traffic back to you</h2>
                     <p class="mb-6 text-lg text-gray-500 dark:text-gray-400 sm:text-xl">An optional network that sends discovery traffic back to your platform.</p>
-                    <p class="mb-6 text-gray-600 dark:text-gray-300">Share your customers' public events, online and in person, to the eventschedule.com listings. Every listing links straight back to the event on your platform: extra reach and SEO for your customers. It stays off until you switch it on, and we review each install once before anything is published.</p>
+                    <p class="mb-6 text-gray-600 dark:text-gray-300">Share your customers' public events, online and in person, to the getvnt.com listings. Every listing links straight back to the event on your platform: extra reach and SEO for your customers. It stays off until you switch it on, and we review each install once before anything is published.</p>
                     <ul class="space-y-3">
                         @foreach (['Discovery traffic flows to your installation', 'Your customers reach a wider audience', 'You turn the network on, then each schedule opts in for itself'] as $li)
                             <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
@@ -1453,7 +1453,7 @@
                     <div class="es-fed-dot es-fed-a hidden md:block" style="--fdl: 0s;"></div>
                     <div class="es-fed-dot es-fed-b hidden md:block" style="--fdl: 1.4s;"></div>
                     <div class="es-fed-dot es-fed-c hidden md:block" style="--fdl: 2.8s;"></div>
-                    <span class="absolute left-1/2 top-[62%] -translate-x-1/2 whitespace-nowrap rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[10px] font-semibold text-gray-600 shadow-sm dark:border-white/10 dark:bg-[#15151c] dark:text-gray-300">eventschedule.com</span>
+                    <span class="absolute left-1/2 top-[62%] -translate-x-1/2 whitespace-nowrap rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[10px] font-semibold text-gray-600 shadow-sm dark:border-white/10 dark:bg-[#15151c] dark:text-gray-300">getvnt.com</span>
                     <span class="absolute left-[76%] top-[9%] whitespace-nowrap rounded-full border border-amber-300 bg-amber-50 px-2.5 py-1 text-[10px] font-bold text-amber-700 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-300">yourdomain.com</span>
                 </div>
             </div>
@@ -1473,7 +1473,7 @@
                 <div class="flex flex-col rounded-3xl border border-emerald-200 bg-white p-8 dark:border-emerald-500/25 dark:bg-white/[0.04]" data-reveal>
                     <div class="mb-3 text-sm font-semibold text-emerald-700 dark:text-emerald-400">Just want your own instance?</div>
                     <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Selfhost for yourself</h3>
-                    <p class="mb-5 text-gray-500 dark:text-gray-400">Run Event Schedule for your own events, with every Enterprise feature unlocked and zero platform fees.</p>
+                    <p class="mb-5 text-gray-500 dark:text-gray-400">Run Getvnt for your own events, with every Enterprise feature unlocked and zero platform fees.</p>
                     <div class="mb-6 rounded-xl bg-[#0b0f19] px-4 py-3 font-mono text-sm text-gray-200" aria-hidden="true">
                         <span class="text-emerald-400">$</span> docker compose up -d
                     </div>
@@ -1511,15 +1511,15 @@
         $faqs = [
             [
                 'q' => 'What is white-label ticketing software?',
-                'a' => 'White-label ticketing software is an event ticketing platform you rebrand and sell as your own product. Event Schedule goes further than most: you selfhost the entire open source platform, so customers sign up on your domain and pay through your Stripe account. The only trace of us is a small attribution link on the public pages of the customers you charge.',
+                'a' => 'White-label ticketing software is an event ticketing platform you rebrand and sell as your own product. Getvnt goes further than most: you selfhost the entire open source platform, so customers sign up on your domain and pay through your Stripe account. The only trace of us is a small attribution link on the public pages of the customers you charge.',
             ],
             [
                 'q' => 'How do I start an online ticketing business?',
-                'a' => 'The technology half is now the easy half: deploy Event Schedule on a server, connect Stripe, set your prices, and open sign-ups. That gives you your own Eventbrite-style platform with subscriptions, ticketing, and check-in built in. The real work is picking a niche and finding your first customers, and you can put your energy there.',
+                'a' => 'The technology half is now the easy half: deploy Getvnt on a server, connect Stripe, set your prices, and open sign-ups. That gives you your own Eventbrite-style platform with subscriptions, ticketing, and check-in built in. The real work is picking a niche and finding your first customers, and you can put your energy there.',
             ],
             [
                 'q' => 'How does the free white-label license work?',
-                'a' => 'Event Schedule is open source under the Attribution Assurance License (AAL). You can run it commercially at no cost as long as you keep the attribution, which appears as a small link on public schedule pages, on the tiers you charge for. There are no license fees, no revenue share, and no per-ticket fees.',
+                'a' => 'Getvnt is open source under the Attribution Assurance License (AAL). You can run it commercially at no cost as long as you keep the attribution, which appears as a small link on public schedule pages, on the tiers you charge for. There are no license fees, no revenue share, and no per-ticket fees.',
             ],
             [
                 'q' => 'Can I set my own subscription prices?',
@@ -1536,7 +1536,7 @@
             ],
             [
                 'q' => 'How is this different from a reseller or partner program?',
-                'a' => 'Reseller programs rent you a brand skin on someone else\'s platform: typically a revenue share, per-ticket fees, and no code access. With Event Schedule you run the actual software on your own servers. Nobody can raise your rates, change your terms, or switch your platform off.',
+                'a' => 'Reseller programs rent you a brand skin on someone else\'s platform: typically a revenue share, per-ticket fees, and no code access. With Getvnt you run the actual software on your own servers. Nobody can raise your rates, change your terms, or switch your platform off.',
             ],
             [
                 'q' => 'What do I need to host it?',
@@ -1631,7 +1631,7 @@
 
                     <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
                         <a href="{{ app_url('/sign_up') }}" class="inline-flex items-center justify-center rounded-2xl border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-white/10">
-                            Or use eventschedule.com instead
+                            Or use getvnt.com instead
                         </a>
                         <a href="{{ route('marketing.docs.saas.setup') }}" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                             <span class="relative z-10 flex items-center gap-2">

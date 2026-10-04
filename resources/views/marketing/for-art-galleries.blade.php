@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Art Galleries"
+        name="Getvnt for Art Galleries"
         description="An exhibition calendar where the run is one recurring event and the private view, artist talk and closing are separate evenings."
         audience="Art Galleries, Project Spaces & Artist Cooperatives"
         keywords="gallery calendar, exhibition schedule, private view rsvp, art gallery events, artist talk booking, exhibition proposal form" />
@@ -300,7 +300,7 @@
                 'a' => 'As their own events, on top of the run. A recurring event carries one start time, so anything happening at a different hour needs to be separate anyway - which is exactly right here, because each evening wants its own description, its own capacity and its own page to share. Most shows end up with three or four.',
             ],
             [
-                'q' => 'Is Event Schedule free for a gallery?',
+                'q' => 'Is Getvnt free for a gallery?',
                 'a' => 'The parts you use for every show are free forever: the run as a recurring event, date exceptions, separate evening events, free registration with a capacity for a private view, sub-schedules, exhibition proposals from artists, two-way calendar sync, a live calendar feed and an embeddable calendar. Charging for a collector dinner or a paid preview is what needs Pro, at '.plan_price($proMonthly).' a month. Zero platform fees on sales either way.',
             ],
             [
@@ -316,12 +316,12 @@
                 'a' => 'Anyone who leaves an email address on your gallery page and confirms it is sent a short digest when you put a new show up, at most one every few days, and it does not touch your newsletter allowance. Collectors who would rather not give an address can subscribe to the gallery\'s live calendar feed instead, and each new show appears in their own calendar. Anything with more in it than the dates is a newsletter you write: the free plan covers 10 emails a month and Pro raises it to 100, counted per recipient rather than per send, so one message to a hundred collectors uses a hundred of them.',
             ],
             [
-                'q' => 'What if an exhibiting artist is not on Event Schedule?',
+                'q' => 'What if an exhibiting artist is not on Getvnt?',
                 'a' => 'Add them by name anyway. The show\'s page lists every artist, and one without an account gets a page of their own that shows the dates you added, says your gallery listed them and that they have not claimed it yet, and stays out of search engines until they do. Add their email address and they can claim the page by signing in with it; the dates you listed stay on it once it is theirs.',
             ],
             [
                 'q' => 'How do collectors pay for a ticketed dinner?',
-                'a' => 'Through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash, chosen per event, and Event Schedule takes no platform fee on any of them. If a guest cannot come, refund them from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part, and any other method is marked as refunded, which records it without moving money. Putting a price on the ticket is Pro, and the payment methods and refunds come with it; a private view with free registration and a capacity is not.',
+                'a' => 'Through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash, chosen per event, and Getvnt takes no platform fee on any of them. If a guest cannot come, refund them from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part, and any other method is marked as refunded, which records it without moving money. Putting a price on the ticket is Pro, and the payment methods and refunds come with it; a private view with free registration and a capacity is not.',
             ],
         ];
 
@@ -917,7 +917,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-hang-card es-hang-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-hang-muted text-sm">Event Schedule for</div>
+                            <div class="es-hang-muted text-sm">Getvnt for</div>
                             <div class="es-hang-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-hang-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -995,7 +995,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-gallery" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-hang-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

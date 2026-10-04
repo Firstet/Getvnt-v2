@@ -1,6 +1,6 @@
 <x-marketing-layout>
     {{-- SEO Slots --}}
-    <x-slot name="title">Search Schedules & Upcoming Events | Event Schedule</x-slot>
+    <x-slot name="title">Search Schedules & Upcoming Events | Getvnt</x-slot>
     <x-slot name="description">Look up a schedule by name, web address, city or blurb, and an upcoming event by name or blurb. Free, no account needed, and past dates never come back.</x-slot>
     <x-slot name="breadcrumbTitle">{{ __('messages.search') }}</x-slot>
 
@@ -14,11 +14,11 @@
     {
         "@context": "https://schema.org",
         "@type": "SearchResultsPage",
-        "name": "Search Event Schedule",
+        "name": "Search Getvnt",
         "url": "{{ url('/search') }}",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         }
     }
@@ -501,7 +501,7 @@
         $faqs = [
             [
                 'q' => 'Why can I not find a schedule I know exists?',
-                'a' => 'A schedule joins this index once its owner has confirmed an email address or a phone number, and it stays in until the schedule is deleted. Demo schedules are filtered out. So a brand new schedule whose owner has not confirmed their contact details yet will not be here, and neither will its events, because an event only reaches the index through a schedule that is already in it. The same goes for a page an organizer created for a performer or venue who is not on Event Schedule yet: the name shows on their event, but the page stays out of this index, and out of search engines, until the act claims it.',
+                'a' => 'A schedule joins this index once its owner has confirmed an email address or a phone number, and it stays in until the schedule is deleted. Demo schedules are filtered out. So a brand new schedule whose owner has not confirmed their contact details yet will not be here, and neither will its events, because an event only reaches the index through a schedule that is already in it. The same goes for a page an organizer created for a performer or venue who is not on Getvnt yet: the name shows on their event, but the page stays out of this index, and out of search engines, until the act claims it.',
             ],
             [
                 'q' => 'What does a search actually match?',
@@ -521,7 +521,7 @@
             ],
             [
                 'q' => 'Does it cost anything to be listed?',
-                'a' => 'No. Publishing a schedule and its events is free forever, and that is all being findable takes. So is free registration, with no ceiling on it. Charging for a ticket is the Pro plan, and Event Schedule charges zero platform fees on ticket sales at any tier, so past your payment processor\'s own fee the money is yours.',
+                'a' => 'No. Publishing a schedule and its events is free forever, and that is all being findable takes. So is free registration, with no ceiling on it. Charging for a ticket is the Pro plan, and Getvnt charges zero platform fees on ticket sales at any tier, so past your payment processor\'s own fee the money is yours.',
             ],
         ];
 
@@ -1181,7 +1181,7 @@
                                 <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 transition-all">
                                     <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                         class="es-look-mono min-w-0 flex-1 border-0 bg-transparent p-0 text-right text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                                    <span class="es-look-muted es-look-mono shrink-0 select-none text-sm sm:text-base">.eventschedule.com</span>
+                                    <span class="es-look-muted es-look-mono shrink-0 select-none text-sm sm:text-base">.getvnt.com</span>
                                 </div>
                                 <a href="{{ app_url('/sign_up') }}" class="es-look-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5">
                                     <span class="relative z-10 flex items-center gap-2">

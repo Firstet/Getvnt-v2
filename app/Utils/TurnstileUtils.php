@@ -17,7 +17,7 @@ class TurnstileUtils
 
     /**
      * Check if Turnstile should be active for the current request.
-     * Disabled on custom domains since the site key is registered for eventschedule.com.
+     * Disabled on custom domains since the site key is registered for getvnt.com.
      */
     public static function isActiveForRequest(): bool
     {

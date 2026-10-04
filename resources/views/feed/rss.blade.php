@@ -4,7 +4,7 @@
     <channel>
         <title>{{ htmlspecialchars($role->name, ENT_XML1, 'UTF-8') }}</title>
         <link>{{ custom_domain_url($role->getGuestUrl()) }}</link>
-        <description>{{ htmlspecialchars($role->name . ' - Event Schedule', ENT_XML1, 'UTF-8') }}</description>
+        <description>{{ htmlspecialchars($role->name . ' - Getvnt', ENT_XML1, 'UTF-8') }}</description>
         <language>{{ app()->getLocale() }}</language>
         @if($items->first())
         @php

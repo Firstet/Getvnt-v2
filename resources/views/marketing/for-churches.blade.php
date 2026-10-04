@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Churches"
+        name="Getvnt for Churches"
         description="A church event calendar where services and weekly groups are set once as recurring events, each ministry has its own link, and special services take free sign-ups with a capacity."
         audience="Churches, Parishes, Ministries & Congregations"
         keywords="church event calendar, church calendar software, parish calendar, ministry schedule, church events sign up, church website calendar" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a church event calendar online with Event Schedule",
+        "name": "How to put a church event calendar online with Getvnt",
         "description": "Set the weekly pattern once, split it into ministries, then add the special services on top.",
         "step": [
             {
@@ -75,7 +75,7 @@
            about 9.5:1. Muted text .es-nave-muted (#5b504a / #a99e97) clears
            6.5:1 on both grounds. Never text-gray-500 on these grounds.
 
-           CLAIM DISCIPLINE. No rotas: Event Schedule has no volunteer rota
+           CLAIM DISCIPLINE. No rotas: Getvnt has no volunteer rota
            or shift-assignment feature, so nothing here promises one. No
            giving, no member database, no SMS. Team members beyond one are
            Enterprise; Internal and Unlisted events are Enterprise; Draft is
@@ -328,7 +328,7 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for a church?',
+                'q' => 'Is Getvnt free for a church?',
                 'a' => 'The parts a church uses every week are free forever: the public calendar and its link, recurring services and groups with date exceptions, sub-schedules for each ministry, free sign-ups with a capacity, the calendar feed members subscribe to, the embeddable calendar for your website, email sign-ups and two-way calendar sync. Putting a price on a ticket, for a weekend away or a fundraising concert, is what needs Pro, at '.plan_price($proMonthly).' a month, and there are zero platform fees on those sales.',
             ],
             [
@@ -353,7 +353,7 @@
             ],
             [
                 'q' => 'How do people pay for the church weekend away?',
-                'a' => 'Put a price on the ticket, which needs Pro, and take payment into the church\'s own Stripe or PayPal account, by an Invoice Ninja invoice, a payment link or cash. On Stripe you can let families spread the cost over monthly installments. Event Schedule takes no platform fee, and if someone has to drop out you can refund them from the Sales page, in full or in part.',
+                'a' => 'Put a price on the ticket, which needs Pro, and take payment into the church\'s own Stripe or PayPal account, by an Invoice Ninja invoice, a payment link or cash. On Stripe you can let families spread the cost over monthly installments. Getvnt takes no platform fee, and if someone has to drop out you can refund them from the Sales page, in full or in part.',
             ],
             [
                 'q' => 'Our congregation speaks two languages. Can the calendar show both?',
@@ -822,10 +822,10 @@
                     </div>
                     <p class="es-nave-muted mt-2 text-sm">
                         Add a guest preacher or a touring choir to the event by name. If they are
-                        not on Event Schedule, they get a page that shows the date and says your
+                        not on Getvnt, they get a page that shows the date and says your
                         church listed them, kept out of search engines until they claim it.
                     </p>
-                    <p class="es-nave-muted mt-auto pt-4 text-xs">If they are already on Event Schedule, the date is offered to their own schedule.</p>
+                    <p class="es-nave-muted mt-auto pt-4 text-xs">If they are already on Getvnt, the date is offered to their own schedule.</p>
                 </div>
             </div>
         </div>
@@ -1000,7 +1000,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-nave-card es-nave-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-nave-muted text-sm">Event Schedule for</div>
+                            <div class="es-nave-muted text-sm">Getvnt for</div>
                             <div class="es-nave-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-nave-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1078,7 +1078,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-church" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-nave-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

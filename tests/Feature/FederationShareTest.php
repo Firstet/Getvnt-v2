@@ -18,11 +18,11 @@ class FederationShareTest extends TestCase
     use CreatesScheduleData;
     use RefreshDatabase;
 
-    private const EVENTS_ENDPOINT = 'https://eventschedule.com/api/federation/events';
+    private const EVENTS_ENDPOINT = 'https://getvnt.com/api/federation/events';
 
-    private const RECONCILE_ENDPOINT = 'https://eventschedule.com/api/federation/reconcile';
+    private const RECONCILE_ENDPOINT = 'https://getvnt.com/api/federation/reconcile';
 
-    private const REGISTER_ENDPOINT = 'https://eventschedule.com/api/federation/register';
+    private const REGISTER_ENDPOINT = 'https://getvnt.com/api/federation/register';
 
     protected function setUp(): void
     {

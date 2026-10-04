@@ -656,7 +656,7 @@ class GoogleCalendarService
     }
 
     /**
-     * Sync events from Google Calendar to EventSchedule.
+     * Sync events from Google Calendar to Getvnt.
      *
      * Uses Google's incremental sync tokens: the stored nextSyncToken means each run fetches only
      * changes since the last one - including 'cancelled' tombstones for deleted events, which drive
@@ -906,7 +906,7 @@ class GoogleCalendarService
     }
 
     /**
-     * Create an EventSchedule event from Google Calendar event
+     * Create an Getvnt event from Google Calendar event
      */
     private function createEventFromGoogle(array $googleEvent, Role $role, string $calendarId): Event
     {
@@ -972,7 +972,7 @@ class GoogleCalendarService
     }
 
     /**
-     * Update an EventSchedule event from Google Calendar event
+     * Update an Getvnt event from Google Calendar event
      */
     private function updateEventFromGoogle(Event $event, array $googleEvent, Role $role): bool
     {

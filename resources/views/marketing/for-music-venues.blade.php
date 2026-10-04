@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Music Venues"
+        name="Getvnt for Music Venues"
         description="Publish the whole show day on one link: set times for every band on the bill, tickets with zero platform fees, and QR check-in on the door."
         audience="Music Venues"
         keywords="music venue calendar, set times, concert listings, venue ticketing, QR check-in, band booking requests, live music schedule" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to publish a music venue's show day with Event Schedule",
+        "name": "How to publish a music venue's show day with Getvnt",
         "description": "Get the whole show day, not just the doors time, onto one link.",
         "step": [
             {
@@ -386,7 +386,7 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for music venues?',
+                'q' => 'Is Getvnt free for music venues?',
                 'a' => 'Yes. Publishing your listings, adding set times for every act on a bill, running recurring residencies, splitting rooms into sub-schedules, accepting booking requests, and two-way sync with Google, Outlook or CalDAV are all free forever, and so is free registration for a door that charges nothing. Scanning the QR on a ticket costs nothing on any plan either. Putting a price on a ticket is Pro at '.plan_price($proMonthly).' a month, which brings the live check-in dashboard for a busy door and passes with it.',
             ],
             [
@@ -395,7 +395,7 @@
             ],
             [
                 'q' => 'Do the bands on the bill need their own account?',
-                'a' => 'No. Name them on the show and the event page lists the whole lineup, with a link to each act that has a page. An act who is not on Event Schedule gets a page of its own, which says which schedule created it and that the act has not claimed it, and it stays out of search engines until they do. If you add their email address, they can claim it by signing in with that address, and the shows you listed stay on it.',
+                'a' => 'No. Name them on the show and the event page lists the whole lineup, with a link to each act that has a page. An act who is not on Getvnt gets a page of its own, which says which schedule created it and that the act has not claimed it, and it stays out of search engines until they do. If you add their email address, they can claim it by signing in with that address, and the shows you listed stay on it.',
             ],
             [
                 'q' => 'Can photos and video be attached to the band that played?',
@@ -411,7 +411,7 @@
             ],
             [
                 'q' => 'What do you charge on ticket sales?',
-                'a' => 'Nothing. Event Schedule takes zero platform fees. You connect your own Stripe or PayPal account, the money lands there, and the only deduction is the provider\'s own processing. A payment link or cash on the door works too. There is no per-ticket cut and no booking fee added on top of your price.',
+                'a' => 'Nothing. Getvnt takes zero platform fees. You connect your own Stripe or PayPal account, the money lands there, and the only deduction is the provider\'s own processing. A payment link or cash on the door works too. There is no per-ticket cut and no booking fee added on top of your price.',
             ],
             [
                 'q' => 'Can fans ask to hear when tickets go on sale?',
@@ -614,7 +614,7 @@
                             <span class="es-run-plan">Free</span>
                         </div>
                         <p class="es-run-muted text-sm">
-                            Name every act on the show, including ones who are not on Event Schedule. The event page lists the whole lineup and links each act that has a page, and an act new here gets a page of its own that stays out of search engines until they claim it. The show can surface on their schedule too, so their followers find your room through them.
+                            Name every act on the show, including ones who are not on Getvnt. The event page lists the whole lineup and links each act that has a page, and an act new here gets a page of its own that stays out of search engines until they claim it. The show can surface on their schedule too, so their followers find your room through them.
                             <a href="{{ marketing_url('/docs/creating-events#claim') }}" class="es-run-link font-medium hover:underline">How act pages work</a>
                         </p>
                     </div>
@@ -811,7 +811,7 @@
                     We take <span class="es-run-mark">none of it.</span>
                 </h2>
                 <p class="es-run-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    Event Schedule charges zero platform fees on ticket sales. You connect your own <a href="{{ marketing_url('/stripe') }}" class="es-run-link font-medium hover:underline">Stripe</a> or <a href="{{ marketing_url('/paypal') }}" class="es-run-link font-medium hover:underline">PayPal</a> account, the money lands in it, and the only deduction is the provider's own processing. A payment link or cash on the door works too.
+                    Getvnt charges zero platform fees on ticket sales. You connect your own <a href="{{ marketing_url('/stripe') }}" class="es-run-link font-medium hover:underline">Stripe</a> or <a href="{{ marketing_url('/paypal') }}" class="es-run-link font-medium hover:underline">PayPal</a> account, the money lands in it, and the only deduction is the provider's own processing. A payment link or cash on the door works too.
                 </p>
             </div>
 
@@ -1203,7 +1203,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-venue" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-run-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] dark:text-[#17181b]">
                             <span class="relative z-10 flex items-center gap-2">

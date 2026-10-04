@@ -1,6 +1,6 @@
 <x-marketing-layout>
     <x-slot name="title">Open Source Event Calendar - Licence and Selfhosting</x-slot>
-    <x-slot name="description">Event Schedule is open source under the Attribution Assurance License. Selfhost the whole thing on your own server, or drive it through the REST API.</x-slot>
+    <x-slot name="description">Getvnt is open source under the Attribution Assurance License. Selfhost the whole thing on your own server, or drive it through the REST API.</x-slot>
     <x-slot name="breadcrumbTitle">Open Source</x-slot>
 
     <x-slot name="structuredData">
@@ -8,15 +8,15 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareSourceCode",
-        "name": "Event Schedule",
-        "description": "Event Schedule is open source under the Attribution Assurance License (AAL), an OSI-approved licence adapted from the BSD licence. Selfhost it on your own server, where every feature resolves to the top tier, or drive the hosted version through the REST API.",
-        "codeRepository": "https://github.com/eventschedule/eventschedule",
+        "name": "Getvnt",
+        "description": "Getvnt is open source under the Attribution Assurance License (AAL), an OSI-approved licence adapted from the BSD licence. Selfhost it on your own server, where every feature resolves to the top tier, or drive the hosted version through the REST API.",
+        "codeRepository": "https://github.com/Firstet/Getvnt-v2",
         "programmingLanguage": ["PHP", "JavaScript", "Vue.js"],
         "runtimePlatform": "Laravel 11",
         "license": "https://opensource.org/licenses/AAL",
         "author": {
             "@type": "Organization",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         },
         "url": "{{ url()->current() }}"
@@ -598,15 +598,15 @@
 
         $faqs = [
             [
-                'q' => 'What licence is Event Schedule under?',
-                'a' => 'The Attribution Assurance License, an OSI-approved licence adapted from the BSD licence. composer.json declares it as AAL and the full text is the LICENSE file in the repository root. It is permissive rather than copyleft: use, modify and redistribute in source or binary form, provided the licence text travels with the code, and provided a binary redistribution displays the author name, "Event Schedule" and the project URL when the program launches. It is short. Read it rather than taking a paragraph on a marketing page for it.',
+                'q' => 'What licence is Getvnt under?',
+                'a' => 'The Attribution Assurance License, an OSI-approved licence adapted from the BSD licence. composer.json declares it as AAL and the full text is the LICENSE file in the repository root. It is permissive rather than copyleft: use, modify and redistribute in source or binary form, provided the licence text travels with the code, and provided a binary redistribution displays the author name, "Getvnt" and the project URL when the program launches. It is short. Read it rather than taking a paragraph on a marketing page for it.',
             ],
             [
                 'q' => 'Do I get every feature if I selfhost?',
                 'a' => 'All but one. Role::isPro() and Role::isEnterprise() both return true the moment config(\'app.hosted\') is false, so uncapped ticket sales, the REST API, webhooks, custom fields, unlimited team members and uncapped newsletter sends are simply on. The exception is a custom domain per schedule: ResolveCustomDomain only runs in hosted mode, and on a selfhost the whole install already sits on a domain you chose. Two things you supply yourself: an AI key if you want the parsing and translation features, and a Stripe or PayPal account for payouts.',
             ],
             [
-                'q' => 'Is the REST API free on eventschedule.com?',
+                'q' => 'Is the REST API free on getvnt.com?',
                 'a' => 'No. API access is a Pro feature at '.plan_price($proMonthly).' a month, and the check runs on reads as well as writes: under app/Http/Controllers/Api a single-resource route answers 403 for a free schedule, and a list route filters non-Pro schedules out with the wherePro() scope. On a selfhosted install it is on by default, because a selfhost resolves to the top tier.',
             ],
             [
@@ -669,11 +669,11 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-commit-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        Event Schedule is open source under the Attribution Assurance License. Selfhost the whole thing on your own server, or drive the hosted version through the REST API. Either way, the code you are trusting is code you can read.
+                        Getvnt is open source under the Attribution Assurance License. Selfhost the whole thing on your own server, or drive the hosted version through the REST API. Either way, the code you are trusting is code you can read.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
-                        <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="es-commit-ghost group inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+                        <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="es-commit-ghost group inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
                             <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -696,7 +696,7 @@
                 <div class="es-fade-up es-d-4" data-reveal>
                     <div class="es-commit-card p-6 sm:p-7">
                         <div class="mb-5 flex flex-wrap items-baseline justify-between gap-2">
-                            <h2 class="es-commit-ink text-lg font-bold">eventschedule/eventschedule</h2>
+                            <h2 class="es-commit-ink text-lg font-bold">getvnt/getvnt</h2>
                             <span class="es-commit-tag">Public</span>
                         </div>
 
@@ -750,7 +750,7 @@
                     <span class="es-commit-ref self-start">LICENSE</span>
                     <h3 class="es-commit-ink mt-4 mb-3 text-lg font-bold">Carry the notice</h3>
                     <p class="es-commit-muted text-sm leading-relaxed">
-                        Redistributed source has to display the licence text. A binary redistribution carries it in the documentation and shows the author name, "Event Schedule" and the project URL when the program launches.
+                        Redistributed source has to display the licence text. A binary redistribution carries it in the documentation and shows the author name, "Getvnt" and the project URL when the program launches.
                     </p>
                 </div>
                 <div class="es-commit-card flex flex-col p-7" data-reveal="panel">
@@ -796,7 +796,7 @@
 
                 <div class="mx-auto max-w-2xl" data-reveal="panel">
                     <div class="es-commit-diff">
-                        <div class="es-commit-diff-head">eventschedule.com &rarr; your own server</div>
+                        <div class="es-commit-diff-head">getvnt.com &rarr; your own server</div>
                         @foreach ($diffRows as [$dName, $dOut, $dIn])
                             <div class="es-commit-hunk">
                                 <p class="es-commit-hunk-name">{{ $dName }}</p>
@@ -818,7 +818,7 @@
                             <span class="es-commit-plan es-commit-plan-pro">Yours</span>
                         </div>
                         <p class="es-commit-muted text-sm leading-relaxed">
-                            You take on the server, the database, the backups, the TLS certificate, the cron entry and the upgrade window. On eventschedule.com those are ours, and the bill is {{ plan_price($proMonthly) }} a month, or {{ plan_price($entMonthly) }} for the two Enterprise lines above. Selfhosting is not free, it is differently priced, and pretending otherwise would be the first false claim on this page.
+                            You take on the server, the database, the backups, the TLS certificate, the cron entry and the upgrade window. On getvnt.com those are ours, and the bill is {{ plan_price($proMonthly) }} a month, or {{ plan_price($entMonthly) }} for the two Enterprise lines above. Selfhosting is not free, it is differently priced, and pretending otherwise would be the first false claim on this page.
                         </p>
                         <p class="mt-4">
                             <a href="{{ marketing_url('/selfhost') }}" class="es-commit-link inline-flex items-center gap-1 text-sm font-semibold transition-all hover:gap-2">
@@ -902,7 +902,7 @@
                     </div>
                     <h3 class="es-commit-ink mt-4 mb-3 text-lg font-bold">The gate</h3>
                     <p class="es-commit-muted text-sm leading-relaxed">
-                        On eventschedule.com the API is a Pro feature at {{ plan_price($proMonthly) }} a month, and the check runs on reads too: a single-resource route answers 403, a list route filters non-Pro schedules out. On a selfhost the same check passes by default.
+                        On getvnt.com the API is a Pro feature at {{ plan_price($proMonthly) }} a month, and the check runs on reads too: a single-resource route answers 403, a list route filters non-Pro schedules out. On a selfhost the same check passes by default.
                     </p>
                     <p class="mt-auto pt-4">
                         <a href="{{ marketing_url('/docs/developer/api') }}" class="es-commit-link inline-flex items-center gap-1 text-sm font-semibold transition-all hover:gap-2">
@@ -948,7 +948,7 @@
                 </div>
                 <p class="es-commit-muted es-commit-hair mt-6 pt-4 text-sm">
                     Agents get their own page, with the flows written out.
-                    <a href="{{ marketing_url('/for-ai-agents') }}" class="es-commit-link font-medium hover:underline">Event Schedule for AI agents</a>
+                    <a href="{{ marketing_url('/for-ai-agents') }}" class="es-commit-link font-medium hover:underline">Getvnt for AI agents</a>
                 </p>
             </div>
         </div>
@@ -978,7 +978,7 @@
                     </div>
                     <h3 class="es-commit-hover-title es-commit-ink mt-4 mb-3 text-lg font-bold transition-colors">Softaculous</h3>
                     <p class="es-commit-muted text-sm leading-relaxed">
-                        If your host runs cPanel with Softaculous, Event Schedule is in the installer library. Database, files and permissions are handled for you.
+                        If your host runs cPanel with Softaculous, Getvnt is in the installer library. Database, files and permissions are handled for you.
                     </p>
                     <span class="es-commit-hover-arrow es-commit-muted mt-auto inline-flex items-center gap-1 pt-5 text-sm font-medium transition-colors">
                         Open the listing
@@ -986,7 +986,7 @@
                     </span>
                 </a>
 
-                <a href="https://github.com/eventschedule/dockerfiles" target="_blank" rel="noopener noreferrer" class="es-commit-card es-commit-hover flex flex-col p-7 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" data-reveal="panel">
+                <a href="https://github.com/Firstet/dockerfiles" target="_blank" rel="noopener noreferrer" class="es-commit-card es-commit-hover flex flex-col p-7 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" data-reveal="panel">
                     <div class="flex flex-wrap items-center gap-2">
                         <span class="es-commit-tag">02</span>
                         <span class="es-commit-plan">Compose</span>
@@ -1069,7 +1069,7 @@
                         </div>
                         <h3 class="es-commit-ink mt-4 mb-2 text-lg font-bold">Take the code</h3>
                         <p class="es-commit-muted text-sm leading-relaxed">
-                            What is on GitHub is the product, not a trimmed demo of it. eventschedule.com runs this application, which is why a selfhost gets the features rather than a subset of them.
+                            What is on GitHub is the product, not a trimmed demo of it. getvnt.com runs this application, which is why a selfhost gets the features rather than a subset of them.
                         </p>
                     </div>
                     <div class="es-commit-card flex flex-col p-6" data-reveal="panel">
@@ -1173,10 +1173,10 @@
                             </div>
                             <h3 class="es-commit-ink mb-4 text-xl font-bold">Federation, off by default</h3>
                             <p class="es-commit-muted mb-4">
-                                A selfhosted install can share its public events with the eventschedule.com listings, and every listing links back to the event on your own site. It is off until an administrator turns it on, and a schedule is only listed once someone who manages it chooses to list it.
+                                A selfhosted install can share its public events with the getvnt.com listings, and every listing links back to the event on your own site. It is off until an administrator turns it on, and a schedule is only listed once someone who manages it chooses to list it.
                             </p>
                             <p class="es-commit-muted text-sm">
-                                It is a setting on the instance, not a plan tier. eventschedule.com is the receiving end and runs a moderation queue instead.
+                                It is a setting on the instance, not a plan tier. getvnt.com is the receiving end and runs a moderation queue instead.
                             </p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
@@ -1239,7 +1239,7 @@
                     </x-feature-link-card>
                 </div>
                 <div data-reveal>
-                    <x-feature-link-card name="White label" description="Remove the Event Schedule credit from your guest pages" :url="marketing_url('/features/white-label')" icon-color="sky">
+                    <x-feature-link-card name="White label" description="Remove the Getvnt credit from your guest pages" :url="marketing_url('/features/white-label')" icon-color="sky">
                         <x-slot:icon><svg aria-hidden="true" class="w-5 h-5 text-sky-600 dark:text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485" /></svg></x-slot:icon>
                     </x-feature-link-card>
                 </div>
@@ -1351,7 +1351,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-commit-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">
@@ -1368,11 +1368,11 @@
                         <div class="es-commit-entry">
                             <span class="es-commit-node es-commit-node-open" aria-hidden="true"></span>
                             <div>
-                                <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="es-commit-link inline-flex items-center gap-2 text-sm font-semibold hover:underline">
+                                <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="es-commit-link inline-flex items-center gap-2 text-sm font-semibold hover:underline">
                                     <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
-                                    eventschedule/eventschedule
+                                    getvnt/getvnt
                                 </a>
                                 <p class="es-commit-muted mt-1 text-sm">Clone it, read it, open an issue. No credit card, and no account needed to look.</p>
                             </div>

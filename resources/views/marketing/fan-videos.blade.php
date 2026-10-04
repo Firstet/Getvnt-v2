@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Fan Photos, Videos & Comments for Events - Event Schedule</x-slot>
+    <x-slot name="title">Fan Photos, Videos & Comments for Events - Getvnt</x-slot>
     <x-slot name="description">Let fans add YouTube videos, photos, and comments to your event pages for free, with organizer approval before anything goes live.</x-slot>
     <x-slot name="breadcrumbTitle">Fan Videos, Photos & Comments</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Fan Videos, Photos & Comments"
+        name="Getvnt Fan Videos, Photos & Comments"
         description="Let fans send photos, a YouTube link and a comment to your event pages for free. Every submission arrives unapproved, files itself against the part of the night and the date it came from, and only appears once you approve it." />
     </x-slot>
 
@@ -626,7 +626,7 @@
             ],
             [
                 'q' => 'What video platforms are supported?',
-                'a' => 'YouTube. A fan pastes a YouTube link, Event Schedule keeps the canonical watch URL, and the clip plays on the event page through youtube-nocookie.com. Links from anywhere else are turned away with an error rather than stored, and nothing is ever fetched from a social platform on its own.',
+                'a' => 'YouTube. A fan pastes a YouTube link, Getvnt keeps the canonical watch URL, and the clip plays on the event page through youtube-nocookie.com. Links from anywhere else are turned away with an error rather than stored, and nothing is ever fetched from a social platform on its own.',
             ],
             [
                 'q' => 'Where do approved photos, videos and comments appear?',
@@ -638,7 +638,7 @@
             ],
             [
                 'q' => 'What does it cost?',
-                'a' => 'Fan photos, videos and comments are on the free plan, approval queue and per-set galleries included. On eventschedule.com the free plan caps a schedule at 25 fan photos in total, and Pro removes the cap and adds a download of every approved photo on an event as a single zip. A selfhosted install has no photo cap at all.',
+                'a' => 'Fan photos, videos and comments are on the free plan, approval queue and per-set galleries included. On getvnt.com the free plan caps a schedule at 25 fan photos in total, and Pro removes the cap and adds a download of every approved photo on an event as a single zip. A selfhosted install has no photo cap at all.',
             ],
             [
                 'q' => 'Can I switch it off, or only part of it?',
@@ -1168,7 +1168,7 @@
                         </div>
                         <dl class="space-y-3 text-sm">
                             <div class="flex items-baseline justify-between gap-3">
-                                <dt class="es-reel-muted">Free, on eventschedule.com</dt>
+                                <dt class="es-reel-muted">Free, on getvnt.com</dt>
                                 <dd class="es-reel-ink flex-none font-mono font-bold">25 photos</dd>
                             </div>
                             <div class="flex items-baseline justify-between gap-3">
@@ -1366,7 +1366,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-reel-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

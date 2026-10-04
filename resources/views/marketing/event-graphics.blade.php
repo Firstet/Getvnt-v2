@@ -113,8 +113,8 @@
                 'a' => 'Yes. Upload a header image and it runs across the top of every graphic at full width. Add header text for a headline and footer text for a sign-off of up to two lines, both of which accept variables like {schedule_name}, {month_name} and {first_event_date}. You can also switch on the date strip over each flyer and give it your own short template instead of the date. The background, the accent colour on the numbered badges and the colour of your header and footer wording all come from your schedule\'s appearance settings, so the graphic already looks like you.',
             ],
             [
-                'q' => 'Does the graphic carry Event Schedule branding?',
-                'a' => 'One small mark. On eventschedule.com every graphic carries an eventschedule.com credit in its bottom right corner, whatever the plan: white label takes our name off your pages, not off this image. A graphic made on a selfhosted install carries no credit at all.',
+                'q' => 'Does the graphic carry Getvnt branding?',
+                'a' => 'One small mark. On getvnt.com every graphic carries an getvnt.com credit in its bottom right corner, whatever the plan: white label takes our name off your pages, not off this image. A graphic made on a selfhosted install carries no credit at all.',
             ],
             [
                 'q' => 'Can it post to Instagram for me?',
@@ -145,19 +145,19 @@
         ];
     @endphp
 
-    <x-slot name="title">Event Graphics | Social Posts From Flyers - Event Schedule</x-slot>
+    <x-slot name="title">Event Graphics | Social Posts From Flyers - Getvnt</x-slot>
     <x-slot name="description">Turn an event into a poster and a caption without opening a design tool: pick a size and a template, and the date, venue and price fill themselves in.</x-slot>
     <x-slot name="breadcrumbTitle">Event Graphics</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Event Graphics"
+        name="Getvnt Event Graphics"
         description="Turn an event into a poster and a caption without opening a design tool: pick a size and a template, and the date, venue and price fill themselves in." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to generate an event graphic with Event Schedule",
+        "name": "How to generate an event graphic with Getvnt",
         "description": "Give your events flyer images, open Event Graphics, and download the composed image with its caption.",
         "step": [
             {
@@ -776,7 +776,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-gal-muted mb-8 max-w-xl text-lg sm:text-xl">
-                        You already have the artwork. Event Schedule hangs the flyers sitting on your upcoming events into one image, and writes the caption to go with it. There is no editor to open, no template to fill in and no canvas to drag things around on. You decide how the work is hung, and press generate.
+                        You already have the artwork. Getvnt hangs the flyers sitting on your upcoming events into one image, and writes the caption to go with it. There is no editor to open, no template to fill in and no canvas to drag things around on. You decide how the work is hung, and press generate.
                     </p>
 
                     <div class="es-fade-up es-d-3 mb-9 flex flex-wrap gap-2">
@@ -816,8 +816,8 @@
                             @endforeach
                         </div>
                         <div class="es-gal-print-rule mt-3 pt-2.5">
-                            <p class="es-gal-print-foot">casaazul.eventschedule.com</p>
-                            <p class="es-gal-stamp">eventschedule.com</p>
+                            <p class="es-gal-print-foot">casaazul.getvnt.com</p>
+                            <p class="es-gal-stamp">getvnt.com</p>
                         </div>
                     </div>
                     <p class="es-gal-frame-cap">One PNG at its native size: your banner, your wording, the date strip and the numbering switched on.</p>
@@ -882,11 +882,11 @@
                                 @endforeach
                             </div>
                             <div class="es-gal-print-rule mt-2.5 pt-2">
-                                <p class="es-gal-stamp">eventschedule.com</p>
+                                <p class="es-gal-stamp">getvnt.com</p>
                             </div>
                         </div>
                         <p class="es-gal-dim mt-4 text-sm">
-                            One PNG, composed on the server from the flyer images on your events. Nothing is written over the artwork unless you ask: this is the whole graphic with every setting left alone. Your schedule's own background comes with it, a QR code in the bottom corner of each flyer opens that event's page, and on the hosted service a small eventschedule.com credit sits in the corner.
+                            One PNG, composed on the server from the flyer images on your events. Nothing is written over the artwork unless you ask: this is the whole graphic with every setting left alone. Your schedule's own background comes with it, a QR code in the bottom corner of each flyer opens that event's page, and on the hosted service a small getvnt.com credit sits in the corner.
                         </p>
                     </div>
 
@@ -901,7 +901,7 @@
                             <div><span class="es-gal-code-b">*Saturday* 16/5 | 20:00</span></div>
                             <div><span class="es-gal-code-b">*Terra Nova Trio*:</span></div>
                             <div>Casa Azul Jazz Club | Lisbon</div>
-                            <div><span class="es-gal-code-url">casaazul.eventschedule.com/terra-nova-trio</span></div>
+                            <div><span class="es-gal-code-url">casaazul.getvnt.com/terra-nova-trio</span></div>
                             <div class="es-gal-code-dim">&hellip; then the same four lines for every other event</div>
                         </div>
                         <p class="es-gal-dim mt-4 text-sm">
@@ -1137,7 +1137,7 @@
                         <div><span class="es-gal-code-b">*Saturday* 16/5 | 20:00</span></div>
                         <div><span class="es-gal-code-b">*Terra Nova Trio*:</span></div>
                         <div>Casa Azul Jazz Club | Lisbon</div>
-                        <div><span class="es-gal-code-url">casaazul.eventschedule.com/terra-nova-trio</span></div>
+                        <div><span class="es-gal-code-url">casaazul.getvnt.com/terra-nova-trio</span></div>
                     </div>
                     <p class="es-gal-muted mt-4 text-sm">
                         A variable with nothing behind it does not leave a stray separator: the line is tidied, and a line whose variables are all empty is dropped entirely.
@@ -1381,7 +1381,7 @@
                     </table>
                 </div>
                 <p class="es-gal-muted mt-5 text-sm">
-                    Selfhosted installs skip the plans entirely, and the graphic carries no eventschedule.com credit there.
+                    Selfhosted installs skip the plans entirely, and the graphic carries no getvnt.com credit there.
                     <a href="{{ marketing_url('/pricing') }}" class="es-gal-link font-semibold hover:underline">See all plans</a>
                 </p>
             </div>
@@ -1523,7 +1523,7 @@
                             @endforeach
                         </div>
                         <div class="es-gal-print-rule mt-2 pt-1.5">
-                            <p class="es-gal-stamp">eventschedule.com</p>
+                            <p class="es-gal-stamp">getvnt.com</p>
                         </div>
                     </div>
                     <p class="es-gal-mark mb-5 justify-center">The opening</p>
@@ -1539,7 +1539,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-gal-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

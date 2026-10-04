@@ -1,8 +1,8 @@
 <x-docs-page
     key="selfhost/installation"
-    title="Selfhost Installation: PHP, MySQL and Cron - Event Schedule"
-    description="Install Event Schedule on your own server: PHP 8.2 and MySQL, the browser setup wizard, file permissions and the cron entry that runs the scheduler."
-    lede="Set up Event Schedule on your own server with this step-by-step guide. For automated installation, consider using Softaculous or Docker."
+    title="Selfhost Installation: PHP, MySQL and Cron - Getvnt"
+    description="Install Getvnt on your own server: PHP 8.2 and MySQL, the browser setup wizard, file permissions and the cron entry that runs the scheduler."
+    lede="Set up Getvnt on your own server with this step-by-step guide. For automated installation, consider using Softaculous or Docker."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#overview">Overview</x-doc-nav-link>
@@ -29,7 +29,7 @@
             </svg>
             Overview
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">This guide walks you through manually installing Event Schedule on your own server. There are five steps: create an empty MySQL database, extract the release files, set file permissions, run the browser-based setup wizard, and add the cron job. The wizard writes your configuration to <code class="doc-inline-code">.env</code> and creates the database tables for you, so there is nothing to import by hand.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">This guide walks you through manually installing Getvnt on your own server. There are five steps: create an empty MySQL database, extract the release files, set file permissions, run the browser-based setup wizard, and add the cron job. The wizard writes your configuration to <code class="doc-inline-code">.env</code> and creates the database tables for you, so there is nothing to import by hand.</p>
 
         <p class="text-gray-600 dark:text-gray-300 mb-6">These steps describe a plain selfhosted install, where you own every schedule on the server. If you want to run a multi-tenant service where other people sign up and get their own subdomain and plan, follow the <a href="{{ route('marketing.docs.saas.setup') }}" class="doc-link">SaaS setup guide</a> instead.</p>
 
@@ -38,7 +38,7 @@
             <p>For easier installation, you can use:</p>
             <ul class="doc-list mt-2">
                 <li><a href="https://www.softaculous.com/apps/calendars/Event_Schedule" target="_blank" rel="noopener noreferrer" class="doc-link">Softaculous</a> - One-click installation on cPanel hosts</li>
-                <li><a href="https://github.com/eventschedule/dockerfiles" target="_blank" rel="noopener noreferrer" class="doc-link">Docker</a> - Containerized deployment with Docker Compose</li>
+                <li><a href="https://github.com/Firstet/dockerfiles" target="_blank" rel="noopener noreferrer" class="doc-link">Docker</a> - Containerized deployment with Docker Compose</li>
             </ul>
         </div>
 
@@ -129,7 +129,7 @@
             </svg>
             1. Set Up the Database
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Create a MySQL database and user for Event Schedule. Run the following commands in your MySQL client:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Create a MySQL database and user for Getvnt. Run the following commands in your MySQL client:</p>
 
         <div class="doc-code-block">
             <div class="doc-code-header">
@@ -160,7 +160,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-6">Download the latest release and extract it into the directory that will hold the install.</p>
 
         <ol class="doc-list doc-list-numbered mb-6">
-            <li>Download <a href="https://github.com/eventschedule/eventschedule/releases/latest" target="_blank" rel="noopener noreferrer" class="doc-link">eventschedule.zip</a> from the latest GitHub release</li>
+            <li>Download <a href="https://github.com/Firstet/Getvnt-v2/releases/latest" target="_blank" rel="noopener noreferrer" class="doc-link">eventschedule.zip</a> from the latest GitHub release</li>
             <li>Upload the zip file to your server</li>
             <li>Extract the contents to your web root directory</li>
         </ol>
@@ -249,7 +249,7 @@
 
         <ol class="doc-list doc-list-numbered mb-6">
             <li><span class="font-semibold text-gray-900 dark:text-white">Enter the database connection:</span> MySQL Host, Port, Database, Username and Password, pre-filled from the <code class="doc-inline-code">DB_*</code> values in your <code class="doc-inline-code">.env</code>. All five are required, so a MySQL user with a blank password is not accepted.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-white">Press Test.</span> The account fields below stay hidden until the connection succeeds, so this is not an optional check. If the database already contains an Event Schedule installation, Test says so and keeps the form disabled, which is what stops you overwriting an existing site.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-white">Press Test.</span> The account fields below stay hidden until the connection succeeds, so this is not an optional check. If the database already contains an Getvnt installation, Test says so and keeps the form disabled, which is what stops you overwriting an existing site.</li>
             <li><span class="font-semibold text-gray-900 dark:text-white">Create the admin account:</span> Email, Full Name and a password of at least 8 characters. This first account becomes the instance admin.</li>
             <li><span class="font-semibold text-gray-900 dark:text-white">Accept the selfhosting terms,</span> and optionally tick <span class="font-semibold text-gray-900 dark:text-white">Report errors to the developers to help us improve the app</span>, which sets <code class="doc-inline-code">REPORT_ERRORS=true</code> so crashes are sent to the developers.</li>
             <li><span class="font-semibold text-gray-900 dark:text-white">Press Sign Up.</span> The wizard runs the migrations first, and only writes to <code class="doc-inline-code">.env</code> once they succeed, so a bad database never leaves you with a half-configured install. It then sets <code class="doc-inline-code">APP_URL</code> to the address you loaded the wizard on, sets <code class="doc-inline-code">APP_ENV=production</code>, saves the <code class="doc-inline-code">DB_*</code> values, and creates the <code class="doc-inline-code">public/storage</code> symlink.</li>
@@ -284,7 +284,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-4">Once <code class="doc-inline-code">APP_ENV</code> is <code class="doc-inline-code">production</code>, which is what the wizard writes, every generated link uses <code class="doc-inline-code">https://</code>, and <code class="doc-inline-code">SESSION_SECURE_COOKIE</code> ships as <code class="doc-inline-code">true</code> so the session cookie is only sent over HTTPS. On a server reached over plain HTTP that combination looks like a broken login: the sign-in form accepts your password and returns you to the login page, because the browser never stored the session. Install a certificate, or for a local test install only, set <code class="doc-inline-code">SESSION_SECURE_COOKIE=false</code>.</p>
 
         <h3 id="reverse-proxy" class="doc-subheading">Running Behind a Reverse Proxy</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">If Event Schedule sits behind a reverse proxy or CDN (Nginx, Apache, Cloudflare, or a control panel such as HestiaCP), tell it which proxies to trust so it reads the <code class="doc-inline-code">X-Forwarded-Proto</code> and <code class="doc-inline-code">X-Forwarded-For</code> headers those proxies set:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">If Getvnt sits behind a reverse proxy or CDN (Nginx, Apache, Cloudflare, or a control panel such as HestiaCP), tell it which proxies to trust so it reads the <code class="doc-inline-code">X-Forwarded-Proto</code> and <code class="doc-inline-code">X-Forwarded-For</code> headers those proxies set:</p>
 
         <div class="doc-code-block">
             <div class="doc-code-header">
@@ -410,11 +410,11 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Need Help?</div>
-            <p>If you encounter any issues during installation, check the <a href="https://github.com/eventschedule/eventschedule/issues" target="_blank" rel="noopener noreferrer" class="doc-link">GitHub Issues</a> or start a <a href="https://github.com/eventschedule/eventschedule/discussions" target="_blank" rel="noopener noreferrer" class="doc-link">Discussion</a>.</p>
+            <p>If you encounter any issues during installation, check the <a href="https://github.com/Firstet/Getvnt-v2/issues" target="_blank" rel="noopener noreferrer" class="doc-link">GitHub Issues</a> or start a <a href="https://github.com/Firstet/Getvnt-v2/discussions" target="_blank" rel="noopener noreferrer" class="doc-link">Discussion</a>.</p>
         </div>
 
         <h3 class="doc-subheading">Next Steps</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Now that Event Schedule is installed, you may want to:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Now that Getvnt is installed, you may want to:</p>
         <ul class="doc-list">
             <li>Configure <a href="{{ route('marketing.docs.selfhost.email') }}" class="doc-link">email delivery</a>, which nothing else works properly without</li>
             <li>Configure <a href="{{ route('marketing.docs.selfhost.stripe') }}" class="doc-link">Stripe, PayPal or Payfast</a> for ticket sales</li>
@@ -425,7 +425,7 @@
             <li>Set up <a href="{{ route('marketing.docs.saas.twilio') }}" class="doc-link">Twilio</a> to text invitations to venues or talent you added by phone number, and to send WhatsApp messages (<code class="doc-inline-code">TWILIO_SID</code>, <code class="doc-inline-code">TWILIO_AUTH_TOKEN</code>, <code class="doc-inline-code">TWILIO_FROM_NUMBER</code>)</li>
             <li>Enable <a href="#push-notifications" class="doc-link">push notifications</a> with OneSignal (optional)</li>
             <li>Add a <a href="#spam-protection" class="doc-link">Turnstile challenge</a> to your public forms (optional)</li>
-            <li>Turn on <a href="{{ route('marketing.docs.selfhost.federation') }}" class="doc-link">federation</a> to share your public events with the eventschedule.com listings (optional, off by default)</li>
+            <li>Turn on <a href="{{ route('marketing.docs.selfhost.federation') }}" class="doc-link">federation</a> to share your public events with the getvnt.com listings (optional, off by default)</li>
             <li>Tour the <a href="{{ route('marketing.docs.selfhost.admin') }}" class="doc-link">admin panel</a>, where you can watch the queue, read logs, edit translations and change platform settings</li>
         </ul>
 
@@ -444,7 +444,7 @@
             </span>
             Push Notifications (Optional)
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Event Schedule can send browser and mobile web push notifications alongside the emails it already sends, using <a href="https://onesignal.com" target="_blank" rel="noopener noreferrer" class="doc-link">OneSignal</a>. The same moments trigger both: a ticket sale, a booking request accepted or declined, new feedback, a waitlist opening, a finished backup export or import. Push is <strong>off by default</strong>: if you do not configure it, no push SDK is loaded and your installation makes no calls to OneSignal.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Getvnt can send browser and mobile web push notifications alongside the emails it already sends, using <a href="https://onesignal.com" target="_blank" rel="noopener noreferrer" class="doc-link">OneSignal</a>. The same moments trigger both: a ticket sale, a booking request accepted or declined, new feedback, a waitlist opening, a finished backup export or import. Push is <strong>off by default</strong>: if you do not configure it, no push SDK is loaded and your installation makes no calls to OneSignal.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">To enable it, create a free OneSignal app (Web platform), then set these values in your <code class="doc-inline-code">.env</code>:</p>
         <div class="doc-code-block">
             <div class="doc-code-header">
@@ -470,7 +470,7 @@ ONESIGNAL_REST_API_KEY=your-onesignal-rest-api-key</code></pre>
             </span>
             Spam Protection (Optional)
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Event Schedule can put a <a href="https://www.cloudflare.com/products/turnstile/" target="_blank" rel="noopener noreferrer" class="doc-link">Cloudflare Turnstile</a> challenge in front of the forms a stranger uses to sign in, pay, book or post. Turnstile is invisible to most visitors and needs no puzzle-solving.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Getvnt can put a <a href="https://www.cloudflare.com/products/turnstile/" target="_blank" rel="noopener noreferrer" class="doc-link">Cloudflare Turnstile</a> challenge in front of the forms a stranger uses to sign in, pay, book or post. Turnstile is invisible to most visitors and needs no puzzle-solving.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Once configured, the challenge is added to:</p>
         <ul class="doc-list mb-6">
             <li>Sign in, sign up and password reset</li>

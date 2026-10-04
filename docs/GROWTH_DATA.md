@@ -30,7 +30,7 @@ bearer token.
    console, then deploy. Use the console, not a spec file: a stored spec wipes the custom domains
    added since it was written.
 3. Dev machine: put the same value in `.env` as `GROWTH_DATA_TOKEN`. `GROWTH_DATA_URL` defaults
-   to `https://eventschedule.com`. The command sends the token only to that host or to a local one
+   to `https://getvnt.com`. The command sends the token only to that host or to a local one
    (`localhost`, `127.0.0.1`, `*.test`), whatever `--url` says; another host takes an edit to `.env`.
 
 The endpoint is hosted-only. It answers 404 while the token is unset or shorter than 32 characters,

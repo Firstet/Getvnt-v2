@@ -83,8 +83,8 @@ class LegacyUrlRedirectTest extends TestCase
 
     /**
      * Off the nexus there is no blog host to send a post to, and the old WordPress URLs are
-     * eventschedule.com's. A selfhosted SaaS reaches this catch-all too, so each of these must
-     * 404 there rather than 301 onto a dead blog.{domain} or out to eventschedule.com.
+     * getvnt.com's. A selfhosted SaaS reaches this catch-all too, so each of these must
+     * 404 there rather than 301 onto a dead blog.{domain} or out to getvnt.com.
      */
     public function test_off_the_nexus_blog_and_legacy_slugs_are_404(): void
     {

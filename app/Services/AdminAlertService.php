@@ -82,7 +82,7 @@ class AdminAlertService
         'domains_pending',
         'translations_unshared',
         // A selfhosted install that collects personal data but still points its visitors at
-        // eventschedule.com's privacy policy, which names our company, our providers and our
+        // getvnt.com's privacy policy, which names our company, our providers and our
         // retention - none of it theirs. Amber: nothing is broken, but the operator owes their
         // visitors their own notice (GDPR Art. 13), and the built-in one is not it.
         'privacy_policy_missing',

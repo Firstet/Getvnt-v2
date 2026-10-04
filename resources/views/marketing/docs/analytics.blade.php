@@ -1,6 +1,6 @@
 <x-docs-page
     key="analytics"
-    title="Analytics Guide: Views, Revenue, Check-Ins - Event Schedule"
+    title="Analytics Guide: Views, Revenue, Check-Ins - Getvnt"
     description="Read your schedule's built-in analytics: views, traffic sources, short-link clicks, broken links, revenue and check-ins, with no tracking script to add."
     lede="See how people find your schedule, what they open and click, what they buy, and who turns up at the door."
 >
@@ -415,8 +415,8 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Use Event Schedule Analytics",
-            "description": "Track views, devices, traffic sources, social link clicks, broken links, revenue, and check-ins with Event Schedule's built-in analytics dashboard.",
+            "name": "How to Use Getvnt Analytics",
+            "description": "Track views, devices, traffic sources, social link clicks, broken links, revenue, and check-ins with Getvnt's built-in analytics dashboard.",
             "totalTime": "PT5M",
             "step": [
                 {

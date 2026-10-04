@@ -21,7 +21,7 @@ class FederationRecurringTest extends TestCase
     use CreatesScheduleData;
     use RefreshDatabase;
 
-    private const EVENTS_ENDPOINT = 'https://eventschedule.com/api/federation/events';
+    private const EVENTS_ENDPOINT = 'https://getvnt.com/api/federation/events';
 
     protected function setUp(): void
     {

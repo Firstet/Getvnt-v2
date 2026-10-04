@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">Contact Event Schedule | Support Email and Bug Reports</x-slot>
+    <x-slot name="title">Contact Getvnt | Support Email and Bug Reports</x-slot>
     <x-slot name="description">One support address, no portal to log into. Where to send a bug, a security report or an idea, and who to ask about a refund for a ticket you bought.</x-slot>
     <x-slot name="breadcrumbTitle">Contact</x-slot>
 
@@ -8,12 +8,12 @@
     {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Contact Event Schedule",
-        "description": "One support address for Event Schedule, GitHub Issues for bugs and Discussions for ideas. Refunds and questions about an event go to the organizer who sold the ticket.",
+        "name": "Contact Getvnt",
+        "description": "One support address for Getvnt, GitHub Issues for bugs and Discussions for ideas. Refunds and questions about an event go to the organizer who sold the ticket.",
         "url": "{{ url()->current() }}",
         "mainEntity": {
             "@type": "Organization",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "email": "{{ config('app.support_email') }}",
             "url": "{{ config('app.url') }}"
         }
@@ -460,7 +460,7 @@
 
     @php
         $supportEmail = config('app.support_email');
-        $repoUrl = 'https://github.com/eventschedule/eventschedule';
+        $repoUrl = 'https://github.com/Firstet/Getvnt-v2';
 
         // Where a message should go, and why there. Every destination is a
         // surface that already exists: the user guide, the FAQ page, the
@@ -493,7 +493,7 @@
             [
                 'what' => 'Something is broken',
                 'label' => 'GitHub Issues',
-                'href' => 'https://github.com/eventschedule/eventschedule/issues',
+                'href' => 'https://github.com/Firstet/Getvnt-v2/issues',
                 'external' => true,
                 'why' => 'Issues are public, so you can see whether somebody has already hit it, add what you are seeing, and follow the fix.',
             ],
@@ -507,7 +507,7 @@
             [
                 'what' => 'An idea, or a feature you want',
                 'label' => 'GitHub Discussions',
-                'href' => 'https://github.com/eventschedule/eventschedule/discussions',
+                'href' => 'https://github.com/Firstet/Getvnt-v2/discussions',
                 'external' => true,
                 'why' => 'Ideas are worth arguing out in the open, next to everyone else who wants a version of the same thing.',
             ],
@@ -536,7 +536,7 @@
         // What actually helps us answer. None of this is a form field: it is
         // the four things that turn a report into a reproduction.
         $onCard = [
-            'Your schedule address, which on the hosted site looks like your-name.eventschedule.com.',
+            'Your schedule address, which on the hosted site looks like your-name.getvnt.com.',
             'Hosted or selfhosted. If you selfhost, the version you are running, which is shown in the admin portal.',
             'What you expected, and what happened instead. A screenshot beats a paragraph.',
             'A link to the event or the page it happened on.',
@@ -555,7 +555,7 @@
             ],
             [
                 'name' => 'YouTube',
-                'href' => 'https://youtube.com/@EventSchedule',
+                'href' => 'https://youtube.com/@Getvnt',
                 'path' => '<path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />',
             ],
             [
@@ -580,7 +580,7 @@
 
         $faqs = [
             [
-                'q' => 'How do I contact Event Schedule?',
+                'q' => 'How do I contact Getvnt?',
                 'a' => 'Email '.$supportEmail.'. For anything technical you can also open an issue or start a discussion on GitHub, both of which are public. There is no support portal to log into and no ticket number to quote.',
             ],
             [
@@ -597,15 +597,15 @@
             ],
             [
                 'q' => 'Do I have to talk to sales before I can sign up?',
-                'a' => 'No. Pricing is published on the pricing page, the free plan needs no card, and you can create a schedule and start adding events without speaking to anybody. Free registration and door scanning come with it; Pro at '.plan_price($proMonthly).' a month is what lets you charge for a ticket. Event Schedule charges zero platform fees on ticket sales either way.',
+                'a' => 'No. Pricing is published on the pricing page, the free plan needs no card, and you can create a schedule and start adding events without speaking to anybody. Free registration and door scanning come with it; Pro at '.plan_price($proMonthly).' a month is what lets you charge for a ticket. Getvnt charges zero platform fees on ticket sales either way.',
             ],
             [
-                'q' => 'Can Event Schedule refund my ticket?',
-                'a' => 'No, because the money never passed through us. Ticket sales settle into the organizer\'s own Stripe or PayPal account, so ask the schedule you bought from: they can refund a Stripe or PayPal sale in full or in part from their Sales page, and it goes back through the same provider. A ticket paid any other way, in cash or through a payment link for example, is settled between you and them. Event Schedule does not email you when a refund goes through, so their reply is your confirmation.',
+                'q' => 'Can Getvnt refund my ticket?',
+                'a' => 'No, because the money never passed through us. Ticket sales settle into the organizer\'s own Stripe or PayPal account, so ask the schedule you bought from: they can refund a Stripe or PayPal sale in full or in part from their Sales page, and it goes back through the same provider. A ticket paid any other way, in cash or through a payment link for example, is settled between you and them. Getvnt does not email you when a refund goes through, so their reply is your confirmation.',
             ],
             [
                 'q' => 'Someone made a page with my name on it. Who do I tell?',
-                'a' => 'Usually nobody: the page itself has the buttons. When an organizer lists a performer or venue who is not on Event Schedule, the app makes a page to credit the date to, and it stays out of search engines until it is claimed. Sign in with the email address on it and Claim this page makes it yours, or This is not me takes it down at once. From any other account, This is not me is recorded for review. If the page carries no contact details at all, ask the schedule that listed you to send an invitation, or write to '.$supportEmail.'.',
+                'a' => 'Usually nobody: the page itself has the buttons. When an organizer lists a performer or venue who is not on Getvnt, the app makes a page to credit the date to, and it stays out of search engines until it is claimed. Sign in with the email address on it and Claim this page makes it yours, or This is not me takes it down at once. From any other account, This is not me is recorded for review. If the page carries no contact details at all, ask the schedule that listed you to send an invitation, or write to '.$supportEmail.'.',
             ],
             [
                 'q' => 'I selfhost. Where do I get help?',
@@ -617,7 +617,7 @@
             ['/faq', 'FAQ', 'The short answers, in one page.'],
             ['/pricing', 'Pricing', 'Free forever, Pro at '.plan_price($proMonthly).' a month.'],
             ['/docs', 'User guide', 'Setup, events, tickets and the API.'],
-            ['/about', 'About', 'Who builds Event Schedule, and why.'],
+            ['/about', 'About', 'Who builds Getvnt, and why.'],
         ];
 
         $dotSections = [
@@ -653,14 +653,14 @@
                             <svg aria-hidden="true" class="es-post-accent h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <span class="es-post-muted text-sm font-medium tracking-wide">Contact Event Schedule</span>
+                            <span class="es-post-muted text-sm font-medium tracking-wide">Contact Getvnt</span>
                         </x-marketing.hero-eyebrow>
                         <span class="es-mask"><span class="es-mask-line">Write to us.</span></span>
                         <span class="es-mask es-mask-2"><span class="es-mask-line"><span class="es-post-accent">Postcard rules apply.</span></span></span>
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-post-muted mb-9 max-w-xl text-lg sm:text-xl">
-                        Short, direct, one address. Email us, start a discussion, or file an issue. Event Schedule is open source, so everything except the email happens in public.
+                        Short, direct, one address. Email us, start a discussion, or file an issue. Getvnt is open source, so everything except the email happens in public.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -682,7 +682,7 @@
                     <div class="es-post-stock noise relative overflow-hidden p-5 sm:p-7">
                         <div class="es-post-head relative z-10 mb-5 flex items-baseline justify-between gap-3 pb-2">
                             <span>Post card</span>
-                            <span>Event Schedule</span>
+                            <span>Getvnt</span>
                         </div>
 
                         <div class="relative z-10 grid gap-6 md:grid-cols-2">
@@ -715,7 +715,7 @@
 
                                 <p class="es-post-tag mb-2">Addressed to</p>
                                 <div class="es-post-addr es-post-ink space-y-2.5">
-                                    <div class="es-post-addr-line font-bold">Event Schedule</div>
+                                    <div class="es-post-addr-line font-bold">Getvnt</div>
                                     <div class="es-post-addr-line">
                                         <a href="mailto:{{ $supportEmail }}" class="es-post-link font-semibold normal-case tracking-normal hover:underline">{{ $supportEmail }}</a>
                                     </div>
@@ -899,7 +899,7 @@
                         <p class="es-post-tag mb-3">Discussions</p>
                         <h3 class="es-post-ink mb-2 text-lg font-bold">Ask, or propose</h3>
                         <p class="es-post-muted text-sm">Have a question or an idea? Start a conversation. It is the easiest way to reach both us and the people already using the thing you are asking about.</p>
-                        <a href="https://github.com/eventschedule/eventschedule/discussions" target="_blank" rel="noopener noreferrer" class="es-post-lit mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold hover:underline">
+                        <a href="https://github.com/Firstet/Getvnt-v2/discussions" target="_blank" rel="noopener noreferrer" class="es-post-lit mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold hover:underline">
                             GitHub Discussions
                             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                         </a>
@@ -908,7 +908,7 @@
                         <p class="es-post-tag mb-3">Issues</p>
                         <h3 class="es-post-ink mb-2 text-lg font-bold">Report a bug</h3>
                         <p class="es-post-muted text-sm">Found something broken? Open an issue and we will look into it. Because the tracker is public, you can watch the fix land instead of wondering.</p>
-                        <a href="https://github.com/eventschedule/eventschedule/issues" target="_blank" rel="noopener noreferrer" class="es-post-lit mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold hover:underline">
+                        <a href="https://github.com/Firstet/Getvnt-v2/issues" target="_blank" rel="noopener noreferrer" class="es-post-lit mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold hover:underline">
                             GitHub Issues
                             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                         </a>
@@ -1126,7 +1126,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-post-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

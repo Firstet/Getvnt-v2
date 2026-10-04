@@ -644,7 +644,7 @@ class CuratorSourcesTest extends TestCase
 
     /**
      * The realistic shape: the curator belongs to SOMEBODY ELSE, so it is not in the venue
-     * owner's availableEventSchedules() and never appears on their schedules tab.
+     * owner's availableGetvnts() and never appears on their schedules tab.
      *
      * saveEvent's preservation loop appends such attached-but-invisible schedules to
      * $selectedCurators so a save cannot silently detach them, and syncCuratorSources() then read

@@ -11,7 +11,7 @@ use Tests\TestCase;
  * Wallet passes are opt-in per INSTALL: GoogleWalletService::isConfigured() gates every badge, the
  * route handler and the confirmation email, and with GOOGLE_WALLET_* unset none of them appear.
  * These eight pages used to describe the button as a plain fact regardless, so a production app
- * spec without the keys - which is how eventschedule.com shipped it - meant eight pages promising
+ * spec without the keys - which is how getvnt.com shipped it - meant eight pages promising
  * something no buyer could find. Each claim now reads the same predicate, the way the privacy
  * page's processor register already did.
  *

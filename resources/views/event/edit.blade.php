@@ -1494,7 +1494,7 @@
                                 {{ __('messages.agenda') }}
                             </a>
                             @php
-                                $schedulesForNav = $user->availableEventSchedules();
+                                $schedulesForNav = $user->availableGetvnts();
                                 $schedulesForNav = $schedulesForNav->filter(function($schedule) use ($subdomain) {
                                     return $schedule->subdomain !== $subdomain;
                                 });
@@ -4606,7 +4606,7 @@
                 </div>
 
                 @php
-                    $schedules = $user->availableEventSchedules();
+                    $schedules = $user->availableGetvnts();
                     $schedules = $schedules->filter(function($schedule) use ($subdomain) {
                         return $schedule->subdomain !== $subdomain;
                     });

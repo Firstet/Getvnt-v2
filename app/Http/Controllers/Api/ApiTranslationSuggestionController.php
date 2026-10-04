@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
 /**
- * Public intake endpoint on the nexus app (eventschedule.com) for translation
+ * Public intake endpoint on the nexus app (getvnt.com) for translation
  * improvements shared by other installs. Anonymous by design: submissions
  * carry a self-issued instance UUID and translation strings, nothing else.
  * Suggestions are inert data until an admin reviews and approves them.

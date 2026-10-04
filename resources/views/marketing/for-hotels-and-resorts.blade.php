@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Hotels & Resorts"
+        name="Getvnt for Hotels & Resorts"
         description="Put the week of guest activities on a page with your property's name on it, print the link on the key-card sleeve, and let guests read the card without asking the desk."
         audience="Hotels & Resorts"
         keywords="hotel activity calendar, resort event schedule, guest activity management, hotel entertainment calendar, free hotel scheduling" />
@@ -622,8 +622,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for hotels and resorts?',
-                'a' => 'Yes. The activity page and its link, the QR code, standing activities that repeat on chosen days of the week, date exceptions, sub-schedules, free sign-ups with a capacity and a waitlist when they fill, the embeddable calendar, two-way Google, Outlook and CalDAV sync and built-in analytics are all free forever. Newsletters are on the free plan too, at 10 emails a month counted per recipient, which Pro raises to 100 and Enterprise to 1,000. Putting a price on an experience is where Pro starts, at '.plan_price($proMonthly).' a month, and it brings the rest of the desk kit with it: promo codes, passes, a waitlist for sold-out tickets, add-ons and the live check-in dashboard. Event Schedule charges zero platform fees on sales, on every plan.',
+                'q' => 'Is Getvnt free for hotels and resorts?',
+                'a' => 'Yes. The activity page and its link, the QR code, standing activities that repeat on chosen days of the week, date exceptions, sub-schedules, free sign-ups with a capacity and a waitlist when they fill, the embeddable calendar, two-way Google, Outlook and CalDAV sync and built-in analytics are all free forever. Newsletters are on the free plan too, at 10 emails a month counted per recipient, which Pro raises to 100 and Enterprise to 1,000. Putting a price on an experience is where Pro starts, at '.plan_price($proMonthly).' a month, and it brings the rest of the desk kit with it: promo codes, passes, a waitlist for sold-out tickets, add-ons and the live check-in dashboard. Getvnt charges zero platform fees on sales, on every plan.',
             ],
             [
                 'q' => 'How do guests find out what is on during their stay?',
@@ -639,7 +639,7 @@
             ],
             [
                 'q' => 'Can I refund a guest who cancels a paid experience?',
-                'a' => 'Yes, on Pro, from the Sales page, in full or in part. A Stripe or PayPal payment goes back to the guest through that provider before the sale is marked refunded, and a partial refund leaves the booking valid. A full refund returns the place, so a seat at the cellar dinner can be sold again. A payment taken at the desk, by payment link or any other way shows Mark as Refunded, which records it without moving money. Event Schedule does not email the guest about a refund, so the desk should.',
+                'a' => 'Yes, on Pro, from the Sales page, in full or in part. A Stripe or PayPal payment goes back to the guest through that provider before the sale is marked refunded, and a partial refund leaves the booking valid. A full refund returns the place, so a seat at the cellar dinner can be sold again. A payment taken at the desk, by payment link or any other way shows Mark as Refunded, which records it without moving money. Getvnt does not email the guest about a refund, so the desk should.',
             ],
             [
                 'q' => 'Can guests ask to hear when tickets for a special dinner go on sale?',
@@ -751,7 +751,7 @@
 
                         <div class="es-conc-stock-hair mt-4" aria-hidden="true"></div>
 
-                        <p class="es-conc-stock-muted es-conc-num es-conc-fine mt-3">lanternbay.eventschedule.com</p>
+                        <p class="es-conc-stock-muted es-conc-num es-conc-fine mt-3">lanternbay.getvnt.com</p>
                     </div>
 
                     <p class="es-conc-muted mx-auto mt-5 max-w-sm text-xs">
@@ -973,7 +973,7 @@
 
                         <div class="es-conc-stock-rule mt-5" aria-hidden="true"></div>
 
-                        <p class="es-conc-stock-ink es-conc-num mt-4 break-all text-sm font-semibold">lanternbay.eventschedule.com</p>
+                        <p class="es-conc-stock-ink es-conc-num mt-4 break-all text-sm font-semibold">lanternbay.getvnt.com</p>
                         <p class="es-conc-stock-muted mt-3 text-xs">
                             One address for the whole property. It is the same page the desk reads
                             from, so nobody is working off two versions of Tuesday.
@@ -1042,7 +1042,7 @@
             <div class="mt-4 grid gap-4 md:grid-cols-3" data-reveal-group="90">
                 @foreach ([
                     ['Counted for each date', 'Free', 'A full Tuesday does not close Thursday. Every date keeps its own count, which is the only way a standing activity with a limit can work at all.'],
-                    ['A ticket for the paid ones', 'Pro', 'Named ticket types with their own prices and quantities, QR scanning at the door, and payment through your own Stripe or PayPal account, a payment link or cash at the desk. Event Schedule takes nothing from the ticket price on any plan. Charging for a place is the Pro half; keeping one is not.'],
+                    ['A ticket for the paid ones', 'Pro', 'Named ticket types with their own prices and quantities, QR scanning at the door, and payment through your own Stripe or PayPal account, a payment link or cash at the desk. Getvnt takes nothing from the ticket price on any plan. Charging for a place is the Pro half; keeping one is not.'],
                     ['A rate for people staying with you', 'Pro', 'A promo code carries a resident rate that the desk can hand out. Nothing is verifying who is a guest, so the code is what does it.'],
                 ] as [$kTitle, $kPlan, $kDesc])
                     <div class="es-conc-card es-conc-hover p-6" data-reveal>
@@ -1390,7 +1390,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-conc-card es-conc-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-conc-muted text-sm">Event Schedule for</div>
+                            <div class="es-conc-muted text-sm">Getvnt for</div>
                             <div class="es-conc-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-conc-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1469,7 +1469,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-property" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-conc-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

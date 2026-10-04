@@ -84,7 +84,7 @@ When a buyer taps the button, and only then, the app sends Google:
 - the ticket type, any seat labels, and the number of guests when a ticket admits more than one
 - the event's ticket notes, truncated to 200 characters
 - the schedule's name and accent colour, the event's public URL and, when `APP_URL` is publicly
-  reachable over https, the URLs of the schedule's profile image (the Event Schedule logo when it
+  reachable over https, the URLs of the schedule's profile image (the Getvnt logo when it
   has none) and the event's image
 - the venue's coordinates, when it has them, so Google can notify the attendee when they come
   within its own radius of the venue. Coordinates come from geocoding, which only runs when
@@ -145,8 +145,8 @@ to a file and that the JSON decodes with both keys.
 
 **The pass saves for you but not for anyone else.** The issuer is still in demo mode; see step 5.
 
-**The pass shows the Event Schedule logo, or old branding.** The pass logo is the schedule's
-profile image, and the Event Schedule logo stands in when the schedule has none, so give the
+**The pass shows the Getvnt logo, or old branding.** The pass logo is the schedule's
+profile image, and the Getvnt logo stands in when the schedule has none, so give the
 schedule a profile image. Branding is written into an occurrence's pass class once, so a change
 reaches only occurrences nobody has saved a pass for yet.
 

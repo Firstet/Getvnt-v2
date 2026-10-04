@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Accesibilitate - Event Schedule',
-    'meta_description' => 'Declarație de accesibilitate și opțiuni de afișare pentru Event Schedule.',
+    'page_title' => 'Accesibilitate - Getvnt',
+    'meta_description' => 'Declarație de accesibilitate și opțiuni de afișare pentru Getvnt.',
     'breadcrumb' => 'Accesibilitate',
 
     'h1' => 'Declarație de accesibilitate',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Această pagină este informație generală de serviciu, nu sfat juridic. Legile diferă după țară. Confirmați obligațiile cu un consilier calificat.',
 
     'section_scope_title' => 'Domeniu de aplicare',
-    'section_scope_body' => 'Declarația acoperă site-ul de marketing și aplicația web Event Schedule (instrumente autentificate și pagini publice de calendar) pe domeniul principal și subdomeniile Event Schedule, dacă nu se prevede altfel.',
+    'section_scope_body' => 'Declarația acoperă site-ul de marketing și aplicația web Getvnt (instrumente autentificate și pagini publice de calendar) pe domeniul principal și subdomeniile Getvnt, dacă nu se prevede altfel.',
 
     'section_commitment_title' => 'Angajament',
-    'section_commitment_body' => 'Lucrăm pentru a face Event Schedule utilizabil de persoane cu dizabilități. Ne propunem o aliniere mai bună la WCAG, documentată ca :wcag_target, și respectarea orientărilor legate de standardul israelian 5568 acolo unde se aplică.',
+    'section_commitment_body' => 'Lucrăm pentru a face Getvnt utilizabil de persoane cu dizabilități. Ne propunem o aliniere mai bună la WCAG, documentată ca :wcag_target, și respectarea orientărilor legate de standardul israelian 5568 acolo unde se aplică.',
 
     'section_commitment_is5568_note' => 'Luăm în calcul și practicile obișnuite de accesibilitate web asociate standardului israelian 5568 acolo unde se aplică serviciilor pe care le operăm.',
 

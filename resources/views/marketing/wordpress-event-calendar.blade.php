@@ -3,14 +3,14 @@
     <x-slot name="description">Add a WordPress event calendar with one Custom HTML block: step-by-step embed code, free RSVP, ticket forms on Pro, and nothing to install, update or patch.</x-slot>
     <x-slot name="breadcrumbTitle">WordPress Event Calendar</x-slot>
 
-    {{-- There is no Event Schedule WordPress plugin, in this repo or anywhere else, and this page
+    {{-- There is no Getvnt WordPress plugin, in this repo or anywhere else, and this page
          must never imply one. What it teaches is the iframe embed, which works on any WordPress
          site that allows the tag.
 
          The steps are read off the code, not the other pages:
          - The schedule snippet is components/embed-modal.blade.php: Actions > Embed Schedule, a
            Layout picker, and '<iframe src="...?embed=true" width="100%" height="800"
-           frameborder="0" style="border: none;"></iframe>', plus a "Powered by Event Schedule"
+           frameborder="0" style="border: none;"></iframe>', plus a "Powered by Getvnt"
            line OUTSIDE the frame when Role::showBranding() (a Free hosted schedule).
          - The event snippet is components/embed-ticket-modal.blade.php: the event URL plus
            ?tickets=true&embed=true or ?rsvp=true&embed=true. The editor's link to it is Pro-only
@@ -32,21 +32,21 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Event Calendar for WordPress"
+        name="Getvnt - Event Calendar for WordPress"
         description="A hosted event calendar you add to any WordPress page with a Custom HTML block: an embedded month calendar or list, an embeddable registration or ticket form, and no plugin to install or update." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to add an event calendar to a WordPress site",
-        "description": "Copy the embed code from Event Schedule and paste it into a Custom HTML block in WordPress.",
+        "description": "Copy the embed code from Getvnt and paste it into a Custom HTML block in WordPress.",
         "totalTime": "PT10M",
         "step": [
             {
                 "@type": "HowToStep",
                 "position": 1,
                 "name": "Create your schedule",
-                "text": "Sign up for Event Schedule, create a schedule and add your events, by hand or by pasting an announcement or a flyer into the AI importer."
+                "text": "Sign up for Getvnt, create a schedule and add your events, by hand or by pasting an announcement or a flyer into the AI importer."
             },
             {
                 "@type": "HowToStep",
@@ -242,7 +242,7 @@
                             One block. <span class="es-wp-accent">Nothing to update.</span>
                         </h1>
                         <p class="es-wp-muted mt-6 text-lg" data-reveal style="--reveal-delay: 0.1s;">
-                            Keep your events on Event Schedule and show them on your WordPress site with a single Custom HTML block. There is no plugin to install, no database tables added to your site and no update that breaks your theme. Change an event once and your site shows it straight away.
+                            Keep your events on Getvnt and show them on your WordPress site with a single Custom HTML block. There is no plugin to install, no database tables added to your site and no update that breaks your theme. Change an event once and your site shows it straight away.
                         </p>
                         <div class="mt-8 flex flex-wrap gap-3" data-reveal style="--reveal-delay: 0.15s;">
                             <a href="{{ app_url('/sign_up') }}" class="inline-flex items-center gap-2 rounded-xl bg-[#075985] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#0c4a6e]">
@@ -268,7 +268,7 @@
   width=<span class="s">"100%"</span> height=<span class="s">"800"</span>
   frameborder=<span class="s">"0"</span> style=<span class="s">"border: none;"</span><span class="k">&gt;&lt;/iframe&gt;</span></pre>
                             <p class="es-wp-editor-muted mt-4 text-xs leading-relaxed">
-                                Copied from Event Schedule, pasted here, published. The frame loads your live calendar every time the page is viewed.
+                                Copied from Getvnt, pasted here, published. The frame loads your live calendar every time the page is viewed.
                             </p>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                         ['Create your schedule and add events', 'Sign up and create a schedule for your venue, group or organization. Add events by hand, set weekly or monthly ones to repeat, or paste an announcement or drop a flyer into the AI importer and check what it fills in. If your events already live in Google Calendar or Outlook, two-way sync brings them across.'],
                         ['Copy the embed code', 'In the admin panel, open the Actions menu and choose Embed Schedule. Pick a layout: leave it on your schedule\'s default, or pin this frame to the month Calendar or the List. The preview reloads as you choose. Then press the copy button beside Iframe Code.'],
                         ['Paste it into a Custom HTML block', 'In WordPress, edit the page that should show your events, such as Events or What\'s On. Press the plus button, search for Custom HTML, add the block and paste the code into it. In the classic editor, switch to the Text tab first, because the Visual tab escapes the code instead of running it.'],
-                        ['Preview, then publish', 'Switch the block to Preview, or preview the page, to see your calendar in place. If the frame shows a scrollbar, raise the height number in the code, for example to 1000. Then press Update or Publish. From now on, you edit events on Event Schedule and never touch this block again.'],
+                        ['Preview, then publish', 'Switch the block to Preview, or preview the page, to see your calendar in place. If the frame shows a scrollbar, raise the height number in the code, for example to 1000. Then press Update or Publish. From now on, you edit events on Getvnt and never touch this block again.'],
                     ];
                 @endphp
                 <ol class="space-y-4" data-reveal-group="80">
@@ -357,7 +357,7 @@
                 <div class="es-wp-panel mt-8 p-6" data-reveal="panel">
                     <h3 class="es-wp-ink text-base font-bold">What visitors get inside the frame</h3>
                     <p class="es-wp-muted mt-2 text-sm leading-relaxed">
-                        Your events only, with no header, footer or ads. Clicking an event opens its full page in a new tab, with the details, the map, add-to-calendar and the Register or Buy button, so your WordPress page stays open behind it. On a Free schedule the copied code adds a small "Powered by Event Schedule" line under the frame, outside it, where you can see and delete it; <x-link href="{{ marketing_url('/features/white-label') }}">removing our branding</x-link> from your pages is part of Pro. The full list of options is in the <x-link href="{{ marketing_url('/docs/sharing') }}#embed-parameters">embedding guide</x-link>.
+                        Your events only, with no header, footer or ads. Clicking an event opens its full page in a new tab, with the details, the map, add-to-calendar and the Register or Buy button, so your WordPress page stays open behind it. On a Free schedule the copied code adds a small "Powered by Getvnt" line under the frame, outside it, where you can see and delete it; <x-link href="{{ marketing_url('/features/white-label') }}">removing our branding</x-link> from your pages is part of Pro. The full list of options is in the <x-link href="{{ marketing_url('/docs/sharing') }}#embed-parameters">embedding guide</x-link>.
                     </p>
                 </div>
             </div>
@@ -384,7 +384,7 @@
                         <p class="es-wp-tag">Free on every plan</p>
                         <h3 class="es-wp-ink mt-2 text-base font-bold">The registration form</h3>
                         <p class="es-wp-muted mt-2 text-sm leading-relaxed">
-                            Turn on <x-link href="{{ marketing_url('/features/registration') }}">free registration</x-link> for the event, open its page on Event Schedule, and copy its address. Add <code dir="ltr">?rsvp=true&amp;embed=true</code> to the end and use it as the src of the same kind of iframe, in a Custom HTML block on your event's WordPress page. Guests register inside the frame and get their confirmation and QR code by email.
+                            Turn on <x-link href="{{ marketing_url('/features/registration') }}">free registration</x-link> for the event, open its page on Getvnt, and copy its address. Add <code dir="ltr">?rsvp=true&amp;embed=true</code> to the end and use it as the src of the same kind of iframe, in a Custom HTML block on your event's WordPress page. Guests register inside the frame and get their confirmation and QR code by email.
                         </p>
                         <pre class="es-wp-code mt-4 p-4" dir="ltr"><span class="k">&lt;iframe</span> src=<span class="s">"…/your-event?rsvp=true&amp;embed=true"</span>
   width=<span class="s">"100%"</span> height=<span class="s">"700"</span> style=<span class="s">"border: none;"</span><span class="k">&gt;&lt;/iframe&gt;</span></pre>
@@ -473,7 +473,7 @@
                     $wpFixes = [
                         ['The block saved, but the calendar vanished', 'WordPress strips iframe code from users without the "unfiltered HTML" permission. On a normal site that means Administrators and Editors can embed it and Authors and Contributors cannot; on a multisite network only a Super Admin can. Ask someone with that role to paste the code.'],
                         ['It is a WordPress.com site', 'WordPress.com keeps iframe code only on a paid plan with its hosting features switched on. On other plans, link to your schedule\'s page from a button or menu item instead, which works on every plan.'],
-                        ['The frame is blank or refused', 'Almost always a missing ?embed=true. Every other Event Schedule address refuses to load inside a frame, so copy the code from the Embed Schedule dialog rather than your browser\'s address bar. A security plugin that restricts which sites may be framed can do the same.'],
+                        ['The frame is blank or refused', 'Almost always a missing ?embed=true. Every other Getvnt address refuses to load inside a frame, so copy the code from the Embed Schedule dialog rather than your browser\'s address bar. A security plugin that restricts which sites may be framed can do the same.'],
                         ['It is cut off or shows a scrollbar', 'The frame has the height written in the code and does not resize itself. Raise the height, for example from 800 to 1000, and keep the width at 100% so it fills the column on phones as well.'],
                     ];
                 @endphp
@@ -495,16 +495,16 @@
         <!-- ============================================================ -->
         @php
             $wordpressFaqs = [
-                ['q' => 'Is there an Event Schedule WordPress plugin?', 'a' => 'No, and you do not need one. The calendar goes onto a WordPress page with the embed code from Event Schedule, pasted into a Custom HTML block. Because nothing is installed on your site, there is nothing to update or keep compatible.'],
-                ['q' => 'How do I add an event calendar to a WordPress page?', 'a' => 'In Event Schedule, open the Actions menu, choose Embed Schedule and copy the Iframe Code. In WordPress, edit the page, add a Custom HTML block, paste the code and publish. In the classic editor, paste it on the Text tab.', 'link' => [marketing_url('/docs/sharing').'#embed', 'Embedding in the guide']],
-                ['q' => 'Is it free?', 'a' => 'Yes. Embedding the calendar is free on every plan, and so is embedding a registration form for a free event. On a Free schedule the copied code includes a small "Powered by Event Schedule" line under the frame. Selling priced tickets and the ticket widget are on the Pro plan.'],
+                ['q' => 'Is there an Getvnt WordPress plugin?', 'a' => 'No, and you do not need one. The calendar goes onto a WordPress page with the embed code from Getvnt, pasted into a Custom HTML block. Because nothing is installed on your site, there is nothing to update or keep compatible.'],
+                ['q' => 'How do I add an event calendar to a WordPress page?', 'a' => 'In Getvnt, open the Actions menu, choose Embed Schedule and copy the Iframe Code. In WordPress, edit the page, add a Custom HTML block, paste the code and publish. In the classic editor, paste it on the Text tab.', 'link' => [marketing_url('/docs/sharing').'#embed', 'Embedding in the guide']],
+                ['q' => 'Is it free?', 'a' => 'Yes. Embedding the calendar is free on every plan, and so is embedding a registration form for a free event. On a Free schedule the copied code includes a small "Powered by Getvnt" line under the frame. Selling priced tickets and the ticket widget are on the Pro plan.'],
                 ['q' => 'Will the calendar update on my site automatically?', 'a' => 'Yes. The frame loads your schedule live every time the page is viewed, so an event you add, move or cancel is right on your WordPress page at once. You never paste the code a second time.'],
                 ['q' => 'Why did my iframe disappear after I saved the page?', 'a' => 'WordPress removes iframe code for users who lack the unfiltered HTML permission, which on a single site means anyone below Editor, and on a multisite network anyone who is not a Super Admin. Have an Administrator paste it. On WordPress.com, iframe code needs a paid plan with hosting features active.'],
                 ['q' => 'Can I show a calendar in the sidebar or footer?', 'a' => 'Yes. Add a Custom HTML widget, or a Custom HTML block in the site editor, and paste the same code with a smaller height. Add layout=list to the address, since a narrow frame shows the list-style agenda anyway.'],
                 ['q' => 'Can people register or buy tickets without leaving my site?', 'a' => 'Registration, yes, on every plan: add ?rsvp=true&embed=true to an event\'s address and embed it. The ticket widget is Pro. Buyers choose tickets in the frame, and online payments open in the full window before returning them to their ticket.'],
                 ['q' => 'Does it work with Elementor, Divi or other page builders?', 'a' => 'Anything that accepts an HTML or code element can hold the embed, because it is a standard iframe tag. Add that element where the calendar should go and paste the code into it.'],
                 ['q' => 'Will it match my theme?', 'a' => 'The frame takes its colours, background and font from your schedule\'s style settings, which you can set to suit your site, and dark=true forces dark mode. Custom CSS on the Pro plan applies inside the frame too.'],
-                ['q' => 'How does this compare with The Events Calendar plugin?', 'a' => 'The Events Calendar runs inside WordPress and stores events as posts. Event Schedule runs outside it and is embedded, with registration, ticketing and two-way calendar sync built in. The full comparison is on our page for The Events Calendar alternative.', 'link' => [marketing_url('/the-events-calendar-alternative'), 'See the comparison']],
+                ['q' => 'How does this compare with The Events Calendar plugin?', 'a' => 'The Events Calendar runs inside WordPress and stores events as posts. Getvnt runs outside it and is embedded, with registration, ticketing and two-way calendar sync built in. The full comparison is on our page for The Events Calendar alternative.', 'link' => [marketing_url('/the-events-calendar-alternative'), 'See the comparison']],
             ];
         @endphp
         <section id="faq" class="es-wp-rule scroll-mt-24 py-20 lg:py-28">
@@ -555,7 +555,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-site" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#0b1620] transition-colors hover:bg-gray-100">
                                 Get Started Free

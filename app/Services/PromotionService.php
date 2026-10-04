@@ -39,7 +39,7 @@ class PromotionService
      *
      *   - off-hosted, actualPlanTier() returns 'enterprise', so there is no free tier and
      *     therefore no inventory;
-     *   - on the nexus, showAds() returns false outright because eventschedule.com stays ad-free.
+     *   - on the nexus, showAds() returns false outright because getvnt.com stays ad-free.
      *
      * Selling has to be gated on exactly the same conditions as serving. Without the nexus check
      * a Pro schedule there would see a healthy inventory estimate, prepay, go active, and then

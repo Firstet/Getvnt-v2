@@ -10,7 +10,7 @@
         ['term' => 'Sub-schedule', 'def' => 'A category for events inside one schedule, such as Live Music, Comedy or Workshops. Each one has its own color and its own URL, and visitors can filter by it. It organizes and color-codes only: it cannot hide an event.'],
         ['term' => 'Event', 'def' => 'A single occurrence with a date, time, location and details. An event belongs to a schedule and can repeat daily, weekly, every few weeks, monthly or yearly, with dates you add or skip.'],
         ['term' => 'Request', 'def' => 'An event waiting for your approval: one a visitor submitted from your public request page, or one another schedule added you to. Requests sit on the Requests tab until you accept or decline them, and you can opt in to an email when new ones land.'],
-        ['term' => 'Unclaimed page', 'def' => 'A schedule page created for a performer or venue you name on an event before they are on Event Schedule. It says who created it, credits each date to the schedule that added it, and stays out of search engines. The person it names claims it with an account on the email address or phone number it lists, and becomes its owner.'],
+        ['term' => 'Unclaimed page', 'def' => 'A schedule page created for a performer or venue you name on an event before they are on Getvnt. It says who created it, credits each date to the schedule that added it, and stays out of search engines. The person it names claims it with an account on the email address or phone number it lists, and becomes its owner.'],
         ['term' => 'Ticket', 'def' => 'A ticket type on an event, such as General or VIP. Buyers pay through your own Stripe or PayPal account (or Payfast, Invoice Ninja, a payment link or cash), with no platform fees on any plan. A ticket type that carries a price needs Pro; one priced at zero sells on every plan.'],
         ['term' => 'RSVP', 'def' => 'Free sign-up for an event, with an optional capacity limit per date. Available on every plan, and no payment account is needed.'],
         ['term' => 'Follower', 'def' => 'Someone with an account who follows your schedule, which shares their name and email with you. Pressing Follow on its own reaches an account follower only through a newsletter you send; the automatic digest goes to people who asked for email updates (see Subscriber).'],
@@ -30,7 +30,7 @@
             'route' => 'marketing.docs.selfhost',
             'icon' => 'server',
             'title' => 'Selfhost Installation',
-            'lede' => 'Run Event Schedule on your own server. A selfhosted install resolves to Enterprise, so no plan gate applies.',
+            'lede' => 'Run Getvnt on your own server. A selfhosted install resolves to Enterprise, so no plan gate applies.',
             'links' => ['Requirements and installation', 'Stripe payments and calendar sync', 'Email, AI and boost setup', 'Admin panel, federation, accessibility'],
             'cta' => 'View selfhost docs',
             'chip' => 'bg-sky-100 dark:bg-sky-500/15',
@@ -45,7 +45,7 @@
             'route' => 'marketing.docs.saas.setup',
             'icon' => 'cloud',
             'title' => 'SaaS Platform',
-            'lede' => 'Run Event Schedule as a multi-tenant SaaS with subdomains, plans and per-tenant custom domains.',
+            'lede' => 'Run Getvnt as a multi-tenant SaaS with subdomains, plans and per-tenant custom domains.',
             'links' => ['Multi-tenant setup', 'Custom domains with automatic SSL', 'Twilio phone verification', 'Federation, ads and promotions'],
             'cta' => 'View SaaS docs',
             'chip' => 'bg-cyan-100 dark:bg-cyan-500/15',
@@ -60,7 +60,7 @@
             'route' => 'marketing.docs.developer.api',
             'icon' => 'code',
             'title' => 'Developer',
-            'lede' => 'Drive Event Schedule from your own code over REST. API access is a Pro feature, on reads as well as writes.',
+            'lede' => 'Drive Getvnt from your own code over REST. API access is a Pro feature, on reads as well as writes.',
             'links' => ['REST API reference', 'API keys and rate limits', 'HMAC-signed webhooks', 'Sale, event and check-in payloads'],
             'cta' => 'Explore the API',
             'chip' => 'bg-emerald-100 dark:bg-emerald-500/15',
@@ -80,9 +80,9 @@
 @endphp
 
 <x-marketing-layout :docs="true">
-    <x-slot name="title">Event Schedule Documentation: User Guide, Selfhost, API</x-slot>
+    <x-slot name="title">Getvnt Documentation: User Guide, Selfhost, API</x-slot>
     <x-slot name="breadcrumbTitle">Documentation</x-slot>
-    <x-slot name="description">Guides for running your schedule on Event Schedule: events, tickets, subscribers and sharing, plus selfhost installation, SaaS operations and the REST API.</x-slot>
+    <x-slot name="description">Guides for running your schedule on Getvnt: events, tickets, subscribers and sharing, plus selfhost installation, SaaS operations and the REST API.</x-slot>
 
     <x-slot name="structuredData">
         {{-- Every other doc page gets its TechArticle from <x-docs-page>. This
@@ -93,8 +93,8 @@
             {!! \App\Utils\SeoUtils::jsonLd([
                 '@context' => 'https://schema.org',
                 '@type' => 'TechArticle',
-                'headline' => 'Event Schedule Documentation',
-                'description' => 'Guides for running your schedule on Event Schedule: events, tickets, subscribers and sharing, plus selfhost installation, SaaS operations and the REST API.',
+                'headline' => 'Getvnt Documentation',
+                'description' => 'Guides for running your schedule on Getvnt: events, tickets, subscribers and sharing, plus selfhost installation, SaaS operations and the REST API.',
                 'author' => \App\Utils\SeoUtils::organizationRef(),
                 'publisher' => \App\Utils\SeoUtils::organization(),
                 'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => url()->current()],
@@ -107,8 +107,8 @@
             {!! \App\Utils\SeoUtils::jsonLd([
                 '@context' => 'https://schema.org',
                 '@type' => 'DefinedTermSet',
-                'name' => 'Event Schedule Glossary',
-                'description' => 'Key terms used throughout Event Schedule',
+                'name' => 'Getvnt Glossary',
+                'description' => 'Key terms used throughout Getvnt',
                 'hasDefinedTerm' => array_map(fn ($g) => [
                     '@type' => 'DefinedTerm',
                     'name' => $g['term'],
@@ -248,7 +248,7 @@
                             {{-- h2, not h3: this is a sibling section of the
                                  surrounding h2s, not a child of one. --}}
                             <h2 class="font-semibold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Quick answers to common questions about Event Schedule.</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Quick answers to common questions about Getvnt.</p>
                         </div>
                         <svg class="ms-auto h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -318,7 +318,7 @@
                 <div class="mb-8" data-reveal>
                     <p class="mb-1 text-xs font-bold uppercase tracking-[0.14em] text-blue-700 dark:text-blue-300">Reference</p>
                     <h2 class="es-balance text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:text-3xl">Glossary</h2>
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Key terms used throughout Event Schedule.</p>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Key terms used throughout Getvnt.</p>
                 </div>
 
                 <dl class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" data-reveal-group="50">
@@ -345,23 +345,23 @@
                             </svg>
                         </span>
                         <h2 class="es-balance mb-3 text-2xl font-bold text-white md:text-3xl">100% open source</h2>
-                        <p class="mx-auto mb-8 max-w-xl text-gray-400">Event Schedule is fully open source. Explore the code, report an issue, or contribute on GitHub.</p>
+                        <p class="mx-auto mb-8 max-w-xl text-gray-400">Getvnt is fully open source. Explore the code, report an issue, or contribute on GitHub.</p>
 
                         <div class="flex flex-wrap justify-center gap-3">
                             {{-- Gradient inline, not from-/to- utilities: white on
                                  --brand-button-bg-light (#5A8DFF) is 3.14, below AA
                                  for this 16px label. These two stops are the WP link
                                  blue and blue-700, at 5.2 and 6.7. --}}
-                            <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer"
                                style="background-image: linear-gradient(to right, #2563eb, #1d4ed8);"
                                class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl">
                                 View on GitHub
                             </a>
-                            <a href="https://github.com/eventschedule/eventschedule/discussions" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/Firstet/Getvnt-v2/discussions" target="_blank" rel="noopener noreferrer"
                                class="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/20">
                                 Discussions
                             </a>
-                            <a href="https://github.com/eventschedule/eventschedule/issues" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/Firstet/Getvnt-v2/issues" target="_blank" rel="noopener noreferrer"
                                class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold text-gray-300 transition-colors hover:text-white">
                                 Report an issue
                             </a>

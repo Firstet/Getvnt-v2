@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Barrierefreiheit - Event Schedule',
-    'meta_description' => 'Barrierefreiheitserklärung und Anzeigeoptionen für Event Schedule.',
+    'page_title' => 'Barrierefreiheit - Getvnt',
+    'meta_description' => 'Barrierefreiheitserklärung und Anzeigeoptionen für Getvnt.',
     'breadcrumb' => 'Barrierefreiheit',
 
     'h1' => 'Barrierefreiheitserklärung',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Diese Seite ist allgemeine Serviceinformation, kein Rechtsrat. Gesetze und Standards unterscheiden sich je nach Land. Bitte verbindliche Pflichten mit qualifizierter Beratung klären.',
 
     'section_scope_title' => 'Geltungsbereich',
-    'section_scope_body' => 'Diese Erklärung gilt für die Marketing-Website und die Event-Schedule-Webanwendung (eingeloggte Tools und öffentliche Terminseiten) unter der Hauptdomain und Subdomains von Event Schedule, sofern nicht anders angegeben.',
+    'section_scope_body' => 'Diese Erklärung gilt für die Marketing-Website und die Event-Schedule-Webanwendung (eingeloggte Tools und öffentliche Terminseiten) unter der Hauptdomain und Subdomains von Getvnt, sofern nicht anders angegeben.',
 
     'section_commitment_title' => 'Verpflichtung',
-    'section_commitment_body' => 'Wir arbeiten daran, Event Schedule für Menschen mit Behinderungen nutzbar zu machen. Wir streben eine bessere Übereinstimmung mit den Web Content Accessibility Guidelines (WCAG) an, dokumentiert als :wcag_target, und beachten gängige Anforderungen im Zusammenhang mit dem israelischen Standard 5568, soweit sie für unsere Dienste gelten.',
+    'section_commitment_body' => 'Wir arbeiten daran, Getvnt für Menschen mit Behinderungen nutzbar zu machen. Wir streben eine bessere Übereinstimmung mit den Web Content Accessibility Guidelines (WCAG) an, dokumentiert als :wcag_target, und beachten gängige Anforderungen im Zusammenhang mit dem israelischen Standard 5568, soweit sie für unsere Dienste gelten.',
 
     'section_commitment_is5568_note' => 'Wir berücksichtigen auch gängige Praxis zur Web-Barrierefreiheit im Zusammenhang mit dem israelischen Standard 5568, soweit sie für unsere Dienste gilt.',
 

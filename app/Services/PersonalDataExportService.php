@@ -74,7 +74,7 @@ class PersonalDataExportService
 
         return [
             'generated_at' => now()->toIso8601String(),
-            'about' => 'Everything Event Schedule holds about this account and its email address. See the privacy policy for what each part is used for and how long it is kept.',
+            'about' => 'Everything Getvnt holds about this account and its email address. See the privacy policy for what each part is used for and how long it is kept.',
             'account' => $this->account($user),
             'schedules' => $this->schedules($user),
             'schedule_transfers' => $this->rows('role_transfers', fn ($q) => $q->where('from_user_id', $user->id)->orWhere('to_user_id', $user->id)->orWhere('to_email', $email),
@@ -203,7 +203,7 @@ class PersonalDataExportService
 
         return $recipients->map(function ($row) use ($clicks) {
             $out = (array) $row;
-            $out['schedule'] = $out['schedule'] ?? 'Event Schedule';
+            $out['schedule'] = $out['schedule'] ?? 'Getvnt';
             $out['links_clicked'] = ($clicks[$row->id] ?? collect())->map(fn ($c) => ['url' => $c->url, 'clicked_at' => $c->clicked_at])->values()->all();
             unset($out['id']);
 
@@ -222,7 +222,7 @@ class PersonalDataExportService
                     ->where('support_conversation_id', $conversation->id)
                     ->orderBy('created_at')
                     ->get(['is_from_admin', 'body', 'created_at'])
-                    ->map(fn ($m) => ['from' => $m->is_from_admin ? 'Event Schedule' : 'you', 'body' => $m->body, 'at' => $m->created_at])
+                    ->map(fn ($m) => ['from' => $m->is_from_admin ? 'Getvnt' : 'you', 'body' => $m->body, 'at' => $m->created_at])
                     ->all();
                 unset($out['id']);
 

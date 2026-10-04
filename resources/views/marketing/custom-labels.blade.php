@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Custom Labels"
+        name="Getvnt Custom Labels"
         description="Rename the built-in labels on your public schedule. Change 'Events' to 'Classes', 'Follow' to 'Subscribe' or 'Free entry' to 'No cover', across 37 labels. Each label keeps a second form for the language your schedule translates into. Pro plan."
         keywords="custom labels, rename events, schedule terminology, label overrides, classes instead of events" />
     </x-slot>
@@ -632,7 +632,7 @@
         $faqs = [
             [
                 'q' => 'What are custom labels?',
-                'a' => 'Custom labels let you rename the built-in words on your public schedule. There are ' . $sheetCount . ' of them, and each one is a string Event Schedule prints for you rather than something you typed: "Events", "Venue", "Follow", "Free entry", "Back to Schedule" and so on. Override "Events" with "Classes" and every place that label prints reads "Classes" instead.',
+                'a' => 'Custom labels let you rename the built-in words on your public schedule. There are ' . $sheetCount . ' of them, and each one is a string Getvnt prints for you rather than something you typed: "Events", "Venue", "Follow", "Free entry", "Back to Schedule" and so on. Override "Events" with "Classes" and every place that label prints reads "Classes" instead.',
             ],
             [
                 'q' => 'Which labels can I rename?',
@@ -648,7 +648,7 @@
             ],
             [
                 'q' => 'Do custom labels work with translations?',
-                'a' => 'Each override holds two forms: the wording you typed, and a second form in the language your schedule translates into. If you have a translation language set and an AI key configured, the scheduled translation run fills that second form in for you, and on a schedule written in something other than English there is a field for writing it by hand instead. Be clear on what this is not: it is two forms per label, not a translation of the interface into every supported language. The shipped labels are already translated in all ' . count(config('app.supported_languages', [])) . ' languages Event Schedule speaks, and an override replaces that pair for your schedule.',
+                'a' => 'Each override holds two forms: the wording you typed, and a second form in the language your schedule translates into. If you have a translation language set and an AI key configured, the scheduled translation run fills that second form in for you, and on a schedule written in something other than English there is a field for writing it by hand instead. Be clear on what this is not: it is two forms per label, not a translation of the interface into every supported language. The shipped labels are already translated in all ' . count(config('app.supported_languages', [])) . ' languages Getvnt speaks, and an override replaces that pair for your schedule.',
             ],
             [
                 'q' => 'Can I invent a label that does not exist yet?',
@@ -707,7 +707,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-ren-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        Your visitors do not call them events. They call them classes, services, gigs, openings or sessions. {{ $sheetCount }} of the words Event Schedule prints on your public schedule are yours to rewrite, and rewriting one moves nothing on the page except the word itself.
+                        Your visitors do not call them events. They call them classes, services, gigs, openings or sessions. {{ $sheetCount }} of the words Getvnt prints on your public schedule are yours to rewrite, and rewriting one moves nothing on the page except the word itself.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -926,7 +926,7 @@
                 <div class="es-ren-sheet-wrap" role="region" aria-label="Every renameable label" tabindex="0">
                     <table class="es-ren-sheet">
                         <caption class="es-ren-muted mb-4 text-left text-sm">
-                            Every label you can override, grouped by the surface it appears on. Left is the wording Event Schedule ships in English; right is an example replacement.
+                            Every label you can override, grouped by the surface it appears on. Left is the wording Getvnt ships in English; right is an example replacement.
                         </caption>
                         <thead>
                             <tr>
@@ -1015,7 +1015,7 @@
                         </p>
 
                         <p class="es-ren-muted es-ren-rule border-t pt-4 text-xs">
-                            Two forms, not {{ count(config('app.supported_languages', [])) }}. Event Schedule already ships every built-in label translated in all {{ count(config('app.supported_languages', [])) }} of its languages; an override replaces that pair for your schedule.
+                            Two forms, not {{ count(config('app.supported_languages', [])) }}. Getvnt already ships every built-in label translated in all {{ count(config('app.supported_languages', [])) }} of its languages; an override replaces that pair for your schedule.
                         </p>
                     </div>
                 </div>
@@ -1130,7 +1130,7 @@
                     <div class="es-tilt-inner es-ren-card relative flex h-full flex-col overflow-hidden p-7">
                         <div class="relative z-10">
                             <div class="mb-4 flex flex-wrap items-center gap-2">
-                                <h3 class="es-ren-ink text-xl font-bold">No Event Schedule branding</h3>
+                                <h3 class="es-ren-ink text-xl font-bold">No Getvnt branding</h3>
                                 <span class="es-ren-plan es-ren-plan-neutral">Pro</span>
                             </div>
                             <p class="es-ren-muted">White label removes the "Powered by" credit, so the page carries your words and nobody else's name.</p>
@@ -1181,7 +1181,7 @@
                                 <h3 class="es-ren-ink text-xl font-bold">Pick the language you publish in</h3>
                                 <span class="es-ren-plan">Free</span>
                             </div>
-                            <p class="es-ren-muted mb-4">Set the language your schedule is written in, and optionally a second one to translate into, from the {{ count(config('app.supported_languages', [])) }} Event Schedule speaks. Visitors get a toggle, and your custom labels come along.</p>
+                            <p class="es-ren-muted mb-4">Set the language your schedule is written in, and optionally a second one to translate into, from the {{ count(config('app.supported_languages', [])) }} Getvnt speaks. Visitors get a toggle, and your custom labels come along.</p>
                             <p class="es-ren-muted mt-auto text-sm">
                                 Details are in the schedule guide.
                                 <a href="{{ route('marketing.docs.creating_schedules') }}#customize-custom-labels" class="es-ren-link font-medium hover:underline">Read the Custom Labels guide</a>
@@ -1342,7 +1342,7 @@
                     <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                         <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                             class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                        <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                        <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                     </div>
                     <a href="{{ app_url('/sign_up') }}" class="es-ren-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                         <span class="relative z-10 flex items-center gap-2">

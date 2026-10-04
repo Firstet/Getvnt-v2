@@ -8,7 +8,7 @@ use Illuminate\View\View;
 class MarketingLayout extends Component
 {
     public function __construct(
-        public string $title = 'Event Schedule - The simple way to share your event schedule',
+        public string $title = 'Getvnt - The simple way to share your event schedule',
         public string $description = 'The simple and free way to share your event schedule. Perfect for musicians, venues, event organizers, and vendors.',
         /**
          * Documentation pages set this via <x-docs-page>, which pulls in the

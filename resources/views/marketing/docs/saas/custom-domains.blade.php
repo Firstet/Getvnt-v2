@@ -1,6 +1,6 @@
 <x-docs-page
     key="saas/custom-domains"
-    title="Custom Domains for Tenants: DNS and SSL - Event Schedule"
+    title="Custom Domains for Tenants: DNS and SSL - Getvnt"
     description="Let the schedules on your SaaS deployment use their own domain names, with automatic SSL provisioning through DigitalOcean App Platform."
     lede="Let the schedules on your deployment use their own domain names, with automatic SSL provisioning via DigitalOcean App Platform."
 >
@@ -171,7 +171,7 @@ DO_APP_HOSTNAME=your-app.ondigitalocean.app</code></pre>
         <h3 class="doc-subheading">Direct Mode</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">When an owner saves their domain in Direct mode:</p>
         <ol class="doc-list doc-list-numbered mb-6">
-            <li>The domain is normalized to <code class="doc-inline-code">https://host</code>, its hostname is stored separately for fast lookup, and it is rejected if another schedule already claims it, if the hostname contains <code class="doc-inline-code">eventschedule.com</code>, or if it is your own base domain or one of its subdomains.</li>
+            <li>The domain is normalized to <code class="doc-inline-code">https://host</code>, its hostname is stored separately for fast lookup, and it is rejected if another schedule already claims it, if the hostname contains <code class="doc-inline-code">getvnt.com</code>, or if it is your own base domain or one of its subdomains.</li>
             <li>The hostname is added to your DigitalOcean App Platform app spec over the API, and the schedule's domain status is set to <strong class="text-gray-900 dark:text-white">pending</strong> (or <strong class="text-gray-900 dark:text-white">failed</strong> if the API call did not succeed).</li>
             <li>The owner adds a CNAME record pointing at your app's hostname.</li>
             <li>DigitalOcean verifies the record and provisions an SSL certificate.</li>
@@ -336,7 +336,7 @@ DO_APP_HOSTNAME=your-app.ondigitalocean.app</code></pre>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">"This custom domain is already in use by another schedule"</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">A hostname can belong to one schedule only, and the comparison is on the hostname, so <code class="doc-inline-code">http://</code> and <code class="doc-inline-code">https://</code> forms of the same address collide. Find the other schedule in the admin domains list and remove the domain there first. Separately, any hostname containing <code class="doc-inline-code">eventschedule.com</code>, and your own base domain or any subdomain of it, is refused with "<em>that hostname</em> is reserved and cannot be used as a custom domain". The message names the hostname that was refused, never eventschedule.com, so it reads correctly on your own platform.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">A hostname can belong to one schedule only, and the comparison is on the hostname, so <code class="doc-inline-code">http://</code> and <code class="doc-inline-code">https://</code> forms of the same address collide. Find the other schedule in the admin domains list and remove the domain there first. Separately, any hostname containing <code class="doc-inline-code">getvnt.com</code>, and your own base domain or any subdomain of it, is refused with "<em>that hostname</em> is reserved and cannot be used as a custom domain". The message names the hostname that was refused, never getvnt.com, so it reads correctly on your own platform.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Owner-only actions return 405</h4>

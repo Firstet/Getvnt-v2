@@ -11,7 +11,7 @@ use Tests\Feature\Concerns\CreatesScheduleData;
 use Tests\TestCase;
 
 /**
- * The homepage finale asks for "your-name.eventschedule.com" and offers "Claim it free", and until
+ * The homepage finale asks for "your-name.getvnt.com" and offers "Claim it free", and until
  * now the name was thrown away at the click: the link was a plain /sign_up.
  *
  * initClaim() in resources/js/marketing-home.js now adds ?schedule=<slug> to that link,

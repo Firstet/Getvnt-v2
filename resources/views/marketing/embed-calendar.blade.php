@@ -1,17 +1,17 @@
 <x-marketing-layout>
-    <x-slot name="title">Embed an Event Calendar on Your Website - Event Schedule</x-slot>
+    <x-slot name="title">Embed an Event Calendar on Your Website - Getvnt</x-slot>
     <x-slot name="description">One iframe tag puts your live calendar on the site you already have. It follows the visitor's dark mode, speaks 12 languages, and never needs pasting twice.</x-slot>
     <x-slot name="breadcrumbTitle">Embed Calendar</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Embed Calendar"
+        name="Getvnt Embed Calendar"
         description="One iframe tag puts your live calendar on the site you already have. It follows the visitor's dark mode, speaks 12 languages, and never needs pasting twice." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to embed your Event Schedule calendar on your own website",
+        "name": "How to embed your Getvnt calendar on your own website",
         "description": "Copy one iframe tag out of your schedule, paste it into your page, and leave it alone.",
         "step": [
             {
@@ -30,7 +30,7 @@
                 "@type": "HowToStep",
                 "position": 3,
                 "name": "Leave it alone",
-                "text": "The tag never changes again. Add an event or move a date in Event Schedule and the page on your own site is already correct."
+                "text": "The tag never changes again. Add an event or move a date in Getvnt and the page on your own site is already correct."
             }
         ]
     }
@@ -470,7 +470,7 @@
         // ?layout= is resolved by requested_event_layout() and wins over the stored
         // roles.event_layout in Role::activeEventLayout().
         $knobs = [
-            ['?embed=true', 'required', 'Renders the calendar on its own, with no header, footer or banner around it. It is also the only URL Event Schedule permits another site to frame.'],
+            ['?embed=true', 'required', 'Renders the calendar on its own, with no header, footer or banner around it. It is also the only URL Getvnt permits another site to frame.'],
             ['width', '100%', 'The frame takes the width of whatever column you drop it into.'],
             ['height', '800', 'You choose the height. Nothing measures the calendar and resizes the frame for you.'],
             ['loading', 'lazy', 'Plain HTML, not a product feature: the browser waits until the frame scrolls into view before fetching it.'],
@@ -497,7 +497,7 @@
 
         $staysBehind = [
             ['Your schedule\'s header and footer', 'The frame is the calendar and nothing else. No banner, no navigation, no page chrome.'],
-            ['The "Powered by Event Schedule" footer', 'Never inside the frame. Free schedules get it as a small credit line in the copied code, under the frame, and white-label on Pro removes it.'],
+            ['The "Powered by Getvnt" footer', 'Never inside the frame. Free schedules get it as a small credit line in the copied code, under the frame, and white-label on Pro removes it.'],
             ['Ads', 'A free schedule\'s own public pages can carry them. An embed never does, by design.'],
             ['The language switcher', 'Hidden inside a frame, which is why the language is set in the URL instead.'],
             ['Sign-up and Add to Calendar', 'No email sign-up, no Add to Calendar menu and no "tell me when tickets go on sale" box inside the frame. They are on the event page a click opens in a new tab (the box only where you have switched on the "Notify me" card), along with the link to subscribe to your whole calendar.'],
@@ -669,11 +669,11 @@
                     </div>
 
                     <p class="es-paste-slip-code es-paste-slip-ink">
-                        <span class="es-paste-slip-accent">&lt;iframe</span> <span class="es-paste-slip-dim">src=</span><span class="es-paste-sel">"https://your-schedule.eventschedule.com?embed=true"</span> <span class="es-paste-slip-dim">width=</span>"100%" <span class="es-paste-slip-dim">height=</span>"800" <span class="es-paste-slip-dim">frameborder=</span>"0" <span class="es-paste-slip-dim">style=</span>"border: none;"<span class="es-paste-slip-accent">&gt;&lt;/iframe&gt;</span>
+                        <span class="es-paste-slip-accent">&lt;iframe</span> <span class="es-paste-slip-dim">src=</span><span class="es-paste-sel">"https://your-schedule.getvnt.com?embed=true"</span> <span class="es-paste-slip-dim">width=</span>"100%" <span class="es-paste-slip-dim">height=</span>"800" <span class="es-paste-slip-dim">frameborder=</span>"0" <span class="es-paste-slip-dim">style=</span>"border: none;"<span class="es-paste-slip-accent">&gt;&lt;/iframe&gt;</span>
                     </p>
 
                     <p class="es-paste-slip-code es-paste-slip-dim mt-3">
-                        <span class="es-paste-slip-accent">&lt;p</span> style="font-size: 12px; text-align: right; opacity: 0.6;"<span class="es-paste-slip-accent">&gt;&lt;a</span> href="https://eventschedule.com"<span class="es-paste-slip-accent">&gt;</span>Powered by Event Schedule<span class="es-paste-slip-accent">&lt;/a&gt;&lt;/p&gt;</span>
+                        <span class="es-paste-slip-accent">&lt;p</span> style="font-size: 12px; text-align: right; opacity: 0.6;"<span class="es-paste-slip-accent">&gt;&lt;a</span> href="https://getvnt.com"<span class="es-paste-slip-accent">&gt;</span>Powered by Getvnt<span class="es-paste-slip-accent">&lt;/a&gt;&lt;/p&gt;</span>
                     </p>
 
                     <p class="es-paste-slip-rule es-paste-slip-dim mt-5 pt-4 text-sm leading-relaxed">
@@ -684,7 +684,7 @@
                 <!-- What each part of the line is for. -->
                 <div class="space-y-4" data-reveal-group="90">
                     @foreach ([
-                        ['?embed=true', 'The part that matters. It renders the calendar on its own, and it is the only URL Event Schedule allows another site to frame. Point a plain schedule URL at an iframe and the browser refuses it.'],
+                        ['?embed=true', 'The part that matters. It renders the calendar on its own, and it is the only URL Getvnt allows another site to frame. Point a plain schedule URL at an iframe and the browser refuses it.'],
                         ['width="100%"', 'The frame is as wide as the column you put it in, so it fits a narrow sidebar and a full-bleed section without being told twice.'],
                         ['height="800"', 'Your call, and the one honest limitation on this page: nothing measures the calendar and resizes the frame for you. Give it room, or let it scroll.'],
                         ['frameborder="0"', 'No browser border drawn around it, so the calendar reads as part of your page rather than a window cut into it.'],
@@ -822,7 +822,7 @@
                 <div class="es-paste-slot es-paste-ants overflow-hidden p-1.5">
                     <iframe src="{{ $demoUrl }}?embed=true"
                             width="100%" height="800" loading="lazy"
-                            title="Live demo of an embedded Event Schedule calendar"
+                            title="Live demo of an embedded Getvnt calendar"
                             style="border: none; display: block; border-radius: 6px; background: #ffffff;"></iframe>
                 </div>
                 <div class="mt-3 flex flex-wrap items-center justify-between gap-3 px-1">
@@ -885,7 +885,7 @@
                     The calendar embed is <span class="es-paste-sel">free.</span>
                 </h2>
                 <p class="es-paste-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    There are two embeds in Event Schedule and they are easy to mix up, so here they are side by side.
+                    There are two embeds in Getvnt and they are easy to mix up, so here they are side by side.
                 </p>
             </div>
 
@@ -949,7 +949,7 @@
                 </a>
                 <div class="es-paste-card flex flex-col p-6 md:col-span-2" data-reveal>
                     <h3 class="es-paste-ink mb-1 text-base font-bold">Everything else on the free plan</h3>
-                    <p class="es-paste-muted text-sm leading-relaxed">The calendar itself, two-way Google, Outlook and CalDAV sync, RSVP with a capacity per date, sub-schedules, built-in analytics, 10 newsletter emails a month (each recipient counts as one) and unlimited free registration are all free. Pro adds paid ticket sales, the check-in dashboard, the ticket purchase widget and custom fields. Event Schedule takes zero platform fees on ticket sales, on every plan.</p>
+                    <p class="es-paste-muted text-sm leading-relaxed">The calendar itself, two-way Google, Outlook and CalDAV sync, RSVP with a capacity per date, sub-schedules, built-in analytics, 10 newsletter emails a month (each recipient counts as one) and unlimited free registration are all free. Pro adds paid ticket sales, the check-in dashboard, the ticket purchase widget and custom fields. Getvnt takes zero platform fees on ticket sales, on every plan.</p>
                     <div class="mt-auto pt-4">
                         <x-link href="{{ marketing_url('/pricing') }}">See pricing</x-link>
                     </div>
@@ -1090,7 +1090,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-paste-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

@@ -1,25 +1,25 @@
 <?php
 
 return [
-    'home_title' => 'Event Schedule - Gratis evenementenagenda, tickets en boekingen',
+    'home_title' => 'Getvnt - Gratis evenementenagenda, tickets en boekingen',
     'home_description' => 'Publiceer je evenementen op één agendapagina, verkoop tickets zonder platformkosten en neem afspraken aan. Onbeperkt gratis inschrijven, betaalde tickets zijn Pro.',
 
-    'pricing_title' => 'Prijzen van Event Schedule: gratis plan, geen platformkosten',
+    'pricing_title' => 'Prijzen van Getvnt: gratis plan, geen platformkosten',
     'pricing_description' => 'Begin gratis: onbeperkte evenementen en onbeperkt gratis inschrijven. Betaalde tickets zijn Pro, Enterprise voegt genummerde plaatsen toe. Nooit platformkosten.',
 
     'features_title' => 'Software voor evenementenbeheer: alle functies, zonder platformkosten',
     'features_description' => 'Alle functies in vijf hoofdstukken: tickets via Stripe of PayPal zonder platformkosten, tweerichtingssynchronisatie met je agenda, nieuwsbrieven, AI-import en statistieken.',
 
-    'about_title' => 'Over Event Schedule | Open source platform voor evenementenbeheer',
-    'about_description' => 'Wie Event Schedule bouwt, onder welke licentie het verschijnt, waar de broncode staat en een lijst van wat het niet doet. Open source, zonder platformkosten.',
+    'about_title' => 'Over Getvnt | Open source platform voor evenementenbeheer',
+    'about_description' => 'Wie Getvnt bouwt, onder welke licentie het verschijnt, waar de broncode staat en een lijst van wat het niet doet. Open source, zonder platformkosten.',
 
     'selfhost_title' => 'Zelf gehoste evenementenkalender | Alle functies gratis op je eigen server',
-    'selfhost_description' => 'Host Event Schedule op je eigen server en alle Pro- en Enterprise-functies zijn gratis inbegrepen. Open source, installatie in één klik, geen platformkosten, en je gegevens verlaten nooit je eigen infrastructuur.',
+    'selfhost_description' => 'Host Getvnt op je eigen server en alle Pro- en Enterprise-functies zijn gratis inbegrepen. Open source, installatie in één klik, geen platformkosten, en je gegevens verlaten nooit je eigen infrastructuur.',
 
-    'ticketing_title' => 'Ticketsoftware voor evenementen, zonder platformkosten - Event Schedule',
+    'ticketing_title' => 'Ticketsoftware voor evenementen, zonder platformkosten - Getvnt',
     'ticketing_description' => 'Verkoop tickets vanaf je evenementpagina zonder platformkosten. Betalen met Stripe of PayPal, volledige of gedeeltelijke terugbetaling en QR-check-in per telefoon.',
 
-    'ai_title' => 'AI-evenementimport: van flyer naar evenement | Event Schedule',
+    'ai_title' => 'AI-evenementimport: van flyer naar evenement | Getvnt',
     'ai_description' => 'Plak de tekst of sleep een flyer erin en AI vult de evenementgegevens in: datum, locatie, artiesten, prijs. Gratis in elk abonnement, met vertaling in 12 talen.',
 
     'calendar_sync_title' => 'Tweerichtingsagendasynchronisatie met Google, Outlook en CalDAV',

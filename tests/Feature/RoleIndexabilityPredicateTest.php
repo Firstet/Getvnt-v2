@@ -70,7 +70,7 @@ class RoleIndexabilityPredicateTest extends TestCase
         // Written around the model, whose saving hook lower-cases the address: rows that predate
         // the hook, or that were written around it, still hold the original.
         $mixedCase = $this->createRole($owner(), 'venue');
-        DB::table('roles')->where('id', $mixedCase->id)->update(['email' => 'Contact@EventSchedule.com ']);
+        DB::table('roles')->where('id', $mixedCase->id)->update(['email' => 'Contact@Getvnt.com ']);
         $states['showcase address, other case'] = [$mixedCase->fresh(), false];
 
         return $states;

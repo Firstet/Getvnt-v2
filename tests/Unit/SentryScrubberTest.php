@@ -125,7 +125,7 @@ class SentryScrubberTest extends TestCase
      * Sentry's request integration always stamps url and query_string regardless of
      * send_default_pii. So any exception escaping the cron chain after its auth check would ship a
      * live credential - and for a selfhoster with REPORT_ERRORS=true, ship it to the UPSTREAM
-     * eventschedule.com project rather than their own.
+     * getvnt.com project rather than their own.
      *
      * The bare form is the one that matters: Sentry writes query_string WITHOUT a leading question
      * mark, so a pattern anchored only on [?&] scrubs the url and leaves query_string intact.

@@ -5,15 +5,15 @@
     <meta name="robots" content="noindex, nofollow">
 
     <meta name="description" content="The simple and free way to share your event schedule">
-    <meta property="og:title" content="Event Schedule">
+    <meta property="og:title" content="Getvnt">
     <meta property="og:description" content="The simple and free way to share your event schedule">
     <meta property="og:image" content="{{ asset('images/social/home.jpg') }}">
     <meta property="og:url" content="{{ str_replace('http://', 'https://', request()->url()) }}">
-    <meta property="og:site_name" content="Event Schedule">
-    <meta name="twitter:title" content="Event Schedule">
+    <meta property="og:site_name" content="Getvnt">
+    <meta name="twitter:title" content="Getvnt">
     <meta name="twitter:description" content="The simple and free way to share your event schedule">
     <meta name="twitter:image" content="{{ asset('images/social/home.jpg') }}">
-    <meta name="twitter:image:alt" content="Event Schedule">
+    <meta name="twitter:image:alt" content="Getvnt">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" sizes="32x32">
@@ -26,7 +26,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Event Schedule</title>
+    <title>Getvnt</title>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])

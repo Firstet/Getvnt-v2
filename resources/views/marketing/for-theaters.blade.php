@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Theaters"
+        name="Getvnt for Theaters"
         description="Set a production up once as a run with a day-of-week pattern, dark days and a closing performance, then sell the whole run from one link with zero platform fees."
         audience="Theaters"
         keywords="theater calendar, show run scheduling, season pass, theater ticketing, performance dates, matinee scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a theatrical run online with Event Schedule",
+        "name": "How to put a theatrical run online with Getvnt",
         "description": "Set the run up once and sell the whole thing from one link.",
         "step": [
             {
@@ -347,8 +347,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for theaters?',
-                'a' => 'Yes. Setting a production up as a run, marking dark days, splitting your spaces into sub-schedules, publishing your season and syncing two ways with Google, Outlook or CalDAV are all free forever, as is free registration however many seats go out, and scanning tickets at the door is free on every plan. Putting a price on a seat is what the Pro plan at '.plan_price($proMonthly).' a month opens, and it adds the live check-in dashboard, season passes and custom checkout questions. Event Schedule charges zero platform fees on ticket sales on every plan, the free one included.',
+                'q' => 'Is Getvnt free for theaters?',
+                'a' => 'Yes. Setting a production up as a run, marking dark days, splitting your spaces into sub-schedules, publishing your season and syncing two ways with Google, Outlook or CalDAV are all free forever, as is free registration however many seats go out, and scanning tickets at the door is free on every plan. Putting a price on a seat is what the Pro plan at '.plan_price($proMonthly).' a month opens, and it adds the live check-in dashboard, season passes and custom checkout questions. Getvnt charges zero platform fees on ticket sales on every plan, the free one included.',
             ],
             [
                 'q' => 'How do I set up a multi-week run?',
@@ -744,7 +744,7 @@
             </div>
 
             <p class="es-bill-muted mx-auto mt-8 max-w-2xl text-center text-sm" data-reveal>
-                Pro opens every payment method: take the money through Stripe, PayPal, Invoice Ninja, Payfast (in rand), a payment link or cash at the box office. Event Schedule charges zero platform fees, so past the provider's own processing the money is yours. On Pro, a big booking can be split into <a href="{{ marketing_url('/features/installments') }}" class="es-bill-link font-medium hover:underline">monthly installments</a> by card through Stripe.
+                Pro opens every payment method: take the money through Stripe, PayPal, Invoice Ninja, Payfast (in rand), a payment link or cash at the box office. Getvnt charges zero platform fees, so past the provider's own processing the money is yours. On Pro, a big booking can be split into <a href="{{ marketing_url('/features/installments') }}" class="es-bill-link font-medium hover:underline">monthly installments</a> by card through Stripe.
             </p>
         </div>
     </section>
@@ -1167,7 +1167,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-theater" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-bill-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] dark:text-[#0b110e]">
                             <span class="relative z-10 flex items-center gap-2">

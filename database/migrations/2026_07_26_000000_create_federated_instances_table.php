@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Only populated on the nexus app (eventschedule.com), which registers the
+        // Only populated on the nexus app (getvnt.com), which registers the
         // installs that federate their events to it. Created everywhere for schema
         // consistency, like other nexus-only tables.
         Schema::create('federated_instances', function (Blueprint $table) {

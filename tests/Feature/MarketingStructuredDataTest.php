@@ -73,7 +73,7 @@ class MarketingStructuredDataTest extends TestCase
         // swallowed by the guest portal's catch-all and 302s before this ever runs.
         Route::get(self::QUOTE_FIXTURE_PATH, fn () => Blade::render(<<<'BLADE'
             <x-marketing-layout>
-                <x-slot name="title">Sound &amp; "Vision" - Event Schedule</x-slot>
+                <x-slot name="title">Sound &amp; "Vision" - Getvnt</x-slot>
                 <x-slot name="description">A page whose title carries a double quote.</x-slot>
                 <x-slot name="breadcrumbTitle">Sound &amp; <em>"Vision"</em></x-slot>
                 <p>Body.</p>
@@ -113,7 +113,7 @@ class MarketingStructuredDataTest extends TestCase
         // before it decodes entities, so this survives to the encoder intact - as it should.
         Route::get(self::PLAIN_FIXTURE_PATH, fn () => Blade::render(<<<'BLADE'
             <x-marketing-layout>
-                <x-slot name="title">A Fixture - Event Schedule</x-slot>
+                <x-slot name="title">A Fixture - Getvnt</x-slot>
                 <x-slot name="description">A page used to count the script elements on it.</x-slot>
                 <x-slot name="breadcrumbTitle">Seating Charts</x-slot>
                 <p>Body.</p>
@@ -122,7 +122,7 @@ class MarketingStructuredDataTest extends TestCase
 
         Route::get(self::SCRIPT_FIXTURE_PATH, fn () => Blade::render(<<<'BLADE'
             <x-marketing-layout>
-                <x-slot name="title">A Fixture - Event Schedule</x-slot>
+                <x-slot name="title">A Fixture - Getvnt</x-slot>
                 <x-slot name="description">A page used to count the script elements on it.</x-slot>
                 <x-slot name="breadcrumbTitle">Seating &lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt; Charts</x-slot>
                 <p>Body.</p>
@@ -197,7 +197,7 @@ class MarketingStructuredDataTest extends TestCase
 
             $howTo = $this->nodeOfType($blocks, 'HowTo');
             $this->assertNotNull($howTo, "{$view} lost its HowTo block");
-            $this->assertSame('How to switch from '.$hostile.' to Event Schedule', $howTo['name']);
+            $this->assertSame('How to switch from '.$hostile.' to Getvnt', $howTo['name']);
             $this->assertSame(
                 [
                     ['@type' => 'HowToStep', 'position' => 1, 'name' => $hostile, 'text' => 'Step one for '.$hostile],
@@ -256,7 +256,7 @@ class MarketingStructuredDataTest extends TestCase
     }
 
     /**
-     * The docs <title> ends in " - Event Schedule" so a search result names the site. The
+     * The docs <title> ends in " - Getvnt" so a search result names the site. The
      * TechArticle headline used to copy it whole, so all 39 docs articles ended in the same two
      * words; the publisher already says who wrote them.
      */
@@ -270,7 +270,7 @@ class MarketingStructuredDataTest extends TestCase
 
             $this->assertNotNull($article, "{$path} has no TechArticle");
             $this->assertNotSame('', trim($article['headline']), "{$path} has an empty headline");
-            $this->assertStringEndsNotWith('Event Schedule', $article['headline'], "{$path}: {$article['headline']}");
+            $this->assertStringEndsNotWith('Getvnt', $article['headline'], "{$path}: {$article['headline']}");
             $checked++;
         }
 
@@ -280,8 +280,8 @@ class MarketingStructuredDataTest extends TestCase
     /**
      * One product, described once.
      *
-     * 92 marketing pages each emitted a SoftwareApplication of their own - "Event Schedule for Bars
-     * and Pubs", "Event Schedule - Gift Cards" - with their own offers, so to a crawler the site
+     * 92 marketing pages each emitted a SoftwareApplication of their own - "Getvnt for Bars
+     * and Pubs", "Getvnt - Gift Cards" - with their own offers, so to a crawler the site
      * described 92 different applications, and the replace pages hung an invalid isSimilarTo off
      * theirs. Now the layout emits one node, {site}/#software, from SeoUtils::softwareApplication(),
      * and a page describes itself with a WebPage that is `about` it. Counted recursively, because a

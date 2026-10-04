@@ -8,8 +8,8 @@
     {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Replace Your Event Tools with Event Schedule",
-        "description": "General-purpose tools that Event Schedule can replace for event management.",
+        "name": "Replace Your Event Tools with Getvnt",
+        "description": "General-purpose tools that Getvnt can replace for event management.",
         "url": "{{ config('app.url') }}/replace",
         "numberOfItems": 12,
         "itemListElement": [
@@ -599,12 +599,12 @@
 
         $faqs = [
             [
-                'q' => 'How many tools can Event Schedule actually replace?',
+                'q' => 'How many tools can Getvnt actually replace?',
                 'a' => 'The twelve on this page, for the event-shaped part of what each one was doing. That means registration and ticketing, the schedule page, the flyer, the newsletter, the attendee list, appointment bookings, the door code, polls, feedback and the requests queue. It does not mean everything those products do: read the "what stays on the bench" section, which is deliberately specific about where the belt stops.',
             ],
             [
                 'q' => 'Is one platform really cheaper than five?',
-                'a' => 'Publishing a schedule is free forever, and that free plan already covers the page, unlimited events, two-way Google, Outlook and CalDAV sync, RSVP with a capacity per date and no monthly ceiling on it, scanning at the door, one appointment type, event graphics, built-in analytics, the embeddable calendar and ten newsletter emails a month, each recipient counting as one. Pro is '.plan_price($proMonthly).' a month and is what lets a ticket carry a price, then adds the live check-in dashboard, polls, post-event feedback, more appointment types with paid bookings and the API. Enterprise is '.plan_price($entMonthly).'. Event Schedule charges zero platform fees on ticket sales on every plan, free included, so the door money is yours minus your payment provider\'s processing fee.',
+                'a' => 'Publishing a schedule is free forever, and that free plan already covers the page, unlimited events, two-way Google, Outlook and CalDAV sync, RSVP with a capacity per date and no monthly ceiling on it, scanning at the door, one appointment type, event graphics, built-in analytics, the embeddable calendar and ten newsletter emails a month, each recipient counting as one. Pro is '.plan_price($proMonthly).' a month and is what lets a ticket carry a price, then adds the live check-in dashboard, polls, post-event feedback, more appointment types with paid bookings and the API. Enterprise is '.plan_price($entMonthly).'. Getvnt charges zero platform fees on ticket sales on every plan, free included, so the door money is yours minus your payment provider\'s processing fee.',
             ],
             [
                 'q' => 'Can it take PayPal, and refund a buyer from the same place?',
@@ -615,7 +615,7 @@
                 'a' => 'Two free things on your public pages. On an event page, once you switch on the "Notify me" card, a visitor can leave just an email address under "Tell me when tickets go on sale", or "Tell me if anything changes" once you are selling. They hear when tickets go on sale, if the event is cancelled, and once shortly before it starts, plus any notice you choose to send if the date or venue changes. On the schedule page, the sign-up panel takes an email address, and confirming it sets up an account that follows the schedule. Confirmed subscribers get a digest of the new events you publish, at most one every 72 hours. Neither list counts against the newsletter allowance, which is only spent on newsletters you write.',
             ],
             [
-                'q' => 'What does Event Schedule not replace?',
+                'q' => 'What does Getvnt not replace?',
                 'a' => 'There is no automation or drip-campaign builder, so a nurture sequence stays where it is. There is no blank design canvas: graphics are generated from the event record in fixed layouts. It is not a general website builder, and there is no task board or kanban. Seat maps exist, but only on Enterprise: on the other plans ticket types are priced by the number and buyers are not choosing a specific seat.',
             ],
             [
@@ -628,7 +628,7 @@
             ],
             [
                 'q' => 'What happens to my data if I want out again?',
-                'a' => 'Backup and restore is on the free plan and exports your schedule data, with images if you want them. Pro adds a sales CSV export, a REST API and webhooks. Event Schedule is also open source, so the last resort is to selfhost the whole thing, where every Pro and Enterprise feature is switched on.',
+                'a' => 'Backup and restore is on the free plan and exports your schedule data, with images if you want them. Pro adds a sales CSV export, a REST API and webhooks. Getvnt is also open source, so the last resort is to selfhost the whole thing, where every Pro and Enterprise feature is switched on.',
             ],
         ];
 
@@ -673,7 +673,7 @@
                 </h1>
 
                 <p class="es-fade-up es-d-2 es-belt-muted es-belt-lead mx-auto mb-9 max-w-2xl">
-                    The sign-up form, the flyer, the mailing list, the link in the bio, the spreadsheet, the code on the door. Twelve subscriptions, all holding a copy of the same date. Event Schedule keeps the date once and does the twelve jobs off it.
+                    The sign-up form, the flyer, the mailing list, the link in the bio, the spreadsheet, the code on the door. Twelve subscriptions, all holding a copy of the same date. Getvnt keeps the date once and does the twelve jobs off it.
                 </p>
 
                 <div class="es-fade-up es-d-3 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -851,13 +851,13 @@
                     What is <span class="es-belt-accent">on the belt.</span>
                 </h2>
                 <p class="es-belt-muted es-belt-lead mt-5" data-reveal style="--reveal-delay: 0.15s;">
-                    The twelve tools Event Schedule replaces, the job each one was doing, and what does that job here. Every row links to the detail.
+                    The twelve tools Getvnt replaces, the job each one was doing, and what does that job here. Every row links to the detail.
                 </p>
             </div>
 
             <div class="es-belt-card p-4 sm:p-7" data-reveal="panel">
                 <table class="es-belt-table">
-                    <caption class="sr-only">Twelve tools Event Schedule can absorb, the job each one was doing, what replaces it, and the plan that includes it</caption>
+                    <caption class="sr-only">Twelve tools Getvnt can absorb, the job each one was doing, what replaces it, and the plan that includes it</caption>
                     <thead>
                         <tr>
                             <th scope="col">Tool</th>
@@ -900,7 +900,7 @@
                 <a href="{{ route('marketing.compare') }}" class="es-belt-card es-belt-hover group flex items-center justify-between p-7 hover:-translate-y-1">
                     <div>
                         <h3 class="es-belt-hover-title es-belt-ink mb-2 text-xl font-bold transition-colors">Looking for direct platform comparisons?</h3>
-                        <p class="es-belt-muted es-belt-small">These twelve were never event platforms. For the ones that are, see how Event Schedule compares to Eventbrite, Luma and Ticket Tailor.</p>
+                        <p class="es-belt-muted es-belt-small">These twelve were never event platforms. For the ones that are, see how Getvnt compares to Eventbrite, Luma and Ticket Tailor.</p>
                     </div>
                     <svg aria-hidden="true" class="es-belt-hover-arrow es-belt-muted ms-6 h-6 w-6 shrink-0 transition-colors rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -922,7 +922,7 @@
                     Four things that <span class="es-belt-accent">stay on the bench.</span>
                 </h2>
                 <p class="es-belt-muted es-belt-lead mt-5" data-reveal style="--reveal-delay: 0.15s;">
-                    A consolidation page that claims everything is not worth reading. These are the jobs Event Schedule does not replace, where you should keep the specialist.
+                    A consolidation page that claims everything is not worth reading. These are the jobs Getvnt does not replace, where you should keep the specialist.
                 </p>
             </div>
 
@@ -1058,7 +1058,7 @@
                         <div class="relative z-10">
                             <span class="es-belt-tier es-belt-tier-free mb-3 inline-flex">Free</span>
                             <h3 class="es-belt-ink mb-2 text-xl font-bold">Zero platform fees on ticket sales</h3>
-                            <p class="es-belt-muted es-belt-small">Money moves through your own <a href="{{ route('marketing.stripe') }}" class="es-belt-link font-medium underline hover:no-underline">Stripe</a> or <a href="{{ route('marketing.paypal') }}" class="es-belt-link font-medium underline hover:no-underline">PayPal</a> account and Event Schedule takes none of it, on every plan including the free one. The only cut is the processor's own fee, the same cut it would take anywhere else, and a refund goes back the same way from the Sales page. This is usually the line that pays for the whole switch.</p>
+                            <p class="es-belt-muted es-belt-small">Money moves through your own <a href="{{ route('marketing.stripe') }}" class="es-belt-link font-medium underline hover:no-underline">Stripe</a> or <a href="{{ route('marketing.paypal') }}" class="es-belt-link font-medium underline hover:no-underline">PayPal</a> account and Getvnt takes none of it, on every plan including the free one. The only cut is the processor's own fee, the same cut it would take anywhere else, and a refund goes back the same way from the Sales page. This is usually the line that pays for the whole switch.</p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
                         <div class="es-ring-glow" aria-hidden="true"></div>
@@ -1199,7 +1199,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="es-belt-on-muted shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                                <span class="es-belt-on-muted shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="es-belt-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                                 <span class="relative z-10 flex items-center gap-2">

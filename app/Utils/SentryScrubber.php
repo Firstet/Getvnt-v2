@@ -48,7 +48,7 @@ class SentryScrubber
      * `url` and `query_string` - send_default_pii does not gate those. So without this, ANY
      * exception escaping the chain after the auth check ships a live credential to the issue
      * tracker. Worse for selfhosters: config/sentry.php points REPORT_ERRORS=true installs at an
-     * upstream eventschedule.com DSN, so their secret would land in someone else's project.
+     * upstream getvnt.com DSN, so their secret would land in someone else's project.
      *
      * Anchored on ^ as well as [?&]: Sentry stamps `query_string` with the BARE string, no leading
      * question mark, so a pattern requiring a separator silently misses the FIRST parameter - which

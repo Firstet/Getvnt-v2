@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * An EventSchedule install that federates its public events to this one.
- * Only populated on the nexus app (eventschedule.com), where an admin approves
+ * An Getvnt install that federates its public events to this one.
+ * Only populated on the nexus app (getvnt.com), where an admin approves
  * an instance once and its events then publish automatically.
  */
 class FederatedInstance extends Model

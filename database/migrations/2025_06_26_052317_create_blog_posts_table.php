@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();
             $table->string('featured_image')->nullable();
-            $table->string('author_name')->default('Event Schedule Team');
+            $table->string('author_name')->default('Getvnt Team');
             $table->boolean('is_published')->default(false);
             $table->integer('view_count')->default(0);
             $table->timestamps();

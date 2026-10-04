@@ -1,6 +1,6 @@
 <x-marketing-layout>
     <x-slot name="title">Compare Event Platforms: Eventbrite, Luma &amp; {{ count($headToHead) - 2 }} More</x-slot>
-    <x-slot name="description">Compare Event Schedule with Eventbrite, Luma, Meetup and {{ count($headToHead) - 3 }} more platforms: feature by feature, a fee calculator at published rates, and 0% platform fees.</x-slot>
+    <x-slot name="description">Compare Getvnt with Eventbrite, Luma, Meetup and {{ count($headToHead) - 3 }} more platforms: feature by feature, a fee calculator at published rates, and 0% platform fees.</x-slot>
     <x-slot name="breadcrumbTitle">Compare</x-slot>
 
     @php
@@ -9,15 +9,15 @@
         // /pricing's FAQ answer; it points at the calculator on this page.
         $compareFaqs = [
             [
-                'q' => 'Does Event Schedule really charge no platform fees?',
+                'q' => 'Does Getvnt really charge no platform fees?',
                 'a' => 'Correct. We never take a percentage of your ticket sales on any plan. You pay your payment processor directly, and on Stripe that is '.$rates['stripe']['label'].'. Money from ticket sales goes straight to your own Stripe or PayPal account, not through us.',
             ],
             [
-                'q' => 'Can buyers pay with PayPal, and can I refund them from Event Schedule?',
+                'q' => 'Can buyers pay with PayPal, and can I refund them from Getvnt?',
                 'a' => 'Yes to both, on Pro. You connect your own Stripe or PayPal account and choose one for each event, and the money goes to that account. A Stripe or PayPal sale can be refunded from the Sales page in full or in part, with the money going back through the same provider, and a partial refund leaves the tickets valid. A sale taken another way, such as cash or a payment link, is marked as refunded instead, which records it without moving any money.',
             ],
             [
-                'q' => 'Does Event Schedule have reserved seating?',
+                'q' => 'Does Getvnt have reserved seating?',
                 'a' => 'Yes, on the Enterprise plan, for venue schedules. You draw a seating plan once, with sections, rows, tables and standing areas, and reuse it for every date. Buyers pick their seats from the map, and the box office can hold seats back, book seats for a phone order, move a buyer or release a seat.',
             ],
             [
@@ -26,7 +26,7 @@
             ],
             [
                 'q' => 'How is this different from the pricing page?',
-                'a' => 'The pricing page explains what Event Schedule costs. This page puts those costs next to what other platforms charge for the same event, using their published rates, so you can see the difference rather than take our word for it.',
+                'a' => 'The pricing page explains what Getvnt costs. This page puts those costs next to what other platforms charge for the same event, using their published rates, so you can see the difference rather than take our word for it.',
             ],
             [
                 'q' => 'Can I move my events over from another platform?',
@@ -34,10 +34,10 @@
             ],
             [
                 'q' => 'Which of these platforms are open source?',
-                'a' => 'Five of them: Event Schedule, Pretix, Hi.Events, Mobilizon and The Events Calendar. All five publish their source and can be selfhosted. Event Schedule runs on standard PHP and MySQL hosting, Pretix and Hi.Events expect Docker, PostgreSQL and Redis, Mobilizon runs on Elixir and PostgreSQL, and The Events Calendar is a WordPress plugin.',
+                'a' => 'Five of them: Getvnt, Pretix, Hi.Events, Mobilizon and The Events Calendar. All five publish their source and can be selfhosted. Getvnt runs on standard PHP and MySQL hosting, Pretix and Hi.Events expect Docker, PostgreSQL and Redis, Mobilizon runs on Elixir and PostgreSQL, and The Events Calendar is a WordPress plugin.',
             ],
             [
-                'q' => 'Do I have to pay to use Event Schedule?',
+                'q' => 'Do I have to pay to use Getvnt?',
                 'a' => 'Not to publish. The free plan is free forever with unlimited events, unlimited schedules and unlimited free registration. Selling a ticket that carries a price is Pro at '.plan_price($rates['eventschedule']['monthly']).'/mo, which also adds the API, and selfhosted installs get every paid feature at no cost.',
             ],
         ];
@@ -49,9 +49,9 @@
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "@id": "{{ config('app.url') }}/compare#page",
-        "name": "Compare Event Schedule with {{ count($headToHead) }} event platforms",
+        "name": "Compare Getvnt with {{ count($headToHead) }} event platforms",
         "url": "{{ config('app.url') }}/compare",
-        "description": {!! \App\Utils\SeoUtils::jsonLd('Feature-by-feature comparisons of Event Schedule against '.count($headToHead).' event and ticketing platforms, with a fee calculator using published rates.') !!},
+        "description": {!! \App\Utils\SeoUtils::jsonLd('Feature-by-feature comparisons of Getvnt against '.count($headToHead).' event and ticketing platforms, with a fee calculator using published rates.') !!},
         "mainEntity": {
             "@type": "ItemList",
             "name": "Event platform comparisons",
@@ -61,7 +61,7 @@
                 {
                     "@type": "ListItem",
                     "position": {{ $loop->iteration }},
-                    "name": {!! \App\Utils\SeoUtils::jsonLd('Event Schedule vs '.$c['name']) !!},
+                    "name": {!! \App\Utils\SeoUtils::jsonLd('Getvnt vs '.$c['name']) !!},
                     "url": "{{ route($c['route']) }}"
                 }@if (! $loop->last),@endif
                 @endforeach
@@ -303,7 +303,7 @@
                     </svg>
                     <span class="text-sm font-medium tracking-wide text-gray-600 dark:text-gray-300">Compare event platforms, all {{ count($headToHead) }}</span>
                 </x-marketing.hero-eyebrow>
-                <span class="es-mask"><span class="es-mask-line">Event Schedule</span></span>
+                <span class="es-mask"><span class="es-mask-line">Getvnt</span></span>
                 <span class="es-mask es-mask-2"><span class="es-mask-line"><span class="es-vs">vs</span> <span class="text-gradient-compare">everyone else</span></span></span>
             </h1>
 
@@ -373,7 +373,7 @@
 
                                 <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 border-b border-gray-200 px-4 py-4 dark:border-white/10 sm:px-6">
                                     <div class="text-center">
-                                        <div class="text-base font-bold text-gray-900 dark:text-white sm:text-lg">Event Schedule</div>
+                                        <div class="text-base font-bold text-gray-900 dark:text-white sm:text-lg">Getvnt</div>
                                         <div class="es-keep text-xs font-semibold uppercase tracking-wider">0% platform fee</div>
                                     </div>
                                     <div class="es-vs px-2 text-xl sm:text-2xl" aria-hidden="true">vs</div>
@@ -399,7 +399,7 @@
 
                                 <div class="border-t border-gray-200 px-4 py-4 text-center dark:border-white/10 sm:px-6">
                                     <a href="{{ route($c['route']) }}" class="group inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3 dark:text-blue-400">
-                                        Full Event Schedule <span class="es-vs">vs</span> {{ $c['name'] }} comparison
+                                        Full Getvnt <span class="es-vs">vs</span> {{ $c['name'] }} comparison
                                         <svg aria-hidden="true" class="h-4 w-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                                     </a>
                                 </div>
@@ -441,7 +441,7 @@
     <!-- The full matrix, in a disclosure                            -->
     <!-- ============================================================ -->
     @php
-        $matrixColumns = ['Event Schedule', 'Eventbrite', 'Luma', 'Ticket Tailor', 'Google Calendar'];
+        $matrixColumns = ['Getvnt', 'Eventbrite', 'Luma', 'Ticket Tailor', 'Google Calendar'];
 
         // Feature rows only. COUNT_RECURSIVE was used here and counted every cell
         // as well as every row, so the button offered "294 rows" of a 42-row table.
@@ -467,7 +467,7 @@
                 <div class="compare-table-wrapper rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-white/5"
                      tabindex="0" role="region" aria-label="Full feature comparison, scrollable">
                     <table class="compare-table w-full text-left">
-                        <caption class="sr-only">Event Schedule compared with Eventbrite, Luma, Ticket Tailor and Google Calendar across {{ count($sections) }} feature groups</caption>
+                        <caption class="sr-only">Getvnt compared with Eventbrite, Luma, Ticket Tailor and Google Calendar across {{ count($sections) }} feature groups</caption>
                         <thead>
                             <tr class="border-b border-gray-200 dark:border-white/10">
                                 <th scope="col" class="min-w-[180px] bg-white px-6 py-5 text-sm font-semibold text-gray-900 dark:bg-[#0f0f14] dark:text-white">Feature</th>
@@ -530,7 +530,7 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- Why Event Schedule: the illustrated block                   -->
+    <!-- Why Getvnt: the illustrated block                   -->
     <!-- ============================================================ -->
     {{-- These six used to be icon-and-prose tiles in six competing gradients,
          showing nothing. Each now carries a mock built from a primitive that
@@ -556,7 +556,7 @@
                         <div class="mt-auto space-y-3" aria-hidden="true">
                             <div>
                                 <div class="mb-1 flex items-center justify-between text-xs">
-                                    <span class="font-medium text-gray-700 dark:text-gray-300">Event Schedule</span>
+                                    <span class="font-medium text-gray-700 dark:text-gray-300">Getvnt</span>
                                     <span class="es-keep font-bold">0%</span>
                                 </div>
                                 <div class="h-2 rounded-full bg-gray-100 dark:bg-white/10"></div>
@@ -595,7 +595,7 @@
                         <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Simple to selfhost</h3>
                         <p class="mb-6 text-sm text-gray-600 dark:text-gray-400">Five platforms here can be run yourself. Ours needs standard PHP and MySQL hosting, where Pretix needs Docker, PostgreSQL and Redis.</p>
                         <div class="mt-auto space-y-3" aria-hidden="true">
-                            @foreach ([['Event Schedule', ['PHP', 'MySQL'], true], ['Pretix', ['Docker', 'PostgreSQL', 'Redis'], false]] as [$stackName, $parts, $isOurs])
+                            @foreach ([['Getvnt', ['PHP', 'MySQL'], true], ['Pretix', ['Docker', 'PostgreSQL', 'Redis'], false]] as [$stackName, $parts, $isOurs])
                                 <div>
                                     <div class="mb-1.5 text-xs font-medium text-gray-700 dark:text-gray-300">{{ $stackName }}</div>
                                     <div class="flex flex-wrap gap-1.5">

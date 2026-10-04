@@ -19,7 +19,7 @@ use Illuminate\Support\Str;
 
 /**
  * Sender half of federation: pushes this install's public events to the nexus app
- * (eventschedule.com), which lists them with a link back here.
+ * (getvnt.com), which lists them with a link back here.
  *
  * Modelled on TranslationOverrideService::shareToNexus() - chunked, capped, stamped
  * with a watermark, and abandoning the rest of a run on the first failure so it
@@ -1226,7 +1226,7 @@ class FederationService
                 $role->id,
                 ['federation_enabled' => null],
                 ['federation_enabled' => true],
-                'Listed on the Event Schedule network',
+                'Listed on the Getvnt network',
             );
         }
 

@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Farmers Markets"
+        name="Getvnt for Farmers Markets"
         description="Set the whole season out as one recurring market day with a closing date, take a washed-out Saturday back off the calendar, and let traders put themselves forward for a pitch."
         audience="Farmers Markets & Outdoor Markets"
         keywords="farmers market calendar, market vendor schedule, farmers market events, outdoor market management, free farmers market scheduling" />
@@ -477,7 +477,7 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for farmers markets?',
+                'q' => 'Is Getvnt free for farmers markets?',
                 'a' => 'Yes. The whole season is free forever: a recurring market day with a closing date, date exceptions for the Saturdays you lose to weather, sub-schedules for produce, bakery, flowers and the winter market, an agenda on each market day, free RSVP with a places limit, a downloadable QR code that puts your market page in a shopper\'s hand, built-in analytics, two-way Google, Outlook and CalDAV sync, and an embeddable calendar. Newsletters are free too, at ten emails a month counted one per recipient, and go up to a hundred on Pro and a thousand on Enterprise. Charging a pitch fee is the one part that needs Pro at '.plan_price($proMonthly).' a month, and there are zero platform fees on what you take whatever the plan.',
             ],
             [
@@ -494,11 +494,11 @@
             ],
             [
                 'q' => 'Can I charge for pitches and take the money online?',
-                'a' => 'Yes, on Pro at '.plan_price($proMonthly).' a month, which is what opens paid checkout. A pitch fee is a named ticket type with its own price and stock, and the stock is counted per market date, so a full Saturday does not stop the following Saturday selling. Scanning the QR code at the gate on market morning is free on any plan. Pro also adds the live check-in dashboard and your own questions at checkout, such as whether they need power or how long the van is. Traders pay through your own Stripe or PayPal account, or by a payment link or cash, and Event Schedule charges no platform fee on top.',
+                'a' => 'Yes, on Pro at '.plan_price($proMonthly).' a month, which is what opens paid checkout. A pitch fee is a named ticket type with its own price and stock, and the stock is counted per market date, so a full Saturday does not stop the following Saturday selling. Scanning the QR code at the gate on market morning is free on any plan. Pro also adds the live check-in dashboard and your own questions at checkout, such as whether they need power or how long the van is. Traders pay through your own Stripe or PayPal account, or by a payment link or cash, and Getvnt charges no platform fee on top.',
             ],
             [
                 'q' => 'Can I refund a pitch fee if a trader pulls out or the day is rained off?',
-                'a' => 'Yes, on every plan, from the Sales page, in full or in part. A fee paid through Stripe or PayPal goes back to the trader through that provider, and only then is the sale marked refunded. A fee paid by cash, a payment link or any other way shows Mark as Refunded instead, which records the refund without moving money. A partial refund keeps the pitch booked, and a full one frees it for somebody else. Event Schedule does not email the trader about a refund, so a word from you is still worth sending.',
+                'a' => 'Yes, on every plan, from the Sales page, in full or in part. A fee paid through Stripe or PayPal goes back to the trader through that provider, and only then is the sale marked refunded. A fee paid by cash, a payment link or any other way shows Mark as Refunded instead, which records the refund without moving money. A partial refund keeps the pitch booked, and a full one frees it for somebody else. Getvnt does not email the trader about a refund, so a word from you is still worth sending.',
             ],
             [
                 'q' => 'How do shoppers hear about the market?',
@@ -873,7 +873,7 @@
                             ['The day has a shape', 'Add parts to a market day for the chef demo, the fiddle band and the kids table. Shoppers read the morning rather than guessing when to turn up.'],
                             ['Places on the demo', 'A free event can take RSVPs with a limit, and the places are counted per market date, so a full demo in July leaves August alone.'],
                             ['One link, all season', 'Embed the calendar on the website you already have. A shopper can put one market day into their own Google, Outlook or Apple calendar, or subscribe to the market\'s calendar once and see the next three months of market days there, rolling forward.'],
-                            ['The band gets its own page', 'Add the fiddle band to a market day and, if they are not on Event Schedule yet, they get a page listing the dates you gave them. It stays out of search until they claim it by signing in with the email address you entered for them. A band already on Event Schedule gets the date as a request to accept.'],
+                            ['The band gets its own page', 'Add the fiddle band to a market day and, if they are not on Getvnt yet, they get a page listing the dates you gave them. It stays out of search until they claim it by signing in with the email address you entered for them. A band already on Getvnt gets the date as a request to accept.'],
                         ] as [$mT, $mD])
                             <div class="es-mkt-card p-6" data-reveal="panel">
                                 <div class="mb-2 flex flex-wrap items-center gap-2">
@@ -940,7 +940,7 @@
                     <p class="es-mkt-muted mb-8 max-w-xl text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.15s;">
                         No envelope of notes and no chasing anybody in the car park. Traders pay through
                         your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-mkt-link font-semibold">PayPal</a>
-                        account, and Event Schedule takes no platform fee on top of what they charge. A
+                        account, and Getvnt takes no platform fee on top of what they charge. A
                         payment link or cash on the morning still works for the traders who want it.
                     </p>
 
@@ -1031,7 +1031,7 @@
                         </div>
                         <p class="es-mkt-board-ink mt-4 text-sm font-bold uppercase tracking-wide">Scan for this week's stalls</p>
                         <div class="es-mkt-board-rule my-4" aria-hidden="true"></div>
-                        <p class="es-mkt-board-muted es-mkt-num text-xs">your-market.eventschedule.com</p>
+                        <p class="es-mkt-board-muted es-mkt-num text-xs">your-market.getvnt.com</p>
                         <p class="es-mkt-board-muted mt-3 text-[0.65rem]">Download the code from your schedule and print it once.</p>
                     </div>
                 </div>
@@ -1256,7 +1256,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-mkt-card es-mkt-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-mkt-muted text-sm">Event Schedule for</div>
+                            <div class="es-mkt-muted text-sm">Getvnt for</div>
                             <div class="es-mkt-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-mkt-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1336,7 +1336,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-market" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-mkt-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

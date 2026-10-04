@@ -1,6 +1,6 @@
 <x-marketing-layout>
     <x-slot name="title">Ticket Fee Calculator: What Each Platform Takes Per Ticket</x-slot>
-    <x-slot name="description">Work out what Eventbrite, Luma, Ticket Tailor, TicketLeap, Universe, AllEvents and Hi.Events take from your ticket sales, next to 0% on Event Schedule.</x-slot>
+    <x-slot name="description">Work out what Eventbrite, Luma, Ticket Tailor, TicketLeap, Universe, AllEvents and Hi.Events take from your ticket sales, next to 0% on Getvnt.</x-slot>
     <x-slot name="breadcrumbTitle">Ticket Fee Calculator</x-slot>
 
     {{-- Every rate on this page is App\Utils\TicketFees: the calculator's figures, the rate lines on
@@ -10,7 +10,7 @@
          one rate that was not re-checked on 2026-09-24; see its comment there.
 
          Differentiation: /compare is the feature-by-feature hub with a four-platform calculator,
-         /pricing explains what Event Schedule costs, each /x-alternative page is one head-to-head.
+         /pricing explains what Getvnt costs, each /x-alternative page is one head-to-head.
          This page is the calculator itself, across every platform we have a published rate for,
          and how each one charges. --}}
 
@@ -118,7 +118,7 @@
                 'a' => 'In the United States, a service fee of '.$pct($feeRates['eventbrite']['percent']).' + '.$usd($feeRates['eventbrite']['fixed']).' on each paid ticket and a separate '.$pct($feeRates['eventbrite']['processing']).' payment processing fee on each order. Buyers pay them on top of the ticket price by default. If you absorb them instead, as the calculator on this page does, a single '.$usd(\App\Utils\TicketFees::EXAMPLE_PRICE).' ticket costs you '.$usd($exampleEventbrite).' in fees.',
             ],
             [
-                'q' => 'Does Event Schedule charge a fee per ticket?',
+                'q' => 'Does Getvnt charge a fee per ticket?',
                 'a' => 'No. There is no platform fee on any plan. Putting a price on a ticket needs Pro, at '.plan_price($proMonthly).' a month, and buyers pay through your own Stripe or PayPal account, so the only deduction is that processor\'s own fee. Free registration costs nothing at all.',
             ],
             [
@@ -143,7 +143,7 @@
     <x-slot name="structuredData">
     <x-seo.webpage
         name="Ticket Fee Calculator"
-        description="A ticket fee calculator comparing what Event Schedule, Eventbrite, Luma, Ticket Tailor, TicketLeap, Universe, AllEvents and Hi.Events take from one event's ticket sales, at their published US rates."
+        description="A ticket fee calculator comparing what Getvnt, Eventbrite, Luma, Ticket Tailor, TicketLeap, Universe, AllEvents and Hi.Events take from one event's ticket sales, at their published US rates."
         keywords="ticket fee calculator, ticketing fee calculator, eventbrite fee calculator, ticket platform fees, eventbrite fees, ticketing fees comparison"
         :mentions="['Eventbrite', 'Luma', 'Ticket Tailor', 'TicketLeap', 'Universe', 'AllEvents', 'Hi.Events']" />
     </x-slot>
@@ -198,7 +198,7 @@
             </h1>
 
             <p class="es-fade-up es-d-2 mx-auto max-w-3xl text-lg text-gray-500 dark:text-gray-400 sm:text-xl">
-                Enter how many tickets you expect to sell and what they cost, and see what {{ $rivalList }} would take at their published US rates, next to Event Schedule's zero platform fee.
+                Enter how many tickets you expect to sell and what they cost, and see what {{ $rivalList }} would take at their published US rates, next to Getvnt's zero platform fee.
             </p>
         </div>
     </section>
@@ -283,7 +283,7 @@
             </div>
 
             <p class="mx-auto mt-10 max-w-3xl text-center text-gray-600 dark:text-gray-400" data-reveal>
-                For more than fees, the <x-link href="{{ marketing_url('/compare') }}">feature-by-feature comparison</x-link> sets the platforms side by side, and <x-link href="{{ marketing_url('/features/ticketing') }}">selling tickets on Event Schedule</x-link> explains our side in full.
+                For more than fees, the <x-link href="{{ marketing_url('/compare') }}">feature-by-feature comparison</x-link> sets the platforms side by side, and <x-link href="{{ marketing_url('/features/ticketing') }}">selling tickets on Getvnt</x-link> explains our side in full.
             </p>
         </div>
     </section>
@@ -340,7 +340,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                             <span class="relative z-10 flex items-center gap-2">

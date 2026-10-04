@@ -174,11 +174,11 @@ class SecurityHeaders
 
             'manifest-src' => ["'self'"],
 
-            // Production hardcodes *.eventschedule.com rather than *.{$host}. That is wrong for a
+            // Production hardcodes *.getvnt.com rather than *.{$host}. That is wrong for a
             // self-hosted SaaS operator on their own domain, but fixing it is a behaviour change
             // that does not belong in a monetization PR - left as-is deliberately.
             'frame-src' => array_merge(
-                ["'self'", $isLocal ? "*.{$host}" : '*.eventschedule.com'],
+                ["'self'", $isLocal ? "*.{$host}" : '*.getvnt.com'],
                 ['*.stripe.com', '*.youtube.com', '*.youtube-nocookie.com',
                     '*.googletagmanager.com', '*.google.com', 'challenges.cloudflare.com'],
             ),
@@ -240,7 +240,7 @@ class SecurityHeaders
         // where the operator has none, so gating on a resolvable ID would block the frame
         // with no visible cause. STAY22_ENABLED is the operator saying "my customers may
         // opt into this". Note this widening is independent of ADS_ENABLED, and unlike the
-        // hardcoded *.eventschedule.com above it is host-independent, so it is enforced
+        // hardcoded *.getvnt.com above it is host-independent, so it is enforced
         // identically on a customer's custom domain.
         if (\App\Services\Stay22Service::isEnabled()) {
             $extra['frame-src'][] = '*.stay22.com';

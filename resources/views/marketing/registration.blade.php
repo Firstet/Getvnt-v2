@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Registration Software & RSVP | Event Schedule</x-slot>
+    <x-slot name="title">Free Event Registration Software & RSVP | Getvnt</x-slot>
     <x-slot name="description">Free event registration and RSVP on every plan: a cap per date, a waitlist when it fills, a QR code in every confirmation and a form you can embed.</x-slot>
     <x-slot name="breadcrumbTitle">Registration</x-slot>
 
@@ -24,7 +24,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Free Event Registration and RSVP"
+        name="Getvnt - Free Event Registration and RSVP"
         description="Free event registration with no payment step: a capacity for each date, a waitlist when it fills, a confirmation email with a QR code, self-cancellation, door scanning and an embeddable form, on every plan." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
@@ -530,7 +530,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-events" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#16110a] transition-colors hover:bg-gray-100">
                                 Get Started Free

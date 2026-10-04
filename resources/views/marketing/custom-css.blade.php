@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Custom CSS | Advanced Schedule Styling - Event Schedule</x-slot>
+    <x-slot name="title">Custom CSS | Advanced Schedule Styling - Getvnt</x-slot>
     <x-slot name="description">Add your own CSS to your schedule page, event pages and embeds. It loads right after the built-in styles, so a tie goes to you. 10,000 characters on Pro.</x-slot>
     <x-slot name="breadcrumbTitle">Custom CSS</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Custom CSS"
+        name="Getvnt - Custom CSS"
         description="Add your own CSS to your schedule page, event pages and embeds. Your rules are written into the same stylesheet as the built-in styles, immediately after them, so a tie in the cascade goes to you." />
     </x-slot>
 
@@ -822,7 +822,7 @@
                         Three rules decide it. <span class="es-sheet2-lit">Order is already yours.</span>
                     </h2>
                     <p class="es-sheet2-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                        Nothing here is special to Event Schedule. It is the ordinary CSS cascade, and knowing where your block sits in it is most of the job.
+                        Nothing here is special to Getvnt. It is the ordinary CSS cascade, and knowing where your block sits in it is most of the job.
                     </p>
                 </div>
 
@@ -1124,7 +1124,7 @@
                     <div class="es-tilt-inner es-sheet2-card relative flex h-full flex-col overflow-hidden p-7">
                         <div class="relative z-10">
                             <h3 class="es-sheet2-ink mb-4 text-xl font-bold">What it pairs with</h3>
-                            <p class="es-sheet2-muted mb-4">CSS decides how the page looks. Two other settings decide whose page it reads as: removing the Event Schedule footer line, on Pro, and serving the whole thing from your own domain, on Enterprise.</p>
+                            <p class="es-sheet2-muted mb-4">CSS decides how the page looks. Two other settings decide whose page it reads as: removing the Getvnt footer line, on Pro, and serving the whole thing from your own domain, on Enterprise.</p>
                             <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
                                 <a href="{{ marketing_url('/features/white-label') }}" class="es-sheet2-link font-medium hover:underline">White label</a>
                                 <a href="{{ marketing_url('/features/custom-domain') }}" class="es-sheet2-link font-medium hover:underline">Custom domains</a>
@@ -1194,7 +1194,7 @@
                 <div data-reveal>
                     <x-feature-link-card
                         name="White Label"
-                        description="Remove Event Schedule branding for a fully branded experience"
+                        description="Remove Getvnt branding for a fully branded experience"
                         :url="marketing_url('/features/white-label')"
                         icon-color="blue"
                     >
@@ -1306,7 +1306,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-sheet2-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

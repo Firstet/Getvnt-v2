@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Selfhosted"
+        name="Getvnt - Selfhosted"
         :description="__('marketing.selfhost_description')" />
     @php
         // One array drives both the visible "Get it running" band and this HowTo
@@ -28,8 +28,8 @@
         ];
     @endphp
     <x-seo.howto-schema
-        name="How to Selfhost Event Schedule"
-        description="Install the open source Event Schedule platform on your own server in three steps."
+        name="How to Selfhost Getvnt"
+        description="Install the open source Getvnt platform on your own server in three steps."
         :steps="$howToSteps" />
     {{-- FAQ JSON-LD is emitted alongside the visible FAQ section near the end of the page, driven by one $selfhostFaqs array so the markup always matches the rendered content. --}}
     </x-slot>
@@ -348,7 +348,7 @@
             </h1>
 
             <p class="es-fade-up es-d-2 mx-auto mb-10 max-w-3xl text-lg text-gray-500 dark:text-gray-400 sm:text-xl">
-                Run Event Schedule on your own infrastructure and every Pro and Enterprise feature is included, free. No platform fees, no seat counts, no data leaving your server.
+                Run Getvnt on your own infrastructure and every Pro and Enterprise feature is included, free. No platform fees, no seat counts, no data leaving your server.
             </p>
 
             <div class="es-fade-up es-d-3 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -358,7 +358,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </a>
-                <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="group pointer-events-auto inline-flex items-center justify-center gap-2 rounded-2xl glass px-7 py-4 text-lg font-semibold text-gray-800 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:text-white">
+                <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="group pointer-events-auto inline-flex items-center justify-center gap-2 rounded-2xl glass px-7 py-4 text-lg font-semibold text-gray-800 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:text-white">
                     <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
@@ -432,7 +432,7 @@
                 @php
                     $demoCards = [
                         ['Admin portal', 'Create events, sell tickets, track sales, customise the calendar.', demo_url(), 'Open admin demo'],
-                        ['Guest portal', 'The public calendar. Browse events, buy tickets, follow for updates.', 'https://simpsons.eventschedule.com', 'Open guest demo'],
+                        ['Guest portal', 'The public calendar. Browse events, buy tickets, follow for updates.', 'https://simpsons.getvnt.com', 'Open guest demo'],
                     ];
                 @endphp
                 @foreach ($demoCards as [$dTitle, $dBody, $dHref, $dCta])
@@ -469,7 +469,7 @@
                 'blurb' => 'Available on most cPanel hosts. The installer creates the database, writes the configuration and runs the migrations for you.',
                 'title' => 'installer.log',
                 'lines' => [
-                    ['out', 'Open cPanel and find Event Schedule in Softaculous'],
+                    ['out', 'Open cPanel and find Getvnt in Softaculous'],
                     ['out', 'Choose your domain and directory, then Install'],
                     ['out', 'Database created, environment configured, migrations run'],
                 ],
@@ -484,14 +484,14 @@
                 'blurb' => 'Bring up the Compose stack from the dockerfiles repo. The first build takes a few minutes while dependencies install and assets compile.',
                 'title' => 'bash',
                 'lines' => [
-                    ['cmd', 'git clone https://github.com/eventschedule/dockerfiles'],
+                    ['cmd', 'git clone https://github.com/Firstet/dockerfiles'],
                     ['cmd', 'cd dockerfiles'],
                     ['cmd', 'docker compose up --build -d'],
                     ['note', '# then open http://localhost:8080'],
                 ],
                 'exit' => 'Stack running',
-                'cta' => ['View the Docker setup', 'https://github.com/eventschedule/dockerfiles', true],
-                'copy' => "git clone https://github.com/eventschedule/dockerfiles\ncd dockerfiles\ndocker compose up --build -d",
+                'cta' => ['View the Docker setup', 'https://github.com/Firstet/dockerfiles', true],
+                'copy' => "git clone https://github.com/Firstet/dockerfiles\ncd dockerfiles\ndocker compose up --build -d",
             ],
             [
                 'key' => 'manual',
@@ -689,7 +689,7 @@
                             <div class="p-5 sm:p-6" aria-hidden="true">
                                 <div class="mb-5 flex items-center gap-2.5">
                                     <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 text-[11px] font-bold text-white">ES</span>
-                                    <span class="text-sm font-semibold text-gray-900 dark:text-white">Set up Event Schedule</span>
+                                    <span class="text-sm font-semibold text-gray-900 dark:text-white">Set up Getvnt</span>
                                 </div>
 
                                 {{-- Progress rail: step 2 of 3, matching the copy beside it --}}
@@ -742,7 +742,7 @@
                 // ImportCuratorEvents scrapes the configured URLs only, once a day from the
                 // scheduler. Configured cities are a filter on what those pages return, not
                 // a search: the city branch is marked a placeholder in the command.
-                'body' => 'Point Event Schedule at a list of URLs and AI pulls the events in once a day, keeping only the cities you name. It checks each site\'s robots.txt first.',
+                'body' => 'Point Getvnt at a list of URLs and AI pulls the events in once a day, keeping only the cities you name. It checks each site\'s robots.txt first.',
             ],
             [
                 'title' => 'One-click app updates',
@@ -978,7 +978,7 @@
                 <!-- Data ownership -->
                 <div data-reveal="panel" class="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
                     <h3 class="mb-4 text-2xl font-bold text-white">It never leaves your server</h3>
-                    <p class="mb-6 text-gray-300">Your events, attendees, ticket sales and follower emails live in your database. Event Schedule cannot access, modify or remove selfhosted data, because there is no connection back to us to do it with.</p>
+                    <p class="mb-6 text-gray-300">Your events, attendees, ticket sales and follower emails live in your database. Getvnt cannot access, modify or remove selfhosted data, because there is no connection back to us to do it with.</p>
                     <ul class="space-y-3">
                         @foreach (['Your database, your backups, your retention rules', 'Stripe and PayPal payments land in your own accounts', 'Your own Gemini or OpenAI key for the AI features', 'No telemetry, no phone-home, no usage reporting'] as $dItem)
                             <li class="flex items-start gap-3 text-gray-200">
@@ -998,7 +998,7 @@
                 <div data-reveal="panel" class="flex flex-col rounded-3xl border border-white/10 bg-white/[0.04] p-8">
                     <div class="mb-3 inline-flex items-center gap-2 self-start rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-300">Opt in, off by default</div>
                     <h3 class="mb-4 text-2xl font-bold text-white">Or share out, on your terms</h3>
-                    <p class="mb-7 text-gray-300">Federation is the one bridge that carries your events to eventschedule.com, and it only exists if an admin switches it on. Your public events appear in the main listings, and every listing links back to the event on your own site.</p>
+                    <p class="mb-7 text-gray-300">Federation is the one bridge that carries your events to getvnt.com, and it only exists if an admin switches it on. Your public events appear in the main listings, and every listing links back to the event on your own site.</p>
 
                     <div class="es-fed relative mb-6 rounded-2xl border border-white/10 bg-black/25 p-5" aria-hidden="true">
                         <div class="relative flex items-center justify-between gap-2">
@@ -1018,7 +1018,7 @@
                             <div class="relative z-10 w-[33%] rounded-xl border border-white/15 bg-white/5 px-2 py-3 text-center">
                                 <svg aria-hidden="true" class="mx-auto mb-1.5 h-5 w-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
                                 <div class="text-xs font-semibold text-white">Listings</div>
-                                <div class="font-mono text-[10px] text-gray-500 dark:text-gray-400">eventschedule.com</div>
+                                <div class="font-mono text-[10px] text-gray-500 dark:text-gray-400">getvnt.com</div>
                             </div>
                         </div>
 
@@ -1100,7 +1100,7 @@
                                     <span class="font-bold text-white">ES</span>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-gray-900 dark:text-white">Event Schedule</div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Getvnt</div>
                                     <div class="text-sm text-gray-500 dark:text-gray-400">{{ $installedVersion }} installed</div>
                                 </div>
                             </div>
@@ -1384,7 +1384,7 @@
                 </svg>
             </div>
             <h2 class="es-balance mb-6 text-3xl font-black tracking-tight text-gray-900 dark:text-white md:text-5xl" data-reveal>Read it, change it, <span class="text-gradient-selfhost">fork it</span></h2>
-            <p class="mx-auto mb-8 max-w-2xl text-lg text-gray-500 dark:text-gray-400" data-reveal style="--reveal-delay: 0.1s;">Event Schedule is open source under the Attribution Assurance License. Inspect the code, send a pull request, or take it in your own direction. The AAL asks only that the original attribution stays in place.</p>
+            <p class="mx-auto mb-8 max-w-2xl text-lg text-gray-500 dark:text-gray-400" data-reveal style="--reveal-delay: 0.1s;">Getvnt is open source under the Attribution Assurance License. Inspect the code, send a pull request, or take it in your own direction. The AAL asks only that the original attribution stays in place.</p>
 
             <div data-reveal>
                 @include('marketing.partials.github-star-badge')
@@ -1403,7 +1403,7 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-4" data-reveal>
-                @foreach ([['Main repository', 'https://github.com/eventschedule/eventschedule'], ['Docker files', 'https://github.com/eventschedule/dockerfiles'], ['Discussions', 'https://github.com/eventschedule/eventschedule/discussions']] as [$repoLabel, $repoUrl])
+                @foreach ([['Main repository', 'https://github.com/Firstet/Getvnt-v2'], ['Docker files', 'https://github.com/Firstet/dockerfiles'], ['Discussions', 'https://github.com/Firstet/Getvnt-v2/discussions']] as [$repoLabel, $repoUrl])
                     <a href="{{ $repoUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-gray-200 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-300 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20">
                         <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -1420,15 +1420,15 @@
     <!-- ============================================================ -->
     @php
         $selfhostFaqs = [
-            ['q' => 'Is Event Schedule really free to selfhost?', 'a' => 'Yes. Event Schedule is open source under the Attribution Assurance License. There is no licence fee, no per-event charge and no platform fee on ticket sales. Your only costs are the server and the processing fees your payment provider charges.'],
+            ['q' => 'Is Getvnt really free to selfhost?', 'a' => 'Yes. Getvnt is open source under the Attribution Assurance License. There is no licence fee, no per-event charge and no platform fee on ticket sales. Your only costs are the server and the processing fees your payment provider charges.'],
             ['q' => 'Do I get the paid features when I selfhost?', 'a' => 'A selfhosted install is treated as Enterprise throughout the code, so ticketing, team members, the API, AI generation and everything else are included at no cost. Two features, auto import from URLs and one-click app updates, exist only on selfhosted installs. Per-schedule custom domains are the one thing that does not carry over, because they belong to hosted mode and your install already runs on a domain you chose.'],
             ['q' => 'What do I need on the server?', 'a' => 'PHP 8.2 or newer with the usual extensions, MySQL 5.7+ or MariaDB 10.3+, Apache or Nginx with rewrites enabled, and an SSL certificate. Most shared hosts already meet this.'],
-            ['q' => 'Can I install it on shared hosting?', 'a' => 'Yes. If your host offers Softaculous, Event Schedule installs in one click with the database and configuration set up for you. Otherwise upload the release zip and point your document root at the public directory.'],
+            ['q' => 'Can I install it on shared hosting?', 'a' => 'Yes. If your host offers Softaculous, Getvnt installs in one click with the database and configuration set up for you. Otherwise upload the release zip and point your document root at the public directory.'],
             ['q' => 'How do updates work?', 'a' => 'When a new version is released, a notice appears in your admin panel. One click applies the update in seconds, database migrations included. No terminal access is required.'],
             ['q' => 'Do I have to set up a cron job?', 'a' => 'Yes, one line: "* * * * * php /path/to/eventschedule/artisan schedule:run". It drives reminder emails, calendar sync and the release of expired ticket reservations. Without it those stop running.'],
             ['q' => 'Which payment methods work on a selfhosted install?', 'a' => 'Stripe, PayPal, Payfast (for rand), Invoice Ninja, a payment link and cash, with no platform fee on any of them. Stripe runs on the platform keys in your .env, which is the only Stripe rail a selfhost has. PayPal can be one account for the whole install, set with PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET, or each schedule owner can connect their own in Settings > Payment Methods. PayPal never has to call your server for an ordinary sale, so only its optional webhook needs a public address. A Stripe or PayPal sale can be refunded from the Sales page, in full or in part, and the money goes back through the provider.'],
             ['q' => 'Which features need my own accounts or keys?', 'a' => 'Anything that talks to another service needs your own account with it, and that part does nothing until you add the credentials: an SMTP service for email, Stripe or PayPal for payments, a Google or Microsoft app for calendar sync, a Gemini or OpenAI key for the AI features, a Google Wallet issuer account for the Add to Google Wallet button on tickets, and a OneSignal app for push notifications.'],
-            ['q' => 'Does a selfhosted install send anything back to Event Schedule?', 'a' => 'Not unless an admin switches something on. There is no telemetry and no phone-home. Two optional features do send data to eventschedule.com, and both start off. Federation shares only your public events into the eventschedule.com listings, with every listing linking back to your own site, and a schedule is only listed once someone who manages it says yes. Translation sharing sends wording you corrected in the translation manager, when an admin presses Share or, with automatic sharing on, as it is saved.'],
+            ['q' => 'Does a selfhosted install send anything back to Getvnt?', 'a' => 'Not unless an admin switches something on. There is no telemetry and no phone-home. Two optional features do send data to getvnt.com, and both start off. Federation shares only your public events into the getvnt.com listings, with every listing linking back to your own site, and a schedule is only listed once someone who manages it says yes. Translation sharing sends wording you corrected in the translation manager, when an admin presses Share or, with automatic sharing on, as it is saved.'],
             ['q' => 'Can I run it as a white-label SaaS for my own customers?', 'a' => 'Yes. Set IS_HOSTED=true and the same install runs multi-tenant, with a subdomain per customer, Stripe subscription billing and your own prices on the Pro and Enterprise tiers. You set the prices and keep the revenue. One thing to know before you price it: the licence credit stays on the public pages of every customer you charge. It is a small chip in the corner, a free schedule carries your own footer strip in its place, and it is the whole of what the software costs you.'],
             ['q' => 'Can I move from the hosted version to selfhosted?', 'a' => 'Yes. Backup and restore is built in, so you can export your schedule data, with images if you want them, and import it into your own install.'],
         ];

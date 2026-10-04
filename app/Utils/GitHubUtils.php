@@ -66,8 +66,8 @@ class GitHubUtils
         try {
             $response = Http::withHeaders([
                 'Accept' => 'application/vnd.github.v3+json',
-                'User-Agent' => 'EventSchedule',
-            ])->timeout(5)->get('https://api.github.com/repos/eventschedule/eventschedule');
+                'User-Agent' => 'Getvnt',
+            ])->timeout(5)->get('https://api.github.com/repos/getvnt/getvnt');
 
             if (! $response->successful()) {
                 return null;

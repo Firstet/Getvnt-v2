@@ -168,7 +168,7 @@ editor rejects an expression it cannot parse by *disabling* Deploy rather than b
 error, so a bad paste presents as a dead button and no message anywhere on the page.
 
 ```
-http.host eq "eventschedule.com" and not starts_with(http.request.uri.path, "/admin") and not starts_with(http.request.uri.path, "/api") and not starts_with(http.request.uri.path, "/sitemap") and not starts_with(http.request.uri.path, "/login") and not starts_with(http.request.uri.path, "/sign_up") and not (http.cookie contains "laravel_session") and not (http.cookie contains "remember_")
+http.host eq "getvnt.com" and not starts_with(http.request.uri.path, "/admin") and not starts_with(http.request.uri.path, "/api") and not starts_with(http.request.uri.path, "/sitemap") and not starts_with(http.request.uri.path, "/login") and not starts_with(http.request.uri.path, "/sign_up") and not (http.cookie contains "laravel_session") and not (http.cookie contains "remember_")
 ```
 
 Confirm the page header reads **Cache Rules** and not **Cache Response Rules**. The latter is a
@@ -216,7 +216,7 @@ match static paths too.
 
 ### `http.cookie` is not usable on a Free plan, and that blocks this rule
 
-**Measured on the eventschedule.com zone, 2026-09-06.** A cache rule whose expression is nothing
+**Measured on the getvnt.com zone, 2026-09-06.** A cache rule whose expression is nothing
 but `http.cookie contains "laravel_session"` - one term, no negation, no `and` - is refused. The
 dashboard refuses it by disabling Deploy and Save as Draft rather than by printing a reason. The
 same expression with the two cookie clauses removed saves immediately, so the field is the whole
@@ -236,7 +236,7 @@ stored anonymous copy, and there is no free substitute: Cloudflare's default cac
 request cookies, `Vary` is ignored except for `Accept-Encoding` below Enterprise, and on a cache
 HIT the origin is never consulted, so the origin's own `no-cache, private` for a signed-in request
 never gets a chance to apply. A rule without the cookie clauses would serve the guest header to
-signed-in visitors for up to the edge TTL. `session.domain` is `.eventschedule.com`
+signed-in visitors for up to the edge TTL. `session.domain` is `.getvnt.com`
 (`AppServiceProvider.php`), so the apex really does receive `laravel_session`, and
 `marketing/partials/header.blade.php` really does branch on `@auth`.
 
@@ -259,7 +259,7 @@ The dashboard disables Deploy on an expression it cannot parse and does not prin
 The API prints it. This is also the reproducible form of the rule, so reach for it whenever the
 dashboard argues.
 
-A token scoped to **Zone / Cache Rules / Edit** on `eventschedule.com` is enough. Read the zone ID
+A token scoped to **Zone / Cache Rules / Edit** on `getvnt.com` is enough. Read the zone ID
 off the dashboard Overview page rather than granting **Zone / Zone / Read** just to look it up.
 
 ```bash
@@ -276,7 +276,7 @@ curl -s -H "Authorization: Bearer $CF_TOKEN" \
 {
   "description": "Marketing HTML edge cache",
   "action": "set_cache_settings",
-  "expression": "http.host eq \"eventschedule.com\" and not starts_with(http.request.uri.path, \"/admin\") and not starts_with(http.request.uri.path, \"/api\") and not starts_with(http.request.uri.path, \"/sitemap\") and not starts_with(http.request.uri.path, \"/login\") and not starts_with(http.request.uri.path, \"/sign_up\") and not (http.cookie contains \"laravel_session\") and not (http.cookie contains \"remember_\")",
+  "expression": "http.host eq \"getvnt.com\" and not starts_with(http.request.uri.path, \"/admin\") and not starts_with(http.request.uri.path, \"/api\") and not starts_with(http.request.uri.path, \"/sitemap\") and not starts_with(http.request.uri.path, \"/login\") and not starts_with(http.request.uri.path, \"/sign_up\") and not (http.cookie contains \"laravel_session\") and not (http.cookie contains \"remember_\")",
   "action_parameters": {
     "cache": true,
     "edge_ttl": { "mode": "respect_origin" },
@@ -306,7 +306,7 @@ curl -s -X PUT -H "Authorization: Bearer $CF_TOKEN" -H 'Content-Type: applicatio
 
 ## Cloudflare redirect rule (optional, separate)
 
-`http://www.eventschedule.com/...` currently takes two hops: `http` to `https://www.`, then
+`http://www.getvnt.com/...` currently takes two hops: `http` to `https://www.`, then
 `www.` to the apex. One Cloudflare redirect rule collapses it to a single 301.
 
 Rules -> Redirect Rules -> Create rule.
@@ -314,12 +314,12 @@ Rules -> Redirect Rules -> Create rule.
 **When incoming requests match:**
 
 ```
-(http.host eq "www.eventschedule.com")
+(http.host eq "www.getvnt.com")
 ```
 
 **Then** - Dynamic redirect:
 
-- Expression: `concat("https://eventschedule.com", http.request.uri.path)`
+- Expression: `concat("https://getvnt.com", http.request.uri.path)`
 - Status: `301`
 - Preserve query string: on
 
@@ -448,12 +448,12 @@ reused against a page an attacker can write into. The reasoning is repeated in
 
 ## What to watch after deploy
 
-- `curl -sI https://eventschedule.com/pricing` - expect `cache-control: public, max-age=0,
+- `curl -sI https://getvnt.com/pricing` - expect `cache-control: public, max-age=0,
   s-maxage=600`, no `set-cookie`, and `cf-cache-status: MISS` then `HIT` on the second call.
-- `curl -sI 'https://eventschedule.com/pricing?lang=fr'` - expect `no-cache, private` and a
+- `curl -sI 'https://getvnt.com/pricing?lang=fr'` - expect `no-cache, private` and a
   `set-cookie`.
-- `curl -sI -X POST https://eventschedule.com/marketing/visit` and
-  `curl -sI https://eventschedule.com/docs/search-index.json` - expect no `set-cookie` on
+- `curl -sI -X POST https://getvnt.com/marketing/visit` and
+  `curl -sI https://getvnt.com/docs/search-index.json` - expect no `set-cookie` on
   either. A `laravel_session` on either one takes the visitor off the edge for the rest of
   their session.
 - `/admin/users` funnel: "Visited site", page views, docs and pricing buckets should stay in
@@ -462,7 +462,7 @@ reused against a page an attacker can write into. The reasoning is repeated in
   sharp rise means something is double-counting.
 - New sign-ups should keep non-null `utm_source` / `landing_page` / `referrer_url` at
   roughly the previous rate.
-- The homepage headline test: `curl -sI -X POST https://eventschedule.com/marketing/hero`
+- The homepage headline test: `curl -sI -X POST https://getvnt.com/marketing/hero`
   must carry no `set-cookie` (it answers 422 with no body, which is fine). Within a day the
   "Homepage headline test" card on `/admin/growth` should show visitors for every variant, and
   new sign-ups that came through the homepage should carry a non-null `hero_variant`. If

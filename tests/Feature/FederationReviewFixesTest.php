@@ -25,7 +25,7 @@ class FederationReviewFixesTest extends TestCase
     use CreatesScheduleData;
     use RefreshDatabase;
 
-    private const EVENTS_ENDPOINT = 'https://eventschedule.com/api/federation/events';
+    private const EVENTS_ENDPOINT = 'https://getvnt.com/api/federation/events';
 
     /** This install's own address. Pinned rather than read off config - see the backlink test. */
     private const INSTALL_ROOT = 'https://install.test';

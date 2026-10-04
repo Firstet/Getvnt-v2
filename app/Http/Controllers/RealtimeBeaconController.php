@@ -363,7 +363,7 @@ class RealtimeBeaconController extends Controller
     }
 
     /**
-     * Marketing and app pages keep their own title, minus the " | Event Schedule" suffix. Schedule
+     * Marketing and app pages keep their own title, minus the " | Getvnt" suffix. Schedule
      * pages resolve their names from ids at read time, and sign-in pages all share one fixed
      * title, so neither stores one.
      */
@@ -378,7 +378,7 @@ class RealtimeBeaconController extends Controller
             return null;
         }
 
-        $suffix = preg_quote((string) config('app.name', 'Event Schedule'), '/');
+        $suffix = preg_quote((string) config('app.name', 'Getvnt'), '/');
         $title = preg_replace('/\s*[|\-]\s*'.$suffix.'\s*$/u', '', $title);
 
         return RealtimeTracker::clean($title, 150);

@@ -34,7 +34,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Event Landing Page"
+        name="Getvnt - Event Landing Page"
         description="A free landing page for every event: the flyer, the date and time, the venue with a map, free registration, add to calendar, sharing and event structured data for search, with paid tickets on Pro."
         keywords="event landing page, event page, free event page, event website, event page with tickets, event registration page" />
     </x-slot>
@@ -52,12 +52,12 @@
         ];
 
         $landingFaqs = [
-            ['q' => 'What is an event landing page?', 'a' => 'A page for one event, built to turn a visitor into a guest: what it is, when and where, and a button to register or buy a ticket. On Event Schedule every event you publish gets one automatically, with its own link, and nothing to design.'],
+            ['q' => 'What is an event landing page?', 'a' => 'A page for one event, built to turn a visitor into a guest: what it is, when and where, and a button to register or buy a ticket. On Getvnt every event you publish gets one automatically, with its own link, and nothing to design.'],
             ['q' => 'Do I need a website?', 'a' => 'No. Each event page has its own link on your schedule, which you can share anywhere. If you already have a website, embed your whole calendar on it, free, and each event still opens its own page.'],
             ['q' => 'Can people buy tickets on the page?', 'a' => 'Yes. Free registration works on every plan, with a cap per date and a waitlist. Putting a price on a ticket is the Pro plan, paid through your own Stripe or PayPal account, and there is no platform fee on any plan.'],
             ['q' => 'What shows up when I share the link?', 'a' => 'The event name, a description from your own text, and your flyer. With no flyer the preview uses a performer\'s, the venue\'s or your schedule\'s own picture, and with none of those it shows no picture at all, rather than an advert of ours.'],
             ['q' => 'Will the page show up on Google?', 'a' => 'It is built to be found. The page title carries the event\'s name, with its date and venue while they fit (a recurring event\'s title leaves the date out), the description comes from your own text, and every event page carries event structured data describing what the page shows. Once your schedule\'s email address or phone number is confirmed, search engines are invited to index its pages, and its public events are listed in the sitemap until 30 days after they end. A recurring event keeps one page for the whole series rather than one per week, listed while the series runs. Nobody can promise a ranking, but nothing on the page stands in the way.'],
-            ['q' => 'Can I use my own domain or remove your branding?', 'a' => 'Yes. Removing Event Schedule branding is on Pro, and custom CSS for the finer details is too. A custom domain, so the page lives at your own address, is on Enterprise. Colours, fonts, backgrounds and header images are free on every plan.'],
+            ['q' => 'Can I use my own domain or remove your branding?', 'a' => 'Yes. Removing Getvnt branding is on Pro, and custom CSS for the finer details is too. A custom domain, so the page lives at your own address, is on Enterprise. Colours, fonts, backgrounds and header images are free on every plan.'],
             ['q' => 'How is this different from building a page on a website builder?', 'a' => 'A website builder is a blank page for anything, and an event page on one is yours to assemble. Here the page is built around the event: the date, the map, the ticket button and the calendar buttons are already in place, filled in from the event you entered.', 'link' => [marketing_url('/squarespace-replacement'), 'Compare with Squarespace']],
         ];
     @endphp
@@ -305,7 +305,7 @@
             $yours = [
                 ['Your colours and type', 'Pick the colours, the font, a background and a header image for your schedule, and every event page follows them.', 'Free', '/docs/schedule-styling'],
                 ['Your own CSS', 'Change the finer details of the page with a stylesheet of your own.', 'Pro', '/features/custom-css'],
-                ['No branding of ours', 'Take the Event Schedule credit off your pages, your embeds and your emails.', 'Pro', '/features/white-label'],
+                ['No branding of ours', 'Take the Getvnt credit off your pages, your embeds and your emails.', 'Pro', '/features/white-label'],
                 ['Your own domain', 'Put the whole schedule, event pages included, on an address you own.', 'Enterprise', '/features/custom-domain'],
             ];
         @endphp
@@ -388,7 +388,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                                 <span class="relative z-10 flex items-center gap-2">

@@ -1,6 +1,6 @@
 <x-marketing-layout>
-    <x-slot name="title">Terms of Service - Event Schedule</x-slot>
-    <x-slot name="description">Terms of Service for Event Schedule - the rules and guidelines for using our platform, including account eligibility, data ownership, and liability.</x-slot>
+    <x-slot name="title">Terms of Service - Getvnt</x-slot>
+    <x-slot name="description">Terms of Service for Getvnt - the rules and guidelines for using our platform, including account eligibility, data ownership, and liability.</x-slot>
     <x-slot name="breadcrumbTitle">Terms of Service</x-slot>
 
     <x-slot name="structuredData">
@@ -8,12 +8,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Terms of Service - Event Schedule",
-        "description": "Terms of Service for Event Schedule - the rules and guidelines for using our platform, including account eligibility, data ownership, and liability.",
+        "name": "Terms of Service - Getvnt",
+        "description": "Terms of Service for Getvnt - the rules and guidelines for using our platform, including account eligibility, data ownership, and liability.",
         "url": "{{ url()->current() }}",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         },
         "about": {
@@ -48,7 +48,7 @@
 
            WHY THIS ARGUES THE PRODUCT: it does not have to invent a
            feature. Clause 7 already says "The User owns all data
-           generated in their eventschedule.com account" and "Event
+           generated in their getvnt.com account" and "Event
            Schedule will not access, modify or distribute User account
            data." That is the product promise, in the document's own
            words, so it is the one clause the page sets as an endorsement
@@ -519,8 +519,8 @@
                 'id' => 'definitions',
                 'title' => 'Definitions',
                 'blocks' => [
-                    ['p', 'Users who create accounts to offer events and/or services on eventschedule.com are defined as "User Accounts" which include "Hosts", "Talent", "Venues", "Curators" or "Influences."'],
-                    ['p', 'Clients who use eventschedule.com services to view and/or book events are defined as "Attendees" or "Guests".'],
+                    ['p', 'Users who create accounts to offer events and/or services on getvnt.com are defined as "User Accounts" which include "Hosts", "Talent", "Venues", "Curators" or "Influences."'],
+                    ['p', 'Clients who use getvnt.com services to view and/or book events are defined as "Attendees" or "Guests".'],
                 ],
             ],
             [
@@ -552,15 +552,15 @@
                 'id' => 'your-event-obligations',
                 'title' => 'Your Event Obligations',
                 'blocks' => [
-                    ['p', 'You are solely responsible for, and Event Schedule disclaims all liability for, the provision of any goods or services promoted and/or sold to your customers and/or attendees as part of your use of the Event Schedule platform, and any obligations you may owe to your clients.'],
+                    ['p', 'You are solely responsible for, and Getvnt disclaims all liability for, the provision of any goods or services promoted and/or sold to your customers and/or attendees as part of your use of the Getvnt platform, and any obligations you may owe to your clients.'],
                 ],
             ],
             [
                 'id' => 'customer-service',
                 'title' => 'Customer Service',
                 'blocks' => [
-                    ['p', 'Customer service for your own event is your responsibility. We provide customer service to you, the account user, for use of the Event Schedule platform.'],
-                    ['p', 'You are solely responsible for all customer service policies and issues relating to your profile and events. In performing customer service for your profile or event, you will always present yourself as a separate entity from Event Schedule.'],
+                    ['p', 'Customer service for your own event is your responsibility. We provide customer service to you, the account user, for use of the Getvnt platform.'],
+                    ['p', 'You are solely responsible for all customer service policies and issues relating to your profile and events. In performing customer service for your profile or event, you will always present yourself as a separate entity from Getvnt.'],
                 ],
             ],
             [
@@ -570,50 +570,50 @@
                 // promise, in the instrument's own words.
                 'endorse' => true,
                 'blocks' => [
-                    ['p', 'The User owns all data generated in their eventschedule.com account.'],
-                    ['p', 'Event Schedule will not access, modify or distribute User account data, except as needed to provide, secure and support the service, as described in the Privacy Policy, or as required by law.'],
+                    ['p', 'The User owns all data generated in their getvnt.com account.'],
+                    ['p', 'Getvnt will not access, modify or distribute User account data, except as needed to provide, secure and support the service, as described in the Privacy Policy, or as required by law.'],
                 ],
             ],
             [
                 'id' => 'platform-service-data-use',
                 'title' => 'Platform Service & Data Use',
                 'blocks' => [
-                    ['p', 'You hereby grant Event Schedule a non-exclusive, fully sublicensable, worldwide, royalty-free right to collect, use, copy, store, and transmit data solely for the purpose of providing services to User Accounts.'],
+                    ['p', 'You hereby grant Getvnt a non-exclusive, fully sublicensable, worldwide, royalty-free right to collect, use, copy, store, and transmit data solely for the purpose of providing services to User Accounts.'],
                 ],
             ],
             [
-                // Added 2026-10-04 (GDPR review). Event Schedule processes the details an
+                // Added 2026-10-04 (GDPR review). Getvnt processes the details an
                 // organizer's audience gives them on the organizer's behalf (privacy policy,
                 // clause 01); this is the organizer's side of that, and the authority Boost
                 // conversion measurement (MetaAdsService::sendSaleConversion) runs on.
                 'id' => 'personal-data-you-collect',
                 'title' => 'Personal Data You Collect',
                 'blocks' => [
-                    ['p', 'When people buy tickets, RSVP, book, follow or sign up for emails through your profile or events, you are the controller of the personal data they give you, and Event Schedule processes it on your behalf: only to provide the service to you, and as described in the Privacy Policy.'],
-                    ['p', 'You are responsible for having a lawful basis for collecting that data and for every message you send, including permission to email any contacts you import, and for answering your attendees\' requests about their data. Event Schedule will help you do so.'],
-                    ['p', 'If you buy a Boost, you authorize Event Schedule to measure the campaign by telling Meta about ticket purchases on the boosted event, for buyers who allowed marketing cookies.'],
+                    ['p', 'When people buy tickets, RSVP, book, follow or sign up for emails through your profile or events, you are the controller of the personal data they give you, and Getvnt processes it on your behalf: only to provide the service to you, and as described in the Privacy Policy.'],
+                    ['p', 'You are responsible for having a lawful basis for collecting that data and for every message you send, including permission to email any contacts you import, and for answering your attendees\' requests about their data. Getvnt will help you do so.'],
+                    ['p', 'If you buy a Boost, you authorize Getvnt to measure the campaign by telling Meta about ticket purchases on the boosted event, for buyers who allowed marketing cookies.'],
                 ],
             ],
             [
                 'id' => 'limited-license-termination',
                 'title' => 'Limited License & Termination of Use',
                 'blocks' => [
-                    ['p', 'Event Schedule grants Users & Clients a limited license to access eventschedule.com This limited license may be revoked if deemed legally necessary, without notice to the User or Client and penalty to Event Schedule.'],
-                    ['p', 'You will lose your license to use the Service if you violate any provision of this Agreement. Event Schedule\'s policy is to investigate violations of this Agreement before terminating/deactivating accounts, however the decision to terminate any User account is the sole discretion of Event Schedule.'],
+                    ['p', 'Getvnt grants Users & Clients a limited license to access getvnt.com This limited license may be revoked if deemed legally necessary, without notice to the User or Client and penalty to Getvnt.'],
+                    ['p', 'You will lose your license to use the Service if you violate any provision of this Agreement. Getvnt\'s policy is to investigate violations of this Agreement before terminating/deactivating accounts, however the decision to terminate any User account is the sole discretion of Getvnt.'],
                 ],
             ],
             [
                 'id' => 'limitation-of-liability',
                 'title' => 'Limitation of Liability',
                 'blocks' => [
-                    ['p', 'To the maximum extent permitted by applicable law, in no event shall Event Schedule or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.'],
+                    ['p', 'To the maximum extent permitted by applicable law, in no event shall Getvnt or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.'],
                 ],
             ],
             [
                 'id' => 'as-is-disclaimer',
                 'title' => '"As Is" and "As Available" Disclaimer',
                 'blocks' => [
-                    ['limbs', 'Without limiting the foregoing, neither Event Schedule nor any of the company\'s provider makes any representation or warranty of any kind, express or implied:', [
+                    ['limbs', 'Without limiting the foregoing, neither Getvnt nor any of the company\'s provider makes any representation or warranty of any kind, express or implied:', [
                         '(i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon;',
                         '(ii) that the Service will be uninterrupted or error-free;',
                         '(iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or',
@@ -636,28 +636,28 @@
                 'id' => 'governing-law',
                 'title' => 'Governing Law',
                 'blocks' => [
-                    ['p', 'The laws of the United States of America, State of Florida, shall govern these Terms of Service & Conditions of Use. Your use of Event Schedule may also be subject to other local, state, national, or international laws.'],
+                    ['p', 'The laws of the United States of America, State of Florida, shall govern these Terms of Service & Conditions of Use. Your use of Getvnt may also be subject to other local, state, national, or international laws.'],
                 ],
             ],
             [
                 'id' => 'right-to-amend',
                 'title' => 'Right to Amend',
                 'blocks' => [
-                    ['p', 'Event Schedule may amend this Agreement upon notice to you, which may be provided through email, your account dashboard, and/or the Event Schedule website. You agree that any changes to this Agreement will be binding on you 7 days after the amendment is made (or, if a longer period if required by applicable law). If you elect to not accept the changes to this Agreement, you must immediately cancel/cease using the Event Schedule platform.'],
+                    ['p', 'Getvnt may amend this Agreement upon notice to you, which may be provided through email, your account dashboard, and/or the Getvnt website. You agree that any changes to this Agreement will be binding on you 7 days after the amendment is made (or, if a longer period if required by applicable law). If you elect to not accept the changes to this Agreement, you must immediately cancel/cease using the Getvnt platform.'],
                 ],
             ],
             [
                 'id' => 'accessibility',
                 'title' => 'Accessibility',
                 'blocks' => [
-                    ['raw', 'Event Schedule is committed to making our platform accessible to everyone. For details on our accessibility standards and how to report any issues, see our <a href="' . marketing_url('/accessibility') . '" class="es-fine-link">Accessibility Statement</a>.'],
+                    ['raw', 'Getvnt is committed to making our platform accessible to everyone. For details on our accessibility standards and how to report any issues, see our <a href="' . marketing_url('/accessibility') . '" class="es-fine-link">Accessibility Statement</a>.'],
                 ],
             ],
             [
                 'id' => 'communication-resolution',
                 'title' => 'Communication & Resolution',
                 'blocks' => [
-                    ['raw', 'Questions regarding the terms &amp; conditions of Event Schedule account(s), contact: <a href="mailto:legal@eventschedule.com" class="es-fine-link">legal@eventschedule.com</a>'],
+                    ['raw', 'Questions regarding the terms &amp; conditions of Getvnt account(s), contact: <a href="mailto:legal@getvnt.com" class="es-fine-link">legal@getvnt.com</a>'],
                 ],
             ],
         ];
@@ -709,7 +709,7 @@
 
                 <h1 class="es-fine-title es-balance es-fade-up es-d-2">Terms of <span class="es-fine-accent">Service</span></h1>
 
-                <p class="es-fine-lede es-fade-up es-d-3 mt-3">Event Schedule LLC</p>
+                <p class="es-fine-lede es-fade-up es-d-3 mt-3">Getvnt LLC</p>
 
                 <p class="es-fine-intro es-fade-up es-d-3 mt-5">
                     The whole agreement: the acceptance paragraph, then seventeen numbered clauses. Every
@@ -721,14 +721,14 @@
             <div id="acceptance" class="es-fine-recital es-fade-up es-d-4 mt-9 scroll-mt-24 p-6 sm:p-7" data-reveal>
                 <p class="es-fine-tag mb-3">Acceptance</p>
                 <p class="es-fine-p" style="margin-top: 0;">
-                    By Creating an Account with Event Schedule you are agreeing to the following terms. These Terms of Service apply to all websites, subdomains and URL extensions, including but not limited to eventschedule.com, owned by Event Schedule LLC. By utilizing the eventschedule.com website you are agreeing to the following terms of service &amp; conditions of use and constitute a binding agreement. If you do not agree to the below terms &amp; conditions, do not use the Event Schedule platform.
+                    By Creating an Account with Getvnt you are agreeing to the following terms. These Terms of Service apply to all websites, subdomains and URL extensions, including but not limited to getvnt.com, owned by Getvnt LLC. By utilizing the getvnt.com website you are agreeing to the following terms of service &amp; conditions of use and constitute a binding agreement. If you do not agree to the below terms &amp; conditions, do not use the Getvnt platform.
                 </p>
             </div>
 
             <dl class="es-fine-facts es-fade-up es-d-4 mt-9">
                 <div class="es-fine-fact">
                     <dt>Party</dt>
-                    <dd>Event Schedule LLC</dd>
+                    <dd>Getvnt LLC</dd>
                 </div>
                 <div class="es-fine-fact">
                     <dt>Governing law</dt>
@@ -736,7 +736,7 @@
                 </div>
                 <div class="es-fine-fact">
                     <dt>Questions</dt>
-                    <dd><a href="mailto:legal@eventschedule.com" class="es-fine-link">legal@eventschedule.com</a> <a href="#communication-resolution" class="es-fine-mono es-fine-link text-xs" aria-label="Clause 17, Communication and Resolution">&sect;&nbsp;17</a></dd>
+                    <dd><a href="mailto:legal@getvnt.com" class="es-fine-link">legal@getvnt.com</a> <a href="#communication-resolution" class="es-fine-mono es-fine-link text-xs" aria-label="Clause 17, Communication and Resolution">&sect;&nbsp;17</a></dd>
                 </div>
                 <div class="es-fine-fact">
                     <dt>Contents</dt>
@@ -853,7 +853,7 @@
                 @foreach ([
                     ['/privacy', 'Privacy Policy', 'What we collect, which third parties can see it, and the steps that purge it permanently.'],
                     ['/accessibility', 'Accessibility Statement', 'The standards we hold the interface to, and how to tell us when something falls short.'],
-                    ['/self-hosting-terms-of-service', 'Selfhosting Terms', 'The terms that apply when you run Event Schedule on your own infrastructure instead of ours.'],
+                    ['/self-hosting-terms-of-service', 'Selfhosting Terms', 'The terms that apply when you run Getvnt on your own infrastructure instead of ours.'],
                 ] as [$docHref, $docName, $docBlurb])
                     <a href="{{ marketing_url($docHref) }}" class="es-fine-card flex flex-col p-6" data-reveal>
                         <h3 class="es-fine-card-title es-fine-ink text-base font-bold">{{ $docName }}</h3>
@@ -870,7 +870,7 @@
 
             <p class="es-fine-muted mt-10 text-sm" data-reveal>
                 Anything in here you want explained, or think is wrong, goes to
-                <a href="mailto:legal@eventschedule.com" class="es-fine-link">legal@eventschedule.com</a>.
+                <a href="mailto:legal@getvnt.com" class="es-fine-link">legal@getvnt.com</a>.
                 A real person reads it.
             </p>
         </div>

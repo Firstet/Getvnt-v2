@@ -1,7 +1,7 @@
 <x-docs-page
     key="selfhost/boost"
-    title="Boost Setup with the Meta Marketing API - Event Schedule"
-    description="Set up Meta ads for boost on a selfhosted Event Schedule: Facebook app, ad account, Page, system user token, Pixel, webhooks and every META_ variable."
+    title="Boost Setup with the Meta Marketing API - Getvnt"
+    description="Set up Meta ads for boost on a selfhosted Getvnt: Facebook app, ad account, Page, system user token, Pixel, webhooks and every META_ variable."
     lede="Configure Meta/Facebook ads integration to let users promote events through paid Facebook and Instagram campaigns."
 >
     <x-slot:toc>
@@ -102,7 +102,7 @@
             <li>Go to <code class="doc-inline-code">developers.facebook.com</code></li>
             <li>Click <strong class="text-gray-900 dark:text-white">My Apps</strong> then <strong class="text-gray-900 dark:text-white">Create App</strong></li>
             <li>Select <strong class="text-gray-900 dark:text-white">Other</strong> as the use case, then <strong class="text-gray-900 dark:text-white">Business</strong> as the app type</li>
-            <li>Fill in the app name (e.g. "Event Schedule Boost") and contact email</li>
+            <li>Fill in the app name (e.g. "Getvnt Boost") and contact email</li>
             <li>Once created, note the <strong class="text-gray-900 dark:text-white">App ID</strong> and <strong class="text-gray-900 dark:text-white">App Secret</strong> from App Settings > Basic</li>
             <li>Add the app to your Business Account under <strong class="text-gray-900 dark:text-white">Business Settings > Accounts > Apps</strong>, so the system user in Step 4 can generate a token against it</li>
         </ol>
@@ -132,7 +132,7 @@
             <li>Go to <code class="doc-inline-code">business.facebook.com</code></li>
             <li>Create a Business Account if you don't have one</li>
             <li>In <strong class="text-gray-900 dark:text-white">Business Settings > Accounts > Ad Accounts</strong>, click <strong class="text-gray-900 dark:text-white">Add > Create a new ad account</strong></li>
-            <li>Name it (e.g. "Event Schedule Boost Ads"), set the currency and timezone</li>
+            <li>Name it (e.g. "Getvnt Boost Ads"), set the currency and timezone</li>
             <li>Add a payment method to the ad account. Meta bills it directly for every campaign your instance creates</li>
             <li>Note the <strong class="text-gray-900 dark:text-white">Ad Account ID</strong> (numeric, without the <code class="doc-inline-code">act_</code> prefix - the code adds that automatically)</li>
         </ol>
@@ -190,7 +190,7 @@
 
         <ol class="doc-list doc-list-numbered mb-6">
             <li>In <strong class="text-gray-900 dark:text-white">Business Settings > Users > System Users</strong>, click <strong class="text-gray-900 dark:text-white">Add</strong></li>
-            <li>Name it (e.g. "Event Schedule API") and set the role to <strong class="text-gray-900 dark:text-white">Admin</strong></li>
+            <li>Name it (e.g. "Getvnt API") and set the role to <strong class="text-gray-900 dark:text-white">Admin</strong></li>
             <li>Click <strong class="text-gray-900 dark:text-white">Add Assets</strong> and assign:
                 <ul class="doc-list mt-2">
                     <li>The Ad Account from Step 2 (with full control)</li>
@@ -233,7 +233,7 @@
 
         <ol class="doc-list doc-list-numbered mb-6">
             <li>In <strong class="text-gray-900 dark:text-white">Events Manager</strong> (<code class="doc-inline-code">business.facebook.com/events_manager</code>), click <strong class="text-gray-900 dark:text-white">Connect Data Sources</strong></li>
-            <li>Select <strong class="text-gray-900 dark:text-white">Web</strong>, name the pixel (e.g. "Event Schedule Pixel")</li>
+            <li>Select <strong class="text-gray-900 dark:text-white">Web</strong>, name the pixel (e.g. "Getvnt Pixel")</li>
             <li>Note the <strong class="text-gray-900 dark:text-white">Pixel ID</strong></li>
             <li>Assign the pixel to the system user from Step 4, so its token is allowed to send server-side events</li>
         </ol>
@@ -502,7 +502,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Note</div>
-            <p>If you already have the scheduler running for other Event Schedule features (e.g. Google Calendar sync, ticket releases), no additional cron configuration is needed.</p>
+            <p>If you already have the scheduler running for other Getvnt features (e.g. Google Calendar sync, ticket releases), no additional cron configuration is needed.</p>
         </div>
 
         <h3 class="doc-subheading">Queue workers</h3>

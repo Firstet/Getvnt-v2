@@ -2,7 +2,7 @@
 
 return [
     'event_details' => [
-        'base' => "You are an expert conversion copywriter for Event Schedule, an open-source event management platform. Generate the requested fields for an event with these details:\n\n- Event name: :event_name\n- Schedule name: :schedule_name\n- Schedule type: :schedule_type (talent = performer/artist, venue = location/place, curator = event organizer)\n- Existing short description: :short_description",
+        'base' => "You are an expert conversion copywriter for Getvnt, an open-source event management platform. Generate the requested fields for an event with these details:\n\n- Event name: :event_name\n- Schedule name: :schedule_name\n- Schedule type: :schedule_type (talent = performer/artist, venue = location/place, curator = event organizer)\n- Existing short description: :short_description",
         'existing_description_line' => '- Existing description: :description',
         'return_instruction' => "\nCRITICAL: Return ONLY raw JSON. Do not use markdown blocks. Your entire response must start exactly with { and end exactly with }.\n",
         'elements' => [
@@ -15,7 +15,7 @@ return [
     ],
 
     'schedule_details' => [
-        'base' => "You are an expert conversion copywriter for Event Schedule, an open-source event management platform. Generate the requested fields for a schedule with these details:\n\n- Schedule name: :name\n- Schedule type: :schedule_type (talent = performer/artist, venue = location/place, curator = event organizer)\n- Existing short description: :short_description",
+        'base' => "You are an expert conversion copywriter for Getvnt, an open-source event management platform. Generate the requested fields for a schedule with these details:\n\n- Schedule name: :name\n- Schedule type: :schedule_type (talent = performer/artist, venue = location/place, curator = event organizer)\n- Existing short description: :short_description",
         'existing_description_line' => '- Existing description: :description',
         'return_instruction' => "\nCRITICAL: Return ONLY raw JSON. Do not use markdown blocks. Your entire response must start exactly with { and end exactly with }.\n",
         'elements' => [
@@ -127,7 +127,7 @@ return [
     ],
 
     'blog_post' => [
-        'base' => "You are an expert SEO content marketer for Event Schedule, an open-source event management platform. Generate a highly valuable, original blog post about ':topic'.
+        'base' => "You are an expert SEO content marketer for Getvnt, an open-source event management platform. Generate a highly valuable, original blog post about ':topic'.
 
         Specifications:
         - Tone: Professional, authoritative, and deeply practical.
@@ -162,16 +162,16 @@ return [
         // would be a redirect hop). Plain URLs only: the old wording put a markdown link inside
         // the href, the model copied it, and the purifier turned it into a relative 404.
         'links_with_parent' => '- IMPORTANT: You MUST seamlessly integrate exactly 2 internal links in the HTML content:
-          1. <a href=":base_url/:parent_url">Event Schedule for :parent_title</a> (or natural variation).
-          2. <a href=":base_url">Event Schedule</a>.
+          1. <a href=":base_url/:parent_url">Getvnt for :parent_title</a> (or natural variation).
+          2. <a href=":base_url">Getvnt</a>.
         - Place these links where they provide genuine contextual value to the reader.
         - Write each href exactly as a plain absolute URL, as shown above. Never use markdown link syntax inside an href.',
-        'links_without_parent' => '- IMPORTANT: Integrate exactly 2 internal links naturally in the HTML content to <a href=":base_url">Event Schedule</a>. Do not force them; place them where they contextually fit. Write each href exactly as the plain absolute URL shown. Never use markdown link syntax inside an href.',
+        'links_without_parent' => '- IMPORTANT: Integrate exactly 2 internal links naturally in the HTML content to <a href=":base_url">Getvnt</a>. Do not force them; place them where they contextually fit. Write each href exactly as the plain absolute URL shown. Never use markdown link syntax inside an href.',
         'features_line' => "- Integrate these specific platform features into the practical advice naturally, rather than listing them like a sales pitch: :features.\n        ",
     ],
 
     'blog_topic' => [
-        'base' => 'You are an SEO content strategist for Event Schedule, an open-source event management platform. 
+        'base' => 'You are an SEO content strategist for Getvnt, an open-source event management platform. 
 
 Recent blog post titles published on the site:
 - :titles

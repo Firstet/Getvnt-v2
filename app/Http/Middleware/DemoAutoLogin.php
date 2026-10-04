@@ -104,7 +104,7 @@ class DemoAutoLogin
         $host = preg_replace('/:\d+$/', '', $host);
 
         // Get the base domain from config
-        $baseDomain = config('app.domain', 'eventschedule.com');
+        $baseDomain = config('app.domain', 'getvnt.com');
 
         // If the host ends with the base domain, extract the subdomain
         if (str_ends_with($host, '.'.$baseDomain)) {

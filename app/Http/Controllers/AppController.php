@@ -559,7 +559,7 @@ class AppController extends Controller
                 }
 
                 // The blog is the marketing site's, so it is written on the nexus only: a
-                // selfhosted SaaS is hosted too, and these were publishing Event Schedule's SEO
+                // selfhosted SaaS is hosted too, and these were publishing Getvnt's SEO
                 // posts to its own blog on its own AI key.
                 if (config('app.is_nexus')) {
                     try {
@@ -810,7 +810,7 @@ class AppController extends Controller
      *
      * Served from a route rather than as public/manifest.webmanifest because it cannot be one
      * file: layouts/app.blade.php is the shell for the guest portal as well as the admin portal,
-     * so a single static manifest naming "Event Schedule" with our logo turned every schedule's
+     * so a single static manifest naming "Getvnt" with our logo turned every schedule's
      * site into an installable app branded as OURS. Android honours that - once a visitor adds
      * the schedule to their home screen, every link they open on that host is handed to the
      * installed app, which shows its launch splash first: our 512px logo on white, for a couple
@@ -959,7 +959,7 @@ class AppController extends Controller
     /**
      * The manifest for the platform's own surfaces - the admin portal, and the apex.
      *
-     * This is where the Event Schedule identity belongs. On a selfhost or a self-hosted SaaS the
+     * This is where the Getvnt identity belongs. On a selfhost or a self-hosted SaaS the
      * install is the operator's, so it carries their name and logo from config, the same way the
      * rest of the app does.
      */
@@ -968,7 +968,7 @@ class AppController extends Controller
         $isNexus = config('app.is_nexus');
 
         return [
-            'name' => $isNexus ? 'Event Schedule' : config('app.name'),
+            'name' => $isNexus ? 'Getvnt' : config('app.name'),
             'short_name' => Str::limit($isNexus ? 'Schedule' : config('app.name'), 12, ''),
             'start_url' => '/',
             'scope' => '/',

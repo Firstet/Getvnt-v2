@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Nonprofits"
+        name="Getvnt for Nonprofits"
         description="Event management for charities, volunteer programs and campaign groups: free registration with a capacity for volunteer days, ticketed galas with zero platform fees, and one page supporters subscribe to."
         audience="Nonprofits, Charities, Volunteer Programs & Advocacy Groups"
         keywords="nonprofit event management, charity event ticketing, volunteer sign-up, fundraising gala tickets, nonprofit event calendar" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to run a nonprofit's events with Event Schedule",
+        "name": "How to run a nonprofit's events with Getvnt",
         "description": "One schedule for the organization, free sign-ups for the events that cost nothing, and tickets for the one night that raises money.",
         "step": [
             {
@@ -61,7 +61,7 @@
            payment provider's own fee, a platform line that reads 0, and
            the rest.
 
-           CLAIM DISCIPLINE. Event Schedule sells tickets and takes
+           CLAIM DISCIPLINE. Getvnt sells tickets and takes
            registrations. It does not process standalone donations, issue
            tax receipts or keep a donor CRM, and the page says so in its
            own section rather than letting "fundraising" imply it. No
@@ -269,16 +269,16 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for a nonprofit?',
+                'q' => 'Is Getvnt free for a nonprofit?',
                 'a' => 'The parts most nonprofits use every week are free forever: unlimited events, free registration with a capacity for volunteer days and info sessions, recurring shifts, sub-schedules for programs or chapters, an embeddable calendar, two-way calendar sync and a live calendar feed supporters subscribe to. Putting a price on a ticket, for a gala or a paid workshop, needs Pro at '.plan_price($proMonthly).' a month. There is no separate nonprofit discount, but there is also no platform fee on ticket sales on any plan, so the price of the plan is the whole cost to you.',
             ],
             [
-                'q' => 'Can we take donations through Event Schedule?',
-                'a' => 'No, and it is better to know that now. Event Schedule sells tickets and takes registrations; it does not process standalone donations, issue tax receipts or keep a donor database. What it does well is the event side of fundraising: the gala with a supporter ticket and a table of eight, the sponsored walk with capped places, and the page people keep coming back to for the next date. If your donations run through another tool, link to it from the event description.',
+                'q' => 'Can we take donations through Getvnt?',
+                'a' => 'No, and it is better to know that now. Getvnt sells tickets and takes registrations; it does not process standalone donations, issue tax receipts or keep a donor database. What it does well is the event side of fundraising: the gala with a supporter ticket and a table of eight, the sponsored walk with capped places, and the page people keep coming back to for the next date. If your donations run through another tool, link to it from the event description.',
             ],
             [
                 'q' => 'Where does the ticket money go?',
-                'a' => 'Straight to the organization. On Pro, a ticket is paid into your own Stripe or PayPal account, billed through your own Invoice Ninja company, taken by a payment link you control, or collected in cash at the door, chosen per event. Your payment provider charges its own processing fee, and Event Schedule adds nothing on top. If a guest cannot come, refund them from the Sales page: a Stripe or PayPal sale goes back through the provider in full or in part, and any other method is marked as refunded so your records stay straight.',
+                'a' => 'Straight to the organization. On Pro, a ticket is paid into your own Stripe or PayPal account, billed through your own Invoice Ninja company, taken by a payment link you control, or collected in cash at the door, chosen per event. Your payment provider charges its own processing fee, and Getvnt adds nothing on top. If a guest cannot come, refund them from the Sales page: a Stripe or PayPal sale goes back through the provider in full or in part, and any other method is marked as refunded so your records stay straight.',
             ],
             [
                 'q' => 'How do volunteer sign-ups work?',
@@ -298,7 +298,7 @@
             ],
             [
                 'q' => 'Who owns our supporters\' data?',
-                'a' => 'You do. The people who register, subscribe or buy a ticket are listed on your schedule, and you can export a backup of the schedule at any time. Event Schedule is open source, so an organization that has to keep personal data on its own server can selfhost the whole platform, and a selfhosted install includes every feature with no plan limits.',
+                'a' => 'You do. The people who register, subscribe or buy a ticket are listed on your schedule, and you can export a backup of the schedule at any time. Getvnt is open source, so an organization that has to keep personal data on its own server can selfhost the whole platform, and a selfhosted install includes every feature with no plan limits.',
             ],
         ];
 
@@ -339,7 +339,7 @@
 
                     <p class="es-cause-muted es-fade-up es-d-2 mb-9 max-w-xl text-lg sm:text-xl">
                         Most of what a nonprofit puts on costs nothing to attend, and the only question is
-                        who is coming. Then there is the one night that raises money. Event Schedule runs
+                        who is coming. Then there is the one night that raises money. Getvnt runs
                         both from one page, and takes nothing from the ticket.
                     </p>
 
@@ -380,7 +380,7 @@
                                 <span class="es-cause-receipt-muted text-xs">their own rate</span>
                             </div>
                             <div class="flex items-baseline justify-between gap-3">
-                                <span class="font-semibold">Event Schedule</span>
+                                <span class="font-semibold">Getvnt</span>
                                 <span class="es-cause-num es-cause-zero text-lg font-bold">0.00</span>
                             </div>
                             <div class="flex items-baseline justify-between gap-3">
@@ -389,7 +389,7 @@
                             </div>
                         </div>
 
-                        <div class="es-cause-bar mt-5" role="img" aria-label="Where a ticket goes: a small share to the payment provider, nothing to Event Schedule, and the rest to the organization.">
+                        <div class="es-cause-bar mt-5" role="img" aria-label="Where a ticket goes: a small share to the payment provider, nothing to Getvnt, and the rest to the organization.">
                             <span class="es-cause-bar-fee" style="width: 4%;"></span>
                             <span class="es-cause-bar-cause" style="width: 96%;"></span>
                         </div>
@@ -666,7 +666,7 @@
                         An events tool, <span class="es-cause-grad">not a donor database</span>.
                     </h2>
                     <p class="es-cause-muted mb-6 max-w-xl text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.15s;">
-                        Better to say it here than after you have moved the gala over. Event Schedule sells
+                        Better to say it here than after you have moved the gala over. Getvnt sells
                         tickets and takes registrations. It does not process standalone donations, issue tax
                         receipts or keep a CRM of giving history. Keep the tools you use for those, and link
                         to your donation page from the event description.
@@ -696,7 +696,7 @@
                     <div class="es-cause-card flex flex-col p-5 sm:col-span-2" data-reveal>
                         <p class="es-cause-cap es-cause-accent">Your data, your server</p>
                         <p class="es-cause-muted mt-2 text-sm">
-                            Event Schedule is open source. An organization with a data-protection policy that
+                            Getvnt is open source. An organization with a data-protection policy that
                             keeps personal data in-house can
                             <x-link href="{{ marketing_url('/selfhost') }}">selfhost the whole platform</x-link>,
                             with every feature included and no plan limits. On the hosted service, a backup
@@ -873,7 +873,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-cause-card es-cause-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-cause-muted text-sm">Event Schedule for</div>
+                            <div class="es-cause-muted text-sm">Getvnt for</div>
                             <div class="es-cause-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-cause-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -951,7 +951,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-cause" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=curator') }}" class="es-cause-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

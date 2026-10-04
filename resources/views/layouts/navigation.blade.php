@@ -10,7 +10,7 @@
     <div class="flex h-16 pt-2 shrink-0 items-center">
         <picture>
             <source srcset="{{ url('images/light_logo.webp') }}" type="image/webp">
-            <img class="h-10 w-auto" src="{{ url('images/light_logo.png') }}" alt="Event Schedule">
+            <img class="h-10 w-auto" src="{{ url('images/light_logo.png') }}" alt="Getvnt">
         </picture>
     </div>
 </a>

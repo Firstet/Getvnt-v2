@@ -4588,7 +4588,7 @@ class RoleController extends Controller
             $role->name = auth()->user()->name;
         }
 
-        // The name typed into the homepage's "your-name.eventschedule.com" box, carried through
+        // The name typed into the homepage's "your-name.getvnt.com" box, carried through
         // sign-up by RegisteredUserController::create(): "blue-room" is shown as "Blue Room", and
         // store() turns it back into the blue-room subdomain while the name is left as is. Read,
         // not pulled, so going back to the type chooser keeps it; only a FIRST schedule gets it,
@@ -4698,7 +4698,7 @@ class RoleController extends Controller
 
         $role->subdomain = Role::generateSubdomain($request->name);
 
-        // The address the homepage's claim box promised ("blue-room.eventschedule.com"), while the
+        // The address the homepage's claim box promised ("blue-room.getvnt.com"), while the
         // name still spells it. generateSubdomain() hands out the shortest free prefix, so "Blue
         // Room" would get "blue" - not what the visitor typed. Compared as slugs, not as the exact
         // prefill: create() can only guess the casing and punctuation ("Dj Mc", "Oreillys Bar"),
@@ -7252,8 +7252,8 @@ class RoleController extends Controller
             }
 
             // Structured single page: collect account + schedule + event together. On a custom
-            // domain, redirect to the schedule's canonical {subdomain}.eventschedule.com page so the
-            // inline login and the post-submit dashboard share the .eventschedule.com cookie (an
+            // domain, redirect to the schedule's canonical {subdomain}.getvnt.com page so the
+            // inline login and the post-submit dashboard share the .getvnt.com cookie (an
             // in-place login on the custom domain can't set a cookie the app subdomain reads).
             // Booking-form curators use a different form and fall through to the bridged path below.
             if (! $role->usesBookingForm()) {
@@ -7361,7 +7361,7 @@ class RoleController extends Controller
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_TIMEOUT => 10,
                 CURLOPT_CONNECTTIMEOUT => 5,
-                CURLOPT_USERAGENT => 'EventSchedule/1.0',
+                CURLOPT_USERAGENT => 'Getvnt/1.0',
                 CURLOPT_SSL_VERIFYPEER => true,
                 CURLOPT_SSL_VERIFYHOST => 2,
                 CURLOPT_PROTOCOLS => CURLPROTO_HTTPS, // Only HTTPS for Google API

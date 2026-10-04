@@ -15,7 +15,7 @@
  *   - description: Card description text
  *   - blog_topic: Topic for AI blog generation
  *   - icon_color: Tailwind color for the card (cyan, teal, indigo, etc.)
- *   - features: Key Event Schedule features relevant to this sub-audience
+ *   - features: Key Getvnt features relevant to this sub-audience
  */
 
 return [
@@ -1610,7 +1610,7 @@ return [
                 'name' => 'AI Assistants',
                 'slug' => 'for-ai-assistants',
                 'description' => 'Give your AI assistant the ability to create and manage events for users through natural conversation.',
-                'blog_topic' => 'How AI assistants can use the Event Schedule API to create and manage events through natural conversation',
+                'blog_topic' => 'How AI assistants can use the Getvnt API to create and manage events through natural conversation',
                 'icon_color' => 'cyan',
                 'features' => ['REST API', 'Event creation', 'Natural language'],
             ],
@@ -1618,7 +1618,7 @@ return [
                 'name' => 'Developer Tools & Scripts',
                 'slug' => 'for-developer-tools',
                 'description' => 'Automate event management with scripts, CLI tools, and custom integrations using the REST API.',
-                'blog_topic' => 'How developers can automate event management with scripts and CLI tools using the Event Schedule REST API',
+                'blog_topic' => 'How developers can automate event management with scripts and CLI tools using the Getvnt REST API',
                 'icon_color' => 'teal',
                 'features' => ['REST API', 'OpenAPI spec', 'Automation'],
             ],
@@ -1626,7 +1626,7 @@ return [
                 'name' => 'Community Bots',
                 'slug' => 'for-community-bots',
                 'description' => 'Build Discord, Slack, or Telegram bots that create events and notify community members automatically.',
-                'blog_topic' => 'How to build Discord, Slack, and Telegram bots that manage community events using the Event Schedule API',
+                'blog_topic' => 'How to build Discord, Slack, and Telegram bots that manage community events using the Getvnt API',
                 'icon_color' => 'emerald',
                 'features' => ['REST API', 'Webhooks', 'Bot integration'],
             ],
@@ -1634,15 +1634,15 @@ return [
                 'name' => 'Booking Platforms',
                 'slug' => 'for-booking-platforms',
                 'description' => 'Integrate event creation and ticket management into your existing booking or reservation system.',
-                'blog_topic' => 'How booking platforms can integrate event creation and ticket management using the Event Schedule API',
+                'blog_topic' => 'How booking platforms can integrate event creation and ticket management using the Getvnt API',
                 'icon_color' => 'sky',
                 'features' => ['Ticket management', 'REST API', 'Embeddable calendar'],
             ],
             'calendar-aggregators' => [
                 'name' => 'Calendar Aggregators',
                 'slug' => 'for-calendar-aggregators',
-                'description' => 'Pull events from Event Schedule into aggregation services and cross-platform calendar views.',
-                'blog_topic' => 'How calendar aggregation services can pull events from Event Schedule using the API and iCal feeds',
+                'description' => 'Pull events from Getvnt into aggregation services and cross-platform calendar views.',
+                'blog_topic' => 'How calendar aggregation services can pull events from Getvnt using the API and iCal feeds',
                 'icon_color' => 'blue',
                 'features' => ['REST API', 'iCal feeds', 'Google Calendar sync'],
             ],
@@ -1650,7 +1650,7 @@ return [
                 'name' => 'Custom Integrations',
                 'slug' => 'for-custom-integrations',
                 'description' => 'Use the OpenAPI spec to generate client libraries and build custom integrations in any language.',
-                'blog_topic' => 'How to use the Event Schedule OpenAPI spec to generate client libraries and build custom integrations',
+                'blog_topic' => 'How to use the Getvnt OpenAPI spec to generate client libraries and build custom integrations',
                 'icon_color' => 'amber',
                 'features' => ['OpenAPI spec', 'Client libraries', 'Any language'],
             ],

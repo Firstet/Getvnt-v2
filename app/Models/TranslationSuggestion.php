@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * A translation improvement shared by another EventSchedule install.
- * Only populated on the nexus app (eventschedule.com), where an admin
+ * A translation improvement shared by another Getvnt install.
+ * Only populated on the nexus app (getvnt.com), where an admin
  * reviews suggestions and approves the ones that should ship with the app.
  */
 class TranslationSuggestion extends Model

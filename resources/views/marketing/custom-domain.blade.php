@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Custom Domain | Use Your Own Domain - Event Schedule</x-slot>
+    <x-slot name="title">Custom Domain | Use Your Own Domain - Getvnt</x-slot>
     <x-slot name="description">Serve your schedule from events.yourdomain.com. HTTPS is issued once the CNAME resolves, and event links in emails and feeds carry your domain.</x-slot>
     <x-slot name="breadcrumbTitle">Custom Domain</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Custom Domain"
+        name="Getvnt - Custom Domain"
         description="Serve your event schedule on your own domain, with HTTPS provisioned automatically in Direct mode or a Cloudflare redirect in Redirect mode." />
     </x-slot>
 
@@ -32,7 +32,7 @@
            door itself (the pages are served there, so Role::
            servesOnCustomDomain makes it the canonical URL), Redirect
            hangs a sign in the lobby that points at the room (a 301, so
-           the eventschedule.com URL stays canonical).
+           the getvnt.com URL stays canonical).
 
            THE PROVISIONING RAIL SHOWS THE STAGES AS OBJECTS (review
            pass): each of the three states carries the thing actually on
@@ -490,11 +490,11 @@
         // asks; the columns are custom_domain_mode = 'direct' | 'redirect'
         // (RoleUpdateRequest: 'in:redirect,direct').
         $modeRows = [
-            ['What visitors see', 'Your domain, on every page of the schedule.', 'Your domain for one hop, then your eventschedule.com URL.'],
-            ['Where pages are served', 'On your domain. The request is matched to your schedule and served by the same routes as before.', 'On your eventschedule.com URL. Cloudflare forwards the request with a 301.'],
+            ['What visitors see', 'Your domain, on every page of the schedule.', 'Your domain for one hop, then your getvnt.com URL.'],
+            ['Where pages are served', 'On your domain. The request is matched to your schedule and served by the same routes as before.', 'On your getvnt.com URL. Cloudflare forwards the request with a 301.'],
             ['HTTPS', 'A certificate is issued for you once the DNS record resolves.', 'Included free through Cloudflare\'s free plan.'],
             ['DNS you add', 'One CNAME record at your registrar.', 'Cloudflare nameservers, two proxied A records, and a 301 forwarding rule.'],
-            ['Canonical URL for search', 'Your domain, once the status reads Active.', 'Your eventschedule.com URL. The redirect points at it, so it stays the address of record.'],
+            ['Canonical URL for search', 'Your domain, once the status reads Active.', 'Your getvnt.com URL. The redirect points at it, so it stays the address of record.'],
         ];
 
         // Direct mode, exactly the four steps the settings panel lists.
@@ -520,7 +520,7 @@
         // and the plate carries no letters until the record resolves.
         $railStates = [
             ['Saved', 'You entered the domain and chose Direct. The domain is registered with the platform that terminates HTTPS.', true,
-                ['sticker', 'Still the address', 'myschedule.eventschedule.com']],
+                ['sticker', 'Still the address', 'myschedule.getvnt.com']],
             ['Setting up', 'The settings panel shows a Setting up badge while the record propagates and the certificate is issued.', false,
                 ['blank', 'Nothing cut yet', 'Waiting on the DNS record']],
             ['Active', 'The plate is on. Your domain now serves the schedule, and it becomes the canonical URL for search.', false,
@@ -542,7 +542,7 @@
             ],
             [
                 'q' => 'Do I need to buy a domain separately?',
-                'a' => 'Yes. You need to own a domain name from any domain registrar. Event Schedule does not sell domains, but any domain you own can be used. Two limits are worth knowing before you start: an eventschedule.com host is rejected, and a domain can only be attached to one schedule at a time.',
+                'a' => 'Yes. You need to own a domain name from any domain registrar. Getvnt does not sell domains, but any domain you own can be used. Two limits are worth knowing before you start: an getvnt.com host is rejected, and a domain can only be attached to one schedule at a time.',
             ],
             [
                 'q' => 'Is SSL/HTTPS included?',
@@ -550,7 +550,7 @@
             ],
             [
                 'q' => 'Which plan includes custom domains?',
-                'a' => 'Custom domains are available on the Enterprise plan, which is '.plan_price($entMonthly).' a month. Free and Pro plans use the default eventschedule.com subdomain. You can upgrade at any time from your account settings. Removing the Event Schedule badge is a separate thing and starts on Pro.',
+                'a' => 'Custom domains are available on the Enterprise plan, which is '.plan_price($entMonthly).' a month. Free and Pro plans use the default getvnt.com subdomain. You can upgrade at any time from your account settings. Removing the Getvnt badge is a separate thing and starts on Pro.',
             ],
             [
                 'q' => 'How long does setup take, and what if it fails?',
@@ -558,7 +558,7 @@
             ],
             [
                 'q' => 'Does a custom domain change how search engines see my schedule?',
-                'a' => 'In Direct mode, yes, and that is the point: once the status reads Active, your domain is the canonical URL for the schedule and its event pages, and the sitemap is generated on your host. Redirect mode is different. It sends a 301 to your eventschedule.com URL, so that URL stays the address of record and the custom domain is a doorway to it.',
+                'a' => 'In Direct mode, yes, and that is the point: once the status reads Active, your domain is the canonical URL for the schedule and its event pages, and the sitemap is generated on your host. Redirect mode is different. It sends a 301 to your getvnt.com URL, so that URL stays the address of record and the custom domain is a doorway to it.',
             ],
             [
                 'q' => 'Do emails, calendar feeds and social links use my custom domain?',
@@ -612,7 +612,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-plate-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        Every schedule starts on an eventschedule.com subdomain. Enterprise lets you fix your own plate over it: serve the schedule directly on <strong class="es-plate-ink font-semibold">events.yourdomain.com</strong> with HTTPS issued for you, or point the domain at it through Cloudflare. Behind the door, nothing about your schedule changes.
+                        Every schedule starts on an getvnt.com subdomain. Enterprise lets you fix your own plate over it: serve the schedule directly on <strong class="es-plate-ink font-semibold">events.yourdomain.com</strong> with HTTPS issued for you, or point the domain at it through Cloudflare. Behind the door, nothing about your schedule changes.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
@@ -635,7 +635,7 @@
                 <div class="es-fade-up es-d-4 mx-auto w-full max-w-sm" aria-hidden="true">
                     <div class="es-plate-strip mx-auto max-w-xs">
                         <span class="es-plate-strip-label">Default</span>
-                        <span class="es-plate-strip-url">myschedule.eventschedule.com</span>
+                        <span class="es-plate-strip-url">myschedule.getvnt.com</span>
                     </div>
                     <div class="es-plate-drop"></div>
                     <div class="es-plate es-plate-lg text-center">
@@ -736,7 +736,7 @@
                     <div class="es-plate-objrow mb-6" aria-hidden="true">
                         <div class="es-plate-strip">
                             <span class="es-plate-strip-label">In the lobby</span>
-                            <span class="es-plate-strip-url">events.yourdomain.com &rarr; myschedule.eventschedule.com</span>
+                            <span class="es-plate-strip-url">events.yourdomain.com &rarr; myschedule.getvnt.com</span>
                         </div>
                     </div>
                     <h3 class="es-plate-ink mb-3 text-2xl font-bold">The sign in the lobby</h3>
@@ -744,7 +744,7 @@
                         Cloudflare answers for your domain and forwards each request, path and all, to your schedule URL with a 301. Past naming the domain in your settings, the work happens in your Cloudflare dashboard, HTTPS comes with their free plan, and a link to one event still lands on that event.
                     </p>
                     <p class="es-plate-muted mt-auto text-sm">
-                        Because visitors end up on your eventschedule.com URL, that URL stays the canonical one for search.
+                        Because visitors end up on your getvnt.com URL, that URL stays the canonical one for search.
                     </p>
                 </div>
             </div>
@@ -786,7 +786,7 @@
                     Cutting the <span class="es-plate-accent">letters</span>
                 </h2>
                 <p class="es-plate-muted mt-5 text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Four steps in either mode, and the only thing you ever type into Event Schedule is the domain itself. Everything else happens where your DNS lives.
+                    Four steps in either mode, and the only thing you ever type into Getvnt is the domain itself. Everything else happens where your DNS lives.
                 </p>
             </div>
 
@@ -842,7 +842,7 @@
                         <div class="es-plate-strip" aria-hidden="true">
                             <span class="es-plate-strip-label">The page rule</span>
                             <span class="es-plate-strip-url">*yourdomain.com/*</span>
-                            <span class="es-plate-strip-url">301 &rarr; https://myschedule.eventschedule.com/$2</span>
+                            <span class="es-plate-strip-url">301 &rarr; https://myschedule.getvnt.com/$2</span>
                         </div>
                     </div>
                 </div>
@@ -853,8 +853,8 @@
                 <h3 class="es-plate-ink mb-5 text-sm font-bold uppercase tracking-widest">Three house rules, whichever mode you pick</h3>
                 <ul class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                     @foreach ([
-                        'The domain has to be one you own. Buy it wherever you like; Event Schedule does not sell domains.',
-                        'An eventschedule.com host is rejected, and a domain can only be attached to one schedule at a time.',
+                        'The domain has to be one you own. Buy it wherever you like; Getvnt does not sell domains.',
+                        'An getvnt.com host is rejected, and a domain can only be attached to one schedule at a time.',
                         'Delete the schedule and the domain is released from the platform, so you can point it somewhere else.',
                     ] as $rule)
                         <li class="flex gap-3">
@@ -1003,7 +1003,7 @@
                     <div class="es-tilt-inner es-plate-card relative flex h-full flex-col overflow-hidden p-7 lg:p-9">
                         <p class="es-plate-tag mb-4">Search</p>
                         <h3 class="es-plate-ink mb-3 text-2xl font-bold lg:text-3xl">One address, recorded once</h3>
-                        <p class="es-plate-muted mb-6 text-lg leading-relaxed">Two hosts serving the same listings is the classic way to split your own search results. Event Schedule picks one and states it: in Direct mode, once the status is Active, your domain is the canonical URL for the schedule and its events, and the sitemap is generated on your host. In Redirect mode the 301 points at your eventschedule.com URL, so that one stays canonical and your domain is a doorway.</p>
+                        <p class="es-plate-muted mb-6 text-lg leading-relaxed">Two hosts serving the same listings is the classic way to split your own search results. Getvnt picks one and states it: in Direct mode, once the status is Active, your domain is the canonical URL for the schedule and its events, and the sitemap is generated on your host. In Redirect mode the 301 points at your getvnt.com URL, so that one stays canonical and your domain is a doorway.</p>
                         <div class="mt-auto flex flex-wrap gap-2">
                             <span class="es-plate-chip">Canonical tag</span>
                             <span class="es-plate-chip">Sitemap</span>
@@ -1068,7 +1068,7 @@
                             Part of <span class="es-plate-lit">Enterprise</span>
                         </h2>
                         <p class="mx-auto max-w-2xl text-lg text-gray-300" data-reveal style="--reveal-delay: 0.15s;">
-                            Custom domains sit on the Enterprise plan at {{ plan_price($entMonthly) }} a month, next to the AI features, internal and unlisted events, and a team of up to five people. Free and Pro schedules use their eventschedule.com subdomain, which is a perfectly good address to publish from while you decide.
+                            Custom domains sit on the Enterprise plan at {{ plan_price($entMonthly) }} a month, next to the AI features, internal and unlisted events, and a team of up to five people. Free and Pro schedules use their getvnt.com subdomain, which is a perfectly good address to publish from while you decide.
                         </p>
                     </div>
 
@@ -1155,7 +1155,7 @@
                 <div data-reveal>
                     <x-feature-link-card
                         name="White Label"
-                        description="Remove Event Schedule branding for a fully branded experience"
+                        description="Remove Getvnt branding for a fully branded experience"
                         :url="marketing_url('/features/white-label')"
                         icon-color="emerald"
                     >
@@ -1264,7 +1264,7 @@
                         <div dir="ltr" class="es-claim es-plate-engravable flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 px-5 py-4 transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="es-plate-suffix shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-plate-suffix shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-plate-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

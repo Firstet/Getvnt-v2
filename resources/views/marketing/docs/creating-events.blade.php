@@ -1,6 +1,6 @@
 <x-docs-page
     key="creating-events"
-    title="Creating Events: Tickets, Repeats, Privacy - Event Schedule"
+    title="Creating Events: Tickets, Repeats, Privacy - Getvnt"
     description="Add events to your schedule and set up each one: venue, lineup, recurrence, visibility, tickets and polls, plus how to tell attendees when plans change."
     lede="Add events to your schedule and configure event settings like venue, participants, recurrence, visibility, and tickets."
 >
@@ -153,7 +153,7 @@
         </div>
 
         <h3 id="notify-attendees" class="doc-subheading">Notifying Attendees of Changes</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Two groups can hear about a change to a published event: people who bought a ticket or registered, and people who asked to hear about it from the event page, who make up its <a href="{{ route('marketing.docs.tickets') }}#interest-list" class="doc-link">interest list</a>. On eventschedule.com, buyers and registrants are only emailed when your schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>; a selfhosted install only needs a working mailer. The interest list is emailed either way, although on eventschedule.com a schedule without its own email settings can only reach an interest list of more than 50 people once its owner has verified a phone number.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Two groups can hear about a change to a published event: people who bought a ticket or registered, and people who asked to hear about it from the event page, who make up its <a href="{{ route('marketing.docs.tickets') }}#interest-list" class="doc-link">interest list</a>. On getvnt.com, buyers and registrants are only emailed when your schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>; a selfhosted install only needs a working mailer. The interest list is emailed either way, although on getvnt.com a schedule without its own email settings can only reach an interest list of more than 50 people once its owner has verified a phone number.</p>
         <ul class="doc-list mb-6">
             <li><strong class="text-gray-900 dark:text-white">When you save a change.</strong> Change the date or time of a one-time event, or the venue or online link of any event, and saving first asks <strong class="text-gray-900 dark:text-white">Notify attendees of this change?</strong>, as long as there is someone to tell. Add a note of up to 280 characters if you like, check it with <strong class="text-gray-900 dark:text-white">Preview email</strong>, then choose <strong class="text-gray-900 dark:text-white">Notify attendees</strong> or <strong class="text-gray-900 dark:text-white">Don't notify</strong>. Either button saves the change. A new date or time on a recurring event is not detected, so it never asks.</li>
             <li><strong class="text-gray-900 dark:text-white">When you cancel.</strong> Choosing <strong class="text-gray-900 dark:text-white">Cancel event</strong> from the Actions menu asks <strong class="text-gray-900 dark:text-white">Cancel this event?</strong> first. When there is someone to tell, the button reads <strong class="text-gray-900 dark:text-white">Cancel and notify</strong> and the notice goes to all of them, with your note if you add one; otherwise it reads <strong class="text-gray-900 dark:text-white">Cancel event</strong>. <strong class="text-gray-900 dark:text-white">Keep event</strong> backs out.</li>
@@ -332,7 +332,7 @@
             </svg>
             Participants
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">The Participants section tags performers, speakers, or other participants on an event. Every one of them appears on the public event page, and anyone with a schedule of their own is linked to it. Anyone you name who is not already on Event Schedule gets a page of their own at the same time, which they can claim later - see <a href="#claim" class="doc-link">Pages Created for Others</a>.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">The Participants section tags performers, speakers, or other participants on an event. Every one of them appears on the public event page, and anyone with a schedule of their own is linked to it. Anyone you name who is not already on Getvnt gets a page of their own at the same time, which they can claim later - see <a href="#claim" class="doc-link">Pages Created for Others</a>.</p>
 
         <div class="doc-fields">
             <div class="doc-field">
@@ -358,7 +358,7 @@
             </svg>
             Pages Created for Others
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Naming a performer or a venue who is not yet on Event Schedule creates a schedule for them there and then. It carries the name you typed, any contact details you added, and every date you list them on. This happens whether or not you send them an invitation, because it is what lets their name appear on your event page at all.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Naming a performer or a venue who is not yet on Getvnt creates a schedule for them there and then. It carries the name you typed, any contact details you added, and every date you list them on. This happens whether or not you send them an invitation, because it is what lets their name appear on your event page at all.</p>
 
         <h3 class="doc-subheading">What the page shows</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Your event page shows the whole lineup. Every act you named appears there by name, and an act with a page of its own, claimed or not, is linked to it, so the act and anyone else can get from your event to the page made for them.</p>
@@ -577,7 +577,7 @@
         <ol class="doc-list doc-list-numbered mb-6">
             <li>Add and verify your phone number in <a href="{{ route('marketing.docs.account_settings') }}" class="doc-link">Settings</a>, under Profile Information</li>
             <li>Make sure you have a default schedule set, or exactly one schedule you can edit, so the event has somewhere to go</li>
-            <li>Send a WhatsApp message to the Event Schedule number</li>
+            <li>Send a WhatsApp message to the Getvnt number</li>
             <li>Include the event details as text, or attach a photo of a flyer or poster</li>
             <li>AI parses the details and creates the event on that schedule</li>
             <li>You get a reply with the event name, date, and link</li>
@@ -1048,7 +1048,7 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Create Events in Event Schedule",
+            "name": "How to Create Events in Getvnt",
             "description": "Learn how to add events to your schedule and configure event settings like venue, participants, tickets, and more.",
             "totalTime": "PT3M",
             "step": [

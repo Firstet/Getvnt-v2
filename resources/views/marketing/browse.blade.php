@@ -1,6 +1,6 @@
 <x-marketing-layout>
     {{-- SEO Slots --}}
-    <x-slot name="title">Upcoming Events: Music, Comedy, Classes | Event Schedule</x-slot>
+    <x-slot name="title">Upcoming Events: Music, Comedy, Classes | Getvnt</x-slot>
     <x-slot name="description">Upcoming live music, comedy, classes, markets and meetups, soonest first. Free to browse, no account needed. Search by event, city or schedule.</x-slot>
     <x-slot name="breadcrumbTitle">Browse</x-slot>
 
@@ -31,7 +31,7 @@
     {!! \App\Utils\SeoUtils::jsonLd([
         '@context' => 'https://schema.org',
         '@type' => 'ItemList',
-        'name' => 'Upcoming events on Event Schedule',
+        'name' => 'Upcoming events on Getvnt',
         'url' => url('/browse'),
         'itemListElement' => $itemListElements,
     ]) !!}
@@ -569,7 +569,7 @@
             ],
             [
                 'q' => 'Why are some listings from other websites?',
-                'a' => 'Event Schedule is open source, so other people run their own copies of it and some choose to share their events here. Those cards open on the site that published them.',
+                'a' => 'Getvnt is open source, so other people run their own copies of it and some choose to share their events here. Those cards open on the site that published them.',
             ],
             [
                 'q' => 'Can I browse by city?',
@@ -618,7 +618,7 @@
                     <div class="es-news-rule" aria-hidden="true"></div>
 
                     <div class="mt-4 mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-                        <p class="es-news-folio">Event Schedule &middot; What's on</p>
+                        <p class="es-news-folio">Getvnt &middot; What's on</p>
                         <p class="es-news-folio">Soonest first &middot; <span class="es-news-num">{{ $eventCount }}</span> showing</p>
                     </div>
 
@@ -637,7 +637,7 @@
 
                     <div class="es-news-rule mb-6" aria-hidden="true"></div>
 
-                    {{-- What kind of events, not how the page works: "Event Schedule"
+                    {{-- What kind of events, not how the page works: "Getvnt"
                          tells a first-time visitor nothing, and the cards only answer
                          it after a scroll. A noun list also survives the empty state. --}}
                     <p class="es-fade-up es-d-2 es-news-muted max-w-2xl text-lg">
@@ -732,7 +732,7 @@
         </div>
     </section>
 
-    {{-- Federated listings from other Event Schedule installs.
+    {{-- Federated listings from other Getvnt installs.
 
          Their own section rather than mixed into the grid above: provenance
          stays obvious, and the local query keeps its single ordering and limit.
@@ -954,7 +954,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-news-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5">
                             <span class="relative z-10 flex items-center gap-2">

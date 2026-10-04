@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Stripe Payments"
+        name="Getvnt - Stripe Payments"
         description="Sell tickets through your own connected Stripe account. The charge is created on your account with no platform fee, and Stripe pays you out on its own schedule."
         keywords="stripe ticket payments, stripe connect event tickets, zero platform fee ticketing, stripe checkout tickets, direct payouts" />
     </x-slot>
@@ -38,7 +38,7 @@
              1. TWO LANES, not one. A vertical money lane (solid rule:
                 card, your Stripe account, your bank) beside a vertical
                 receipt lane (dashed rule: Stripe's signed webhook, us,
-                the ticket email). Event Schedule appears only on the
+                the ticket email). Getvnt appears only on the
                 dashed one. Deliberately VERTICAL: a horizontal three-stop
                 rail collapses at 320px, and a vertical route reads at
                 every width. Abstract route strokes only - no outline
@@ -625,7 +625,7 @@
                 'zero'   => false,
             ],
             [
-                'line'   => 'Event Schedule platform fee',
+                'line'   => 'Getvnt platform fee',
                 'note'   => 'No application fee is added to the charge, so there is nothing on this line.',
                 'amount' => $money(0),
                 'who'    => 'Nobody',
@@ -635,7 +635,7 @@
 
         // The remittance stub the page ends on: the whole cost of getting
         // paid, in the order a statement would print it. Nothing here is a
-        // figure Event Schedule collects on a sale.
+        // figure Getvnt collects on a sale.
         $remit = [
             ['Our cut of each sale', $money(0), 'There is no fee field in the charge we create.'],
             ['The Pro plan, monthly', plan_price($proMonthly), 'Optional: it is what lets you sell a ticket that carries a price. Nothing further is charged on a sale.'],
@@ -643,7 +643,7 @@
         ];
 
         // The two lanes. Money on the solid rule, the receipt on the
-        // dashed one. Event Schedule appears on the dashed lane only.
+        // dashed one. Getvnt appears on the dashed lane only.
         $moneyLane = [
             ['Buyer pays', 'Card, Apple Pay or Google Pay on Stripe Checkout.', false],
             ['Your Stripe account', 'The charge is created on your connected account.', true],
@@ -651,7 +651,7 @@
         ];
         $receiptLane = [
             ['Stripe signs a webhook', 'A payment event, not money.', false],
-            ['Event Schedule reads it', 'Verifies it, reconciles the amount, marks the sale paid.', true],
+            ['Getvnt reads it', 'Verifies it, reconciles the amount, marks the sale paid.', true],
             ['The ticket goes out', 'Confirmation email with the QR code.', false],
         ];
 
@@ -717,20 +717,20 @@
 
         $faqs = [
             [
-                'q' => 'Does Event Schedule take a cut of ticket sales?',
-                'a' => 'No. On the hosted platform the charge is created on your own connected Stripe account and no application fee is added to it, so there is no line where a platform cut could be taken. You pay Stripe its processing fee and keep the rest. Selling tickets that carry a price is on the Pro plan at '.plan_price($proMonthly).' a month, and that subscription is the whole of what Event Schedule charges.',
+                'q' => 'Does Getvnt take a cut of ticket sales?',
+                'a' => 'No. On the hosted platform the charge is created on your own connected Stripe account and no application fee is added to it, so there is no line where a platform cut could be taken. You pay Stripe its processing fee and keep the rest. Selling tickets that carry a price is on the Pro plan at '.plan_price($proMonthly).' a month, and that subscription is the whole of what Getvnt charges.',
             ],
             [
                 'q' => 'How do I connect Stripe, and what happens if it is not finished?',
-                'a' => 'One button hands you to Stripe\'s own onboarding. When you come back, Event Schedule checks a single thing: whether your account can accept charges. Until that is true the account reads as Pending and Stripe is not offered as a payment method on an event. The only details kept here are the account id, the business name Stripe reports and the date the account was confirmed. Unlinking drops the id and the confirmation, and Stripe stops being offered on your events.',
+                'a' => 'One button hands you to Stripe\'s own onboarding. When you come back, Getvnt checks a single thing: whether your account can accept charges. Until that is true the account reads as Pending and Stripe is not offered as a payment method on an event. The only details kept here are the account id, the business name Stripe reports and the date the account was confirmed. Unlinking drops the id and the confirmation, and Stripe stops being offered on your events.',
             ],
             [
                 'q' => 'How do payouts reach my bank?',
-                'a' => 'Stripe pays you, not us, because the money was never in an Event Schedule account. Your payout schedule, your balance and your payout history all live in your Stripe Dashboard, on whatever terms Stripe applies to your account and country.',
+                'a' => 'Stripe pays you, not us, because the money was never in an Getvnt account. Your payout schedule, your balance and your payout history all live in your Stripe Dashboard, on whatever terms Stripe applies to your account and country.',
             ],
             [
                 'q' => 'Which payment methods can buyers use?',
-                'a' => 'Whatever your Stripe account has switched on. Event Schedule sends buyers to Stripe Checkout without pinning the method list, so cards, Apple Pay, Google Pay and the local methods Stripe enables for you all appear. Buyers never type card details into an Event Schedule page.',
+                'a' => 'Whatever your Stripe account has switched on. Getvnt sends buyers to Stripe Checkout without pinning the method list, so cards, Apple Pay, Google Pay and the local methods Stripe enables for you all appear. Buyers never type card details into an Getvnt page.',
             ],
             [
                 'q' => 'Which currency are tickets priced in?',
@@ -750,7 +750,7 @@
             ],
             [
                 'q' => 'Can I refund from the Stripe Dashboard instead?',
-                'a' => 'You can, but Event Schedule will not hear about it: no refund event comes back from Stripe, so the sale here would still read as paid and its tickets would still scan. Refunding from the Sales page keeps the two in step, and the refund still shows in your Stripe Dashboard. Outside installment plans, which remember the account that took each payment, it is issued on the Stripe account you are connected to now, so if you have switched accounts since the sale it fails rather than coming out of the wrong one.',
+                'a' => 'You can, but Getvnt will not hear about it: no refund event comes back from Stripe, so the sale here would still read as paid and its tickets would still scan. Refunding from the Sales page keeps the two in step, and the refund still shows in your Stripe Dashboard. Outside installment plans, which remember the account that took each payment, it is issued on the Stripe account you are connected to now, so if you have switched accounts since the sale it fails rather than coming out of the wrong one.',
             ],
             [
                 'q' => 'Can a selfhosted install take Stripe payments?',
@@ -852,7 +852,7 @@
                     </div>
 
                     <p class="es-payout-muted mt-5 text-xs">
-                        Event Schedule appears on the dashed lane only. It reads a signed payment event and
+                        Getvnt appears on the dashed lane only. It reads a signed payment event and
                         issues a ticket; it is never a stop the money passes through.
                     </p>
                 </div>
@@ -874,7 +874,7 @@
                     </h2>
                     <p class="es-payout-muted mb-8 max-w-xl text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.15s;">
                         Two parties touch a ticket sale, and only one of them takes anything. Stripe deducts
-                        its processing fee from the charge. Event Schedule deducts nothing, because there is
+                        its processing fee from the charge. Getvnt deducts nothing, because there is
                         no fee field in the charge we ask Stripe to create.
                     </p>
 
@@ -974,7 +974,7 @@
 
             <div class="grid gap-4 md:grid-cols-2" data-reveal-group="100">
                 <div class="es-payout-card es-payout-hover p-7" data-reveal>
-                    <p class="es-payout-tag mb-3">Hosted at eventschedule.com</p>
+                    <p class="es-payout-tag mb-3">Hosted at getvnt.com</p>
                     <h3 class="es-payout-ink mb-3 text-xl font-bold">Stripe Connect, one button</h3>
                     <p class="es-payout-muted mb-5 text-sm">
                         Connect Stripe and you are handed to Stripe's own onboarding. Coming back, Event
@@ -1134,7 +1134,7 @@
 
             <div class="mt-8 text-center" data-reveal>
                 <span class="es-payout-muted text-sm">
-                    Not one of these routes passes through an Event Schedule account.
+                    Not one of these routes passes through an Getvnt account.
                     <a href="{{ marketing_url('/invoiceninja') }}" class="es-payout-accent font-semibold underline">See the Invoice Ninja integration</a>
                 </span>
             </div>
@@ -1172,7 +1172,7 @@
 
             <div class="mt-8 text-center" data-reveal>
                 <span class="es-payout-muted text-sm">
-                    Event Schedule does not calculate or collect sales tax. Price tickets inclusive of what
+                    Getvnt does not calculate or collect sales tax. Price tickets inclusive of what
                     you owe, and export the sales as CSV when it is time to file.
                 </span>
             </div>
@@ -1251,7 +1251,7 @@
                     <h3 class="es-payout-ink mb-2 text-xl font-bold">Explore more integrations</h3>
                     <p class="es-payout-muted mb-5 text-sm">
                         PayPal, Invoice Ninja, Google and Outlook calendars, CalDAV, outgoing webhooks and
-                        the REST API. Everything Event Schedule connects to.
+                        the REST API. Everything Getvnt connects to.
                     </p>
                     <span class="es-payout-accent mt-auto inline-flex items-center gap-2 text-sm font-semibold">
                         View all integrations
@@ -1327,7 +1327,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-payout-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

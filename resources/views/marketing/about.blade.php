@@ -512,18 +512,18 @@
         $imprint = [
             [
                 'Publisher',
-                'Event Schedule, built by the team behind Invoice Ninja, a source-available invoicing platform.',
+                'Getvnt, built by the team behind Invoice Ninja, a source-available invoicing platform.',
                 'https://invoiceninja.com', 'invoiceninja.com', true,
             ],
             [
                 'License',
                 'The Attribution Assurance License. The full text is the LICENSE file in the repository, not a summary of it.',
-                'https://github.com/eventschedule/eventschedule/blob/main/LICENSE', 'Read the license', true,
+                'https://github.com/Firstet/Getvnt-v2/blob/main/LICENSE', 'Read the license', true,
             ],
             [
                 'Source',
                 $sourceNote,
-                'https://github.com/eventschedule/eventschedule', 'github.com/eventschedule', true,
+                'https://github.com/Firstet/Getvnt-v2', 'github.com/Firstet', true,
             ],
             [
                 'Set in',
@@ -532,7 +532,7 @@
             ],
             [
                 'Impression',
-                'Hosted at eventschedule.com, or selfhosted on hardware you control. A selfhosted install resolves to the Enterprise tier, so no paid plan holds anything back from it.',
+                'Hosted at getvnt.com, or selfhosted on hardware you control. A selfhosted install resolves to the Enterprise tier, so no paid plan holds anything back from it.',
                 marketing_url('/selfhost'), 'How selfhosting works', false,
             ],
             [
@@ -594,18 +594,18 @@
             ],
             [
                 '"Unlimited events" has a daily ceiling on the hosted site.',
-                'Not a plan feature, a rate limit: a schedule on eventschedule.com can create 500 events in a day, 1,000 on Enterprise and 100 while a Pro trial is running, with a wider ceiling across every schedule one owner runs. Nothing about a real programme comes near it, and a selfhosted install has no ceiling at all because there is nobody else to protect it from.',
+                'Not a plan feature, a rate limit: a schedule on getvnt.com can create 500 events in a day, 1,000 on Enterprise and 100 while a Pro trial is running, with a wider ceiling across every schedule one owner runs. Nothing about a real programme comes near it, and a selfhosted install has no ceiling at all because there is nobody else to protect it from.',
             ],
         ];
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule really free?',
+                'q' => 'Is Getvnt really free?',
                 'a' => 'Yes, and not as a trial. Unlimited events and schedules, recurring events with date exceptions, sub-schedules, free registration with a capacity limit and no monthly ceiling, two-way Google, Outlook and CalDAV sync, the embeddable calendar, built-in analytics and scanning a ticket at the door are all on the free plan, with no credit card and no expiry. Selling a ticket that carries a price, and the check-in dashboard, are on the Pro plan at '.plan_price($proMonthly).' a month, multiple team members are on Enterprise at '.plan_price($entMonthly).', and the free plan is one team member.',
             ],
             [
                 'q' => 'What license is it under, and where is the source?',
-                'a' => 'The Attribution Assurance License. The full text is the LICENSE file in the repository at github.com/eventschedule/eventschedule, which is public: you can read the code that runs the hosted service, fork it, or open an issue against it.',
+                'a' => 'The Attribution Assurance License. The full text is the LICENSE file in the repository at github.com/Firstet/Getvnt-v2, which is public: you can read the code that runs the hosted service, fork it, or open an issue against it.',
             ],
             [
                 'q' => 'Can I run it on my own server?',
@@ -613,11 +613,11 @@
             ],
             [
                 'q' => 'Do you take a cut of ticket sales?',
-                'a' => 'No. Event Schedule charges zero platform fees. You connect your own Stripe or PayPal account and the money settles into it directly, so past the processor\'s own charge nothing is taken. Payfast, an external payment link, cash at the door and Invoice Ninja are the other routes, and none of them is plan gated either. A refund comes out of the same account: from the Sales page a Stripe or PayPal sale goes back in full or in part through the provider, on every plan.',
+                'a' => 'No. Getvnt charges zero platform fees. You connect your own Stripe or PayPal account and the money settles into it directly, so past the processor\'s own charge nothing is taken. Payfast, an external payment link, cash at the door and Invoice Ninja are the other routes, and none of them is plan gated either. A refund comes out of the same account: from the Sales page a Stripe or PayPal sale goes back in full or in part through the provider, on every plan.',
             ],
             [
                 'q' => 'Who is behind it?',
-                'a' => 'Event Schedule is built by the team behind Invoice Ninja, a source-available invoicing platform. The attribution clause in the license names the author, which is an unusual thing to write into a license and the reason this page can be specific about who made it.',
+                'a' => 'Getvnt is built by the team behind Invoice Ninja, a source-available invoicing platform. The attribution clause in the license names the author, which is an unusual thing to write into a license and the reason this page can be specific about who made it.',
             ],
             [
                 'q' => 'What happens to my data?',
@@ -712,7 +712,7 @@
 
                         <div class="es-colo-hair my-5" aria-hidden="true"></div>
                         <p class="es-colo-muted es-colo-mono text-xs">
-                            Attribution Assurance License &middot; github.com/eventschedule
+                            Attribution Assurance License &middot; github.com/Firstet
                         </p>
                     </div>
                 </div>
@@ -752,7 +752,7 @@
                         <p class="es-colo-tag mb-3">Question two</p>
                         <h3 class="es-colo-title es-colo-ink mb-3 text-xl">What it is made of</h3>
                         <p class="es-colo-muted text-sm leading-relaxed">Laravel on the server, Vue on the front end, MySQL underneath, and all of it on GitHub. The code that runs the hosted service is the code you can download.</p>
-                        <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="es-colo-link mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold">
+                        <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="es-colo-link mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold">
                             Open the repository
                             <svg aria-hidden="true" class="h-4 w-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                         </a>
@@ -793,7 +793,7 @@
 
             <div class="es-colo-leaf p-5 sm:p-8" data-reveal="panel">
                 <table class="es-colo-imprint">
-                    <caption class="sr-only">The Event Schedule imprint: publisher, license, source, stack, hosting, fees, plans, analytics and first edition</caption>
+                    <caption class="sr-only">The Getvnt imprint: publisher, license, source, stack, hosting, fees, plans, analytics and first edition</caption>
                     <thead>
                         <tr>
                             <th scope="col" class="es-colo-tag">Field</th>
@@ -837,9 +837,9 @@
             <div class="es-colo-leaf relative overflow-hidden p-7 sm:p-10" data-reveal="panel">
                 <div class="es-colo-laid pointer-events-none absolute inset-0" aria-hidden="true"></div>
                 <div class="relative space-y-6 text-lg leading-relaxed">
-                    <p class="es-colo-drop es-colo-ink">Event Schedule was created to solve a simple problem: making it easy for anyone with events to share them with their audience.</p>
+                    <p class="es-colo-drop es-colo-ink">Getvnt was created to solve a simple problem: making it easy for anyone with events to share them with their audience.</p>
                     <p class="es-colo-muted">Whether you are a musician with upcoming shows, a venue with a packed calendar, a curator aggregating local happenings, or a food truck appearing at a different spot each day, you deserve a simple, professional way to let people know where you will be.</p>
-                    <p class="es-colo-muted">Sharing your schedule should not require expensive software or technical expertise. That is why Event Schedule is free, fast and easy to use, and why the version you can download is the version we run.</p>
+                    <p class="es-colo-muted">Sharing your schedule should not require expensive software or technical expertise. That is why Getvnt is free, fast and easy to use, and why the version you can download is the version we run.</p>
                 </div>
             </div>
         </div>
@@ -857,7 +857,7 @@
                 </h2>
                 <div class="es-colo-rule es-colo-draw" aria-hidden="true"></div>
                 <p class="es-colo-muted mt-5 text-lg">
-                    However you share your events, Event Schedule is built to work for you. There are only three schedule types, and everything else is a variation on them.
+                    However you share your events, Getvnt is built to work for you. There are only three schedule types, and everything else is a variation on them.
                 </p>
             </div>
 
@@ -912,7 +912,7 @@
             <div class="es-colo-duplex grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14" data-reveal-group="120">
                 <div data-reveal>
                     <p class="es-colo-tag mb-3">Recto &middot; we run it</p>
-                    <h3 class="es-colo-title es-colo-ink mb-2 text-2xl">eventschedule.com</h3>
+                    <h3 class="es-colo-title es-colo-ink mb-2 text-2xl">getvnt.com</h3>
                     <p class="es-colo-muted mb-6">Sign up and you have a schedule at your own subdomain in a couple of minutes. Updates, backups and the mail queue are our problem.</p>
                     <ul class="space-y-3">
                         <li class="flex gap-3">
@@ -1033,7 +1033,7 @@
                 </h2>
                 <div class="es-colo-rule es-colo-draw" aria-hidden="true"></div>
                 <p class="es-colo-muted mt-5 text-lg">
-                    Books ship an errata slip tipped in at the front. Software rarely does. {{ ucfirst(\Illuminate\Support\Number::spell(count($errata))) }} things Event Schedule does not do, so you can decide with the whole picture rather than half of it.
+                    Books ship an errata slip tipped in at the front. Software rarely does. {{ ucfirst(\Illuminate\Support\Number::spell(count($errata))) }} things Getvnt does not do, so you can decide with the whole picture rather than half of it.
                 </p>
             </div>
 
@@ -1083,7 +1083,7 @@
                         <p class="es-colo-tag">Same people<br>Same approach</p>
                     </div>
                     <p class="es-colo-muted mb-4 text-lg leading-relaxed">
-                        Event Schedule is made by the same team that built Invoice Ninja, a source-available invoicing platform used by businesses around the world. Both projects are run the same way: the source is public, selfhosting is a first-class option rather than an afterthought, and the paid plans exist to fund the work rather than to hold the useful parts hostage.
+                        Getvnt is made by the same team that built Invoice Ninja, a source-available invoicing platform used by businesses around the world. Both projects are run the same way: the source is public, selfhosting is a first-class option rather than an afterthought, and the paid plans exist to fund the work rather than to hold the useful parts hostage.
                     </p>
                     <p class="es-colo-muted mb-8">
                         That is also why the license here is unusual. The Attribution Assurance License requires that the author's name travels with the code, which means the answer to "who made this" is written into the software itself and not just onto a marketing page.
@@ -1124,7 +1124,7 @@
                 </div>
 
                 <p class="es-colo-muted mx-auto mt-6 mb-8 max-w-2xl text-lg" data-reveal style="--reveal-delay: 0.1s;">
-                    Event Schedule is open source under the Attribution Assurance License. Selfhost it on your own server, contribute to the codebase, or just use it free forever. The repository is public and the history goes back to the first commit.
+                    Getvnt is open source under the Attribution Assurance License. Selfhost it on your own server, contribute to the codebase, or just use it free forever. The repository is public and the history goes back to the first commit.
                 </p>
 
                 <div class="flex justify-center" data-reveal>
@@ -1132,7 +1132,7 @@
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-4" data-reveal>
-                    <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="es-colo-ghost inline-flex items-center gap-2 px-6 py-3 font-semibold transition-all duration-200">
+                    <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="es-colo-ghost inline-flex items-center gap-2 px-6 py-3 font-semibold transition-all duration-200">
                         <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
@@ -1237,7 +1237,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-colo-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5">
                             <span class="relative z-10 flex items-center gap-2">

@@ -17,11 +17,11 @@ class CheckVersion extends Command
 {
     protected $signature = 'app:check-version';
 
-    protected $description = 'Check GitHub for the latest Event Schedule release and cache the result';
+    protected $description = 'Check GitHub for the latest Getvnt release and cache the result';
 
     public function handle(UpdaterManager $updater, AppUpdateService $appUpdate): int
     {
-        // eventschedule.com deploys from git, so there is nothing here to check against.
+        // getvnt.com deploys from git, so there is nothing here to check against.
         if (config('app.is_nexus')) {
             return self::SUCCESS;
         }

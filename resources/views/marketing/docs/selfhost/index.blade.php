@@ -1,9 +1,9 @@
 <x-docs-page
     key="selfhost/index"
-    title="Selfhost Guide: Run Event Schedule on Your Own Server"
-    heading="Selfhost Event Schedule"
-    description="Selfhost Event Schedule: installation, email, Stripe, PayPal and Payfast payments, AI, calendar sync, Google Wallet, federation and the admin panel."
-    lede="Run Event Schedule on your own server and your own database. A single-tenant install has no plan tiers, so every Pro and Enterprise feature is switched on."
+    title="Selfhost Guide: Run Getvnt on Your Own Server"
+    heading="Selfhost Getvnt"
+    description="Selfhost Getvnt: installation, email, Stripe, PayPal and Payfast payments, AI, calendar sync, Google Wallet, federation and the admin panel."
+    lede="Run Getvnt on your own server and your own database. A single-tenant install has no plan tiers, so every Pro and Enterprise feature is switched on."
     :with-toc="false"
 >
     {{-- The cards below used to be hand-written here, each duplicating a
@@ -54,7 +54,7 @@
             </li>
             <li>
                 <strong>Then the optional pieces.</strong>
-                <a href="{{ route('marketing.docs.selfhost.federation') }}" class="doc-link">Federation</a> lists your public events on eventschedule.com and links each one back to your site, and stays off until you turn it on in the admin panel;
+                <a href="{{ route('marketing.docs.selfhost.federation') }}" class="doc-link">Federation</a> lists your public events on getvnt.com and links each one back to your site, and stays off until you turn it on in the admin panel;
                 <a href="{{ route('marketing.docs.selfhost.boost') }}" class="doc-link">Boost</a> runs Meta ads from inside the app, billed to the one Meta ad account you configure, so every campaign spends your money;
                 <a href="{{ route('marketing.docs.selfhost.google_wallet') }}" class="doc-link">Google Wallet</a> puts an "Add to Google Wallet" button on every ticket, free registrations included, and needs a Google Wallet issuer account of your own;
                 the <a href="{{ route('marketing.docs.selfhost.admin') }}" class="doc-link">admin panel</a> at <code class="doc-inline-code">/admin</code> gives you instance-wide monitoring and settings, and lets you edit any schedule on the install down to its name, path and contact details (the account the setup wizard created is already an instance admin); and the
@@ -73,7 +73,7 @@
                     <tr>
                         <th>Area</th>
                         <th>Your own server</th>
-                        <th>eventschedule.com</th>
+                        <th>getvnt.com</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -85,7 +85,7 @@
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Schedule addresses</span></td>
                         <td>Paths under your domain, e.g. <code class="doc-inline-code">yourdomain.com/my-schedule</code>, set in the <strong>Path</strong> field of a schedule's settings</td>
-                        <td>A subdomain, e.g. <code class="doc-inline-code">my-schedule.eventschedule.com</code>, and Enterprise can point its own domain at a schedule</td>
+                        <td>A subdomain, e.g. <code class="doc-inline-code">my-schedule.getvnt.com</code>, and Enterprise can point its own domain at a schedule</td>
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Accounts</span></td>
@@ -129,7 +129,7 @@
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Attribution</span></td>
-                        <td>No "Powered by" footer, but every public schedule page keeps a small Event Schedule chip in the corner, which the license asks you to leave in place. Embedded views do not carry it.</td>
+                        <td>No "Powered by" footer, but every public schedule page keeps a small Getvnt chip in the corner, which the license asks you to leave in place. Embedded views do not carry it.</td>
                         <td>Branding is removed on Pro and Enterprise</td>
                     </tr>
                 </tbody>
@@ -178,7 +178,7 @@
         </div>
 
         <p class="mt-6">
-            Event Schedule is released under the Attribution Assurance License, an OSI-approved licence adapted from the BSD licence, which is why the credit chip stays on a selfhosted install. The <a href="{{ route('marketing.open_source') }}" class="doc-link">open source page</a> links the repository, the releases and the license text.
+            Getvnt is released under the Attribution Assurance License, an OSI-approved licence adapted from the BSD licence, which is why the credit chip stays on a selfhosted install. The <a href="{{ route('marketing.open_source') }}" class="doc-link">open source page</a> links the repository, the releases and the license text.
         </p>
     </section>
 </x-docs-page>

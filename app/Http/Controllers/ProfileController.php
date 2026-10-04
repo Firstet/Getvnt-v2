@@ -263,12 +263,12 @@ class ProfileController extends Controller
         }
 
         // Send feedback email if provided (before logout so we have user data)
-        // Skip for demo mode to prevent spam. eventschedule.com only: the address is Event
+        // Skip for demo mode to prevent spam. getvnt.com only: the address is Event
         // Schedule's own, and no other install, a selfhosted SaaS included (IS_HOSTED without
         // IS_NEXUS), may send its users' names, emails and words to us (self-hosting terms,
         // "what crosses the line").
         if ($request->filled('feedback') && ! is_demo_mode() && config('app.is_nexus')) {
-            Mail::to('contact@eventschedule.com')->send(new SupportEmail(
+            Mail::to('contact@getvnt.com')->send(new SupportEmail(
                 $user->name ?? $user->email,
                 $user->email,
                 $request->feedback,

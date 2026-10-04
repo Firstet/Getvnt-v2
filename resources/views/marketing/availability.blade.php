@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Availability Management"
+        name="Getvnt Availability Management"
         description="Mark whole dates as unavailable on a talent schedule. Each team member keeps their own dates, and the shared Schedule tab shows who is out on which day. Availability is never shown publicly." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
@@ -594,7 +594,7 @@
             ],
             [
                 'q' => 'Who can set availability?',
-                'a' => 'The owner and every admin of the schedule mark their own dates, and nobody can edit anyone else\'s. A viewer can read the calendar but cannot mark dates on it. Availability management is an Enterprise plan feature on eventschedule.com and is included on selfhosted deployments.',
+                'a' => 'The owner and every admin of the schedule mark their own dates, and nobody can edit anyone else\'s. A viewer can read the calendar but cannot mark dates on it. Availability management is an Enterprise plan feature on getvnt.com and is included on selfhosted deployments.',
             ],
             [
                 'q' => 'Can I set different availability for different days?',
@@ -985,7 +985,7 @@
                         <h3 class="es-hours-ink text-lg font-bold">Up to five names</h3>
                         <span class="es-hours-plan">Enterprise</span>
                     </div>
-                    <p class="es-hours-muted text-sm leading-relaxed">On the Enterprise plan a schedule on eventschedule.com holds up to five team members, and each one is either an admin who edits the calendar or a viewer who only reads it. Viewers see the marks without being able to change anything. A free or Pro schedule has exactly one member, which is you.</p>
+                    <p class="es-hours-muted text-sm leading-relaxed">On the Enterprise plan a schedule on getvnt.com holds up to five team members, and each one is either an admin who edits the calendar or a viewer who only reads it. Viewers see the marks without being able to change anything. A free or Pro schedule has exactly one member, which is you.</p>
                 </div>
             </div>
 
@@ -1030,7 +1030,7 @@
                         <span class="es-hours-plan">Required</span>
                     </div>
                     <h3 class="es-hours-ink mb-2 text-xl font-bold">The Enterprise plan</h3>
-                    <p class="es-hours-muted text-sm leading-relaxed">Availability management is an Enterprise feature on eventschedule.com, and every feature is included on a selfhosted deployment. On the free and Pro plans the tab prompts an upgrade rather than saving, so nothing is half enabled.</p>
+                    <p class="es-hours-muted text-sm leading-relaxed">Availability management is an Enterprise feature on getvnt.com, and every feature is included on a selfhosted deployment. On the free and Pro plans the tab prompts an upgrade rather than saving, so nothing is half enabled.</p>
                     <p class="es-hours-muted mt-auto pt-4 text-sm">
                         <a href="{{ marketing_url('/pricing') }}" class="es-hours-link font-medium hover:underline">See the plans</a>
                     </p>
@@ -1411,7 +1411,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-hours-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

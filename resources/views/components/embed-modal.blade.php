@@ -9,7 +9,7 @@
     // Built here and handed to the script below so the server-rendered snippet and the one
     // the Layout picker rebuilds cannot drift apart.
     $embedBrandingLine = $role->showBranding()
-        ? "\n".'<p style="font-size: 12px; text-align: right; margin-top: 4px; opacity: 0.6;"><a href="https://eventschedule.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Powered by Event Schedule</a></p>'
+        ? "\n".'<p style="font-size: 12px; text-align: right; margin-top: 4px; opacity: 0.6;"><a href="https://getvnt.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Powered by Getvnt</a></p>'
         : '';
 
     // The Widget picker's second option: the signup form (issue #125), served by the same guest

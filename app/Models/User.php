@@ -480,7 +480,7 @@ class User extends Authenticatable implements MustVerifyEmail
             ->get();
     }
 
-    public function availableEventSchedules()
+    public function availableGetvnts()
     {
         return $this->roles()
             ->whereNotNull('roles.user_id')

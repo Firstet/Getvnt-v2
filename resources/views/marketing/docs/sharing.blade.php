@@ -1,6 +1,6 @@
 <x-docs-page
     key="sharing"
-    title="Sharing Your Schedule: Links, Embeds, Feeds - Event Schedule"
+    title="Sharing Your Schedule: Links, Embeds, Feeds - Getvnt"
     description="Share your schedule: embed it on your site, post it on social media, print a QR code, and let people follow, sign up by email or subscribe to its calendar."
     lede="Reach your audience wherever they are. Embed your schedule on your website, share it on social media, and let people follow you, sign up by email, or subscribe to your calendar."
 >
@@ -56,7 +56,7 @@
             </svg>
             Embedding on Your Website
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Add your schedule directly to your website with an iframe. It loads live from Event Schedule, so your events update on your site without any extra work. Embedding the calendar is available on every plan, including Free.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Add your schedule directly to your website with an iframe. It loads live from Getvnt, so your events update on your site without any extra work. Embedding the calendar is available on every plan, including Free.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-6">See our <a href="{{ marketing_url('/features/embed-calendar') }}" class="doc-link">embed calendar feature page</a> for a full overview and demo.</p>
 
         <h3 class="doc-subheading">Getting the Embed Code</h3>
@@ -75,7 +75,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Free Plans Get a Credit Line</div>
-            <p>On a Free hosted plan the copied snippet includes a small "Powered by Event Schedule" line underneath the iframe. It sits outside the frame, so you can see exactly what you are pasting. <a href="{{ route('marketing.docs.schedule_styling') }}#remove-branding" class="doc-link">Removing branding</a> is a Pro feature. Selfhosted installs never add the line.</p>
+            <p>On a Free hosted plan the copied snippet includes a small "Powered by Getvnt" line underneath the iframe. It sits outside the frame, so you can see exactly what you are pasting. <a href="{{ route('marketing.docs.schedule_styling') }}#remove-branding" class="doc-link">Removing branding</a> is a Pro feature. Selfhosted installs never add the line.</p>
         </div>
 
         <div class="doc-callout doc-callout-tip">
@@ -120,7 +120,7 @@
                     </tr>
                     <tr>
                         <td><code class="doc-inline-code">dark=true</code><br><code class="doc-inline-code">dark=false</code></td>
-                        <td>Force dark or light mode. Left off, the frame uses the theme the visitor last chose on Event Schedule, and their system setting if they have never chosen one</td>
+                        <td>Force dark or light mode. Left off, the frame uses the theme the visitor last chose on Getvnt, and their system setting if they have never chosen one</td>
                     </tr>
                     <tr>
                         <td><code class="doc-inline-code">lang=xx</code></td>
@@ -191,7 +191,7 @@
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">Keep New-Event Emails On</div>
-            <p>What subscribers get automatically is the digest of your new public events, sent at most once every few days. It is controlled by <strong class="text-gray-900 dark:text-white">Email subscribers about new events</strong> under <a href="{{ route('marketing.docs.creating_schedules') }}#settings-notifications" class="doc-link">Settings &rarr; Notifications</a>. With it off, people can still sign up but will only hear from you when you send a <a href="{{ route('marketing.docs.newsletters') }}" class="doc-link">newsletter</a>, so the embed dialog warns you. On eventschedule.com, digests to more than 50 subscribers also need a verified phone number or your own SMTP settings, and the dialog warns about that too.</p>
+            <p>What subscribers get automatically is the digest of your new public events, sent at most once every few days. It is controlled by <strong class="text-gray-900 dark:text-white">Email subscribers about new events</strong> under <a href="{{ route('marketing.docs.creating_schedules') }}#settings-notifications" class="doc-link">Settings &rarr; Notifications</a>. With it off, people can still sign up but will only hear from you when you send a <a href="{{ route('marketing.docs.newsletters') }}" class="doc-link">newsletter</a>, so the embed dialog warns you. On getvnt.com, digests to more than 50 subscribers also need a verified phone number or your own SMTP settings, and the dialog warns about that too.</p>
         </div>
     </section>
 
@@ -206,11 +206,11 @@
         <p class="text-gray-600 dark:text-gray-300 mb-6">Share your schedule and individual events on social media to reach more people.</p>
 
         <h3 class="doc-subheading">Sharing Your Schedule</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Share your schedule URL on any platform. Event Schedule builds the preview card for you from what is already on the schedule:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Share your schedule URL on any platform. Getvnt builds the preview card for you from what is already on the schedule:</p>
         <ul class="doc-list">
             <li><strong class="text-gray-900 dark:text-white">Title</strong> is your schedule name</li>
             <li><strong class="text-gray-900 dark:text-white">Description</strong> is your short description, joined to your full description when the short one is under 50 characters, and shortened at a sentence or a word to about 155 characters. A venue adds its street and town when the text does not already give them, and while there is room it names your next three events. A schedule with nothing written starts with "View the event schedule for" and its name, followed by the street, town and upcoming events where it has them</li>
-            <li><strong class="text-gray-900 dark:text-white">Image</strong> is the header image you uploaded while your schedule uses the banner header, or else your profile image, or else the background image you uploaded. The built-in headers and backgrounds are never used. With none of these the page offers no image, so most apps show the link without a picture (Facebook may pick one from the page itself); it is never an Event Schedule image</li>
+            <li><strong class="text-gray-900 dark:text-white">Image</strong> is the header image you uploaded while your schedule uses the banner header, or else your profile image, or else the background image you uploaded. The built-in headers and backgrounds are never used. With none of these the page offers no image, so most apps show the link without a picture (Facebook may pick one from the page itself); it is never an Getvnt image</li>
         </ul>
         <p class="text-gray-600 dark:text-gray-300 mb-4">In search results and browser tabs, the page title also says "Upcoming Events" while you have some, and a venue's adds its town, as long as they fit.</p>
 
@@ -247,7 +247,7 @@
             <li><strong class="text-gray-900 dark:text-white">Signed in:</strong> a short dialog tells them the schedule will be able to see their name and email, and they can tick <strong class="text-gray-900 dark:text-white">Don't ask me again when I follow other schedules</strong>. Your schedule then appears on their <strong class="text-gray-900 dark:text-white">Following</strong> page, where they can copy your iCal or RSS feed, sync the schedule into their own Google Calendar, or unfollow at any time</li>
             <li><strong class="text-gray-900 dark:text-white">Signed out:</strong> the same dialog asks for their email and name instead, and works exactly like the sign-up panel below. Nobody is sent away to create an account first</li>
         </ul>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">The Follow button is part of the hosted version at eventschedule.com. On a selfhosted install, the sign-up panel is how people join.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">The Follow button is part of the hosted version at getvnt.com. On a selfhosted install, the sign-up panel is how people join.</p>
 
         <h3 class="doc-subheading">Email Sign-Ups</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Signed-out visitors see a <strong class="text-gray-900 dark:text-white">Stay up to date</strong> panel on your schedule page and near the foot of each event page, though never inside the calendar embed. To put it on your own website, <a href="#embed-subscribe-form" class="doc-link">embed the signup form</a>. It asks for their email and name, and its button reads <strong class="text-gray-900 dark:text-white">Keep me posted</strong> unless you have <a href="{{ route('marketing.docs.creating_schedules') }}#customize-custom-labels" class="doc-link">relabelled it</a>. The panel is on unless you turn off <strong class="text-gray-900 dark:text-white">Show Sign-Up Panel</strong> under <a href="{{ route('marketing.docs.creating_schedules') }}#settings-advanced" class="doc-link">Settings &rarr; Advanced</a>. With it off, a link made to open the form, like the <a href="#qr-code" class="doc-link">QR code</a>, still shows it.</p>
@@ -276,7 +276,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Privacy</div>
-            <p>Followers and subscribers are both told, before they join, that the schedule will see the name and email they give. You and your team see them on the Followers tab and the newsletter pages; they never appear on your public pages, your embeds or your public stats, and Event Schedule never sells or shares them.</p>
+            <p>Followers and subscribers are both told, before they join, that the schedule will see the name and email they give. You and your team see them on the Followers tab and the newsletter pages; they never appear on your public pages, your embeds or your public stats, and Getvnt never sells or shares them.</p>
         </div>
     </section>
 
@@ -348,7 +348,7 @@
             <li>Use it on flyers, posters, table tents, or anywhere else</li>
         </ol>
 
-        <p class="text-gray-600 dark:text-gray-300 mb-6">When scanned, the QR code opens your schedule with the sign-up form ready: for anyone not signed in, the page scrolls straight to the <strong class="text-gray-900 dark:text-white">Stay up to date</strong> panel, so they can sign up on the spot. That works even if you have turned the panel off for everyone else. Until your first follower or subscriber arrives, the Followers tab also shows <strong class="text-gray-900 dark:text-white">Your follow link</strong>, which opens the same place. If you have an Enterprise custom domain set up, both point at that domain rather than the eventschedule.com address.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">When scanned, the QR code opens your schedule with the sign-up form ready: for anyone not signed in, the page scrolls straight to the <strong class="text-gray-900 dark:text-white">Stay up to date</strong> panel, so they can sign up on the spot. That works even if you have turned the panel off for everyone else. Until your first follower or subscriber arrives, the Followers tab also shows <strong class="text-gray-900 dark:text-white">Your follow link</strong>, which opens the same place. If you have an Enterprise custom domain set up, both point at that domain rather than the getvnt.com address.</p>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">A Different QR Code from Ticket Check-In</div>
@@ -370,7 +370,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">The frame is empty or the browser refuses to load it</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Almost always a missing <code class="doc-inline-code">?embed=true</code>. Every other Event Schedule URL is served with framing switched off, so a plain schedule link inside an iframe is refused by the browser. Copy the Embed URL out of the Embed Schedule dialog rather than out of your address bar. Privacy extensions that block third-party frames are the other, rarer cause; test in a private window.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Almost always a missing <code class="doc-inline-code">?embed=true</code>. Every other Getvnt URL is served with framing switched off, so a plain schedule link inside an iframe is refused by the browser. Copy the Embed URL out of the Embed Schedule dialog rather than out of your address bar. Privacy extensions that block third-party frames are the other, rarer cause; test in a private window.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Embed appears too small or cut off</h4>
@@ -437,7 +437,7 @@ frameborder="0"&gt;&lt;/iframe&gt;
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Share Your Event Schedule",
+            "name": "How to Share Your Getvnt",
             "description": "Learn how to share your schedule with the world. Embed on your website, share on social media, and grow your audience.",
             "totalTime": "PT5M",
             "step": [
@@ -456,7 +456,7 @@ frameborder="0"&gt;&lt;/iframe&gt;
                 {
                     "@type": "HowToStep",
                     "name": "Share on Social Media",
-                    "text": "Share your schedule or individual event URLs on social media. Event Schedule automatically generates preview cards.",
+                    "text": "Share your schedule or individual event URLs on social media. Getvnt automatically generates preview cards.",
                     "url": "{{ url(route('marketing.docs.sharing')) }}#social"
                 },
                 {

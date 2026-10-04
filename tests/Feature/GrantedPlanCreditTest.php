@@ -12,7 +12,7 @@ use Tests\Feature\Concerns\CreatesScheduleData;
 use Tests\TestCase;
 
 /**
- * A schedule whose Enterprise plan an admin handed out carries a small "Event Schedule" credit in
+ * A schedule whose Enterprise plan an admin handed out carries a small "Getvnt" credit in
  * the guest footer. Customers paying through Stripe do not - they buy white-label, and the
  * marketing pages promise it without qualification. A free schedule carries the same chip, tagged
  * as the free tier's so the traffic report keeps the two apart.
@@ -29,7 +29,7 @@ class GrantedPlanCreditTest extends TestCase
     private const CREDIT = 'utm_source=granted-plan';
 
     /** The same chip on a free schedule, tagged as the free tier's. */
-    private const FREE_CHIP = 'href="https://eventschedule.com?utm_source=free-plan&amp;utm_medium=footer"';
+    private const FREE_CHIP = 'href="https://getvnt.com?utm_source=free-plan&amp;utm_medium=footer"';
 
     /** Present on every chip, whatever its reason. */
     private const ANY_CHIP = 'utm_medium=footer';
@@ -100,7 +100,7 @@ class GrantedPlanCreditTest extends TestCase
         $content = $this->get('/'.$role->subdomain)->assertOk()->getContent();
 
         $this->assertStringContainsString(
-            'href="https://eventschedule.com?utm_source=granted-plan&amp;utm_medium=footer"',
+            'href="https://getvnt.com?utm_source=granted-plan&amp;utm_medium=footer"',
             $content
         );
         // One credit a page: tagged as the grant rather than the free tier, and no strip beside it.

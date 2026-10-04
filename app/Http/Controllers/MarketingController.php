@@ -1962,9 +1962,9 @@ class MarketingController extends Controller
                 'name' => 'Eventbrite',
                 'key' => 'eventbrite',
                 'slug' => 'eventbrite-alternative',
-                'meta_title' => 'Eventbrite Alternative With 0% Platform Fees | Event Schedule',
+                'meta_title' => 'Eventbrite Alternative With 0% Platform Fees | Getvnt',
                 'tagline' => 'A simpler, more affordable alternative to Eventbrite with zero platform fees.',
-                'description' => 'Compare Event Schedule with Eventbrite: zero platform fees instead of 3.7% + $1.79 a ticket, payouts to your own Stripe or PayPal account, and an importer.',
+                'description' => 'Compare Getvnt with Eventbrite: zero platform fees instead of 3.7% + $1.79 a ticket, payouts to your own Stripe or PayPal account, and an importer.',
                 'keywords' => 'eventbrite alternative, eventbrite alternative free, free event platform, no platform fees ticketing, eventbrite competitor',
                 'about' => 'Eventbrite is one of the largest event ticketing platforms, widely used for conferences, festivals, and community events. It offers a comprehensive suite of tools for event promotion and ticket sales.',
                 'competitor_strengths' => [
@@ -2032,7 +2032,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Eventbrite charges 3.7% + $1.79 per ticket, plus 2.9% payment processing per order. With Event Schedule, you keep your revenue minus Stripe or PayPal processing.',
+                        'description' => 'Eventbrite charges 3.7% + $1.79 per ticket, plus 2.9% payment processing per order. With Getvnt, you keep your revenue minus Stripe or PayPal processing.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -2106,11 +2106,11 @@ class MarketingController extends Controller
                     ],
                 ],
                 'why_choose' => [
-                    'summary' => 'Event Schedule sells, scans and refunds tickets without taking a platform fee on any of them, and adds what Eventbrite does not have: your own domain, open source code and two-way calendar sync.',
+                    'summary' => 'Getvnt sells, scans and refunds tickets without taking a platform fee on any of them, and adds what Eventbrite does not have: your own domain, open source code and two-way calendar sync.',
                     'points' => [
                         'Zero platform fees vs Eventbrite\'s 3.7% + $1.79 per ticket',
                         'The Eventbrite importer (Pro) brings your events across with their ticket types, venues and images',
-                        'Your own domain (Enterprise) and no Event Schedule branding (Pro), which Eventbrite does not offer at any price',
+                        'Your own domain (Enterprise) and no Getvnt branding (Pro), which Eventbrite does not offer at any price',
                         'AI event parsing on every plan, and two-way sync with Google, Outlook and CalDAV',
                         'Stripe or PayPal checkout into your own account, one cart across several events, and refunds from the Sales page',
                         'Reserved seating with a seat map on Enterprise, and an interest list that emails people when tickets go on sale',
@@ -2127,20 +2127,20 @@ class MarketingController extends Controller
                 ],
                 'faq' => [
                     ['question' => 'Can I import my existing Eventbrite events?', 'answer' => 'Yes. With the Pro plan, you can connect your Eventbrite account and import your events in bulk. Event details, ticket types, venues, and images are all transferred automatically.'],
-                    ['question' => 'Is it easy to switch from Eventbrite to Event Schedule?', 'answer' => 'Yes. There is no need to migrate your Eventbrite history. Create a free schedule, add your upcoming events (or use AI import to paste and parse them), and share your new schedule URL with your audience.'],
-                    ['question' => 'How does Event Schedule pricing compare to Eventbrite?', 'answer' => 'Eventbrite\'s US pricing is a 3.7% + $1.79 service fee per paid ticket, plus a 2.9% payment processing fee per order. Event Schedule charges zero platform fees at every plan level, so you pay only Stripe\'s or PayPal\'s own processing. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo regardless of how many tickets you sell.'],
-                    ['question' => 'Does Event Schedule have an event marketplace like Eventbrite?', 'answer' => 'Event Schedule focuses on giving organizers their own branded schedule pages rather than a shared marketplace. You get a dedicated URL (or your own domain on Enterprise), embeddable calendar widgets, a live calendar feed people can subscribe to, and an optional interest list on each event that emails people when tickets go on sale.'],
+                    ['question' => 'Is it easy to switch from Eventbrite to Getvnt?', 'answer' => 'Yes. There is no need to migrate your Eventbrite history. Create a free schedule, add your upcoming events (or use AI import to paste and parse them), and share your new schedule URL with your audience.'],
+                    ['question' => 'How does Getvnt pricing compare to Eventbrite?', 'answer' => 'Eventbrite\'s US pricing is a 3.7% + $1.79 service fee per paid ticket, plus a 2.9% payment processing fee per order. Getvnt charges zero platform fees at every plan level, so you pay only Stripe\'s or PayPal\'s own processing. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo regardless of how many tickets you sell.'],
+                    ['question' => 'Does Getvnt have an event marketplace like Eventbrite?', 'answer' => 'Getvnt focuses on giving organizers their own branded schedule pages rather than a shared marketplace. You get a dedicated URL (or your own domain on Enterprise), embeddable calendar widgets, a live calendar feed people can subscribe to, and an optional interest list on each event that emails people when tickets go on sale.'],
                     ['question' => 'Can I refund a ticket buyer?', 'answer' => 'Yes, from the Sales page. Refunds come with paid ticketing on Pro, because that is where the money is taken in the first place. A Stripe or PayPal sale can be refunded in full or in part, and the money goes back through the provider before the sale changes status. A partial refund keeps the tickets valid and shows how much has gone back so far; a full refund returns the tickets to sale. A sale paid another way, such as cash, is marked as refunded instead, because no money moves through us.'],
-                    ['question' => 'Does Event Schedule do reserved seating?', 'answer' => 'Yes, on the Enterprise plan. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map at checkout. A box office view handles holds, phone bookings and seat moves. On Free and Pro, ticket types have a name, a price and a quantity, without assigned seats.'],
+                    ['question' => 'Does Getvnt do reserved seating?', 'answer' => 'Yes, on the Enterprise plan. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map at checkout. A box office view handles holds, phone bookings and seat moves. On Free and Pro, ticket types have a name, a price and a quantity, without assigned seats.'],
                 ],
             ],
             'luma' => [
                 'name' => 'Luma',
                 'key' => 'luma',
                 'slug' => 'luma-alternative',
-                'meta_title' => 'Luma Alternative, Open Source With 0% Fees | Event Schedule',
+                'meta_title' => 'Luma Alternative, Open Source With 0% Fees | Getvnt',
                 'tagline' => 'An open source alternative to Luma with zero platform fees, on the free plan too.',
-                'description' => 'Compare Event Schedule with Luma: zero platform fees even on the free plan, where Luma takes 5%, open source code, and Pro at '.plan_price($this->planPrice()).'/mo, not $59/mo.',
+                'description' => 'Compare Getvnt with Luma: zero platform fees even on the free plan, where Luma takes 5%, open source code, and Pro at '.plan_price($this->planPrice()).'/mo, not $59/mo.',
                 'keywords' => 'luma alternative, luma alternative open source, lu.ma alternative, event platform comparison, luma competitor',
                 'about' => 'Luma (lu.ma) is a modern event platform popular with tech communities and creators. It offers sleek event pages, built-in video streaming, and community features.',
                 'competitor_strengths' => [
@@ -2207,7 +2207,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => plan_price($this->planPrice()).'/mo vs $59/mo',
-                        'description' => 'Event Schedule Pro costs '.plan_price($this->planPrice()).'/mo with a 7-day free trial. Luma Plus costs $59/mo, billed annually, for comparable features.',
+                        'description' => 'Getvnt Pro costs '.plan_price($this->planPrice()).'/mo with a 7-day free trial. Luma Plus costs $59/mo, billed annually, for comparable features.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -2216,7 +2216,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Luma charges 5% on their free plan. Event Schedule never takes a cut of your ticket sales at any tier.',
+                        'description' => 'Luma charges 5% on their free plan. Getvnt never takes a cut of your ticket sales at any tier.',
                         'icon' => 'percent',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -2266,7 +2266,7 @@ class MarketingController extends Controller
                     ['name' => 'Google Calendar', 'route' => 'marketing.compare_google_calendar'],
                 ],
                 'why_choose' => [
-                    'summary' => 'Event Schedule delivers comparable features to Luma at a fraction of the cost, with open source transparency and zero platform fees.',
+                    'summary' => 'Getvnt delivers comparable features to Luma at a fraction of the cost, with open source transparency and zero platform fees.',
                     'points' => [
                         plan_price($this->planPrice()).'/month vs Luma\'s $59/month for premium features',
                         'Zero platform fees vs Luma\'s 5% on the free plan',
@@ -2277,9 +2277,9 @@ class MarketingController extends Controller
                     ],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Luma to Event Schedule?', 'answer' => 'Yes. Create a free schedule and add your events manually or via AI import. Your audience can sign up by email for an occasional digest of the new events you create, or subscribe to the schedule\'s live calendar feed, which needs no email address.'],
-                    ['question' => 'How does Event Schedule pricing compare to Luma?', 'answer' => 'Luma Plus is $59/mo billed annually, and Luma\'s free plan takes a 5% platform fee on paid events. Event Schedule Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees. Even the free plan includes unlimited events, two-way calendar sync, unlimited free registration and newsletters, with no platform fee on anything you sell.'],
-                    ['question' => 'Does Event Schedule support virtual events like Luma?', 'answer' => 'Yes. Event Schedule supports online events with video links, descriptions, and ticketing. While Luma has built-in video streaming, Event Schedule integrates with any video platform you already use.'],
+                    ['question' => 'Is it easy to switch from Luma to Getvnt?', 'answer' => 'Yes. Create a free schedule and add your events manually or via AI import. Your audience can sign up by email for an occasional digest of the new events you create, or subscribe to the schedule\'s live calendar feed, which needs no email address.'],
+                    ['question' => 'How does Getvnt pricing compare to Luma?', 'answer' => 'Luma Plus is $59/mo billed annually, and Luma\'s free plan takes a 5% platform fee on paid events. Getvnt Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees. Even the free plan includes unlimited events, two-way calendar sync, unlimited free registration and newsletters, with no platform fee on anything you sell.'],
+                    ['question' => 'Does Getvnt support virtual events like Luma?', 'answer' => 'Yes. Getvnt supports online events with video links, descriptions, and ticketing. While Luma has built-in video streaming, Getvnt integrates with any video platform you already use.'],
                     ['question' => 'Can people be told when tickets go on sale?', 'answer' => 'Yes, free on every plan. Switch on the "Notify me" card and, on an event page, visitors leave an email address, with no account, and get one email when tickets go on sale, a reminder shortly before the event, and a notice if you cancel it; a change notice reaches them too when you choose to send one. Each date of a recurring event keeps its own list, and every email has a one-click unsubscribe. The event editor shows you how many people are waiting.'],
                 ],
             ],
@@ -2287,9 +2287,9 @@ class MarketingController extends Controller
                 'name' => 'Ticket Tailor',
                 'key' => 'ticket-tailor',
                 'slug' => 'ticket-tailor-alternative',
-                'meta_title' => 'Ticket Tailor Alternative, No Per-Ticket Fees | Event Schedule',
+                'meta_title' => 'Ticket Tailor Alternative, No Per-Ticket Fees | Getvnt',
                 'tagline' => 'A flat-rate alternative to Ticket Tailor with zero per-ticket fees.',
-                'description' => 'Compare Event Schedule with Ticket Tailor: no per-ticket fee, Stripe or PayPal checkout, refunds and a multi-event cart.',
+                'description' => 'Compare Getvnt with Ticket Tailor: no per-ticket fee, Stripe or PayPal checkout, refunds and a multi-event cart.',
                 'keywords' => 'ticket tailor alternative, ticket tailor alternative free, ticketing platform comparison, no per-ticket fees, ticket tailor competitor',
                 'about' => 'Ticket Tailor is an independent ticketing platform focused on affordable event ticketing. It offers a straightforward per-ticket pricing model and supports various payment processors.',
                 'competitor_strengths' => [
@@ -2415,7 +2415,7 @@ class MarketingController extends Controller
                     ['name' => 'Tito', 'route' => 'marketing.compare_tito'],
                 ],
                 'why_choose' => [
-                    'summary' => 'Event Schedule offers flat-rate pricing instead of per-ticket fees, plus a full suite of features that go beyond pure ticketing.',
+                    'summary' => 'Getvnt offers flat-rate pricing instead of per-ticket fees, plus a full suite of features that go beyond pure ticketing.',
                     'points' => [
                         'Flat '.plan_price($this->planPrice()).'/month vs Ticket Tailor\'s per-ticket fees that scale with volume',
                         'Built-in newsletters and two-way Google, Outlook and CalDAV sync, included free',
@@ -2426,21 +2426,21 @@ class MarketingController extends Controller
                     ],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Ticket Tailor to Event Schedule?', 'answer' => 'Yes. If you are familiar with Ticket Tailor, Event Schedule will feel natural. Create a free schedule, set up your ticket types, and connect Stripe or PayPal. The ticketing workflow is straightforward and you can be selling tickets within minutes.'],
-                    ['question' => 'How does Event Schedule pricing compare to Ticket Tailor?', 'answer' => 'Ticket Tailor charges per ticket sold. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, no matter how many tickets you sell. This makes costs predictable and lower for most organizers.'],
-                    ['question' => 'What does Event Schedule offer that Ticket Tailor does not?', 'answer' => 'Event Schedule is open source and supports selfhosting, giving you full control over your data. It also includes AI event import, two-way Google Calendar sync, built-in newsletters, and fan engagement features that Ticket Tailor does not offer.'],
-                    ['question' => 'Does Event Schedule have gift cards, passes, payment plans and seating?', 'answer' => 'Yes, each on the plan named. Gift cards, passes (festival, season, visit and membership) and installment payments, which split a ticket into monthly charges on Stripe, are on Pro. Allocated seating, where buyers pick seats from a map of the room, is on Enterprise for venue schedules. Refunds, full or partial, through Stripe or PayPal, come with paid ticketing on Pro.'],
+                    ['question' => 'Is it easy to switch from Ticket Tailor to Getvnt?', 'answer' => 'Yes. If you are familiar with Ticket Tailor, Getvnt will feel natural. Create a free schedule, set up your ticket types, and connect Stripe or PayPal. The ticketing workflow is straightforward and you can be selling tickets within minutes.'],
+                    ['question' => 'How does Getvnt pricing compare to Ticket Tailor?', 'answer' => 'Ticket Tailor charges per ticket sold. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, no matter how many tickets you sell. This makes costs predictable and lower for most organizers.'],
+                    ['question' => 'What does Getvnt offer that Ticket Tailor does not?', 'answer' => 'Getvnt is open source and supports selfhosting, giving you full control over your data. It also includes AI event import, two-way Google Calendar sync, built-in newsletters, and fan engagement features that Ticket Tailor does not offer.'],
+                    ['question' => 'Does Getvnt have gift cards, passes, payment plans and seating?', 'answer' => 'Yes, each on the plan named. Gift cards, passes (festival, season, visit and membership) and installment payments, which split a ticket into monthly charges on Stripe, are on Pro. Allocated seating, where buyers pick seats from a map of the room, is on Enterprise for venue schedules. Refunds, full or partial, through Stripe or PayPal, come with paid ticketing on Pro.'],
                 ],
             ],
             'google-calendar' => [
                 'name' => 'Google Calendar',
                 'key' => 'google-calendar',
                 'slug' => 'google-calendar-alternative',
-                'meta_title' => 'Google Calendar Alternative for Public Events | Event Schedule',
+                'meta_title' => 'Google Calendar Alternative for Public Events | Getvnt',
                 'tagline' => 'A purpose-built event platform vs a general scheduling tool.',
-                'description' => 'Compare Event Schedule with Google Calendar: public event pages, ticket sales, a live feed your audience can subscribe to, and two-way sync with Google.',
+                'description' => 'Compare Getvnt with Google Calendar: public event pages, ticket sales, a live feed your audience can subscribe to, and two-way sync with Google.',
                 'keywords' => 'google calendar alternative, google calendar for events, event calendar platform, public event calendar, google calendar vs event platform',
-                'about' => 'Google Calendar is a popular personal scheduling tool used by billions worldwide. It excels at managing appointments, meetings, and personal reminders with deep Google ecosystem integration. The good news? You don\'t have to choose - Event Schedule syncs with Google Calendar, so you can use both together.',
+                'about' => 'Google Calendar is a popular personal scheduling tool used by billions worldwide. It excels at managing appointments, meetings, and personal reminders with deep Google ecosystem integration. The good news? You don\'t have to choose - Getvnt syncs with Google Calendar, so you can use both together.',
                 'competitor_strengths' => [
                     'Free and ubiquitous with billions of existing users',
                     'Deep Google ecosystem integration (Gmail, Meet, Drive)',
@@ -2510,7 +2510,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Built for Public Events',
-                        'description' => 'Google Calendar is for personal scheduling. Event Schedule is purpose-built for sharing events with the world - with SEO-optimized public pages.',
+                        'description' => 'Google Calendar is for personal scheduling. Getvnt is purpose-built for sharing events with the world - with SEO-optimized public pages.',
                         'icon' => 'globe',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -2569,7 +2569,7 @@ class MarketingController extends Controller
                     ['name' => 'AddEvent', 'route' => 'marketing.compare_addevent'],
                 ],
                 'why_choose' => [
-                    'summary' => 'Event Schedule is purpose-built for sharing events publicly with ticketing, newsletters, and custom branding - things Google Calendar was never designed for.',
+                    'summary' => 'Getvnt is purpose-built for sharing events publicly with ticketing, newsletters, and custom branding - things Google Calendar was never designed for.',
                     'points' => [
                         'Ticketing through your own Stripe or PayPal account on Pro, with QR check-in at the door and refunds from the Sales page',
                         'Two-way sync with Google, Outlook and CalDAV keeps both platforms in sync automatically',
@@ -2579,9 +2579,9 @@ class MarketingController extends Controller
                     ],
                 ],
                 'faq' => [
-                    ['question' => 'Can I use Event Schedule alongside Google Calendar?', 'answer' => 'Yes. Event Schedule offers two-way Google Calendar sync on the free plan. Your events stay in sync between both platforms, so you can use Google Calendar as your personal view while Event Schedule powers your public schedule and ticketing.'],
-                    ['question' => 'Is Event Schedule free like Google Calendar?', 'answer' => 'Event Schedule has a free plan that includes unlimited events, two-way Google Calendar sync, newsletters and a live calendar feed your audience can subscribe to. Free registration is unlimited and every ticket scans at the door. Selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/mo, which also adds the live check-in dashboard and branding removal.'],
-                    ['question' => 'Can Event Schedule handle ticketing that Google Calendar cannot?', 'answer' => 'Yes. Google Calendar has no ticketing features. Event Schedule sells tickets through your own Stripe or PayPal account on the Pro plan, each one scanned at the door, with refunds from the Sales page. Free registration is unlimited on every plan. Pro also adds the live check-in dashboard, ticket waitlists, sale notifications and sales CSV export, all with zero platform fees.'],
+                    ['question' => 'Can I use Getvnt alongside Google Calendar?', 'answer' => 'Yes. Getvnt offers two-way Google Calendar sync on the free plan. Your events stay in sync between both platforms, so you can use Google Calendar as your personal view while Getvnt powers your public schedule and ticketing.'],
+                    ['question' => 'Is Getvnt free like Google Calendar?', 'answer' => 'Getvnt has a free plan that includes unlimited events, two-way Google Calendar sync, newsletters and a live calendar feed your audience can subscribe to. Free registration is unlimited and every ticket scans at the door. Selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/mo, which also adds the live check-in dashboard and branding removal.'],
+                    ['question' => 'Can Getvnt handle ticketing that Google Calendar cannot?', 'answer' => 'Yes. Google Calendar has no ticketing features. Getvnt sells tickets through your own Stripe or PayPal account on the Pro plan, each one scanned at the door, with refunds from the Sales page. Free registration is unlimited on every plan. Pro also adds the live check-in dashboard, ticket waitlists, sale notifications and sales CSV export, all with zero platform fees.'],
                     ['question' => 'Can people subscribe to all my events in their own calendar?', 'answer' => 'Yes, free. Every schedule has a live calendar feed, offered in the sign-up panel on your schedule and event pages and in the Add to Calendar menu. Their calendar app re-reads the feed, so an added or moved date shows up without anyone sending a new invite, which a one-off download cannot do. It costs them no email address.'],
                 ],
             ],
@@ -2589,9 +2589,9 @@ class MarketingController extends Controller
                 'name' => 'Meetup',
                 'key' => 'meetup',
                 'slug' => 'meetup-alternative',
-                'meta_title' => 'Meetup Alternative for Community Events | Event Schedule',
+                'meta_title' => 'Meetup Alternative for Community Events | Getvnt',
                 'tagline' => 'A free, open source alternative to Meetup with zero fees and full customization.',
-                'description' => 'Compare Event Schedule with Meetup: free community event pages, email sign-ups, a live calendar feed and ticketing with zero platform fees.',
+                'description' => 'Compare Getvnt with Meetup: free community event pages, email sign-ups, a live calendar feed and ticketing with zero platform fees.',
                 'keywords' => 'meetup alternative, meetup alternative free, free event platform, meetup competitor, community events platform',
                 'about' => 'Meetup is a social platform for organizing and discovering local community events and groups. It connects people with shared interests through in-person and online gatherings.',
                 'competitor_strengths' => [
@@ -2656,7 +2656,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'No Organizer Fee',
-                        'description' => 'Meetup charges organizers $16.79 to $24.50/mo just to host a group. Event Schedule is free forever with optional '.plan_price($this->planPrice()).'/mo Pro upgrade - saving you up to $200/year.',
+                        'description' => 'Meetup charges organizers $16.79 to $24.50/mo just to host a group. Getvnt is free forever with optional '.plan_price($this->planPrice()).'/mo Pro upgrade - saving you up to $200/year.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -2665,7 +2665,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Own Your Community',
-                        'description' => 'On Meetup, your members belong to Meetup - not you. With Event Schedule, your audience is yours: your own branding and newsletter list, and your own domain on Enterprise.',
+                        'description' => 'On Meetup, your members belong to Meetup - not you. With Getvnt, your audience is yours: your own branding and newsletter list, and your own domain on Enterprise.',
                         'icon' => 'globe',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -2674,7 +2674,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Custom Branding',
-                        'description' => 'Every Meetup group looks the same. Event Schedule lets you customize themes, colors, backgrounds, and use your own domain for a unique brand identity.',
+                        'description' => 'Every Meetup group looks the same. Getvnt lets you customize themes, colors, backgrounds, and use your own domain for a unique brand identity.',
                         'icon' => 'image',
                         'gradient' => 'from-teal-50 to-emerald-50 dark:from-teal-900/30 dark:to-emerald-900/30',
                         'border' => 'border-teal-200 dark:border-teal-500/20',
@@ -2715,9 +2715,9 @@ class MarketingController extends Controller
                     ['name' => 'Google Calendar', 'route' => 'marketing.compare_google_calendar'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Meetup to Event Schedule?', 'answer' => 'Yes. Create a free schedule and add your recurring or one-time events, then share its URL with your community. Members can sign up by email for a digest of the new events you create or subscribe to your live calendar feed, and newsletters keep the group engaged between meetups.'],
-                    ['question' => 'How does Event Schedule pricing compare to Meetup?', 'answer' => 'Meetup charges organizers a subscription starting at $16.79/mo for basic groups, with higher tiers for larger communities. Event Schedule has a free plan with unlimited events. The Pro plan is '.plan_price($this->planPrice()).'/mo with zero platform fees on ticket sales.'],
-                    ['question' => 'Can Event Schedule handle community events and recurring meetups?', 'answer' => 'Yes. Event Schedule supports recurring events, fan engagement features like videos and comments, newsletters with A/B testing, and embeddable calendar widgets. All designed for building and maintaining community.'],
+                    ['question' => 'Is it easy to switch from Meetup to Getvnt?', 'answer' => 'Yes. Create a free schedule and add your recurring or one-time events, then share its URL with your community. Members can sign up by email for a digest of the new events you create or subscribe to your live calendar feed, and newsletters keep the group engaged between meetups.'],
+                    ['question' => 'How does Getvnt pricing compare to Meetup?', 'answer' => 'Meetup charges organizers a subscription starting at $16.79/mo for basic groups, with higher tiers for larger communities. Getvnt has a free plan with unlimited events. The Pro plan is '.plan_price($this->planPrice()).'/mo with zero platform fees on ticket sales.'],
+                    ['question' => 'Can Getvnt handle community events and recurring meetups?', 'answer' => 'Yes. Getvnt supports recurring events, fan engagement features like videos and comments, newsletters with A/B testing, and embeddable calendar widgets. All designed for building and maintaining community.'],
                     ['question' => 'How will my members hear about new events?', 'answer' => 'People who sign up by email and confirm get an occasional digest of the new public events you create, at most one every 72 hours per schedule. Anyone can subscribe to your live calendar feed, which needs no email address and updates itself when a date moves. On a single event, the interest list emails people when tickets go on sale, reminds them before it starts and tells them if it is cancelled. Newsletters you write reach whoever you choose, within your plan\'s monthly recipient allowance.'],
                 ],
             ],
@@ -2725,9 +2725,9 @@ class MarketingController extends Controller
                 'name' => 'DICE',
                 'key' => 'dice',
                 'slug' => 'dice-alternative',
-                'meta_title' => 'DICE Alternative With Zero Platform Fees | Event Schedule',
+                'meta_title' => 'DICE Alternative With Zero Platform Fees | Getvnt',
                 'tagline' => 'A transparent, fee-free alternative to DICE for event organizers.',
-                'description' => 'Compare Event Schedule with DICE: tickets that open in any browser, payouts to your own Stripe or PayPal account, and zero platform fees.',
+                'description' => 'Compare Getvnt with DICE: tickets that open in any browser, payouts to your own Stripe or PayPal account, and zero platform fees.',
                 'keywords' => 'dice alternative, dice fm alternative, dice ticketing alternative, dice competitor, event ticketing platform',
                 'about' => 'DICE is a mobile-first ticketing platform focused on live music, nightlife, and entertainment events. It handles ticket distribution, fan engagement, and event discovery through its app.',
                 'competitor_strengths' => [
@@ -2793,7 +2793,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Web-First Access',
-                        'description' => 'DICE requires fans to download their app to buy tickets. Event Schedule works in any browser - no app install required, no friction for your audience.',
+                        'description' => 'DICE requires fans to download their app to buy tickets. Getvnt works in any browser - no app install required, no friction for your audience.',
                         'icon' => 'globe',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -2802,7 +2802,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Direct Payments',
-                        'description' => 'With DICE, they control the money and pay you later. Event Schedule connects directly to your own Stripe or PayPal account - funds go straight to you, and refunds go back the same way.',
+                        'description' => 'With DICE, they control the money and pay you later. Getvnt connects directly to your own Stripe or PayPal account - funds go straight to you, and refunds go back the same way.',
                         'icon' => 'dollar',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -2852,9 +2852,9 @@ class MarketingController extends Controller
                     ['name' => 'Ticket Tailor', 'route' => 'marketing.compare_ticket_tailor'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from DICE to Event Schedule?', 'answer' => 'Yes. Unlike DICE, Event Schedule works in any browser so your audience does not need to download an app. Create a free schedule, add your events, and share a direct link. Your fans can browse and buy tickets instantly.'],
-                    ['question' => 'How does Event Schedule pricing compare to DICE?', 'answer' => 'DICE absorbs its fees into ticket prices, meaning fans pay more than your listed price. Event Schedule charges zero platform fees and connects directly to your own Stripe or PayPal account, so you control exactly what attendees pay.'],
-                    ['question' => 'Does Event Schedule support music and nightlife events like DICE?', 'answer' => 'Yes. Event Schedule handles any event type including concerts, festivals, and nightlife. You get ticketing with QR check-ins, event graphics generation, and a shareable schedule page, without being locked into a single event genre.'],
+                    ['question' => 'Is it easy to switch from DICE to Getvnt?', 'answer' => 'Yes. Unlike DICE, Getvnt works in any browser so your audience does not need to download an app. Create a free schedule, add your events, and share a direct link. Your fans can browse and buy tickets instantly.'],
+                    ['question' => 'How does Getvnt pricing compare to DICE?', 'answer' => 'DICE absorbs its fees into ticket prices, meaning fans pay more than your listed price. Getvnt charges zero platform fees and connects directly to your own Stripe or PayPal account, so you control exactly what attendees pay.'],
+                    ['question' => 'Does Getvnt support music and nightlife events like DICE?', 'answer' => 'Yes. Getvnt handles any event type including concerts, festivals, and nightlife. You get ticketing with QR check-ins, event graphics generation, and a shareable schedule page, without being locked into a single event genre.'],
                     ['question' => 'Do my fans need an app to get their tickets?', 'answer' => 'No. The ticket opens in any browser, from the confirmation email or the ticket page, each with its QR code, and buyers can also add it to Google Wallet where Wallet is switched on. The free scanner reads that same code at the door.'],
                 ],
             ],
@@ -2862,9 +2862,9 @@ class MarketingController extends Controller
                 'name' => 'Brown Paper Tickets',
                 'key' => 'brown-paper-tickets',
                 'slug' => 'brown-paper-tickets-alternative',
-                'meta_title' => 'Brown Paper Tickets Alternative, 0% Fees | Event Schedule',
+                'meta_title' => 'Brown Paper Tickets Alternative, 0% Fees | Getvnt',
                 'tagline' => 'A modern, actively developed alternative to Brown Paper Tickets.',
-                'description' => 'Brown Paper Tickets is being retired. Compare Event Schedule: zero platform fees, Stripe or PayPal payouts, and unlimited free registration.',
+                'description' => 'Brown Paper Tickets is being retired. Compare Getvnt: zero platform fees, Stripe or PayPal payouts, and unlimited free registration.',
                 'keywords' => 'brown paper tickets alternative, brown paper tickets replacement, bpt alternative, event ticketing platform, brown paper tickets competitor',
                 'about' => 'Brown Paper Tickets was a ticketing platform known for its low fees and focus on independent events. Its website now says it is being retired and sends organizers to Events.com for their next event, so many are looking for a new home.',
                 'competitor_strengths' => [
@@ -2930,7 +2930,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Reliable & Active',
-                        'description' => 'Brown Paper Tickets is being retired and migrated to Events.com. Event Schedule is actively developed with regular updates and dependable uptime.',
+                        'description' => 'Brown Paper Tickets is being retired and migrated to Events.com. Getvnt is actively developed with regular updates and dependable uptime.',
                         'icon' => 'globe',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -2939,7 +2939,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Modern Design',
-                        'description' => 'Brown Paper Tickets has a dated interface from another era. Event Schedule offers beautiful, mobile-responsive event pages with customizable themes and branding.',
+                        'description' => 'Brown Paper Tickets has a dated interface from another era. Getvnt offers beautiful, mobile-responsive event pages with customizable themes and branding.',
                         'icon' => 'image',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -2948,7 +2948,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Direct Payouts',
-                        'description' => 'BPT has been known for delayed payouts to organizers. Event Schedule connects directly to your own Stripe or PayPal account - funds go straight to you on the provider\'s own schedule.',
+                        'description' => 'BPT has been known for delayed payouts to organizers. Getvnt connects directly to your own Stripe or PayPal account - funds go straight to you on the provider\'s own schedule.',
                         'icon' => 'dollar',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -2989,9 +2989,9 @@ class MarketingController extends Controller
                     ['name' => 'DICE', 'route' => 'marketing.compare_dice'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Brown Paper Tickets to Event Schedule?', 'answer' => 'Yes. Many organizers are moving away from Brown Paper Tickets as the platform is being retired and migrated to Events.com. Create a free schedule, add your events (AI import speeds this up), and share your new URL. You can be up and running in minutes.'],
-                    ['question' => 'How does Event Schedule pricing compare to Brown Paper Tickets?', 'answer' => 'Brown Paper Tickets charges $0.99 + 5% per ticket as a buyer-paid service fee. Event Schedule charges zero platform fees at any plan level. Free registration is unlimited, and selling paid tickets is on Pro. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo for unlimited ticketing, with payouts straight into your own Stripe or PayPal account.'],
-                    ['question' => 'Is Event Schedule actively maintained?', 'answer' => 'Yes. Brown Paper Tickets is being retired and migrated to Events.com. Event Schedule is built with a modern tech stack and receives regular updates. It is fully open source, so you can inspect the code, track development activity, and even selfhost it for complete control over your platform.'],
+                    ['question' => 'Is it easy to switch from Brown Paper Tickets to Getvnt?', 'answer' => 'Yes. Many organizers are moving away from Brown Paper Tickets as the platform is being retired and migrated to Events.com. Create a free schedule, add your events (AI import speeds this up), and share your new URL. You can be up and running in minutes.'],
+                    ['question' => 'How does Getvnt pricing compare to Brown Paper Tickets?', 'answer' => 'Brown Paper Tickets charges $0.99 + 5% per ticket as a buyer-paid service fee. Getvnt charges zero platform fees at any plan level. Free registration is unlimited, and selling paid tickets is on Pro. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo for unlimited ticketing, with payouts straight into your own Stripe or PayPal account.'],
+                    ['question' => 'Is Getvnt actively maintained?', 'answer' => 'Yes. Brown Paper Tickets is being retired and migrated to Events.com. Getvnt is built with a modern tech stack and receives regular updates. It is fully open source, so you can inspect the code, track development activity, and even selfhost it for complete control over your platform.'],
                     ['question' => 'Can a buyer get tickets to several shows in one order?', 'answer' => 'Yes, on every plan. Tickets for several of your events go into one cart and are paid once, through Stripe or PayPal, with one order page listing every ticket.'],
                 ],
             ],
@@ -2999,9 +2999,9 @@ class MarketingController extends Controller
                 'name' => 'Splash',
                 'key' => 'splash',
                 'slug' => 'splash-alternative',
-                'meta_title' => 'Splash Alternative Without Enterprise Pricing | Event Schedule',
+                'meta_title' => 'Splash Alternative Without Enterprise Pricing | Getvnt',
                 'tagline' => 'A simpler, more affordable alternative to Splash for event marketing.',
-                'description' => 'Compare Event Schedule with Splash: branded event pages, registration and ticketing with zero platform fees, and published pricing with no sales call.',
+                'description' => 'Compare Getvnt with Splash: branded event pages, registration and ticketing with zero platform fees, and published pricing with no sales call.',
                 'keywords' => 'splash alternative, splash event marketing alternative, splash competitor, event management platform, splash replacement',
                 'about' => 'Splash is an enterprise event marketing platform focused on branded event experiences, registration, and attendee engagement. It targets mid-to-large organizations with custom event pages and marketing automation.',
                 'competitor_strengths' => [
@@ -3067,7 +3067,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'No Sales Process',
-                        'description' => 'Splash requires contacting sales and negotiating an enterprise contract. Event Schedule lets you sign up and start creating events immediately - no calls, no demos, no waiting.',
+                        'description' => 'Splash requires contacting sales and negotiating an enterprise contract. Getvnt lets you sign up and start creating events immediately - no calls, no demos, no waiting.',
                         'icon' => 'globe',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -3076,7 +3076,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Instant Setup',
-                        'description' => 'Splash implementations can take weeks of onboarding. Event Schedule is ready in minutes - create your schedule, add events, and share with your audience right away.',
+                        'description' => 'Splash implementations can take weeks of onboarding. Getvnt is ready in minutes - create your schedule, add events, and share with your audience right away.',
                         'icon' => 'calendar',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -3085,7 +3085,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Transparent '.plan_price($this->planPrice()).'/mo',
-                        'description' => 'Splash hides pricing behind "contact us" forms. Event Schedule is free forever, with Pro at a transparent '.plan_price($this->planPrice()).'/mo - no surprise invoices or annual commitments.',
+                        'description' => 'Splash hides pricing behind "contact us" forms. Getvnt is free forever, with Pro at a transparent '.plan_price($this->planPrice()).'/mo - no surprise invoices or annual commitments.',
                         'icon' => 'dollar',
                         'gradient' => 'from-teal-50 to-emerald-50 dark:from-teal-900/30 dark:to-emerald-900/30',
                         'border' => 'border-teal-200 dark:border-teal-500/20',
@@ -3126,9 +3126,9 @@ class MarketingController extends Controller
                     ['name' => 'Accelevents', 'route' => 'marketing.compare_accelevents'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Splash to Event Schedule?', 'answer' => 'Yes. Unlike Splash, there is no enterprise onboarding or sales process required. Just sign up, create a free schedule, add your events, and share your schedule URL. AI import can speed up event creation too.'],
-                    ['question' => 'How does Event Schedule pricing compare to Splash?', 'answer' => 'Splash uses custom enterprise pricing that requires contacting sales, with contracts typically running thousands of dollars per year. Event Schedule Pro is a transparent '.plan_price($this->planPrice()).'/mo with zero platform fees and no annual commitment.'],
-                    ['question' => 'Can Event Schedule handle corporate events like Splash?', 'answer' => 'Yes. Event Schedule supports custom branding, embeddable widgets, custom CSS, and a REST API with webhooks on Pro for integration with your existing tools. Custom domains and multiple team members are on Enterprise.'],
+                    ['question' => 'Is it easy to switch from Splash to Getvnt?', 'answer' => 'Yes. Unlike Splash, there is no enterprise onboarding or sales process required. Just sign up, create a free schedule, add your events, and share your schedule URL. AI import can speed up event creation too.'],
+                    ['question' => 'How does Getvnt pricing compare to Splash?', 'answer' => 'Splash uses custom enterprise pricing that requires contacting sales, with contracts typically running thousands of dollars per year. Getvnt Pro is a transparent '.plan_price($this->planPrice()).'/mo with zero platform fees and no annual commitment.'],
+                    ['question' => 'Can Getvnt handle corporate events like Splash?', 'answer' => 'Yes. Getvnt supports custom branding, embeddable widgets, custom CSS, and a REST API with webhooks on Pro for integration with your existing tools. Custom domains and multiple team members are on Enterprise.'],
                     ['question' => 'Can my team work on the same schedule?', 'answer' => 'Yes, on Enterprise, capped at five members on the hosted platform. An admin runs the schedule day to day and sees its ticket sales, waitlist and check-in dashboard; a viewer is read-only and sees no sales, but can scan tickets at the door. The free and Pro plans are one person per schedule.'],
                 ],
             ],
@@ -3136,9 +3136,9 @@ class MarketingController extends Controller
                 'name' => 'Sched',
                 'key' => 'sched',
                 'slug' => 'sched-alternative',
-                'meta_title' => 'Sched Alternative for Conference Agendas | Event Schedule',
+                'meta_title' => 'Sched Alternative for Conference Agendas | Getvnt',
                 'tagline' => 'A more affordable, full-featured alternative to Sched with zero platform fees.',
-                'description' => 'Compare Event Schedule with Sched. Get zero platform fees, calendar sync, and open source flexibility for '.plan_price($this->planPrice()).'/mo instead of $50+/mo.',
+                'description' => 'Compare Getvnt with Sched. Get zero platform fees, calendar sync, and open source flexibility for '.plan_price($this->planPrice()).'/mo instead of $50+/mo.',
                 'keywords' => 'sched alternative, sched.com alternative, conference schedule platform, event agenda alternative, sched competitor',
                 'about' => 'Sched is a conference and event scheduling platform popular for managing multi-track agendas, speaker profiles, and personalized attendee schedules. It targets conferences, trade shows, and multi-day events.',
                 'competitor_strengths' => [
@@ -3262,9 +3262,9 @@ class MarketingController extends Controller
                     ['name' => 'Eventbrite', 'route' => 'marketing.compare_eventbrite'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Sched to Event Schedule?', 'answer' => 'Yes. Create a free schedule and add your conference sessions or events. AI import lets you paste event details to populate your schedule quickly. No migration needed.'],
-                    ['question' => 'How does Event Schedule pricing compare to Sched?', 'answer' => 'Sched charges per-event or annual pricing that scales with attendee count. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with unlimited events and zero platform fees on ticket sales.'],
-                    ['question' => 'Can Event Schedule handle conference agendas like Sched?', 'answer' => 'Yes. Event Schedule supports multi-day events, sub-schedules for organizing tracks or sessions, and embeddable calendar widgets. Attendees can browse your full conference agenda from a single schedule page.'],
+                    ['question' => 'Is it easy to switch from Sched to Getvnt?', 'answer' => 'Yes. Create a free schedule and add your conference sessions or events. AI import lets you paste event details to populate your schedule quickly. No migration needed.'],
+                    ['question' => 'How does Getvnt pricing compare to Sched?', 'answer' => 'Sched charges per-event or annual pricing that scales with attendee count. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with unlimited events and zero platform fees on ticket sales.'],
+                    ['question' => 'Can Getvnt handle conference agendas like Sched?', 'answer' => 'Yes. Getvnt supports multi-day events, sub-schedules for organizing tracks or sessions, and embeddable calendar widgets. Attendees can browse your full conference agenda from a single schedule page.'],
                     ['question' => 'Can attendees buy one pass for several sessions?', 'answer' => 'Yes, on Pro. A pass admits to several events: a festival pass covers each event once, a visit pass gives a set number of visits, a membership is unlimited until it expires, and a season pass covers a recurring event, with every use tracked on the Subscriptions tab. On every plan, buyers can also put tickets for several sessions in one cart and pay once.'],
                 ],
             ],
@@ -3272,9 +3272,9 @@ class MarketingController extends Controller
                 'name' => 'Whova',
                 'key' => 'whova',
                 'slug' => 'whova-alternative',
-                'meta_title' => 'Whova Alternative With Transparent Pricing | Event Schedule',
+                'meta_title' => 'Whova Alternative With Transparent Pricing | Getvnt',
                 'tagline' => 'A transparent, affordable alternative to Whova with zero platform fees.',
-                'description' => 'Compare Event Schedule with Whova. Get transparent pricing, zero platform fees, and open source flexibility without custom quotes or sales calls.',
+                'description' => 'Compare Getvnt with Whova. Get transparent pricing, zero platform fees, and open source flexibility without custom quotes or sales calls.',
                 'keywords' => 'whova alternative, whova alternative free, event app alternative, whova competitor, event management platform',
                 'about' => 'Whova is an event management and networking platform popular for conferences and corporate events. It offers a feature-rich mobile app with attendee networking, live polls, and engagement tools, with custom quote-based pricing.',
                 'competitor_strengths' => [
@@ -3349,7 +3349,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Whova charges 3% + $0.99 per paid ticket on top of their subscription. Event Schedule has zero platform fees.',
+                        'description' => 'Whova charges 3% + $0.99 per paid ticket on top of their subscription. Getvnt has zero platform fees.',
                         'icon' => 'percent',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -3399,9 +3399,9 @@ class MarketingController extends Controller
                     ['name' => 'Luma', 'route' => 'marketing.compare_luma'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Whova to Event Schedule?', 'answer' => 'Yes. Unlike Whova, there is no sales process or demo required. Just sign up, create a free schedule, and start adding events. AI import can parse pasted event details to speed things up.'],
-                    ['question' => 'How does Event Schedule pricing compare to Whova?', 'answer' => 'Whova uses quote-based enterprise pricing that requires a sales call, with costs typically running thousands of dollars per event. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with unlimited events and zero platform fees on ticket sales.'],
-                    ['question' => 'Does Event Schedule offer attendee engagement features like Whova?', 'answer' => 'Yes. Fan videos and comments and newsletters with A/B testing are on every plan, and event polls and post-event feedback are on Pro, all without per-event pricing.'],
+                    ['question' => 'Is it easy to switch from Whova to Getvnt?', 'answer' => 'Yes. Unlike Whova, there is no sales process or demo required. Just sign up, create a free schedule, and start adding events. AI import can parse pasted event details to speed things up.'],
+                    ['question' => 'How does Getvnt pricing compare to Whova?', 'answer' => 'Whova uses quote-based enterprise pricing that requires a sales call, with costs typically running thousands of dollars per event. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with unlimited events and zero platform fees on ticket sales.'],
+                    ['question' => 'Does Getvnt offer attendee engagement features like Whova?', 'answer' => 'Yes. Fan videos and comments and newsletters with A/B testing are on every plan, and event polls and post-event feedback are on Pro, all without per-event pricing.'],
                     ['question' => 'Can I refund an attendee?', 'answer' => 'Yes, on Pro, alongside the paid ticketing that took the money. From the Sales page, a Stripe or PayPal sale can be refunded in full or in part and the money goes back through the provider; a partial refund keeps the ticket valid. A sale taken another way, such as cash or a payment link, is marked as refunded instead.'],
                 ],
             ],
@@ -3409,9 +3409,9 @@ class MarketingController extends Controller
                 'name' => 'Accelevents',
                 'key' => 'accelevents',
                 'slug' => 'accelevents-alternative',
-                'meta_title' => 'Accelevents Alternative With Instant Setup | Event Schedule',
+                'meta_title' => 'Accelevents Alternative With Instant Setup | Getvnt',
                 'tagline' => 'A simpler, more affordable alternative to Accelevents without enterprise pricing.',
-                'description' => 'Compare Event Schedule with Accelevents: a free plan, Pro at '.plan_price($this->planPrice()).'/mo against paid plans from $7,500, setup in minutes, and open source code you can selfhost.',
+                'description' => 'Compare Getvnt with Accelevents: a free plan, Pro at '.plan_price($this->planPrice()).'/mo against paid plans from $7,500, setup in minutes, and open source code you can selfhost.',
                 'keywords' => 'accelevents alternative, accelevents alternative free, event management platform, accelevents competitor, affordable event platform',
                 'about' => 'Accelevents is an enterprise event management platform offering in-person, virtual, and hybrid event solutions. It targets mid-to-large organizations with badge printing, CRM integrations, and white-label capabilities.',
                 'competitor_strengths' => [
@@ -3478,7 +3478,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => plan_price($this->planPrice()).'/mo vs $7,500+',
-                        'description' => 'Accelevents plans start from $7,500. Event Schedule starts free and Pro is billed by the month, with no enterprise contract to sign.',
+                        'description' => 'Accelevents plans start from $7,500. Getvnt starts free and Pro is billed by the month, with no enterprise contract to sign.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -3537,19 +3537,19 @@ class MarketingController extends Controller
                     ['name' => 'Eventbrite', 'route' => 'marketing.compare_eventbrite'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Accelevents to Event Schedule?', 'answer' => 'Yes. Unlike Accelevents, there is no enterprise onboarding or implementation process. Sign up, create a free schedule, and start adding events immediately. AI import can parse pasted event details to speed things up.'],
-                    ['question' => 'How does Event Schedule pricing compare to Accelevents?', 'answer' => 'Accelevents\' Professional plan starts from $7,500 and Business from $13,500, with no transaction fees on those plans. Event Schedule has a free plan with unlimited events and free registration; paid ticket sales come with Pro, a flat '.plan_price($this->planPrice()).'/mo with unlimited events and zero platform fees.'],
-                    ['question' => 'Can Event Schedule handle virtual and hybrid events like Accelevents?', 'answer' => 'Yes. Event Schedule supports online events with video links and integrates with any streaming platform. Combined with ticketing, QR check-ins, and newsletters, it covers both virtual and in-person needs.'],
-                    ['question' => 'Does Event Schedule do reserved seating and payment plans?', 'answer' => 'Yes. Allocated seating is on Enterprise: a venue schedule draws its room once and buyers pick seats from the map, with a box office view for holds and phone bookings. Installment payments are on Pro and run on Stripe: the buyer pays the first part at checkout, the ticket is valid at once, and the rest is charged monthly to the saved card.'],
+                    ['question' => 'Is it easy to switch from Accelevents to Getvnt?', 'answer' => 'Yes. Unlike Accelevents, there is no enterprise onboarding or implementation process. Sign up, create a free schedule, and start adding events immediately. AI import can parse pasted event details to speed things up.'],
+                    ['question' => 'How does Getvnt pricing compare to Accelevents?', 'answer' => 'Accelevents\' Professional plan starts from $7,500 and Business from $13,500, with no transaction fees on those plans. Getvnt has a free plan with unlimited events and free registration; paid ticket sales come with Pro, a flat '.plan_price($this->planPrice()).'/mo with unlimited events and zero platform fees.'],
+                    ['question' => 'Can Getvnt handle virtual and hybrid events like Accelevents?', 'answer' => 'Yes. Getvnt supports online events with video links and integrates with any streaming platform. Combined with ticketing, QR check-ins, and newsletters, it covers both virtual and in-person needs.'],
+                    ['question' => 'Does Getvnt do reserved seating and payment plans?', 'answer' => 'Yes. Allocated seating is on Enterprise: a venue schedule draws its room once and buyers pick seats from the map, with a box office view for holds and phone bookings. Installment payments are on Pro and run on Stripe: the buyer pays the first part at checkout, the ticket is valid at once, and the rest is charged monthly to the saved card.'],
                 ],
             ],
             'tito' => [
                 'name' => 'Tito',
                 'key' => 'tito',
                 'slug' => 'tito-alternative',
-                'meta_title' => 'Tito Alternative With No Per-Ticket Fee | Event Schedule',
+                'meta_title' => 'Tito Alternative With No Per-Ticket Fee | Getvnt',
                 'tagline' => 'A flat-rate alternative to Tito with calendar sync, newsletters, and zero per-ticket fees.',
-                'description' => 'Compare Event Schedule with Tito. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of 3% per ticket, plus calendar sync, newsletters, and selfhosting.',
+                'description' => 'Compare Getvnt with Tito. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of 3% per ticket, plus calendar sync, newsletters, and selfhosting.',
                 'keywords' => 'tito alternative, ti.to alternative, tito ticketing alternative, event ticketing platform, tito competitor',
                 'about' => 'Tito is a simple, developer-friendly ticketing platform popular with tech conferences and community events. It charges 3% per paid ticket with no monthly subscription, and is known for its clean interface and well-documented API.',
                 'competitor_strengths' => [
@@ -3675,9 +3675,9 @@ class MarketingController extends Controller
                     ['name' => 'Pretix', 'route' => 'marketing.compare_pretix'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Tito to Event Schedule?', 'answer' => 'Yes. Create a free schedule and start adding events right away. AI import lets you paste event details to populate your listings quickly. No migration scripts required.'],
-                    ['question' => 'How does Event Schedule pricing compare to Tito?', 'answer' => 'Tito charges per-ticket fees on each sale. Event Schedule charges zero platform fees at every plan level. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo for unlimited ticketing and events.'],
-                    ['question' => 'Does Event Schedule support developer-friendly features like Tito?', 'answer' => 'Yes. Event Schedule offers a REST API, webhooks, custom CSS, and is fully open source. You can selfhost it, fork it, or integrate it with your own tools and workflows.'],
+                    ['question' => 'Is it easy to switch from Tito to Getvnt?', 'answer' => 'Yes. Create a free schedule and start adding events right away. AI import lets you paste event details to populate your listings quickly. No migration scripts required.'],
+                    ['question' => 'How does Getvnt pricing compare to Tito?', 'answer' => 'Tito charges per-ticket fees on each sale. Getvnt charges zero platform fees at every plan level. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo for unlimited ticketing and events.'],
+                    ['question' => 'Does Getvnt support developer-friendly features like Tito?', 'answer' => 'Yes. Getvnt offers a REST API, webhooks, custom CSS, and is fully open source. You can selfhost it, fork it, or integrate it with your own tools and workflows.'],
                     ['question' => 'Can I take PayPal as well as Stripe?', 'answer' => 'Yes, on Pro, which is the plan that lets a ticket carry a price at all. Connect your own PayPal account in Settings > Payment Methods, next to Stripe if you like, and choose the method per event; the credentials are checked with PayPal before they are saved. Refunds, full or partial, go back through PayPal or Stripe from the Sales page. Installment plans run on Stripe only.'],
                 ],
             ],
@@ -3685,9 +3685,9 @@ class MarketingController extends Controller
                 'name' => 'AddEvent',
                 'key' => 'addevent',
                 'slug' => 'addevent-alternative',
-                'meta_title' => 'AddEvent Alternative With Ticketing Built In | Event Schedule',
+                'meta_title' => 'AddEvent Alternative With Ticketing Built In | Getvnt',
                 'tagline' => 'A complete event platform that goes beyond "Add to Calendar" buttons.',
-                'description' => 'Compare Event Schedule with AddEvent: ticketing, public event pages and a live calendar feed, free, with Pro at '.plan_price($this->planPrice()).'/mo against calendar buttons at $29/mo.',
+                'description' => 'Compare Getvnt with AddEvent: ticketing, public event pages and a live calendar feed, free, with Pro at '.plan_price($this->planPrice()).'/mo against calendar buttons at $29/mo.',
                 'keywords' => 'addevent alternative, add to calendar alternative, addevent competitor, event calendar platform, calendar button alternative',
                 'about' => 'AddEvent is a calendar marketing tool focused on "Add to Calendar" buttons, subscription calendars, and RSVP collection. It helps drive event attendance through calendar engagement but does not offer ticketing or event management features.',
                 'competitor_strengths' => [
@@ -3767,7 +3767,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => plan_price($this->planPrice()).'/mo vs $36/mo',
-                        'description' => 'AddEvent Small Business is $36/mo on monthly billing, less when paid yearly, and has no ticketing. Event Schedule sells tickets from the free plan.',
+                        'description' => 'AddEvent Small Business is $36/mo on monthly billing, less when paid yearly, and has no ticketing. Getvnt sells tickets from the free plan.',
                         'icon' => 'percent',
                         'gradient' => 'from-teal-50 to-emerald-50 dark:from-teal-900/30 dark:to-emerald-900/30',
                         'border' => 'border-teal-200 dark:border-teal-500/20',
@@ -3808,9 +3808,9 @@ class MarketingController extends Controller
                     ['name' => 'Eventbrite', 'route' => 'marketing.compare_eventbrite'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from AddEvent to Event Schedule?', 'answer' => 'Yes. Create a free schedule and add your events manually or via AI import. Event Schedule provides a full event management platform, not just a calendar widget.'],
-                    ['question' => 'How does Event Schedule pricing compare to AddEvent?', 'answer' => 'AddEvent\'s Small Business plan is $36/mo on monthly billing, and less when paid yearly. Event Schedule Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees. Even the free plan includes unlimited events, two-way calendar sync, unlimited free registration and newsletters.'],
-                    ['question' => 'How is Event Schedule different from AddEvent?', 'answer' => 'AddEvent focuses on calendar add-to-calendar buttons and embeds. Event Schedule is a complete event management platform with ticketing, QR check-ins, newsletters, AI import, and public schedule pages.'],
+                    ['question' => 'Is it easy to switch from AddEvent to Getvnt?', 'answer' => 'Yes. Create a free schedule and add your events manually or via AI import. Getvnt provides a full event management platform, not just a calendar widget.'],
+                    ['question' => 'How does Getvnt pricing compare to AddEvent?', 'answer' => 'AddEvent\'s Small Business plan is $36/mo on monthly billing, and less when paid yearly. Getvnt Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees. Even the free plan includes unlimited events, two-way calendar sync, unlimited free registration and newsletters.'],
+                    ['question' => 'How is Getvnt different from AddEvent?', 'answer' => 'AddEvent focuses on calendar add-to-calendar buttons and embeds. Getvnt is a complete event management platform with ticketing, QR check-ins, newsletters, AI import, and public schedule pages.'],
                     ['question' => 'Can people subscribe to my calendar, like an AddEvent subscription calendar?', 'answer' => 'Yes, free. Every schedule has a live calendar feed that visitors subscribe to from the sign-up panel or an event\'s Add to Calendar menu, and every event page offers Add to Calendar for a single date. Their calendar re-reads the feed, so a moved date updates itself. AddEvent remains the specialist for calendar buttons placed on other sites and in email campaigns.'],
                 ],
             ],
@@ -3818,9 +3818,9 @@ class MarketingController extends Controller
                 'name' => 'Pretix',
                 'key' => 'pretix',
                 'slug' => 'pretix-alternative',
-                'meta_title' => 'Pretix Alternative: Open Source, Flat Pricing | Event Schedule',
+                'meta_title' => 'Pretix Alternative: Open Source, Flat Pricing | Getvnt',
                 'tagline' => 'A broader open source event platform with flat pricing and more built-in features.',
-                'description' => 'Compare Event Schedule with Pretix. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of per-ticket fees, plus calendar sync, newsletters, AI features, and fan engagement.',
+                'description' => 'Compare Getvnt with Pretix. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of per-ticket fees, plus calendar sync, newsletters, AI features, and fan engagement.',
                 'keywords' => 'pretix alternative, pretix alternative free, open source ticketing alternative, pretix competitor, event platform open source',
                 'about' => 'Pretix is an open source ticketing platform (AGPLv3) based in Germany, focused on ticket sales for conferences, festivals, and exhibitions. It offers a selfhosted Community Edition and a paid hosted service with per-ticket pricing.',
                 'competitor_strengths' => [
@@ -3946,10 +3946,10 @@ class MarketingController extends Controller
                     ['name' => 'Eventbrite', 'route' => 'marketing.compare_eventbrite'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Pretix to Event Schedule?', 'answer' => 'Yes. Create a free schedule and start adding events immediately. No data migration or server setup required. AI import can parse pasted event details to speed up the process.'],
-                    ['question' => 'How does Event Schedule pricing compare to Pretix?', 'answer' => 'Pretix Hosted charges per-ticket fees on each sale. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees. Both platforms are open source, but Event Schedule is simpler to selfhost.'],
-                    ['question' => 'Is Event Schedule easier to selfhost than Pretix?', 'answer' => 'Yes. Pretix selfhosting requires Docker, PostgreSQL, Redis, and significant server administration. Event Schedule runs on standard PHP hosting with MySQL, making it accessible to a much wider range of hosting environments.'],
-                    ['question' => 'Does Event Schedule have seating plans?', 'answer' => 'Yes, on Enterprise, and a selfhosted install resolves to Enterprise, so seating is included when you run it yourself. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map. On the hosted Free and Pro plans, ticket types have a name, a price and a quantity, without assigned seats.'],
+                    ['question' => 'Is it easy to switch from Pretix to Getvnt?', 'answer' => 'Yes. Create a free schedule and start adding events immediately. No data migration or server setup required. AI import can parse pasted event details to speed up the process.'],
+                    ['question' => 'How does Getvnt pricing compare to Pretix?', 'answer' => 'Pretix Hosted charges per-ticket fees on each sale. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees. Both platforms are open source, but Getvnt is simpler to selfhost.'],
+                    ['question' => 'Is Getvnt easier to selfhost than Pretix?', 'answer' => 'Yes. Pretix selfhosting requires Docker, PostgreSQL, Redis, and significant server administration. Getvnt runs on standard PHP hosting with MySQL, making it accessible to a much wider range of hosting environments.'],
+                    ['question' => 'Does Getvnt have seating plans?', 'answer' => 'Yes, on Enterprise, and a selfhosted install resolves to Enterprise, so seating is included when you run it yourself. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map. On the hosted Free and Pro plans, ticket types have a name, a price and a quantity, without assigned seats.'],
                 ],
             ],
 
@@ -3957,9 +3957,9 @@ class MarketingController extends Controller
                 'name' => 'Humanitix',
                 'key' => 'humanitix',
                 'slug' => 'humanitix-alternative',
-                'meta_title' => 'Humanitix Alternative With No Booking Fees | Event Schedule',
+                'meta_title' => 'Humanitix Alternative With No Booking Fees | Getvnt',
                 'tagline' => 'Flat '.plan_price($this->planPrice()).'/mo pricing and zero platform fees, so only your payment processor\'s fee comes off a paid ticket.',
-                'description' => 'Compare Event Schedule with Humanitix. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of per-ticket fees, plus calendar sync, newsletters, AI features, and selfhosting.',
+                'description' => 'Compare Getvnt with Humanitix. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of per-ticket fees, plus calendar sync, newsletters, AI features, and selfhosting.',
                 'keywords' => 'humanitix alternative, humanitix alternative free, event ticketing platform, humanitix competitor, affordable event platform',
                 'about' => 'Humanitix is a ticketing platform that donates profits to charity, primarily children\'s education. It charges a per-ticket booking fee (under $3 for most tickets) with no subscription plans. It offers ticketing, QR check-in, promo codes, and embeddable widgets.',
                 'competitor_strengths' => [
@@ -4085,9 +4085,9 @@ class MarketingController extends Controller
                     ['name' => 'Eventzilla', 'route' => 'marketing.compare_eventzilla'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Humanitix to Event Schedule?', 'answer' => 'Yes. Create a free schedule and start adding events right away. With zero platform fees, you keep more of your ticket revenue and can donate directly to causes you care about on your own terms.'],
-                    ['question' => 'How does Event Schedule pricing compare to Humanitix?', 'answer' => 'Humanitix charges a per-ticket booking fee on every paid event (under $3 for most tickets). Event Schedule charges zero platform fees at every plan level. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo regardless of ticket volume.'],
-                    ['question' => 'Does Humanitix donate to charity while Event Schedule does not?', 'answer' => 'Humanitix donates its profits to charity, which is funded by per-ticket fees on your sales. With Event Schedule, you keep 100% of your ticket revenue (minus Stripe or PayPal processing) and can donate to causes you choose directly.'],
+                    ['question' => 'Is it easy to switch from Humanitix to Getvnt?', 'answer' => 'Yes. Create a free schedule and start adding events right away. With zero platform fees, you keep more of your ticket revenue and can donate directly to causes you care about on your own terms.'],
+                    ['question' => 'How does Getvnt pricing compare to Humanitix?', 'answer' => 'Humanitix charges a per-ticket booking fee on every paid event (under $3 for most tickets). Getvnt charges zero platform fees at every plan level. The Pro plan is a flat '.plan_price($this->planPrice()).'/mo regardless of ticket volume.'],
+                    ['question' => 'Does Humanitix donate to charity while Getvnt does not?', 'answer' => 'Humanitix donates its profits to charity, which is funded by per-ticket fees on your sales. With Getvnt, you keep 100% of your ticket revenue (minus Stripe or PayPal processing) and can donate to causes you choose directly.'],
                     ['question' => 'Can buyers pay in installments?', 'answer' => 'Yes, on Pro, with Stripe. You switch it on per event; the buyer pays the first part at checkout, the ticket is valid at once, and the rest is charged monthly to the saved card. A plan that falls behind shows a hold at the door instead of admitting the ticket, and a refund is issued payment by payment, in full.'],
                 ],
             ],
@@ -4096,9 +4096,9 @@ class MarketingController extends Controller
                 'name' => 'Eventzilla',
                 'key' => 'eventzilla',
                 'slug' => 'eventzilla-alternative',
-                'meta_title' => 'Eventzilla Alternative With No Per-Ticket Fees | Event Schedule',
+                'meta_title' => 'Eventzilla Alternative With No Per-Ticket Fees | Getvnt',
                 'tagline' => 'A flat-rate open source alternative to Eventzilla with zero per-ticket fees.',
-                'description' => 'Compare Event Schedule with Eventzilla. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of per-ticket fees, plus calendar sync, newsletters, AI features, and open source.',
+                'description' => 'Compare Getvnt with Eventzilla. Get flat '.plan_price($this->planPrice()).'/mo pricing instead of per-ticket fees, plus calendar sync, newsletters, AI features, and open source.',
                 'keywords' => 'eventzilla alternative, eventzilla alternative free, event registration platform, eventzilla competitor, affordable event platform',
                 'about' => 'Eventzilla is an event registration and ticketing platform offering per-ticket pricing across multiple tiers. Plans range from $1.50/registration (Basic) to $5,999/year (Unlimited). It includes features like badge printing, speaker management, live streaming, and CRM integrations.',
                 'competitor_strengths' => [
@@ -4224,9 +4224,9 @@ class MarketingController extends Controller
                     ['name' => 'Ticket Tailor', 'route' => 'marketing.compare_ticket_tailor'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Eventzilla to Event Schedule?', 'answer' => 'Yes. Create a free schedule and add your events manually or via AI import. Share your new schedule URL and start selling tickets immediately. No complex migration needed.'],
-                    ['question' => 'How does Event Schedule pricing compare to Eventzilla?', 'answer' => 'Eventzilla charges $1.50/ticket plus up to 2.9% in platform fees depending on the plan. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, making costs predictable regardless of ticket volume.'],
-                    ['question' => 'Can Event Schedule handle registration features like Eventzilla?', 'answer' => 'Yes. Ticketing and QR check-in are on every plan. Custom fields, the live check-in dashboard, ticket waitlists and sales CSV export are on Pro. It also adds features Eventzilla lacks, like two-way Google Calendar sync, newsletters and AI event import.'],
+                    ['question' => 'Is it easy to switch from Eventzilla to Getvnt?', 'answer' => 'Yes. Create a free schedule and add your events manually or via AI import. Share your new schedule URL and start selling tickets immediately. No complex migration needed.'],
+                    ['question' => 'How does Getvnt pricing compare to Eventzilla?', 'answer' => 'Eventzilla charges $1.50/ticket plus up to 2.9% in platform fees depending on the plan. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, making costs predictable regardless of ticket volume.'],
+                    ['question' => 'Can Getvnt handle registration features like Eventzilla?', 'answer' => 'Yes. Ticketing and QR check-in are on every plan. Custom fields, the live check-in dashboard, ticket waitlists and sales CSV export are on Pro. It also adds features Eventzilla lacks, like two-way Google Calendar sync, newsletters and AI event import.'],
                     ['question' => 'Can someone buy tickets for several events in one order?', 'answer' => 'Yes, on every plan. A buyer adds tickets for several of your events to one cart and pays once, through Stripe or PayPal, and gets one order page with every ticket on it. Each event in the cart is checked on its own, so a priced ticket needs that schedule to be on Pro.'],
                 ],
             ],
@@ -4237,9 +4237,9 @@ class MarketingController extends Controller
                 'name' => 'Timely',
                 'key' => 'timely',
                 'slug' => 'timely-alternative',
-                'meta_title' => 'Timely Alternative With a Free Plan | Event Schedule',
+                'meta_title' => 'Timely Alternative With a Free Plan | Getvnt',
                 'tagline' => 'An event calendar with ticketing built in, a free plan, and zero platform fees.',
-                'description' => 'Compare Event Schedule with Timely: a free plan where Timely starts at $9/mo billed annually, zero platform fees on tickets, and calendar sync both ways.',
+                'description' => 'Compare Getvnt with Timely: a free plan where Timely starts at $9/mo billed annually, zero platform fees on tickets, and calendar sync both ways.',
                 'keywords' => 'timely alternative, time.ly alternative, timely event calendar alternative, event calendar software, timely competitor',
                 'about' => 'Timely (time.ly) is hosted event calendar and event management software used by nonprofits, schools, universities, tourism boards and media companies. Its plans are billed annually, and registration and ticketing are sold as an add-on.',
                 'competitor_strengths' => [
@@ -4288,7 +4288,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'A Free Plan',
-                        'description' => 'Event Schedule has a free plan with unlimited events and the embeddable calendar. Every Timely plan is paid, billed annually, after a 30-day trial.',
+                        'description' => 'Getvnt has a free plan with unlimited events and the embeddable calendar. Every Timely plan is paid, billed annually, after a 30-day trial.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -4297,7 +4297,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Timely\'s ticketing add-on charges 2.5% + $0.90 per paid ticket and $0.90 per free registration. Event Schedule takes no platform fee on any plan.',
+                        'description' => 'Timely\'s ticketing add-on charges 2.5% + $0.90 per paid ticket and $0.90 per free registration. Getvnt takes no platform fee on any plan.',
                         'icon' => 'percent',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -4347,8 +4347,8 @@ class MarketingController extends Controller
                     ['name' => 'AddEvent', 'route' => 'marketing.compare_addevent'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Timely to Event Schedule?', 'answer' => 'Yes. Create a free schedule, then paste event details or upload a flyer and the AI parser fills in the event for you to check. Visitors can follow the schedule, sign up by email, or subscribe to its live calendar feed.'],
-                    ['question' => 'How does Event Schedule pricing compare to Timely?', 'answer' => 'Timely plans start at $9/mo billed annually, with no free plan, and its ticketing add-on charges 2.5% + $0.90 per paid ticket. Event Schedule has a free plan, and Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees on ticket sales.'],
+                    ['question' => 'Is it easy to switch from Timely to Getvnt?', 'answer' => 'Yes. Create a free schedule, then paste event details or upload a flyer and the AI parser fills in the event for you to check. Visitors can follow the schedule, sign up by email, or subscribe to its live calendar feed.'],
+                    ['question' => 'How does Getvnt pricing compare to Timely?', 'answer' => 'Timely plans start at $9/mo billed annually, with no free plan, and its ticketing add-on charges 2.5% + $0.90 per paid ticket. Getvnt has a free plan, and Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees on ticket sales.'],
                     ['question' => 'Can I embed the calendar on my website like Timely?', 'answer' => 'Yes, on every plan. The embeddable calendar shows your upcoming events on any website, and each event links to its own page, where people can register or buy tickets.'],
                     ['question' => 'Are free registrations charged per person?', 'answer' => 'No. Free registration and RSVP are unlimited on every plan, with no per-registration fee. You can set a capacity, and each guest gets a ticket with a QR code that is scanned at the door.'],
                 ],
@@ -4361,9 +4361,9 @@ class MarketingController extends Controller
                 'name' => 'The Events Calendar',
                 'key' => 'the-events-calendar',
                 'slug' => 'the-events-calendar-alternative',
-                'meta_title' => 'The Events Calendar Alternative, No Plugins | Event Schedule',
+                'meta_title' => 'The Events Calendar Alternative, No Plugins | Getvnt',
                 'tagline' => 'Event pages, ticketing and calendar sync without installing or updating a WordPress plugin.',
-                'description' => 'Compare Event Schedule with The Events Calendar for WordPress: hosted or selfhosted, two-way calendar sync, and Pro at '.plan_price($this->planPrice()).'/mo instead of from $259 a year.',
+                'description' => 'Compare Getvnt with The Events Calendar for WordPress: hosted or selfhosted, two-way calendar sync, and Pro at '.plan_price($this->planPrice()).'/mo instead of from $259 a year.',
                 'keywords' => 'the events calendar alternative, wordpress event calendar alternative, events calendar pro alternative, wordpress events plugin alternative, event tickets plus alternative',
                 'about' => 'The Events Calendar is a WordPress plugin, now sold by Liquid Web, that adds an event calendar to your own WordPress site. The core plugin is free and GPL-licensed on wordpress.org, and paid tiers add recurring events, check-in, seating maps and email campaigns.',
                 'competitor_strengths' => [
@@ -4410,7 +4410,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'No WordPress Required',
-                        'description' => 'Event Schedule is a hosted service with a free plan, so there is no WordPress site, plugin stack or update cycle to keep running. Self-hosting stays available if you want it.',
+                        'description' => 'Getvnt is a hosted service with a free plan, so there is no WordPress site, plugin stack or update cycle to keep running. Self-hosting stays available if you want it.',
                         'icon' => 'globe',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -4419,7 +4419,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => plan_price($this->planPrice()).'/mo vs $259/yr',
-                        'description' => 'Event Schedule Pro is '.plan_price($this->planPrice()).'/mo with a 7-day free trial. The Events Calendar paid tiers are $259, $399 and $599 a year, renewed annually.',
+                        'description' => 'Getvnt Pro is '.plan_price($this->planPrice()).'/mo with a 7-day free trial. The Events Calendar paid tiers are $259, $399 and $599 a year, renewed annually.',
                         'icon' => 'dollar',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -4428,7 +4428,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Zero Platform Fees',
-                        'description' => 'Event Schedule takes no platform fee on any plan, and paid tickets are on Pro. The free Event Tickets plugin takes a 2% application fee on each sale.',
+                        'description' => 'Getvnt takes no platform fee on any plan, and paid tickets are on Pro. The free Event Tickets plugin takes a 2% application fee on each sale.',
                         'icon' => 'percent',
                         'gradient' => 'from-teal-50 to-emerald-50 dark:from-teal-900/30 dark:to-emerald-900/30',
                         'border' => 'border-teal-200 dark:border-teal-500/20',
@@ -4469,9 +4469,9 @@ class MarketingController extends Controller
                     ['name' => 'Google Calendar', 'route' => 'marketing.compare_google_calendar'],
                 ],
                 'faq' => [
-                    ['question' => 'Do I need a WordPress site to use Event Schedule?', 'answer' => 'No. Your schedule gets its own page and an embeddable calendar, so it works with WordPress or any other website builder. On a WordPress site, the calendar goes on a page with one iframe tag.'],
-                    ['question' => 'How does Event Schedule pricing compare to The Events Calendar?', 'answer' => 'The core plugin is free, and the paid tiers are $259, $399 and $599 a year. Event Schedule has a free plan, and Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees on ticket sales.'],
-                    ['question' => 'Is Event Schedule open source like The Events Calendar?', 'answer' => 'Yes, both are. The Events Calendar is GPL-licensed and runs inside WordPress. Event Schedule is a standalone app you can selfhost on PHP and MySQL, and a selfhosted install resolves to Enterprise.'],
+                    ['question' => 'Do I need a WordPress site to use Getvnt?', 'answer' => 'No. Your schedule gets its own page and an embeddable calendar, so it works with WordPress or any other website builder. On a WordPress site, the calendar goes on a page with one iframe tag.'],
+                    ['question' => 'How does Getvnt pricing compare to The Events Calendar?', 'answer' => 'The core plugin is free, and the paid tiers are $259, $399 and $599 a year. Getvnt has a free plan, and Pro is '.plan_price($this->planPrice()).'/mo with zero platform fees on ticket sales.'],
+                    ['question' => 'Is Getvnt open source like The Events Calendar?', 'answer' => 'Yes, both are. The Events Calendar is GPL-licensed and runs inside WordPress. Getvnt is a standalone app you can selfhost on PHP and MySQL, and a selfhosted install resolves to Enterprise.'],
                     ['question' => 'Can I move my events off WordPress?', 'answer' => 'Yes. Paste your event listings or upload flyers and the AI parser fills in the details for you to check, fifty a day on the free and Pro plans. Then embed the new calendar on your WordPress page, or link to your schedule instead.'],
                 ],
             ],
@@ -4483,9 +4483,9 @@ class MarketingController extends Controller
                 'name' => 'Bandsintown',
                 'key' => 'bandsintown',
                 'slug' => 'bandsintown-alternative',
-                'meta_title' => 'Bandsintown Alternative With Your Own Tickets | Event Schedule',
+                'meta_title' => 'Bandsintown Alternative With Your Own Tickets | Getvnt',
                 'tagline' => 'Your own tour-date page that takes registrations and sells tickets, with calendar sync and zero platform fees.',
-                'description' => 'Compare Event Schedule with Bandsintown for Artists: your own schedule page, free registration with QR tickets, paid tickets on Pro, and calendar sync.',
+                'description' => 'Compare Getvnt with Bandsintown for Artists: your own schedule page, free registration with QR tickets, paid tickets on Pro, and calendar sync.',
                 'keywords' => 'bandsintown alternative, bandsintown for artists alternative, tour dates widget, concert listing for musicians, bandsintown competitor',
                 'about' => 'Bandsintown for Artists is a free platform where musicians and their teams publish tour dates, reach fans who follow them, and send those dates on to streaming and search services. It links out to ticket sellers rather than selling tickets itself.',
                 'competitor_strengths' => [
@@ -4524,7 +4524,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Tickets on Your Own Page',
-                        'description' => 'Bandsintown links fans out to other ticket sellers. Event Schedule takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
+                        'description' => 'Bandsintown links fans out to other ticket sellers. Getvnt takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
                         'icon' => 'ticket',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -4583,8 +4583,8 @@ class MarketingController extends Controller
                     ['name' => 'Posh', 'route' => 'marketing.compare_posh'],
                 ],
                 'faq' => [
-                    ['question' => 'Can I use Event Schedule alongside Bandsintown?', 'answer' => 'Yes. Many artists keep a Bandsintown listing for its fan alerts and use an Event Schedule page as the home for their dates, with their own tickets, followers and calendar feed. Paste your dates in and the AI parser fills in each show for you to check.'],
-                    ['question' => 'How does Event Schedule pricing compare to Bandsintown?', 'answer' => 'Bandsintown is free for artists, with paid extras for email beyond 10,000 a month, promoted emails and SMS. Event Schedule is free for listing dates, registrations and newsletters, and Pro is '.plan_price($this->planPrice()).'/mo for paid tickets with zero platform fees.'],
+                    ['question' => 'Can I use Getvnt alongside Bandsintown?', 'answer' => 'Yes. Many artists keep a Bandsintown listing for its fan alerts and use an Getvnt page as the home for their dates, with their own tickets, followers and calendar feed. Paste your dates in and the AI parser fills in each show for you to check.'],
+                    ['question' => 'How does Getvnt pricing compare to Bandsintown?', 'answer' => 'Bandsintown is free for artists, with paid extras for email beyond 10,000 a month, promoted emails and SMS. Getvnt is free for listing dates, registrations and newsletters, and Pro is '.plan_price($this->planPrice()).'/mo for paid tickets with zero platform fees.'],
                     ['question' => 'Can I sell tickets to my own shows?', 'answer' => 'Yes, on Pro, through your own Stripe or PayPal account, with zero platform fees. Each buyer gets a ticket with a QR code, scanned at the door on any plan.'],
                     ['question' => 'Can I put my tour dates on my website?', 'answer' => 'Yes. The embeddable calendar shows your upcoming dates on any website, free, and each date links to its own event page.'],
                 ],
@@ -4597,9 +4597,9 @@ class MarketingController extends Controller
                 'name' => 'Posh',
                 'key' => 'posh',
                 'slug' => 'posh-alternative',
-                'meta_title' => 'Posh Alternative With 0% Platform Fees | Event Schedule',
+                'meta_title' => 'Posh Alternative With 0% Platform Fees | Getvnt',
                 'tagline' => 'Tickets for parties and nights out, paid into your own account, with zero platform fees.',
-                'description' => 'Compare Event Schedule with Posh: zero platform fees instead of a service fee on every ticket, payouts through your own Stripe or PayPal, and calendar sync.',
+                'description' => 'Compare Getvnt with Posh: zero platform fees instead of a service fee on every ticket, payouts through your own Stripe or PayPal, and calendar sync.',
                 'keywords' => 'posh alternative, posh.vip alternative, nightlife ticketing, party ticketing platform, posh competitor',
                 'about' => 'Posh (posh.vip) is a social platform for discovering and creating in-person events, from club nights and run clubs to fashion shows and festivals. Organizers sell tickets through Stripe Connect, and each ticket carries a Posh service fee that can be absorbed or passed to the buyer.',
                 'competitor_strengths' => [
@@ -4638,7 +4638,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Posh adds a service fee to every ticket, absorbed by you or passed to the buyer. Event Schedule takes no platform fee on any plan.',
+                        'description' => 'Posh adds a service fee to every ticket, absorbed by you or passed to the buyer. Getvnt takes no platform fee on any plan.',
                         'icon' => 'percent',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -4697,8 +4697,8 @@ class MarketingController extends Controller
                     ['name' => 'Eventbrite', 'route' => 'marketing.compare_eventbrite'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Posh to Event Schedule?', 'answer' => 'Yes. Create a free schedule, paste your upcoming nights or upload a flyer and the AI parser fills in each event, then connect Stripe or PayPal and move to Pro to sell paid tickets.'],
-                    ['question' => 'How does Event Schedule pricing compare to Posh?', 'answer' => 'Posh has no subscription and adds a service fee to every ticket. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so what you pay does not grow with the number of tickets you sell.'],
+                    ['question' => 'Is it easy to switch from Posh to Getvnt?', 'answer' => 'Yes. Create a free schedule, paste your upcoming nights or upload a flyer and the AI parser fills in each event, then connect Stripe or PayPal and move to Pro to sell paid tickets.'],
+                    ['question' => 'How does Getvnt pricing compare to Posh?', 'answer' => 'Posh has no subscription and adds a service fee to every ticket. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so what you pay does not grow with the number of tickets you sell.'],
                     ['question' => 'Can I run guest lists and free entry?', 'answer' => 'Yes. Free registration and RSVP are unlimited on every plan, each guest gets a QR code, and the door scans it on any plan. The live check-in dashboard is on Pro.'],
                     ['question' => 'Can I set up a weekly club night once?', 'answer' => 'Yes. A recurring event repeats weekly, every few weeks or monthly, on every plan, and you can skip the dates you are closed. Each date keeps its own tickets and guest list.'],
                 ],
@@ -4711,9 +4711,9 @@ class MarketingController extends Controller
                 'name' => 'Partiful',
                 'key' => 'partiful',
                 'slug' => 'partiful-alternative',
-                'meta_title' => 'Partiful Alternative With Recurring Events | Event Schedule',
+                'meta_title' => 'Partiful Alternative With Recurring Events | Getvnt',
                 'tagline' => 'Invites and RSVPs, plus a public schedule page, recurring events and ticketing with zero platform fees.',
-                'description' => 'Compare Event Schedule with Partiful: free RSVPs plus recurring events, a public schedule page for every event you host, and zero platform fees.',
+                'description' => 'Compare Getvnt with Partiful: free RSVPs plus recurring events, a public schedule page for every event you host, and zero platform fees.',
                 'keywords' => 'partiful alternative, partiful competitor, party invite app alternative, rsvp app, event invitation platform',
                 'about' => 'Partiful is a free app for party invites and RSVPs, used mostly by people hosting social events, with organization profiles for groups. Hosts in the US and UK can sell tickets, with fees that depend on event size and ticket price.',
                 'competitor_strengths' => [
@@ -4771,7 +4771,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Event Schedule takes no platform fee on any plan. Paid tickets are on Pro, paid into your own Stripe or PayPal account.',
+                        'description' => 'Getvnt takes no platform fee on any plan. Paid tickets are on Pro, paid into your own Stripe or PayPal account.',
                         'icon' => 'percent',
                         'gradient' => 'from-teal-50 to-emerald-50 dark:from-teal-900/30 dark:to-emerald-900/30',
                         'border' => 'border-teal-200 dark:border-teal-500/20',
@@ -4812,7 +4812,7 @@ class MarketingController extends Controller
                     ['name' => 'Facebook Events', 'route' => 'marketing.compare_facebook_events'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule free like Partiful?', 'answer' => 'Yes. Unlimited events, free RSVPs with QR tickets, newsletters and calendar sync are on the free plan. Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees, promo codes and the check-in dashboard.'],
+                    ['question' => 'Is Getvnt free like Partiful?', 'answer' => 'Yes. Unlimited events, free RSVPs with QR tickets, newsletters and calendar sync are on the free plan. Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees, promo codes and the check-in dashboard.'],
                     ['question' => 'Can guests RSVP without an account?', 'answer' => 'Yes. A guest registers with a name and an email address and gets a ticket with a QR code. They can follow your schedule to hear about your next event.'],
                     ['question' => 'Can I host the same event every week?', 'answer' => 'Yes. Recurring events repeat weekly, every few weeks or monthly on every plan, and each date keeps its own guest list and capacity.'],
                     ['question' => 'Can I keep an event private?', 'answer' => 'Yes, on Enterprise: an event can be unlisted or protected with a password, so only people you share it with can register.'],
@@ -4826,9 +4826,9 @@ class MarketingController extends Controller
                 'name' => 'Facebook Events',
                 'key' => 'facebook-events',
                 'slug' => 'facebook-events-alternative',
-                'meta_title' => 'Facebook Events Alternative You Own | Event Schedule',
+                'meta_title' => 'Facebook Events Alternative You Own | Getvnt',
                 'tagline' => 'An events page you own, that people can see without an account, with ticketing and calendar sync.',
-                'description' => 'Compare Event Schedule with Facebook Events: a public schedule page anyone can open without an account, free registration, and two-way calendar sync.',
+                'description' => 'Compare Getvnt with Facebook Events: a public schedule page anyone can open without an account, free registration, and two-way calendar sync.',
                 'keywords' => 'facebook events alternative, facebook event page alternative, community events calendar, events without facebook, facebook events competitor',
                 'about' => 'Facebook Events is the free events feature inside Facebook, used by people, Pages and groups to create events and invite others to them. Guests respond Interested or Going, and a ticket link can send them to another site to buy.',
                 'competitor_strengths' => [
@@ -4876,7 +4876,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Tickets on the Page',
-                        'description' => 'Facebook events send buyers to another site. Event Schedule takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
+                        'description' => 'Facebook events send buyers to another site. Getvnt takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
                         'icon' => 'ticket',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -4927,7 +4927,7 @@ class MarketingController extends Controller
                 ],
                 'faq' => [
                     ['question' => 'Can people see my events without a Facebook account?', 'answer' => 'Yes. Your schedule and each event page are public web pages, so anyone with the link can read the details, register and add the event to their calendar, with no account.'],
-                    ['question' => 'Is Event Schedule free like Facebook Events?', 'answer' => 'Yes. Unlimited events, free registration with QR tickets, newsletters, the embeddable calendar and calendar sync are on the free plan. Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees.'],
+                    ['question' => 'Is Getvnt free like Facebook Events?', 'answer' => 'Yes. Unlimited events, free registration with QR tickets, newsletters, the embeddable calendar and calendar sync are on the free plan. Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees.'],
                     ['question' => 'Can I still share my events on Facebook?', 'answer' => 'Yes. Share each event page link on Facebook as you would any other link, and the event graphic generator makes an image for the post, free. Boost can also run a paid Facebook and Instagram ad for an event, on Pro.'],
                     ['question' => 'Can I bring my Facebook events across?', 'answer' => 'Yes. Paste the event details or upload the flyer and the AI parser fills in the name, date, time and venue for you to check, fifty a day on the free and Pro plans.'],
                 ],
@@ -4940,9 +4940,9 @@ class MarketingController extends Controller
                 'name' => 'Zeffy',
                 'key' => 'zeffy',
                 'slug' => 'zeffy-alternative',
-                'meta_title' => 'Zeffy Alternative for Any Organizer | Event Schedule',
+                'meta_title' => 'Zeffy Alternative for Any Organizer | Getvnt',
                 'tagline' => 'Open source event ticketing with zero platform fees, open to any organizer, not only registered nonprofits.',
-                'description' => 'Compare Event Schedule with Zeffy: event ticketing with zero platform fees for any organizer, not only registered nonprofits, plus calendar sync and self-hosting.',
+                'description' => 'Compare Getvnt with Zeffy: event ticketing with zero platform fees for any organizer, not only registered nonprofits, plus calendar sync and self-hosting.',
                 'keywords' => 'zeffy alternative, zeffy competitor, free event ticketing, nonprofit event ticketing, ticketing for community groups',
                 'about' => 'Zeffy is a free fundraising and ticketing platform for nonprofits and registered charities in the US, Canada, the UK, Ireland, Australia and Germany. It covers card fees itself and is funded by optional tips from donors and buyers.',
                 'competitor_strengths' => [
@@ -4987,7 +4987,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Open to Everyone',
-                        'description' => 'Zeffy is for registered nonprofits and charities in six countries. Event Schedule works for any organizer, anywhere: a community group, a venue, a band or a business.',
+                        'description' => 'Zeffy is for registered nonprofits and charities in six countries. Getvnt works for any organizer, anywhere: a community group, a venue, a band or a business.',
                         'icon' => 'globe',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -4996,7 +4996,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Event Schedule takes no platform fee on any plan, and there is no tip prompt at checkout. Paid tickets are on Pro at '.plan_price($this->planPrice()).'/mo.',
+                        'description' => 'Getvnt takes no platform fee on any plan, and there is no tip prompt at checkout. Paid tickets are on Pro at '.plan_price($this->planPrice()).'/mo.',
                         'icon' => 'percent',
                         'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30',
                         'border' => 'border-sky-200 dark:border-sky-500/20',
@@ -5046,10 +5046,10 @@ class MarketingController extends Controller
                     ['name' => 'Hi.Events', 'route' => 'marketing.compare_hi_events'],
                 ],
                 'faq' => [
-                    ['question' => 'Can a group that is not a registered nonprofit use Event Schedule?', 'answer' => 'Yes. Any organizer can use Event Schedule: community groups, clubs, venues, artists and businesses, in any country. Zeffy is limited to nonprofits and charities in six countries.'],
-                    ['question' => 'How does Event Schedule pricing compare to Zeffy?', 'answer' => 'Zeffy is free for nonprofits and asks buyers for an optional tip at checkout. Event Schedule has a free plan with free registration, and Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees and no tip prompt.'],
-                    ['question' => 'Does Event Schedule take donations like Zeffy?', 'answer' => 'No. Event Schedule is built for events, not fundraising, so there are no donation forms, raffles or auctions. If fundraising is the heart of what you do, Zeffy covers more of it.'],
-                    ['question' => 'Who pays the card fees?', 'answer' => 'Paid tickets go through your own Stripe or PayPal account at its standard rates. Event Schedule adds no platform fee on top, and refunds go back through the same account from the Sales page.'],
+                    ['question' => 'Can a group that is not a registered nonprofit use Getvnt?', 'answer' => 'Yes. Any organizer can use Getvnt: community groups, clubs, venues, artists and businesses, in any country. Zeffy is limited to nonprofits and charities in six countries.'],
+                    ['question' => 'How does Getvnt pricing compare to Zeffy?', 'answer' => 'Zeffy is free for nonprofits and asks buyers for an optional tip at checkout. Getvnt has a free plan with free registration, and Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees and no tip prompt.'],
+                    ['question' => 'Does Getvnt take donations like Zeffy?', 'answer' => 'No. Getvnt is built for events, not fundraising, so there are no donation forms, raffles or auctions. If fundraising is the heart of what you do, Zeffy covers more of it.'],
+                    ['question' => 'Who pays the card fees?', 'answer' => 'Paid tickets go through your own Stripe or PayPal account at its standard rates. Getvnt adds no platform fee on top, and refunds go back through the same account from the Sales page.'],
                 ],
             ],
 
@@ -5060,9 +5060,9 @@ class MarketingController extends Controller
                 'name' => 'Tockify',
                 'key' => 'tockify',
                 'slug' => 'tockify-alternative',
-                'meta_title' => 'Tockify Alternative With Ticketing Built In | Event Schedule',
+                'meta_title' => 'Tockify Alternative With Ticketing Built In | Getvnt',
                 'tagline' => 'An embeddable event calendar that also takes registrations and sells tickets, with a free plan.',
-                'description' => 'Compare Event Schedule with Tockify: an embeddable calendar with free registration and QR check-in, two-way Google sync, and Pro at '.plan_price($this->planPrice()).'/mo.',
+                'description' => 'Compare Getvnt with Tockify: an embeddable calendar with free registration and QR check-in, two-way Google sync, and Pro at '.plan_price($this->planPrice()).'/mo.',
                 'keywords' => 'tockify alternative, tockify competitor, embeddable event calendar, website event calendar, free event calendar widget',
                 'about' => 'Tockify is a hosted, embeddable website calendar used by museums, theatres, schools, churches and gyms. It has a free plan and paid plans charged per calendar, and it sends visitors to another site for tickets.',
                 'competitor_strengths' => [
@@ -5103,7 +5103,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Tickets on the Page',
-                        'description' => 'Tockify sends visitors to another site for tickets. Event Schedule takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
+                        'description' => 'Tockify sends visitors to another site for tickets. Getvnt takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
                         'icon' => 'ticket',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -5139,7 +5139,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Remove Branding on Pro',
-                        'description' => 'Pro removes the Event Schedule branding. Tockify removes its branding on the White Label plan, at $40/mo.',
+                        'description' => 'Pro removes the Getvnt branding. Tockify removes its branding on the White Label plan, at $40/mo.',
                         'icon' => 'shield',
                         'gradient' => 'from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30',
                         'border' => 'border-amber-200 dark:border-amber-500/20',
@@ -5162,8 +5162,8 @@ class MarketingController extends Controller
                     ['name' => 'AddEvent', 'route' => 'marketing.compare_addevent'],
                 ],
                 'faq' => [
-                    ['question' => 'Is it easy to switch from Tockify to Event Schedule?', 'answer' => 'Yes. Create a free schedule, connect Google Calendar or paste your event details for the AI parser, then swap the embed code on your website for the Event Schedule calendar.'],
-                    ['question' => 'How does Event Schedule pricing compare to Tockify?', 'answer' => 'Tockify\'s free plan is an agenda view with Tockify branding, Premium is $8/mo per calendar and White Label is $40/mo. Event Schedule\'s free plan includes the embeddable calendar, and Pro is '.plan_price($this->planPrice()).'/mo, which also removes our branding.'],
+                    ['question' => 'Is it easy to switch from Tockify to Getvnt?', 'answer' => 'Yes. Create a free schedule, connect Google Calendar or paste your event details for the AI parser, then swap the embed code on your website for the Getvnt calendar.'],
+                    ['question' => 'How does Getvnt pricing compare to Tockify?', 'answer' => 'Tockify\'s free plan is an agenda view with Tockify branding, Premium is $8/mo per calendar and White Label is $40/mo. Getvnt\'s free plan includes the embeddable calendar, and Pro is '.plan_price($this->planPrice()).'/mo, which also removes our branding.'],
                     ['question' => 'Can people register for events on my calendar?', 'answer' => 'Yes. Free registration and RSVP are unlimited on every plan, each guest gets a ticket with a QR code, and paid tickets are on Pro with zero platform fees, paid into your own Stripe or PayPal account.'],
                     ['question' => 'Can I keep my events in Google Calendar?', 'answer' => 'Yes. Google Calendar sync runs both ways on every plan, so an event added in either place shows up in the other. Outlook and CalDAV calendars sync the same way.'],
                 ],
@@ -5176,9 +5176,9 @@ class MarketingController extends Controller
                 'name' => 'Hi.Events',
                 'key' => 'hi-events',
                 'slug' => 'hi-events-alternative',
-                'meta_title' => 'Hi.Events Alternative, No Per-Ticket Fees | Event Schedule',
+                'meta_title' => 'Hi.Events Alternative, No Per-Ticket Fees | Getvnt',
                 'tagline' => 'Open source ticketing with a flat price instead of a per-ticket fee, plus calendar sync and newsletters.',
-                'description' => 'Compare Event Schedule with Hi.Events: open source ticketing with flat '.plan_price($this->planPrice()).'/mo pricing instead of 1.25% + $0.60 a ticket, calendar sync, and simple self-hosting.',
+                'description' => 'Compare Getvnt with Hi.Events: open source ticketing with flat '.plan_price($this->planPrice()).'/mo pricing instead of 1.25% + $0.60 a ticket, calendar sync, and simple self-hosting.',
                 'keywords' => 'hi.events alternative, hi events alternative, open source ticketing alternative, open source eventbrite alternative, selfhosted ticketing',
                 'about' => 'Hi.Events is an open source event management and ticketing platform (AGPL-3.0 with additional terms) for conferences, nightlife, concerts and workshops. It offers a hosted Cloud service with a per-ticket fee and a selfhosted version, with paid licences to remove its branding.',
                 'competitor_strengths' => [
@@ -5221,7 +5221,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Flat '.plan_price($this->planPrice()).'/mo Pricing',
-                        'description' => 'Hi.Events Cloud charges 1.25% + $0.60 on every ticket. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, whatever you sell.',
+                        'description' => 'Hi.Events Cloud charges 1.25% + $0.60 on every ticket. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, whatever you sell.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -5248,7 +5248,7 @@ class MarketingController extends Controller
                     ],
                     [
                         'title' => 'Simpler to Selfhost',
-                        'description' => 'Event Schedule runs on standard PHP hosting with MySQL. Hi.Events self-hosting uses Docker with PostgreSQL and Redis.',
+                        'description' => 'Getvnt runs on standard PHP hosting with MySQL. Hi.Events self-hosting uses Docker with PostgreSQL and Redis.',
                         'icon' => 'globe',
                         'gradient' => 'from-blue-50 to-sky-50 dark:from-blue-900/30 dark:to-sky-900/30',
                         'border' => 'border-blue-200 dark:border-blue-500/20',
@@ -5280,10 +5280,10 @@ class MarketingController extends Controller
                     ['name' => 'Eventbrite', 'route' => 'marketing.compare_eventbrite'],
                 ],
                 'faq' => [
-                    ['question' => 'Are both platforms open source?', 'answer' => 'Yes. Hi.Events is AGPL-3.0 with additional terms that require a visible "Powered by Hi.Events" link unless you buy a licence. Event Schedule is open source under the Attribution Assurance License, and a selfhosted install resolves to Enterprise. It carries an attribution credit too: the license requires it, and no plan removes it on a selfhosted install.'],
-                    ['question' => 'How does Event Schedule pricing compare to Hi.Events Cloud?', 'answer' => 'Hi.Events Cloud has no monthly fee and charges 1.25% + $0.60 per ticket, paid by buyers by default. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so the saving grows with every ticket you sell.'],
-                    ['question' => 'Which is easier to selfhost?', 'answer' => 'Event Schedule runs on standard PHP hosting with MySQL. Hi.Events ships an all-in-one Docker image and uses PostgreSQL and Redis, which suits a server you already run Docker on.'],
-                    ['question' => 'Does Event Schedule have a check-in app?', 'answer' => 'Scanning works in the browser on any phone, free on every plan, with no app to install. The live check-in dashboard, which shows the room filling up, is on Pro.'],
+                    ['question' => 'Are both platforms open source?', 'answer' => 'Yes. Hi.Events is AGPL-3.0 with additional terms that require a visible "Powered by Hi.Events" link unless you buy a licence. Getvnt is open source under the Attribution Assurance License, and a selfhosted install resolves to Enterprise. It carries an attribution credit too: the license requires it, and no plan removes it on a selfhosted install.'],
+                    ['question' => 'How does Getvnt pricing compare to Hi.Events Cloud?', 'answer' => 'Hi.Events Cloud has no monthly fee and charges 1.25% + $0.60 per ticket, paid by buyers by default. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so the saving grows with every ticket you sell.'],
+                    ['question' => 'Which is easier to selfhost?', 'answer' => 'Getvnt runs on standard PHP hosting with MySQL. Hi.Events ships an all-in-one Docker image and uses PostgreSQL and Redis, which suits a server you already run Docker on.'],
+                    ['question' => 'Does Getvnt have a check-in app?', 'answer' => 'Scanning works in the browser on any phone, free on every plan, with no app to install. The live check-in dashboard, which shows the room filling up, is on Pro.'],
                 ],
             ],
 
@@ -5294,9 +5294,9 @@ class MarketingController extends Controller
                 'name' => 'Mobilizon',
                 'key' => 'mobilizon',
                 'slug' => 'mobilizon-alternative',
-                'meta_title' => 'Mobilizon Alternative With Ticketing | Event Schedule',
+                'meta_title' => 'Mobilizon Alternative With Ticketing | Getvnt',
                 'tagline' => 'Open source community events with ticketing, recurring events and two-way calendar sync built in.',
-                'description' => 'Compare Event Schedule with Mobilizon: open source and selfhostable too, with free registration and QR tickets, recurring events, and two-way calendar sync.',
+                'description' => 'Compare Getvnt with Mobilizon: open source and selfhostable too, with free registration and QR tickets, recurring events, and two-way calendar sync.',
                 'keywords' => 'mobilizon alternative, mobilizon competitor, open source meetup alternative, open source event platform, selfhosted community events',
                 'about' => 'Mobilizon is free, open source software (AGPLv3) for publishing local events and running groups, federated with the fediverse over ActivityPub. Framasoft launched it in 2019, and since 2024 the French nonprofit Kaihuri maintains it. Anyone can join an existing instance or run their own.',
                 'competitor_strengths' => [
@@ -5390,9 +5390,9 @@ class MarketingController extends Controller
                     ['name' => 'Hi.Events', 'route' => 'marketing.compare_hi_events'],
                 ],
                 'faq' => [
-                    ['question' => 'Are both platforms open source?', 'answer' => 'Yes. Mobilizon is AGPLv3 and written in Elixir with PostgreSQL. Event Schedule is open source under the Attribution Assurance License and runs on PHP with MySQL, and a selfhosted install resolves to Enterprise.'],
-                    ['question' => 'Does Event Schedule federate like Mobilizon?', 'answer' => 'Not over ActivityPub. A selfhosted Event Schedule install can share its public events with the eventschedule.com listings, one schedule at a time and only when the owner opts in, and every listing links back to the original event.'],
-                    ['question' => 'Can I sell tickets on Event Schedule?', 'answer' => 'Yes, on Pro at '.plan_price($this->planPrice()).'/mo, through your own Stripe or PayPal account with zero platform fees. Free registration with QR tickets is on every plan.'],
+                    ['question' => 'Are both platforms open source?', 'answer' => 'Yes. Mobilizon is AGPLv3 and written in Elixir with PostgreSQL. Getvnt is open source under the Attribution Assurance License and runs on PHP with MySQL, and a selfhosted install resolves to Enterprise.'],
+                    ['question' => 'Does Getvnt federate like Mobilizon?', 'answer' => 'Not over ActivityPub. A selfhosted Getvnt install can share its public events with the getvnt.com listings, one schedule at a time and only when the owner opts in, and every listing links back to the original event.'],
+                    ['question' => 'Can I sell tickets on Getvnt?', 'answer' => 'Yes, on Pro at '.plan_price($this->planPrice()).'/mo, through your own Stripe or PayPal account with zero platform fees. Free registration with QR tickets is on every plan.'],
                     ['question' => 'Do I have to run a server?', 'answer' => 'No. The hosted service has a free plan with nothing to install. Self-hosting is there if you want your events on your own server.'],
                 ],
             ],
@@ -5404,9 +5404,9 @@ class MarketingController extends Controller
                 'name' => 'TicketLeap',
                 'key' => 'ticketleap',
                 'slug' => 'ticketleap-alternative',
-                'meta_title' => 'TicketLeap Alternative, No Per-Ticket Fees | Event Schedule',
+                'meta_title' => 'TicketLeap Alternative, No Per-Ticket Fees | Getvnt',
                 'tagline' => 'Sell tickets from your own page with zero platform fees, payouts into your own account, and calendar sync.',
-                'description' => 'Compare Event Schedule with TicketLeap: zero platform fees instead of $1 + 2% a ticket plus 3% per order, paid to your own Stripe or PayPal, and calendar sync.',
+                'description' => 'Compare Getvnt with TicketLeap: zero platform fees instead of $1 + 2% a ticket plus 3% per order, paid to your own Stripe or PayPal, and calendar sync.',
                 'keywords' => 'ticketleap alternative, ticketleap competitor, ticketleap fees, haunted attraction ticketing, reserved seating ticketing',
                 'about' => 'TicketLeap is a self-serve ticketing platform founded in 2003 and now part of Leap Event Technology. It is free to use, sells in US, Canadian and Australian currencies, and charges a per-ticket fee plus a transaction fee that organizers can pass on to buyers.',
                 'competitor_strengths' => [
@@ -5449,7 +5449,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'TicketLeap charges $1 + 2% per paid ticket plus a 3% transaction fee per order. Event Schedule takes no platform fee on any plan.',
+                        'description' => 'TicketLeap charges $1 + 2% per paid ticket plus a 3% transaction fee per order. Getvnt takes no platform fee on any plan.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -5508,10 +5508,10 @@ class MarketingController extends Controller
                     ['name' => 'Brown Paper Tickets', 'route' => 'marketing.compare_brown_paper_tickets'],
                 ],
                 'faq' => [
-                    ['question' => 'How does Event Schedule pricing compare to TicketLeap?', 'answer' => 'TicketLeap has no subscription and charges $1 + 2% on each paid ticket, plus a 3% transaction fee per order, passed on to buyers or absorbed by you. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so you pay only Stripe\'s or PayPal\'s own processing.'],
+                    ['question' => 'How does Getvnt pricing compare to TicketLeap?', 'answer' => 'TicketLeap has no subscription and charges $1 + 2% on each paid ticket, plus a 3% transaction fee per order, passed on to buyers or absorbed by you. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so you pay only Stripe\'s or PayPal\'s own processing.'],
                     ['question' => 'When does the money from ticket sales reach me?', 'answer' => 'On Pro, paid tickets are charged through your own Stripe or PayPal account, so the money goes there as each order is placed and follows their normal payout schedule. TicketLeap pays organizers by direct deposit 4 to 6 business days after each event date, or weekly once approved for its FastPay advances.'],
                     ['question' => 'Can I price tickets in my own currency?', 'answer' => 'Yes, on Pro. Payments go through your own Stripe or PayPal account, so you can price tickets in most of the currencies they support. TicketLeap sells in US, Canadian and Australian dollars.'],
-                    ['question' => 'Does Event Schedule have reserved seating like TicketLeap?', 'answer' => 'Yes, on Enterprise. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map at checkout. TicketLeap includes its seating chart builder at no extra cost.'],
+                    ['question' => 'Does Getvnt have reserved seating like TicketLeap?', 'answer' => 'Yes, on Enterprise. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map at checkout. TicketLeap includes its seating chart builder at no extra cost.'],
                     ['question' => 'Can I put my events on my own website?', 'answer' => 'Yes. The embeddable calendar shows your upcoming events on any website, free, and each event links to its own page. On Pro, the ticket widget puts checkout on your site too. TicketLeap offers a Buy Tickets button that links to its own event page.'],
                     ['question' => 'Is it easy to switch from TicketLeap?', 'answer' => 'Yes. Create a free schedule, paste your event details or upload a flyer and the AI parser fills in each event for you to check. Then connect Stripe or PayPal and move to Pro to sell paid tickets.'],
                 ],
@@ -5524,9 +5524,9 @@ class MarketingController extends Controller
                 'name' => 'Songkick',
                 'key' => 'songkick',
                 'slug' => 'songkick-alternative',
-                'meta_title' => 'Songkick Alternative With Your Own Tickets | Event Schedule',
+                'meta_title' => 'Songkick Alternative With Your Own Tickets | Getvnt',
                 'tagline' => 'A schedule page that takes registrations and sells its own tickets, for artists and venues alike.',
-                'description' => 'Compare Event Schedule with Songkick: your own schedule page with free RSVPs and QR tickets, paid tickets on Pro, two-way calendar sync, and venue tools too.',
+                'description' => 'Compare Getvnt with Songkick: your own schedule page with free RSVPs and QR tickets, paid tickets on Pro, two-way calendar sync, and venue tools too.',
                 'keywords' => 'songkick alternative, songkick tourbox alternative, tour dates widget, concert listings for artists, songkick competitor',
                 'about' => 'Songkick is a concert discovery app and website that lists tour dates gathered from hundreds of sources and alerts fans when artists they track announce shows. Artist teams manage their dates with the Tourbox tool, and tickets are sold by outside vendors. Suno Inc. has operated Songkick since late 2025.',
                 'competitor_strengths' => [
@@ -5564,7 +5564,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'Tickets on Your Own Page',
-                        'description' => 'Songkick links fans out to other ticket sellers. Event Schedule takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
+                        'description' => 'Songkick links fans out to other ticket sellers. Getvnt takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.',
                         'icon' => 'ticket',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -5623,10 +5623,10 @@ class MarketingController extends Controller
                     ['name' => 'Facebook Events', 'route' => 'marketing.compare_facebook_events'],
                 ],
                 'faq' => [
-                    ['question' => 'Does Songkick sell tickets?', 'answer' => 'No. Songkick lists dates from hundreds of sources and links fans to outside ticket sellers, so orders and refunds are handled by whoever sold the ticket. Event Schedule takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.'],
-                    ['question' => 'Can I use Event Schedule alongside Songkick?', 'answer' => 'Yes. Keep your Songkick listing for its fan alerts and add your Event Schedule event page as the ticket link in Tourbox, so fans who find a date there land on your own page. Paste your dates in and the AI parser fills in each show for you to check.'],
-                    ['question' => 'Can venues and promoters use Event Schedule?', 'answer' => 'Yes. Venues, talent and curators each get their own schedule, and a show a venue lists can appear on the performer\'s schedule too. Songkick\'s Tourbox is only for artist teams, and venues and promoters cannot add ticket links themselves.'],
-                    ['question' => 'How does Event Schedule pricing compare to Songkick?', 'answer' => 'Songkick is free for artists, with paid email campaigns to their fans. Event Schedule is free for listing dates, registrations and newsletters, and Pro is '.plan_price($this->planPrice()).'/mo for paid tickets with zero platform fees.'],
+                    ['question' => 'Does Songkick sell tickets?', 'answer' => 'No. Songkick lists dates from hundreds of sources and links fans to outside ticket sellers, so orders and refunds are handled by whoever sold the ticket. Getvnt takes free registrations with QR tickets on every plan, and paid tickets on Pro with zero platform fees.'],
+                    ['question' => 'Can I use Getvnt alongside Songkick?', 'answer' => 'Yes. Keep your Songkick listing for its fan alerts and add your Getvnt event page as the ticket link in Tourbox, so fans who find a date there land on your own page. Paste your dates in and the AI parser fills in each show for you to check.'],
+                    ['question' => 'Can venues and promoters use Getvnt?', 'answer' => 'Yes. Venues, talent and curators each get their own schedule, and a show a venue lists can appear on the performer\'s schedule too. Songkick\'s Tourbox is only for artist teams, and venues and promoters cannot add ticket links themselves.'],
+                    ['question' => 'How does Getvnt pricing compare to Songkick?', 'answer' => 'Songkick is free for artists, with paid email campaigns to their fans. Getvnt is free for listing dates, registrations and newsletters, and Pro is '.plan_price($this->planPrice()).'/mo for paid tickets with zero platform fees.'],
                     ['question' => 'Can I put my tour dates on my website?', 'answer' => 'Yes. The embeddable calendar shows your upcoming dates on any website, free, and each date links to its own event page. Fans can also subscribe to your schedule\'s live calendar feed, so a moved date updates in their own calendar.'],
                 ],
             ],
@@ -5639,9 +5639,9 @@ class MarketingController extends Controller
                 'name' => 'AllEvents',
                 'key' => 'allevents',
                 'slug' => 'allevents-alternative',
-                'meta_title' => 'AllEvents Alternative With No Booking Fees | Event Schedule',
+                'meta_title' => 'AllEvents Alternative With No Booking Fees | Getvnt',
                 'tagline' => 'Sell tickets from your own schedule page with no booking fee, unlimited events and two-way calendar sync.',
-                'description' => 'Compare Event Schedule with AllEvents: no per-ticket booking fee, unlimited events on the free plan, two-way calendar sync, and the API and webhooks on Pro.',
+                'description' => 'Compare Getvnt with AllEvents: no per-ticket booking fee, unlimited events on the free plan, two-way calendar sync, and the API and webhooks on Pro.',
                 'keywords' => 'allevents alternative, allevents.in alternative, allevents competitor, event listing platform alternative, sell event tickets online',
                 'about' => 'AllEvents (allevents.in) is an event discovery platform founded in 2011 that lists events in over 40,000 cities, many of them gathered from other websites. Organizers can publish events and sell tickets for a booking fee charged to buyers, and buy paid promotion.',
                 'competitor_strengths' => [
@@ -5687,7 +5687,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => 'No Booking Fee',
-                        'description' => 'AllEvents adds USD 1 to each paid ticket sold online, and 10% + INR 10 to one priced in rupees. Event Schedule takes no platform fee on any plan, and Pro is a flat '.plan_price($this->planPrice()).'/mo.',
+                        'description' => 'AllEvents adds USD 1 to each paid ticket sold online, and 10% + INR 10 to one priced in rupees. Getvnt takes no platform fee on any plan, and Pro is a flat '.plan_price($this->planPrice()).'/mo.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -5746,10 +5746,10 @@ class MarketingController extends Controller
                     ['name' => 'Facebook Events', 'route' => 'marketing.compare_facebook_events'],
                 ],
                 'faq' => [
-                    ['question' => 'How does Event Schedule pricing compare to AllEvents?', 'answer' => 'AllEvents adds a booking fee of USD 1 to each paid ticket sold online (10% + INR 10 on events priced in rupees), charged to buyers unless you absorb it, and its paid plans at USD 12, 60 and 200 a month raise how many upcoming events you can list at once. Event Schedule has no booking fee, and Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees.'],
+                    ['question' => 'How does Getvnt pricing compare to AllEvents?', 'answer' => 'AllEvents adds a booking fee of USD 1 to each paid ticket sold online (10% + INR 10 on events priced in rupees), charged to buyers unless you absorb it, and its paid plans at USD 12, 60 and 200 a month raise how many upcoming events you can list at once. Getvnt has no booking fee, and Pro at '.plan_price($this->planPrice()).'/mo adds paid tickets with zero platform fees.'],
                     ['question' => 'Do I need a paid plan to list more events?', 'answer' => 'No. The free plan has no limit on events, and free registration with QR tickets is unlimited too. The AllEvents free plan allows 5 upcoming events at a time, and its paid plans raise that to 20, 100 or more.'],
                     ['question' => 'When do I get paid for ticket sales?', 'answer' => 'On Pro, paid tickets are charged through your own Stripe or PayPal account, so the money goes there as each order is placed. AllEvents also pays into your own PayPal or Stripe account, except for events priced in Indian rupees, which it pays out 3 to 5 business days after the event.'],
-                    ['question' => 'Can Event Schedule promote my event like AllEvents?', 'answer' => 'Event Schedule is built around your own schedule page rather than a shared marketplace. People who sign up on your schedule get an email when you add events, you can send newsletters, and on Pro you can boost an event with a Facebook and Instagram ad. If reaching strangers in your city matters most, AllEvents does more of that.'],
+                    ['question' => 'Can Getvnt promote my event like AllEvents?', 'answer' => 'Getvnt is built around your own schedule page rather than a shared marketplace. People who sign up on your schedule get an email when you add events, you can send newsletters, and on Pro you can boost an event with a Facebook and Instagram ad. If reaching strangers in your city matters most, AllEvents does more of that.'],
                     ['question' => 'Can I sell tickets on my own website?', 'answer' => 'Yes, on Pro. The ticket widget puts checkout on your own site, and the embeddable calendar, which is free, lists every upcoming event. AllEvents offers event list plugins and a ticket embed as well.'],
                     ['question' => 'Are the API and webhooks included?', 'answer' => 'Yes, both are on Pro at '.plan_price($this->planPrice()).'/mo, with a REST API for events, schedules and sales. AllEvents includes webhooks from its Professional plan at USD 60 a month, and its API is a data product for event listings rather than for managing your own events.'],
                 ],
@@ -5763,9 +5763,9 @@ class MarketingController extends Controller
                 'name' => 'Universe',
                 'key' => 'universe',
                 'slug' => 'universe-alternative',
-                'meta_title' => 'Universe Alternative With 0% Platform Fees | Event Schedule',
+                'meta_title' => 'Universe Alternative With 0% Platform Fees | Getvnt',
                 'tagline' => 'Ticketing with zero platform fees, payouts into your own account, two-way calendar sync, and reserved seating on Enterprise.',
-                'description' => 'Compare Event Schedule with Universe: 0% platform fees instead of 2% + $0.79 a ticket plus 3% processing, calendar sync, and reserved seating on Enterprise.',
+                'description' => 'Compare Getvnt with Universe: 0% platform fees instead of 2% + $0.79 a ticket plus 3% processing, calendar sync, and reserved seating on Enterprise.',
                 'keywords' => 'universe alternative, universe.com alternative, universe ticketing alternative, ticketmaster universe alternative, timed entry ticketing',
                 'about' => 'Universe is a self-serve ticketing platform owned by Ticketmaster since 2015, used by attractions, clubs and event organizers. Publishing is free, paid tickets carry a per-ticket service fee plus a processing fee, and custom Pro plans add selling on Ticketmaster.',
                 'competitor_strengths' => [
@@ -5812,7 +5812,7 @@ class MarketingController extends Controller
                 'key_advantages' => [
                     [
                         'title' => '0% Platform Fees',
-                        'description' => 'Universe charges US organizers 2% + $0.79 per ticket on Starter plus 3% processing. Event Schedule takes no platform fee on any plan.',
+                        'description' => 'Universe charges US organizers 2% + $0.79 per ticket on Starter plus 3% processing. Getvnt takes no platform fee on any plan.',
                         'icon' => 'dollar',
                         'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30',
                         'border' => 'border-emerald-200 dark:border-emerald-500/20',
@@ -5871,9 +5871,9 @@ class MarketingController extends Controller
                     ['name' => 'Ticket Tailor', 'route' => 'marketing.compare_ticket_tailor'],
                 ],
                 'faq' => [
-                    ['question' => 'How does Event Schedule pricing compare to Universe?', 'answer' => 'Universe charges US organizers 2% + $0.79 per paid ticket on its Starter plan, plus a 3% processing fee through Universe Payments, passed on to buyers or absorbed by you. Event Schedule Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so you pay only Stripe\'s or PayPal\'s own processing.'],
+                    ['question' => 'How does Getvnt pricing compare to Universe?', 'answer' => 'Universe charges US organizers 2% + $0.79 per paid ticket on its Starter plan, plus a 3% processing fee through Universe Payments, passed on to buyers or absorbed by you. Getvnt Pro is a flat '.plan_price($this->planPrice()).'/mo with zero platform fees, so you pay only Stripe\'s or PayPal\'s own processing.'],
                     ['question' => 'When do I get paid?', 'answer' => 'On Pro, paid tickets are charged through your own Stripe or PayPal account, so the money goes there as each order is placed. With Universe Payments, funds reach your Universe balance 48 hours after the event ends, and connecting your own Stripe account is its option for money before the event.'],
-                    ['question' => 'Does Event Schedule have reserved seating?', 'answer' => 'Yes, on Enterprise. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map at checkout. Universe stopped offering seating plans for new listings in 2019.'],
+                    ['question' => 'Does Getvnt have reserved seating?', 'answer' => 'Yes, on Enterprise. A venue schedule draws its room once, with sections, rows, tables, standing areas and wheelchair spaces, and buyers pick their seats from the map at checkout. Universe stopped offering seating plans for new listings in 2019.'],
                     ['question' => 'Can I run a long series of dates?', 'answer' => 'Yes. Recurring events repeat daily, weekly on chosen days, every few weeks or monthly, with dates you can skip, and each date keeps its own tickets and capacity. For attractions with many entry times a day, Universe\'s timed-entry events go further.'],
                     ['question' => 'Can I keep my events in Google Calendar?', 'answer' => 'Yes. Google Calendar sync runs both ways on every plan, and Outlook and CalDAV calendars sync the same way. Anyone can also subscribe to your schedule\'s live calendar feed.'],
                     ['question' => 'Is it easy to switch from Universe?', 'answer' => 'Yes. Create a free schedule, paste your event details or upload a flyer and the AI parser fills in each event for you to check, then connect Stripe or PayPal and move to Pro to sell paid tickets.'],
@@ -5893,12 +5893,12 @@ class MarketingController extends Controller
             'google-forms' => [
                 'name' => 'Google Forms',
                 'tagline' => 'Stop building event registration forms from scratch.',
-                'meta_title' => 'Replace Google Forms for Event Registration | Event Schedule',
+                'meta_title' => 'Replace Google Forms for Event Registration | Getvnt',
                 'description' => 'Replace Google Forms for event registration: free RSVPs, tickets paid by Stripe or PayPal, QR codes scanned at the door, and a public page for each event.',
                 'keywords' => 'Google Forms alternative for events, Google Forms replacement, event registration form, event signup form',
                 'audience_hint' => 'For event organizers using Google Forms for RSVPs and registration',
                 'about' => 'Google Forms is a free form builder used by many event organizers to collect RSVPs and registrations. While it works for basic data collection, it was never designed for event management - leaving organizers to handle payments, tickets and attendee tracking outside the form.',
-                'pricing_note' => 'Google Forms is free, but payments and tickets have to come from other tools. Event Schedule does free registration, confirmation emails and door check-in on its free plan; paid tickets, at zero platform fees, are on Pro at '.plan_price($this->planPrice()).'/month.',
+                'pricing_note' => 'Google Forms is free, but payments and tickets have to come from other tools. Getvnt does free registration, confirmation emails and door check-in on its free plan; paid tickets, at zero platform fees, are on Pro at '.plan_price($this->planPrice()).'/month.',
                 'competitor_price' => 'Free (but $50+/mo with add-ons)',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -5932,7 +5932,7 @@ class MarketingController extends Controller
                     ['title' => 'Custom Registration Fields', 'description' => 'On Pro, add your own questions to the checkout, per order or per ticket. The answers stay with each attendee and come out in the sales export.', 'icon' => 'clipboard', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Google Forms collects data, but Event Schedule manages your entire event workflow from registration to check-in day.',
+                    'intro' => 'Google Forms collects data, but Getvnt manages your entire event workflow from registration to check-in day.',
                     'points' => [
                         'Ticket payments through Stripe or PayPal, with zero platform fees',
                         'Public event pages with all details, not just a form link',
@@ -5946,11 +5946,11 @@ class MarketingController extends Controller
                     ['title' => 'Share your event page', 'description' => 'Share the event link instead of a form link. Attendees register and pay in one step.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Google Forms alternative for events?', 'answer' => 'Yes. Event Schedule replaces Google Forms for event registration with built-in ticketing, payments, and attendee management. You can set up your first event in minutes. Paste your event details and AI will extract dates, times, and descriptions automatically.'],
-                    ['question' => 'Is Event Schedule really free?', 'answer' => 'Yes. The free plan includes unlimited events, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard and every payment method: buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash. No credit card required to start.'],
-                    ['question' => 'Can Event Schedule handle custom registration fields like Google Forms?', 'answer' => 'Yes. Pro plan includes custom fields on ticket forms so you can collect any information you need from attendees. Unlike Google Forms, the data is automatically connected to your attendee records and ticket sales.'],
+                    ['question' => 'Is Getvnt a good Google Forms alternative for events?', 'answer' => 'Yes. Getvnt replaces Google Forms for event registration with built-in ticketing, payments, and attendee management. You can set up your first event in minutes. Paste your event details and AI will extract dates, times, and descriptions automatically.'],
+                    ['question' => 'Is Getvnt really free?', 'answer' => 'Yes. The free plan includes unlimited events, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard and every payment method: buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash. No credit card required to start.'],
+                    ['question' => 'Can Getvnt handle custom registration fields like Google Forms?', 'answer' => 'Yes. Pro plan includes custom fields on ticket forms so you can collect any information you need from attendees. Unlike Google Forms, the data is automatically connected to your attendee records and ticket sales.'],
                     ['question' => 'Can I replace a notify-me form for an event that is not on sale yet?', 'answer' => 'Yes, and it is free on every plan. Switch on the "Notify me" card and, on an event with nothing on sale yet, visitors click Tell me when tickets go on sale and leave just an email address, with no account. They get one email when tickets go on sale, one if the event is cancelled, a reminder shortly before it starts, and any notice you choose to send if the date or venue changes. It does not add them to your newsletter, every email has a one-click unsubscribe, and the event editor shows you how many people are waiting.'],
-                    ['question' => 'Can I collect RSVPs for free events without Google Forms?', 'answer' => 'Yes. Event Schedule supports free RSVPs with automatic confirmation emails and an optional capacity limit, with no payment setup at all. Attendees register through your event page, and you get a real attendee list with a QR code for each guest to scan at the door, not just form responses.'],
+                    ['question' => 'Can I collect RSVPs for free events without Google Forms?', 'answer' => 'Yes. Getvnt supports free RSVPs with automatic confirmation emails and an optional capacity limit, with no payment setup at all. Attendees register through your event page, and you get a real attendee list with a QR code for each guest to scan at the door, not just form responses.'],
                 ],
                 'cross_links' => [
                     ['name' => 'SurveyMonkey', 'route' => 'marketing.replace_surveymonkey', 'description' => 'Another form tool that falls short for events.'],
@@ -5966,12 +5966,12 @@ class MarketingController extends Controller
             'mailchimp' => [
                 'name' => 'Mailchimp',
                 'tagline' => 'Your event emails and ticketing in one place.',
-                'meta_title' => 'Replace Mailchimp for Event Newsletters | Event Schedule',
+                'meta_title' => 'Replace Mailchimp for Event Newsletters | Getvnt',
                 'description' => 'Replace Mailchimp for event emails: newsletters with A/B tests, an automatic digest of new events for subscribers, and ticket sales in the same place.',
                 'keywords' => 'Mailchimp alternative for events, Mailchimp replacement, event email marketing, event newsletter',
                 'audience_hint' => 'For organizers managing event emails in a separate platform',
                 'about' => 'Mailchimp is a popular email marketing platform that many event organizers use to promote events and communicate with attendees. However, using Mailchimp means managing a separate tool alongside your event platform, manually syncing attendee lists, and paying for email marketing on top of your event tools.',
-                'pricing_note' => 'Mailchimp starts at $13/month for 500 contacts and goes up from there. Event Schedule does not cap subscribers on any plan; what the plan sets is the newsletter allowance, counted in recipients: 10 a month free, 100 on Pro at '.plan_price($this->planPrice()).'/month, 1,000 on Enterprise. The automatic digest of new events is outside it. Free registration is unlimited, and selling paid tickets is on Pro.',
+                'pricing_note' => 'Mailchimp starts at $13/month for 500 contacts and goes up from there. Getvnt does not cap subscribers on any plan; what the plan sets is the newsletter allowance, counted in recipients: 10 a month free, 100 on Pro at '.plan_price($this->planPrice()).'/month, 1,000 on Enterprise. The automatic digest of new events is outside it. Free registration is unlimited, and selling paid tickets is on Pro.',
                 'competitor_price' => 'From $13/mo',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6004,7 +6004,7 @@ class MarketingController extends Controller
                     ['title' => 'Automatic New-Event Digest', 'description' => 'Confirmed subscribers get a digest of the new public events your schedule creates, at most one every 72 hours, without you writing anything. It does not count against the newsletter allowance.', 'icon' => 'mail', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Mailchimp handles email, but Event Schedule combines newsletters, ticketing, and attendee management so you never juggle separate tools.',
+                    'intro' => 'Mailchimp handles email, but Getvnt combines newsletters, ticketing, and attendee management so you never juggle separate tools.',
                     'points' => [
                         'Newsletters with A/B testing built into your event platform',
                         'An automatic digest of new events for confirmed subscribers, outside the allowance',
@@ -6018,9 +6018,9 @@ class MarketingController extends Controller
                     ['title' => 'Send your first newsletter', 'description' => 'Write and send event updates with the built-in newsletter builder. A/B test subject lines to maximize engagement.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Mailchimp alternative for event emails?', 'answer' => 'Yes. Event Schedule includes newsletters with A/B testing, segments, list import, and an automatic digest of new events for confirmed subscribers, all beside your ticket sales. You can send event announcements and updates directly from your schedule without a separate email tool.'],
-                    ['question' => 'How much does Event Schedule cost compared to Mailchimp?', 'answer' => 'The newsletter tools and your subscriber list are free, with no cap on how many subscribers you keep. What the plan sets is the monthly newsletter allowance, counted in recipients: 10 on the free plan, 100 on Pro at '.plan_price($this->planPrice()).'/month and 1,000 on Enterprise, so one newsletter to 40 people uses 40 of it. The automatic digest of new events does not count against it. Free registration is unlimited on every plan, and selling paid tickets is on Pro with zero platform fees. Mailchimp charges based on contact count and can cost $20 or more per month for similar email features alone.'],
-                    ['question' => 'Does Event Schedule support email automation like Mailchimp?', 'answer' => 'Some, aimed at events. Confirmed subscribers get a digest of the new public events your schedule creates automatically, at most one every 72 hours, and it does not draw on the newsletter allowance. People who ask to hear about one event get an email when its tickets go on sale, one if it is cancelled, and a reminder shortly before it starts. What it does not have is Mailchimp-style drip sequences or custom automation rules: a newsletter goes out when you send it.'],
+                    ['question' => 'Is Getvnt a good Mailchimp alternative for event emails?', 'answer' => 'Yes. Getvnt includes newsletters with A/B testing, segments, list import, and an automatic digest of new events for confirmed subscribers, all beside your ticket sales. You can send event announcements and updates directly from your schedule without a separate email tool.'],
+                    ['question' => 'How much does Getvnt cost compared to Mailchimp?', 'answer' => 'The newsletter tools and your subscriber list are free, with no cap on how many subscribers you keep. What the plan sets is the monthly newsletter allowance, counted in recipients: 10 on the free plan, 100 on Pro at '.plan_price($this->planPrice()).'/month and 1,000 on Enterprise, so one newsletter to 40 people uses 40 of it. The automatic digest of new events does not count against it. Free registration is unlimited on every plan, and selling paid tickets is on Pro with zero platform fees. Mailchimp charges based on contact count and can cost $20 or more per month for similar email features alone.'],
+                    ['question' => 'Does Getvnt support email automation like Mailchimp?', 'answer' => 'Some, aimed at events. Confirmed subscribers get a digest of the new public events your schedule creates automatically, at most one every 72 hours, and it does not draw on the newsletter allowance. People who ask to hear about one event get an email when its tickets go on sale, one if it is cancelled, and a reminder shortly before it starts. What it does not have is Mailchimp-style drip sequences or custom automation rules: a newsletter goes out when you send it.'],
                     ['question' => 'Can I import my Mailchimp subscriber list?', 'answer' => 'Yes. Export your audience from Mailchimp, then paste the addresses in or upload the CSV, up to 10,000 rows at a time, on any plan. They land in a segment you can send newsletters to. From then on, people sign up on your schedule page, and buyers who tick the box at checkout join your subscribers.'],
                     ['question' => 'Can I send newsletters to people who bought tickets?', 'answer' => 'Yes. Choose the Ticket buyers segment and a newsletter reaches everyone who bought tickets to your events, or to one event you pick, without importing anything. Buyers who ticked the box at checkout to hear from you are on your subscriber list too, and get the automatic digest.'],
                     ['question' => 'Is signing up double opt-in, like Mailchimp?', 'answer' => 'On the sign-up panel, yes. Visitors give a name and an email address and confirm from the email that follows; confirming also sets up an account that follows your schedule. The tick box at checkout is single opt-in, because the order receipt has already proved the address.'],
@@ -6039,12 +6039,12 @@ class MarketingController extends Controller
             'canva' => [
                 'name' => 'Canva',
                 'tagline' => 'Event graphics that create themselves.',
-                'meta_title' => 'Replace Canva for Event Flyers and Graphics | Event Schedule',
+                'meta_title' => 'Replace Canva for Event Flyers and Graphics | Getvnt',
                 'description' => 'Replace Canva for event graphics: shareable images built from your event details, free on every plan, plus AI flyers on the Enterprise plan.',
                 'keywords' => 'Canva alternative for events, Canva replacement, event flyer maker, event graphic generator',
                 'audience_hint' => 'For organizers spending hours designing event flyers manually',
                 'about' => 'Canva is a popular graphic design platform that event organizers use to create flyers, social media posts, and promotional graphics. While Canva offers great design flexibility, creating event graphics manually takes time and requires updating multiple designs whenever event details change.',
-                'pricing_note' => 'Canva Pro costs $15/month for premium design features. Event Schedule generates event graphics automatically on every plan, the free one included; Pro at '.plan_price($this->planPrice()).'/month adds paid ticket sales and raises the newsletter allowance, and AI flyers are on Enterprise.',
+                'pricing_note' => 'Canva Pro costs $15/month for premium design features. Getvnt generates event graphics automatically on every plan, the free one included; Pro at '.plan_price($this->planPrice()).'/month adds paid ticket sales and raises the newsletter allowance, and AI flyers are on Enterprise.',
                 'competitor_price' => 'From $15/mo (Pro)',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6069,7 +6069,7 @@ class MarketingController extends Controller
                     'Time spent on design instead of event management',
                 ],
                 'es_solutions' => [
-                    ['title' => 'Auto-generated Graphics', 'description' => 'Event Schedule generates shareable graphics of your events from the details you already entered, free on every plan. No design work required.', 'icon' => 'image', 'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30', 'border' => 'border-emerald-200 dark:border-emerald-500/20', 'icon_bg' => 'bg-emerald-100 dark:bg-emerald-500/20', 'icon_color' => 'text-emerald-600 dark:text-emerald-400'],
+                    ['title' => 'Auto-generated Graphics', 'description' => 'Getvnt generates shareable graphics of your events from the details you already entered, free on every plan. No design work required.', 'icon' => 'image', 'gradient' => 'from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30', 'border' => 'border-emerald-200 dark:border-emerald-500/20', 'icon_bg' => 'bg-emerald-100 dark:bg-emerald-500/20', 'icon_color' => 'text-emerald-600 dark:text-emerald-400'],
                     ['title' => 'AI Flyer Generation', 'description' => 'On the Enterprise plan, AI generates a flyer image from your event details in seconds, following any style instructions you give it.', 'icon' => 'ai', 'gradient' => 'from-blue-50 to-blue-50 dark:from-blue-900/30 dark:to-blue-900/30', 'border' => 'border-blue-200 dark:border-blue-500/20', 'icon_bg' => 'bg-blue-100 dark:bg-blue-500/20', 'icon_color' => 'text-blue-600 dark:text-blue-400'],
                     ['title' => 'Always Up to Date', 'description' => 'Graphics update when your event details change. No need to re-create flyers for date or venue changes.', 'icon' => 'calendar', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                     ['title' => 'Integrated with Ticketing', 'description' => 'Your graphics link directly to event pages where people can buy tickets. No separate tools to connect.', 'icon' => 'ticket', 'gradient' => 'from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30', 'border' => 'border-amber-200 dark:border-amber-500/20', 'icon_bg' => 'bg-amber-100 dark:bg-amber-500/20', 'icon_color' => 'text-amber-600 dark:text-amber-400'],
@@ -6077,7 +6077,7 @@ class MarketingController extends Controller
                     ['title' => 'AI Style Generation', 'description' => 'On Enterprise, AI generates a matching profile image, header, background, accent color and font for your schedule, so every page shares one look.', 'icon' => 'ai', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Canva makes beautiful designs, but Event Schedule generates event graphics automatically so you can focus on running your events.',
+                    'intro' => 'Canva makes beautiful designs, but Getvnt generates event graphics automatically so you can focus on running your events.',
                     'points' => [
                         'Graphics built from your event details in seconds, free, with AI flyers on Enterprise',
                         'Graphics always stay in sync when event details change',
@@ -6091,11 +6091,11 @@ class MarketingController extends Controller
                     ['title' => 'Share and sell', 'description' => 'Share graphics on social media that link directly to your event pages where people can buy tickets.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Canva alternative for event graphics?', 'answer' => 'Yes. Event Schedule auto-generates shareable event graphics from your event details on every plan, and offers AI flyer generation on the Enterprise plan. Graphics update automatically when event details change, so you never have outdated flyers.'],
-                    ['question' => 'Is Event Schedule free for event graphics?', 'answer' => 'Yes. Event graphics are generated from your event details on every plan, the free one included. AI flyer generation, AI style generation and AI-written graphic text are on the Enterprise plan. Pro at '.plan_price($this->planPrice()).'/month is about selling: it adds paid ticket sales and the live check-in dashboard.'],
-                    ['question' => 'How do Event Schedule graphics compare to Canva designs?', 'answer' => 'Canva offers more design flexibility for general-purpose graphics. Event Schedule graphics are purpose-built for events, automatically pulling in dates, times, locations, and descriptions. They are designed for quick social media sharing and are always in sync with your event data.'],
-                    ['question' => 'Do I need design skills to create event graphics with Event Schedule?', 'answer' => 'No. Event Schedule generates event graphics automatically from your event details, on every plan. On Enterprise, AI flyer generation creates a design with no input from you at all. You can also customize styles and branding to match your look.'],
-                    ['question' => 'Can I still use Canva alongside Event Schedule?', 'answer' => 'Of course. Many organizers use Event Schedule for automatic event graphics and Canva for custom brand materials. Event Schedule handles the event-specific graphics so you spend less time in Canva for routine event promotion.'],
+                    ['question' => 'Is Getvnt a good Canva alternative for event graphics?', 'answer' => 'Yes. Getvnt auto-generates shareable event graphics from your event details on every plan, and offers AI flyer generation on the Enterprise plan. Graphics update automatically when event details change, so you never have outdated flyers.'],
+                    ['question' => 'Is Getvnt free for event graphics?', 'answer' => 'Yes. Event graphics are generated from your event details on every plan, the free one included. AI flyer generation, AI style generation and AI-written graphic text are on the Enterprise plan. Pro at '.plan_price($this->planPrice()).'/month is about selling: it adds paid ticket sales and the live check-in dashboard.'],
+                    ['question' => 'How do Getvnt graphics compare to Canva designs?', 'answer' => 'Canva offers more design flexibility for general-purpose graphics. Getvnt graphics are purpose-built for events, automatically pulling in dates, times, locations, and descriptions. They are designed for quick social media sharing and are always in sync with your event data.'],
+                    ['question' => 'Do I need design skills to create event graphics with Getvnt?', 'answer' => 'No. Getvnt generates event graphics automatically from your event details, on every plan. On Enterprise, AI flyer generation creates a design with no input from you at all. You can also customize styles and branding to match your look.'],
+                    ['question' => 'Can I still use Canva alongside Getvnt?', 'answer' => 'Of course. Many organizers use Getvnt for automatic event graphics and Canva for custom brand materials. Getvnt handles the event-specific graphics so you spend less time in Canva for routine event promotion.'],
                 ],
                 'cross_links' => [
                     ['name' => 'QR Code Generators', 'route' => 'marketing.replace_qr_code_generators', 'description' => 'QR codes built into every ticket.'],
@@ -6111,14 +6111,14 @@ class MarketingController extends Controller
             'linktree' => [
                 'name' => 'Linktree',
                 'tagline' => 'A shareable page that actually sells tickets.',
-                'meta_title' => 'Replace Linktree for Your Event Link in Bio | Event Schedule',
+                'meta_title' => 'Replace Linktree for Your Event Link in Bio | Getvnt',
                 'description' => 'Replace Linktree for events: one link to a page of your upcoming events with tickets, plus a short address with click counts for every other link.',
                 'keywords' => 'Linktree alternative for events, Linktree replacement, event link in bio, event landing page',
                 'audience_hint' => 'For creators and organizers using a link-in-bio for event promotion',
                 'about' => 'Linktree is a link-in-bio tool that event organizers use to share multiple event links from a single URL. While it solves the "one link" problem on social media, it is just a list of links with no event context, ticketing, or scheduling functionality.',
                 // Linktree Pro is $9/month, which is what Pro costs too, so this line cannot lean
                 // on being cheaper. It says what the free plan already covers instead.
-                'pricing_note' => 'Linktree Pro costs $9/month for analytics and customization on what is still a list of links. On Event Schedule the schedule page, subscriber sign-ups, newsletters, link click counts and unlimited free registration are all on the free plan; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month.',
+                'pricing_note' => 'Linktree Pro costs $9/month for analytics and customization on what is still a list of links. On Getvnt the schedule page, subscriber sign-ups, newsletters, link click counts and unlimited free registration are all on the free plan; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month.',
                 'competitor_price' => 'From $9/mo (Pro)',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6149,10 +6149,10 @@ class MarketingController extends Controller
                     ['title' => 'Auto-updating Events', 'description' => 'Your schedule page updates automatically when you add or change events. No manual link management.', 'icon' => 'calendar', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                     ['title' => 'Subscriber Signups', 'description' => 'Visitors sign up with a name and email and, once confirmed, get a digest when you publish new events. Anyone who would rather not give an email can subscribe to your calendar feed instead.', 'icon' => 'mail', 'gradient' => 'from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30', 'border' => 'border-amber-200 dark:border-amber-500/20', 'icon_bg' => 'bg-amber-100 dark:bg-amber-500/20', 'icon_color' => 'text-amber-600 dark:text-amber-400'],
                     ['title' => 'A Short Link for Every Link', 'description' => 'Each social or website link on your schedule answers at a short address on your own URL, like /instagram, or the brand name for any other site. Clicks on them are counted in your analytics, free.', 'icon' => 'link', 'gradient' => 'from-cyan-50 to-sky-50 dark:from-cyan-900/30 dark:to-sky-900/30', 'border' => 'border-cyan-200 dark:border-cyan-500/20', 'icon_bg' => 'bg-cyan-100 dark:bg-cyan-500/20', 'icon_color' => 'text-cyan-600 dark:text-cyan-400'],
-                    ['title' => 'Custom Branding', 'description' => 'Your name, logo and colors on every plan; remove Event Schedule branding on Pro, and put the page on your own domain on Enterprise. A professional event hub, not just a link list.', 'icon' => 'image', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
+                    ['title' => 'Custom Branding', 'description' => 'Your name, logo and colors on every plan; remove Getvnt branding on Pro, and put the page on your own domain on Enterprise. A professional event hub, not just a link list.', 'icon' => 'image', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Linktree gives you a list of links. Event Schedule gives you a full event hub with ticket sales, subscriber signups, and auto-updating event details.',
+                    'intro' => 'Linktree gives you a list of links. Getvnt gives you a full event hub with ticket sales, subscriber signups, and auto-updating event details.',
                     'points' => [
                         'A schedule page with event details, not just a list of URLs',
                         'Ticket sales on your own pages, paid through Stripe or PayPal',
@@ -6167,12 +6167,12 @@ class MarketingController extends Controller
                     ['title' => 'Use as your link in bio', 'description' => 'Share your schedule URL as your link in bio. It updates automatically as you add events, and each of your other links gets a short address on the same URL.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Linktree alternative for event promotion?', 'answer' => 'Yes. Linktree is a list of links. Event Schedule gives you a full schedule page with event details, dates, ticket purchasing, and subscriber signups. Your audience sees a rich event experience, not just a link directory.'],
-                    ['question' => 'Does Event Schedule have a free plan?', 'answer' => 'Yes. The free plan includes unlimited events, a public schedule page, Google Calendar sync, newsletters, and embeddable widgets. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard.'],
-                    ['question' => 'Can I use Event Schedule as my link in bio?', 'answer' => 'Yes. Your schedule page URL works as a link in bio. It shows all your upcoming events with full details and ticket links, updating automatically as you add or change events. No manual link management needed.'],
-                    ['question' => 'Does the schedule page work with Instagram and TikTok?', 'answer' => 'Yes. Your Event Schedule URL works as a link in bio on any social platform including Instagram, TikTok, YouTube, and X. It shows all your upcoming events with full details and ticket links, updating automatically as you add events.'],
+                    ['question' => 'Is Getvnt a good Linktree alternative for event promotion?', 'answer' => 'Yes. Linktree is a list of links. Getvnt gives you a full schedule page with event details, dates, ticket purchasing, and subscriber signups. Your audience sees a rich event experience, not just a link directory.'],
+                    ['question' => 'Does Getvnt have a free plan?', 'answer' => 'Yes. The free plan includes unlimited events, a public schedule page, Google Calendar sync, newsletters, and embeddable widgets. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard.'],
+                    ['question' => 'Can I use Getvnt as my link in bio?', 'answer' => 'Yes. Your schedule page URL works as a link in bio. It shows all your upcoming events with full details and ticket links, updating automatically as you add or change events. No manual link management needed.'],
+                    ['question' => 'Does the schedule page work with Instagram and TikTok?', 'answer' => 'Yes. Your Getvnt URL works as a link in bio on any social platform including Instagram, TikTok, YouTube, and X. It shows all your upcoming events with full details and ticket links, updating automatically as you add events.'],
                     ['question' => 'Can visitors subscribe to my events from the schedule page?', 'answer' => 'Yes. The sign-up panel on your schedule page asks for a name and email; once they confirm, subscribers get a digest of the new events your schedule creates, at most one every 72 hours, and confirming also sets them up with an account that follows you. Anyone who would rather not give an email can subscribe to your calendar feed instead, which updates itself when dates change. You can write newsletters to them yourself too.'],
-                    ['question' => 'What happens to my other links, like Instagram or my website?', 'answer' => 'Add them to your schedule and each one gets a short address on your own URL: /instagram for Instagram and other recognized sites, or the brand name for anything else, so your-name.eventschedule.com/instagram opens your Instagram. Clicks on those addresses are counted in your analytics, free on every plan, so you can see which links people actually use.'],
+                    ['question' => 'What happens to my other links, like Instagram or my website?', 'answer' => 'Add them to your schedule and each one gets a short address on your own URL: /instagram for Instagram and other recognized sites, or the brand name for anything else, so your-name.getvnt.com/instagram opens your Instagram. Clicks on those addresses are counted in your analytics, free on every plan, so you can see which links people actually use.'],
                 ],
                 'cross_links' => [
                     ['name' => 'Squarespace', 'route' => 'marketing.replace_squarespace', 'description' => 'Event pages without building a website.'],
@@ -6188,12 +6188,12 @@ class MarketingController extends Controller
             'google-sheets' => [
                 'name' => 'Google Sheets',
                 'tagline' => 'Stop tracking event data in spreadsheets.',
-                'meta_title' => 'Replace Google Sheets for Event Tracking | Event Schedule',
+                'meta_title' => 'Replace Google Sheets for Event Tracking | Getvnt',
                 'description' => 'Replace Google Sheets for event tracking: sales, attendees, check-ins and refunds recorded as they happen, and a CSV export on Pro when you need a sheet.',
                 'keywords' => 'Google Sheets alternative for events, Google Sheets replacement, event tracking spreadsheet, Excel alternative for events',
                 'audience_hint' => 'For organizers tracking event data and attendees in spreadsheets',
                 'about' => 'Google Sheets is a go-to tool for event organizers who need to track attendees, manage guest lists, and organize event details. But spreadsheets were not built for event management - they require manual data entry, have no attendee-facing features, and become unwieldy as events grow.',
-                'pricing_note' => 'Google Sheets is free, but tracking events by hand costs time. Event Schedule records sales, attendees and refunds as they happen. Free registration is unlimited, and selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/month, which also adds the sales export.',
+                'pricing_note' => 'Google Sheets is free, but tracking events by hand costs time. Getvnt records sales, attendees and refunds as they happen. Free registration is unlimited, and selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/month, which also adds the sales export.',
                 'competitor_price' => 'Free (manual effort)',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6224,10 +6224,10 @@ class MarketingController extends Controller
                     ['title' => 'Live Dashboard', 'description' => 'On Pro, the check-in dashboard shows how many of each ticket type are sold and checked in, and who just arrived. Better than refreshing a spreadsheet.', 'icon' => 'qr', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                     ['title' => 'Team Collaboration', 'description' => 'Invite up to five team members on the Enterprise plan. An admin sees ticket sales and runs the door; a viewer is read-only but can scan tickets. Not a shared spreadsheet link.', 'icon' => 'globe', 'gradient' => 'from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30', 'border' => 'border-amber-200 dark:border-amber-500/20', 'icon_bg' => 'bg-amber-100 dark:bg-amber-500/20', 'icon_color' => 'text-amber-600 dark:text-amber-400'],
                     ['title' => 'Refunds, Recorded', 'description' => 'Refund a Stripe or PayPal sale in full or in part from the Sales page, and the money goes back through the provider. The sale shows how much has been refunded so far. Free on every plan.', 'icon' => 'dollar', 'gradient' => 'from-cyan-50 to-sky-50 dark:from-cyan-900/30 dark:to-sky-900/30', 'border' => 'border-cyan-200 dark:border-cyan-500/20', 'icon_bg' => 'bg-cyan-100 dark:bg-cyan-500/20', 'icon_color' => 'text-cyan-600 dark:text-cyan-400'],
-                    ['title' => 'Webhooks & Integrations', 'description' => 'On Pro, connect Event Schedule to your other tools with webhooks and the REST API. Automate workflows without manual data copying.', 'icon' => 'link', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
+                    ['title' => 'Webhooks & Integrations', 'description' => 'On Pro, connect Getvnt to your other tools with webhooks and the REST API. Automate workflows without manual data copying.', 'icon' => 'link', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Spreadsheets require manual data entry for every sale and attendee. Event Schedule records all of it as it happens.',
+                    'intro' => 'Spreadsheets require manual data entry for every sale and attendee. Getvnt records all of it as it happens.',
                     'points' => [
                         'Ticket sales, attendees, check-ins and refunds tracked automatically',
                         'One checkout for several events, paid through Stripe or PayPal',
@@ -6241,11 +6241,11 @@ class MarketingController extends Controller
                     ['title' => 'Check in and export', 'description' => 'Scan QR codes at the door on any plan, and export sales to CSV on Pro for your own reporting.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Google Sheets alternative for event tracking?', 'answer' => 'Yes. Event Schedule records ticket sales, attendee lists, check-ins and refunds automatically, so there is no sheet to keep up to date. On Pro you also get the live check-in dashboard and a CSV export for your own analysis.'],
-                    ['question' => 'Is there a free plan for Event Schedule?', 'answer' => 'Yes. The free plan includes unlimited events, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited on every plan; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard. Buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash, and every sale lands on the same Sales page.'],
+                    ['question' => 'Is Getvnt a good Google Sheets alternative for event tracking?', 'answer' => 'Yes. Getvnt records ticket sales, attendee lists, check-ins and refunds automatically, so there is no sheet to keep up to date. On Pro you also get the live check-in dashboard and a CSV export for your own analysis.'],
+                    ['question' => 'Is there a free plan for Getvnt?', 'answer' => 'Yes. The free plan includes unlimited events, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited on every plan; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard. Buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash, and every sale lands on the same Sales page.'],
                     ['question' => 'Can I still export data to a spreadsheet?', 'answer' => 'Yes. Pro plan includes CSV export of your sales data, so you can use spreadsheets for custom analysis when needed. The difference is that data collection and tracking happens automatically instead of through manual entry.'],
                     ['question' => 'Can multiple team members access event data at the same time?', 'answer' => 'Yes, on the Enterprise plan, which carries up to five team members; a free schedule is a single account. An admin runs the schedule day to day and sees its ticket sales, and a viewer is read-only but can scan tickets at the door. Several people can work at once without overwriting each other the way a shared spreadsheet lets you.'],
-                    ['question' => 'Does Event Schedule have a REST API for custom integrations?', 'answer' => 'Yes. The Pro plan includes a REST API that lets you pull event data, attendee lists, and sales information programmatically. Connect Event Schedule with your CRM, accounting software, or any other tool.'],
+                    ['question' => 'Does Getvnt have a REST API for custom integrations?', 'answer' => 'Yes. The Pro plan includes a REST API that lets you pull event data, attendee lists, and sales information programmatically. Connect Getvnt with your CRM, accounting software, or any other tool.'],
                     ['question' => 'Can I record refunds, including partial ones?', 'answer' => 'Yes, from the Sales page, on Pro, alongside the paid ticketing that took the money. A Stripe or PayPal sale can be refunded in full or in part, and the money goes back through the provider before the status changes. A partial refund keeps the sale paid and its tickets valid, and the sale shows how much has been refunded so far; a full refund returns the tickets to inventory. A sale paid in cash, by a payment link, Invoice Ninja or Payfast is marked as refunded instead, which records it without moving money.'],
                     ['question' => 'Can I import the guest list I already keep in a spreadsheet?', 'answer' => 'Yes, on Pro. Import attendees onto an event from a CSV or by typing them in, up to 5,000 rows at a time, and each attendee you import gets a ticket with a QR code. You choose whether the import emails them their tickets.'],
                 ],
@@ -6263,12 +6263,12 @@ class MarketingController extends Controller
             'calendly' => [
                 'name' => 'Calendly',
                 'tagline' => 'Appointment booking, public events, and ticketing in one place.',
-                'meta_title' => 'Replace Calendly for Bookings and Events | Event Schedule',
+                'meta_title' => 'Replace Calendly for Bookings and Events | Getvnt',
                 'description' => 'Replace Calendly for bookings and events: one free booking type, more types and paid bookings on Pro, plus public events with tickets.',
                 'keywords' => 'Calendly alternative for events, Calendly replacement, event scheduling tool, public event scheduling',
                 'audience_hint' => 'For organizers using appointment scheduling for public events',
                 'about' => 'Calendly is a scheduling tool designed for booking one-on-one meetings and appointments. Some event organizers use it to schedule events, but it lacks public event pages, ticketing, and the ability to share a calendar of events with an audience.',
-                'pricing_note' => 'Calendly charges $10/month per user for its Standard plan. Event Schedule is free for unlimited events, public pages and one appointment type. Free registration is unlimited, and more types, putting a price on a ticket or a booking, and the advanced scheduling rules are on Pro at '.plan_price($this->planPrice()).'/month, with no per-user fees.',
+                'pricing_note' => 'Calendly charges $10/month per user for its Standard plan. Getvnt is free for unlimited events, public pages and one appointment type. Free registration is unlimited, and more types, putting a price on a ticket or a booking, and the advanced scheduling rules are on Pro at '.plan_price($this->planPrice()).'/month, with no per-user fees.',
                 'competitor_price' => 'From $10/mo per user',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6302,7 +6302,7 @@ class MarketingController extends Controller
                     ['title' => 'Embeddable Calendar Widget', 'description' => 'Embed your event calendar on any website. Show your schedule wherever your audience is, not just on a scheduling page.', 'icon' => 'code', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Calendly schedules meetings. Event Schedule does that too - with built-in appointment booking - plus public events, ticket sales, audience building, and promotional tools.',
+                    'intro' => 'Calendly schedules meetings. Getvnt does that too - with built-in appointment booking - plus public events, ticket sales, audience building, and promotional tools.',
                     'points' => [
                         'Public event pages with full details, images, and ticket purchasing',
                         'Tickets with several types and zero platform fees, paid through Stripe or PayPal',
@@ -6316,11 +6316,11 @@ class MarketingController extends Controller
                     ['title' => 'Sell tickets and grow', 'description' => 'Add classes, workshops or shows with ticket options. Attendees buy tickets and subscribe for updates.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Calendly alternative for public events?', 'answer' => 'Yes. Calendly is built for one-on-one appointment scheduling. Event Schedule takes those bookings too, free with one appointment type, and is built for public events with audiences. You get public event pages, ticket sales, a shareable schedule, newsletters, and event graphics that Calendly does not offer.'],
-                    ['question' => 'Does Event Schedule have a free plan?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, one bookable appointment type, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard.'],
-                    ['question' => 'Does Event Schedule sync with Google Calendar like Calendly?', 'answer' => 'Yes. Event Schedule includes two-way Google Calendar sync on the free plan. Events you create sync to your Google Calendar, and Google Calendar events can sync back. CalDAV sync is also supported.'],
-                    ['question' => 'Can attendees add events to their own Google Calendar?', 'answer' => 'Yes. Event pages include an option to add the event to Google Calendar or download an iCal file. Guests can also subscribe to a live calendar feed of your schedule, which adds every event and updates itself when dates change. Two-way Google Calendar sync also keeps your own calendar updated automatically when you create or edit events in Event Schedule.'],
-                    ['question' => 'Can I use Event Schedule for recurring events?', 'answer' => 'Yes. Event Schedule supports recurring events with flexible scheduling patterns. Each occurrence can have its own ticket types and attendee limits, which is something Calendly cannot handle for public events.'],
+                    ['question' => 'Is Getvnt a good Calendly alternative for public events?', 'answer' => 'Yes. Calendly is built for one-on-one appointment scheduling. Getvnt takes those bookings too, free with one appointment type, and is built for public events with audiences. You get public event pages, ticket sales, a shareable schedule, newsletters, and event graphics that Calendly does not offer.'],
+                    ['question' => 'Does Getvnt have a free plan?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, one bookable appointment type, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard.'],
+                    ['question' => 'Does Getvnt sync with Google Calendar like Calendly?', 'answer' => 'Yes. Getvnt includes two-way Google Calendar sync on the free plan. Events you create sync to your Google Calendar, and Google Calendar events can sync back. CalDAV sync is also supported.'],
+                    ['question' => 'Can attendees add events to their own Google Calendar?', 'answer' => 'Yes. Event pages include an option to add the event to Google Calendar or download an iCal file. Guests can also subscribe to a live calendar feed of your schedule, which adds every event and updates itself when dates change. Two-way Google Calendar sync also keeps your own calendar updated automatically when you create or edit events in Getvnt.'],
+                    ['question' => 'Can I use Getvnt for recurring events?', 'answer' => 'Yes. Getvnt supports recurring events with flexible scheduling patterns. Each occurrence can have its own ticket types and attendee limits, which is something Calendly cannot handle for public events.'],
                     ['question' => 'Can people still book a slot with me one to one?', 'answer' => 'Yes, and that part is free with one appointment type. Publish the hours you are available, set the slot length and the interval between start times, and people pick a time in their own timezone from a public booking page. Nothing can be booked over something already on your schedule, synced calendar entries included. Pro adds more appointment types, the scheduling rules (buffers either side, a minimum notice period, how far ahead the calendar opens, date overrides and an approval step), and the ability to charge for a slot through Stripe, a payment link or cash (PayPal and Payfast are for tickets, not bookings).'],
                     ['question' => 'What happens if somebody needs to move their booking?', 'answer' => 'They reschedule it themselves from the private link in their confirmation, and you can do it from the booking row. It moves the existing booking rather than cancelling and rebooking, so the payment, the private link and the calendar entry all carry over instead of the guest having to pay again.'],
                     ['question' => 'Can I refund a booking?', 'answer' => 'Yes, from the Sales page, where bookings sit with your other sales. A booking paid through Stripe can be refunded in full or in part, and the money goes back through Stripe; one paid by a payment link or in cash is marked as refunded instead, which records it without moving money.'],
@@ -6339,12 +6339,12 @@ class MarketingController extends Controller
             'surveymonkey' => [
                 'name' => 'SurveyMonkey',
                 'tagline' => 'Event registration without the survey overhead.',
-                'meta_title' => 'Replace SurveyMonkey for Event Registration | Event Schedule',
+                'meta_title' => 'Replace SurveyMonkey for Event Registration | Getvnt',
                 'description' => 'Replace SurveyMonkey for event registration: RSVPs and tickets on a real event page, with custom questions and post-event feedback on the Pro plan.',
                 'keywords' => 'SurveyMonkey alternative for events, SurveyMonkey replacement, event registration, event signup',
                 'audience_hint' => 'For organizers using survey tools for event registration',
                 'about' => 'SurveyMonkey is a survey platform that some event organizers repurpose for event registration and feedback collection. While it offers form building capabilities, it was designed for surveys and research - not for managing events, selling tickets, or handling attendee logistics.',
-                'pricing_note' => 'SurveyMonkey charges $25+/month for features like payment collection and custom branding. Event Schedule registration is free and unlimited; paid tickets, at zero platform fees, are on Pro at '.plan_price($this->planPrice()).'/month, which also adds feedback, polls and custom fields.',
+                'pricing_note' => 'SurveyMonkey charges $25+/month for features like payment collection and custom branding. Getvnt registration is free and unlimited; paid tickets, at zero platform fees, are on Pro at '.plan_price($this->planPrice()).'/month, which also adds feedback, polls and custom fields.',
                 'competitor_price' => 'From $25+/mo',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6378,7 +6378,7 @@ class MarketingController extends Controller
                     ['title' => 'Feedback After the Event', 'description' => 'On Pro, attendees can be emailed after the event for a star rating and a comment, and the answers stay with that event, tied to real ticket holders rather than an anonymous survey link.', 'icon' => 'chart', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'SurveyMonkey was built for surveys, not events. Event Schedule gives you purpose-built registration with ticketing, payments, and check-in tools.',
+                    'intro' => 'SurveyMonkey was built for surveys, not events. Getvnt gives you purpose-built registration with ticketing, payments, and check-in tools.',
                     'points' => [
                         'Event registration with ticket types, capacity limits and waitlists',
                         'Unlimited free registration, against SurveyMonkey at $25+/month',
@@ -6392,10 +6392,10 @@ class MarketingController extends Controller
                     ['title' => 'Manage attendees', 'description' => 'Track registrations, check attendees in with QR codes, send follow-up newsletters, and on Pro collect feedback afterwards.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good SurveyMonkey alternative for event registration?', 'answer' => 'Yes. Event Schedule provides purpose-built event registration with ticket types, attendee limits, waitlists, and automatic confirmations. Unlike SurveyMonkey, registrations are connected to ticketing, payments, and check-in tools.'],
-                    ['question' => 'How much does Event Schedule cost compared to SurveyMonkey?', 'answer' => 'Event Schedule is free for unlimited events, newsletters, and Google Calendar sync. Free registration is unlimited, and selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/month. SurveyMonkey charges $25 or more per month for features like payment collection and custom branding.'],
-                    ['question' => 'Does Event Schedule support post-event surveys?', 'answer' => 'Yes, on the Pro plan. After an event, attendees are emailed a request for a star rating and a comment (on eventschedule.com the email goes out through your own email settings), and the results stay with that event. Event polls, also Pro, put a quick question with up to ten answers on the event page. What it does not have is SurveyMonkey-style branching logic, so a long research survey still belongs in a survey tool.'],
-                    ['question' => 'Does Event Schedule support attendee limits and waitlists?', 'answer' => 'Yes. Set capacity limits per ticket type, and when an event sells out, people can join a waitlist and get notified if spots open up. The RSVP waitlist is free; the ticket waitlist is on the Pro plan. For an event that is not on sale yet, the free interest list, once you switch it on, takes just an email address and says when tickets go on sale.'],
+                    ['question' => 'Is Getvnt a good SurveyMonkey alternative for event registration?', 'answer' => 'Yes. Getvnt provides purpose-built event registration with ticket types, attendee limits, waitlists, and automatic confirmations. Unlike SurveyMonkey, registrations are connected to ticketing, payments, and check-in tools.'],
+                    ['question' => 'How much does Getvnt cost compared to SurveyMonkey?', 'answer' => 'Getvnt is free for unlimited events, newsletters, and Google Calendar sync. Free registration is unlimited, and selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/month. SurveyMonkey charges $25 or more per month for features like payment collection and custom branding.'],
+                    ['question' => 'Does Getvnt support post-event surveys?', 'answer' => 'Yes, on the Pro plan. After an event, attendees are emailed a request for a star rating and a comment (on getvnt.com the email goes out through your own email settings), and the results stay with that event. Event polls, also Pro, put a quick question with up to ten answers on the event page. What it does not have is SurveyMonkey-style branching logic, so a long research survey still belongs in a survey tool.'],
+                    ['question' => 'Does Getvnt support attendee limits and waitlists?', 'answer' => 'Yes. Set capacity limits per ticket type, and when an event sells out, people can join a waitlist and get notified if spots open up. The RSVP waitlist is free; the ticket waitlist is on the Pro plan. For an event that is not on sale yet, the free interest list, once you switch it on, takes just an email address and says when tickets go on sale.'],
                     ['question' => 'Can I collect custom information from attendees?', 'answer' => 'Yes. Pro plan includes custom fields on ticket forms so you can collect any information you need during registration. The data is connected to attendee records and available for export.'],
                     ['question' => 'Can people register interest before tickets go on sale?', 'answer' => 'Yes, free on every plan. Switch on the "Notify me" card and, on an event that is not selling yet, visitors leave just an email address, with no account and no survey. They hear when tickets go on sale, if the event is cancelled, and shortly before it starts, plus any notice you choose to send if the date or venue changes, and every email has a one-click unsubscribe. The event editor shows you how many people are waiting.'],
                 ],
@@ -6413,12 +6413,12 @@ class MarketingController extends Controller
             'doodle' => [
                 'name' => 'Doodle',
                 'tagline' => 'Go from polling dates to publishing events.',
-                'meta_title' => 'Replace Doodle for Event Scheduling | Event Schedule',
+                'meta_title' => 'Replace Doodle for Event Scheduling | Getvnt',
                 'description' => 'Replace Doodle for events: once the date is set, publish it on a public page with RSVPs or tickets and a calendar feed that keeps your group up to date.',
                 'keywords' => 'Doodle alternative for events, Doodle replacement, event scheduling poll, event date scheduling',
                 'audience_hint' => 'For organizers using date polling to coordinate events',
                 'about' => 'Doodle is a scheduling poll tool that helps groups find a common time to meet. Event organizers sometimes use it to pick event dates, but Doodle stops at the poll - it does not help you create, promote, or manage the actual event once a date is chosen.',
-                'pricing_note' => 'Doodle charges $7+/month per user for its Pro plan. Event Schedule is free for unlimited events with a public schedule. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, and nothing here is priced per user.',
+                'pricing_note' => 'Doodle charges $7+/month per user for its Pro plan. Getvnt is free for unlimited events with a public schedule. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, and nothing here is priced per user.',
                 'competitor_price' => 'From $7+/mo per user',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6451,7 +6451,7 @@ class MarketingController extends Controller
                     ['title' => 'Subscriber Signups', 'description' => 'Visitors sign up with a name and email and get an automatic digest when you publish new events, instead of a new poll link each time.', 'icon' => 'mail', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Doodle stops at picking a date. Event Schedule takes you from event creation through promotion, ticketing, and check-in day.',
+                    'intro' => 'Doodle stops at picking a date. Getvnt takes you from event creation through promotion, ticketing, and check-in day.',
                     'points' => [
                         'Full event management from creation to check-in, not just date polling',
                         'Public schedule page with all your events shareable from one URL',
@@ -6465,11 +6465,11 @@ class MarketingController extends Controller
                     ['title' => 'Sell and manage', 'description' => 'Sell tickets or collect RSVPs. Check attendees in with QR codes on event day.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Doodle alternative for event management?', 'answer' => 'Yes. Doodle stops at picking a date. Event Schedule takes you from event creation through promotion and ticketing to check-in day. You get public event pages, ticket sales, Google Calendar sync, and newsletters in one platform.'],
-                    ['question' => 'Is Event Schedule free to use?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard.'],
-                    ['question' => 'Does Event Schedule have scheduling or polling features like Doodle?', 'answer' => 'Event Schedule includes event polls on the Pro plan for collecting attendee preferences. For date selection, you create events with set dates and share them through your public schedule page. It is designed for publishing events, not polling for availability.'],
+                    ['question' => 'Is Getvnt a good Doodle alternative for event management?', 'answer' => 'Yes. Doodle stops at picking a date. Getvnt takes you from event creation through promotion and ticketing to check-in day. You get public event pages, ticket sales, Google Calendar sync, and newsletters in one platform.'],
+                    ['question' => 'Is Getvnt free to use?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard.'],
+                    ['question' => 'Does Getvnt have scheduling or polling features like Doodle?', 'answer' => 'Getvnt includes event polls on the Pro plan for collecting attendee preferences. For date selection, you create events with set dates and share them through your public schedule page. It is designed for publishing events, not polling for availability.'],
                     ['question' => 'Can attendees see all my upcoming events in one place?', 'answer' => 'Yes. Your public schedule page shows all upcoming events in a calendar view with full details and ticket links. Attendees can browse your entire event lineup from one URL instead of receiving separate poll links for each event.'],
-                    ['question' => 'Can I collect RSVPs for free events?', 'answer' => 'Yes. Event Schedule supports free RSVPs with automatic confirmation emails and an optional capacity limit, and the RSVP waitlist is free too once it fills. Attendees register through your event page and you get a real attendee list with check-in tools.'],
+                    ['question' => 'Can I collect RSVPs for free events?', 'answer' => 'Yes. Getvnt supports free RSVPs with automatic confirmation emails and an optional capacity limit, and the RSVP waitlist is free too once it fills. Attendees register through your event page and you get a real attendee list with check-in tools.'],
                     ['question' => 'How does my group get the dates into their own calendars?', 'answer' => 'Two ways, both free. Each event page has an Add to Calendar button for that one date, and your schedule offers a live calendar feed: subscribe to it once and every event you publish appears, with a date you move updating itself. The feed is offered in the sign-up panel on your schedule page, and it asks for no email address.'],
                 ],
                 'cross_links' => [
@@ -6487,12 +6487,12 @@ class MarketingController extends Controller
                 'name' => 'QR Code Generators',
                 'short_name' => 'QR Code',
                 'tagline' => 'QR codes that are built into every ticket.',
-                'meta_title' => 'Replace QR Code Generators for Check-in | Event Schedule',
+                'meta_title' => 'Replace QR Code Generators for Check-in | Getvnt',
                 'description' => 'Replace QR code generators for event check-in: a QR code on every ticket and RSVP, scanned free from any phone, and each code admits once.',
                 'keywords' => 'QR code alternative for events, QR code generator replacement, event QR code, QR code check-in',
                 'audience_hint' => 'For organizers using standalone QR tools for event check-in',
                 'about' => 'QR code generators are standalone tools that event organizers use to create scannable codes for event check-in, links to event pages, or ticket verification. Using a separate QR tool means manually creating codes, linking them to attendee data, and building your own check-in process.',
-                'pricing_note' => 'Many QR generators charge $5 to $15/month for dynamic QR codes. Event Schedule puts a QR code on every ticket and free registration, and scanning them at the door is free on every plan, including tickets you sold before. Pro at '.plan_price($this->planPrice()).'/month adds the live check-in dashboard.',
+                'pricing_note' => 'Many QR generators charge $5 to $15/month for dynamic QR codes. Getvnt puts a QR code on every ticket and free registration, and scanning them at the door is free on every plan, including tickets you sold before. Pro at '.plan_price($this->planPrice()).'/month adds the live check-in dashboard.',
                 'competitor_price' => '$5 to $15/mo',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6523,10 +6523,10 @@ class MarketingController extends Controller
                     ['title' => 'Live Dashboard', 'description' => 'On Pro, a real-time check-in dashboard shows attendance numbers, the breakdown by ticket type, and who just arrived.', 'icon' => 'chart', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                     ['title' => 'Zero Platform Fees', 'description' => 'Every ticket sale carries zero platform fees, whether buyers pay through Stripe or PayPal; you pay only the processor fee. Payfast for rand, Invoice Ninja, a payment link and cash work too.', 'icon' => 'dollar', 'gradient' => 'from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30', 'border' => 'border-amber-200 dark:border-amber-500/20', 'icon_bg' => 'bg-amber-100 dark:bg-amber-500/20', 'icon_color' => 'text-amber-600 dark:text-amber-400'],
                     ['title' => 'Complete Event Platform', 'description' => 'QR check-in is just one part. Get event pages, calendar sync, newsletters, and AI tools in one platform.', 'icon' => 'globe', 'gradient' => 'from-cyan-50 to-sky-50 dark:from-cyan-900/30 dark:to-sky-900/30', 'border' => 'border-cyan-200 dark:border-cyan-500/20', 'icon_bg' => 'bg-cyan-100 dark:bg-cyan-500/20', 'icon_color' => 'text-cyan-600 dark:text-cyan-400'],
-                    ['title' => 'Sale Notifications', 'description' => 'On eventschedule.com, once your schedule has its own email settings, the first paid sale on each event emails you on every plan, and on Pro every sale can. No dashboard to keep checking.', 'icon' => 'mail', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
+                    ['title' => 'Sale Notifications', 'description' => 'On getvnt.com, once your schedule has its own email settings, the first paid sale on each event emails you on every plan, and on Pro every sale can. No dashboard to keep checking.', 'icon' => 'mail', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Standalone QR generators create codes, but Event Schedule builds QR check-in into every ticket with automatic validation, and a live dashboard on Pro.',
+                    'intro' => 'Standalone QR generators create codes, but Getvnt builds QR check-in into every ticket with automatic validation, and a live dashboard on Pro.',
                     'points' => [
                         'Every ticket includes a unique QR code automatically',
                         'Built-in scanning that validates tickets and prevents duplicates, free on every plan',
@@ -6540,7 +6540,7 @@ class MarketingController extends Controller
                     ['title' => 'Scan at the door', 'description' => 'Any smartphone scans them, on any plan, with no app to install. The live dashboard that tracks check-ins as they happen is the Pro half.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good QR code generator alternative for events?', 'answer' => 'Yes. Every ticket sold through Event Schedule includes a unique QR code automatically. No need for a separate QR generation tool. QR codes are linked to attendee data for instant validation at the door.'],
+                    ['question' => 'Is Getvnt a good QR code generator alternative for events?', 'answer' => 'Yes. Every ticket sold through Getvnt includes a unique QR code automatically. No need for a separate QR generation tool. QR codes are linked to attendee data for instant validation at the door.'],
                     ['question' => 'How much does QR code ticketing cost?', 'answer' => 'Nothing, to start. The free plan takes unlimited free registrations, each with its own QR code, and scanning them at the door is not gated at all. Selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, which also adds the live check-in dashboard. There are zero platform fees on either, so you only pay the processor: standard Stripe processing is typically 2.9% + $0.30 per transaction, and PayPal charges its own rate.'],
                     ['question' => 'How does the QR check-in system work?', 'answer' => 'Each ticket includes a unique QR code emailed to the buyer. At the event, open the scanner on any smartphone and point it at the code. The system validates the ticket, warns on a second scan and refuses a cancelled or refunded one; on Pro, a live dashboard tracks attendance in real time.'],
                     ['question' => 'Can I use QR check-in without selling tickets?', 'answer' => 'Yes. Free RSVP events also include QR codes for attendee check-in. You do not need to sell paid tickets to use the QR check-in system. Any registered attendee gets a scannable QR code for event day.'],
@@ -6561,12 +6561,12 @@ class MarketingController extends Controller
             'squarespace' => [
                 'name' => 'Squarespace',
                 'tagline' => 'An event platform, not a website builder.',
-                'meta_title' => 'Replace Squarespace for Event Pages | Event Schedule',
+                'meta_title' => 'Replace Squarespace for Event Pages | Getvnt',
                 'description' => 'Replace Squarespace for event pages: a page for every event, tickets paid through Stripe or PayPal with zero platform fees, and an embed for your site.',
                 'keywords' => 'Squarespace alternative for events, Squarespace replacement, event website builder, event landing page',
                 'audience_hint' => 'For organizers building event pages on a general website builder',
                 'about' => 'Squarespace is a general website builder that some event organizers use to create event pages and sell tickets through third-party integrations. While it produces beautiful websites, building event functionality on top of a website builder means extra complexity, plugins, and ongoing maintenance for features that should be built in.',
-                'pricing_note' => 'Squarespace costs $16+/month for a basic site, plus extra for third-party ticketing. Event Schedule is free for event pages. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, with zero platform fees.',
+                'pricing_note' => 'Squarespace costs $16+/month for a basic site, plus extra for third-party ticketing. Getvnt is free for event pages. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, with zero platform fees.',
                 'competitor_price' => 'From $16+/mo',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6596,10 +6596,10 @@ class MarketingController extends Controller
                     ['title' => 'Embeddable Widget', 'description' => 'Already have a website? Embed your event calendar on any site, Squarespace and WordPress included, free on every plan; the ticket widget is Pro.', 'icon' => 'code', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                     ['title' => 'Open Source', 'description' => 'Fully open source and selfhostable, with a backup export of your schedules. No vendor lock-in, where a Squarespace export leaves calendar and store pages behind.', 'icon' => 'code', 'gradient' => 'from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/30', 'border' => 'border-amber-200 dark:border-amber-500/20', 'icon_bg' => 'bg-amber-100 dark:bg-amber-500/20', 'icon_color' => 'text-amber-600 dark:text-amber-400'],
                     ['title' => 'All-in-one Platform', 'description' => 'Ticketing, newsletters, calendar sync, AI tools, and event graphics in one platform. No plugins or integrations to manage.', 'icon' => 'ai', 'gradient' => 'from-cyan-50 to-sky-50 dark:from-cyan-900/30 dark:to-sky-900/30', 'border' => 'border-cyan-200 dark:border-cyan-500/20', 'icon_bg' => 'bg-cyan-100 dark:bg-cyan-500/20', 'icon_color' => 'text-cyan-600 dark:text-cyan-400'],
-                    ['title' => 'White-Label Branding', 'description' => 'Remove Event Schedule branding on Pro for a fully custom look, and use your own domain on Enterprise, with your logo and colors on every plan.', 'icon' => 'image', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
+                    ['title' => 'White-Label Branding', 'description' => 'Remove Getvnt branding on Pro for a fully custom look, and use your own domain on Enterprise, with your logo and colors on every plan.', 'icon' => 'image', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Squarespace builds websites. Event Schedule builds event experiences with ticketing, newsletters, and audience tools included.',
+                    'intro' => 'Squarespace builds websites. Getvnt builds event experiences with ticketing, newsletters, and audience tools included.',
                     'points' => [
                         'Professional event pages generated automatically, no page building needed',
                         'Integrated ticketing through Stripe or PayPal, with zero platform fees',
@@ -6613,11 +6613,11 @@ class MarketingController extends Controller
                     ['title' => 'Share or embed', 'description' => 'Share your schedule URL directly or embed the calendar widget on your existing website.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Squarespace alternative for event pages?', 'answer' => 'Yes. Event Schedule provides ready-made event pages with all event details, ticket purchasing, and a shareable schedule. No website building, plugins, or custom page design required. You can also embed the calendar widget on your existing Squarespace site.'],
-                    ['question' => 'How does Event Schedule pricing compare to Squarespace?', 'answer' => 'Event Schedule is free for unlimited events and a public schedule page. Free registration is unlimited, and selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/month. Squarespace costs $16 or more per month for a basic website, plus additional fees for third-party ticketing integrations.'],
-                    ['question' => 'Do I still need a website if I use Event Schedule?', 'answer' => 'Not necessarily. Your Event Schedule page works as a standalone event website with a custom URL, all your events, ticket sales, and subscriber signups. If you already have a website, you can embed the Event Schedule calendar widget on it.'],
-                    ['question' => 'Can I keep my Squarespace site and use Event Schedule for events?', 'answer' => 'Yes. You can embed the Event Schedule calendar widget on your Squarespace site with a simple code block. Use Squarespace for your main website and Event Schedule for event pages, ticketing, and attendee management. The two work side by side.'],
-                    ['question' => 'Can I embed Event Schedule on my Squarespace site?', 'answer' => 'Yes. The embeddable calendar widget works on any website including Squarespace, free on every plan. Add a code block to your Squarespace page and paste the embed snippet to show your event calendar. The widget that sells tickets right on your page is on Pro.'],
+                    ['question' => 'Is Getvnt a good Squarespace alternative for event pages?', 'answer' => 'Yes. Getvnt provides ready-made event pages with all event details, ticket purchasing, and a shareable schedule. No website building, plugins, or custom page design required. You can also embed the calendar widget on your existing Squarespace site.'],
+                    ['question' => 'How does Getvnt pricing compare to Squarespace?', 'answer' => 'Getvnt is free for unlimited events and a public schedule page. Free registration is unlimited, and selling paid tickets is on the Pro plan at '.plan_price($this->planPrice()).'/month. Squarespace costs $16 or more per month for a basic website, plus additional fees for third-party ticketing integrations.'],
+                    ['question' => 'Do I still need a website if I use Getvnt?', 'answer' => 'Not necessarily. Your Getvnt page works as a standalone event website with a custom URL, all your events, ticket sales, and subscriber signups. If you already have a website, you can embed the Getvnt calendar widget on it.'],
+                    ['question' => 'Can I keep my Squarespace site and use Getvnt for events?', 'answer' => 'Yes. You can embed the Getvnt calendar widget on your Squarespace site with a simple code block. Use Squarespace for your main website and Getvnt for event pages, ticketing, and attendee management. The two work side by side.'],
+                    ['question' => 'Can I embed Getvnt on my Squarespace site?', 'answer' => 'Yes. The embeddable calendar widget works on any website including Squarespace, free on every plan. Add a code block to your Squarespace page and paste the embed snippet to show your event calendar. The widget that sells tickets right on your page is on Pro.'],
                     ['question' => 'How do payments and refunds work?', 'answer' => 'Charging for a ticket is the Pro plan, and it opens every payment method: buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash, and can buy tickets to several of your events in one checkout. A Stripe or PayPal sale can be refunded from the Sales page in full or in part, with the money going back through the provider. A CSV export of your sales is on Pro.'],
                 ],
                 'cross_links' => [
@@ -6634,12 +6634,12 @@ class MarketingController extends Controller
             'notion' => [
                 'name' => 'Notion',
                 'tagline' => 'Event management that faces your audience, not just your team.',
-                'meta_title' => 'Replace Notion for Event Planning | Event Schedule',
+                'meta_title' => 'Replace Notion for Event Planning | Getvnt',
                 'description' => 'Replace Notion for event planning: public event pages with tickets and RSVPs, two-way calendar sync, and a team of up to five on Enterprise.',
                 'keywords' => 'Notion alternative for events, Notion replacement, Notion event planning, event management workspace',
                 'audience_hint' => 'For organizers planning events in workspace tools like Notion',
                 'about' => 'Notion is a workspace and productivity tool that some event organizers use to plan events with databases, calendars, and shared pages. While Notion is excellent for internal project management, a page published from Notion is a document rather than an event page: there is no ticketing or door check-in, and event workflows have to be built from scratch.',
-                'pricing_note' => 'Notion Plus costs $10/month per user. Event Schedule is free for unlimited events and public pages. Free registration is unlimited on every plan, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month. Nothing is charged per user either way: a team of up to five is the Enterprise plan, not five seats.',
+                'pricing_note' => 'Notion Plus costs $10/month per user. Getvnt is free for unlimited events and public pages. Free registration is unlimited on every plan, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month. Nothing is charged per user either way: a team of up to five is the Enterprise plan, not five seats.',
                 'competitor_price' => 'From $10/mo per user',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6672,7 +6672,7 @@ class MarketingController extends Controller
                     ['title' => 'Sub-schedules', 'description' => 'Organize events into sub-schedules by category, location, or type. Better than building separate Notion databases for each event series.', 'icon' => 'layout', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Notion organizes your internal planning. Event Schedule faces your audience with public event pages, ticketing, and subscriber tools.',
+                    'intro' => 'Notion organizes your internal planning. Getvnt faces your audience with public event pages, ticketing, and subscriber tools.',
                     'points' => [
                         'Public event pages your audience can see, not internal workspace docs',
                         'Built-in ticketing through Stripe or PayPal, with zero platform fees',
@@ -6686,11 +6686,11 @@ class MarketingController extends Controller
                     ['title' => 'Go public', 'description' => 'Share your schedule page with your audience. They can view events, buy tickets, and subscribe for updates.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Notion alternative for event planning?', 'answer' => 'Yes, for the event management side. Event Schedule handles everything Notion cannot: public event pages, ticket sales, attendee management, Google Calendar sync, and newsletters. You may still use Notion for internal project notes, but Event Schedule replaces it for audience-facing event work.'],
-                    ['question' => 'Is Event Schedule free like Notion?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters and event graphics. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month with zero platform fees, which also adds the live check-in dashboard. One difference worth knowing before you move a team off Notion: a free schedule is a single account, and multiple team members, up to five, are an Enterprise feature.'],
-                    ['question' => 'Does Event Schedule support team collaboration like Notion?', 'answer' => 'Yes, on the Enterprise plan, which carries up to five team members. An admin runs the schedule day to day and sees its ticket sales, and a viewer is read-only but can scan tickets at the door. Unlike Notion, collaboration is purpose-built for event management with tools like shared schedules, sub-schedules, and delegated event editing.'],
-                    ['question' => 'Is Event Schedule easier to set up than a Notion event database?', 'answer' => 'Yes. Create a schedule in under a minute with no databases, templates, or formulas to configure. Add events with AI import or manual entry and you have a public event page with ticketing immediately. No workspace setup needed.'],
-                    ['question' => 'Can I use Event Schedule alongside Notion?', 'answer' => 'Yes. Many organizers use Notion for internal project planning and Event Schedule for the audience-facing side: public event pages, ticket sales, newsletters, and attendee management. On Pro, the REST API can also connect Event Schedule data with your Notion workflows.'],
+                    ['question' => 'Is Getvnt a good Notion alternative for event planning?', 'answer' => 'Yes, for the event management side. Getvnt handles everything Notion cannot: public event pages, ticket sales, attendee management, Google Calendar sync, and newsletters. You may still use Notion for internal project notes, but Getvnt replaces it for audience-facing event work.'],
+                    ['question' => 'Is Getvnt free like Notion?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters and event graphics. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month with zero platform fees, which also adds the live check-in dashboard. One difference worth knowing before you move a team off Notion: a free schedule is a single account, and multiple team members, up to five, are an Enterprise feature.'],
+                    ['question' => 'Does Getvnt support team collaboration like Notion?', 'answer' => 'Yes, on the Enterprise plan, which carries up to five team members. An admin runs the schedule day to day and sees its ticket sales, and a viewer is read-only but can scan tickets at the door. Unlike Notion, collaboration is purpose-built for event management with tools like shared schedules, sub-schedules, and delegated event editing.'],
+                    ['question' => 'Is Getvnt easier to set up than a Notion event database?', 'answer' => 'Yes. Create a schedule in under a minute with no databases, templates, or formulas to configure. Add events with AI import or manual entry and you have a public event page with ticketing immediately. No workspace setup needed.'],
+                    ['question' => 'Can I use Getvnt alongside Notion?', 'answer' => 'Yes. Many organizers use Notion for internal project planning and Getvnt for the audience-facing side: public event pages, ticket sales, newsletters, and attendee management. On Pro, the REST API can also connect Getvnt data with your Notion workflows.'],
                     ['question' => 'Can I reuse an event as a template, the way I would in Notion?', 'answer' => 'Yes, on Pro. Save any event as a template and start new events from it on the Templates tab, with its details already filled in.'],
                 ],
                 'cross_links' => [
@@ -6707,12 +6707,12 @@ class MarketingController extends Controller
             'trello' => [
                 'name' => 'Trello',
                 'tagline' => 'From task boards to ticket sales.',
-                'meta_title' => 'Replace Trello for Event Management | Event Schedule',
+                'meta_title' => 'Replace Trello for Event Management | Getvnt',
                 'description' => 'Replace Trello for event management: event pages and tickets paid by Stripe or PayPal for your audience, and a queue for the events people submit to you.',
                 'keywords' => 'Trello alternative for events, Trello replacement, Trello event planning, event management board',
                 'audience_hint' => 'For organizers managing events with task boards and project tools',
                 'about' => 'Trello is a kanban-style project management tool that some event organizers use to track event planning tasks. While Trello is great for organizing workflows with boards and cards, it has no attendee-facing features, no registration or ticketing, and task boards do not map well to the event lifecycle of creating, promoting, and managing events.',
-                'pricing_note' => 'Trello Standard costs $5 per user a month billed annually ($6 monthly). Event Schedule is free for unlimited events and public pages. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, and nothing here is charged per user; a team of five is the Enterprise plan rather than five subscriptions.',
+                'pricing_note' => 'Trello Standard costs $5 per user a month billed annually ($6 monthly). Getvnt is free for unlimited events and public pages. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month, and nothing here is charged per user; a team of five is the Enterprise plan rather than five subscriptions.',
                 'competitor_price' => 'From $5/mo per user',
                 'es_price' => 'From '.plan_price(0).'/mo (Pro '.plan_price($this->planPrice()).'/mo)',
                 'comparison_rows' => [
@@ -6745,7 +6745,7 @@ class MarketingController extends Controller
                     ['title' => 'Event Submissions', 'description' => 'Accept event submissions from performers, speakers, or vendors, free on every plan. Review each one before it goes live, and a submitter is told if you decline. On Pro, custom fields add your own questions to the form.', 'icon' => 'clipboard', 'gradient' => 'from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30', 'border' => 'border-sky-200 dark:border-sky-500/20', 'icon_bg' => 'bg-sky-100 dark:bg-sky-500/20', 'icon_color' => 'text-sky-600 dark:text-sky-400'],
                 ],
                 'why_switch' => [
-                    'intro' => 'Trello tracks internal tasks. Event Schedule handles the full event lifecycle your audience actually sees: event pages, ticket sales, and promotion.',
+                    'intro' => 'Trello tracks internal tasks. Getvnt handles the full event lifecycle your audience actually sees: event pages, ticket sales, and promotion.',
                     'points' => [
                         'Public event pages your audience can visit and buy tickets from',
                         'Built-in ticketing through Stripe or PayPal, with zero platform fees',
@@ -6759,12 +6759,12 @@ class MarketingController extends Controller
                     ['title' => 'Publish and sell', 'description' => 'Share your public schedule page. Attendees see events, buy tickets, and subscribe for updates.'],
                 ],
                 'faq' => [
-                    ['question' => 'Is Event Schedule a good Trello alternative for event management?', 'answer' => 'Yes, for the event management side. Event Schedule handles what Trello cannot: public event pages, ticket sales, attendee management, and event promotion. You may still use Trello for internal task tracking, but Event Schedule replaces it for the full event lifecycle.'],
-                    ['question' => 'Is Event Schedule free like Trello?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters, event graphics and fan engagement features. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month with zero platform fees, which also adds the live check-in dashboard, webhooks and more.'],
-                    ['question' => 'Does Event Schedule have task management like Trello?', 'answer' => 'Event Schedule is not a task management tool. It replaces Trello specifically for event management workflows: creating events, publishing them, selling tickets, and managing attendees. For internal planning tasks, you can continue using any project management tool you prefer.'],
-                    ['question' => 'Does Event Schedule have webhooks for automation?', 'answer' => 'Yes. The Pro plan includes webhooks and a REST API for connecting Event Schedule with your other tools. Automate workflows like syncing attendee data to your CRM or triggering notifications when tickets are sold.'],
+                    ['question' => 'Is Getvnt a good Trello alternative for event management?', 'answer' => 'Yes, for the event management side. Getvnt handles what Trello cannot: public event pages, ticket sales, attendee management, and event promotion. You may still use Trello for internal task tracking, but Getvnt replaces it for the full event lifecycle.'],
+                    ['question' => 'Is Getvnt free like Trello?', 'answer' => 'Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters, event graphics and fan engagement features. Free registration is unlimited, and selling paid tickets is on Pro at '.plan_price($this->planPrice()).'/month with zero platform fees, which also adds the live check-in dashboard, webhooks and more.'],
+                    ['question' => 'Does Getvnt have task management like Trello?', 'answer' => 'Getvnt is not a task management tool. It replaces Trello specifically for event management workflows: creating events, publishing them, selling tickets, and managing attendees. For internal planning tasks, you can continue using any project management tool you prefer.'],
+                    ['question' => 'Does Getvnt have webhooks for automation?', 'answer' => 'Yes. The Pro plan includes webhooks and a REST API for connecting Getvnt with your other tools. Automate workflows like syncing attendee data to your CRM or triggering notifications when tickets are sold.'],
                     ['question' => 'Can performers or speakers submit events for me to approve?', 'answer' => 'Yes, free on every plan. Turn on requests and people submit events from your schedule page; each one waits for you to accept it before it goes live, and the submitter is told if you decline. On Pro, custom fields put your own questions on that form.'],
-                    ['question' => 'Can I use Event Schedule alongside Trello?', 'answer' => 'Yes. Use Trello for internal planning tasks and Event Schedule for the audience-facing event lifecycle: creating events, selling tickets, managing attendees, and sending newsletters. The two tools complement each other well.'],
+                    ['question' => 'Can I use Getvnt alongside Trello?', 'answer' => 'Yes. Use Trello for internal planning tasks and Getvnt for the audience-facing event lifecycle: creating events, selling tickets, managing attendees, and sending newsletters. The two tools complement each other well.'],
                 ],
                 'cross_links' => [
                     ['name' => 'Notion', 'route' => 'marketing.replace_notion', 'description' => 'Public event pages, not internal docs.'],
@@ -6802,7 +6802,7 @@ class MarketingController extends Controller
     /**
      * Get demo schedules organized by industry category
      * Hardcoded data - no database query needed
-     * All URLs point to production eventschedule.com
+     * All URLs point to production getvnt.com
      */
     protected function getDemoSchedulesByCategory(): array
     {
@@ -6812,7 +6812,7 @@ class MarketingController extends Controller
                     'subdomain' => 'meditationclasses',
                     'name' => 'Meditation Classes',
                     'description' => 'Daily guided sessions for mindfulness and calm',
-                    'url' => 'https://meditationclasses.eventschedule.com/',
+                    'url' => 'https://meditationclasses.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_meditationclasses.png',
                     'header_image_url' => 'images/examples/header_meditationclasses.png',
                 ],
@@ -6820,7 +6820,7 @@ class MarketingController extends Controller
                     'subdomain' => 'weekendyogaretreat',
                     'name' => 'Weekend Yoga Retreat',
                     'description' => 'Multi-day weekend retreat with yoga classes',
-                    'url' => 'https://weekendyogaretreat.eventschedule.com/',
+                    'url' => 'https://weekendyogaretreat.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_weekendyogaretreat.jpg',
                     'header_image_url' => 'images/examples/header_weekendyogaretreat.jpeg',
                 ],
@@ -6828,7 +6828,7 @@ class MarketingController extends Controller
                     'subdomain' => 'hikingclub',
                     'name' => 'Hiking Club',
                     'description' => 'Weekly group hikes and outdoor adventures',
-                    'url' => 'https://hikingclub.eventschedule.com/',
+                    'url' => 'https://hikingclub.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_hikingclub.png',
                     'header_image_url' => 'images/examples/header_hikingclub.png',
                 ],
@@ -6838,7 +6838,7 @@ class MarketingController extends Controller
                     'subdomain' => 'battleofthebands',
                     'name' => 'Battle of the Bands',
                     'description' => 'Live competition showcasing local bands',
-                    'url' => 'https://battleofthebands.eventschedule.com/',
+                    'url' => 'https://battleofthebands.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_battleofthebands.jpg',
                     'header_image_url' => 'images/examples/header_battleofthebands.jpg',
                 ],
@@ -6846,7 +6846,7 @@ class MarketingController extends Controller
                     'subdomain' => 'sufficientgroundscoffeemusic',
                     'name' => 'Sufficient Grounds',
                     'description' => 'Acoustic sets and open mic nights at a cafe',
-                    'url' => 'https://sufficientgroundscoffeemusic.eventschedule.com/',
+                    'url' => 'https://sufficientgroundscoffeemusic.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_sufficientgroundscoffeemusic.jpg',
                     'header_image_url' => 'images/examples/header_sufficientgroundscoffeemusic.png',
                 ],
@@ -6854,7 +6854,7 @@ class MarketingController extends Controller
                     'subdomain' => 'villageidiot',
                     'name' => 'Village Idiot',
                     'description' => 'Weekly live music lineup at a neighborhood pub',
-                    'url' => 'https://villageidiot.eventschedule.com/',
+                    'url' => 'https://villageidiot.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_villageidiot.png',
                     'header_image_url' => 'images/examples/header_villageidiot.png',
                 ],
@@ -6864,7 +6864,7 @@ class MarketingController extends Controller
                     'subdomain' => 'communityyouthgroup',
                     'name' => 'Community Youth Group',
                     'description' => 'Activities and meetups for young people',
-                    'url' => 'https://communityyouthgroup.eventschedule.com/',
+                    'url' => 'https://communityyouthgroup.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_communityyouthgroup.png',
                     'header_image_url' => 'images/examples/header_communityyouthgroup.png',
                 ],
@@ -6872,7 +6872,7 @@ class MarketingController extends Controller
                     'subdomain' => 'karateclub',
                     'name' => 'Karate Club',
                     'description' => 'Martial arts classes for all skill levels',
-                    'url' => 'https://karateclub.eventschedule.com/',
+                    'url' => 'https://karateclub.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_karateclub.jpg',
                     'header_image_url' => 'images/examples/header_karateclub.jpg',
                 ],
@@ -6880,7 +6880,7 @@ class MarketingController extends Controller
                     'subdomain' => 'countyfairgrounds',
                     'name' => 'County Fairgrounds',
                     'description' => 'Seasonal events, fairs, and community gatherings',
-                    'url' => 'https://countyfairgrounds.eventschedule.com/',
+                    'url' => 'https://countyfairgrounds.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_countyfairgrounds.png',
                     'header_image_url' => 'images/examples/header_countyfairgrounds.jpg',
                 ],
@@ -6890,7 +6890,7 @@ class MarketingController extends Controller
                     'subdomain' => 'nateswoodworkingshop',
                     'name' => "Nate's Woodworking Shop",
                     'description' => 'Hands-on woodworking classes and projects',
-                    'url' => 'https://nateswoodworkingshop.eventschedule.com/',
+                    'url' => 'https://nateswoodworkingshop.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_nateswoodworkingshop.png',
                     'header_image_url' => 'images/examples/header_nateswoodworkingshop.png',
                 ],
@@ -6898,7 +6898,7 @@ class MarketingController extends Controller
                     'subdomain' => 'painting',
                     'name' => 'Painting',
                     'description' => 'Painting sessions for beginners and artists',
-                    'url' => 'https://painting.eventschedule.com/',
+                    'url' => 'https://painting.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_painting.jpg',
                     'header_image_url' => 'images/examples/header_painting.jpg',
                 ],
@@ -6906,7 +6906,7 @@ class MarketingController extends Controller
                     'subdomain' => 'pagesbooknookshop',
                     'name' => 'Pages Book Nook Shop',
                     'description' => 'Author readings, book clubs, and signings',
-                    'url' => 'https://pagesbooknookshop.eventschedule.com/',
+                    'url' => 'https://pagesbooknookshop.getvnt.com/',
                     'profile_image_url' => 'images/examples/profile_pagesbooknookshop.png',
                     'header_image_url' => 'images/examples/header_pagesbooknookshop.png',
                 ],
@@ -6916,7 +6916,7 @@ class MarketingController extends Controller
                     'subdomain' => 'simpsons',
                     'name' => 'Springfield Events',
                     'description' => 'Community events across Springfield venues',
-                    'url' => 'https://simpsons.eventschedule.com/',
+                    'url' => 'https://simpsons.getvnt.com/',
                     'profile_image_url' => 'images/demo/demo_profile_donuts.jpg',
                     'header_image_url' => 'images/demo/demo_header_town.jpg',
                 ],
@@ -6924,7 +6924,7 @@ class MarketingController extends Controller
                     'subdomain' => 'demo-moestavern',
                     'name' => "Moe's Tavern",
                     'description' => 'Live music, trivia, and open mic nights',
-                    'url' => 'https://demo-moestavern.eventschedule.com/',
+                    'url' => 'https://demo-moestavern.getvnt.com/',
                     'profile_image_url' => 'images/demo/demo_profile_beer.jpg',
                     'header_image_url' => 'images/demo/demo_header_bar.jpg',
                 ],
@@ -6932,7 +6932,7 @@ class MarketingController extends Controller
                     'subdomain' => 'demo-amphitheater',
                     'name' => 'Springfield Amphitheater',
                     'description' => 'Outdoor concerts and performances',
-                    'url' => 'https://demo-amphitheater.eventschedule.com/',
+                    'url' => 'https://demo-amphitheater.getvnt.com/',
                     'profile_image_url' => 'images/demo/demo_profile_amphitheater.jpg',
                     'header_image_url' => 'images/demo/demo_header_concert.jpg',
                 ],
@@ -6940,7 +6940,7 @@ class MarketingController extends Controller
                     'subdomain' => 'demo-bowlarama',
                     'name' => "Barney's Bowl-A-Rama",
                     'description' => 'Bowling leagues, tournaments, and cosmic bowling nights',
-                    'url' => 'https://demo-bowlarama.eventschedule.com/',
+                    'url' => 'https://demo-bowlarama.getvnt.com/',
                     'profile_image_url' => 'images/demo/demo_profile_bowling.jpg',
                     'header_image_url' => 'images/demo/demo_header_bowling.jpg',
                 ],
@@ -6948,7 +6948,7 @@ class MarketingController extends Controller
                     'subdomain' => 'demo-aztectheater',
                     'name' => 'The Aztec Theater',
                     'description' => "Classic films and premieres at Springfield's art deco cinema",
-                    'url' => 'https://demo-aztectheater.eventschedule.com/',
+                    'url' => 'https://demo-aztectheater.getvnt.com/',
                     'profile_image_url' => 'images/demo/demo_profile_popcorn.jpg',
                     'header_image_url' => 'images/demo/demo_header_theater.jpg',
                 ],
@@ -6956,7 +6956,7 @@ class MarketingController extends Controller
                     'subdomain' => 'demo-lardlad',
                     'name' => 'Lard Lad Donuts',
                     'description' => 'Donut tastings, coffee events, and sweet celebrations',
-                    'url' => 'https://demo-lardlad.eventschedule.com/',
+                    'url' => 'https://demo-lardlad.getvnt.com/',
                     'profile_image_url' => 'images/demo/demo_profile_donut_box.jpg',
                     'header_image_url' => 'images/demo/demo_header_donuts.jpg',
                 ],
@@ -7530,7 +7530,7 @@ class MarketingController extends Controller
             ['page' => 'Creating Schedules', 'section' => 'Push Notifications', 'description' => 'Get schedule notifications in your browser and on your phone, in addition to email.', 'url' => $r['creating_schedules'].'#settings-notifications', 'category' => 'User Guide', 'keywords' => 'push notifications browser mobile device test onesignal enable push ios home screen'],
             ['page' => 'Creating Schedules', 'section' => 'Advanced Settings', 'description' => 'Default new-event visibility, hide past events, hide videos, the accessibility widget, the sign-up panel and the "Notify me" card, default category, first day of week, and other advanced options.', 'url' => $r['creating_schedules'].'#settings-advanced', 'category' => 'User Guide', 'keywords' => 'advanced options visibility default public draft hide videos hide past events accessibility widget font size contrast motion show sign-up panel subscribe stay up to date hide email sign up notify me card tell me when tickets go on sale interest list turn on off default category first day week'],
             ['page' => 'Creating Schedules', 'section' => 'Do Not Show Other Schedules\' Promotions', 'description' => 'Decline to carry other schedules\' paid promotions, and any ads, on your public pages.', 'url' => $r['creating_schedules'].'#settings-advanced', 'category' => 'User Guide', 'keywords' => 'ads adsense advertising promotions opt out opt-out decline hide ads no ads free plan'],
-            ['page' => 'Creating Schedules', 'section' => 'List This Schedule on the Network', 'description' => 'List a schedule on the Event Schedule network to share its public events with the eventschedule.com listings, or keep it off.', 'url' => $r['creating_schedules'].'#settings-advanced', 'category' => 'User Guide', 'keywords' => 'federation network list schedule share events eventschedule.com listings opt in opt out discovery list on the network prompt dashboard listed badge'],
+            ['page' => 'Creating Schedules', 'section' => 'List This Schedule on the Network', 'description' => 'List a schedule on the Getvnt network to share its public events with the getvnt.com listings, or keep it off.', 'url' => $r['creating_schedules'].'#settings-advanced', 'category' => 'User Guide', 'keywords' => 'federation network list schedule share events getvnt.com listings opt in opt out discovery list on the network prompt dashboard listed badge'],
             ['page' => 'Creating Schedules', 'section' => 'Engagement', 'description' => 'Configure visitor interaction features for your schedule.', 'url' => $r['creating_schedules'].'#engagement', 'category' => 'User Guide', 'keywords' => 'engagement interaction community'],
             ['page' => 'Creating Schedules', 'section' => 'Requests', 'description' => 'Configure public event request submissions.', 'url' => $r['creating_schedules'].'#engagement-requests', 'category' => 'User Guide', 'keywords' => 'submissions public requests custom questions extra fields validation pattern booking form required fields mandatory online in-person request terms guest without account phone number contact details who submitted reply to requester'],
             ['page' => 'Creating Schedules', 'section' => 'Fan Content', 'description' => 'Allow visitors to submit photos and videos to events.', 'url' => $r['creating_schedules'].'#engagement-fan-content', 'category' => 'User Guide', 'keywords' => 'fan content photos videos submissions'],
@@ -7559,7 +7559,7 @@ class MarketingController extends Controller
             ['page' => 'Schedule Styling', 'section' => 'Typography', 'description' => 'Choose custom fonts from Google Fonts.', 'url' => $r['schedule_styling'].'#typography', 'category' => 'User Guide', 'keywords' => 'font text typeface google fonts'],
             ['page' => 'Schedule Styling', 'section' => 'Event Animation', 'description' => 'Animate event cards as visitors scroll your schedule.', 'url' => $r['schedule_styling'].'#list-animation', 'category' => 'User Guide', 'keywords' => 'animation motion scroll reveal rise focus slide deal shine curtain effect'],
             ['page' => 'Schedule Styling', 'section' => 'AI Style Generator', 'description' => 'Use AI to generate cohesive branding, images, colors, and fonts (Enterprise).', 'url' => $r['schedule_styling'].'#ai-style-generator', 'category' => 'User Guide', 'keywords' => 'ai generate style branding images automatic'],
-            ['page' => 'Schedule Styling', 'section' => 'Remove Branding', 'description' => 'Remove the "Powered by Event Schedule" badge (Pro), and what a selfhosted install keeps.', 'url' => $r['schedule_styling'].'#remove-branding', 'category' => 'User Guide', 'keywords' => 'branding badge powered by white label selfhost attribution credit licence'],
+            ['page' => 'Schedule Styling', 'section' => 'Remove Branding', 'description' => 'Remove the "Powered by Getvnt" badge (Pro), and what a selfhosted install keeps.', 'url' => $r['schedule_styling'].'#remove-branding', 'category' => 'User Guide', 'keywords' => 'branding badge powered by white label selfhost attribution credit licence'],
             ['page' => 'Schedule Styling', 'section' => 'Custom CSS', 'description' => 'Add custom CSS for advanced styling (Pro).', 'url' => $r['schedule_styling'].'#custom-css', 'category' => 'User Guide', 'keywords' => 'css stylesheet custom code'],
             ['page' => 'Schedule Styling', 'section' => 'Hiding Sections', 'description' => 'Hide any panel on your schedule or event pages with one line of CSS (Pro).', 'url' => $r['schedule_styling'].'#hiding-sections', 'category' => 'User Guide', 'keywords' => 'hide remove section panel css display none notify me performer list'],
             ['page' => 'Schedule Styling', 'section' => 'Live Preview', 'description' => 'Preview styling changes in real time.', 'url' => $r['schedule_styling'].'#live-preview', 'category' => 'User Guide', 'keywords' => 'preview real-time'],
@@ -7586,8 +7586,8 @@ class MarketingController extends Controller
             ['page' => 'Creating Events', 'section' => 'Event Details', 'description' => 'Set event name, dates, times, and description.', 'url' => $r['creating_events'].'#details', 'category' => 'User Guide', 'keywords' => 'name date time description'],
             ['page' => 'Creating Events', 'section' => 'Event Visibility', 'description' => 'Choose who can see an event: Public, Draft, Internal, or Unlisted. Hidden events stay off your public schedule, the calendar feed, the subscriber digest, graphics and newsletters.', 'url' => $r['creating_events'].'#draft', 'category' => 'User Guide', 'keywords' => 'visibility draft internal unlisted public private unpublished hidden publish digest feed'],
             ['page' => 'Creating Events', 'section' => 'Venue', 'description' => 'Add venue and location information to events.', 'url' => $r['creating_events'].'#venue', 'category' => 'User Guide', 'keywords' => 'location place address map'],
-            ['page' => 'Creating Events', 'section' => 'Participants', 'description' => 'Add performers, speakers, or participants. Naming someone who is not on Event Schedule yet creates a page for them.', 'url' => $r['creating_events'].'#participants', 'category' => 'User Guide', 'keywords' => 'performers speakers artists lineup members bill'],
-            ['page' => 'Creating Events', 'section' => 'Pages Created for Others', 'description' => 'Naming a performer or venue who is not on Event Schedule creates a page for them, which they can claim. Your event page shows the whole lineup and links to it.', 'url' => $r['creating_events'].'#claim', 'category' => 'User Guide', 'keywords' => 'claim unclaimed claim this page is this you not me invitation page created for me remove my page profile someone made a page lineup approval'],
+            ['page' => 'Creating Events', 'section' => 'Participants', 'description' => 'Add performers, speakers, or participants. Naming someone who is not on Getvnt yet creates a page for them.', 'url' => $r['creating_events'].'#participants', 'category' => 'User Guide', 'keywords' => 'performers speakers artists lineup members bill'],
+            ['page' => 'Creating Events', 'section' => 'Pages Created for Others', 'description' => 'Naming a performer or venue who is not on Getvnt creates a page for them, which they can claim. Your event page shows the whole lineup and links to it.', 'url' => $r['creating_events'].'#claim', 'category' => 'User Guide', 'keywords' => 'claim unclaimed claim this page is this you not me invitation page created for me remove my page profile someone made a page lineup approval'],
             ['page' => 'Creating Events', 'section' => 'Recurring Events', 'description' => 'Set up events that repeat on a schedule.', 'url' => $r['creating_events'].'#recurring', 'category' => 'User Guide', 'keywords' => 'repeat weekly monthly recurring'],
             ['page' => 'Creating Events', 'section' => 'Agenda', 'description' => 'Create agenda items and event parts.', 'url' => $r['creating_events'].'#agenda', 'category' => 'User Guide', 'keywords' => 'parts itinerary lineup schedule'],
             ['page' => 'Creating Events', 'section' => 'Appearances on Other Schedules', 'description' => 'List your event on curator or talent schedules.', 'url' => $r['creating_events'].'#schedules', 'category' => 'User Guide', 'keywords' => 'cross-list curator appearances'],
@@ -7633,7 +7633,7 @@ class MarketingController extends Controller
             ['page' => 'Newsletters', 'section' => 'Recipients & Segments', 'description' => 'Choose audiences: followers, email subscribers, ticket buyers, waitlists, sub-schedules or manual lists. An event\'s interest list is not a segment.', 'url' => $r['newsletters'].'#recipients', 'category' => 'User Guide', 'keywords' => 'recipients segments audience list subscribers followers ticket buyers waitlist interest list who receives default everyone'],
             ['page' => 'Newsletters', 'section' => 'Managing Segments', 'description' => 'Create and manage reusable audience segments.', 'url' => $r['newsletters'].'#managing-segments', 'category' => 'User Guide', 'keywords' => 'segments create edit delete reusable'],
             ['page' => 'Newsletters', 'section' => 'Importing Emails', 'description' => 'Bulk import contacts via form entry, paste, or CSV upload.', 'url' => $r['newsletters'].'#importing-emails', 'category' => 'User Guide', 'keywords' => 'import csv paste emails bulk contacts'],
-            ['page' => 'Newsletters', 'section' => 'Sending', 'description' => 'Send now, schedule for later, or send a test; on eventschedule.com a send to more than 50 recipients needs email settings or a verified phone.', 'url' => $r['newsletters'].'#sending', 'category' => 'User Guide', 'keywords' => 'send schedule deliver verification verify phone smtp email settings 50 recipients refused'],
+            ['page' => 'Newsletters', 'section' => 'Sending', 'description' => 'Send now, schedule for later, or send a test; on getvnt.com a send to more than 50 recipients needs email settings or a verified phone.', 'url' => $r['newsletters'].'#sending', 'category' => 'User Guide', 'keywords' => 'send schedule deliver verification verify phone smtp email settings 50 recipients refused'],
             ['page' => 'Newsletters', 'section' => 'A/B Testing', 'description' => 'Test different newsletter variants.', 'url' => $r['newsletters'].'#ab-testing', 'category' => 'User Guide', 'keywords' => 'ab test split experiment'],
             ['page' => 'Newsletters', 'section' => 'Analytics', 'description' => 'Track newsletter performance and engagement.', 'url' => $r['newsletters'].'#analytics', 'category' => 'User Guide', 'keywords' => 'opens clicks metrics performance'],
             ['page' => 'Newsletters', 'section' => 'Managing Newsletters', 'description' => 'Manage drafts, scheduled, and sent newsletters.', 'url' => $r['newsletters'].'#managing', 'category' => 'User Guide', 'keywords' => 'drafts manage list'],
@@ -7780,13 +7780,13 @@ class MarketingController extends Controller
             // ===== SELFHOST =====
 
             // Overview (the group's landing page)
-            ['page' => 'Selfhost', 'section' => 'Selfhost Guides', 'description' => 'Where to start when deploying Event Schedule on your own server, and which integration guides to add.', 'url' => $r['selfhost_index'].'#guides', 'category' => 'Selfhost', 'keywords' => 'selfhost self hosted on premise own server single tenant guides index overview'],
+            ['page' => 'Selfhost', 'section' => 'Selfhost Guides', 'description' => 'Where to start when deploying Getvnt on your own server, and which integration guides to add.', 'url' => $r['selfhost_index'].'#guides', 'category' => 'Selfhost', 'keywords' => 'selfhost self hosted on premise own server single tenant guides index overview'],
 
             // Installation
             ['page' => 'Installation', 'section' => 'Overview', 'description' => 'Manual installation guide for selfhosted deployments.', 'url' => $r['selfhost_installation'].'#overview', 'category' => 'Selfhost', 'keywords' => 'install setup deploy server'],
             ['page' => 'Installation', 'section' => 'Requirements', 'description' => 'Server requirements: PHP 8.2+, MySQL 5.7+ or MariaDB 10.3+, the PHP extensions, HTTPS and a cron entry.', 'url' => $r['selfhost_installation'].'#requirements', 'category' => 'Selfhost', 'keywords' => 'requirements php 8.2 mysql mariadb extensions gd server'],
             ['page' => 'Installation', 'section' => 'Set Up the Database', 'description' => 'Create MySQL database and user.', 'url' => $r['selfhost_installation'].'#database', 'category' => 'Selfhost', 'keywords' => 'database mysql create'],
-            ['page' => 'Installation', 'section' => 'Download the Application', 'description' => 'Download and extract Event Schedule files.', 'url' => $r['selfhost_installation'].'#download', 'category' => 'Selfhost', 'keywords' => 'download extract files'],
+            ['page' => 'Installation', 'section' => 'Download the Application', 'description' => 'Download and extract Getvnt files.', 'url' => $r['selfhost_installation'].'#download', 'category' => 'Selfhost', 'keywords' => 'download extract files'],
             ['page' => 'Installation', 'section' => 'Set File Permissions', 'description' => 'Set proper directory permissions.', 'url' => $r['selfhost_installation'].'#permissions', 'category' => 'Selfhost', 'keywords' => 'permissions chmod directories'],
             ['page' => 'Installation', 'section' => 'Configure Environment', 'description' => 'Set up the .env configuration file.', 'url' => $r['selfhost_installation'].'#environment', 'category' => 'Selfhost', 'keywords' => 'env environment configuration'],
             ['page' => 'Installation', 'section' => 'User Accounts and Registration', 'description' => 'Selfhost is single user by default; enable ALLOW_REGISTRATION to let others sign up.', 'url' => $r['selfhost_installation'].'#user-accounts', 'category' => 'Selfhost', 'keywords' => 'registration sign up register accounts users ALLOW_REGISTRATION single user attendees multi user public registration'],
@@ -7871,7 +7871,7 @@ class MarketingController extends Controller
             ['page' => 'Facebook Login', 'section' => 'Basic settings', 'description' => 'App domains, privacy policy, terms, data deletion URL, icon and category.', 'url' => $r['saas_facebook_login'].'#basic-settings', 'category' => 'SaaS', 'keywords' => 'facebook meta app domains privacy policy terms data deletion app secret app id'],
             ['page' => 'Facebook Login', 'section' => 'Facebook Login settings', 'description' => 'Register the three OAuth redirect URIs on the app subdomain.', 'url' => $r['saas_facebook_login'].'#login-settings', 'category' => 'SaaS', 'keywords' => 'facebook redirect uri callback oauth valid oauth redirect uris strict mode https'],
             ['page' => 'Facebook Login', 'section' => 'Permissions', 'description' => 'Add the email and public_profile permissions. No App Review needed.', 'url' => $r['saas_facebook_login'].'#permissions', 'category' => 'SaaS', 'keywords' => 'facebook permissions email public_profile advanced access app review'],
-            ['page' => 'Facebook Login', 'section' => 'Configure Event Schedule', 'description' => 'Set FACEBOOK_CLIENT_ID and FACEBOOK_CLIENT_SECRET in .env.', 'url' => $r['saas_facebook_login'].'#configure', 'category' => 'SaaS', 'keywords' => 'facebook env FACEBOOK_CLIENT_ID FACEBOOK_CLIENT_SECRET FACEBOOK_REDIRECT_URI config'],
+            ['page' => 'Facebook Login', 'section' => 'Configure Getvnt', 'description' => 'Set FACEBOOK_CLIENT_ID and FACEBOOK_CLIENT_SECRET in .env.', 'url' => $r['saas_facebook_login'].'#configure', 'category' => 'SaaS', 'keywords' => 'facebook env FACEBOOK_CLIENT_ID FACEBOOK_CLIENT_SECRET FACEBOOK_REDIRECT_URI config'],
             ['page' => 'Facebook Login', 'section' => 'Test, then go Live', 'description' => 'Test with app roles and test users, then switch the app to Live.', 'url' => $r['saas_facebook_login'].'#go-live', 'category' => 'SaaS', 'keywords' => 'facebook test users app roles development live mode app not active'],
             ['page' => 'Facebook Login', 'section' => 'How accounts are matched', 'description' => 'How a Facebook sign-in links to an existing account or creates a new one.', 'url' => $r['saas_facebook_login'].'#account-matching', 'category' => 'SaaS', 'keywords' => 'facebook account linking matching existing email placeholder rotate app secret'],
             ['page' => 'Facebook Login', 'section' => 'Turning it off', 'description' => 'Unset either value to hide Facebook login. Stored links are kept.', 'url' => $r['saas_facebook_login'].'#disable', 'category' => 'SaaS', 'keywords' => 'facebook disable turn off remove login reset password'],
@@ -7900,11 +7900,11 @@ class MarketingController extends Controller
             ['page' => 'Admin Panel', 'section' => 'Settings', 'description' => 'Add custom header and footer code (Google Tag Manager, analytics) injected into all public guest pages.', 'url' => $r['selfhost_admin'].'#system-settings', 'category' => 'Selfhost', 'keywords' => 'settings header footer code google tag manager gtm analytics tracking script head body'],
             ['page' => 'Admin Panel', 'section' => 'Plan pricing', 'description' => 'Set what your platform advertises Pro and Enterprise at, without editing .env, and move every page at once.', 'url' => $r['selfhost_admin'].'#system-settings', 'category' => 'Selfhost', 'keywords' => 'plan pricing custom pricing price amount pro enterprise monthly yearly advertise marketing prices upgrade prompts STRIPE_PRICE_MONTHLY_AMOUNT selfhost'],
             ['page' => 'Admin Panel', 'section' => 'Platform Currency', 'description' => 'Set the currency your platform shows its own prices in, and the fallback currency for a new event.', 'url' => $r['selfhost_admin'].'#system-settings', 'category' => 'Selfhost', 'keywords' => 'platform currency symbol dollar euro pound rand yen PLATFORM_CURRENCY plan price marketing prices default currency white label'],
-            ['page' => 'Admin Panel', 'section' => 'Event Schedule network', 'description' => 'Share your public events with eventschedule.com, pick which of your schedules to list, and see what has been sent.', 'url' => $r['selfhost_admin'].'#system-settings', 'category' => 'Selfhost', 'keywords' => 'federation network share events eventschedule.com listings contact email list these schedules connection status pending approved suspended preview sent needs an image'],
+            ['page' => 'Admin Panel', 'section' => 'Getvnt network', 'description' => 'Share your public events with getvnt.com, pick which of your schedules to list, and see what has been sent.', 'url' => $r['selfhost_admin'].'#system-settings', 'category' => 'Selfhost', 'keywords' => 'federation network share events getvnt.com listings contact email list these schedules connection status pending approved suspended preview sent needs an image'],
             ['page' => 'Admin Panel', 'section' => 'Cookie consent banner', 'description' => 'When the cookie banner appears, what the UTM attribution cookies do, and why the built-in analytics need no consent.', 'url' => $r['selfhost_admin'].'#system-settings', 'category' => 'Selfhost', 'keywords' => 'cookie consent banner gdpr privacy COOKIE_CONSENT_BANNER utm_params utm_referrer_url utm_landing_page attribution tracking analytics anonymous aggregate hashed ip'],
             ['page' => 'Admin Panel', 'section' => 'App Update', 'description' => 'See the installed version next to the latest release, and apply an update in one click.', 'url' => $r['selfhost_admin'].'#system-app-update', 'category' => 'Selfhost', 'keywords' => 'update upgrade version release github selfhost one click migrations app:update update app missing notification badge'],
             ['page' => 'Admin Panel', 'section' => 'Translations', 'description' => 'Review and customize the app\'s text in any language, and share improvements with the community.', 'url' => $r['selfhost_admin'].'#system-translations', 'category' => 'Selfhost', 'keywords' => 'translations translate language customize text terminology rename wording localization locale strings'],
-            ['page' => 'Admin Panel', 'section' => 'Sharing translations', 'description' => 'Share your translation improvements with the EventSchedule community for review.', 'url' => $r['selfhost_admin'].'#system-translations', 'category' => 'Selfhost', 'keywords' => 'share translations community contribute suggestions auto-share'],
+            ['page' => 'Admin Panel', 'section' => 'Sharing translations', 'description' => 'Share your translation improvements with the Getvnt community for review.', 'url' => $r['selfhost_admin'].'#system-translations', 'category' => 'Selfhost', 'keywords' => 'share translations community contribute suggestions auto-share'],
             ['page' => 'Admin Panel', 'section' => 'Legal Pages', 'description' => 'Replace the built-in privacy policy and terms of service with your own, and add a cookie policy.', 'url' => $r['selfhost_admin'].'#system-legal-pages', 'category' => 'Selfhost', 'keywords' => 'legal privacy policy terms of service cookie policy gdpr paia popia ccpa compliance jurisdiction consent custom documents markdown'],
 
             // Boost Setup (Selfhost)
@@ -7922,7 +7922,7 @@ class MarketingController extends Controller
             // ===== SAAS =====
 
             // SaaS Setup
-            ['page' => 'SaaS Setup', 'section' => 'Overview', 'description' => 'Deploy Event Schedule as a multi-tenant SaaS.', 'url' => $r['saas_setup'].'#overview', 'category' => 'SaaS', 'keywords' => 'saas multi-tenant deploy'],
+            ['page' => 'SaaS Setup', 'section' => 'Overview', 'description' => 'Deploy Getvnt as a multi-tenant SaaS.', 'url' => $r['saas_setup'].'#overview', 'category' => 'SaaS', 'keywords' => 'saas multi-tenant deploy'],
             ['page' => 'SaaS Setup', 'section' => 'Prerequisites', 'description' => 'Requirements for SaaS deployment.', 'url' => $r['saas_setup'].'#prerequisites', 'category' => 'SaaS', 'keywords' => 'requirements prerequisites'],
             ['page' => 'SaaS Setup', 'section' => 'Environment Variables', 'description' => 'SaaS-specific .env configuration, your own branding, and the one licence credit you cannot repoint.', 'url' => $r['saas_setup'].'#environment', 'category' => 'SaaS', 'keywords' => 'env environment configuration branding white label logo app name APP_MARKETING_URL attribution credit licence'],
             ['page' => 'SaaS Setup', 'section' => 'Push Notifications', 'description' => 'Enable optional OneSignal web push notifications platform-wide.', 'url' => $r['saas_setup'].'#push-notifications', 'category' => 'SaaS', 'keywords' => 'push notifications onesignal web push browser mobile alerts ONESIGNAL_APP_ID'],
@@ -7957,7 +7957,7 @@ class MarketingController extends Controller
             ['page' => 'Twilio Integration', 'section' => 'Phone Verification', 'description' => 'Implement phone number verification.', 'url' => $r['saas_twilio'].'#phone-verification', 'category' => 'SaaS', 'keywords' => 'phone verify number sms'],
             ['page' => 'Twilio Integration', 'section' => 'WhatsApp Setup', 'description' => 'Register and configure WhatsApp messaging.', 'url' => $r['saas_twilio'].'#whatsapp', 'category' => 'SaaS', 'keywords' => 'whatsapp messaging sender'],
             ['page' => 'Twilio Integration', 'section' => 'Testing', 'description' => 'Test SMS and WhatsApp functionality.', 'url' => $r['saas_twilio'].'#testing', 'category' => 'SaaS', 'keywords' => 'test sms whatsapp verify'],
-            ['page' => 'Federation', 'section' => 'Overview', 'description' => 'Share your public events with the eventschedule.com listings.', 'url' => $r['saas_federation'].'#overview', 'category' => 'SaaS', 'keywords' => 'federation network listings discovery traffic backlink'],
+            ['page' => 'Federation', 'section' => 'Overview', 'description' => 'Share your public events with the getvnt.com listings.', 'url' => $r['saas_federation'].'#overview', 'category' => 'SaaS', 'keywords' => 'federation network listings discovery traffic backlink'],
             ['page' => 'Monetization', 'section' => 'Overview', 'description' => 'Show ads on free schedules and sell promotional placement to paid ones. The licence credit is not an upsell.', 'url' => $r['saas_monetization'].'#overview', 'category' => 'SaaS', 'keywords' => 'monetization ads adsense revenue advertising free tier earn upsell branding white label attribution credit'],
             ['page' => 'Monetization', 'section' => 'Consent and privacy', 'description' => 'Consent management, non-personalized ads and Global Privacy Control.', 'url' => $r['saas_monetization'].'#consent', 'category' => 'SaaS', 'keywords' => 'consent gdpr cmp privacy personalized ads sec-gpc eea uk cookie banner COOKIE_CONSENT_BANNER utm attribution cookies'],
             ['page' => 'Monetization', 'section' => 'Google AdSense', 'description' => 'Configure your publisher ID and ad slot for free-tier pages.', 'url' => $r['saas_monetization'].'#adsense', 'category' => 'SaaS', 'keywords' => 'adsense google publisher id ad slot ca-pub display unit'],
@@ -7970,7 +7970,7 @@ class MarketingController extends Controller
             ['page' => 'Federation', 'section' => 'What a listing looks like', 'description' => 'Listings link straight back to the event on your site.', 'url' => $r['saas_federation'].'#listings', 'category' => 'SaaS', 'keywords' => 'listing card link backlink filter country language image needs an image preview'],
             ['page' => 'Federation', 'section' => 'Keeping it in sync', 'description' => 'Sharing runs hourly and removes events that stop qualifying.', 'url' => $r['saas_federation'].'#sync', 'category' => 'SaaS', 'keywords' => 'sync hourly cron federation:push verified reconnect rejected not recognised'],
             ['page' => 'Federation', 'section' => 'What is shared', 'description' => 'Every field that leaves your install, and where each one ends up.', 'url' => $r['saas_federation'].'#privacy', 'category' => 'SaaS', 'keywords' => 'privacy data shared attendees tickets what is sent fields schedule link contact email version online joining link'],
-            ['page' => 'Federation', 'section' => 'Overview', 'description' => 'Share your public events with the eventschedule.com listings.', 'url' => $r['selfhost_federation'].'#overview', 'category' => 'Selfhost', 'keywords' => 'federation network listings discovery traffic backlink'],
+            ['page' => 'Federation', 'section' => 'Overview', 'description' => 'Share your public events with the getvnt.com listings.', 'url' => $r['selfhost_federation'].'#overview', 'category' => 'Selfhost', 'keywords' => 'federation network listings discovery traffic backlink'],
             ['page' => 'Federation', 'section' => 'Turning it on', 'description' => 'Enable the network and register your install for review.', 'url' => $r['selfhost_federation'].'#enable', 'category' => 'Selfhost', 'keywords' => 'enable turn on register approve settings welcome email contact email list these schedules checklist status'],
             ['page' => 'Federation', 'section' => 'Per-schedule control', 'description' => 'Each schedule opts in for itself, in one click from the dashboard or its page; new schedules start undecided and share nothing.', 'url' => $r['selfhost_federation'].'#per-schedule', 'category' => 'Selfhost', 'keywords' => 'opt in opt out per schedule toggle undecided co-listed veto list on the network prompt dashboard one click dismiss listed badge'],
             ['page' => 'Federation', 'section' => 'What a listing looks like', 'description' => 'Listings link straight back to the event on your site.', 'url' => $r['selfhost_federation'].'#listings', 'category' => 'Selfhost', 'keywords' => 'listing card link backlink filter country language image needs an image preview'],

@@ -1,8 +1,8 @@
 <x-docs-page
     key="saas/setup"
-    title="White-Label SaaS Setup: Your Own Platform - Event Schedule"
-    description="Run Event Schedule as a white-label SaaS: wildcard subdomains, your branding, Stripe plan billing, and tenants selling through their own Stripe or PayPal."
-    lede="Configure Event Schedule for SaaS (Software as a Service) deployment, where you host the platform for multiple customers using subdomains."
+    title="White-Label SaaS Setup: Your Own Platform - Getvnt"
+    description="Run Getvnt as a white-label SaaS: wildcard subdomains, your branding, Stripe plan billing, and tenants selling through their own Stripe or PayPal."
+    lede="Configure Getvnt for SaaS (Software as a Service) deployment, where you host the platform for multiple customers using subdomains."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#overview">Overview</x-doc-nav-link>
@@ -33,7 +33,7 @@
             </svg>
             Overview
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Event Schedule supports two deployment modes:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Getvnt supports two deployment modes:</p>
 
         <div class="doc-table-wrap">
             <table class="doc-table">
@@ -62,7 +62,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-4">In SaaS mode each customer schedule gets its own subdomain, and signing in, the admin portal and billing all live on one shared <code class="doc-inline-code">app</code> subdomain. A schedule on an Enterprise plan can additionally be served from the customer's own domain; see <a href="{{ route('marketing.docs.saas.custom_domains') }}" class="doc-link">Custom Domains</a>.</p>
 
         <div class="doc-callout doc-callout-info">
-            <div class="doc-callout-title">Your platform does not serve the Event Schedule marketing site</div>
+            <div class="doc-callout-title">Your platform does not serve the Getvnt marketing site</div>
             <p>The marketing pages (home, features, pricing, this user guide) are registered only when
             <code class="doc-inline-code">IS_NEXUS=true</code>, which identifies the one upstream install that
             receives federated events and shared translations. Leave it unset on your own platform. Your root
@@ -80,7 +80,7 @@
             Prerequisites
         </h2>
         <ol class="doc-list doc-list-numbered">
-            <li>A completed base installation of Event Schedule, including MySQL and the <code class="doc-inline-code">schedule:run</code> cron entry (see <a href="{{ route('marketing.docs.selfhost.installation') }}" class="doc-link">Installation</a>)</li>
+            <li>A completed base installation of Getvnt, including MySQL and the <code class="doc-inline-code">schedule:run</code> cron entry (see <a href="{{ route('marketing.docs.selfhost.installation') }}" class="doc-link">Installation</a>)</li>
             <li>A domain name with DNS access</li>
             <li>Ability to configure wildcard SSL certificates</li>
             <li>Web server configured to handle wildcard subdomains (Apache or Nginx)</li>
@@ -136,7 +136,7 @@
                     <tr>
                         <td><code class="doc-inline-code">APP_NAME</code></td>
                         <td><code class="doc-inline-code">Laravel</code></td>
-                        <td>Reaches the app only through the <code class="doc-inline-code">MAIL_FROM_NAME="${APP_NAME}"</code> reference in <code class="doc-inline-code">.env.example</code>, so it sets the sender name on outgoing email. It does <span class="font-semibold text-gray-900 dark:text-white">not</span> rename the product in the interface: admin and marketing page titles are literal, and <code class="doc-inline-code">config('app.name')</code> is a fixed <code class="doc-inline-code">Event Schedule</code> string in <code class="doc-inline-code">config/app.php</code>. Public schedule pages are already unbranded, since their title carries the schedule's own name. Rename in-app wording with <a href="#translations" class="doc-link">custom translations</a> instead.</td>
+                        <td>Reaches the app only through the <code class="doc-inline-code">MAIL_FROM_NAME="${APP_NAME}"</code> reference in <code class="doc-inline-code">.env.example</code>, so it sets the sender name on outgoing email. It does <span class="font-semibold text-gray-900 dark:text-white">not</span> rename the product in the interface: admin and marketing page titles are literal, and <code class="doc-inline-code">config('app.name')</code> is a fixed <code class="doc-inline-code">Getvnt</code> string in <code class="doc-inline-code">config/app.php</code>. Public schedule pages are already unbranded, since their title carries the schedule's own name. Rename in-app wording with <a href="#translations" class="doc-link">custom translations</a> instead.</td>
                     </tr>
                     <tr>
                         <td><code class="doc-inline-code">APP_URL</code></td>
@@ -145,13 +145,13 @@
                     </tr>
                     <tr>
                         <td><code class="doc-inline-code">APP_MARKETING_URL</code></td>
-                        <td><code class="doc-inline-code">https://eventschedule.com</code></td>
+                        <td><code class="doc-inline-code">https://getvnt.com</code></td>
                         <td>Your own marketing site. This is where the footer strip on your free tier's public pages sends visitors, so point it at your site rather than leaving the default.</td>
                     </tr>
                     <tr>
                         <td><code class="doc-inline-code">IS_NEXUS</code></td>
                         <td><code class="doc-inline-code">false</code></td>
-                        <td>Leave this off. It marks the single upstream install that hosts the Event Schedule marketing site and receives federated events and shared translation suggestions. Turning it on also changes the default proxy trust and disables the in-app updater.</td>
+                        <td>Leave this off. It marks the single upstream install that hosts the Getvnt marketing site and receives federated events and shared translation suggestions. Turning it on also changes the default proxy trust and disables the in-app updater.</td>
                     </tr>
                 </tbody>
             </table>
@@ -163,10 +163,10 @@
             <div class="doc-callout-title">One credit a page</div>
             <p>Your app name, logos and domain make the platform yours, and your free tier's footer
             strip points at your <code class="doc-inline-code">APP_MARKETING_URL</code> rather than
-            ours. One thing is not yours to repoint: a small "Event Schedule" chip in the corner of
+            ours. One thing is not yours to repoint: a small "Getvnt" chip in the corner of
             the public pages of every customer you charge. It is the
-            attribution the <a href="https://github.com/eventschedule/eventschedule/blob/main/LICENSE" target="_blank" rel="noopener" class="doc-link">Attribution Assurance License</a>
-            asks for in return for the software, so it links to eventschedule.com and
+            attribution the <a href="https://github.com/Firstet/Getvnt-v2/blob/main/LICENSE" target="_blank" rel="noopener" class="doc-link">Attribution Assurance License</a>
+            asks for in return for the software, so it links to getvnt.com and
             <code class="doc-inline-code">APP_MARKETING_URL</code> does not change it. A free schedule
             shows your footer strip instead of the chip, so no page carries two credits.</p>
         </div>
@@ -224,7 +224,7 @@
                 <button class="doc-copy-btn">Copy</button>
             </div>
             <pre><code><span class="code-comment"># Email address for user feedback (displayed in footer)</span>
-<span class="code-variable">SUPPORT_EMAIL</span>=<span class="code-string">contact@eventschedule.com</span></code></pre>
+<span class="code-variable">SUPPORT_EMAIL</span>=<span class="code-string">contact@getvnt.com</span></code></pre>
         </div>
 
         <div class="doc-table-wrap">
@@ -239,7 +239,7 @@
                 <tbody>
                     <tr>
                         <td><code class="doc-inline-code">SUPPORT_EMAIL</code></td>
-                        <td><code class="doc-inline-code">contact@eventschedule.com</code></td>
+                        <td><code class="doc-inline-code">contact@getvnt.com</code></td>
                         <td>Shown at the bottom of the admin sidebar as the "questions or suggestions" address, and used as the Reply-To on the notices sent when an account, schedule or event is deleted. Change it or your customers will write to us.</td>
                     </tr>
                 </tbody>
@@ -286,7 +286,7 @@
         </div>
 
         <h3 id="push-notifications" class="doc-subheading">Push Notifications (Optional)</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Event Schedule can send web push notifications that mirror its email notifications using <a href="https://onesignal.com" target="_blank" rel="noopener noreferrer" class="doc-link">OneSignal</a>. This is a Pro feature and is <strong>off by default</strong>: with no configuration, no push SDK loads and no calls are made to OneSignal. To enable it platform-wide, create a OneSignal app (Web platform) and set:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Getvnt can send web push notifications that mirror its email notifications using <a href="https://onesignal.com" target="_blank" rel="noopener noreferrer" class="doc-link">OneSignal</a>. This is a Pro feature and is <strong>off by default</strong>: with no configuration, no push SDK loads and no calls are made to OneSignal. To enable it platform-wide, create a OneSignal app (Web platform) and set:</p>
         <pre class="doc-code-block"><code>ONESIGNAL_APP_ID=your-onesignal-app-id
 ONESIGNAL_REST_API_KEY=your-onesignal-rest-api-key</code></pre>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Once both values are set, a <strong>Push notifications</strong> panel appears on each schedule's <strong>Settings &rarr; Notifications</strong> tab, where the owner enables push per device and can send a test. Sending is gated on the schedule being Pro or Enterprise, and the demo schedule never receives push. One OneSignal app serves the whole platform; tenants are segmented automatically. Add <code class="doc-inline-code">ONESIGNAL_SAFARI_WEB_ID</code> only if you need legacy macOS Safari support.</p>
@@ -299,7 +299,7 @@ GOOGLE_WALLET_SERVICE_ACCOUNT=/absolute/path/to/service-account.json</code></pre
         <p class="text-gray-600 dark:text-gray-300 mb-4">The service account setting also takes the key file's contents, base64-encoded, for a host with no writable file mount. Leave either value empty and no button renders and nothing is sent to Google. A new issuer account starts in Google's demo mode, where only the Google accounts you register as testers can save a pass. Give a staging install its own <code class="doc-inline-code">GOOGLE_WALLET_ID_PREFIX</code> (the default is <code class="doc-inline-code">es</code>): Google never deletes a pass class, so two installs sharing an issuer account and a prefix collide for good. The <a href="{{ route('marketing.docs.selfhost.google_wallet') }}" class="doc-link">Google Wallet guide</a> covers creating the issuer account.</p>
 
         <h3 id="reverse-proxy" class="doc-subheading">Running Behind a Reverse Proxy</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">A multi-tenant install almost always sits behind a reverse proxy or CDN (Nginx, Apache, Cloudflare, or a control panel such as HestiaCP). Tell Event Schedule which proxies to trust so it reads the <code class="doc-inline-code">X-Forwarded-Proto</code> and <code class="doc-inline-code">X-Forwarded-For</code> headers those proxies set:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">A multi-tenant install almost always sits behind a reverse proxy or CDN (Nginx, Apache, Cloudflare, or a control panel such as HestiaCP). Tell Getvnt which proxies to trust so it reads the <code class="doc-inline-code">X-Forwarded-Proto</code> and <code class="doc-inline-code">X-Forwarded-For</code> headers those proxies set:</p>
         <pre class="doc-code-block"><code>TRUSTED_PROXIES=*</code></pre>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Use <code class="doc-inline-code">*</code> to trust any proxy, or a comma-separated list of proxy IPs or CIDR ranges (for example <code class="doc-inline-code">10.0.0.0/8,192.168.1.1</code>) when the origin server is reachable directly from the internet. Left unset, your platform trusts no proxies at all: the application then treats every request as plain HTTP even when the browser is on HTTPS, which can produce redirect loops on tenant subdomains, and it records the proxy's IP address as the visitor's IP in analytics and rate limiting.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">The setting deliberately lives in <code class="doc-inline-code">config/trustedproxy.php</code> rather than in application bootstrap, so it survives <code class="doc-inline-code">php artisan config:cache</code>. Re-run that command after changing the value.</p>
@@ -595,7 +595,7 @@ yourdomain.com.    CNAME    your-server.hosting.com.
 
         <h3 class="doc-subheading">1. Test the App Subdomain</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Visit <code class="doc-inline-code">https://app.yourdomain.com</code>. You should reach the sign-in page, and be able to register an account.</p>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">The bare root domain redirects to that same sign-in page. That is the expected result: your platform does not serve the Event Schedule marketing pages, so put your own site on the root domain (or on a separate host) and point <code class="doc-inline-code">APP_MARKETING_URL</code> at it.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">The bare root domain redirects to that same sign-in page. That is the expected result: your platform does not serve the Getvnt marketing pages, so put your own site on the root domain (or on a separate host) and point <code class="doc-inline-code">APP_MARKETING_URL</code> at it.</p>
 
         <h3 class="doc-subheading">2. Test Subdomain Routing</h3>
         <ol class="doc-list doc-list-numbered mb-6">
@@ -657,7 +657,7 @@ yourdomain.com.    CNAME    your-server.hosting.com.
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">Two things to check before you run it</div>
             <ul class="doc-list mt-2">
-                <li>The demo account is created with the fixed address <code class="doc-inline-code">contact@eventschedule.com</code>. If that address already belongs to a real account on your platform, that account becomes the demo account</li>
+                <li>The demo account is created with the fixed address <code class="doc-inline-code">contact@getvnt.com</code>. If that address already belongs to a real account on your platform, that account becomes the demo account</li>
                 <li>The demo schedule is created on the Free plan like any other, so Pro-only screens stay locked and its public pages carry your free-tier footer. To show off paid features, open it from <span class="font-semibold text-gray-900 dark:text-white">Manage &rarr; Schedules</span> in the admin panel and set its <span class="font-semibold text-gray-900 dark:text-white">Plan Type</span>. Whatever its plan, it never shows ads or the accommodation map</li>
             </ul>
         </div>
@@ -779,7 +779,7 @@ yourdomain.com.    CNAME    your-server.hosting.com.
         <h3 class="doc-subheading">A cron entry, or a worker process</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">On a server with cron, add the single entry from the <a href="{{ route('marketing.docs.selfhost.installation') }}#cron" class="doc-link">installation guide</a>:</p>
         <pre class="rounded-xl bg-gray-100 dark:bg-[#1A1A1A] p-4 text-sm overflow-x-auto"><code>* * * * * php /path/to/eventschedule/artisan schedule:run</code></pre>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">On a platform with no cron but long-running processes - a container host, for example - run the scheduler as the process instead. This is what eventschedule.com does, as a DigitalOcean App Platform worker:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">On a platform with no cron but long-running processes - a container host, for example - run the scheduler as the process instead. This is what getvnt.com does, as a DigitalOcean App Platform worker:</p>
         <pre class="rounded-xl bg-gray-100 dark:bg-[#1A1A1A] p-4 text-sm overflow-x-auto"><code>php artisan schedule:work</code></pre>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Either way, do not run more than one. Two schedulers means two of every timed job.</p>
 
@@ -822,7 +822,7 @@ BACKUP_SPACES_REGION=nyc3
 BACKUP_SPACES_ENDPOINT=https://nyc3.digitaloceanspaces.com
 BACKUP_SPACES_BUCKET=your-private-backups-bucket</code></pre>
 
-        <p class="text-gray-600 dark:text-gray-300 mb-4">The endpoint is your provider's <span class="font-semibold text-gray-900 dark:text-white">region</span> endpoint, not the per-bucket origin endpoint that storage consoles display beside the bucket itself. The bucket name is added to the hostname for you, so an endpoint that already carries it addresses <code class="doc-inline-code">bucket.bucket.region...</code> and every upload fails its TLS handshake. Event Schedule strips a leading bucket name if it finds one, so either form works.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">The endpoint is your provider's <span class="font-semibold text-gray-900 dark:text-white">region</span> endpoint, not the per-bucket origin endpoint that storage consoles display beside the bucket itself. The bucket name is added to the hostname for you, so an endpoint that already carries it addresses <code class="doc-inline-code">bucket.bucket.region...</code> and every upload fails its TLS handshake. Getvnt strips a leading bucket name if it finds one, so either form works.</p>
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">Use a separate private bucket, never your images bucket</div>
@@ -841,7 +841,7 @@ BACKUP_SPACES_BUCKET=your-private-backups-bucket</code></pre>
             </svg>
             Support Chat
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Event Schedule includes a built-in chat system that lets your customers message you for support without leaving the admin portal. It needs no configuration and is present on every hosted install; on a selfhosted install neither the widget nor the admin screen exists. Each customer has one running conversation with you, which reopens if they write again after you have closed it.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Getvnt includes a built-in chat system that lets your customers message you for support without leaving the admin portal. It needs no configuration and is present on every hosted install; on a selfhosted install neither the widget nor the admin screen exists. Each customer has one running conversation with you, which reopens if they write again after you have closed it.</p>
 
         <h3 class="doc-subheading">For Your Customers</h3>
         <ul class="doc-list">
@@ -871,7 +871,7 @@ BACKUP_SPACES_BUCKET=your-private-backups-bucket</code></pre>
         </ul>
 
         <h3 class="doc-subheading">Website Visitors</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">On eventschedule.com, the marketing site also offers signed-out visitors a chat with a person, and only while you are available. Visitors can leave an email so a reply reaches them after they leave, and it is required once you are away. Their conversations appear in the same Support inbox, marked Visitor, with the page they are on and their country. This needs the marketing site, so it does not apply to your own SaaS install.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">On getvnt.com, the marketing site also offers signed-out visitors a chat with a person, and only while you are available. Visitors can leave an email so a reply reaches them after they leave, and it is required once you are away. Their conversations appear in the same Support inbox, marked Visitor, with the page they are on and their country. This needs the marketing site, so it does not apply to your own SaaS install.</p>
     </section>
 
     <!-- Custom translations -->
@@ -957,7 +957,7 @@ CUSTOM_LINK_3_URL=</code></pre>
             <li><x-link href="/docs/saas/custom-domains">Custom Domains</x-link> - Allow your customers to use their own domain names with their schedules, including DigitalOcean App Platform setup</li>
             <li><x-link href="/docs/saas/twilio">Twilio Integration</x-link> - Set up phone number verification and WhatsApp messaging</li>
             <li><x-link href="/docs/saas/facebook-login">Facebook Login</x-link> - Let your customers sign up and log in with Facebook</li>
-            <li><x-link href="/docs/saas/federation">Federation</x-link> - Share your customers' public events with the eventschedule.com listings, with every listing linking back to your platform</li>
+            <li><x-link href="/docs/saas/federation">Federation</x-link> - Share your customers' public events with the getvnt.com listings, with every listing linking back to your platform</li>
             <li><x-link href="/docs/saas/monetization">Monetization</x-link> - Show ads on your free tier's public pages, sell promotional placement to your paid schedules, and earn an accommodation affiliate commission</li>
             <li><x-link href="/docs/selfhost/admin">Admin Panel</x-link> - Grant plans, edit any tenant's schedule name, subdomain and contact details, and release or restore a squatted subdomain</li>
             <li><x-link href="/docs/selfhost/stripe">Stripe Integration</x-link> - Keys, webhooks and Stripe Connect for both subscription billing and ticket payments</li>

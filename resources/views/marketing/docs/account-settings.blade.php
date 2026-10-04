@@ -1,7 +1,7 @@
 <x-docs-page
     key="account-settings"
-    title="Account Settings: Payments, API, Calendars - Event Schedule"
-    description="Manage your Event Schedule profile and theme, connect Stripe, PayPal, Payfast or Invoice Ninja, and set up API keys, webhooks, calendar sync and backups."
+    title="Account Settings: Payments, API, Calendars - Getvnt"
+    description="Manage your Getvnt profile and theme, connect Stripe, PayPal, Payfast or Invoice Ninja, and set up API keys, webhooks, calendar sync and backups."
     lede="Everything on the Settings page: your profile, how the admin portal looks, the payment method your tickets are sold through, API and webhook access, connected calendars, backups and account security."
 >
     <x-slot:toc>
@@ -183,7 +183,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Hosted platform</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Click <strong class="text-gray-900 dark:text-white">Connect Stripe</strong> to start Stripe Connect onboarding, then complete the details on Stripe. Until Stripe finishes reviewing them the tab shows your account ID labelled <strong class="text-gray-900 dark:text-white">[Pending]</strong>. Buyers are charged on your own Stripe account, so payouts and Stripe's own processing fees are between you and Stripe. Event Schedule adds no platform fee of its own.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Click <strong class="text-gray-900 dark:text-white">Connect Stripe</strong> to start Stripe Connect onboarding, then complete the details on Stripe. Until Stripe finishes reviewing them the tab shows your account ID labelled <strong class="text-gray-900 dark:text-white">[Pending]</strong>. Buyers are charged on your own Stripe account, so payouts and Stripe's own processing fees are between you and Stripe. Getvnt adds no platform fee of its own.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Selfhosted</h4>
@@ -191,7 +191,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Disconnecting</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Click <strong class="text-gray-900 dark:text-white">Unlink Account</strong> under the account name in the Stripe tab and confirm. This only removes the connection to Event Schedule; your Stripe account and its history are untouched.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Click <strong class="text-gray-900 dark:text-white">Unlink Account</strong> under the account name in the Stripe tab and confirm. This only removes the connection to Getvnt; your Stripe account and its history are untouched.</p>
             </div>
         </div>
 
@@ -210,11 +210,11 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Checkout modes</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">After connecting, the tab offers two checkout modes: invoice mode (buyers pick tickets in Event Schedule) and payment link mode (buyers pick tickets on Invoice Ninja's purchase page, with grouped invoices). See <x-link href="{{ route('marketing.docs.tickets') }}#invoiceninja-modes">Invoice Ninja Modes</x-link> for a full comparison. If a payment link cannot be created for a sale, that checkout falls back to invoice mode automatically.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">After connecting, the tab offers two checkout modes: invoice mode (buyers pick tickets in Getvnt) and payment link mode (buyers pick tickets on Invoice Ninja's purchase page, with grouped invoices). See <x-link href="{{ route('marketing.docs.tickets') }}#invoiceninja-modes">Invoice Ninja Modes</x-link> for a full comparison. If a payment link cannot be created for a sale, that checkout falls back to invoice mode automatically.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Troubleshooting</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">If the connection fails, a red panel at the top of the Invoice Ninja tab names the reason and shows the raw error, and the full detail is written to your application log. Common causes for selfhosted installations are a firewall, Cloudflare or other bot protection blocking API requests from your Event Schedule server, an <code class="doc-inline-code">http</code> URL that redirects to <code class="doc-inline-code">https</code>, and a self-signed TLS certificate the server does not trust.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">If the connection fails, a red panel at the top of the Invoice Ninja tab names the reason and shows the raw error, and the full detail is written to your application log. Common causes for selfhosted installations are a firewall, Cloudflare or other bot protection blocking API requests from your Getvnt server, an <code class="doc-inline-code">http</code> URL that redirects to <code class="doc-inline-code">https</code>, and a self-signed TLS certificate the server does not trust.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Disconnecting</h4>
@@ -233,7 +233,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">How it works</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Enter the URL where buyers should pay and save. When somebody buys a ticket for an event using this method, the sale is recorded and the buyer is redirected to your URL. Because the money moves outside Event Schedule, the sale stays <strong class="text-gray-900 dark:text-white">unpaid</strong> until the payment is confirmed.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Enter the URL where buyers should pay and save. When somebody buys a ticket for an event using this method, the sale is recorded and the buyer is redirected to your URL. Because the money moves outside Getvnt, the sale stays <strong class="text-gray-900 dark:text-white">unpaid</strong> until the payment is confirmed.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Removing it</h4>
@@ -395,13 +395,13 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Google Calendar</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Authorises two-way sync between Event Schedule and your Google Calendar. Every member of a schedule connects their own Google account here, so one shared schedule can sync into several personal calendars. Once connected, switch sync on for each schedule under <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-google" class="doc-link">Integrations</a>.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Authorises two-way sync between Getvnt and your Google Calendar. Every member of a schedule connects their own Google account here, so one shared schedule can sync into several personal calendars. Once connected, switch sync on for each schedule under <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-google" class="doc-link">Integrations</a>.</p>
             </div>
         </div>
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Note</div>
-            <p>A synced calendar gets one entry per event date that Event Schedule pushes, not a repeating series: a recurring event arrives as a single entry on the date the series starts. Subscribe to the schedule's <a href="{{ route('marketing.docs.sharing') }}#calendar-feeds" class="doc-link">calendar feed</a> instead if you want each date of a recurring event in your calendar: it lists every date for the next 90 days and updates itself when dates change.</p>
+            <p>A synced calendar gets one entry per event date that Getvnt pushes, not a repeating series: a recurring event arrives as a single entry on the date the series starts. Subscribe to the schedule's <a href="{{ route('marketing.docs.sharing') }}#calendar-feeds" class="doc-link">calendar feed</a> instead if you want each date of a recurring event in your calendar: it lists every date for the next 90 days and updates itself when dates change.</p>
         </div>
 
         <div class="doc-callout doc-callout-tip">
@@ -425,7 +425,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Connecting</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Click <strong class="text-gray-900 dark:text-white">Connect Outlook Calendar</strong> and approve the permissions on Microsoft. Changes then flow both ways: Microsoft notifies Event Schedule as they happen, and a catch-up sync runs every 15 minutes in case a notification is missed. Once connected, switch sync on for each schedule under <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-microsoft" class="doc-link">Integrations</a>.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Click <strong class="text-gray-900 dark:text-white">Connect Outlook Calendar</strong> and approve the permissions on Microsoft. Changes then flow both ways: Microsoft notifies Getvnt as they happen, and a catch-up sync runs every 15 minutes in case a notification is missed. Once connected, switch sync on for each schedule under <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-microsoft" class="doc-link">Integrations</a>.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Selfhosted installations</h4>
@@ -523,7 +523,7 @@
         </p>
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Note</div>
-            <p>This section never appears on eventschedule.com, where everyone is always on the latest version automatically. On a single-tenant selfhost any signed-in user sees it; on a selfhosted platform running in hosted mode it is limited to the instance administrator, so a customer cannot update the whole installation.</p>
+            <p>This section never appears on getvnt.com, where everyone is always on the latest version automatically. On a single-tenant selfhost any signed-in user sees it; on a selfhosted platform running in hosted mode it is limited to the instance administrator, so a customer cannot update the whole installation.</p>
             <p class="mt-3">Instance admins have the same panel at <strong class="text-gray-900 dark:text-white">Admin &gt; System &gt; App Update</strong>, which adds a last-checked time, a manual check and a badge on the System menu when a release is waiting. Either way, <code class="doc-inline-code">php artisan app:update</code> does the same job from the command line and works even when neither screen is available.</p>
         </div>
     </section>
@@ -617,7 +617,7 @@
             <li>Your user account, profile and profile image</li>
             <li>Every schedule you own, with its events, tickets and sales</li>
             <li>Comments, photos and videos you posted while signed in (on ones you posted without signing in, your email address is removed), your follows and email sign-ups, and any waitlist entry or request for event updates under your address</li>
-            <li>Connections to linked services such as Stripe and Google, including any calendar sync they were running; Event Schedule also asks Google to revoke its access</li>
+            <li>Connections to linked services such as Stripe and Google, including any calendar sync they were running; Getvnt also asks Google to revoke its access</li>
             <li>Any paid plan on those schedules, which is cancelled immediately rather than at the end of the billing period. The rest of the period is not refunded, and the confirmation dialog warns you when you have a paid plan</li>
         </ul>
 
@@ -626,7 +626,7 @@
         </p>
 
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Clicking <strong class="text-gray-900 dark:text-white">Delete Account</strong> opens a confirmation dialog with an optional <strong class="text-gray-900 dark:text-white">Why are you leaving?</strong> box. On eventschedule.com, anything you write there is emailed to the Event Schedule team as feedback and helps us improve the platform. Before that, download anything you want to keep, for example with <a href="#your-data" class="doc-link">Download my data</a> and <a href="#backup" class="doc-link">Backup &amp; Restore</a>.
+            Clicking <strong class="text-gray-900 dark:text-white">Delete Account</strong> opens a confirmation dialog with an optional <strong class="text-gray-900 dark:text-white">Why are you leaving?</strong> box. On getvnt.com, anything you write there is emailed to the Getvnt team as feedback and helps us improve the platform. Before that, download anything you want to keep, for example with <a href="#your-data" class="doc-link">Download my data</a> and <a href="#backup" class="doc-link">Backup &amp; Restore</a>.
         </p>
 
         <div class="doc-callout doc-callout-warning">
@@ -664,7 +664,7 @@
             "@context": "https://schema.org",
             "@type": "HowTo",
             "name": "How to Configure Your Account Settings",
-            "description": "Manage your profile, payment methods, API access, and connected services in Event Schedule.",
+            "description": "Manage your profile, payment methods, API access, and connected services in Getvnt.",
             "totalTime": "PT10M",
             "step": [
                 {

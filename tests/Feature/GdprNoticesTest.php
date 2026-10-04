@@ -57,7 +57,7 @@ class GdprNoticesTest extends TestCase
     }
 
     /**
-     * A selfhosted install that collects data still points its visitors at eventschedule.com's
+     * A selfhosted install that collects data still points its visitors at getvnt.com's
      * policy until the operator writes one: the admin dashboard says so until they do.
      */
     public function test_a_selfhost_install_without_its_own_privacy_policy_is_told_to_publish_one(): void

@@ -446,7 +446,7 @@ class GrowthExportTest extends TestCase
         $owner->name = 'Marina Delacroix';
         $owner->email = 'marina.delacroix@gmail.com';
         $owner->referrer_url = 'https://ref.example.org/land?token=SECRET123&email=leak@gmail.com';
-        $owner->landing_page = 'https://eventschedule.com/for-musicians?utm_source=x';
+        $owner->landing_page = 'https://getvnt.com/for-musicians?utm_source=x';
         $owner->save();
         $owner = $this->reverify($owner);
 
@@ -1022,11 +1022,11 @@ class GrowthExportTest extends TestCase
     public function test_the_landing_page_rollup_carries_the_ticket_stages(): void
     {
         $seller = $this->createOwner();
-        $seller->update(['landing_page' => 'https://eventschedule.com/features/ticketing?utm_source=x']);
+        $seller->update(['landing_page' => 'https://getvnt.com/features/ticketing?utm_source=x']);
         $this->createTicket($this->createEvent($this->freeRole($seller)), ['price' => 20]);
 
         $browser = $this->createOwner();
-        $browser->update(['landing_page' => 'https://eventschedule.com/for-musicians']);
+        $browser->update(['landing_page' => 'https://getvnt.com/for-musicians']);
         $this->createEvent($this->freeRole($browser));
 
         $byPath = collect($this->build()['acquisition']['by_landing_path']);
@@ -1056,7 +1056,7 @@ class GrowthExportTest extends TestCase
     public function test_the_rollup_applies_the_event_tickets_contract(): void
     {
         $owner = $this->createOwner();
-        $owner->update(['landing_page' => 'https://eventschedule.com/pricing']);
+        $owner->update(['landing_page' => 'https://getvnt.com/pricing']);
         $event = $this->createEvent($this->freeRole($owner));
 
         $path = fn () => collect($this->build()['acquisition']['by_landing_path'])
@@ -1092,7 +1092,7 @@ class GrowthExportTest extends TestCase
         $follower = $this->createOwner();
         $follower->update([
             'signup_intent' => 'follow',
-            'landing_page' => 'https://eventschedule.com/features/ticketing',
+            'landing_page' => 'https://getvnt.com/features/ticketing',
         ]);
         $this->createTicket($this->createEvent($this->freeRole($follower)), ['price' => 20]);
 

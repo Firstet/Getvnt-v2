@@ -48,9 +48,9 @@ class HomeController extends Controller
             return redirect()->route('role.view_guest', ['subdomain' => $role->subdomain]);
         }
 
-        // The blog and the old WordPress URLs are eventschedule.com's, so only the nexus redirects
+        // The blog and the old WordPress URLs are getvnt.com's, so only the nexus redirects
         // them. A selfhosted SaaS reaches this catch-all too, and has no blog host to send a post
-        // slug to (it would 301 onto a 404) and no business sending visitors to eventschedule.com.
+        // slug to (it would 301 onto a 404) and no business sending visitors to getvnt.com.
         if ($slug && config('app.is_nexus')) {
             // Matched against the same published() scope the sitemap uses, so the set that
             // redirects is exactly the set that is advertised.
@@ -1464,7 +1464,7 @@ class HomeController extends Controller
     }
 
     /**
-     * List schedules on the Event Schedule network, from the "List on the network" prompt.
+     * List schedules on the Getvnt network, from the "List on the network" prompt.
      *
      * Only the schedules posted, each of which must be undecided and editable by this user.
      * The prompt names every schedule it would list, and a hash that does not resolve is an

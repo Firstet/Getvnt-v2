@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Nightclubs"
+        name="Getvnt for Nightclubs"
         description="Run the entry side of your club from one link: capacity, cover, timed ticket tiers and QR check-in at the door, with zero platform fees on ticket sales."
         audience="Nightclubs and Dance Venues"
         keywords="nightclub event calendar, club night ticketing, door capacity management, QR check-in nightclub, recurring club nights, free nightclub scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to run a nightclub's entry and calendar with Event Schedule",
+        "name": "How to run a nightclub's entry and calendar with Getvnt",
         "description": "Get your club's nights and door online in three steps.",
         "step": [
             {
@@ -461,8 +461,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for nightclubs?',
-                'a' => 'Yes. Sharing your nights, running recurring residencies, splitting them into sub-schedules, taking free registrations with a capacity limit, and two-way sync with Google, Outlook or CalDAV are all free forever, with no ceiling on the names you take. Scanning the QR on a ticket at the door costs nothing on any plan. Charging cover is Pro at '.plan_price($proMonthly).' a month, which brings the live check-in dashboard for the door and passes with it. Event Schedule charges zero platform fees on tickets either way.',
+                'q' => 'Is Getvnt free for nightclubs?',
+                'a' => 'Yes. Sharing your nights, running recurring residencies, splitting them into sub-schedules, taking free registrations with a capacity limit, and two-way sync with Google, Outlook or CalDAV are all free forever, with no ceiling on the names you take. Scanning the QR on a ticket at the door costs nothing on any plan. Charging cover is Pro at '.plan_price($proMonthly).' a month, which brings the live check-in dashboard for the door and passes with it. Getvnt charges zero platform fees on tickets either way.',
             ],
             [
                 'q' => 'Can people sign up for a free night without paying?',
@@ -1276,7 +1276,7 @@
                                         <span class="es-door-bolt"></span>
                                     </div>
                                     <p class="font-mono text-xl font-bold text-[#4ade80]" id="es-door-signtext">your-club</p>
-                                    <p class="mt-1 font-mono text-[0.7rem] text-[#9aa4b2]">.eventschedule.com</p>
+                                    <p class="mt-1 font-mono text-[0.7rem] text-[#9aa4b2]">.getvnt.com</p>
                                 </div>
                             </div>
                         </div>
@@ -1287,7 +1287,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-club" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-door-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

@@ -12,7 +12,7 @@ use Tests\Feature\Concerns\CreatesScheduleData;
 use Tests\TestCase;
 
 /**
- * The installation's own currency: the symbol beside every price Event Schedule quotes for
+ * The installation's own currency: the symbol beside every price Getvnt quotes for
  * itself, and the fallback currency for a new event.
  *
  * The amounts were centralised on STRIPE_PRICE_*_AMOUNT long before the symbol was, so the whole

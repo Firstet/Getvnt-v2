@@ -49,7 +49,7 @@
             <div class="flex justify-center">
                 @php
                     $google2fa = new \PragmaRX\Google2FA\Google2FA;
-                    $appName = config('app.name', 'Event Schedule');
+                    $appName = config('app.name', 'Getvnt');
                     $qrCodeUrl = $google2fa->getQRCodeUrl($appName, $user->email, $user->two_factor_secret);
 
                     $dataUri = \App\Utils\QrCodeUtils::dataUri($qrCodeUrl);

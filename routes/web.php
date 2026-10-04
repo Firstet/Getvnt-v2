@@ -70,9 +70,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/robots.txt', [AppController::class, 'robots'])->withoutMiddleware('web');
 
 if (config('app.hosted') && ! config('app.is_testing')) {
-    // The blog is the marketing site's (eventschedule.com's), so it exists on the nexus only. A
+    // The blog is the marketing site's (getvnt.com's), so it exists on the nexus only. A
     // selfhosted SaaS is hosted too, and used to get a blog.{its domain} serving whatever the
-    // daily generator wrote there: Event Schedule's own SEO posts, on the operator's AI key.
+    // daily generator wrote there: Getvnt's own SEO posts, on the operator's AI key.
     if (config('app.env') != 'local' && config('app.is_nexus')) {
         Route::domain('blog.'._base_domain())->group(function () {
             Route::get('/', [BlogController::class, 'index'])->name('blog.index');
@@ -99,7 +99,7 @@ if (config('app.hosted') && ! config('app.is_testing')) {
             ->withoutMiddleware('web');
         // This schedule's own web app manifest. It has to be registered per tenant host, ahead of
         // the domain-less platform manifest below, or every schedule's site is installable as an
-        // app called "Event Schedule" showing our logo as its splash - see AppController::manifest.
+        // app called "Getvnt" showing our logo as its splash - see AppController::manifest.
         Route::get('/manifest.webmanifest', [AppController::class, 'manifest'])
             ->name('role.manifest')
             ->withoutMiddleware('web');
@@ -387,7 +387,7 @@ Route::post('/nl/u/{token}', [NewsletterTrackingController::class, 'unsubscribe'
 //
 // app_subdomain on the GET, and ONLY on the GET. sendConfirmation() builds the link with a bare
 // route() from inside store(), which is served on the tenant host - so on hosted the confirm link
-// is {subdomain}.eventschedule.com/sub/c/..., and on a schedule with a custom domain it is
+// is {subdomain}.getvnt.com/sub/c/..., and on a schedule with a custom domain it is
 // customdomain.com/sub/c/.... ResolveCustomDomain nulls session.domain per-request on a
 // custom-domain host, so Auth::login() in claimAccount() would write a host-only cookie there and
 // the redirect to app_url(route('following')) would arrive signed out. RedirectToAppSubdomain
@@ -1188,7 +1188,7 @@ Route::get('/tmp/event-image/{filename?}', [AppController::class, 'tempEventImag
 Route::get('/map-image/{id}', [AppController::class, 'mapImage'])->name('map.image');
 Route::get('/yt-thumb/{id}', [AppController::class, 'youtubeThumbnail'])->where('id', '[A-Za-z0-9_-]{11}')->middleware('throttle:300,1')->name('youtube.thumbnail');
 
-// Marketing pages - only shown on the nexus (eventschedule.com)
+// Marketing pages - only shown on the nexus (getvnt.com)
 if (config('app.is_nexus')) {
     if (config('app.is_testing')) {
         Route::get('/', [MarketingController::class, 'index'])->name('marketing.index');
@@ -1468,7 +1468,7 @@ if (config('app.is_nexus')) {
         Route::get('/docs/developer', fn () => redirect()->route('marketing.docs.developer.api', [], 301));
     } else {
         // Nexus mode: show marketing pages at root URLs on the base domain
-        // (_base_domain() resolves to eventschedule.com on the real instance, and to the
+        // (_base_domain() resolves to getvnt.com on the real instance, and to the
         // operator's own domain on a white-label nexus install).
         Route::domain(_base_domain())->group(function () {
             Route::get('/', [MarketingController::class, 'index'])->name('marketing.index');

@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">{{ __('messages.why_create_account_title') }} | Event Schedule</x-slot>
+    <x-slot name="title">{{ __('messages.why_create_account_title') }} | Getvnt</x-slot>
     <x-slot name="description">{{ __('messages.why_create_account_description') }}</x-slot>
     <x-slot name="breadcrumbTitle">{{ __('messages.why_create_account_title') }}</x-slot>
 
@@ -8,21 +8,21 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Why Create an Account - Event Schedule",
-        "description": "Most of Event Schedule works without signing in. An account is what puts your name on the record: follow schedules, keep every ticket in one place, own the events you submit, claim a page an organizer made for you, and publish a schedule of your own. Free, no card.",
+        "name": "Why Create an Account - Getvnt",
+        "description": "Most of Getvnt works without signing in. An account is what puts your name on the record: follow schedules, keep every ticket in one place, own the events you submit, claim a page an organizer made for you, and publish a schedule of your own. Free, no card.",
         "url": "{{ url()->current() }}",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         },
         "about": {
             "@type": "Thing",
-            "name": "Event Schedule free account"
+            "name": "Getvnt free account"
         },
         "mainEntity": {
             "@type": "ItemList",
-            "name": "What an Event Schedule account adds",
+            "name": "What an Getvnt account adds",
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Every schedule you follow, on one Following page" },
                 { "@type": "ListItem", "position": 2, "name": "Every ticket and registration you bought, on one page" },
@@ -539,7 +539,7 @@
             ],
             [
                 'q' => 'Does an account cost anything?',
-                'a' => 'No. The account is free and asks for no card. What costs money is a schedule you run, once you want more than the free plan: the free plan takes unlimited free registrations and scans the QR code on every ticket at the door, Pro at '.plan_price($proMonthly).' a month is what lets a ticket carry a price and adds the live check-in dashboard, custom fields and a ticket waitlist, and Enterprise at '.plan_price($entMonthly).' a month adds multiple team members and custom domains. Event Schedule charges zero platform fees on ticket sales on every plan, the free one included, so past the payment processor the money is yours.',
+                'a' => 'No. The account is free and asks for no card. What costs money is a schedule you run, once you want more than the free plan: the free plan takes unlimited free registrations and scans the QR code on every ticket at the door, Pro at '.plan_price($proMonthly).' a month is what lets a ticket carry a price and adds the live check-in dashboard, custom fields and a ticket waitlist, and Enterprise at '.plan_price($entMonthly).' a month adds multiple team members and custom domains. Getvnt charges zero platform fees on ticket sales on every plan, the free one included, so past the payment processor the money is yours.',
             ],
             [
                 'q' => 'What actually changes when I submit an event signed in?',
@@ -555,7 +555,7 @@
             ],
             [
                 'q' => 'Somebody already made a page with my name on it. How do I claim it?',
-                'a' => 'Sign in with the email address on the page, or sign up with it, and press Claim this page. Pages like that are made when an organizer lists a performer or venue who is not on Event Schedule yet: the page says who created it and that you have not claimed it, and it stays out of search engines until you do. Claiming makes you the owner, and the schedules that already listed you keep listing you. If the page is not you, This is not me takes it down at once when you are signed in with that address, and is recorded for review from any other account.',
+                'a' => 'Sign in with the email address on the page, or sign up with it, and press Claim this page. Pages like that are made when an organizer lists a performer or venue who is not on Getvnt yet: the page says who created it and that you have not claimed it, and it stays out of search engines until you do. Claiming makes you the owner, and the schedules that already listed you keep listing you. If the page is not you, This is not me takes it down at once when you are signed in with that address, and is recorded for review from any other account.',
             ],
             [
                 'q' => 'Can one account run more than one schedule?',
@@ -754,7 +754,7 @@
             </div>
 
             <p class="es-key-muted mx-auto mt-6 max-w-3xl text-center text-sm" data-reveal>
-                Charging for a ticket is a Pro feature for the schedule doing the selling; free registration is not, on any plan. Buying a ticket, with or without an account, is free, and Event Schedule takes no cut of the sale either way.
+                Charging for a ticket is a Pro feature for the schedule doing the selling; free registration is not, on any plan. Buying a ticket, with or without an account, is free, and Getvnt takes no cut of the sale either way.
             </p>
         </div>
     </section>
@@ -788,7 +788,7 @@
                                 <span class="es-key-plan">Free</span>
                             </div>
                             <h3 class="es-key-ink mb-3 text-xl font-bold">A schedule with its own address</h3>
-                            <p class="es-key-muted mb-5">Pick Talent, Venue or Curator, give it a name, and it lives at that name on eventschedule.com. Add a profile image, a header and an accent colour and it stops looking like anybody else's. Everything below comes with it on the free plan, with no trial attached and no card taken.</p>
+                            <p class="es-key-muted mb-5">Pick Talent, Venue or Curator, give it a name, and it lives at that name on getvnt.com. Add a profile image, a header and an accent colour and it stops looking like anybody else's. Everything below comes with it on the free plan, with no trial attached and no card taken.</p>
                             <div class="mt-auto flex flex-wrap gap-2">
                                 @foreach ($freeTools as $tool)
                                     <span class="es-key-chip">{{ $tool }}</span>
@@ -890,7 +890,7 @@
                                 <span class="es-key-plan">Free</span>
                             </div>
                             <h3 class="es-key-ink mb-3 text-xl font-bold">The ring is yours to unpick</h3>
-                            <p class="es-key-muted mb-4">Turn on two-factor from your settings so the ring needs a second factor to open. Export a schedule, with or without its images, and import it again. Event Schedule is open source, so a copy you run on your own server reads the same export.</p>
+                            <p class="es-key-muted mb-4">Turn on two-factor from your settings so the ring needs a second factor to open. Export a schedule, with or without its images, and import it again. Getvnt is open source, so a copy you run on your own server reads the same export.</p>
                             <p class="es-key-muted text-sm">
                                 And when you are done, deleting the account is one screen in settings rather than a support request.
                                 <a href="{{ marketing_url('/selfhost') }}" class="es-key-link font-medium hover:underline">Selfhost it instead</a>
@@ -1110,7 +1110,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-key-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

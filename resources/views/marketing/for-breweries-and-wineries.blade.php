@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Breweries & Wineries"
+        name="Getvnt for Breweries & Wineries"
         description="A taproom calendar of mostly free events - music, quizzes, visiting food trucks - with ticketing for the tours and tastings that need it."
         audience="Breweries, Wineries & Tasting Rooms"
         keywords="taproom calendar, brewery events, winery tasting schedule, brewery tour tickets, tasting room calendar, free brewery scheduling" />
@@ -288,7 +288,7 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for a taproom?',
+                'q' => 'Is Getvnt free for a taproom?',
                 'a' => 'Almost all of what a taproom runs is free forever: the weekly nights as recurring events, date exceptions for the weeks you are shut, free registration with a capacity for a tour that is limited but not paid, sub-schedules with their own shareable links, booking requests from bands and food trucks, two-way calendar sync and an embeddable calendar. Free registration has no monthly ceiling on it, however many names come through. Putting a price on a tour or tasting is the one part that needs Pro, at '.plan_price($proMonthly).' a month, which a taproom charging for its tours pays and a taproom running a free week never does. Zero platform fees on sales either way.',
             ],
             [
@@ -313,7 +313,7 @@
             ],
             [
                 'q' => 'How do people pay for a tour, and can I refund one?',
-                'a' => 'Through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash on the day, or Payfast if you sell in rand, chosen per event. Event Schedule takes no platform fee on any of them. If a tour does not run, refund it from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part, and a partial refund leaves the ticket valid. Every other method is marked as refunded instead, which records it without moving money, so you return that one yourself.',
+                'a' => 'Through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash on the day, or Payfast if you sell in rand, chosen per event. Getvnt takes no platform fee on any of them. If a tour does not run, refund it from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part, and a partial refund leaves the ticket valid. Every other method is marked as refunded instead, which records it without moving money, so you return that one yourself.',
             ],
         ];
 
@@ -641,7 +641,7 @@
                         @foreach ([
                             ['They ask through the page', 'Turn on booking requests and the asks arrive attached to the date they are for, instead of a message you scroll past.'],
                             ['Nothing posts without you', 'Every request waits for you to accept it, so the public calendar only shows what you agreed to.'],
-                            ['One entry, two calendars', 'Add them to the event as a participant and the date is offered to their own schedule, for them to accept. A duo who is not on Event Schedule yet gets a page with your dates on it, credited to you, and can claim it with the email address you added.'],
+                            ['One entry, two calendars', 'Add them to the event as a participant and the date is offered to their own schedule, for them to accept. A duo who is not on Getvnt yet gets a page with your dates on it, credited to you, and can claim it with the email address you added.'],
                         ] as [$t, $d])
                             <div class="es-pour-card es-pour-hover p-4" data-reveal>
                                 <p class="es-pour-ink text-sm font-bold">{{ $t }}</p>
@@ -850,7 +850,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-pour-card es-pour-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-pour-muted text-sm">Event Schedule for</div>
+                            <div class="es-pour-muted text-sm">Getvnt for</div>
                             <div class="es-pour-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-pour-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -928,7 +928,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-brewery" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-pour-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

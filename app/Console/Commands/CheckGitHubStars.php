@@ -21,8 +21,8 @@ class CheckGitHubStars extends Command
     public function handle(): int
     {
         // The INVERSE gate to app:check-version, on purpose. That command no-ops ON nexus because
-        // eventschedule.com deploys from git and has nothing to self-update; this one runs ONLY on
-        // nexus, because eventschedule.com is the only install that shows the badge to the public -
+        // getvnt.com deploys from git and has nothing to self-update; this one runs ONLY on
+        // nexus, because getvnt.com is the only install that shows the badge to the public -
         // the whole marketing route block is inside `if (config('app.is_nexus'))` - and a selfhost
         // install should not be reaching out to github.com on a timer for a vanity count.
         if (! config('app.is_nexus')) {

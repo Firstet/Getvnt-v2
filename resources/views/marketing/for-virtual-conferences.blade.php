@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Virtual Conferences"
+        name="Getvnt for Virtual Conferences"
         description="Run a virtual conference day as one event with its running order inside it: every session is a part with its own start and end time, published on one link with one join link and zero platform fees."
         audience="Virtual Conference Organizers"
         keywords="virtual conference platform, online conference scheduling, conference agenda, virtual summit, conference ticketing" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a virtual conference agenda online with Event Schedule",
+        "name": "How to put a virtual conference agenda online with Getvnt",
         "description": "A conference day is one event. The running order goes inside it.",
         "step": [
             {
@@ -509,11 +509,11 @@
             ],
             [
                 'q' => 'Does each session get its own streaming link?',
-                'a' => 'One join link per event. A day is one event, so the day has one link and every part of its running order sits behind that link. If two sessions genuinely need two different links, make them two events on the same date. Any platform works, because all Event Schedule stores is the URL: Zoom, Microsoft Teams, Google Meet, YouTube Live, or anything else that gives you one.',
+                'a' => 'One join link per event. A day is one event, so the day has one link and every part of its running order sits behind that link. If two sessions genuinely need two different links, make them two events on the same date. Any platform works, because all Getvnt stores is the URL: Zoom, Microsoft Teams, Google Meet, YouTube Live, or anything else that gives you one.',
             ],
             [
                 'q' => 'What about tracks and rooms?',
-                'a' => 'There are none, and it is better to say so before you move a programme across. Event Schedule has one running order per event. Parallel sessions are separate events on the same date, and a sub-schedule can keep a strand together and color it, which is organizing and color-coding rather than access control. There is no room inventory and nothing is hidden by a sub-schedule.',
+                'a' => 'There are none, and it is better to say so before you move a programme across. Getvnt has one running order per event. Parallel sessions are separate events on the same date, and a sub-schedule can keep a strand together and color it, which is organizing and color-coding rather than access control. There is no room inventory and nothing is hidden by a sub-schedule.',
             ],
             [
                 'q' => 'Is the agenda free?',
@@ -521,7 +521,7 @@
             ],
             [
                 'q' => 'Can I sell different ticket types for my conference?',
-                'a' => 'Yes, on Pro. Create as many named ticket types as the conference needs, each with its own price, quantity and sales window. Pro at '.plan_price($proMonthly).' a month is what opens paid checkout, and it adds discount codes, add-ons and individual tickets, which give every attendee their own confirmation email and QR code; custom questions collect what you need at checkout. Event Schedule charges zero platform fees at every plan level: attendees pay through your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, and your processor\'s fee is the only cut. For a free conference, registration with a capacity limit is unlimited on the free plan.',
+                'a' => 'Yes, on Pro. Create as many named ticket types as the conference needs, each with its own price, quantity and sales window. Pro at '.plan_price($proMonthly).' a month is what opens paid checkout, and it adds discount codes, add-ons and individual tickets, which give every attendee their own confirmation email and QR code; custom questions collect what you need at checkout. Getvnt charges zero platform fees at every plan level: attendees pay through your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, and your processor\'s fee is the only cut. For a free conference, registration with a capacity limit is unlimited on the free plan.',
             ],
             [
                 'q' => 'Can I announce the conference before tickets go on sale?',
@@ -879,7 +879,7 @@
                         One link. <span class="es-agenda-lit">Wherever you stream.</span>
                     </h2>
                     <p class="es-agenda-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                        Mark the day as an online event and paste the URL. Event Schedule stores a link, not an integration, so it has no opinion about where the conference actually happens.
+                        Mark the day as an online event and paste the URL. Getvnt stores a link, not an integration, so it has no opinion about where the conference actually happens.
                     </p>
                 </div>
 
@@ -939,7 +939,7 @@
                         Name your prices. <span class="es-agenda-accent">Keep the money.</span>
                     </h2>
                     <p class="es-agenda-muted mb-6 text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.15s;">
-                        A free conference needs nothing but registration and a capacity, and that is on the free plan, however many people come. Charging for one is Pro at {{ plan_price($proMonthly) }}: named ticket types, each with its own price, quantity and sales window, plus individual tickets, discount codes and add-ons. Event Schedule takes nothing from either.
+                        A free conference needs nothing but registration and a capacity, and that is on the free plan, however many people come. Charging for one is Pro at {{ plan_price($proMonthly) }}: named ticket types, each with its own price, quantity and sales window, plus individual tickets, discount codes and add-ons. Getvnt takes nothing from either.
                     </p>
                     <ul class="es-agenda-muted space-y-3" data-reveal-group="70">
                         <li class="flex gap-3" data-reveal>
@@ -1130,7 +1130,7 @@
                     Every kind of <span class="es-agenda-accent">virtual conference</span>
                 </h2>
                 <p class="es-agenda-muted text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.15s;">
-                    A tech summit or an annual meeting, a half day or a whole week. Also see Event Schedule for <a href="{{ marketing_url('/for-webinars') }}" class="es-agenda-link font-medium hover:underline">webinars</a>.
+                    A tech summit or an annual meeting, a half day or a whole week. Also see Getvnt for <a href="{{ marketing_url('/for-webinars') }}" class="es-agenda-link font-medium hover:underline">webinars</a>.
                 </p>
             </div>
 
@@ -1166,7 +1166,7 @@
                 <!-- Nonprofits & NGOs -->
                 <x-sub-audience-card
                     name="Nonprofits & NGOs"
-                    description="Fundraising events, awareness conferences, volunteer summits. Reach supporters anywhere, and Event Schedule takes no cut of what the tickets raise."
+                    description="Fundraising events, awareness conferences, volunteer summits. Reach supporters anywhere, and Getvnt takes no cut of what the tickets raise."
                     icon-color="sky"
                     blog-slug="for-nonprofit-conferences"
                 >
@@ -1389,7 +1389,7 @@
                         One event. <span class="es-agenda-lit">The whole day inside it.</span>
                     </h2>
                     <p class="es-agenda-muted mx-auto mb-10 max-w-2xl text-lg">
-                        Publishing the running order, the join link and the calendar sync is free forever, and so is registration. Charging for a seat is {{ plan_price($proMonthly) }} a month. Event Schedule takes nothing out of what you sell either way.
+                        Publishing the running order, the join link and the calendar sync is free forever, and so is registration. Charging for a seat is {{ plan_price($proMonthly) }} a month. Getvnt takes nothing out of what you sell either way.
                     </p>
 
                     <div class="mx-auto flex max-w-2xl flex-col items-stretch justify-center gap-3 sm:flex-row">
@@ -1397,7 +1397,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-summit" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono es-agenda-muted text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono es-agenda-muted text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-agenda-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

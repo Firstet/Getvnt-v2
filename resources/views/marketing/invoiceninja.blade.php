@@ -1,12 +1,12 @@
 <x-marketing-layout>
     <x-slot name="title">Invoice Ninja Ticketing | Post Every Sale to Your Books</x-slot>
-    <x-slot name="description">Sell tickets in Event Schedule and the entry lands in Invoice Ninja: a client, a line item per ticket type, and the QR code printed on the invoice.</x-slot>
+    <x-slot name="description">Sell tickets in Getvnt and the entry lands in Invoice Ninja: a client, a line item per ticket type, and the QR code printed on the invoice.</x-slot>
     <x-slot name="breadcrumbTitle">Invoice Ninja</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Invoice Ninja Integration"
-        description="Sell tickets in Event Schedule and the entry lands in Invoice Ninja: a client matched by email and currency, a line item per ticket type, discounts as negative lines, the QR ticket printed on the invoice, and the payment reconciled to the cent." />
+        name="Getvnt - Invoice Ninja Integration"
+        description="Sell tickets in Getvnt and the entry lands in Invoice Ninja: a client matched by email and currency, a line item per ticket type, discounts as negative lines, the QR ticket printed on the invoice, and the payment reconciled to the cent." />
     </x-slot>
 
     {{-- Motion gate: hidden pre-reveal states only apply when this class is present,
@@ -515,7 +515,7 @@
                 'left'    => 'The payment',
                 'leftSub' => 'recorded in Invoice Ninja',
                 // InvoiceNinjaController::webhook()
-                'right'   => 'Reported back by webhook. That entry is what marks the sale paid in Event Schedule and sends the confirmation.',
+                'right'   => 'Reported back by webhook. That entry is what marks the sale paid in Getvnt and sends the confirmation.',
             ],
         ];
 
@@ -525,9 +525,9 @@
             [
                 'name'  => 'Invoice',
                 'sub'   => 'The default',
-                'blurb' => 'Buyers pick tickets and enter promo codes on your Event Schedule page. Each purchase becomes its own invoice in Invoice Ninja.',
+                'blurb' => 'Buyers pick tickets and enter promo codes on your Getvnt page. Each purchase becomes its own invoice in Invoice Ninja.',
                 'rows'  => [
-                    ['The cart', 'Event Schedule'],
+                    ['The cart', 'Getvnt'],
                     ['Promo codes', 'Several per event, each able to target specific ticket types'],
                     ['Invoices', 'One per purchase'],
                     ['Buyer lands on', 'The invoice in your client portal'],
@@ -572,7 +572,7 @@
         $notes = [
             [
                 '104 currency codes',
-                'Event Schedule maps 104 currency codes onto Invoice Ninja currencies, and the client lookup is scoped by currency, so the same email can hold a separate client per currency rather than being force-fitted into one.',
+                'Getvnt maps 104 currency codes onto Invoice Ninja currencies, and the client lookup is scoped by currency, so the same email can hold a separate client per currency rather than being force-fitted into one.',
             ],
             [
                 'Where the invoice lands',
@@ -584,14 +584,14 @@
             ],
             [
                 'No platform fee',
-                'Event Schedule takes nothing out of a ticket sale. Whatever your Invoice Ninja gateway charges is the whole cost of getting paid.',
+                'Getvnt takes nothing out of a ticket sale. Whatever your Invoice Ninja gateway charges is the whole cost of getting paid.',
             ],
         ];
 
         $faqs = [
             [
                 'q' => 'Can I use this with a selfhosted Invoice Ninja?',
-                'a' => 'Yes, and it is the case the integration is built for. Enter the base address of your install and an API token, and Event Schedule talks to your server. A trailing /api/v1 is stripped for you and an install mounted on a sub-path keeps that sub-path. Leave the address blank and it uses invoicing.co instead. Event Schedule can be selfhosted too, so both halves can sit on hardware you own.',
+                'a' => 'Yes, and it is the case the integration is built for. Enter the base address of your install and an API token, and Getvnt talks to your server. A trailing /api/v1 is stripped for you and an install mounted on a sub-path keeps that sub-path. Leave the address blank and it uses invoicing.co instead. Getvnt can be selfhosted too, so both halves can sit on hardware you own.',
             ],
             [
                 'q' => 'Are QR code tickets generated automatically?',
@@ -599,14 +599,14 @@
             ],
             [
                 'q' => 'Does it create client records for me?',
-                'a' => 'Yes. Event Schedule first looks for an existing client with that email address in the sale currency and reuses it, which is what keeps a regular buyer from turning into five clients. If there is no match it creates one, splitting the name given at checkout into a first and last name on the contact.',
+                'a' => 'Yes. Getvnt first looks for an existing client with that email address in the sale currency and reuses it, which is what keeps a regular buyer from turning into five clients. If there is no match it creates one, splitting the name given at checkout into a first and last name on the contact.',
             ],
             [
                 'q' => 'Can I use Stripe and Invoice Ninja at the same time?',
                 'a' => 'Yes. Each connects once under Settings, Payment Methods, and then each event chooses how it takes money: Stripe, PayPal, Payfast for events priced in rand, Invoice Ninja, a plain payment URL or cash. A corporate booking that needs an invoice and a public show that wants a card payment can run side by side.',
             ],
             [
-                'q' => 'Can I refund an Invoice Ninja sale from Event Schedule?',
+                'q' => 'Can I refund an Invoice Ninja sale from Getvnt?',
                 'a' => 'You can record the refund, not send it. An Invoice Ninja sale shows Mark as Refunded on the Sales page, which marks the sale refunded here and puts its seats back on sale, but moves no money and changes nothing in Invoice Ninja, so return the payment there yourself. Stripe and PayPal are the only methods where a refund from the Sales page sends the money back for you.',
             ],
             [
@@ -660,7 +660,7 @@
                     </h1>
 
                     <p class="es-ledg-muted es-fade-up es-d-2 mb-9 max-w-xl text-lg sm:text-xl">
-                        So a ticket sale should not need a second set. Sell it in Event Schedule and
+                        So a ticket sale should not need a second set. Sell it in Getvnt and
                         the entry is written into your Invoice Ninja company: a client, a line per
                         ticket type, the QR code on the invoice, and a payment reconciled to the cent.
                     </p>
@@ -866,7 +866,7 @@
 
                     <div class="es-ledg-scroll">
                         <table class="es-ledg-table">
-                            <caption class="sr-only">What Event Schedule writes into Invoice Ninja for a single ticket purchase</caption>
+                            <caption class="sr-only">What Getvnt writes into Invoice Ninja for a single ticket purchase</caption>
                             <thead>
                                 <tr>
                                     <th scope="col">The sale</th>
@@ -1155,7 +1155,7 @@
                     <h3 class="es-ledg-ink mb-2 text-xl font-bold">Open-source invoicing</h3>
                     <p class="es-ledg-muted mb-5 text-sm">
                         Invoicing, quotes, expenses and payment gateways, used by businesses around the
-                        world, and selfhostable in the same way Event Schedule is.
+                        world, and selfhostable in the same way Getvnt is.
                     </p>
                     <span class="es-ledg-accent mt-auto inline-flex items-center gap-2 text-sm font-semibold transition-all group-hover:gap-3">
                         Visit invoiceninja.com
@@ -1273,7 +1273,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-md border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-ledg-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-md px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

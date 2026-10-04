@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ is_rtl() ? 'rtl' : 'ltr' }}" class="overflow-x-clip">
 <head class="h-full bg-white">
-    <title>{{ $title ?? 'Event Schedule' }}</title>
+    <title>{{ $title ?? 'Getvnt' }}</title>
     <!-- Version: {{ config('self-update.version_installed') }} -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -12,7 +12,7 @@
     {{-- <link rel="manifest"> and <meta name="theme-color"> are deliberately NOT here. They name
          and colour the site as an app, and this layout is the shell for the guest portal as well
          as the admin portal, so a single value here brands every schedule's site as ours: it made
-         each of them installable as an app called "Event Schedule", whose launch splash is our
+         each of them installable as an app called "Getvnt", whose launch splash is our
          logo. Each inner layout supplies its own instead - see AppController::manifest(). --}}
     {{-- Host-aware: this layout's head renders on guest pages too, custom domains included. --}}
     <link rel="sitemap" type="application/xml" href="{{ sitemap_url() }}">
@@ -34,15 +34,15 @@
         <meta name="robots" content="noindex, nofollow">
         <link rel="canonical" href="{{ url()->current() }}">
         <meta name="description" content="The simple and free way to share your event schedule">
-        <meta property="og:title" content="Event Schedule">
+        <meta property="og:title" content="Getvnt">
         <meta property="og:description" content="The simple and free way to share your event schedule">
         <meta property="og:image" content="{{ config('app.url') }}/images/social/home.jpg">
         <meta property="og:url" content="{{ str_replace('http://', 'https://', request()->url()) }}">
-        <meta property="og:site_name" content="Event Schedule">
-        <meta name="twitter:title" content="Event Schedule">
+        <meta property="og:site_name" content="Getvnt">
+        <meta name="twitter:title" content="Getvnt">
         <meta name="twitter:description" content="The simple and free way to share your event schedule">
         <meta name="twitter:image" content="{{ config('app.url') }}/images/social/home.jpg">
-        <meta name="twitter:image:alt" content="Event Schedule">
+        <meta name="twitter:image:alt" content="Getvnt">
         <meta name="twitter:card" content="summary_large_image">
     @endif    
 

@@ -93,7 +93,7 @@ class GoogleCalendarWebhookController extends Controller
                 return response('User token invalid and refresh failed', 401);
             }
 
-            // Sync from Google Calendar to EventSchedule
+            // Sync from Google Calendar to Getvnt
             $this->syncFromGoogleCalendar($role, $user);
 
             return response('OK', 200);
@@ -109,7 +109,7 @@ class GoogleCalendarWebhookController extends Controller
     }
 
     /**
-     * Sync events from Google Calendar to EventSchedule
+     * Sync events from Google Calendar to Getvnt
      */
     private function syncFromGoogleCalendar(Role $role, $user)
     {

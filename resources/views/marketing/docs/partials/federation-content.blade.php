@@ -15,12 +15,12 @@
     </h2>
     <p>
         Federation is an optional network that shares your public events with the listings on
-        <a href="https://eventschedule.com/browse" target="_blank" rel="noopener">eventschedule.com</a>.
+        <a href="https://getvnt.com/browse" target="_blank" rel="noopener">getvnt.com</a>.
         Every listing links straight back to the event on your own site, so the discovery traffic
         comes to you rather than staying somewhere else.
     </p>
     <p>
-        It is available on any Event Schedule install other than eventschedule.com itself, whether
+        It is available on any Getvnt install other than getvnt.com itself, whether
         you run a single schedule for yourself or a multi-tenant SaaS for customers. It is free,
         off by default, and can be switched off again at any time.
     </p>
@@ -44,7 +44,7 @@
     <ol>
         <li>Sign in as an administrator and open <strong>Admin &rarr; System &rarr; Settings</strong>.</li>
         <li>Switch on <strong>Share events with the network</strong>.</li>
-        <li>Add a contact email. It is shown to the team at eventschedule.com who review your
+        <li>Add a contact email. It is shown to the team at getvnt.com who review your
         install, and used to email you their decision and the steps to get listed. It is never
         published. It starts filled in with your own address.</li>
         <li>Under <strong>Also list these schedules</strong>, untick any of your own schedules that
@@ -61,7 +61,7 @@
     </p>
     <p>
         Saving registers your install with the network and puts it in a review queue. Nothing is
-        published until the team at eventschedule.com approves it, which is a one-time step for the
+        published until the team at getvnt.com approves it, which is a one-time step for the
         whole install. Events from the schedules you listed are sent ahead of that, so the reviewer
         can see them, and go live as soon as you are approved. The connection status at the top of
         the card shows where you stand: <em>Pending</em>, <em>Approved</em> (with how many of your
@@ -141,14 +141,14 @@
         What a listing looks like
     </h2>
     <p>
-        Listings appear in their own section on the eventschedule.com browse page, badged with your
+        Listings appear in their own section on the getvnt.com browse page, badged with your
         site's address and filterable by country and language. Clicking one goes straight to the
-        event on your site: there is no copy of the event page on eventschedule.com, and the link is
+        event on your site: there is no copy of the event page on getvnt.com, and the link is
         a normal followable link rather than a tracking redirect. It points at the event's address on
         your install itself, never at a custom domain a schedule may have.
     </p>
     <p>
-        An event needs a picture to be listed, matching the bar applied to eventschedule.com's own
+        An event needs a picture to be listed, matching the bar applied to getvnt.com's own
         events. That can be the event flyer or the profile image of a talent or venue schedule
         attached to it. An event without one is marked <em>Needs an image</em> in the settings
         preview, and goes out on the next run once it has one.
@@ -169,7 +169,7 @@
     </h2>
     <p>
         Sharing runs hourly on your existing scheduler, so it needs no extra setup beyond the cron
-        entry Event Schedule already requires. Edits appear within the hour, and an event that stops
+        entry Getvnt already requires. Edits appear within the hour, and an event that stops
         qualifying, because it went back to Draft, was made Internal or Unlisted, was cancelled, or
         the schedule listing it opted out or was deleted, is removed from the listings on the next run.
     </p>
@@ -188,7 +188,7 @@
 
     <div class="doc-callout doc-callout-warning">
         <p><strong>Schedules must be verified.</strong> Only schedules with a verified email address
-        or phone number are shared, matching the rule eventschedule.com applies to its own listings.
+        or phone number are shared, matching the rule getvnt.com applies to its own listings.
         On a multi-tenant install this is the usual reason a particular customer's events do not
         appear. The settings page shows how many schedules are being held back for this reason.</p>
     </div>
@@ -235,7 +235,7 @@
                 <tr>
                     <td>Picture</td>
                     <td>Every listing (an event without one is not listed)</td>
-                    <td>Copied and stored by eventschedule.com, shown on the card</td>
+                    <td>Copied and stored by getvnt.com, shown on the card</td>
                 </tr>
                 <tr>
                     <td>Venue name and city</td>
@@ -297,7 +297,7 @@
         there is one, because a label is all it has ever done with it.
     </p>
     <p>
-        Pictures are copied and stored by eventschedule.com rather than loaded from your server, so
+        Pictures are copied and stored by getvnt.com rather than loaded from your server, so
         visitors browsing the listings never make requests to your site until they click through.
     </p>
     <p>

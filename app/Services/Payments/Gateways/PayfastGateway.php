@@ -103,7 +103,7 @@ class PayfastGateway extends PaymentGatewayDriver
     public function platformCredentials(): array
     {
         // Hosted only ever settles into the event owner's own account. An installation-wide merchant
-        // id here would route every ZAR sale on eventschedule.com to the operator.
+        // id here would route every ZAR sale on getvnt.com to the operator.
         if (config('app.hosted')) {
             return [];
         }

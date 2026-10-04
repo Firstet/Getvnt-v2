@@ -120,8 +120,8 @@ class AnalyticsReferrersDaily extends Model
             }
         }
 
-        // Hardcoded check for eventschedule.com (handles hosted mode)
-        if (strcasecmp($host, 'eventschedule.com') === 0 || str_ends_with(strtolower($host), '.eventschedule.com')) {
+        // Hardcoded check for getvnt.com (handles hosted mode)
+        if (strcasecmp($host, 'getvnt.com') === 0 || str_ends_with(strtolower($host), '.getvnt.com')) {
             return true;
         }
 

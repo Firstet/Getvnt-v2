@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Accessibilità - Event Schedule',
-    'meta_description' => 'Dichiarazione di accessibilità e opzioni di visualizzazione per Event Schedule.',
+    'page_title' => 'Accessibilità - Getvnt',
+    'meta_description' => 'Dichiarazione di accessibilità e opzioni di visualizzazione per Getvnt.',
     'breadcrumb' => 'Accessibilità',
 
     'h1' => 'Dichiarazione di accessibilità',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Questa pagina è un\'informazione di servizio generale, non una consulenza legale. Le norme variano per Paese. Verificare gli obblighi con professionisti qualificati.',
 
     'section_scope_title' => 'Ambito',
-    'section_scope_body' => 'La dichiarazione riguarda il sito marketing e l\'applicazione web Event Schedule (strumenti autenticati e pagine calendario pubbliche) sul dominio principale e i sottodomini di Event Schedule, salvo diversa indicazione.',
+    'section_scope_body' => 'La dichiarazione riguarda il sito marketing e l\'applicazione web Getvnt (strumenti autenticati e pagine calendario pubbliche) sul dominio principale e i sottodomini di Getvnt, salvo diversa indicazione.',
 
     'section_commitment_title' => 'Impegno',
-    'section_commitment_body' => 'Lavoriamo per rendere Event Schedule utilizzabile da persone con disabilità. Miriamo a un migliore allineamento alle Web Content Accessibility Guidelines (WCAG), documentate come :wcag_target, e al rispetto delle indicazioni legate allo standard israeliano 5568 ove applicabile.',
+    'section_commitment_body' => 'Lavoriamo per rendere Getvnt utilizzabile da persone con disabilità. Miriamo a un migliore allineamento alle Web Content Accessibility Guidelines (WCAG), documentate come :wcag_target, e al rispetto delle indicazioni legate allo standard israeliano 5568 ove applicabile.',
 
     'section_commitment_is5568_note' => 'Teniamo conto anche delle pratiche comuni di accessibilità web associate allo standard israeliano 5568 ove pertinenti ai servizi che gestiamo.',
 

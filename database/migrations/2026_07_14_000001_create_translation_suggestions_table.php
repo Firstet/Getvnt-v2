@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Only populated on the nexus app (eventschedule.com), which receives
+        // Only populated on the nexus app (getvnt.com), which receives
         // translation suggestions shared by other installs. Created everywhere
         // for schema consistency, like other nexus/hosted-only tables.
         Schema::create('translation_suggestions', function (Blueprint $table) {

@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Carpool Matching"
+        name="Getvnt Carpool Matching"
         description="Attendees offer and request lifts on the event page. The driver approves each rider before any email or phone number is shared. Ratings follow the ride." />
     </x-slot>
 
@@ -524,7 +524,7 @@
             ],
             [
                 'q' => 'Who can offer or request rides?',
-                'a' => 'Anyone with an Event Schedule account, once they are signed in. They do not need a ticket or an RSVP for the event. The carpool list is not public: a visitor who is not signed in is asked to log in first. Before their first offer or request each person accepts a one-time carpool notice confirming they are 18 or older and that Event Schedule is not responsible for what happens on the ride.',
+                'a' => 'Anyone with an Getvnt account, once they are signed in. They do not need a ticket or an RSVP for the event. The carpool list is not public: a visitor who is not signed in is asked to log in first. Before their first offer or request each person accepts a one-time carpool notice confirming they are 18 or older and that Getvnt is not responsible for what happens on the ride.',
             ],
             [
                 'q' => 'When does anyone see my email address or phone number?',
@@ -536,7 +536,7 @@
             ],
             [
                 'q' => 'Can drivers charge riders for fuel?',
-                'a' => 'Not through Event Schedule. A ride offer has no price and no payment step, so nothing is charged, collected or split in the app. Anything a driver and their riders agree between themselves happens outside it.',
+                'a' => 'Not through Getvnt. A ride offer has no price and no payment step, so nothing is charged, collected or split in the app. Anything a driver and their riders agree between themselves happens outside it.',
             ],
             [
                 'q' => 'Does it work on a weekly or repeating event?',
@@ -940,7 +940,7 @@
             <div class="mt-8 text-center" data-reveal>
                 <span class="es-seat-plan es-seat-plan-pro">Pro</span>
                 <span class="es-seat-muted ml-2 text-sm">
-                    On eventschedule.com these emails go out through your schedule's own email settings,
+                    On getvnt.com these emails go out through your schedule's own email settings,
                     so set those up before you switch carpool on. A selfhosted install uses whatever
                     mailer it is already configured with.
                 </span>
@@ -973,7 +973,7 @@
 
                 <div class="grid gap-6 md:grid-cols-2" data-reveal-group="110">
                     @foreach ([
-                        ['01', 'A notice, once', 'Before a first offer or a first request, each person ticks a box confirming they are 18 or older and that Event Schedule is not responsible for what happens on a ride. It is accepted once per account, not per event.'],
+                        ['01', 'A notice, once', 'Before a first offer or a first request, each person ticks a box confirming they are 18 or older and that Getvnt is not responsible for what happens on a ride. It is accepted once per account, not per event.'],
                         ['02', 'Ratings, after the fact', 'When the event has finished, a driver and the riders they approved can rate each other from 1 to 5 stars with an optional comment. One rating per pair per ride, and the average sits next to that person\'s name on every later ride.'],
                         ['03', 'Reports, from inside the ride', 'A driver can report a rider they approved, and an approved rider can report the driver, with a reason. Nobody else on the page can file one, so a report always comes from inside the car.'],
                         ['04', 'Removal, by you', 'The event\'s Engagement tab lists every active offer with its driver, city, direction and how many spots are taken, and every report filed against it. Remove an offer and its requests are cancelled and its riders emailed. Dismiss a report and it is gone.'],
@@ -1210,7 +1210,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-seat-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

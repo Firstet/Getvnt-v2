@@ -1,6 +1,6 @@
 <x-docs-page
     key="selfhost/google-wallet"
-    title="Google Wallet Ticket Passes for Selfhost - Event Schedule"
+    title="Google Wallet Ticket Passes for Selfhost - Getvnt"
     description="Let ticket buyers and free registrants save their ticket to Google Wallet: set up the issuer account and service account your selfhosted install needs."
     lede="Put an Add to Google Wallet button on every ticket, free registrations included. The pass carries the same QR code the ticket page shows, so it scans at your door unchanged. Off until you configure it."
 >
@@ -164,7 +164,7 @@
             <li>The attendee name, the event name, the venue name and address, and the start time</li>
             <li>The ticket type, any seat labels, and the number of guests when a ticket admits more than one</li>
             <li><strong class="text-gray-900 dark:text-white">The event's ticket notes</strong>, truncated to 200 characters. This is free text your organizers write, so it is worth knowing it leaves the install</li>
-            <li>The schedule's name and accent colour, the event's public URL and, when <code class="doc-inline-code">APP_URL</code> is publicly reachable over HTTPS, the URLs of the schedule's profile image (the Event Schedule logo when it has none) and the event's image</li>
+            <li>The schedule's name and accent colour, the event's public URL and, when <code class="doc-inline-code">APP_URL</code> is publicly reachable over HTTPS, the URLs of the schedule's profile image (the Getvnt logo when it has none) and the event's image</li>
             <li>The venue's coordinates, when it has them</li>
             <li><strong class="text-gray-900 dark:text-white">The ticket URL, which contains that sale's secret</strong></li>
         </ul>
@@ -261,8 +261,8 @@
         <h3 class="doc-subheading">The pass has no logo or banner image</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Google fetches those from your installation, so they are only sent when <code class="doc-inline-code">APP_URL</code> is an HTTPS address Google could actually reach. A LAN or plain-HTTP install deliberately sends no image rather than shipping a broken one.</p>
 
-        <h3 class="doc-subheading">The pass shows the Event Schedule logo, or old branding</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">The pass logo is the schedule's profile image, and the Event Schedule logo stands in when the schedule has none, so give the schedule a profile image. Branding is written into an occurrence's pass class once, when its first buyer taps the button, and the class is never rewritten after that. A new profile image, accent colour or schedule name therefore shows only on occurrences whose first pass is saved after the change.</p>
+        <h3 class="doc-subheading">The pass shows the Getvnt logo, or old branding</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">The pass logo is the schedule's profile image, and the Getvnt logo stands in when the schedule has none, so give the schedule a profile image. Branding is written into an occurrence's pass class once, when its first buyer taps the button, and the class is never rewritten after that. A new profile image, accent colour or schedule name therefore shows only on occurrences whose first pass is saved after the change.</p>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Outbound access</div>

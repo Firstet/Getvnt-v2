@@ -1,7 +1,7 @@
 <x-docs-page
     key="saas/facebook-login"
-    title="Facebook Login Setup - Event Schedule"
-    description="Set up Continue with Facebook sign-in for your Event Schedule platform: create the Meta app, register the redirect URIs, configure the credentials and go Live."
+    title="Facebook Login Setup - Getvnt"
+    description="Set up Continue with Facebook sign-in for your Getvnt platform: create the Meta app, register the redirect URIs, configure the credentials and go Live."
     lede="Let your customers sign up and log in with Facebook. Create a Meta app, register three redirect URIs, and set two environment variables."
 >
     <x-slot:toc>
@@ -10,7 +10,7 @@
         <x-doc-nav-link href="#basic-settings">2. Basic settings</x-doc-nav-link>
         <x-doc-nav-link href="#login-settings">3. Facebook Login settings</x-doc-nav-link>
         <x-doc-nav-link href="#permissions">4. Permissions</x-doc-nav-link>
-        <x-doc-nav-link href="#configure">5. Configure Event Schedule</x-doc-nav-link>
+        <x-doc-nav-link href="#configure">5. Configure Getvnt</x-doc-nav-link>
         <x-doc-nav-link href="#go-live">6. Test, then go Live</x-doc-nav-link>
         <x-doc-nav-link href="#account-matching">How accounts are matched</x-doc-nav-link>
         <x-doc-nav-link href="#disable">Turning it off</x-doc-nav-link>
@@ -23,14 +23,14 @@
             </svg>
             Overview
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Adds <span class="font-semibold text-gray-900 dark:text-white">Continue with Facebook</span> to the login and sign-up pages, and a <span class="font-semibold text-gray-900 dark:text-white">Facebook Settings</span> section where your customers connect or disconnect Facebook, or verify with it before setting a password. It is optional and <span class="font-semibold text-gray-900 dark:text-white">off by default</span>. Until both values under <a href="#configure" class="doc-link">Configure Event Schedule</a> are set there is no Facebook button, settings section or sidebar link, no Facebook entry in the bundled privacy policy's processor list, and every <code class="doc-inline-code">/auth/facebook</code> URL returns 404.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Adds <span class="font-semibold text-gray-900 dark:text-white">Continue with Facebook</span> to the login and sign-up pages, and a <span class="font-semibold text-gray-900 dark:text-white">Facebook Settings</span> section where your customers connect or disconnect Facebook, or verify with it before setting a password. It is optional and <span class="font-semibold text-gray-900 dark:text-white">off by default</span>. Until both values under <a href="#configure" class="doc-link">Configure Getvnt</a> are set there is no Facebook button, settings section or sidebar link, no Facebook entry in the bundled privacy policy's processor list, and every <code class="doc-inline-code">/auth/facebook</code> URL returns 404.</p>
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Events are not synced</div>
             <p>Facebook login only signs people in. It does not import events from Facebook or publish events there: Meta limits reading Page and personal events to its approved Marketing Partners, and publishing them to its Official Events API partners, which is closed to new applicants. To promote an event on Facebook, share its link, post an image from <a href="{{ route('marketing.docs.event_graphics') }}" class="doc-link">event graphics</a>, or run a paid <a href="{{ route('marketing.docs.boost') }}" class="doc-link">Boost</a>.</p>
         </div>
 
         <h3 id="reuse-boost-app" class="doc-subheading">Reusing the Boost app</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">We recommend a new Consumer app just for login, as described below. The app the <a href="{{ route('marketing.docs.selfhost.boost') }}#facebook-app" class="doc-link">Boost setup</a> creates (<code class="doc-inline-code">META_APP_ID</code>) is a Business app, and Business apps usually offer only <span class="font-semibold text-gray-900 dark:text-white">Facebook Login for Business</span>, which Event Schedule does not support.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">We recommend a new Consumer app just for login, as described below. The app the <a href="{{ route('marketing.docs.selfhost.boost') }}#facebook-app" class="doc-link">Boost setup</a> creates (<code class="doc-inline-code">META_APP_ID</code>) is a Business app, and Business apps usually offer only <span class="font-semibold text-gray-900 dark:text-white">Facebook Login for Business</span>, which Getvnt does not support.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">You can reuse the Boost app only if its dashboard lets you add the <span class="font-semibold text-gray-900 dark:text-white">Authenticate and request data from users with Facebook Login</span> use case. If it does, follow steps 2 to 6 on that app and set <code class="doc-inline-code">FACEBOOK_CLIENT_ID</code> and <code class="doc-inline-code">FACEBOOK_CLIENT_SECRET</code> to its App ID and App Secret. Both features then share one App Secret, so rotating it means updating <code class="doc-inline-code">META_APP_SECRET</code> too.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-6">Decide before launch. Facebook links belong to one app, so switching apps later disconnects everyone who linked Facebook (see <a href="#account-matching" class="doc-link">How accounts are matched</a>).</p>
     </section>
@@ -124,7 +124,7 @@ https://app.yourdomain.com/auth/facebook/set-password/callback</code></pre>
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
             </svg>
-            5. Configure Event Schedule
+            5. Configure Getvnt
         </h2>
         <pre class="rounded-xl bg-gray-100 dark:bg-[#1A1A1A] p-4 text-sm overflow-x-auto"><code>FACEBOOK_CLIENT_ID=your-facebook-app-id
 FACEBOOK_CLIENT_SECRET=your-facebook-app-secret</code></pre>
@@ -197,7 +197,7 @@ FACEBOOK_CLIENT_SECRET=your-facebook-app-secret</code></pre>
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">Keep the same Meta app</div>
-            <p>Facebook gives every app its own ID for each person, and that ID is what Event Schedule stores. Pointing the install at a different Meta app later disconnects everyone who linked Facebook: people with a password or Google are asked to log in once to re-link, and Facebook-only people have to use <span class="font-semibold text-gray-900 dark:text-white">Reset password</span>. To rotate credentials, reset the App Secret on the same app.</p>
+            <p>Facebook gives every app its own ID for each person, and that ID is what Getvnt stores. Pointing the install at a different Meta app later disconnects everyone who linked Facebook: people with a password or Google are asked to log in once to re-link, and Facebook-only people have to use <span class="font-semibold text-gray-900 dark:text-white">Reset password</span>. To rotate credentials, reset the App Secret on the same app.</p>
         </div>
     </section>
 

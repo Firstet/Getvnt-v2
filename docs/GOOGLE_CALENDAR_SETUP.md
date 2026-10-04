@@ -1,6 +1,6 @@
 # Google Calendar Integration Setup
 
-This document explains how to set up and use the Google Calendar integration feature in the EventSchedule application.
+This document explains how to set up and use the Google Calendar integration feature in the Getvnt application.
 
 ## Prerequisites
 
@@ -48,9 +48,9 @@ GOOGLE_REDIRECT_URI=https://yourdomain.com/google-calendar/callback
 2. **Sync All Events**: Users can sync all their events to Google Calendar at once
 3. **Individual Event Sync**: Users can sync individual events from the event edit page
 4. **Automatic Sync**: Events are automatically synced when created, updated, or deleted (if user has Google Calendar connected)
-5. **Bidirectional Sync**: Events added in either Google Calendar or EventSchedule will appear in both places
+5. **Bidirectional Sync**: Events added in either Google Calendar or Getvnt will appear in both places
 6. **Calendar Selection**: Choose which Google Calendar to sync with for each role/schedule
-7. **Real-time Updates**: Changes in Google Calendar are automatically synced to EventSchedule via webhooks
+7. **Real-time Updates**: Changes in Google Calendar are automatically synced to Getvnt via webhooks
 
 ### Event Information Synced
 
@@ -70,8 +70,8 @@ Events can have three sync statuses:
 ### Bidirectional Sync
 
 When bidirectional sync is enabled:
-- Events created in EventSchedule are automatically added to Google Calendar
-- Events created in Google Calendar are automatically added to EventSchedule
+- Events created in Getvnt are automatically added to Google Calendar
+- Events created in Google Calendar are automatically added to Getvnt
 - Changes in either system are reflected in the other
 - Real-time updates via Google Calendar webhooks
 
@@ -102,8 +102,8 @@ When bidirectional sync is enabled:
    - Events will now sync both ways automatically
 
 5. **Manual Sync Options**:
-   - **Sync to Google Calendar**: Push all events from Event Schedule to Google Calendar
-   - **Sync from Google Calendar**: Pull all events from Google Calendar to EventSchedule
+   - **Sync to Google Calendar**: Push all events from Getvnt to Google Calendar
+   - **Sync from Google Calendar**: Pull all events from Google Calendar to Getvnt
 
 ### For Developers
 
@@ -145,7 +145,7 @@ Sync operations are handled by background jobs (`SyncEventToGoogleCalendar`) to 
 - `POST /google-calendar/role/{subdomain}` - Update role's Google Calendar selection
 - `POST /google-calendar/bidirectional/{subdomain}/enable` - Enable bidirectional sync
 - `POST /google-calendar/bidirectional/{subdomain}/disable` - Disable bidirectional sync
-- `POST /google-calendar/sync-from-google/{subdomain}` - Sync from Google Calendar to EventSchedule
+- `POST /google-calendar/sync-from-google/{subdomain}` - Sync from Google Calendar to Getvnt
 - `GET /google-calendar/webhook` - Webhook verification (Google Calendar)
 - `POST /google-calendar/webhook` - Webhook handler (Google Calendar)
 

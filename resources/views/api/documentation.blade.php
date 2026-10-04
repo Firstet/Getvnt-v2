@@ -70,7 +70,7 @@
                     <div class="border-b border-gray-200 pb-5">
                         <h1 class="text-4xl font-bold">API Documentation</h1>
                         <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
-                            Event Schedule provides a REST API that allows you to programmatically manage schedules and events.
+                            Getvnt provides a REST API that allows you to programmatically manage schedules and events.
                         </p>
                     </div>
 

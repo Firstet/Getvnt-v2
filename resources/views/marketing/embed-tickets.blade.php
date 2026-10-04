@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Embed Tickets"
+        name="Getvnt Embed Tickets"
         description="Embed a ticket purchase or RSVP form on any website with one iframe tag. Supports every payment method, dark mode, and 12 languages." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
@@ -623,7 +623,7 @@
             ['04', 'Your own questions', 'Custom fields you attached to the event or to a single ticket type, answered here at checkout instead of in a follow-up email thread.'],
             ['05', 'Codes', 'A promo code box, once the event has a live code, and a gift card box on schedules that sell them. A code can also arrive pre-filled from the embed URL, so a link in a newsletter carries its own discount.'],
             ['06', 'Total and pay', 'The running total, any discount applied, the choice to pay monthly on an event that offers installments, and the button that starts checkout on whichever payment method the event uses.'],
-            ['07', 'The foot', 'A "Powered by Event Schedule" line, and the one layer most readers of this page will never meet: the widget needs Pro on the hosted platform, and a Pro schedule does not carry branding. A selfhosted install behaves like a paid plan throughout, so it does not carry it either. In practice the line shows on an operator who runs their own free tier, and nowhere else.'],
+            ['07', 'The foot', 'A "Powered by Getvnt" line, and the one layer most readers of this page will never meet: the widget needs Pro on the hosted platform, and a Pro schedule does not carry branding. A selfhosted install behaves like a paid plan throughout, so it does not carry it either. In practice the line shows on an operator who runs their own free tier, and nowhere else.'],
         ];
 
         // The published interface. Every row is in the docs and in the code that
@@ -690,7 +690,7 @@
             ],
             [
                 'q' => 'What does it cost, and what do you take from a sale?',
-                'a' => 'The ticket widget is on the Pro plan. Event Schedule charges no platform fee on ticket sales at all: payment runs through your own Stripe, PayPal, Payfast or Invoice Ninja account, so what processing costs is between you and that provider. On a selfhosted install the widget is included at no extra cost.',
+                'a' => 'The ticket widget is on the Pro plan. Getvnt charges no platform fee on ticket sales at all: payment runs through your own Stripe, PayPal, Payfast or Invoice Ninja account, so what processing costs is between you and that provider. On a selfhosted install the widget is included at no extra cost.',
             ],
             [
                 'q' => 'Will the framed page compete with my own page in search?',
@@ -756,7 +756,7 @@
                         <p class="es-widg-measure-label mb-1.5">The whole integration</p>
                         <div class="es-widg-measure mb-3"></div>
                         <p class="es-widg-mono es-widg-muted break-all text-xs leading-relaxed">
-                            &lt;iframe src="https://your-schedule.eventschedule.com/riverside-sessions?tickets=true&#38;embed=true" width="100%" height="700" frameborder="0" style="border: none;"&gt;&lt;/iframe&gt;
+                            &lt;iframe src="https://your-schedule.getvnt.com/riverside-sessions?tickets=true&#38;embed=true" width="100%" height="700" frameborder="0" style="border: none;"&gt;&lt;/iframe&gt;
                         </p>
                     </div>
                 </div>
@@ -901,7 +901,7 @@
                                         <div class="es-widg-pay mt-2.5" style="background-color: {{ $demo['accent'] }}; color: #ffffff;">Pay {{ $demo['total'] }}</div>
                                     </div>
                                 @else
-                                    <div class="es-widg-foot" style="border-top: 0;">Powered by Event Schedule</div>
+                                    <div class="es-widg-foot" style="border-top: 0;">Powered by Getvnt</div>
                                 @endif
                             </div>
                         </div>
@@ -917,7 +917,7 @@
             <div class="mt-10 text-center" data-reveal>
                 <span class="es-widg-plan es-widg-plan-pro">Pro</span>
                 <span class="es-widg-muted ml-2 text-sm">
-                    The ticket widget is on the Pro plan, and Event Schedule takes no platform fee on what it sells.
+                    The ticket widget is on the Pro plan, and Getvnt takes no platform fee on what it sells.
                 </span>
             </div>
         </div>
@@ -1131,7 +1131,7 @@
                     <div class="es-widg-measure"></div>
                 </div>
                 <p class="es-widg-muted text-lg" data-reveal style="--reveal-delay: 0.1s;">
-                    Event Schedule charges no platform fee on ticket sales. Payment runs through
+                    Getvnt charges no platform fee on ticket sales. Payment runs through
                     your own Stripe, PayPal, Payfast or Invoice Ninja account, so what processing
                     costs is between you and that provider.
                 </p>
@@ -1501,7 +1501,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-widg-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

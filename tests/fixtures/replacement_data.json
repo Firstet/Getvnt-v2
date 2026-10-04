@@ -2,12 +2,12 @@
     "google-forms": {
         "name": "Google Forms",
         "tagline": "Stop building event registration forms from scratch.",
-        "meta_title": "Replace Google Forms for Event Registration | Event Schedule",
+        "meta_title": "Replace Google Forms for Event Registration | Getvnt",
         "description": "Replace Google Forms for event registration: free RSVPs, tickets paid by Stripe or PayPal, QR codes scanned at the door, and a public page for each event.",
         "keywords": "Google Forms alternative for events, Google Forms replacement, event registration form, event signup form",
         "audience_hint": "For event organizers using Google Forms for RSVPs and registration",
         "about": "Google Forms is a free form builder used by many event organizers to collect RSVPs and registrations. While it works for basic data collection, it was never designed for event management - leaving organizers to handle payments, tickets and attendee tracking outside the form.",
-        "pricing_note": "Google Forms is free, but payments and tickets have to come from other tools. Event Schedule does free registration, confirmation emails and door check-in on its free plan; paid tickets, at zero platform fees, are on Pro at $5/month.",
+        "pricing_note": "Google Forms is free, but payments and tickets have to come from other tools. Getvnt does free registration, confirmation emails and door check-in on its free plan; paid tickets, at zero platform fees, are on Pro at $5/month.",
         "competitor_price": "Free (but $50+/mo with add-ons)",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -125,7 +125,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Google Forms collects data, but Event Schedule manages your entire event workflow from registration to check-in day.",
+            "intro": "Google Forms collects data, but Getvnt manages your entire event workflow from registration to check-in day.",
             "points": [
                 "Ticket payments through Stripe or PayPal, with zero platform fees",
                 "Public event pages with all details, not just a form link",
@@ -149,15 +149,15 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Google Forms alternative for events?",
-                "answer": "Yes. Event Schedule replaces Google Forms for event registration with built-in ticketing, payments, and attendee management. You can set up your first event in minutes. Paste your event details and AI will extract dates, times, and descriptions automatically."
+                "question": "Is Getvnt a good Google Forms alternative for events?",
+                "answer": "Yes. Getvnt replaces Google Forms for event registration with built-in ticketing, payments, and attendee management. You can set up your first event in minutes. Paste your event details and AI will extract dates, times, and descriptions automatically."
             },
             {
-                "question": "Is Event Schedule really free?",
+                "question": "Is Getvnt really free?",
                 "answer": "Yes. The free plan includes unlimited events, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at $5/month, which also adds the live check-in dashboard and every payment method: buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash. No credit card required to start."
             },
             {
-                "question": "Can Event Schedule handle custom registration fields like Google Forms?",
+                "question": "Can Getvnt handle custom registration fields like Google Forms?",
                 "answer": "Yes. Pro plan includes custom fields on ticket forms so you can collect any information you need from attendees. Unlike Google Forms, the data is automatically connected to your attendee records and ticket sales."
             },
             {
@@ -166,7 +166,7 @@
             },
             {
                 "question": "Can I collect RSVPs for free events without Google Forms?",
-                "answer": "Yes. Event Schedule supports free RSVPs with automatic confirmation emails and an optional capacity limit, with no payment setup at all. Attendees register through your event page, and you get a real attendee list with a QR code for each guest to scan at the door, not just form responses."
+                "answer": "Yes. Getvnt supports free RSVPs with automatic confirmation emails and an optional capacity limit, with no payment setup at all. Attendees register through your event page, and you get a real attendee list with a QR code for each guest to scan at the door, not just form responses."
             }
         ],
         "cross_links": [
@@ -208,12 +208,12 @@
     "mailchimp": {
         "name": "Mailchimp",
         "tagline": "Your event emails and ticketing in one place.",
-        "meta_title": "Replace Mailchimp for Event Newsletters | Event Schedule",
+        "meta_title": "Replace Mailchimp for Event Newsletters | Getvnt",
         "description": "Replace Mailchimp for event emails: newsletters with A/B tests, an automatic digest of new events for subscribers, and ticket sales in the same place.",
         "keywords": "Mailchimp alternative for events, Mailchimp replacement, event email marketing, event newsletter",
         "audience_hint": "For organizers managing event emails in a separate platform",
         "about": "Mailchimp is a popular email marketing platform that many event organizers use to promote events and communicate with attendees. However, using Mailchimp means managing a separate tool alongside your event platform, manually syncing attendee lists, and paying for email marketing on top of your event tools.",
-        "pricing_note": "Mailchimp starts at $13/month for 500 contacts and goes up from there. Event Schedule does not cap subscribers on any plan; what the plan sets is the newsletter allowance, counted in recipients: 10 a month free, 100 on Pro at $5/month, 1,000 on Enterprise. The automatic digest of new events is outside it. Free registration is unlimited, and selling paid tickets is on Pro.",
+        "pricing_note": "Mailchimp starts at $13/month for 500 contacts and goes up from there. Getvnt does not cap subscribers on any plan; what the plan sets is the newsletter allowance, counted in recipients: 10 a month free, 100 on Pro at $5/month, 1,000 on Enterprise. The automatic digest of new events is outside it. Free registration is unlimited, and selling paid tickets is on Pro.",
         "competitor_price": "From $13/mo",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -326,7 +326,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Mailchimp handles email, but Event Schedule combines newsletters, ticketing, and attendee management so you never juggle separate tools.",
+            "intro": "Mailchimp handles email, but Getvnt combines newsletters, ticketing, and attendee management so you never juggle separate tools.",
             "points": [
                 "Newsletters with A/B testing built into your event platform",
                 "An automatic digest of new events for confirmed subscribers, outside the allowance",
@@ -350,15 +350,15 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Mailchimp alternative for event emails?",
-                "answer": "Yes. Event Schedule includes newsletters with A/B testing, segments, list import, and an automatic digest of new events for confirmed subscribers, all beside your ticket sales. You can send event announcements and updates directly from your schedule without a separate email tool."
+                "question": "Is Getvnt a good Mailchimp alternative for event emails?",
+                "answer": "Yes. Getvnt includes newsletters with A/B testing, segments, list import, and an automatic digest of new events for confirmed subscribers, all beside your ticket sales. You can send event announcements and updates directly from your schedule without a separate email tool."
             },
             {
-                "question": "How much does Event Schedule cost compared to Mailchimp?",
+                "question": "How much does Getvnt cost compared to Mailchimp?",
                 "answer": "The newsletter tools and your subscriber list are free, with no cap on how many subscribers you keep. What the plan sets is the monthly newsletter allowance, counted in recipients: 10 on the free plan, 100 on Pro at $5/month and 1,000 on Enterprise, so one newsletter to 40 people uses 40 of it. The automatic digest of new events does not count against it. Free registration is unlimited on every plan, and selling paid tickets is on Pro with zero platform fees. Mailchimp charges based on contact count and can cost $20 or more per month for similar email features alone."
             },
             {
-                "question": "Does Event Schedule support email automation like Mailchimp?",
+                "question": "Does Getvnt support email automation like Mailchimp?",
                 "answer": "Some, aimed at events. Confirmed subscribers get a digest of the new public events your schedule creates automatically, at most one every 72 hours, and it does not draw on the newsletter allowance. People who ask to hear about one event get an email when its tickets go on sale, one if it is cancelled, and a reminder shortly before it starts. What it does not have is Mailchimp-style drip sequences or custom automation rules: a newsletter goes out when you send it."
             },
             {
@@ -413,12 +413,12 @@
     "canva": {
         "name": "Canva",
         "tagline": "Event graphics that create themselves.",
-        "meta_title": "Replace Canva for Event Flyers and Graphics | Event Schedule",
+        "meta_title": "Replace Canva for Event Flyers and Graphics | Getvnt",
         "description": "Replace Canva for event graphics: shareable images built from your event details, free on every plan, plus AI flyers on the Enterprise plan.",
         "keywords": "Canva alternative for events, Canva replacement, event flyer maker, event graphic generator",
         "audience_hint": "For organizers spending hours designing event flyers manually",
         "about": "Canva is a popular graphic design platform that event organizers use to create flyers, social media posts, and promotional graphics. While Canva offers great design flexibility, creating event graphics manually takes time and requires updating multiple designs whenever event details change.",
-        "pricing_note": "Canva Pro costs $15/month for premium design features. Event Schedule generates event graphics automatically on every plan, the free one included; Pro at $5/month adds paid ticket sales and raises the newsletter allowance, and AI flyers are on Enterprise.",
+        "pricing_note": "Canva Pro costs $15/month for premium design features. Getvnt generates event graphics automatically on every plan, the free one included; Pro at $5/month adds paid ticket sales and raises the newsletter allowance, and AI flyers are on Enterprise.",
         "competitor_price": "From $15/mo (Pro)",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -477,7 +477,7 @@
         "es_solutions": [
             {
                 "title": "Auto-generated Graphics",
-                "description": "Event Schedule generates shareable graphics of your events from the details you already entered, free on every plan. No design work required.",
+                "description": "Getvnt generates shareable graphics of your events from the details you already entered, free on every plan. No design work required.",
                 "icon": "image",
                 "gradient": "from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30",
                 "border": "border-emerald-200 dark:border-emerald-500/20",
@@ -531,7 +531,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Canva makes beautiful designs, but Event Schedule generates event graphics automatically so you can focus on running your events.",
+            "intro": "Canva makes beautiful designs, but Getvnt generates event graphics automatically so you can focus on running your events.",
             "points": [
                 "Graphics built from your event details in seconds, free, with AI flyers on Enterprise",
                 "Graphics always stay in sync when event details change",
@@ -555,24 +555,24 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Canva alternative for event graphics?",
-                "answer": "Yes. Event Schedule auto-generates shareable event graphics from your event details on every plan, and offers AI flyer generation on the Enterprise plan. Graphics update automatically when event details change, so you never have outdated flyers."
+                "question": "Is Getvnt a good Canva alternative for event graphics?",
+                "answer": "Yes. Getvnt auto-generates shareable event graphics from your event details on every plan, and offers AI flyer generation on the Enterprise plan. Graphics update automatically when event details change, so you never have outdated flyers."
             },
             {
-                "question": "Is Event Schedule free for event graphics?",
+                "question": "Is Getvnt free for event graphics?",
                 "answer": "Yes. Event graphics are generated from your event details on every plan, the free one included. AI flyer generation, AI style generation and AI-written graphic text are on the Enterprise plan. Pro at $5/month is about selling: it adds paid ticket sales and the live check-in dashboard."
             },
             {
-                "question": "How do Event Schedule graphics compare to Canva designs?",
-                "answer": "Canva offers more design flexibility for general-purpose graphics. Event Schedule graphics are purpose-built for events, automatically pulling in dates, times, locations, and descriptions. They are designed for quick social media sharing and are always in sync with your event data."
+                "question": "How do Getvnt graphics compare to Canva designs?",
+                "answer": "Canva offers more design flexibility for general-purpose graphics. Getvnt graphics are purpose-built for events, automatically pulling in dates, times, locations, and descriptions. They are designed for quick social media sharing and are always in sync with your event data."
             },
             {
-                "question": "Do I need design skills to create event graphics with Event Schedule?",
-                "answer": "No. Event Schedule generates event graphics automatically from your event details, on every plan. On Enterprise, AI flyer generation creates a design with no input from you at all. You can also customize styles and branding to match your look."
+                "question": "Do I need design skills to create event graphics with Getvnt?",
+                "answer": "No. Getvnt generates event graphics automatically from your event details, on every plan. On Enterprise, AI flyer generation creates a design with no input from you at all. You can also customize styles and branding to match your look."
             },
             {
-                "question": "Can I still use Canva alongside Event Schedule?",
-                "answer": "Of course. Many organizers use Event Schedule for automatic event graphics and Canva for custom brand materials. Event Schedule handles the event-specific graphics so you spend less time in Canva for routine event promotion."
+                "question": "Can I still use Canva alongside Getvnt?",
+                "answer": "Of course. Many organizers use Getvnt for automatic event graphics and Canva for custom brand materials. Getvnt handles the event-specific graphics so you spend less time in Canva for routine event promotion."
             }
         ],
         "cross_links": [
@@ -614,12 +614,12 @@
     "linktree": {
         "name": "Linktree",
         "tagline": "A shareable page that actually sells tickets.",
-        "meta_title": "Replace Linktree for Your Event Link in Bio | Event Schedule",
+        "meta_title": "Replace Linktree for Your Event Link in Bio | Getvnt",
         "description": "Replace Linktree for events: one link to a page of your upcoming events with tickets, plus a short address with click counts for every other link.",
         "keywords": "Linktree alternative for events, Linktree replacement, event link in bio, event landing page",
         "audience_hint": "For creators and organizers using a link-in-bio for event promotion",
         "about": "Linktree is a link-in-bio tool that event organizers use to share multiple event links from a single URL. While it solves the \"one link\" problem on social media, it is just a list of links with no event context, ticketing, or scheduling functionality.",
-        "pricing_note": "Linktree Pro costs $9/month for analytics and customization on what is still a list of links. On Event Schedule the schedule page, subscriber sign-ups, newsletters, link click counts and unlimited free registration are all on the free plan; selling paid tickets is on Pro at $5/month.",
+        "pricing_note": "Linktree Pro costs $9/month for analytics and customization on what is still a list of links. On Getvnt the schedule page, subscriber sign-ups, newsletters, link click counts and unlimited free registration are all on the free plan; selling paid tickets is on Pro at $5/month.",
         "competitor_price": "From $9/mo (Pro)",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -728,7 +728,7 @@
             },
             {
                 "title": "Custom Branding",
-                "description": "Your name, logo and colors on every plan; remove Event Schedule branding on Pro, and put the page on your own domain on Enterprise. A professional event hub, not just a link list.",
+                "description": "Your name, logo and colors on every plan; remove Getvnt branding on Pro, and put the page on your own domain on Enterprise. A professional event hub, not just a link list.",
                 "icon": "image",
                 "gradient": "from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30",
                 "border": "border-sky-200 dark:border-sky-500/20",
@@ -737,7 +737,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Linktree gives you a list of links. Event Schedule gives you a full event hub with ticket sales, subscriber signups, and auto-updating event details.",
+            "intro": "Linktree gives you a list of links. Getvnt gives you a full event hub with ticket sales, subscriber signups, and auto-updating event details.",
             "points": [
                 "A schedule page with event details, not just a list of URLs",
                 "Ticket sales on your own pages, paid through Stripe or PayPal",
@@ -762,20 +762,20 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Linktree alternative for event promotion?",
-                "answer": "Yes. Linktree is a list of links. Event Schedule gives you a full schedule page with event details, dates, ticket purchasing, and subscriber signups. Your audience sees a rich event experience, not just a link directory."
+                "question": "Is Getvnt a good Linktree alternative for event promotion?",
+                "answer": "Yes. Linktree is a list of links. Getvnt gives you a full schedule page with event details, dates, ticket purchasing, and subscriber signups. Your audience sees a rich event experience, not just a link directory."
             },
             {
-                "question": "Does Event Schedule have a free plan?",
+                "question": "Does Getvnt have a free plan?",
                 "answer": "Yes. The free plan includes unlimited events, a public schedule page, Google Calendar sync, newsletters, and embeddable widgets. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at $5/month, which also adds the live check-in dashboard."
             },
             {
-                "question": "Can I use Event Schedule as my link in bio?",
+                "question": "Can I use Getvnt as my link in bio?",
                 "answer": "Yes. Your schedule page URL works as a link in bio. It shows all your upcoming events with full details and ticket links, updating automatically as you add or change events. No manual link management needed."
             },
             {
                 "question": "Does the schedule page work with Instagram and TikTok?",
-                "answer": "Yes. Your Event Schedule URL works as a link in bio on any social platform including Instagram, TikTok, YouTube, and X. It shows all your upcoming events with full details and ticket links, updating automatically as you add events."
+                "answer": "Yes. Your Getvnt URL works as a link in bio on any social platform including Instagram, TikTok, YouTube, and X. It shows all your upcoming events with full details and ticket links, updating automatically as you add events."
             },
             {
                 "question": "Can visitors subscribe to my events from the schedule page?",
@@ -783,7 +783,7 @@
             },
             {
                 "question": "What happens to my other links, like Instagram or my website?",
-                "answer": "Add them to your schedule and each one gets a short address on your own URL: /instagram for Instagram and other recognized sites, or the brand name for anything else, so your-name.eventschedule.com/instagram opens your Instagram. Clicks on those addresses are counted in your analytics, free on every plan, so you can see which links people actually use."
+                "answer": "Add them to your schedule and each one gets a short address on your own URL: /instagram for Instagram and other recognized sites, or the brand name for anything else, so your-name.getvnt.com/instagram opens your Instagram. Clicks on those addresses are counted in your analytics, free on every plan, so you can see which links people actually use."
             }
         ],
         "cross_links": [
@@ -825,12 +825,12 @@
     "google-sheets": {
         "name": "Google Sheets",
         "tagline": "Stop tracking event data in spreadsheets.",
-        "meta_title": "Replace Google Sheets for Event Tracking | Event Schedule",
+        "meta_title": "Replace Google Sheets for Event Tracking | Getvnt",
         "description": "Replace Google Sheets for event tracking: sales, attendees, check-ins and refunds recorded as they happen, and a CSV export on Pro when you need a sheet.",
         "keywords": "Google Sheets alternative for events, Google Sheets replacement, event tracking spreadsheet, Excel alternative for events",
         "audience_hint": "For organizers tracking event data and attendees in spreadsheets",
         "about": "Google Sheets is a go-to tool for event organizers who need to track attendees, manage guest lists, and organize event details. But spreadsheets were not built for event management - they require manual data entry, have no attendee-facing features, and become unwieldy as events grow.",
-        "pricing_note": "Google Sheets is free, but tracking events by hand costs time. Event Schedule records sales, attendees and refunds as they happen. Free registration is unlimited, and selling paid tickets is on the Pro plan at $5/month, which also adds the sales export.",
+        "pricing_note": "Google Sheets is free, but tracking events by hand costs time. Getvnt records sales, attendees and refunds as they happen. Free registration is unlimited, and selling paid tickets is on the Pro plan at $5/month, which also adds the sales export.",
         "competitor_price": "Free (manual effort)",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -939,7 +939,7 @@
             },
             {
                 "title": "Webhooks & Integrations",
-                "description": "On Pro, connect Event Schedule to your other tools with webhooks and the REST API. Automate workflows without manual data copying.",
+                "description": "On Pro, connect Getvnt to your other tools with webhooks and the REST API. Automate workflows without manual data copying.",
                 "icon": "link",
                 "gradient": "from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30",
                 "border": "border-sky-200 dark:border-sky-500/20",
@@ -948,7 +948,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Spreadsheets require manual data entry for every sale and attendee. Event Schedule records all of it as it happens.",
+            "intro": "Spreadsheets require manual data entry for every sale and attendee. Getvnt records all of it as it happens.",
             "points": [
                 "Ticket sales, attendees, check-ins and refunds tracked automatically",
                 "One checkout for several events, paid through Stripe or PayPal",
@@ -972,11 +972,11 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Google Sheets alternative for event tracking?",
-                "answer": "Yes. Event Schedule records ticket sales, attendee lists, check-ins and refunds automatically, so there is no sheet to keep up to date. On Pro you also get the live check-in dashboard and a CSV export for your own analysis."
+                "question": "Is Getvnt a good Google Sheets alternative for event tracking?",
+                "answer": "Yes. Getvnt records ticket sales, attendee lists, check-ins and refunds automatically, so there is no sheet to keep up to date. On Pro you also get the live check-in dashboard and a CSV export for your own analysis."
             },
             {
-                "question": "Is there a free plan for Event Schedule?",
+                "question": "Is there a free plan for Getvnt?",
                 "answer": "Yes. The free plan includes unlimited events, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited on every plan; selling paid tickets is on Pro at $5/month, which also adds the live check-in dashboard. Buyers pay through Stripe or PayPal, or by Payfast for rand, Invoice Ninja, a payment link or cash, and every sale lands on the same Sales page."
             },
             {
@@ -988,8 +988,8 @@
                 "answer": "Yes, on the Enterprise plan, which carries up to five team members; a free schedule is a single account. An admin runs the schedule day to day and sees its ticket sales, and a viewer is read-only but can scan tickets at the door. Several people can work at once without overwriting each other the way a shared spreadsheet lets you."
             },
             {
-                "question": "Does Event Schedule have a REST API for custom integrations?",
-                "answer": "Yes. The Pro plan includes a REST API that lets you pull event data, attendee lists, and sales information programmatically. Connect Event Schedule with your CRM, accounting software, or any other tool."
+                "question": "Does Getvnt have a REST API for custom integrations?",
+                "answer": "Yes. The Pro plan includes a REST API that lets you pull event data, attendee lists, and sales information programmatically. Connect Getvnt with your CRM, accounting software, or any other tool."
             },
             {
                 "question": "Can I record refunds, including partial ones?",
@@ -1039,12 +1039,12 @@
     "calendly": {
         "name": "Calendly",
         "tagline": "Appointment booking, public events, and ticketing in one place.",
-        "meta_title": "Replace Calendly for Bookings and Events | Event Schedule",
+        "meta_title": "Replace Calendly for Bookings and Events | Getvnt",
         "description": "Replace Calendly for bookings and events: one free booking type, more types and paid bookings on Pro, plus public events with tickets.",
         "keywords": "Calendly alternative for events, Calendly replacement, event scheduling tool, public event scheduling",
         "audience_hint": "For organizers using appointment scheduling for public events",
         "about": "Calendly is a scheduling tool designed for booking one-on-one meetings and appointments. Some event organizers use it to schedule events, but it lacks public event pages, ticketing, and the ability to share a calendar of events with an audience.",
-        "pricing_note": "Calendly charges $10/month per user for its Standard plan. Event Schedule is free for unlimited events, public pages and one appointment type. Free registration is unlimited, and more types, putting a price on a ticket or a booking, and the advanced scheduling rules are on Pro at $5/month, with no per-user fees.",
+        "pricing_note": "Calendly charges $10/month per user for its Standard plan. Getvnt is free for unlimited events, public pages and one appointment type. Free registration is unlimited, and more types, putting a price on a ticket or a booking, and the advanced scheduling rules are on Pro at $5/month, with no per-user fees.",
         "competitor_price": "From $10/mo per user",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -1162,7 +1162,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Calendly schedules meetings. Event Schedule does that too - with built-in appointment booking - plus public events, ticket sales, audience building, and promotional tools.",
+            "intro": "Calendly schedules meetings. Getvnt does that too - with built-in appointment booking - plus public events, ticket sales, audience building, and promotional tools.",
             "points": [
                 "Public event pages with full details, images, and ticket purchasing",
                 "Tickets with several types and zero platform fees, paid through Stripe or PayPal",
@@ -1186,24 +1186,24 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Calendly alternative for public events?",
-                "answer": "Yes. Calendly is built for one-on-one appointment scheduling. Event Schedule takes those bookings too, free with one appointment type, and is built for public events with audiences. You get public event pages, ticket sales, a shareable schedule, newsletters, and event graphics that Calendly does not offer."
+                "question": "Is Getvnt a good Calendly alternative for public events?",
+                "answer": "Yes. Calendly is built for one-on-one appointment scheduling. Getvnt takes those bookings too, free with one appointment type, and is built for public events with audiences. You get public event pages, ticket sales, a shareable schedule, newsletters, and event graphics that Calendly does not offer."
             },
             {
-                "question": "Does Event Schedule have a free plan?",
+                "question": "Does Getvnt have a free plan?",
                 "answer": "Yes. The free plan includes unlimited events, public event pages, one bookable appointment type, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at $5/month, which also adds the live check-in dashboard."
             },
             {
-                "question": "Does Event Schedule sync with Google Calendar like Calendly?",
-                "answer": "Yes. Event Schedule includes two-way Google Calendar sync on the free plan. Events you create sync to your Google Calendar, and Google Calendar events can sync back. CalDAV sync is also supported."
+                "question": "Does Getvnt sync with Google Calendar like Calendly?",
+                "answer": "Yes. Getvnt includes two-way Google Calendar sync on the free plan. Events you create sync to your Google Calendar, and Google Calendar events can sync back. CalDAV sync is also supported."
             },
             {
                 "question": "Can attendees add events to their own Google Calendar?",
-                "answer": "Yes. Event pages include an option to add the event to Google Calendar or download an iCal file. Guests can also subscribe to a live calendar feed of your schedule, which adds every event and updates itself when dates change. Two-way Google Calendar sync also keeps your own calendar updated automatically when you create or edit events in Event Schedule."
+                "answer": "Yes. Event pages include an option to add the event to Google Calendar or download an iCal file. Guests can also subscribe to a live calendar feed of your schedule, which adds every event and updates itself when dates change. Two-way Google Calendar sync also keeps your own calendar updated automatically when you create or edit events in Getvnt."
             },
             {
-                "question": "Can I use Event Schedule for recurring events?",
-                "answer": "Yes. Event Schedule supports recurring events with flexible scheduling patterns. Each occurrence can have its own ticket types and attendee limits, which is something Calendly cannot handle for public events."
+                "question": "Can I use Getvnt for recurring events?",
+                "answer": "Yes. Getvnt supports recurring events with flexible scheduling patterns. Each occurrence can have its own ticket types and attendee limits, which is something Calendly cannot handle for public events."
             },
             {
                 "question": "Can people still book a slot with me one to one?",
@@ -1257,12 +1257,12 @@
     "surveymonkey": {
         "name": "SurveyMonkey",
         "tagline": "Event registration without the survey overhead.",
-        "meta_title": "Replace SurveyMonkey for Event Registration | Event Schedule",
+        "meta_title": "Replace SurveyMonkey for Event Registration | Getvnt",
         "description": "Replace SurveyMonkey for event registration: RSVPs and tickets on a real event page, with custom questions and post-event feedback on the Pro plan.",
         "keywords": "SurveyMonkey alternative for events, SurveyMonkey replacement, event registration, event signup",
         "audience_hint": "For organizers using survey tools for event registration",
         "about": "SurveyMonkey is a survey platform that some event organizers repurpose for event registration and feedback collection. While it offers form building capabilities, it was designed for surveys and research - not for managing events, selling tickets, or handling attendee logistics.",
-        "pricing_note": "SurveyMonkey charges $25+/month for features like payment collection and custom branding. Event Schedule registration is free and unlimited; paid tickets, at zero platform fees, are on Pro at $5/month, which also adds feedback, polls and custom fields.",
+        "pricing_note": "SurveyMonkey charges $25+/month for features like payment collection and custom branding. Getvnt registration is free and unlimited; paid tickets, at zero platform fees, are on Pro at $5/month, which also adds feedback, polls and custom fields.",
         "competitor_price": "From $25+/mo",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -1380,7 +1380,7 @@
             }
         ],
         "why_switch": {
-            "intro": "SurveyMonkey was built for surveys, not events. Event Schedule gives you purpose-built registration with ticketing, payments, and check-in tools.",
+            "intro": "SurveyMonkey was built for surveys, not events. Getvnt gives you purpose-built registration with ticketing, payments, and check-in tools.",
             "points": [
                 "Event registration with ticket types, capacity limits and waitlists",
                 "Unlimited free registration, against SurveyMonkey at $25+/month",
@@ -1404,19 +1404,19 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good SurveyMonkey alternative for event registration?",
-                "answer": "Yes. Event Schedule provides purpose-built event registration with ticket types, attendee limits, waitlists, and automatic confirmations. Unlike SurveyMonkey, registrations are connected to ticketing, payments, and check-in tools."
+                "question": "Is Getvnt a good SurveyMonkey alternative for event registration?",
+                "answer": "Yes. Getvnt provides purpose-built event registration with ticket types, attendee limits, waitlists, and automatic confirmations. Unlike SurveyMonkey, registrations are connected to ticketing, payments, and check-in tools."
             },
             {
-                "question": "How much does Event Schedule cost compared to SurveyMonkey?",
-                "answer": "Event Schedule is free for unlimited events, newsletters, and Google Calendar sync. Free registration is unlimited, and selling paid tickets is on the Pro plan at $5/month. SurveyMonkey charges $25 or more per month for features like payment collection and custom branding."
+                "question": "How much does Getvnt cost compared to SurveyMonkey?",
+                "answer": "Getvnt is free for unlimited events, newsletters, and Google Calendar sync. Free registration is unlimited, and selling paid tickets is on the Pro plan at $5/month. SurveyMonkey charges $25 or more per month for features like payment collection and custom branding."
             },
             {
-                "question": "Does Event Schedule support post-event surveys?",
-                "answer": "Yes, on the Pro plan. After an event, attendees are emailed a request for a star rating and a comment (on eventschedule.com the email goes out through your own email settings), and the results stay with that event. Event polls, also Pro, put a quick question with up to ten answers on the event page. What it does not have is SurveyMonkey-style branching logic, so a long research survey still belongs in a survey tool."
+                "question": "Does Getvnt support post-event surveys?",
+                "answer": "Yes, on the Pro plan. After an event, attendees are emailed a request for a star rating and a comment (on getvnt.com the email goes out through your own email settings), and the results stay with that event. Event polls, also Pro, put a quick question with up to ten answers on the event page. What it does not have is SurveyMonkey-style branching logic, so a long research survey still belongs in a survey tool."
             },
             {
-                "question": "Does Event Schedule support attendee limits and waitlists?",
+                "question": "Does Getvnt support attendee limits and waitlists?",
                 "answer": "Yes. Set capacity limits per ticket type, and when an event sells out, people can join a waitlist and get notified if spots open up. The RSVP waitlist is free; the ticket waitlist is on the Pro plan. For an event that is not on sale yet, the free interest list, once you switch it on, takes just an email address and says when tickets go on sale."
             },
             {
@@ -1467,12 +1467,12 @@
     "doodle": {
         "name": "Doodle",
         "tagline": "Go from polling dates to publishing events.",
-        "meta_title": "Replace Doodle for Event Scheduling | Event Schedule",
+        "meta_title": "Replace Doodle for Event Scheduling | Getvnt",
         "description": "Replace Doodle for events: once the date is set, publish it on a public page with RSVPs or tickets and a calendar feed that keeps your group up to date.",
         "keywords": "Doodle alternative for events, Doodle replacement, event scheduling poll, event date scheduling",
         "audience_hint": "For organizers using date polling to coordinate events",
         "about": "Doodle is a scheduling poll tool that helps groups find a common time to meet. Event organizers sometimes use it to pick event dates, but Doodle stops at the poll - it does not help you create, promote, or manage the actual event once a date is chosen.",
-        "pricing_note": "Doodle charges $7+/month per user for its Pro plan. Event Schedule is free for unlimited events with a public schedule. Free registration is unlimited, and selling paid tickets is on Pro at $5/month, and nothing here is priced per user.",
+        "pricing_note": "Doodle charges $7+/month per user for its Pro plan. Getvnt is free for unlimited events with a public schedule. Free registration is unlimited, and selling paid tickets is on Pro at $5/month, and nothing here is priced per user.",
         "competitor_price": "From $7+/mo per user",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -1585,7 +1585,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Doodle stops at picking a date. Event Schedule takes you from event creation through promotion, ticketing, and check-in day.",
+            "intro": "Doodle stops at picking a date. Getvnt takes you from event creation through promotion, ticketing, and check-in day.",
             "points": [
                 "Full event management from creation to check-in, not just date polling",
                 "Public schedule page with all your events shareable from one URL",
@@ -1609,16 +1609,16 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Doodle alternative for event management?",
-                "answer": "Yes. Doodle stops at picking a date. Event Schedule takes you from event creation through promotion and ticketing to check-in day. You get public event pages, ticket sales, Google Calendar sync, and newsletters in one platform."
+                "question": "Is Getvnt a good Doodle alternative for event management?",
+                "answer": "Yes. Doodle stops at picking a date. Getvnt takes you from event creation through promotion and ticketing to check-in day. You get public event pages, ticket sales, Google Calendar sync, and newsletters in one platform."
             },
             {
-                "question": "Is Event Schedule free to use?",
+                "question": "Is Getvnt free to use?",
                 "answer": "Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters, and fan engagement features. Free registration is unlimited and every ticket scans at the door at no cost; selling paid tickets is on Pro at $5/month, which also adds the live check-in dashboard."
             },
             {
-                "question": "Does Event Schedule have scheduling or polling features like Doodle?",
-                "answer": "Event Schedule includes event polls on the Pro plan for collecting attendee preferences. For date selection, you create events with set dates and share them through your public schedule page. It is designed for publishing events, not polling for availability."
+                "question": "Does Getvnt have scheduling or polling features like Doodle?",
+                "answer": "Getvnt includes event polls on the Pro plan for collecting attendee preferences. For date selection, you create events with set dates and share them through your public schedule page. It is designed for publishing events, not polling for availability."
             },
             {
                 "question": "Can attendees see all my upcoming events in one place?",
@@ -1626,7 +1626,7 @@
             },
             {
                 "question": "Can I collect RSVPs for free events?",
-                "answer": "Yes. Event Schedule supports free RSVPs with automatic confirmation emails and an optional capacity limit, and the RSVP waitlist is free too once it fills. Attendees register through your event page and you get a real attendee list with check-in tools."
+                "answer": "Yes. Getvnt supports free RSVPs with automatic confirmation emails and an optional capacity limit, and the RSVP waitlist is free too once it fills. Attendees register through your event page and you get a real attendee list with check-in tools."
             },
             {
                 "question": "How does my group get the dates into their own calendars?",
@@ -1673,12 +1673,12 @@
         "name": "QR Code Generators",
         "short_name": "QR Code",
         "tagline": "QR codes that are built into every ticket.",
-        "meta_title": "Replace QR Code Generators for Check-in | Event Schedule",
+        "meta_title": "Replace QR Code Generators for Check-in | Getvnt",
         "description": "Replace QR code generators for event check-in: a QR code on every ticket and RSVP, scanned free from any phone, and each code admits once.",
         "keywords": "QR code alternative for events, QR code generator replacement, event QR code, QR code check-in",
         "audience_hint": "For organizers using standalone QR tools for event check-in",
         "about": "QR code generators are standalone tools that event organizers use to create scannable codes for event check-in, links to event pages, or ticket verification. Using a separate QR tool means manually creating codes, linking them to attendee data, and building your own check-in process.",
-        "pricing_note": "Many QR generators charge $5 to $15/month for dynamic QR codes. Event Schedule puts a QR code on every ticket and free registration, and scanning them at the door is free on every plan, including tickets you sold before. Pro at $5/month adds the live check-in dashboard.",
+        "pricing_note": "Many QR generators charge $5 to $15/month for dynamic QR codes. Getvnt puts a QR code on every ticket and free registration, and scanning them at the door is free on every plan, including tickets you sold before. Pro at $5/month adds the live check-in dashboard.",
         "competitor_price": "$5 to $15/mo",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -1787,7 +1787,7 @@
             },
             {
                 "title": "Sale Notifications",
-                "description": "On eventschedule.com, once your schedule has its own email settings, the first paid sale on each event emails you on every plan, and on Pro every sale can. No dashboard to keep checking.",
+                "description": "On getvnt.com, once your schedule has its own email settings, the first paid sale on each event emails you on every plan, and on Pro every sale can. No dashboard to keep checking.",
                 "icon": "mail",
                 "gradient": "from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30",
                 "border": "border-sky-200 dark:border-sky-500/20",
@@ -1796,7 +1796,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Standalone QR generators create codes, but Event Schedule builds QR check-in into every ticket with automatic validation, and a live dashboard on Pro.",
+            "intro": "Standalone QR generators create codes, but Getvnt builds QR check-in into every ticket with automatic validation, and a live dashboard on Pro.",
             "points": [
                 "Every ticket includes a unique QR code automatically",
                 "Built-in scanning that validates tickets and prevents duplicates, free on every plan",
@@ -1820,8 +1820,8 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good QR code generator alternative for events?",
-                "answer": "Yes. Every ticket sold through Event Schedule includes a unique QR code automatically. No need for a separate QR generation tool. QR codes are linked to attendee data for instant validation at the door."
+                "question": "Is Getvnt a good QR code generator alternative for events?",
+                "answer": "Yes. Every ticket sold through Getvnt includes a unique QR code automatically. No need for a separate QR generation tool. QR codes are linked to attendee data for instant validation at the door."
             },
             {
                 "question": "How much does QR code ticketing cost?",
@@ -1883,12 +1883,12 @@
     "squarespace": {
         "name": "Squarespace",
         "tagline": "An event platform, not a website builder.",
-        "meta_title": "Replace Squarespace for Event Pages | Event Schedule",
+        "meta_title": "Replace Squarespace for Event Pages | Getvnt",
         "description": "Replace Squarespace for event pages: a page for every event, tickets paid through Stripe or PayPal with zero platform fees, and an embed for your site.",
         "keywords": "Squarespace alternative for events, Squarespace replacement, event website builder, event landing page",
         "audience_hint": "For organizers building event pages on a general website builder",
         "about": "Squarespace is a general website builder that some event organizers use to create event pages and sell tickets through third-party integrations. While it produces beautiful websites, building event functionality on top of a website builder means extra complexity, plugins, and ongoing maintenance for features that should be built in.",
-        "pricing_note": "Squarespace costs $16+/month for a basic site, plus extra for third-party ticketing. Event Schedule is free for event pages. Free registration is unlimited, and selling paid tickets is on Pro at $5/month, with zero platform fees.",
+        "pricing_note": "Squarespace costs $16+/month for a basic site, plus extra for third-party ticketing. Getvnt is free for event pages. Free registration is unlimited, and selling paid tickets is on Pro at $5/month, with zero platform fees.",
         "competitor_price": "From $16+/mo",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -1992,7 +1992,7 @@
             },
             {
                 "title": "White-Label Branding",
-                "description": "Remove Event Schedule branding on Pro for a fully custom look, and use your own domain on Enterprise, with your logo and colors on every plan.",
+                "description": "Remove Getvnt branding on Pro for a fully custom look, and use your own domain on Enterprise, with your logo and colors on every plan.",
                 "icon": "image",
                 "gradient": "from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30",
                 "border": "border-sky-200 dark:border-sky-500/20",
@@ -2001,7 +2001,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Squarespace builds websites. Event Schedule builds event experiences with ticketing, newsletters, and audience tools included.",
+            "intro": "Squarespace builds websites. Getvnt builds event experiences with ticketing, newsletters, and audience tools included.",
             "points": [
                 "Professional event pages generated automatically, no page building needed",
                 "Integrated ticketing through Stripe or PayPal, with zero platform fees",
@@ -2025,23 +2025,23 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Squarespace alternative for event pages?",
-                "answer": "Yes. Event Schedule provides ready-made event pages with all event details, ticket purchasing, and a shareable schedule. No website building, plugins, or custom page design required. You can also embed the calendar widget on your existing Squarespace site."
+                "question": "Is Getvnt a good Squarespace alternative for event pages?",
+                "answer": "Yes. Getvnt provides ready-made event pages with all event details, ticket purchasing, and a shareable schedule. No website building, plugins, or custom page design required. You can also embed the calendar widget on your existing Squarespace site."
             },
             {
-                "question": "How does Event Schedule pricing compare to Squarespace?",
-                "answer": "Event Schedule is free for unlimited events and a public schedule page. Free registration is unlimited, and selling paid tickets is on the Pro plan at $5/month. Squarespace costs $16 or more per month for a basic website, plus additional fees for third-party ticketing integrations."
+                "question": "How does Getvnt pricing compare to Squarespace?",
+                "answer": "Getvnt is free for unlimited events and a public schedule page. Free registration is unlimited, and selling paid tickets is on the Pro plan at $5/month. Squarespace costs $16 or more per month for a basic website, plus additional fees for third-party ticketing integrations."
             },
             {
-                "question": "Do I still need a website if I use Event Schedule?",
-                "answer": "Not necessarily. Your Event Schedule page works as a standalone event website with a custom URL, all your events, ticket sales, and subscriber signups. If you already have a website, you can embed the Event Schedule calendar widget on it."
+                "question": "Do I still need a website if I use Getvnt?",
+                "answer": "Not necessarily. Your Getvnt page works as a standalone event website with a custom URL, all your events, ticket sales, and subscriber signups. If you already have a website, you can embed the Getvnt calendar widget on it."
             },
             {
-                "question": "Can I keep my Squarespace site and use Event Schedule for events?",
-                "answer": "Yes. You can embed the Event Schedule calendar widget on your Squarespace site with a simple code block. Use Squarespace for your main website and Event Schedule for event pages, ticketing, and attendee management. The two work side by side."
+                "question": "Can I keep my Squarespace site and use Getvnt for events?",
+                "answer": "Yes. You can embed the Getvnt calendar widget on your Squarespace site with a simple code block. Use Squarespace for your main website and Getvnt for event pages, ticketing, and attendee management. The two work side by side."
             },
             {
-                "question": "Can I embed Event Schedule on my Squarespace site?",
+                "question": "Can I embed Getvnt on my Squarespace site?",
                 "answer": "Yes. The embeddable calendar widget works on any website including Squarespace, free on every plan. Add a code block to your Squarespace page and paste the embed snippet to show your event calendar. The widget that sells tickets right on your page is on Pro."
             },
             {
@@ -2088,12 +2088,12 @@
     "notion": {
         "name": "Notion",
         "tagline": "Event management that faces your audience, not just your team.",
-        "meta_title": "Replace Notion for Event Planning | Event Schedule",
+        "meta_title": "Replace Notion for Event Planning | Getvnt",
         "description": "Replace Notion for event planning: public event pages with tickets and RSVPs, two-way calendar sync, and a team of up to five on Enterprise.",
         "keywords": "Notion alternative for events, Notion replacement, Notion event planning, event management workspace",
         "audience_hint": "For organizers planning events in workspace tools like Notion",
         "about": "Notion is a workspace and productivity tool that some event organizers use to plan events with databases, calendars, and shared pages. While Notion is excellent for internal project management, a page published from Notion is a document rather than an event page: there is no ticketing or door check-in, and event workflows have to be built from scratch.",
-        "pricing_note": "Notion Plus costs $10/month per user. Event Schedule is free for unlimited events and public pages. Free registration is unlimited on every plan, and selling paid tickets is on Pro at $5/month. Nothing is charged per user either way: a team of up to five is the Enterprise plan, not five seats.",
+        "pricing_note": "Notion Plus costs $10/month per user. Getvnt is free for unlimited events and public pages. Free registration is unlimited on every plan, and selling paid tickets is on Pro at $5/month. Nothing is charged per user either way: a team of up to five is the Enterprise plan, not five seats.",
         "competitor_price": "From $10/mo per user",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -2206,7 +2206,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Notion organizes your internal planning. Event Schedule faces your audience with public event pages, ticketing, and subscriber tools.",
+            "intro": "Notion organizes your internal planning. Getvnt faces your audience with public event pages, ticketing, and subscriber tools.",
             "points": [
                 "Public event pages your audience can see, not internal workspace docs",
                 "Built-in ticketing through Stripe or PayPal, with zero platform fees",
@@ -2230,24 +2230,24 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Notion alternative for event planning?",
-                "answer": "Yes, for the event management side. Event Schedule handles everything Notion cannot: public event pages, ticket sales, attendee management, Google Calendar sync, and newsletters. You may still use Notion for internal project notes, but Event Schedule replaces it for audience-facing event work."
+                "question": "Is Getvnt a good Notion alternative for event planning?",
+                "answer": "Yes, for the event management side. Getvnt handles everything Notion cannot: public event pages, ticket sales, attendee management, Google Calendar sync, and newsletters. You may still use Notion for internal project notes, but Getvnt replaces it for audience-facing event work."
             },
             {
-                "question": "Is Event Schedule free like Notion?",
+                "question": "Is Getvnt free like Notion?",
                 "answer": "Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters and event graphics. Free registration is unlimited, and selling paid tickets is on Pro at $5/month with zero platform fees, which also adds the live check-in dashboard. One difference worth knowing before you move a team off Notion: a free schedule is a single account, and multiple team members, up to five, are an Enterprise feature."
             },
             {
-                "question": "Does Event Schedule support team collaboration like Notion?",
+                "question": "Does Getvnt support team collaboration like Notion?",
                 "answer": "Yes, on the Enterprise plan, which carries up to five team members. An admin runs the schedule day to day and sees its ticket sales, and a viewer is read-only but can scan tickets at the door. Unlike Notion, collaboration is purpose-built for event management with tools like shared schedules, sub-schedules, and delegated event editing."
             },
             {
-                "question": "Is Event Schedule easier to set up than a Notion event database?",
+                "question": "Is Getvnt easier to set up than a Notion event database?",
                 "answer": "Yes. Create a schedule in under a minute with no databases, templates, or formulas to configure. Add events with AI import or manual entry and you have a public event page with ticketing immediately. No workspace setup needed."
             },
             {
-                "question": "Can I use Event Schedule alongside Notion?",
-                "answer": "Yes. Many organizers use Notion for internal project planning and Event Schedule for the audience-facing side: public event pages, ticket sales, newsletters, and attendee management. On Pro, the REST API can also connect Event Schedule data with your Notion workflows."
+                "question": "Can I use Getvnt alongside Notion?",
+                "answer": "Yes. Many organizers use Notion for internal project planning and Getvnt for the audience-facing side: public event pages, ticket sales, newsletters, and attendee management. On Pro, the REST API can also connect Getvnt data with your Notion workflows."
             },
             {
                 "question": "Can I reuse an event as a template, the way I would in Notion?",
@@ -2293,12 +2293,12 @@
     "trello": {
         "name": "Trello",
         "tagline": "From task boards to ticket sales.",
-        "meta_title": "Replace Trello for Event Management | Event Schedule",
+        "meta_title": "Replace Trello for Event Management | Getvnt",
         "description": "Replace Trello for event management: event pages and tickets paid by Stripe or PayPal for your audience, and a queue for the events people submit to you.",
         "keywords": "Trello alternative for events, Trello replacement, Trello event planning, event management board",
         "audience_hint": "For organizers managing events with task boards and project tools",
         "about": "Trello is a kanban-style project management tool that some event organizers use to track event planning tasks. While Trello is great for organizing workflows with boards and cards, it has no attendee-facing features, no registration or ticketing, and task boards do not map well to the event lifecycle of creating, promoting, and managing events.",
-        "pricing_note": "Trello Standard costs $5 per user a month billed annually ($6 monthly). Event Schedule is free for unlimited events and public pages. Free registration is unlimited, and selling paid tickets is on Pro at $5/month, and nothing here is charged per user; a team of five is the Enterprise plan rather than five subscriptions.",
+        "pricing_note": "Trello Standard costs $5 per user a month billed annually ($6 monthly). Getvnt is free for unlimited events and public pages. Free registration is unlimited, and selling paid tickets is on Pro at $5/month, and nothing here is charged per user; a team of five is the Enterprise plan rather than five subscriptions.",
         "competitor_price": "From $5/mo per user",
         "es_price": "From $0/mo (Pro $5/mo)",
         "comparison_rows": [
@@ -2411,7 +2411,7 @@
             }
         ],
         "why_switch": {
-            "intro": "Trello tracks internal tasks. Event Schedule handles the full event lifecycle your audience actually sees: event pages, ticket sales, and promotion.",
+            "intro": "Trello tracks internal tasks. Getvnt handles the full event lifecycle your audience actually sees: event pages, ticket sales, and promotion.",
             "points": [
                 "Public event pages your audience can visit and buy tickets from",
                 "Built-in ticketing through Stripe or PayPal, with zero platform fees",
@@ -2435,28 +2435,28 @@
         ],
         "faq": [
             {
-                "question": "Is Event Schedule a good Trello alternative for event management?",
-                "answer": "Yes, for the event management side. Event Schedule handles what Trello cannot: public event pages, ticket sales, attendee management, and event promotion. You may still use Trello for internal task tracking, but Event Schedule replaces it for the full event lifecycle."
+                "question": "Is Getvnt a good Trello alternative for event management?",
+                "answer": "Yes, for the event management side. Getvnt handles what Trello cannot: public event pages, ticket sales, attendee management, and event promotion. You may still use Trello for internal task tracking, but Getvnt replaces it for the full event lifecycle."
             },
             {
-                "question": "Is Event Schedule free like Trello?",
+                "question": "Is Getvnt free like Trello?",
                 "answer": "Yes. The free plan includes unlimited events, public event pages, Google Calendar sync, newsletters, event graphics and fan engagement features. Free registration is unlimited, and selling paid tickets is on Pro at $5/month with zero platform fees, which also adds the live check-in dashboard, webhooks and more."
             },
             {
-                "question": "Does Event Schedule have task management like Trello?",
-                "answer": "Event Schedule is not a task management tool. It replaces Trello specifically for event management workflows: creating events, publishing them, selling tickets, and managing attendees. For internal planning tasks, you can continue using any project management tool you prefer."
+                "question": "Does Getvnt have task management like Trello?",
+                "answer": "Getvnt is not a task management tool. It replaces Trello specifically for event management workflows: creating events, publishing them, selling tickets, and managing attendees. For internal planning tasks, you can continue using any project management tool you prefer."
             },
             {
-                "question": "Does Event Schedule have webhooks for automation?",
-                "answer": "Yes. The Pro plan includes webhooks and a REST API for connecting Event Schedule with your other tools. Automate workflows like syncing attendee data to your CRM or triggering notifications when tickets are sold."
+                "question": "Does Getvnt have webhooks for automation?",
+                "answer": "Yes. The Pro plan includes webhooks and a REST API for connecting Getvnt with your other tools. Automate workflows like syncing attendee data to your CRM or triggering notifications when tickets are sold."
             },
             {
                 "question": "Can performers or speakers submit events for me to approve?",
                 "answer": "Yes, free on every plan. Turn on requests and people submit events from your schedule page; each one waits for you to accept it before it goes live, and the submitter is told if you decline. On Pro, custom fields put your own questions on that form."
             },
             {
-                "question": "Can I use Event Schedule alongside Trello?",
-                "answer": "Yes. Use Trello for internal planning tasks and Event Schedule for the audience-facing event lifecycle: creating events, selling tickets, managing attendees, and sending newsletters. The two tools complement each other well."
+                "question": "Can I use Getvnt alongside Trello?",
+                "answer": "Yes. Use Trello for internal planning tasks and Getvnt for the audience-facing event lifecycle: creating events, selling tickets, managing attendees, and sending newsletters. The two tools complement each other well."
             }
         ],
         "cross_links": [

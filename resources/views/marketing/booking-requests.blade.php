@@ -32,8 +32,8 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Booking Request Form"
-        description="A booking request form on your Event Schedule page: promoters ask a performer for a date, acts ask a venue, and the community submits events to a curator, with the sender's name and email on every request."
+        name="Getvnt - Booking Request Form"
+        description="A booking request form on your Getvnt page: promoters ask a performer for a date, acts ask a venue, and the community submits events to a curator, with the sender's name and email on every request."
         audience="Performers, venues and event curators"
         keywords="booking request form, band booking form, performer booking request, venue booking request, event submission form, request to book" />
     </x-slot>
@@ -46,7 +46,7 @@
             ['q' => 'Does the person asking need an account?', 'a' => 'Not on a performer\'s schedule, where making one is left to them. A venue or curator schedule can require one. Where the site accepts new accounts, someone sending a request as a guest can choose to create one as they send it.'],
             ['q' => 'How do I reply to a request?', 'a' => 'Each request shows the name and email of whoever sent it, and their phone number if your form asks for one, so you can write back before you decide. Accept and Decline email your decision to anyone who sent the request while signed in; a guest hears from you directly.'],
             ['q' => 'Can I ask my own questions?', 'a' => 'Yes, on Pro. Any custom field marked for the request form appears on it: the backline an act needs as a checklist, a reference number checked against a pattern, an expected head count. The answers show on the request, and on the event once you accept it.'],
-            ['q' => 'How do I stop spam requests?', 'a' => 'The form carries a hidden field that catches the bots that fill in every box, and on eventschedule.com a schedule can only take so many new events in a day. You can also turn requests off, require an account on a venue or curator schedule, and set request terms that say what you will and will not take.'],
+            ['q' => 'How do I stop spam requests?', 'a' => 'The form carries a hidden field that catches the bots that fill in every box, and on getvnt.com a schedule can only take so many new events in a day. You can also turn requests off, require an account on a venue or curator schedule, and set request terms that say what you will and will not take.'],
         ];
     @endphp
 
@@ -263,21 +263,21 @@
                     'Promoters and venues ask to book you',
                     'Your schedule page carries a Request to Book button. The form never makes anyone create an account, and every request sent through it waits for you to accept it.',
                     '/for-talent',
-                    'Event Schedule for talent',
+                    'Getvnt for talent',
                 ],
                 [
                     'Venue',
                     'Acts ask you for a date',
                     'Choose the booking form, or the AI import form that reads a pasted listing or a flyer. Requests wait for approval by default; switch that off and they go straight on. Schedules you approve skip the queue when they add you to one of their own events.',
                     '/for-venues',
-                    'Event Schedule for venues',
+                    'Getvnt for venues',
                 ],
                 [
                     'Curator',
                     'The community sends you events',
                     'A local guide, a festival or a community calendar takes submissions the same way. A curator asks submitters for an account by default; switch that off to choose between the booking form and the import form. Keep approval on and a submission appears in public only once you accept it, or, while you ask for an account, straight away from a schedule you have approved.',
                     '/for-curators',
-                    'Event Schedule for curators',
+                    'Getvnt for curators',
                 ],
             ];
         @endphp
@@ -289,7 +289,7 @@
                         One form, <span class="text-gradient-hold">three kinds of request</span>
                     </h2>
                     <p class="mt-5 text-lg text-gray-600 dark:text-gray-400" data-reveal style="--reveal-delay: 0.1s;">
-                        Every schedule on Event Schedule is talent, a venue or a curator, and each takes requests from the people who would naturally ask it.
+                        Every schedule on Getvnt is talent, a venue or a curator, and each takes requests from the people who would naturally ask it.
                     </p>
                 </div>
 
@@ -461,7 +461,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-white px-8 py-4 text-lg font-semibold text-gray-900 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl">
                                 Get Started Free

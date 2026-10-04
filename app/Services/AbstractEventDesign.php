@@ -538,7 +538,7 @@ abstract class AbstractEventDesign
     }
 
     /**
-     * Render subtle "eventschedule.com" branding watermark (hosted only)
+     * Render subtle "getvnt.com" branding watermark (hosted only)
      */
     protected function renderBranding(): void
     {
@@ -546,7 +546,7 @@ abstract class AbstractEventDesign
             return;
         }
 
-        $text = 'eventschedule.com';
+        $text = 'getvnt.com';
         $fontSize = 10;
         $font = $this->fonts['en']['regular'];
         $padding = 10;

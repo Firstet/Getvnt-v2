@@ -1,6 +1,6 @@
 <x-docs-page
     key="ai-import"
-    title="AI Import Guide: Text and Flyers - Event Schedule"
+    title="AI Import Guide: Text and Flyers - Getvnt"
     description="Paste event text or add a flyer image and AI fills in each event's name, date, venue, price and performers on a card you review before saving."
     lede="Save hours of manual data entry. Paste event text or add a flyer image and let AI extract the event details automatically."
 >
@@ -197,7 +197,7 @@ Tickets: $20</code></pre>
         <h4 id="new-pages" class="font-semibold text-gray-900 dark:text-white mb-2 mt-6">New Pages and Requests</h4>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Saving a card also reaches the performers and the venue it names, in one of two ways:</p>
         <ul class="doc-list">
-            <li><strong class="text-gray-900 dark:text-white">Not on Event Schedule yet</strong> - A performer or venue the import did not match gets a schedule page of its own when you save, so your event page can link to them. The page is public but stays out of search engines, says which schedule created it, and offers <strong class="text-gray-900 dark:text-white">Claim this page</strong>, which works for whoever signs in with the email address on it (or its phone number, when it has no email). If that address already belongs to an account, the page is theirs straight away and the event reaches it as a request, as below. Tick <strong class="text-gray-900 dark:text-white">I manage this venue, make me the owner</strong> to make a new venue yours instead. See <a href="{{ route('marketing.docs.creating_events') }}#claim" class="doc-link">Pages Created for Others</a> for claiming and invitations</li>
+            <li><strong class="text-gray-900 dark:text-white">Not on Getvnt yet</strong> - A performer or venue the import did not match gets a schedule page of its own when you save, so your event page can link to them. The page is public but stays out of search engines, says which schedule created it, and offers <strong class="text-gray-900 dark:text-white">Claim this page</strong>, which works for whoever signs in with the email address on it (or its phone number, when it has no email). If that address already belongs to an account, the page is theirs straight away and the event reaches it as a request, as below. Tick <strong class="text-gray-900 dark:text-white">I manage this venue, make me the owner</strong> to make a new venue yours instead. See <a href="{{ route('marketing.docs.creating_events') }}#claim" class="doc-link">Pages Created for Others</a> for claiming and invitations</li>
             <li><strong class="text-gray-900 dark:text-white">Already running a schedule</strong> - The event is on your schedule straight away, but reaches theirs as a request they accept or decline, unless your schedule is on their approved list. A performer's schedule always works this way; a venue can choose to accept requests without approval</li>
         </ul>
     </section>
@@ -303,7 +303,7 @@ Tickets: $20</code></pre>
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Import Events Using AI in Event Schedule",
+            "name": "How to Import Events Using AI in Getvnt",
             "description": "Learn how to import events using AI by pasting event text or adding a flyer image.",
             "totalTime": "PT3M",
             "step": [

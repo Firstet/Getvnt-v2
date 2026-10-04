@@ -1,7 +1,7 @@
 <x-docs-page
     key="getting-started"
-    title="Getting Started: Account and First Schedule - Event Schedule"
-    description="Create your Event Schedule account, set up your first schedule and choose its type, then share it and sell tickets. Free, no credit card, no time limit."
+    title="Getting Started: Account and First Schedule - Getvnt"
+    description="Create your Getvnt account, set up your first schedule and choose its type, then share it and sell tickets. Free, no credit card, no time limit."
     lede="Go from zero to a live event calendar in a few minutes. No credit card required, and the free plan has no time limit."
 >
     <x-slot:toc>
@@ -21,14 +21,14 @@
             </svg>
             Create Your Account
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Signing up is free and takes no credit card. All you need is an email address you can check right away, because Event Schedule confirms it with a code before the account is created.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Signing up is free and takes no credit card. All you need is an email address you can check right away, because Getvnt confirms it with a code before the account is created.</p>
 
         <ol class="doc-list doc-list-numbered mb-6">
             <li>Open <a href="{{ app_url('/sign_up') }}" class="doc-link">the sign-up page</a>, type your email address in the <strong class="text-gray-900 dark:text-white">Email</strong> field, and tick <strong class="text-gray-900 dark:text-white">"I accept the Terms of Service and Privacy Policy"</strong>.</li>
             <li>Click <strong class="text-gray-900 dark:text-white">"Continue"</strong>. A six-digit code is emailed to that address and stays valid for 10 minutes. If the address looks like a typo of a common provider (gmial.com, say), the page offers the corrected address first, so no code is sent to an inbox nobody reads.</li>
             <li>Type or paste the code into the six boxes. It is checked straight away: the boxes turn green when it is right, or red, with the reason, when it is not.</li>
             <li>Enter your <strong class="text-gray-900 dark:text-white">Full Name</strong> and a <strong class="text-gray-900 dark:text-white">Password</strong> of at least 8 characters, then click <strong class="text-gray-900 dark:text-white">"Create Account"</strong>.</li>
-            <li>You are signed in immediately, with the email already verified, and Event Schedule asks you to pick a schedule type.</li>
+            <li>You are signed in immediately, with the email already verified, and Getvnt asks you to pick a schedule type.</li>
         </ol>
 
         <p class="text-gray-600 dark:text-gray-300 mb-6">If the code does not arrive, <strong class="text-gray-900 dark:text-white">"Didn't receive the code? Resend code"</strong> appears under the boxes after 30 seconds, with a note on where else to look (the spam folder, and the email's subject line, which carries the code too). You can request up to five codes per hour for the same address. Typed the wrong address? Click <strong class="text-gray-900 dark:text-white">"Use a different email"</strong> to go back a step. Your timezone and language are detected from your browser, so there is nothing to choose during sign-up.</p>
@@ -45,7 +45,7 @@
             <p>On a selfhosted server the sign-up page doubles as the setup wizard: it asks for your MySQL details first, and the first account created there becomes the instance admin. After that, sign-up is closed unless you enable <code class="doc-inline-code">ALLOW_REGISTRATION</code>. See <a href="{{ route('marketing.docs.selfhost.installation') }}#user-accounts" class="doc-link">User Accounts and Registration</a> for the details.</p>
         </div>
 
-        <x-doc-screenshot id="getting-started--dashboard" alt="Event Schedule dashboard showing the month calendar, the sidebar list of schedules, and the New Schedule button" loading="eager" />
+        <x-doc-screenshot id="getting-started--dashboard" alt="Getvnt dashboard showing the month calendar, the sidebar list of schedules, and the New Schedule button" loading="eager" />
     </section>
 
     <!-- Create Schedule -->
@@ -62,7 +62,7 @@
             <li><strong class="text-gray-900 dark:text-white">Choose the type.</strong> Straight after sign-up you get a welcome screen with three cards, Talent, Venue and Curator. Pick the one that fits (see <a href="#schedule-types" class="doc-link">Schedule Types</a> below). If you would rather look around first, click <strong class="text-gray-900 dark:text-white">"Skip for now"</strong> and come back later.</li>
             <li><strong class="text-gray-900 dark:text-white">Name it.</strong> The form asks for a <strong class="text-gray-900 dark:text-white">Schedule Name</strong> and, for a Venue, a <strong class="text-gray-900 dark:text-white">Street Address</strong>. That is all it needs. For a Talent schedule the name is prefilled with your own name.</li>
             <li><strong class="text-gray-900 dark:text-white">Check the details underneath.</strong> Your contact email and timezone are taken from your account and shown below the form. Both can be changed afterwards, along with everything else, from the schedule's own settings.</li>
-            <li><strong class="text-gray-900 dark:text-white">Click "Save".</strong> Event Schedule creates the schedule and, if it is your first, takes you straight to adding an event. Everything else - description, images, colours, integrations - is optional and waits for you in settings. See <a href="#customize" class="doc-link">Customize Your Schedule</a> for what each section holds.</li>
+            <li><strong class="text-gray-900 dark:text-white">Click "Save".</strong> Getvnt creates the schedule and, if it is your first, takes you straight to adding an event. Everything else - description, images, colours, integrations - is optional and waits for you in settings. See <a href="#customize" class="doc-link">Customize Your Schedule</a> for what each section holds.</li>
         </ol>
 
         <p class="text-gray-600 dark:text-gray-300 mb-6">Already have an account and want another schedule? Use the <strong class="text-gray-900 dark:text-white">"New Schedule"</strong> dropdown in the top right of the dashboard: it offers the same three types and opens the same form.</p>
@@ -74,7 +74,7 @@
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">The contact email has to be verified</div>
-            <p>A schedule only goes live once its contact email is confirmed. Until then its public page shows visitors a page-not-found, you and your team are taken into the app when you open it signed in, and the <strong>View Schedule</strong> button is greyed out. Keeping the prefilled account email means it is verified from the start. If you enter a different address, Event Schedule emails it a verification link and shows a <strong>"Please verify the email address"</strong> banner with a <strong>Resend Email</strong> button until you click it. The same banner comes back if you change the address later. (A verified phone number counts too, but the email is the route almost everyone takes.)</p>
+            <p>A schedule only goes live once its contact email is confirmed. Until then its public page shows visitors a page-not-found, you and your team are taken into the app when you open it signed in, and the <strong>View Schedule</strong> button is greyed out. Keeping the prefilled account email means it is verified from the start. If you enter a different address, Getvnt emails it a verification link and shows a <strong>"Please verify the email address"</strong> banner with a <strong>Resend Email</strong> button until you click it. The same banner comes back if you change the address later. (A verified phone number counts too, but the email is the route almost everyone takes.)</p>
         </div>
 
         <div class="doc-callout doc-callout-tip">
@@ -212,7 +212,7 @@
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Integrations</span></td>
-                        <td>Tabs for <strong class="text-gray-900 dark:text-white">Google Calendar</strong>, <strong class="text-gray-900 dark:text-white">Outlook Calendar</strong>, <strong class="text-gray-900 dark:text-white">CalDAV Calendar</strong> and <strong class="text-gray-900 dark:text-white">Advanced</strong>, plus <strong class="text-gray-900 dark:text-white">Email Settings</strong> on eventschedule.com.</td>
+                        <td>Tabs for <strong class="text-gray-900 dark:text-white">Google Calendar</strong>, <strong class="text-gray-900 dark:text-white">Outlook Calendar</strong>, <strong class="text-gray-900 dark:text-white">CalDAV Calendar</strong> and <strong class="text-gray-900 dark:text-white">Advanced</strong>, plus <strong class="text-gray-900 dark:text-white">Email Settings</strong> on getvnt.com.</td>
                         <td>Always</td>
                     </tr>
                 </tbody>
@@ -223,7 +223,7 @@
 
         <div class="doc-callout doc-callout-plan">
             <div class="doc-callout-title">What the free plan leaves out</div>
-            <p>Almost nothing on this page needs a paid plan. The free plan runs unlimited events, syncs calendars, takes unlimited RSVPs and free registrations, embeds your calendar and makes event graphics. Putting a price on a ticket is what needs Pro, and Pro also adds the live check-in dashboard (scanning tickets at the door is free on every plan), custom fields, custom CSS and removing the Event Schedule branding. There is no platform fee on any plan, and money always goes to your own Stripe, PayPal or other account. Enterprise adds custom domains, extra team members, availability and the AI generation features. Compare them on the <a href="{{ route('marketing.pricing') }}" class="doc-link">pricing page</a>. A <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install resolves to Enterprise, so nothing is held back there.</p>
+            <p>Almost nothing on this page needs a paid plan. The free plan runs unlimited events, syncs calendars, takes unlimited RSVPs and free registrations, embeds your calendar and makes event graphics. Putting a price on a ticket is what needs Pro, and Pro also adds the live check-in dashboard (scanning tickets at the door is free on every plan), custom fields, custom CSS and removing the Getvnt branding. There is no platform fee on any plan, and money always goes to your own Stripe, PayPal or other account. Enterprise adds custom domains, extra team members, availability and the AI generation features. Compare them on the <a href="{{ route('marketing.pricing') }}" class="doc-link">pricing page</a>. A <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install resolves to Enterprise, so nothing is held back there.</p>
         </div>
     </section>
 
@@ -239,7 +239,7 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Can I have multiple schedules?</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Yes. One account can own up to 50 schedules on eventschedule.com, and a selfhosted install has no limit. This is how you run several bands, venues or organizations side by side, and how you mix types, since a schedule's type cannot be changed after it is saved.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Yes. One account can own up to 50 schedules on getvnt.com, and a selfhosted install has no limit. This is how you run several bands, venues or organizations side by side, and how you mix types, since a schedule's type cannot be changed after it is saved.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">How do I change my schedule URL?</h4>
@@ -254,7 +254,7 @@
                 <p class="text-sm text-gray-500 dark:text-gray-400">Yes, and it is free. Connect a calendar under <strong class="text-gray-900 dark:text-white">Edit Schedule &rarr; Integrations</strong>, which has a tab for <strong class="text-gray-900 dark:text-white">Google Calendar</strong>, <strong class="text-gray-900 dark:text-white">Outlook Calendar</strong> and <strong class="text-gray-900 dark:text-white">CalDAV Calendar</strong>. For each one you pick a direction: push your events to the calendar, pull its events in, or both. You can also <a href="{{ route('marketing.docs.ai_import') }}" class="doc-link">import events with AI</a> from pasted text or a photo of a flyer.</p>
             </div>
             <div class="doc-field">
-                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Is Event Schedule free?</h4>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Is Getvnt free?</h4>
                 <p class="text-sm text-gray-500 dark:text-gray-400">Yes, with no time limit and no credit card. The free plan covers unlimited events, your own schedule URL, calendar sync, analytics, unlimited RSVP with capacity limits, embedding your calendar, one appointment type, and 10 newsletter emails a month (each recipient counts as one email, so one send to 100 followers uses 100). Selling a ticket that carries a price is a Pro feature: Pro is {{ plan_price($proMonthly) }} a month, Enterprise is {{ plan_price($entMonthly) }} a month for custom domains and team features, and both start with a 7-day free trial. There is no platform fee on any plan.</p>
             </div>
             <div class="doc-field">
@@ -267,7 +267,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Someone already made a page for my act or venue. How do I claim it?</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">If a promoter, venue or curator listed you on an event before you had an account, Event Schedule created a page for you at that moment. Open it and press <strong class="text-gray-900 dark:text-white">Claim this page</strong>. Signed out, you are taken to sign up, and signing up with the email address on the page hands it to you. Signed in with a verified account on that email address or phone number, you confirm and the page is yours; signed in with a different one, the page shows the contact it answers to in masked form, so you know which account to use. Claiming makes you the owner, and the schedules that already listed you keep listing you. If you cannot reach that contact, ask whoever listed you to correct it. If the page is not about you at all, press <strong class="text-gray-900 dark:text-white">This is not me</strong> instead. See <a href="{{ route('marketing.docs.creating_events') }}#claim" class="doc-link">Pages Created for Others</a>.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">If a promoter, venue or curator listed you on an event before you had an account, Getvnt created a page for you at that moment. Open it and press <strong class="text-gray-900 dark:text-white">Claim this page</strong>. Signed out, you are taken to sign up, and signing up with the email address on the page hands it to you. Signed in with a verified account on that email address or phone number, you confirm and the page is yours; signed in with a different one, the page shows the contact it answers to in masked form, so you know which account to use. Claiming makes you the owner, and the schedules that already listed you keep listing you. If you cannot reach that contact, ask whoever listed you to correct it. If the page is not about you at all, press <strong class="text-gray-900 dark:text-white">This is not me</strong> instead. See <a href="{{ route('marketing.docs.creating_events') }}#claim" class="doc-link">Pages Created for Others</a>.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">My schedule page will not open. What is wrong?</h4>
@@ -308,7 +308,7 @@
                     "name": "Can I have multiple schedules?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. One account can own up to 50 schedules on eventschedule.com, and a selfhosted install has no limit. This is how you run several bands, venues or organizations side by side, and how you mix types, since a schedule's type cannot be changed after it is saved."
+                        "text": "Yes. One account can own up to 50 schedules on getvnt.com, and a selfhosted install has no limit. This is how you run several bands, venues or organizations side by side, and how you mix types, since a schedule's type cannot be changed after it is saved."
                     }
                 },
                 {
@@ -337,7 +337,7 @@
                 },
                 {
                     "@type": "Question",
-                    "name": "Is Event Schedule free?",
+                    "name": "Is Getvnt free?",
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Yes, with no time limit and no credit card. The free plan covers unlimited events, your own schedule URL, calendar sync, analytics, unlimited RSVP with capacity limits, embedding your calendar, one appointment type, and 10 newsletter emails a month (each recipient counts as one email). Selling a ticket that carries a price is a Pro feature: Pro is {{ plan_price($proMonthly) }} a month, Enterprise is {{ plan_price($entMonthly) }} a month for custom domains and team features, and both start with a 7-day free trial. There is no platform fee on any plan."
@@ -364,7 +364,7 @@
                     "name": "Someone already made a page for my act or venue. How do I claim it?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "If a promoter, venue or curator listed you on an event before you had an account, Event Schedule created a page for you at that moment. Open it and press Claim this page. Signed out, you are taken to sign up, and signing up with the email address on the page hands it to you. Signed in with a verified account on that email address or phone number, you confirm and the page is yours; signed in with a different one, the page shows the contact it answers to in masked form, so you know which account to use. Claiming makes you the owner, and the schedules that already listed you keep listing you. If you cannot reach that contact, ask whoever listed you to correct it. If the page is not about you at all, press This is not me instead."
+                        "text": "If a promoter, venue or curator listed you on an event before you had an account, Getvnt created a page for you at that moment. Open it and press Claim this page. Signed out, you are taken to sign up, and signing up with the email address on the page hands it to you. Signed in with a verified account on that email address or phone number, you confirm and the page is yours; signed in with a different one, the page shows the contact it answers to in masked form, so you know which account to use. Claiming makes you the owner, and the schedules that already listed you keep listing you. If you cannot reach that contact, ask whoever listed you to correct it. If the page is not about you at all, press This is not me instead."
                     }
                 },
                 {
@@ -382,8 +382,8 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "Getting Started with Event Schedule",
-            "description": "Learn how to create your account, set up your first schedule, and start sharing events with Event Schedule.",
+            "name": "Getting Started with Getvnt",
+            "description": "Learn how to create your account, set up your first schedule, and start sharing events with Getvnt.",
             "totalTime": "PT5M",
             "step": [
                 {

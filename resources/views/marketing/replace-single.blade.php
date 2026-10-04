@@ -57,7 +57,7 @@
         // dropped from this page; a currency figure in a table cell is the
         // same unverifiable claim in smaller type. How their pricing is
         // SHAPED (charged per seat) is durable, so that is what the cell
-        // says, and the Event Schedule column keeps the real contrast.
+        // says, and the Getvnt column keeps the real contrast.
         $sheetRows = array_map(function ($row) {
             if (is_string($row['competitor']) && preg_match('/\$\s*\d/', $row['competitor'])) {
                 $row['competitor'] = 'Per seat';
@@ -79,7 +79,7 @@
         ];
     @endphp
 
-    <x-slot name="title">{{ $meta_title ?? 'Replace '.$shortName.' for Events | Event Schedule' }}</x-slot>
+    <x-slot name="title">{{ $meta_title ?? 'Replace '.$shortName.' for Events | Getvnt' }}</x-slot>
     <x-slot name="description">{{ $description }}</x-slot>
     <x-slot name="keywords">{{ $keywords }}</x-slot>
     <x-slot name="breadcrumbTitle">{{ $shortName }} Replacement</x-slot>
@@ -89,14 +89,14 @@
          mentioning the tool it replaces. isSimilarTo, which this used, is not a property a
          SoftwareApplication takes. --}}
     <x-seo.webpage
-        :name="'Replace '.$shortName.' with Event Schedule'"
+        :name="'Replace '.$shortName.' with Getvnt'"
         :description="$description"
         :keywords="$keywords"
         :mentions="[$name]" />
     {{-- Through the component, which encodes with SeoUtils::jsonLd(). The block this replaces
          escaped quotes by hand inside {{ }}, which then HTML-escaped the quote it had just
          escaped, so a name or step with a " in it produced invalid JSON. --}}
-    <x-seo.howto-schema :name="'How to switch from '.$name.' to Event Schedule'" :steps="$switchHowTo" />
+    <x-seo.howto-schema :name="'How to switch from '.$name.' to Getvnt'" :steps="$switchHowTo" />
     </x-slot>
 
     {{-- Motion gate: hidden pre-reveal states only apply when this class is present,
@@ -400,7 +400,7 @@
             font-weight: 700;
             text-align: center;
         }
-        /* On a phone all three columns have to fit, or the Event Schedule
+        /* On a phone all three columns have to fit, or the Getvnt
            column - the whole point of the sheet - starts off-screen and the
            reader has to scroll right to find the payoff. */
         @media (max-width: 640px) {
@@ -663,7 +663,7 @@
 
                         <p class="es-swap-tag mb-3 mt-5">After</p>
                         <div class="es-swap-tabs mb-4">
-                            <span class="es-swap-tab es-swap-tab-in">your-name.eventschedule.com</span>
+                            <span class="es-swap-tab es-swap-tab-in">your-name.getvnt.com</span>
                         </div>
                         <ul class="space-y-3">
                             @foreach ($inRows as [$inLabel, $inPlan])
@@ -725,7 +725,7 @@
                 <div class="es-swap-mark mb-6" data-reveal aria-hidden="true"><span>Swap 02</span></div>
                 <p class="es-swap-tag mb-4" data-reveal style="--reveal-delay: 0.05s;">Done natively</p>
                 <h2 class="es-balance es-swap-ink text-3xl font-black tracking-tight md:text-5xl" data-reveal style="--reveal-delay: 0.1s;">
-                    What Event Schedule gives you over <span class="es-swap-accent">{{ $name }}</span>
+                    What Getvnt gives you over <span class="es-swap-accent">{{ $name }}</span>
                 </h2>
                 <p class="es-swap-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
                     The same work, in the tool that already knows what an event is.
@@ -766,10 +766,10 @@
                     <div class="es-swap-mark mb-6" data-reveal aria-hidden="true"><span>Swap 03</span></div>
                     <p class="es-swap-tag mb-4" data-reveal style="--reveal-delay: 0.05s;">The swap sheet</p>
                     <h2 class="es-balance es-swap-band-ink text-3xl font-black tracking-tight md:text-5xl" data-reveal style="--reveal-delay: 0.1s;">
-                        {{ $name }} <span class="es-swap-lit">vs Event Schedule</span>
+                        {{ $name }} <span class="es-swap-lit">vs Getvnt</span>
                     </h2>
                     <p class="es-swap-band-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                        Line by line, on the event work. A dash in the {{ $shortName }} column means that job is not built in, so today it is living in another tab. A tick in the Event Schedule column does not mean free: the three cards below say which plan carries what.
+                        Line by line, on the event work. A dash in the {{ $shortName }} column means that job is not built in, so today it is living in another tab. A tick in the Getvnt column does not mean free: the three cards below say which plan carries what.
                     </p>
                     <p class="es-swap-mono es-swap-lit mt-4 text-sm font-bold" data-reveal style="--reveal-delay: 0.2s;">{{ $es_price }}</p>
                 </div>
@@ -777,12 +777,12 @@
                 @if (!empty($sheetRows))
                 <div class="es-swap-card overflow-x-auto p-2 sm:p-4" data-reveal="panel">
                     <table class="es-swap-table">
-                        <caption class="sr-only">{{ $name }} compared with Event Schedule on event management features</caption>
+                        <caption class="sr-only">{{ $name }} compared with Getvnt on event management features</caption>
                         <thead>
                             <tr>
                                 <th scope="col" class="es-swap-tag" style="text-align: start;">Feature</th>
                                 <th scope="col"><span class="es-swap-tab">{{ $shortName }}</span></th>
-                                <th scope="col" class="es-swap-in-cell"><span class="es-swap-tab es-swap-tab-in">Event Schedule</span></th>
+                                <th scope="col" class="es-swap-in-cell"><span class="es-swap-tab es-swap-tab-in">Getvnt</span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -940,11 +940,11 @@
 
                 <div class="es-swap-seam" data-reveal style="--reveal-delay: 0.1s;">
                     <div class="es-swap-tabs mb-6">
-                        <span class="es-swap-tab es-swap-tab-in">Event Schedule</span>
+                        <span class="es-swap-tab es-swap-tab-in">Getvnt</span>
                     </div>
-                    <h3 class="es-swap-ink mb-4 text-2xl font-bold">Why switch to Event Schedule?</h3>
+                    <h3 class="es-swap-ink mb-4 text-2xl font-bold">Why switch to Getvnt?</h3>
                     <p class="es-swap-muted mb-6 leading-relaxed">
-                        {{ $why_switch['intro'] ?? 'Event Schedule offers a unique combination of features that no other platform matches: zero platform fees, open source transparency, and powerful AI tools.' }}
+                        {{ $why_switch['intro'] ?? 'Getvnt offers a unique combination of features that no other platform matches: zero platform fees, open source transparency, and powerful AI tools.' }}
                     </p>
                     <p class="es-swap-tag mb-4">What moves across</p>
                     <ul class="space-y-3" data-reveal-group="70">
@@ -970,7 +970,7 @@
             <div class="mb-12 text-center">
                 <div class="es-swap-mark mb-6" data-reveal aria-hidden="true"><span>Swap 06</span></div>
                 <h2 class="es-balance es-swap-ink mb-4 text-3xl font-black tracking-tight md:text-4xl" data-reveal style="--reveal-delay: 0.05s;">
-                    {{ $name }} to Event Schedule <span class="es-swap-accent">FAQ</span>
+                    {{ $name }} to Getvnt <span class="es-swap-accent">FAQ</span>
                 </h2>
                 <p class="es-swap-muted text-lg" data-reveal style="--reveal-delay: 0.1s;">
                     What people ask before they move the event work across.
@@ -1043,7 +1043,7 @@
                             Looking for direct platform comparisons?
                         </h2>
                         <p class="es-swap-muted">
-                            See how Event Schedule compares to Eventbrite, Luma, and Ticket Tailor.
+                            See how Getvnt compares to Eventbrite, Luma, and Ticket Tailor.
                         </p>
                     </div>
                     <svg aria-hidden="true" class="es-swap-hover-arrow es-swap-muted ms-6 h-6 w-6 flex-none transition-colors rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1086,13 +1086,13 @@
                         </div>
                         {{-- p-2 on phones, not p-3: the window's padding comes out of the
                              address bar's width, and at 390px the placeholder and the
-                             .eventschedule.com suffix have only a few pixels to spare. --}}
+                             .getvnt.com suffix have only a few pixels to spare. --}}
                         <div class="es-swap-window flex flex-col items-stretch gap-3 p-2 sm:flex-row sm:p-3">
                             <label for="es-claim-input" class="sr-only">Your schedule name</label>
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-4 py-4 backdrop-blur-md transition-all sm:px-5">
                                 <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="es-swap-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                                 <span class="relative z-10 flex items-center gap-2">

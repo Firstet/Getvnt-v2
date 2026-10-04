@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - CalDAV Sync"
+        name="Getvnt - CalDAV Sync"
         description="Two-way CalDAV sync with iCloud, Nextcloud, Fastmail or any conformant server. Free on every plan, HTTPS only, and selfhost friendly at both ends." />
     </x-slot>
 
@@ -577,7 +577,7 @@
         $servers = [
             ['Apple Calendar', 'caldav.icloud.com', 'iCloud is one of the three hostnames suggested on the connection form. Generate an app-specific password in your Apple account rather than using your main one.', false],
             ['Fastmail', 'caldav.fastmail.com', 'Also suggested on the form, and also happier with an app password than with your account password.', false],
-            ['Nextcloud', 'your-server/remote.php/dav', 'Your own server, your own data. Pair it with a selfhosted Event Schedule and no third party touches your calendar at all.', true],
+            ['Nextcloud', 'your-server/remote.php/dav', 'Your own server, your own data. Pair it with a selfhosted Getvnt and no third party touches your calendar at all.', true],
             ['Anything conformant', 'PROPFIND /', 'Radicale, or any other server that answers the standard requests. There is no vendor-specific code here to wait for, which is why this list is not a list of partners.', false],
         ];
 
@@ -664,8 +664,8 @@
                 'a' => 'Yes. CalDAV sync is on the free plan, in both directions, hosted or selfhosted. There is no calendar feature behind the paywall.',
             ],
             [
-                'q' => 'Does CalDAV sync work with selfhosted Event Schedule?',
-                'a' => 'Yes, and it is the combination the protocol was made for. Both Event Schedule and your calendar server can run on your own infrastructure, with nothing in between and no account with anyone. The usage metering that exists on the hosted service does not run on your own install either, so nothing about your calendar is counted or reported anywhere.',
+                'q' => 'Does CalDAV sync work with selfhosted Getvnt?',
+                'a' => 'Yes, and it is the combination the protocol was made for. Both Getvnt and your calendar server can run on your own infrastructure, with nothing in between and no account with anyone. The usage metering that exists on the hosted service does not run on your own install either, so nothing about your calendar is counted or reported anywhere.',
             ],
             [
                 'q' => 'How often does CalDAV sync run?',
@@ -677,7 +677,7 @@
             ],
             [
                 'q' => 'What happens if I delete an event in my calendar app?',
-                'a' => 'Nothing here. Reading from a calendar adds and updates events; it does not remove them. Deleting an event in Event Schedule does remove it from your calendar, and so does turning it back into a draft, but a deletion made in your calendar client leaves the event on your schedule for you to deal with. Google Calendar and Outlook sync do offer a policy for that; CalDAV does not.',
+                'a' => 'Nothing here. Reading from a calendar adds and updates events; it does not remove them. Deleting an event in Getvnt does remove it from your calendar, and so does turning it back into a draft, but a deletion made in your calendar client leaves the event on your schedule for you to deal with. Google Calendar and Outlook sync do offer a policy for that; CalDAV does not.',
             ],
             [
                 'q' => 'Do recurring events send every date to my calendar?',
@@ -737,7 +737,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-proto-muted mb-8 max-w-xl text-lg sm:text-xl">
-                        Apple Calendar speaks CalDAV. Fastmail speaks it. Your own Nextcloud speaks it. Event Schedule speaks it too, in six standard requests against a URL you type in yourself. No partnership, no API key, no permission from anyone.
+                        Apple Calendar speaks CalDAV. Fastmail speaks it. Your own Nextcloud speaks it. Getvnt speaks it too, in six standard requests against a URL you type in yourself. No partnership, no API key, no permission from anyone.
                     </p>
 
                     <div class="es-fade-up es-d-3 mb-8 flex flex-wrap gap-2">
@@ -866,7 +866,7 @@
                 <div class="mt-12 grid gap-6 md:grid-cols-2" data-reveal-group="90">
                     <div class="es-proto-card p-7" data-reveal="panel">
                         <p class="es-proto-tag mb-3">No endpoint of ours</p>
-                        <p class="es-proto-muted text-sm leading-relaxed">Not one of those six is an Event Schedule endpoint. They are the requests the standard defines, which is exactly why the same client reaches a server we have never heard of, running software written by somebody we have never met.</p>
+                        <p class="es-proto-muted text-sm leading-relaxed">Not one of those six is an Getvnt endpoint. They are the requests the standard defines, which is exactly why the same client reaches a server we have never heard of, running software written by somebody we have never met.</p>
                     </div>
                     <div class="es-proto-card p-7" data-reveal="panel">
                         <p class="es-proto-tag mb-3">Tested before it is saved</p>
@@ -932,13 +932,13 @@
                     Property by property, <span class="es-proto-accent">both ways.</span>
                 </h2>
                 <p class="es-proto-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.1s;">
-                    No mystery mapping. These are iCalendar property names, what Event Schedule writes into each one, and what it takes back out of one that arrives.
+                    No mystery mapping. These are iCalendar property names, what Getvnt writes into each one, and what it takes back out of one that arrives.
                 </p>
             </div>
 
             <div class="es-proto-card overflow-x-auto p-5 sm:p-7" data-reveal="panel">
                 <table class="es-proto-table">
-                    <caption class="sr-only">How each iCalendar VEVENT property maps to an Event Schedule event, outbound and inbound</caption>
+                    <caption class="sr-only">How each iCalendar VEVENT property maps to an Getvnt event, outbound and inbound</caption>
                     <thead>
                         <tr>
                             <th scope="col" class="es-proto-th">Property</th>
@@ -1107,7 +1107,7 @@
                 <div class="es-proto-card flex flex-col p-7" data-reveal="panel">
                     <p class="es-proto-tag mb-3">Your server, both times</p>
                     <h3 class="es-proto-ink mb-3 text-xl font-bold">Selfhost to selfhost</h3>
-                    <p class="es-proto-muted mb-4 text-sm leading-relaxed">Run Event Schedule on your own machine, point it at your own calendar server, and no third party is involved in your calendar at all. The usage metering that exists on the hosted service does not run on your own install, so nothing is counted and nothing is reported.</p>
+                    <p class="es-proto-muted mb-4 text-sm leading-relaxed">Run Getvnt on your own machine, point it at your own calendar server, and no third party is involved in your calendar at all. The usage metering that exists on the hosted service does not run on your own install, so nothing is counted and nothing is reported.</p>
                     <div class="mt-auto flex flex-wrap gap-2">
                         <span class="es-proto-chip">No cloud dependency</span>
                         <span class="es-proto-chip">Full data ownership</span>
@@ -1232,7 +1232,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-proto-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

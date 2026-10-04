@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Meetup Groups"
+        name="Getvnt for Meetup Groups"
         description="A group page with its own link, recurring meetups set once, free RSVPs with a capacity and a waitlist, and email to the members who sign up. Free forever, with no organizer subscription."
         audience="Meetup Groups, Clubs & Community Organizers"
         keywords="meetup group events, meetup rsvp, free meetup page, community group calendar, recurring meetup schedule, meetup organizer tools" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to run meetup group events on Event Schedule",
+        "name": "How to run meetup group events on Getvnt",
         "description": "Set the rhythm once, put a cap on the room, and let members subscribe.",
         "step": [
             {
@@ -283,7 +283,7 @@
             ],
             [
                 'q' => 'What if the platform we use now shuts down or changes its prices?',
-                'a' => 'Event Schedule is open source. You can export a backup of the group\'s schedule at any time and restore it, and if you would rather not depend on anyone, you can selfhost the whole thing on your own server. The calendar feed and the page link belong to the group, not to a paid account that lapses.',
+                'a' => 'Getvnt is open source. You can export a backup of the group\'s schedule at any time and restore it, and if you would rather not depend on anyone, you can selfhost the whole thing on your own server. The calendar feed and the page link belong to the group, not to a paid account that lapses.',
             ],
             [
                 'q' => 'How do I set up a meetup that is not simply weekly?',
@@ -546,7 +546,7 @@
                     <div class="es-meet-card p-5" data-reveal>
                         <p class="es-meet-ink text-sm font-bold">And if you ever want to leave</p>
                         <p class="es-meet-muted mt-1 text-sm">
-                            Event Schedule is open source. Export a backup of the schedule whenever
+                            Getvnt is open source. Export a backup of the schedule whenever
                             you like, restore it, or selfhost the whole thing on a server the group
                             controls. No group is stuck on a platform because of where its dates live.
                         </p>
@@ -840,7 +840,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-meet-card es-meet-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-meet-muted text-sm">Event Schedule for</div>
+                            <div class="es-meet-muted text-sm">Getvnt for</div>
                             <div class="es-meet-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-meet-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -919,7 +919,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-group" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=curator') }}" class="es-meet-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

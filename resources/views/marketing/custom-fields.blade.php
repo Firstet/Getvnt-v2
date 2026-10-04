@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Custom Fields"
+        name="Getvnt - Custom Fields"
         description="Define your own questions and have them asked on ticket forms, registration forms and public event request forms, with the answers filed on the order, the ticket and the sales export."
         keywords="custom fields, event registration form, attendee questions, checkout questions, event request form, dietary requirements, form validation" />
     </x-slot>
@@ -617,7 +617,7 @@
             ],
             [
                 'q' => 'Are custom fields free?',
-                'a' => 'The registration list itself is free forever, including a capacity limit and the count of places left on each date. The custom questions on that form, and the fields on your schedule, are part of the Pro plan at '.plan_price($proMonthly).' a month, which comes with a 7 day free trial. A question attached to a single ticket type is the exception: that works on every plan. Event Schedule charges zero platform fees on ticket sales.',
+                'a' => 'The registration list itself is free forever, including a capacity limit and the count of places left on each date. The custom questions on that form, and the fields on your schedule, are part of the Pro plan at '.plan_price($proMonthly).' a month, which comes with a 7 day free trial. A question attached to a single ticket type is the exception: that works on every plan. Getvnt charges zero platform fees on ticket sales.',
             ],
             [
                 'q' => 'How many fields can I have?',
@@ -684,7 +684,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-form-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        A custom field is one definition. Event Schedule renders it as a question on the forms it belongs on, and files the answer as a column you can read, print and export.
+                        A custom field is one definition. Getvnt renders it as a question on the forms it belongs on, and files the answer as a column you can read, print and export.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -1024,7 +1024,7 @@
                             <h3 class="es-form-ink text-lg font-bold">Taking money</h3>
                             <span class="es-form-plan es-form-plan-pro">Pro</span>
                         </div>
-                        <p class="es-form-muted text-sm leading-relaxed">A ticket with a price on it is Pro, taken through your own Stripe or <a href="{{ route('marketing.paypal') }}" class="es-form-link font-medium hover:underline">PayPal</a> account, though scanning any ticket at the door is free. Pro brings the live check-in dashboard with it. Event Schedule charges zero platform fees on every plan, so past the processor's own fee the money is yours.</p>
+                        <p class="es-form-muted text-sm leading-relaxed">A ticket with a price on it is Pro, taken through your own Stripe or <a href="{{ route('marketing.paypal') }}" class="es-form-link font-medium hover:underline">PayPal</a> account, though scanning any ticket at the door is free. Pro brings the live check-in dashboard with it. Getvnt charges zero platform fees on every plan, so past the processor's own fee the money is yours.</p>
                     </div>
                 </div>
 
@@ -1268,7 +1268,7 @@
                                 <span class="es-form-plan es-form-plan-pro">Pro</span>
                             </div>
                             <p class="es-form-muted mb-4">Every schedule field can carry an instruction for the importer: what this field means and where to look for it. Paste a flyer or a listing and the value arrives already in the box.</p>
-                            <p class="es-form-muted mt-auto text-sm">Event import runs on every plan, with a daily allowance on eventschedule.com and none on a selfhosted install. The custom fields it fills are Pro.</p>
+                            <p class="es-form-muted mt-auto text-sm">Event import runs on every plan, with a daily allowance on getvnt.com and none on a selfhosted install. The custom fields it fills are Pro.</p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
                         <div class="es-ring-glow" aria-hidden="true"></div>
@@ -1470,7 +1470,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-form-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Theater Performers"
+        name="Getvnt for Theater Performers"
         description="A public schedule that doubles as a credits list: past productions stay dated and visible, and companies that cast you can put the dates on your page for you to accept."
         audience="Theater Performers"
         keywords="actor schedule, theatre credits list, performer calendar, casting booking requests, actor resume online, theatre performance dates" />
@@ -316,8 +316,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for theater performers?',
-                'a' => 'The parts you use every day are free forever: your public schedule and its list layout, past productions kept and dated, sub-schedules, booking requests from companies that want to cast you, Drafts that keep auditions off the public page, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Free registration with a capacity is free as well, unlimited, and so is scanning the QR at the door. Charging for a seat on work you produce yourself is Pro at '.plan_price($proMonthly).' a month. Event Schedule charges zero platform fees on sales either way.',
+                'q' => 'Is Getvnt free for theater performers?',
+                'a' => 'The parts you use every day are free forever: your public schedule and its list layout, past productions kept and dated, sub-schedules, booking requests from companies that want to cast you, Drafts that keep auditions off the public page, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Free registration with a capacity is free as well, unlimited, and so is scanning the QR at the door. Charging for a seat on work you produce yourself is Pro at '.plan_price($proMonthly).' a month. Getvnt charges zero platform fees on sales either way.',
             ],
             [
                 'q' => 'How does my schedule become a credits list?',
@@ -325,11 +325,11 @@
             ],
             [
                 'q' => 'What happens when a theater casts me in a production?',
-                'a' => 'If the company also uses Event Schedule, they can add you to the production and it arrives on your schedule as a request. It goes on your schedule only once you accept it, though their own event page lists the cast either way. What you accept carries their own dates and details rather than a second copy you have to keep in step, and you can decline anything you would rather not list.',
+                'a' => 'If the company also uses Getvnt, they can add you to the production and it arrives on your schedule as a request. It goes on your schedule only once you accept it, though their own event page lists the cast either way. What you accept carries their own dates and details rather than a second copy you have to keep in step, and you can decline anything you would rather not list.',
             ],
             [
                 'q' => 'A company listed me before I joined. Is that page mine?',
-                'a' => 'It can be. When a company names a performer who is not on Event Schedule, a page is created for them. It says which company made it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines. Sign in with the email address the company entered for you and press "Claim this page": it becomes your schedule with those credits already on it, and the companies that were listing you keep listing you without a request each time. If it is not you, "This is not me" takes it down.',
+                'a' => 'It can be. When a company names a performer who is not on Getvnt, a page is created for them. It says which company made it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines. Sign in with the email address the company entered for you and press "Claim this page": it becomes your schedule with those credits already on it, and the companies that were listing you keep listing you without a request each time. If it is not you, "This is not me" takes it down.',
             ],
             [
                 'q' => 'Can I keep auditions and rehearsals off my public page?',
@@ -337,7 +337,7 @@
             ],
             [
                 'q' => 'Can I sell tickets to my own show?',
-                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a seat carry a price. Named ticket types with their own prices, quantities and sales windows, payment through Stripe, PayPal, Invoice Ninja, Payfast (in rand), a payment link or cash, and the live check-in dashboard, promo codes, add-ons and per-attendee tickets come with it. Scanning the QR code at the door is free on any plan, and a free preview or a scratch night takes registrations without one. Event Schedule charges no platform fee on either plan.',
+                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a seat carry a price. Named ticket types with their own prices, quantities and sales windows, payment through Stripe, PayPal, Invoice Ninja, Payfast (in rand), a payment link or cash, and the live check-in dashboard, promo codes, add-ons and per-attendee tickets come with it. Scanning the QR code at the door is free on any plan, and a free preview or a scratch night takes registrations without one. Getvnt charges no platform fee on either plan.',
             ],
         ];
 
@@ -400,7 +400,7 @@
                     <div class="es-cred-card p-6 sm:p-8">
                         <div class="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                             <h2 class="es-cred-ink text-xl font-black tracking-tight">Maya Okonkwo</h2>
-                            <span class="es-cred-muted es-cred-mono text-xs">maya.eventschedule.com</span>
+                            <span class="es-cred-muted es-cred-mono text-xs">maya.getvnt.com</span>
                         </div>
                         <p class="es-cred-muted mb-6 text-sm">Stage &middot; London</p>
 
@@ -564,7 +564,7 @@
             <div class="es-cred-card es-cred-hover mt-4 p-6" data-reveal>
                 <h3 class="es-cred-ink mb-2 text-lg font-bold">The credit can get there before you do</h3>
                 <p class="es-cred-muted text-sm">
-                    A company that names you before you are on Event Schedule creates a page for you as it
+                    A company that names you before you are on Getvnt creates a page for you as it
                     does. The page says who made it and that you have not claimed it, credits each date to
                     the company that added it, and stays out of search engines. Sign in with the email
                     address they entered and claim it: the credits become yours, and the companies already
@@ -613,7 +613,7 @@
                             </div>
 
                             <p class="es-cred-muted mt-5 border-t border-[rgba(28,26,21,0.1)] pt-4 text-xs dark:border-[rgba(236,232,221,0.1)]">
-                                Payment goes through your own Stripe or PayPal account, Invoice Ninja, Payfast (in rand), a payment link or cash at the door. Event Schedule takes none of it.
+                                Payment goes through your own Stripe or PayPal account, Invoice Ninja, Payfast (in rand), a payment link or cash at the door. Getvnt takes none of it.
                             </p>
 
                             <div class="es-glare" aria-hidden="true"></div>
@@ -936,7 +936,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-cred-card es-cred-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-cred-muted text-sm">Event Schedule for</div>
+                            <div class="es-cred-muted text-sm">Getvnt for</div>
                             <div class="es-cred-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-cred-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1014,7 +1014,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-cred-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

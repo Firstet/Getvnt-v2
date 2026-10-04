@@ -67,7 +67,7 @@ class MarketingPriceTest extends TestCase
             'number_format($feeEs, 2)',
             'number_format($feeKeep, 2)', '<span class="font-bold">$15.00</span>'],
         'gift-cards.blade.php' => ["['\$50', false]", "['\$150', false]"],
-        // /saas sells running your OWN platform on Event Schedule, so its Free/$29/$99 tier
+        // /saas sells running your OWN platform on Getvnt, so its Free/$29/$99 tier
         // mockups and "+$29/mo after trial" badges are the READER's pricing, not ours. They
         // stay hardcoded even though $29 collides with the Enterprise price.
         'saas.blade.php' => [
@@ -418,7 +418,7 @@ class MarketingPriceTest extends TestCase
 
         // Competitors' prices are quoted on purpose and must stay literal. They are stripped by
         // exact phrase rather than inferred from marker words: an earlier version of this test
-        // required a word like "Event Schedule" or "flat" on the same line, which 39 of the 94
+        // required a word like "Getvnt" or "flat" on the same line, which 39 of the 94
         // literals it exists to catch would have failed - including every comparison-table row,
         // where the price sits alone in an array of strings with no prose around it.
         $competitorPrices = [

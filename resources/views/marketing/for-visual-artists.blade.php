@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Visual Artists"
+        name="Getvnt for Visual Artists"
         description="Build your collector base directly. Announce exhibitions, sell tickets to openings, and email collectors. Zero platform fees. Free forever."
         audience="Visual Artists"
         keywords="artist exhibition calendar, visual artist scheduling, gallery show management, art event calendar, free artist scheduling" />
@@ -29,7 +29,7 @@
            saying which Saturdays the studio is open, the workshop list
            with places crossed off. Everything is pinned, nothing is
            filed, and it is only ever readable by people standing in the
-           room. This page argues that Event Schedule is that wall with
+           room. This page argues that Getvnt is that wall with
            an address on it.
 
            THE METAPHOR AND THE FEATURE STORY ARE THE SAME SENTENCE:
@@ -558,8 +558,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for visual artists?',
-                'a' => 'Yes. The wall itself costs nothing: your public page and its permanent link, recurring open studio dates with individual dates taken out, sub-schedules with their own colour and their own link, Drafts that stay off the page until you announce, the header wall of the venues you have shown with, two-way Google, Outlook and CalDAV calendar sync, an embeddable calendar, built-in analytics, a downloadable QR code for your schedule, shareable graphics of your upcoming shows, free RSVP with a capacity, one bookable appointment type, QR check-in at the door, and up to 10 newsletter emails a month, counted per recipient rather than per send. Putting a price on a place is where the Pro plan starts, at '.plan_price($proMonthly).' a month, which also adds your own questions at checkout and more appointment types. Event Schedule charges zero platform fees on ticket sales on every plan.',
+                'q' => 'Is Getvnt free for visual artists?',
+                'a' => 'Yes. The wall itself costs nothing: your public page and its permanent link, recurring open studio dates with individual dates taken out, sub-schedules with their own colour and their own link, Drafts that stay off the page until you announce, the header wall of the venues you have shown with, two-way Google, Outlook and CalDAV calendar sync, an embeddable calendar, built-in analytics, a downloadable QR code for your schedule, shareable graphics of your upcoming shows, free RSVP with a capacity, one bookable appointment type, QR check-in at the door, and up to 10 newsletter emails a month, counted per recipient rather than per send. Putting a price on a place is where the Pro plan starts, at '.plan_price($proMonthly).' a month, which also adds your own questions at checkout and more appointment types. Getvnt charges zero platform fees on ticket sales on every plan.',
             ],
             [
                 'q' => 'Can I list exhibitions, open studios and art fairs together?',
@@ -575,7 +575,7 @@
             ],
             [
                 'q' => 'Can I sell places at a workshop or a ticketed opening?',
-                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a place carry a price. Create as many named ticket types as the event needs, each with its own price and quantity. The quantity is counted per occurrence date, so a full March does not stop April selling. Check people in with a QR code at the door on any plan, and take the money through your own Stripe or PayPal account, or as cash, a payment link or Invoice Ninja. Pro also adds your own questions at checkout. A free opening asks for none of it: registration with a capacity is on every plan. Event Schedule charges zero platform fees either way, so what you keep is the price less the processor\'s fee, and a Stripe or PayPal sale can be refunded in full or in part from the Sales page.',
+                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a place carry a price. Create as many named ticket types as the event needs, each with its own price and quantity. The quantity is counted per occurrence date, so a full March does not stop April selling. Check people in with a QR code at the door on any plan, and take the money through your own Stripe or PayPal account, or as cash, a payment link or Invoice Ninja. Pro also adds your own questions at checkout. A free opening asks for none of it: registration with a capacity is on every plan. Getvnt charges zero platform fees either way, so what you keep is the price less the processor\'s fee, and a Stripe or PayPal sale can be refunded in full or in part from the Sales page.',
             ],
             [
                 'q' => 'What happens to the photographs people take at the opening?',
@@ -586,7 +586,7 @@
                 'a' => 'Yes. When a gallery lists you on their event, it arrives on your schedule and waits for you to accept it, unless you have added that gallery to your Approved Schedules, in which case it goes straight on. Accept it and the same entry appears on both pages, so the dates cannot end up saying two different things. Nothing shows on your page that you have not agreed to.',
             ],
             [
-                'q' => 'A gallery listed me, but I am not on Event Schedule. What happens?',
+                'q' => 'A gallery listed me, but I am not on Getvnt. What happens?',
                 'a' => 'The listing creates a page in your name. It says which schedule created it and that you have not claimed it, each date on it is credited to the schedule that added it, and it stays out of search engines until you claim it. Claim it by signing in with the email address on it: the page becomes your schedule, and the galleries that already list you stay approved, so their dates keep appearing. If the page carries no email address or phone number, there is nothing to check a claim against, so ask the gallery to send you an invitation. If the page is not you at all, "This is not me" asks for it to come down.',
             ],
         ];
@@ -633,7 +633,7 @@
                         readable by people standing in the room.
                     </p>
                     <p class="es-brush-muted es-fade-up es-d-2 mb-9 max-w-xl text-base">
-                        Event Schedule is that wall with an address on it: one page for your exhibitions, open studios and workshops.
+                        Getvnt is that wall with an address on it: one page for your exhibitions, open studios and workshops.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col gap-3 sm:flex-row">
@@ -705,7 +705,7 @@
                 <div class="es-tilt-inner es-brush-card overflow-hidden p-5 sm:p-7">
                     <div class="overflow-x-auto">
                         <table class="es-brush-ledger">
-                            <caption class="sr-only">A working year, March to December: each show with where it is, its dates, how it is set up in Event Schedule, and a bar showing when it runs.</caption>
+                            <caption class="sr-only">A working year, March to December: each show with where it is, its dates, how it is set up in Getvnt, and a bar showing when it runs.</caption>
                             <thead>
                                 <tr class="es-brush-tag">
                                     <th scope="col" class="pb-3 pe-3 font-extrabold">Show</th>
@@ -792,7 +792,7 @@
                     ['studio', 'The Saturdays repeat', 'One recurring event covers the whole run: pick the pattern, every week or the same weekday each month, set the hours, and give it an end, either a closing date or a number of dates. Date exceptions take out the two weekends you are away, so a change to the pattern is not a rebuild.'],
                     ['exhibitions', 'The show nobody has announced', 'Keep the event as a Draft and it stays off your public page until the gallery has sent the invitations. Then publish it. A sub-schedule cannot do this, because a sub-schedule has no visibility of its own; hiding is what Draft is for.'],
                     ['teaching', 'Prints, paintings and teaching, sorted', 'Sub-schedules split one page into strands, each with its own colour and its own link. Send a school the workshops and a gallery the exhibitions, from a page you only maintain once.'],
-                    ['exhibitions', 'The gallery already typed it', 'When a gallery lists you on their event it arrives on your schedule and waits for you to accept it, unless you have already approved that gallery. Accept it and the same entry shows on both pages, so the dates cannot end up saying two different things. Not on Event Schedule yet? The listing makes a page in your name, and signing in with the email address on it makes that page yours.'],
+                    ['exhibitions', 'The gallery already typed it', 'When a gallery lists you on their event it arrives on your schedule and waits for you to accept it, unless you have already approved that gallery. Accept it and the same entry shows on both pages, so the dates cannot end up saying two different things. Not on Getvnt yet? The listing makes a page in your name, and signing in with the email address on it makes that page yours.'],
                 ] as $pi => [$pStrand, $pTitle, $pBody])
                     @php [$sName, $sEdge, $sInk] = $strands[$pStrand]; @endphp
                     <div data-reveal class="es-brush-pinned relative pt-2" style="--tilt: {{ $pi % 2 === 0 ? '-0.7deg' : '0.7deg' }};">
@@ -1033,7 +1033,7 @@
 
             <div class="mt-8 text-center" data-reveal>
                 <p class="es-brush-muted mx-auto max-w-2xl text-sm">
-                    Event Schedule takes nothing out of a ticket price on any plan. You pay Stripe
+                    Getvnt takes nothing out of a ticket price on any plan. You pay Stripe
                     or PayPal what they charge, the rest arrives in your own account, and a sale
                     through either can be refunded in full or in part from the Sales page. A
                     workshop here is places, not positions: numbered seats on a seat map belong to
@@ -1245,7 +1245,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-brush-card es-brush-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-brush-muted text-sm">Event Schedule for</div>
+                            <div class="es-brush-muted text-sm">Getvnt for</div>
                             <div class="es-brush-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-brush-verm h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1324,7 +1324,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-md border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-studio" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-brush-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-md px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Schools"
+        name="Getvnt for Schools"
         description="A school event calendar where weekly clubs are set once for the term, closure days are date exceptions, and concerts, trips and parent evenings sit on top with free sign-ups or tickets."
         audience="Schools, Colleges, Universities & Parent-Teacher Associations"
         keywords="school event calendar, school calendar app, parent teacher conference booking, school play tickets, school club schedule, pta events" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a school event calendar online with Event Schedule",
+        "name": "How to put a school event calendar online with Getvnt",
         "description": "Set the term's regular dates once, add the evenings on top, and give families one link.",
         "step": [
             {
@@ -336,16 +336,16 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for a school?',
+                'q' => 'Is Getvnt free for a school?',
                 'a' => 'The parts a school uses every week are free forever: recurring clubs and fixtures, date exceptions for closures, free sign-ups with a capacity, sub-schedules, one appointment type for parents to book, the live calendar feed, the website embed, two-way calendar sync and the translated page. Pro, at '.plan_price($proMonthly).' a month, is for putting a price on a ticket, the live check-in dashboard, more appointment types and the advanced booking rules. Enterprise adds more staff logins and the Internal and Unlisted event types. There are zero platform fees on ticket sales on every plan.',
             ],
             [
                 'q' => 'Can parents book a slot for a parent-teacher conference?',
-                'a' => 'Yes, through an appointment type. You set the hours it runs and how long each slot is, and parents pick an open time on its booking page; they get a confirmation, a reminder and the option to cancel or move it. On the free plan a schedule has one appointment type, and it must be free to book, which suits a standing slot like a head of year\'s weekly drop-in. A one-off consultation evening on a single date needs a date override, and date overrides, buffers between slots, a minimum notice period and an approval step are Pro, as are more types, for example one per teacher. On eventschedule.com the booking emails go out through the school\'s own email settings, so add those first.',
+                'a' => 'Yes, through an appointment type. You set the hours it runs and how long each slot is, and parents pick an open time on its booking page; they get a confirmation, a reminder and the option to cancel or move it. On the free plan a schedule has one appointment type, and it must be free to book, which suits a standing slot like a head of year\'s weekly drop-in. A one-off consultation evening on a single date needs a date override, and date overrides, buffers between slots, a minimum notice period and an approval step are Pro, as are more types, for example one per teacher. On getvnt.com the booking emails go out through the school\'s own email settings, so add those first.',
             ],
             [
                 'q' => 'Can more than one member of staff run the calendar?',
-                'a' => 'The free plan and Pro each include one team member on a schedule. Adding more staff is Enterprise: an admin can run the schedule day to day and see ticket sales and the check-in dashboard, and a viewer has read-only access but can still scan tickets at the door. Only the owner changes those levels. If you selfhost Event Schedule on the school\'s own server, every feature is included.',
+                'a' => 'The free plan and Pro each include one team member on a schedule. Adding more staff is Enterprise: an admin can run the schedule day to day and see ticket sales and the check-in dashboard, and a viewer has read-only access but can still scan tickets at the door. Only the owner changes those levels. If you selfhost Getvnt on the school\'s own server, every feature is included.',
             ],
             [
                 'q' => 'Can some events stay private to staff?',
@@ -357,7 +357,7 @@
             ],
             [
                 'q' => 'How do we sell tickets for the school play?',
-                'a' => 'Putting a price on a ticket needs Pro. Set a ticket type for each price, such as adult and child, give the night a capacity, and families pay into the school\'s own Stripe or PayPal account, or by Invoice Ninja, a payment link or cash. Event Schedule takes no platform fee. Tickets carry a QR code, scanning them at the door works on every plan, and the live check-in dashboard is part of Pro. If the performance is free, give it free registration with a capacity instead, which needs no plan at all.',
+                'a' => 'Putting a price on a ticket needs Pro. Set a ticket type for each price, such as adult and child, give the night a capacity, and families pay into the school\'s own Stripe or PayPal account, or by Invoice Ninja, a payment link or cash. Getvnt takes no platform fee. Tickets carry a QR code, scanning them at the door works on every plan, and the live check-in dashboard is part of Pro. If the performance is free, give it free registration with a capacity instead, which needs no plan at all.',
             ],
             [
                 'q' => 'What happens to weekly clubs over half term and closure days?',
@@ -733,7 +733,7 @@
                         </div>
                         <div class="es-chalk-card es-chalk-hover p-4" data-reveal>
                             <p class="es-chalk-ink text-sm font-bold">Sent from the school's address</p>
-                            <p class="es-chalk-muted mt-1 text-sm">On eventschedule.com, booking emails go out through the schedule's own email settings, so connect the school's mail server first. Selfhosted, any configured mailer works.</p>
+                            <p class="es-chalk-muted mt-1 text-sm">On getvnt.com, booking emails go out through the schedule's own email settings, so connect the school's mail server first. Selfhosted, any configured mailer works.</p>
                         </div>
                     </div>
                 </div>
@@ -782,7 +782,7 @@
                         @foreach ([
                             'A family leaves an email address on the calendar and confirms it. When you add events, confirmed subscribers get a short digest of them, at most one every 72 hours, and it does not use your newsletter allowance.',
                             'Anything with more to say, such as a letter about the residential, is a newsletter the school writes and sends. The free plan covers 10 emails a month, Pro 100 and Enterprise 1,000, counted per recipient, so one letter to 90 families uses 90.',
-                            'A school that selfhosts, or connects its own email settings on eventschedule.com, has no newsletter limit.',
+                            'A school that selfhosts, or connects its own email settings on getvnt.com, has no newsletter limit.',
                         ] as $point)
                             <li class="flex items-start gap-3">
                                 <svg aria-hidden="true" class="es-chalk-accent mt-0.5 h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -980,7 +980,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-chalk-card es-chalk-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-chalk-muted text-sm">Event Schedule for</div>
+                            <div class="es-chalk-muted text-sm">Getvnt for</div>
                             <div class="es-chalk-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-chalk-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1059,7 +1059,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-school" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-chalk-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

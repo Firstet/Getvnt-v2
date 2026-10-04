@@ -1,8 +1,8 @@
 <x-docs-page
     key="selfhost/microsoft-calendar"
-    title="Outlook and Microsoft 365 Sync for Selfhost - Event Schedule"
-    description="Set up two-way Outlook and Microsoft 365 calendar sync on a selfhosted Event Schedule install through Microsoft Graph, with optional Teams meeting links."
-    lede="Set up and use the Microsoft 365 / Outlook Calendar integration for bidirectional sync between Event Schedule and Outlook through Microsoft Graph."
+    title="Outlook and Microsoft 365 Sync for Selfhost - Getvnt"
+    description="Set up two-way Outlook and Microsoft 365 calendar sync on a selfhosted Getvnt install through Microsoft Graph, with optional Teams meeting links."
+    lede="Set up and use the Microsoft 365 / Outlook Calendar integration for bidirectional sync between Getvnt and Outlook through Microsoft Graph."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#prerequisites">Prerequisites</x-doc-nav-link>
@@ -54,14 +54,14 @@
         <h3 class="doc-subheading">1. Azure App Registration</h3>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>Go to the <a href="https://portal.azure.com/" target="_blank" rel="noopener noreferrer" class="doc-link">Azure Portal</a> and open <strong class="text-gray-900 dark:text-white">Microsoft Entra ID</strong> &rarr; <strong class="text-gray-900 dark:text-white">App registrations</strong> &rarr; <strong class="text-gray-900 dark:text-white">New registration</strong></li>
-            <li>Enter a name for the application (for example, "Event Schedule")</li>
+            <li>Enter a name for the application (for example, "Getvnt")</li>
             <li>Under <strong class="text-gray-900 dark:text-white">Supported account types</strong>, choose "Accounts in any organizational directory and personal Microsoft accounts" (this matches <code class="doc-inline-code">MICROSOFT_TENANT=common</code>)</li>
             <li>Under <strong class="text-gray-900 dark:text-white">Redirect URI</strong>, select the <strong class="text-gray-900 dark:text-white">Web</strong> platform and enter: <code class="doc-inline-code">{APP_URL}/microsoft-calendar/callback</code></li>
             <li>Click <strong class="text-gray-900 dark:text-white">Register</strong></li>
         </ol>
 
         <h3 class="doc-subheading">2. API Permissions</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Event Schedule requests delegated permissions only, so it acts as the signed-in user and never gains tenant-wide calendar access.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Getvnt requests delegated permissions only, so it acts as the signed-in user and never gains tenant-wide calendar access.</p>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>In the app registration, open <strong class="text-gray-900 dark:text-white">API permissions</strong> &rarr; <strong class="text-gray-900 dark:text-white">Add a permission</strong> &rarr; <strong class="text-gray-900 dark:text-white">Microsoft Graph</strong> &rarr; <strong class="text-gray-900 dark:text-white">Delegated permissions</strong></li>
             <li>Add the following delegated permissions:
@@ -78,7 +78,7 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">The scope list is fixed</div>
-            <p>Event Schedule always requests exactly these five scopes. <code class="doc-inline-code">offline_access</code> is the one that yields a refresh token, so without it users are pushed back through sign-in as soon as the access token expires.</p>
+            <p>Getvnt always requests exactly these five scopes. <code class="doc-inline-code">offline_access</code> is the one that yields a refresh token, so without it users are pushed back through sign-in as soon as the access token expires.</p>
         </div>
 
         <h3 class="doc-subheading">3. Client Secret and Client ID</h3>
@@ -146,7 +146,7 @@
 
         <div class="doc-callout doc-callout-warning mt-6">
             <div class="doc-callout-title">Webhook secret is the only authenticity check</div>
-            <p>Graph subscriptions cannot be created at all while <code class="doc-inline-code">MICROSOFT_WEBHOOK_SECRET</code> is empty: the attempt is refused rather than made without a <code class="doc-inline-code">clientState</code>. Once set, Graph echoes the value back on every change notification, and Event Schedule ignores any notification whose value does not match, answering <code class="doc-inline-code">401</code> when none of them do.</p>
+            <p>Graph subscriptions cannot be created at all while <code class="doc-inline-code">MICROSOFT_WEBHOOK_SECRET</code> is empty: the attempt is refused rather than made without a <code class="doc-inline-code">clientState</code>. Once set, Graph echoes the value back on every change notification, and Getvnt ignores any notification whose value does not match, answering <code class="doc-inline-code">401</code> when none of them do.</p>
         </div>
     </section>
 
@@ -188,12 +188,12 @@
                 <tbody>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">To Outlook Calendar</span></td>
-                        <td>Published Event Schedule events are pushed to the selected Outlook calendar</td>
+                        <td>Published Getvnt events are pushed to the selected Outlook calendar</td>
                         <td>Not created</td>
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">From Outlook Calendar</span></td>
-                        <td>Outlook events are imported into Event Schedule</td>
+                        <td>Outlook events are imported into Getvnt</td>
                         <td>Created</td>
                     </tr>
                     <tr>
@@ -227,7 +227,7 @@
 
         <h3 class="doc-subheading">Microsoft Teams Meeting Links</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Enable <strong class="text-gray-900 dark:text-white">Create Teams meetings for online events</strong> on the schedule's Outlook Calendar tab. Every event with no venue is then created in Outlook as a Teams for Business meeting, and the join link is written into the event's online event URL, but only when that field is still empty so a link you entered yourself is never overwritten.</p>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Personal Microsoft accounts usually cannot create Teams for Business meetings. When Graph rejects the request, Event Schedule retries immediately without the Teams flags, so you get a normal Outlook event and no join link rather than a failed sync.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Personal Microsoft accounts usually cannot create Teams for Business meetings. When Graph rejects the request, Getvnt retries immediately without the Teams flags, so you get a normal Outlook event and no join link rather than a failed sync.</p>
 
         <h3 class="doc-subheading">Importing From Outlook</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">Inbound sync uses a Graph delta query over a window running from 30 days ago to 365 days ahead. On the first run, or after you switch calendars, the whole window is read; after that only changes are fetched. Imported events:</p>
@@ -238,7 +238,7 @@
         </ul>
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Appointment bookings are protected</div>
-            <p>An event created by an appointment booking is owned by Event Schedule. Inbound sync never rewrites its name, description or time, so moving the Outlook copy will not move a customer's booking.</p>
+            <p>An event created by an appointment booking is owned by Getvnt. Inbound sync never rewrites its name, description or time, so moving the Outlook copy will not move a customer's booking.</p>
         </div>
 
         <h3 class="doc-subheading">When an Event Is Deleted in Outlook</h3>
@@ -248,7 +248,7 @@
                 <thead>
                     <tr>
                         <th>Option</th>
-                        <th>Result in Event Schedule</th>
+                        <th>Result in Getvnt</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -272,7 +272,7 @@
 
         <h3 class="doc-subheading">Real-Time Sync and Polling Fallback</h3>
         <ul class="doc-list">
-            <li>Graph sends one notification per changed event; Event Schedule collapses them to at most one inbound sync per schedule per minute, then reads every pending change in a single delta request</li>
+            <li>Graph sends one notification per changed event; Getvnt collapses them to at most one inbound sync per schedule per minute, then reads every pending change in a single delta request</li>
             <li>The 15-minute <code class="doc-inline-code">microsoft:sync</code> command polls the schedules whose direction is <strong class="text-gray-900 dark:text-white">From Outlook Calendar</strong> or <strong class="text-gray-900 dark:text-white">Bidirectional Sync</strong>, and is the primary path when no public URL is available</li>
             <li>The daily <code class="doc-inline-code">microsoft:refresh-webhooks</code> command extends any subscription due to expire within the next day, and recreates any that Graph has already dropped</li>
         </ul>

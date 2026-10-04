@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Team Scheduling"
+        name="Getvnt - Team Scheduling"
         description="Invite colleagues onto one schedule with a named position. Admins create and edit events, open the settings page and see the schedule's ticket sales, viewers get read-only access to the schedule and can still scan tickets, and the owner alone changes levels, removes members, holds billing and can hand the schedule to another account." />
     </x-slot>
 
@@ -26,7 +26,7 @@
            slot, and a position code beside each name. That is exactly
            the shape of this product's data - role_user has one row per
            person with a `level` of owner, admin or viewer, and on
-           eventschedule.com there are at most five of them
+           getvnt.com there are at most five of them
            (RoleController::storeMember caps at 5 when config('app.hosted')).
            So the metaphor and the feature story are one sentence: the
            card is finite, the position decides what the name may do,
@@ -623,7 +623,7 @@
         $faqs = [
             [
                 'q' => 'How many team members can I have?',
-                'a' => 'On the free plan a schedule has one member, which is you. Adding anybody else needs the Enterprise plan at '.plan_price($entMonthly).' a month, and on eventschedule.com a team is capped at five members in total. A selfhosted install gets Enterprise features and has no member cap.',
+                'a' => 'On the free plan a schedule has one member, which is you. Adding anybody else needs the Enterprise plan at '.plan_price($entMonthly).' a month, and on getvnt.com a team is capped at five members in total. A selfhosted install gets Enterprise features and has no member cap.',
             ],
             [
                 'q' => 'What are the access levels?',
@@ -631,11 +631,11 @@
             ],
             [
                 'q' => 'How do I invite somebody?',
-                'a' => 'Open the Team tab on your schedule, choose Add Member, and enter their name and email address. A phone number is optional. You pick Admin or Viewer at the same time. They get an email: if they are new they are sent to set a password, and if they already have an Event Schedule account it takes them straight to your schedule.',
+                'a' => 'Open the Team tab on your schedule, choose Add Member, and enter their name and email address. A phone number is optional. You pick Admin or Viewer at the same time. They get an email: if they are new they are sent to set a password, and if they already have an Getvnt account it takes them straight to your schedule.',
             ],
             [
                 'q' => 'What if they never accept the invitation?',
-                'a' => 'Their row stays on the Team tab with a Resend invite button next to it until they finish signing up, so you can send it again rather than starting over. If you gave a phone number, eventschedule.com can also send the invite as a text, when text messaging is switched on there.',
+                'a' => 'Their row stays on the Team tab with a Resend invite button next to it until they finish signing up, so you can send it again rather than starting over. If you gave a phone number, getvnt.com can also send the invite as a text, when text messaging is switched on there.',
             ],
             [
                 'q' => 'Can two people edit the same schedule?',
@@ -893,7 +893,7 @@
                 <a href="{{ marketing_url('/features/newsletters') }}" class="es-line-link font-medium hover:underline">What following actually does</a>
             </p>
             <p class="es-line-muted mx-auto mt-3 max-w-3xl text-center text-sm" data-reveal>
-                Nor is an act you list. Name a performer or venue who is not on Event Schedule and they get a page of their own, which they can claim by signing in with the email address on it. It is then theirs to run, and the dates you already listed stay on it.
+                Nor is an act you list. Name a performer or venue who is not on Getvnt and they get a page of their own, which they can claim by signing in with the email address on it. It is then theirs to run, and the dates you already listed stay on it.
                 <a href="{{ route('marketing.docs.creating_events') }}#claim" class="es-line-link font-medium hover:underline">How claiming works</a>
             </p>
         </div>
@@ -970,7 +970,7 @@
                     Writing a name in <span class="es-line-accent">takes four fields</span>
                 </h2>
                 <p class="es-line-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    They do not need an Event Schedule account first. If they have one, the invitation attaches to it.
+                    They do not need an Getvnt account first. If they have one, the invitation attaches to it.
                 </p>
             </div>
 
@@ -979,7 +979,7 @@
                     ['01', 'Open the Team tab', 'Every schedule has one. Choose Add Member and you get a short form rather than a settings maze.'],
                     ['02', 'Name and email', 'Both required. A phone number is optional and is only used to reach them; nothing else on the form is mandatory.'],
                     ['03', 'Pick Admin or Viewer', 'A single dropdown with two entries, defaulting to Admin. Owner is not in the list, because there is already one.'],
-                    ['04', 'They get an email', 'New to Event Schedule? The link sets their password. Already have an account? It takes them straight into your schedule.'],
+                    ['04', 'They get an email', 'New to Getvnt? The link sets their password. Already have an account? It takes them straight into your schedule.'],
                 ] as [$stepNum, $stepTitle, $stepBody])
                     <div class="es-line-card flex flex-col p-7" data-reveal="panel">
                         <div class="es-line-step mb-3">{{ $stepNum }}</div>
@@ -997,7 +997,7 @@
                             An invited person appears on the Team tab straight away, whether or not they have finished signing up. Until they do, their row carries a Resend invite button instead of a position dropdown, so a lost email costs you one click rather than a re-invite.
                         </p>
                         <p class="es-line-muted mb-4 text-sm">
-                            If you supplied a phone number, the same row can offer a second button that sends the invite as a text instead, on eventschedule.com with text messaging switched on.
+                            If you supplied a phone number, the same row can offer a second button that sends the invite as a text instead, on getvnt.com with text messaging switched on.
                         </p>
                         <p class="es-line-muted text-sm">
                             Setting the schedule up in the first place is covered in the
@@ -1084,7 +1084,7 @@
                                 @endforeach
                             </div>
                             <p class="es-line-muted es-line-rule mt-4 pt-3 text-xs">
-                                The bottom four report on Pro features. On eventschedule.com the ticket, feedback and poll alerts email only once the schedule fills in its own email settings, which any plan can do, and their toggles stay greyed out until then, unless push notifications are set up, which keeps the ticket and feedback ones usable as a push. Installment alerts need no email settings, and the top two need neither.
+                                The bottom four report on Pro features. On getvnt.com the ticket, feedback and poll alerts email only once the schedule fills in its own email settings, which any plan can do, and their toggles stay greyed out until then, unless push notifications are set up, which keeps the ticket and feedback ones usable as a push. Installment alerts need no email settings, and the top two need neither.
                             </p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
@@ -1459,7 +1459,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-team" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-line-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

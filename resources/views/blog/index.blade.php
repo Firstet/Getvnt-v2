@@ -23,14 +23,14 @@
         $blogDescSuffix = $blogPage > 1 ? ' Page '.$blogPage.'.' : '';
     @endphp
     @if(request('tag'))
-        <x-slot name="title">{{ request('tag') }} - Blog{{ $blogTitleSuffix }} | Event Schedule</x-slot>
-        <x-slot name="description">Articles about {{ request('tag') }} on the Event Schedule blog.{{ $blogDescSuffix }}</x-slot>
+        <x-slot name="title">{{ request('tag') }} - Blog{{ $blogTitleSuffix }} | Getvnt</x-slot>
+        <x-slot name="description">Articles about {{ request('tag') }} on the Getvnt blog.{{ $blogDescSuffix }}</x-slot>
     @elseif($monthLabel)
-        <x-slot name="title">{{ $monthLabel }} - Blog{{ $blogTitleSuffix }} | Event Schedule</x-slot>
-        <x-slot name="description">Event Schedule blog posts from {{ $monthLabel }}.{{ $blogDescSuffix }}</x-slot>
+        <x-slot name="title">{{ $monthLabel }} - Blog{{ $blogTitleSuffix }} | Getvnt</x-slot>
+        <x-slot name="description">Getvnt blog posts from {{ $monthLabel }}.{{ $blogDescSuffix }}</x-slot>
     @else
-        <x-slot name="title">Blog{{ $blogTitleSuffix }} | Event Schedule</x-slot>
-        <x-slot name="description">Read the latest news, tips, and insights about event scheduling and ticketing from the Event Schedule team.{{ $blogDescSuffix }}</x-slot>
+        <x-slot name="title">Blog{{ $blogTitleSuffix }} | Getvnt</x-slot>
+        <x-slot name="description">Read the latest news, tips, and insights about event scheduling and ticketing from the Getvnt team.{{ $blogDescSuffix }}</x-slot>
     @endif
     <x-slot name="breadcrumbTitle">Blog</x-slot>
     <x-slot name="canonical">{{ $blogCanonical }}</x-slot>
@@ -73,8 +73,8 @@
             '@context' => 'https://schema.org',
             '@type' => 'Blog',
             '@id' => route('blog.index').'#blog',
-            'name' => 'Event Schedule Blog',
-            'description' => 'Read the latest news, tips, and insights about event scheduling and ticketing from the Event Schedule team.',
+            'name' => 'Getvnt Blog',
+            'description' => 'Read the latest news, tips, and insights about event scheduling and ticketing from the Getvnt team.',
             // The blog entity always lives at page 1; mainEntityOfPage is what ties it to the
             // page actually being served, so it has to follow the canonical.
             'url' => route('blog.index'),
@@ -132,7 +132,7 @@
 
                 <!-- Main headline -->
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-                    <span class="text-white">The Event Schedule</span><br>
+                    <span class="text-white">The Getvnt</span><br>
                     <span class="text-gradient">{{ __('messages.blog') }}</span>
                 </h1>
 

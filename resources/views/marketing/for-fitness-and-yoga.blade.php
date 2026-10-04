@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Fitness & Yoga"
+        name="Getvnt for Fitness & Yoga"
         description="Publish a weekly class timetable once as recurring classes, then sell visits off a pass instead of seats at a single night. Zero platform fees."
         audience="Fitness & Yoga Instructors"
         keywords="fitness class schedule, yoga class calendar, class pass, studio timetable, fitness studio scheduling, free fitness scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a studio timetable online with Event Schedule",
+        "name": "How to put a studio timetable online with Getvnt",
         "description": "Set the week once, then sell visits rather than single nights.",
         "step": [
             {
@@ -570,8 +570,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for fitness and yoga instructors?',
-                'a' => 'Yes. Publishing your timetable, setting classes up as recurring events, free registration with a capacity limit per date, two-way Google, Outlook and CalDAV sync, the embeddable timetable, built-in analytics and 10 newsletter emails a month (each recipient counts as one) are all free forever, however many students sign up. Scanning a QR code at the door is free on every plan too. Charging for a drop-in is the Pro half, along with class passes and the live check-in dashboard, on the Pro plan at '.plan_price($proMonthly).' a month, and Event Schedule charges zero platform fees on what you sell, free plan included.',
+                'q' => 'Is Getvnt free for fitness and yoga instructors?',
+                'a' => 'Yes. Publishing your timetable, setting classes up as recurring events, free registration with a capacity limit per date, two-way Google, Outlook and CalDAV sync, the embeddable timetable, built-in analytics and 10 newsletter emails a month (each recipient counts as one) are all free forever, however many students sign up. Scanning a QR code at the door is free on every plan too. Charging for a drop-in is the Pro half, along with class passes and the live check-in dashboard, on the Pro plan at '.plan_price($proMonthly).' a month, and Getvnt charges zero platform fees on what you sell, free plan included.',
             ],
             [
                 'q' => 'Can I schedule recurring weekly classes?',
@@ -587,7 +587,7 @@
             ],
             [
                 'q' => 'Can I sell class passes and drop-ins?',
-                'a' => 'Yes. Take the money through your own Stripe or PayPal account, or as cash at the desk, a payment link, Invoice Ninja, or Payfast if you charge in rand. Putting a price on a drop-in needs the Pro plan at '.plan_price($proMonthly).' a month, and so do passes: alongside a single drop-in you can sell a visit pass with a set number of visits, a membership that is unlimited until it expires, a festival pass good for each covered class once, or a season pass covering every occurrence of one recurring class. Set how long the pass lasts, whether it covers the whole schedule, one sub-schedule or named classes, and how many people it admits at each class. Event Schedule charges zero platform fees whatever the plan, so past the processor\'s own fee the money is yours.',
+                'a' => 'Yes. Take the money through your own Stripe or PayPal account, or as cash at the desk, a payment link, Invoice Ninja, or Payfast if you charge in rand. Putting a price on a drop-in needs the Pro plan at '.plan_price($proMonthly).' a month, and so do passes: alongside a single drop-in you can sell a visit pass with a set number of visits, a membership that is unlimited until it expires, a festival pass good for each covered class once, or a season pass covering every occurrence of one recurring class. Set how long the pass lasts, whether it covers the whole schedule, one sub-schedule or named classes, and how many people it admits at each class. Getvnt charges zero platform fees whatever the plan, so past the processor\'s own fee the money is yours.',
             ],
             [
                 'q' => 'What happens when somebody cancels at the last minute?',
@@ -595,7 +595,7 @@
             ],
             [
                 'q' => 'Can I refund a drop-in or a class pass?',
-                'a' => 'Yes, on Pro, from the Sales page, whether you called a class off or a student is moving away. A Stripe or PayPal payment goes back through the provider, in full or in part, and a partial refund leaves the booking or the pass valid. One paid in cash, through a payment link, Payfast or Invoice Ninja is marked as refunded instead, which records it without moving any money. Event Schedule does not email the student about a refund, so that message is yours to send.',
+                'a' => 'Yes, on Pro, from the Sales page, whether you called a class off or a student is moving away. A Stripe or PayPal payment goes back through the provider, in full or in part, and a partial refund leaves the booking or the pass valid. One paid in cash, through a payment link, Payfast or Invoice Ninja is marked as refunded instead, which records it without moving any money. Getvnt does not email the student about a refund, so that message is yours to send.',
             ],
             [
                 'q' => 'Can students book a one-to-one with me?',
@@ -764,7 +764,7 @@
                     <div class="es-flow-card p-6" data-reveal="panel">
                         <p class="es-flow-eyebrow mb-3">the money</p>
                         <h3 class="es-flow-ink mb-2 text-lg font-bold">{{ plan_price(0) }} taken</h3>
-                        <p class="es-flow-muted text-sm">Payments land in your own Stripe or PayPal account, or in the till as cash. Event Schedule takes no cut of a drop-in, a pass or a membership, on any plan.</p>
+                        <p class="es-flow-muted text-sm">Payments land in your own Stripe or PayPal account, or in the till as cash. Getvnt takes no cut of a drop-in, a pass or a membership, on any plan.</p>
                     </div>
                 </div>
 
@@ -1016,7 +1016,7 @@
             </div>
 
             <p class="es-flow-muted mx-auto mt-8 max-w-2xl text-center text-sm" data-reveal>
-                Connect Stripe or PayPal and sell straight from the timetable, or take cash at the desk. Event Schedule charges zero platform fees, so past the processor's own fee the money is yours.
+                Connect Stripe or PayPal and sell straight from the timetable, or take cash at the desk. Getvnt charges zero platform fees, so past the processor's own fee the money is yours.
                 <a href="{{ marketing_url('/features/passes') }}" class="es-flow-link font-medium hover:underline">How passes work</a>
             </p>
         </div>
@@ -1509,7 +1509,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-studio" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-flow-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

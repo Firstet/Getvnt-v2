@@ -734,7 +734,7 @@
         @endif
 
         {{-- Create your own card. Keyed off THIS schedule's tier, the same fact that decides
-             the page's free-tier credit (the corner chip on eventschedule.com, an operator's
+             the page's free-tier credit (the corner chip on getvnt.com, an operator's
              footer strip on their own platform), so the two cannot disagree. It used to read
              `! $event->isPro()`, which is true when any schedule on the bill is paid - so a
              free curator's page dropped this card while still carrying the free-tier credit. --}}

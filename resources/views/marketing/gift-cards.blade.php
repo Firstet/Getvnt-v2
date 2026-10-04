@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Gift Cards"
+        name="Getvnt - Gift Cards"
         description="Sell balance-tracked gift cards your customers buy for someone else and redeem toward tickets for any event on your schedule. Set denominations, deliver by email, and track every card." />
     </x-slot>
 
@@ -1111,7 +1111,7 @@
                     <span class="es-gift-ink text-sm font-bold">Selling gift cards is on the Pro plan, at {{ plan_price($proMonthly) }} a month.</span>
                 </div>
                 <p class="es-gift-muted text-sm">
-                    The money is collected on your own payment account and Event Schedule takes no cut
+                    The money is collected on your own payment account and Getvnt takes no cut
                     of it. Redemption is treated differently from selling: a card that has already been
                     bought stays spendable even if you switch selling off, because a sold card is an
                     outstanding liability rather than a feature. On the hosted service the card is
@@ -1236,7 +1236,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-gift-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

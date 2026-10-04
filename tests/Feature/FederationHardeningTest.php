@@ -611,10 +611,10 @@ class FederationHardeningTest extends TestCase
         $this->asSender();
 
         Http::fake([
-            'https://eventschedule.com/api/federation/events' => Http::response(
+            'https://getvnt.com/api/federation/events' => Http::response(
                 ['error' => 'Validation failed', 'errors' => []], 422
             ),
-            'https://eventschedule.com/api/federation/reconcile' => Http::response(
+            'https://getvnt.com/api/federation/reconcile' => Http::response(
                 ['removed' => 0, 'missing' => [], 'status' => 'approved']
             ),
         ]);

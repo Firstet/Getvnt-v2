@@ -213,7 +213,7 @@
                     </div>
                     @endif
 
-                    {{-- Whether this schedule is on the Event Schedule network. Only once the install
+                    {{-- Whether this schedule is on the Getvnt network. Only once the install
                          has joined one, and only for an explicit yes - undecided is the default and
                          says nothing. Links editors straight to the setting (Settings, Advanced). --}}
                     @if (! config('app.is_nexus') && \App\Models\Setting::get('federation_enabled') && $role->federation_enabled === true)

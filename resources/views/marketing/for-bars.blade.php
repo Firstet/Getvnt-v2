@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Bars and Pubs"
+        name="Getvnt for Bars and Pubs"
         description="Put your bar's whole week on one link. Recurring quiz nights and live music, free registration, and zero platform fees on ticket sales."
         audience="Bars, Pubs and Taprooms"
         keywords="bar event calendar, pub quiz night schedule, live music calendar for bars, bar event management software, free pub event calendar, recurring bar events" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a bar's weekly event calendar online with Event Schedule",
+        "name": "How to put a bar's weekly event calendar online with Getvnt",
         "description": "Get your bar's week online in three steps.",
         "step": [
             {
@@ -464,7 +464,7 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for bars and pubs?',
+                'q' => 'Is Getvnt free for bars and pubs?',
                 'a' => 'Yes. Sharing your calendar, running recurring weekly nights, splitting them into sub-schedules, taking free registrations, and syncing with Google, Outlook or CalDAV are all free forever. Newsletters are free too, at 10 emails a month, counted per recipient rather than per send. Free registration has no monthly ceiling on it, and a ticket is scanned at the door on any plan. Putting a price on a ticket is what the Pro plan is for at '.plan_price($proMonthly).' a month, along with the live check-in dashboard and the higher 100-a-month newsletter limit.',
             ],
             [
@@ -485,7 +485,7 @@
             ],
             [
                 'q' => 'Can I sell tickets to a ticketed night?',
-                'a' => 'Yes, on Pro at '.plan_price($proMonthly).' a month, which is what a ticket with a price on it needs. Take the money through your own Stripe or PayPal account, or a payment link or cash at the bar, and sell straight from your calendar. Scanning the QR code at the door is not gated at all, on any plan. Pro also brings the live check-in dashboard for a busy door, promo codes and add-ons. Event Schedule charges zero platform fees either way, so beyond the processor\'s own fee the money is yours. If a night is called off, refund it from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part. Free registration with a capacity limit is there for the nights you do not charge for.',
+                'a' => 'Yes, on Pro at '.plan_price($proMonthly).' a month, which is what a ticket with a price on it needs. Take the money through your own Stripe or PayPal account, or a payment link or cash at the bar, and sell straight from your calendar. Scanning the QR code at the door is not gated at all, on any plan. Pro also brings the live check-in dashboard for a busy door, promo codes and add-ons. Getvnt charges zero platform fees either way, so beyond the processor\'s own fee the money is yours. If a night is called off, refund it from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part. Free registration with a capacity limit is there for the nights you do not charge for.',
             ],
             [
                 'q' => 'Can regulars put our whole week in their own calendar?',
@@ -751,7 +751,7 @@
                         </li>
                         <li class="flex gap-3" data-reveal>
                             <svg aria-hidden="true" class="mt-0.5 h-5 w-5 flex-none text-[#3f6212] dark:text-[#bef264]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-                            <span>Booked a band who is not on Event Schedule? Name them on the night anyway. The event page lists them, and they get a page of their own that stays out of search engines until they claim it.</span>
+                            <span>Booked a band who is not on Getvnt? Name them on the night anyway. The event page lists them, and they get a page of their own that stays out of search engines until they claim it.</span>
                         </li>
                     </ul>
                 </div>
@@ -875,7 +875,7 @@
                                 <span class="es-slate-plan es-slate-plan-pro">Pro</span>
                             </div>
                             <p class="mb-4 text-gray-600 dark:text-gray-400">
-                                Sell straight from your calendar and scan the QR code at the door, which is free on any plan. Putting a price on the night is the Pro half. Take the money through your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-slate-link font-medium hover:underline">PayPal</a> account, or a payment link or cash at the bar, and Event Schedule takes zero platform fees on any of it.
+                                Sell straight from your calendar and scan the QR code at the door, which is free on any plan. Putting a price on the night is the Pro half. Take the money through your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-slate-link font-medium hover:underline">PayPal</a> account, or a payment link or cash at the bar, and Getvnt takes zero platform fees on any of it.
                             </p>
                             <p class="text-sm text-gray-600 dark:text-gray-400">
                                 Before it goes on sale, and with the "Notify me" card switched on, people can leave an email address on the event page and hear when it does. On Pro: discount codes for the regulars, and a pass that covers a whole season of a night rather than one at a time.
@@ -1265,7 +1265,7 @@
                                 <div class="relative text-center">
                                     <span class="es-slate-flourish es-slate-ribbon es-slate-sign mb-4">This Week</span>
                                     <p class="es-slate-chalk-accent es-slate-sign text-2xl font-bold" id="es-slate-signtext">your-bar</p>
-                                    <p class="es-slate-chalk-dim mt-1 font-mono text-[0.7rem]">.eventschedule.com</p>
+                                    <p class="es-slate-chalk-dim mt-1 font-mono text-[0.7rem]">.getvnt.com</p>
                                 </div>
                             </div>
                         </div>
@@ -1276,7 +1276,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-bar" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-slate-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

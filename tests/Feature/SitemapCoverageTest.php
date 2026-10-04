@@ -234,7 +234,7 @@ class SitemapCoverageTest extends TestCase
 
         $html = $this->get('/seo/error-page/missing-fixture')->assertNotFound()->getContent();
 
-        $this->assertStringContainsString('<title>Page Not Found - Event Schedule</title>', $html,
+        $this->assertStringContainsString('<title>Page Not Found - Getvnt</title>', $html,
             'fixture: the platform 404 page rendered');
         $this->assertStringContainsString('<meta name="robots" content="noindex, follow">', $html);
 

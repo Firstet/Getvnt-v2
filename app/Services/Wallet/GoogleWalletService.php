@@ -745,7 +745,7 @@ class GoogleWalletService
 
         // Null, not our brand blue, when the schedule has no accent. manifestThemeColor() returns
         // null in exactly this case for a documented reason (Role.php): a schedule that CLEARED its
-        // accent used to get Event Schedule's blue in its address bar, which reads as identity
+        // accent used to get Getvnt's blue in its address bar, which reads as identity
         // rather than as a UI default. A pass sitting in someone's wallet is identity too, and on a
         // selfhost install our brand has no business being on it. Omitted, Google picks its own.
         return $color && preg_match('/^#[0-9a-fA-F]{6}$/', $color) ? strtolower($color) : null;

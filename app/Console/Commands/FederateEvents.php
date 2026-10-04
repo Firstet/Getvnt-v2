@@ -10,7 +10,7 @@ class FederateEvents extends Command
 {
     protected $signature = 'federation:push {--register : Register or re-register this install with the nexus first}';
 
-    protected $description = 'Share this install\'s public events with the eventschedule.com network';
+    protected $description = 'Share this install\'s public events with the getvnt.com network';
 
     public function handle(FederationService $federation): int
     {

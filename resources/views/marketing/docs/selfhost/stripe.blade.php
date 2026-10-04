@@ -1,8 +1,8 @@
 <x-docs-page
     key="selfhost/stripe"
-    title="Stripe, PayPal and Payfast for Selfhost - Event Schedule"
+    title="Stripe, PayPal and Payfast for Selfhost - Getvnt"
     heading="Stripe, PayPal and Payfast"
-    description="Set up Stripe, PayPal or Payfast to sell tickets on a selfhosted Event Schedule install, refund from the Sales page, and run Connect and Cashier as a SaaS."
+    description="Set up Stripe, PayPal or Payfast to sell tickets on a selfhosted Getvnt install, refund from the Sales page, and run Connect and Cashier as a SaaS."
     lede="A selfhosted install takes card payments through Stripe with one set of platform keys, and can switch PayPal or Payfast on for everyone the same way. A SaaS operator needs two Stripe integrations: Connect for ticket sales and Cashier for plan subscriptions."
 >
     <x-slot:toc>
@@ -29,12 +29,12 @@
             </svg>
             Overview
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Ticket payments in Event Schedule run through <strong class="text-gray-900 dark:text-white">Stripe Checkout</strong>: the buyer pays on Stripe's own hosted page, Stripe calls a webhook back, and the sale is marked paid. What you have to configure depends on who collects the money - one account for the whole install, or a separate account per event owner.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Ticket payments in Getvnt run through <strong class="text-gray-900 dark:text-white">Stripe Checkout</strong>: the buyer pays on Stripe's own hosted page, Stripe calls a webhook back, and the sale is marked paid. What you have to configure depends on who collects the money - one account for the whole install, or a separate account per event owner.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-6">The same keys and the same webhook endpoint also cover <a href="{{ route('marketing.docs.gift_cards') }}" class="doc-link">gift card</a> purchases, paid <a href="{{ route('marketing.docs.appointments') }}" class="doc-link">appointment bookings</a> and <a href="{{ route('marketing.docs.tickets') }}#installments" class="doc-link">installment plans</a>, so you only set this up once. <a href="#paypal" class="doc-link">PayPal</a> and <a href="#payfast" class="doc-link">Payfast</a>, further down, take ticket orders only.</p>
 
         <div class="doc-callout doc-callout-success">
             <div class="doc-callout-title">No platform fees</div>
-            <p>Event Schedule never takes a cut of a ticket sale. The Checkout Session is created without an application fee or a transfer, so the full amount lands in the account that took the payment - the one named in your <code class="doc-inline-code">.env</code> on a selfhosted install, or the seller's own connected account under Connect - and Stripe's own processing fee is the only deduction.</p>
+            <p>Getvnt never takes a cut of a ticket sale. The Checkout Session is created without an application fee or a transfer, so the full amount lands in the account that took the payment - the one named in your <code class="doc-inline-code">.env</code> on a selfhosted install, or the seller's own connected account under Connect - and Stripe's own processing fee is the only deduction.</p>
         </div>
 
         <div class="doc-callout doc-callout-tip">
@@ -47,7 +47,7 @@
 
         <div class="doc-callout doc-callout-plan">
             <div class="doc-callout-title">Plan requirement</div>
-            <p>On eventschedule.com, a ticket that carries a price needs <strong>Pro</strong> or <strong>Enterprise</strong>. Free registration and a ticket type at no charge are unlimited on the <strong>Free</strong> plan, and scanning any ticket at the door is free there too. The rest of the selling kit is Pro as well: the live check-in dashboard, promo codes, add-ons, the ticket waitlist, installment plans, passes, gift cards and the ticket widget embed.</p>
+            <p>On getvnt.com, a ticket that carries a price needs <strong>Pro</strong> or <strong>Enterprise</strong>. Free registration and a ticket type at no charge are unlimited on the <strong>Free</strong> plan, and scanning any ticket at the door is free there too. The rest of the selling kit is Pro as well: the live check-in dashboard, promo codes, add-ons, the ticket waitlist, installment plans, passes, gift cards and the ticket widget embed.</p>
             <p class="mt-2">A selfhosted install resolves to the Enterprise tier, so nothing on this page is plan-gated on your own server.</p>
         </div>
     </section>
@@ -73,7 +73,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Running your <strong class="text-gray-900 dark:text-white">own Event Schedule instance</strong> for your organization</td>
+                        <td>Running your <strong class="text-gray-900 dark:text-white">own Getvnt instance</strong> for your organization</td>
                         <td>The one Stripe account named in your <code class="doc-inline-code">.env</code></td>
                         <td><a href="#selfhosted-users" class="doc-link">Selfhosted Users</a></td>
                     </tr>
@@ -83,7 +83,7 @@
                         <td><a href="#saas-operators" class="doc-link">SaaS Operators</a></td>
                     </tr>
                     <tr>
-                        <td>Using <strong class="text-gray-900 dark:text-white">eventschedule.com</strong> (nothing to install)</td>
+                        <td>Using <strong class="text-gray-900 dark:text-white">getvnt.com</strong> (nothing to install)</td>
                         <td>Your own connected Stripe account</td>
                         <td>No server setup. Connect Stripe in <a href="{{ route('marketing.docs.account_settings') }}#payments" class="doc-link">Settings &rarr; Payment Methods</a></td>
                     </tr>
@@ -111,7 +111,7 @@
             </svg>
             For Selfhosted Users
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">If you're running your own Event Schedule instance for your organization, venue, or community, all ticket payments go to a single Stripe account that you control.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">If you're running your own Getvnt instance for your organization, venue, or community, all ticket payments go to a single Stripe account that you control.</p>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">This guide is for you if...</div>
@@ -173,9 +173,9 @@
         <h3 class="doc-subheading">How Checkout Works</h3>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>The buyer selects tickets and fills out the checkout form</li>
-            <li>Event Schedule creates a Stripe Checkout Session on your platform account, tagged with the sale ID</li>
+            <li>Getvnt creates a Stripe Checkout Session on your platform account, tagged with the sale ID</li>
             <li>The buyer completes payment on Stripe's hosted page</li>
-            <li>Stripe calls <code class="doc-inline-code">/stripe/webhook</code>; Event Schedule verifies the signature, checks the amount charged against the amount owed, and marks the sale paid</li>
+            <li>Stripe calls <code class="doc-inline-code">/stripe/webhook</code>; Getvnt verifies the signature, checks the amount charged against the amount owed, and marks the sale paid</li>
             <li>The buyer is emailed their tickets, with a QR code for check-in</li>
         </ol>
 
@@ -195,7 +195,7 @@
             </svg>
             For SaaS Operators
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">If you're running your own white-label SaaS platform (like eventschedule.com but with your own branding), you need two Stripe integrations:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">If you're running your own white-label SaaS platform (like getvnt.com but with your own branding), you need two Stripe integrations:</p>
         <p class="text-gray-600 dark:text-gray-300 mb-6">Both require <code class="doc-inline-code">IS_HOSTED=true</code>. The rest of the SaaS setup, including domains and plan limits, is covered in the <a href="{{ route('marketing.docs.saas.setup') }}#stripe" class="doc-link">SaaS setup guide</a>.</p>
 
         <div class="doc-fields doc-fields--2">
@@ -218,7 +218,7 @@
             <li>Go to the <a href="https://dashboard.stripe.com/" target="_blank" rel="noopener noreferrer" class="doc-link">Stripe Dashboard</a></li>
             <li>Open <strong class="text-gray-900 dark:text-white">Settings</strong> &rarr; <strong class="text-gray-900 dark:text-white">Connect</strong></li>
             <li>Enable Connect for your platform</li>
-            <li>Configure your branding and platform profile. Event Schedule creates the connected account for the user and sends them through Stripe's own hosted onboarding, so your branding is what they see.</li>
+            <li>Configure your branding and platform profile. Getvnt creates the connected account for the user and sends them through Stripe's own hosted onboarding, so your branding is what they see.</li>
             <li>Get your API keys from <strong class="text-gray-900 dark:text-white">Developers</strong> &rarr; <strong class="text-gray-900 dark:text-white">API keys</strong></li>
         </ol>
 
@@ -249,7 +249,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">One endpoint, two secrets</div>
-            <p><code class="doc-inline-code">/stripe/webhook</code> tries the Connect secret first and the platform secret second, so the same URL serves both. Event Schedule then checks that the secret matches the kind of sale: a Connect sale confirmed with the platform key, or a direct sale confirmed with the Connect key, is logged and ignored rather than marked paid.</p>
+            <p><code class="doc-inline-code">/stripe/webhook</code> tries the Connect secret first and the platform secret second, so the same URL serves both. Getvnt then checks that the secret matches the kind of sale: a Connect sale confirmed with the platform key, or a direct sale confirmed with the Connect key, is logged and ignored rather than marked paid.</p>
         </div>
 
         <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-4">What Your Event Creators Do</h4>
@@ -426,7 +426,7 @@
             </svg>
             Invoice Ninja (Alternative Payment Method)
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">In addition to Stripe, Event Schedule supports <a href="https://invoiceninja.com" target="_blank" rel="noopener noreferrer" class="doc-link">Invoice Ninja</a> as an alternative payment method for ticket sales and gift cards. Invoice Ninja is an open-source invoicing and payments platform that supports many payment gateways, Stripe among them.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">In addition to Stripe, Getvnt supports <a href="https://invoiceninja.com" target="_blank" rel="noopener noreferrer" class="doc-link">Invoice Ninja</a> as an alternative payment method for ticket sales and gift cards. Invoice Ninja is an open-source invoicing and payments platform that supports many payment gateways, Stripe among them.</p>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">No server configuration required</div>
@@ -443,10 +443,10 @@
         <h3 class="doc-subheading">Setup Steps</h3>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>In Invoice Ninja, go to <strong class="text-gray-900 dark:text-white">Settings &rarr; Account Management</strong> and create an API token</li>
-            <li>In Event Schedule, open <strong class="text-gray-900 dark:text-white">Settings &rarr; Payment Methods &rarr; Invoice Ninja</strong></li>
+            <li>In Getvnt, open <strong class="text-gray-900 dark:text-white">Settings &rarr; Payment Methods &rarr; Invoice Ninja</strong></li>
             <li>Paste the token into <strong class="text-gray-900 dark:text-white">API Token</strong></li>
             <li>Fill in <strong class="text-gray-900 dark:text-white">API URL</strong> with the base address of your instance, for example <code class="doc-inline-code">https://invoicing.yourdomain.com</code>, without a trailing <code class="doc-inline-code">/api/v1</code>. Leave it blank to use invoicing.co.</li>
-            <li>Save. Event Schedule verifies the credentials and registers a webhook in your Invoice Ninja company, so the connection either works or fails outright rather than saving a broken one.</li>
+            <li>Save. Getvnt verifies the credentials and registers a webhook in your Invoice Ninja company, so the connection either works or fails outright rather than saving a broken one.</li>
         </ol>
 
         <p class="text-gray-600 dark:text-gray-300 mb-6">Once connected, the company name is shown with <strong class="text-gray-900 dark:text-white">Edit</strong> and <strong class="text-gray-900 dark:text-white">Unlink Account</strong> links. Editing the credentials replaces the old webhook rather than adding a second one, and leaving the token blank there means "keep the current token", so you can correct just the URL.</p>
@@ -456,7 +456,7 @@
             <li>Edit an event, open <strong class="text-gray-900 dark:text-white">Tickets &rarr; Payment</strong> and choose <strong class="text-gray-900 dark:text-white">Invoice Ninja</strong> as the payment method</li>
             <li>At checkout the buyer is sent to Invoice Ninja: to an invoice they can pay, or to an Invoice Ninja purchase page, depending on the mode below</li>
             <li>Invoice Ninja processes the card through whichever gateway you configured there</li>
-            <li>Invoice Ninja calls the webhook back so Event Schedule can mark the sale paid and email the tickets</li>
+            <li>Invoice Ninja calls the webhook back so Getvnt can mark the sale paid and email the tickets</li>
         </ol>
 
         <h3 class="doc-subheading">Invoice Ninja Modes</h3>
@@ -464,11 +464,11 @@
         <div class="doc-fields doc-fields--2">
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Invoice</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Ticket selection and promo codes are handled in Event Schedule, and an invoice is created in Invoice Ninja for each purchase. Supports several promo codes.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Ticket selection and promo codes are handled in Getvnt, and an invoice is created in Invoice Ninja for each purchase. Supports several promo codes.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Payment link</h4>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">Buyers select tickets and enter promo codes on the Invoice Ninja purchase page, and invoices are grouped there. Event Schedule creates one Invoice Ninja product per ticket type and add-on the first time an event is bought, and passes one active promo code.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Buyers select tickets and enter promo codes on the Invoice Ninja purchase page, and invoices are grouped there. Getvnt creates one Invoice Ninja product per ticket type and add-on the first time an event is bought, and passes one active promo code.</p>
             </div>
         </div>
 

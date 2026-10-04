@@ -651,7 +651,7 @@ class MicrosoftCalendarService
     }
 
     /**
-     * Pull events from Outlook into Event Schedule using a Graph delta query.
+     * Pull events from Outlook into Getvnt using a Graph delta query.
      */
     public function syncFromMicrosoftCalendar(User $user, Role $role, ?string $calendarId): array
     {
@@ -896,7 +896,7 @@ class MicrosoftCalendarService
     }
 
     /**
-     * Create an Event Schedule event from a Graph event.
+     * Create an Getvnt event from a Graph event.
      */
     protected function createEventFromMicrosoft(array $item, Role $role, ?string $calendarId): Event
     {
@@ -955,7 +955,7 @@ class MicrosoftCalendarService
     }
 
     /**
-     * Update an Event Schedule event from a Graph event. Returns true when a change was saved.
+     * Update an Getvnt event from a Graph event. Returns true when a change was saved.
      */
     protected function updateEventFromMicrosoft(array $item, Event $event, Role $role): bool
     {

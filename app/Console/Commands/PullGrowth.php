@@ -25,7 +25,7 @@ class PullGrowth extends Command
 {
     protected $signature = 'app:pull-growth
                             {--range=last_30_days : The funnel window: last_7_days, last_30_days, last_90_days or all_time}
-                            {--url= : Base URL of the install (default GROWTH_DATA_URL, else https://eventschedule.com)}
+                            {--url= : Base URL of the install (default GROWTH_DATA_URL, else https://getvnt.com)}
                             {--dir= : Where pulls are kept (default storage/app/growth)}
                             {--local : Re-print the summary of the latest pull on disk instead of downloading}';
 
@@ -68,7 +68,7 @@ class PullGrowth extends Command
         try {
             $response = Http::withToken($token)
                 ->acceptJson()
-                ->withUserAgent('EventSchedule-PullGrowth/1 (+php artisan app:pull-growth)')
+                ->withUserAgent('Getvnt-PullGrowth/1 (+php artisan app:pull-growth)')
                 ->timeout(180)
                 // A redirect is always a wrong --url (http to https, www to apex), and Guzzle drops
                 // the Authorization header when one crosses origins - so following it would turn a

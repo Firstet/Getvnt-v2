@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Two-Way Google Calendar Sync - Event Schedule</x-slot>
+    <x-slot name="title">Free Two-Way Google Calendar Sync - Getvnt</x-slot>
     <x-slot name="description">Two-way Google Calendar sync, free on every plan. Each schedule picks its own calendar, and edits made in Google come back within seconds.</x-slot>
     <x-slot name="breadcrumbTitle">Google Calendar</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Google Calendar Sync"
+        name="Getvnt - Google Calendar Sync"
         description="Two-way Google Calendar sync, free on every plan. Each schedule picks its own calendar, and edits made in Google come back within seconds." />
     </x-slot>
 
@@ -25,7 +25,7 @@
            Calendar event is an invitation: a title, a when, a where, a
            note and a visibility. So the signature object is the entry
            itself, with every field annotated in the margin by where it
-           came from in Event Schedule. The metaphor and the feature
+           came from in Getvnt. The metaphor and the feature
            story are then the same sentence: what is on the invitation
            IS what crosses the wire, and the ledger table further down
            is the same object again, in rows.
@@ -588,7 +588,7 @@
             ],
             [
                 'q' => 'How quickly do changes sync?',
-                'a' => 'Outbound, the entry is written when you save the event. Inbound, Google sends a push notification to Event Schedule and the change is read within seconds. An incremental sweep every fifteen minutes is the backstop, so a notification that never arrives costs you a quarter of an hour rather than the change itself.',
+                'a' => 'Outbound, the entry is written when you save the event. Inbound, Google sends a push notification to Getvnt and the change is read within seconds. An incremental sweep every fifteen minutes is the backstop, so a notification that never arrives costs you a quarter of an hour rather than the change itself.',
             ],
             [
                 'q' => 'Can I sync multiple schedules to different Google Calendars?',
@@ -615,7 +615,7 @@
                 'a' => 'Yes, and that is a separate thing from sync, with nothing to connect on your side. Your pages offer Subscribe to all events from your schedule, in the Add to Calendar menu and beside the email sign-up. It is the schedule\'s live iCal feed, so Google Calendar adds it as a calendar of its own and keeps re-reading it: a date you move moves for them too, though Google can take several hours to notice. It carries your public events, with each date of a recurring event for the next ninety days, and it asks for no email address and no account.',
             ],
             [
-                'q' => 'Does Google Calendar sync work with selfhosted Event Schedule?',
+                'q' => 'Does Google Calendar sync work with selfhosted Getvnt?',
                 'a' => 'Yes. A selfhosted install uses its own Google OAuth credentials: create a client in the Google Cloud Console, add your callback URL as an authorized redirect URI, and set the client id, secret and redirect in your environment file. Push notifications also need your install to be reachable over HTTPS. Full setup instructions are in the selfhosted documentation.',
             ],
         ];
@@ -750,7 +750,7 @@
             <div class="es-invite-card p-4 sm:p-7" data-reveal="panel">
                 <div class="overflow-x-auto">
                     <table class="es-invite-table text-sm">
-                        <caption class="sr-only">Each field on a Google Calendar entry, what Event Schedule writes into it, and whether an edit made in Google Calendar comes back</caption>
+                        <caption class="sr-only">Each field on a Google Calendar entry, what Getvnt writes into it, and whether an edit made in Google Calendar comes back</caption>
                         <thead>
                             <tr>
                                 <th scope="col">On the entry</th>
@@ -784,7 +784,7 @@
             </div>
 
             <p class="es-invite-muted mx-auto mt-8 max-w-2xl text-center text-sm" data-reveal>
-                Guest lists and attendees are not on the list, in either direction. Who is coming lives in Event Schedule, on registrations and tickets, and is never written into somebody's calendar entry.
+                Guest lists and attendees are not on the list, in either direction. Who is coming lives in Getvnt, on registrations and tickets, and is never written into somebody's calendar entry.
             </p>
         </div>
     </section>
@@ -923,7 +923,7 @@
                         <h3 class="es-invite-ink text-lg font-bold">The notification</h3>
                         <span class="es-invite-plan">Free</span>
                     </div>
-                    <p class="es-invite-muted text-sm">Google posts to Event Schedule when the calendar changes, and only the changes since last time are read. Seconds, not a poll on the hour.</p>
+                    <p class="es-invite-muted text-sm">Google posts to Getvnt when the calendar changes, and only the changes since last time are read. Seconds, not a poll on the hour.</p>
                 </div>
                 <div class="es-invite-card p-7" data-reveal="panel">
                     <div class="mb-3 flex flex-wrap items-center gap-2">
@@ -1199,7 +1199,7 @@
                     </x-feature-link-card>
                 </div>
                 <div data-reveal>
-                    <x-feature-link-card name="All Integrations" description="Every tool Event Schedule connects to, in one list" :url="marketing_url('/features/integrations')" icon-color="blue">
+                    <x-feature-link-card name="All Integrations" description="Every tool Getvnt connects to, in one list" :url="marketing_url('/features/integrations')" icon-color="blue">
                         <x-slot:icon><svg aria-hidden="true" class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg></x-slot:icon>
                     </x-feature-link-card>
                 </div>
@@ -1314,7 +1314,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm es-invite-band-muted sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm es-invite-band-muted sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-invite-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

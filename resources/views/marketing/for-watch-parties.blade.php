@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Watch Parties | Movie Nights</x-slot>
+    <x-slot name="title">Free Getvnt for Watch Parties | Movie Nights</x-slot>
     <x-slot name="description">Free, open-source watch party scheduling: one join link for any stream, registration with a cap per date, a running order and zero platform fees.</x-slot>
     <x-slot name="breadcrumbTitle">For Watch Parties</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Watch Parties"
+        name="Getvnt for Watch Parties"
         description="Free, open-source watch party scheduling software. Publish the running order, take free registrations against a per-date cap, and hand every registrant a confirmation page carrying the join link. Zero platform fees."
         audience="Watch Party Hosts"
         keywords="watch party platform, schedule watch parties, virtual watch party, online watch party hosting, group streaming events, watch party ticketing, movie night scheduling, free watch party app" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to host a watch party with Event Schedule",
+        "name": "How to host a watch party with Getvnt",
         "description": "Three steps to run a screening night, not just to publish a stream link.",
         "step": [
             {
@@ -550,15 +550,15 @@
         $faqs = [
             [
                 'q' => 'What streaming platforms work with watch parties?',
-                'a' => 'Any of them, because Event Schedule does not integrate with any of them. An online event has one field, Event URL, and it takes whatever link you have: YouTube, Twitch, Discord, a Zoom or Teams room, or your own player. There is no platform picker and nothing to connect, so nothing breaks when you change platforms next month.',
+                'a' => 'Any of them, because Getvnt does not integrate with any of them. An online event has one field, Event URL, and it takes whatever link you have: YouTube, Twitch, Discord, a Zoom or Teams room, or your own player. There is no platform picker and nothing to connect, so nothing breaks when you change platforms next month.',
             ],
             [
                 'q' => 'How do I know how many people are coming?',
-                'a' => 'Turn on free registration and set a cap. Registering takes a name and an email, one registration per email per date, and the remaining count is shown on the form as people take places. On a weekly series the cap is counted for each date on its own, so a full Friday does not close the following one. This is a registration list, not a live viewer count: Event Schedule never watches your stream.',
+                'a' => 'Turn on free registration and set a cap. Registering takes a name and an email, one registration per email per date, and the remaining count is shown on the form as people take places. On a weekly series the cap is counted for each date on its own, so a full Friday does not close the following one. This is a registration list, not a live viewer count: Getvnt never watches your stream.',
             ],
             [
                 'q' => 'Can I charge for watch party access?',
-                'a' => 'Yes, on Pro at '.plan_price($proMonthly).' a month, which is what a ticket with a price on it needs. Free registration is a different thing and stays unlimited on every plan. Create named ticket types with their own prices, quantities and sales windows, sell through your own Stripe or PayPal account, and keep everything: Event Schedule takes zero platform fees on ticket sales at every plan level. Scanning tickets in at the door is free on every plan, and Pro brings the live check-in dashboard, passes, promo codes and the ticket waitlist with it. Your processor charges its own fee (Stripe\'s is typically 2.9% + $0.30).',
+                'a' => 'Yes, on Pro at '.plan_price($proMonthly).' a month, which is what a ticket with a price on it needs. Free registration is a different thing and stays unlimited on every plan. Create named ticket types with their own prices, quantities and sales windows, sell through your own Stripe or PayPal account, and keep everything: Getvnt takes zero platform fees on ticket sales at every plan level. Scanning tickets in at the door is free on every plan, and Pro brings the live check-in dashboard, passes, promo codes and the ticket waitlist with it. Your processor charges its own fee (Stripe\'s is typically 2.9% + $0.30).',
             ],
             [
                 'q' => 'Can I schedule recurring watch parties?',
@@ -569,8 +569,8 @@
                 'a' => 'If they left you an email address and confirmed it, yes: a screening you add reaches them as a digest on its own, batched and never more than one every few days. A newsletter is the other kind and you write that one, with the targeting to go with it, free: everyone who follows the schedule, everyone who registered for one particular screening, or one sub-schedule. The free plan covers 10 emails a month, Pro 100 and Enterprise 1,000, each recipient counting as one.',
             ],
             [
-                'q' => 'Is Event Schedule free for hosting watch parties?',
-                'a' => 'Yes. Unlimited events and screening series, one join link per event, free registration with per-date caps and no monthly ceiling, the published running order, built-in analytics, the embeddable calendar, two-way calendar sync and scanning people in at the door are all free forever. Pro at '.plan_price($proMonthly).' a month is what lets a ticket carry a price, and it adds the live check-in dashboard and the rest of the door tooling, and there are zero platform fees on ticket sales at any level. You can also selfhost Event Schedule on your own server, where every Enterprise feature is included.',
+                'q' => 'Is Getvnt free for hosting watch parties?',
+                'a' => 'Yes. Unlimited events and screening series, one join link per event, free registration with per-date caps and no monthly ceiling, the published running order, built-in analytics, the embeddable calendar, two-way calendar sync and scanning people in at the door are all free forever. Pro at '.plan_price($proMonthly).' a month is what lets a ticket carry a price, and it adds the live check-in dashboard and the rest of the door tooling, and there are zero platform fees on ticket sales at any level. You can also selfhost Getvnt on your own server, where every Enterprise feature is included.',
             ],
             [
                 'q' => 'Can people get a reminder without registering?',
@@ -622,7 +622,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-scr-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        A watch party has a start time, a shape, a door that only fits so many, and a list of who said they were coming. Event Schedule holds all four, free, and takes nothing at the door.
+                        A watch party has a start time, a shape, a door that only fits so many, and a list of who said they were coming. Getvnt holds all four, free, and takes nothing at the door.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -886,7 +886,7 @@
                     <div class="mb-3 flex flex-wrap items-center gap-2">
                         <h3 class="es-scr-ink text-base font-bold">Not a viewer count</h3>
                     </div>
-                    <p class="es-scr-muted text-sm">This is a registration list. Event Schedule never touches your stream and cannot tell you how many people are watching right now. Anything that claims to would have to sit inside the platform.</p>
+                    <p class="es-scr-muted text-sm">This is a registration list. Getvnt never touches your stream and cannot tell you how many people are watching right now. Anything that claims to would have to sit inside the platform.</p>
                 </div>
             </div>
         </div>
@@ -1074,7 +1074,7 @@
                         Nothing is taken at the <span class="es-scr-accent">door.</span>
                     </h2>
                     <p class="es-scr-muted mb-6 text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.15s;">
-                        A paid premiere, a benefit screening, a festival day pass. A ticket that carries a price is Pro, at {{ plan_price($proMonthly) }} a month, which opens the door tooling with it; free registration is unlimited without it. Payments run through your own Stripe or PayPal account, and Event Schedule takes zero platform fees on every plan.
+                        A paid premiere, a benefit screening, a festival day pass. A ticket that carries a price is Pro, at {{ plan_price($proMonthly) }} a month, which opens the door tooling with it; free registration is unlimited without it. Payments run through your own Stripe or PayPal account, and Getvnt takes zero platform fees on every plan.
                     </p>
                     <ul class="es-scr-muted space-y-3" data-reveal-group="70">
                         <li class="flex gap-3" data-reveal>
@@ -1132,11 +1132,11 @@
 
                         <div class="es-scr-inset mt-6 p-5">
                             <div class="es-scr-hair flex items-baseline justify-between gap-3 border-b pb-3">
-                                <span class="es-scr-muted text-sm font-semibold">Event Schedule's cut</span>
+                                <span class="es-scr-muted text-sm font-semibold">Getvnt's cut</span>
                                 <span class="es-scr-accent es-scr-fig text-2xl font-black">{{ plan_price(0) }}</span>
                             </div>
                             <p class="es-scr-muted mt-3 text-xs leading-relaxed">
-                                Stripe or PayPal charges its own standard processing fee on each payment, the same as it would anywhere. Event Schedule adds nothing on top, on any plan.
+                                Stripe or PayPal charges its own standard processing fee on each payment, the same as it would anywhere. Getvnt adds nothing on top, on any plan.
                             </p>
                         </div>
 
@@ -1212,7 +1212,7 @@
                         <h3 class="es-scr-ink mb-3 text-xl font-bold">On the site you already have</h3>
                         <p class="es-scr-muted mb-6 text-sm leading-relaxed">Drop the calendar into your own page as an iframe and it keeps itself current. The registration form embeds the same way, free, and the ticket form on Pro.</p>
                         <div class="es-scr-inset mt-auto p-4" aria-hidden="true">
-                            <p class="es-scr-fig es-scr-muted es-scr-xxs leading-relaxed" dir="ltr">&lt;iframe src="yourparty<wbr>.eventschedule.com<wbr>/?embed=true"&gt;</p>
+                            <p class="es-scr-fig es-scr-muted es-scr-xxs leading-relaxed" dir="ltr">&lt;iframe src="yourparty<wbr>.getvnt.com<wbr>/?embed=true"&gt;</p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
                         <div class="es-ring-glow" aria-hidden="true"></div>
@@ -1311,7 +1311,7 @@
                                         </div>
                                     </div>
                                 @endforeach
-                                <p class="es-scr-muted mt-3 es-scr-xxs">Viewer suggestions wait for your approval. On eventschedule.com, an opt-in email flags pending ones once your schedule has its own email settings.</p>
+                                <p class="es-scr-muted mt-3 es-scr-xxs">Viewer suggestions wait for your approval. On getvnt.com, an opt-in email flags pending ones once your schedule has its own email settings.</p>
                             </div>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
@@ -1334,7 +1334,7 @@
                     Watch party software for <span class="es-scr-accent">every community</span>
                 </h2>
                 <p class="es-scr-muted text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Whether it is a film club or a sports viewing party, Event Schedule works for you. Also see Event Schedule for <a href="{{ marketing_url('/for-live-concerts') }}" class="es-scr-link underline hover:no-underline">Live Concerts</a> and <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-scr-link underline hover:no-underline">Virtual Conferences</a>.
+                    Whether it is a film club or a sports viewing party, Getvnt works for you. Also see Getvnt for <a href="{{ marketing_url('/for-live-concerts') }}" class="es-scr-link underline hover:no-underline">Live Concerts</a> and <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-scr-link underline hover:no-underline">Virtual Conferences</a>.
                 </p>
             </div>
 
@@ -1571,7 +1571,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-party" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-scr-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

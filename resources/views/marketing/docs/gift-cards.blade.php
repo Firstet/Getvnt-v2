@@ -1,6 +1,6 @@
 <x-docs-page
     key="gift-cards"
-    title="Gift Card Guide: Set Up, Send and Redeem - Event Schedule"
+    title="Gift Card Guide: Set Up, Send and Redeem - Getvnt"
     description="Sell prepaid gift cards for your events: set the denominations and currency, let buyers email a card to someone else, and redeem it at checkout."
     lede="Let anyone buy a gift card for someone else. The recipient gets a code by email and redeems the balance toward tickets for your events."
     article-description="How to sell gift cards for your events: set denominations, let buyers send a card by email, and redeem the balance toward tickets at checkout."
@@ -102,12 +102,12 @@
             <li>The schedule is on <strong class="text-gray-900 dark:text-white">Pro</strong> (or the install is selfhosted).</li>
             <li><strong class="text-gray-900 dark:text-white">Enable gift cards</strong> is on and at least one amount is saved.</li>
             <li>The payment method you picked is actually connected. Use <strong class="text-gray-900 dark:text-white">Manage payment methods</strong> under the list to connect Stripe, add your Invoice Ninja key, or set a payment link. Cash needs nothing.</li>
-            <li>On eventschedule.com only, the schedule has its own email settings.</li>
+            <li>On getvnt.com only, the schedule has its own email settings.</li>
         </ul>
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Hosted schedules need email settings</div>
-            <p>The recipient's email <em>is</em> the delivery mechanism, so on eventschedule.com a schedule must have its own SMTP host and username saved under <strong class="text-gray-900 dark:text-white">Edit &rarr; Integrations &rarr; Email Settings</strong> before gift cards go live. Selfhosted installations use the server's mail configuration instead, so there is nothing extra to do. See <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>.</p>
+            <p>The recipient's email <em>is</em> the delivery mechanism, so on getvnt.com a schedule must have its own SMTP host and username saved under <strong class="text-gray-900 dark:text-white">Edit &rarr; Integrations &rarr; Email Settings</strong> before gift cards go live. Selfhosted installations use the server's mail configuration instead, so there is nothing extra to do. See <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>.</p>
         </div>
 
         <div class="doc-callout doc-callout-tip mb-2">

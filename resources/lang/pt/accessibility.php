@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Acessibilidade - Event Schedule',
-    'meta_description' => 'Declaração de acessibilidade e opções de exibição do Event Schedule.',
+    'page_title' => 'Acessibilidade - Getvnt',
+    'meta_description' => 'Declaração de acessibilidade e opções de exibição do Getvnt.',
     'breadcrumb' => 'Acessibilidade',
 
     'h1' => 'Declaração de acessibilidade',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Esta página é informação geral de serviço, não aconselhamento jurídico. As leis variam por país. Confirme as obrigações com um profissional qualificado.',
 
     'section_scope_title' => 'Âmbito',
-    'section_scope_body' => 'Esta declaração abrange o site de marketing e a aplicação web Event Schedule (ferramentas com sessão iniciada e páginas públicas de calendário) no domínio principal e subdomínios do Event Schedule, salvo indicação em contrário.',
+    'section_scope_body' => 'Esta declaração abrange o site de marketing e a aplicação web Getvnt (ferramentas com sessão iniciada e páginas públicas de calendário) no domínio principal e subdomínios do Getvnt, salvo indicação em contrário.',
 
     'section_commitment_title' => 'Compromisso',
-    'section_commitment_body' => 'Trabalhamos para tornar o Event Schedule utilizável por pessoas com deficiência. Procuramos alinhar com as Diretrizes de Acessibilidade para Conteúdo Web (WCAG), documentadas como :wcag_target, e respeitar orientações associadas à norma israelita 5568 quando aplicável.',
+    'section_commitment_body' => 'Trabalhamos para tornar o Getvnt utilizável por pessoas com deficiência. Procuramos alinhar com as Diretrizes de Acessibilidade para Conteúdo Web (WCAG), documentadas como :wcag_target, e respeitar orientações associadas à norma israelita 5568 quando aplicável.',
 
     'section_commitment_is5568_note' => 'Também consideramos as práticas habituais de acessibilidade web associadas à norma israelita 5568 quando aplicáveis aos serviços que operamos.',
 

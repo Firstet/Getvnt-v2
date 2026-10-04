@@ -35,7 +35,7 @@
         ];
         $proFeatures = [
             'Everything in Free',
-            'Remove Event Schedule branding',
+            'Remove Getvnt branding',
             'Paid ticket sales & check-in dashboard',
             'Every payment method (Stripe, PayPal, Payfast, Invoice Ninja, link, cash)',
             'Refunds, full or partial',
@@ -108,7 +108,7 @@
     {{-- The plans themselves - Free, Pro and Enterprise, priced from PlatformPricing - are the
          offers on the layout's one product node, SeoUtils::softwareApplication(). --}}
     <x-seo.webpage
-        name="Event Schedule pricing"
+        name="Getvnt pricing"
         :description="__('marketing.pricing_description')" />
     </x-slot>
 
@@ -194,7 +194,7 @@
                     <svg aria-hidden="true" class="h-5 w-5 text-emerald-500 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span class="text-sm font-medium tracking-wide text-gray-600 dark:text-gray-300">Event Schedule pricing, no hidden fees</span>
+                    <span class="text-sm font-medium tracking-wide text-gray-600 dark:text-gray-300">Getvnt pricing, no hidden fees</span>
                 </x-marketing.hero-eyebrow>
                 <span class="es-mask"><span class="es-mask-line">Pricing that never</span></span>
                 <span class="es-mask es-mask-2"><span class="es-mask-line"><span class="text-gradient-pricing">takes a cut</span></span></span>
@@ -413,7 +413,7 @@
                     </div>
 
                     <div class="rounded-2xl border-2 border-emerald-300 bg-emerald-50/60 p-6 dark:border-emerald-500/40 dark:bg-emerald-500/10">
-                        <div class="mb-1 text-sm font-semibold text-emerald-800 dark:text-emerald-300">Event Schedule Pro</div>
+                        <div class="mb-1 text-sm font-semibold text-emerald-800 dark:text-emerald-300">Getvnt Pro</div>
                         {{-- Deliberately a dollar sign, and NOT plan_price(). This label sits inside
                              the fee calculator, whose totals ($calcEs adds the Pro price to Stripe's
                              USD per-ticket fee, and $calcEb is Eventbrite's published US pricing) are
@@ -436,7 +436,7 @@
                         <svg aria-hidden="true" class="h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                     </a>
                     <p class="mt-5 text-xs text-gray-500 dark:text-gray-400">
-                        Stripe processing ({{ $feeRates['stripe']['label'] }}) is included on the Event Schedule side. The typical platform is Eventbrite at its published US rates, with the 2.9% payment processing fee it charges on each order on top of the service fee. Payouts go straight to your own Stripe account; connect PayPal instead and the money lands in your PayPal account the same way, at PayPal's own rate.
+                        Stripe processing ({{ $feeRates['stripe']['label'] }}) is included on the Getvnt side. The typical platform is Eventbrite at its published US rates, with the 2.9% payment processing fee it charges on each order on top of the service fee. Payouts go straight to your own Stripe account; connect PayPal instead and the money lands in your PayPal account the same way, at PayPal's own rate.
                     </p>
                     <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">
                         Weighing up a particular platform? The <x-link href="{{ marketing_url('/ticket-fee-calculator') }}">ticket fee calculator</x-link> sets several side by side at their published rates.
@@ -459,7 +459,7 @@
                     Or run it yourself. Free, forever.
                 </h2>
                 <p class="mx-auto mb-7 max-w-2xl text-gray-500 dark:text-gray-400">
-                    Event Schedule is open source. Install it on your own server and every Enterprise feature is included at no cost, with your data staying entirely on your infrastructure.
+                    Getvnt is open source. Install it on your own server and every Enterprise feature is included at no cost, with your data staying entirely on your infrastructure.
                 </p>
                 <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
                     <a href="{{ marketing_url('/selfhost') }}" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white px-6 py-3 font-semibold text-gray-800 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-white/5 dark:text-gray-200">
@@ -529,7 +529,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                             <span class="relative z-10 flex items-center gap-2">

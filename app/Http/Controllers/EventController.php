@@ -2157,8 +2157,8 @@ class EventController extends Controller
         }
 
         // On a custom domain, bounce through the request router, which redirects to this page on
-        // the canonical {subdomain}.eventschedule.com so the account+event flow and the post-submit
-        // dashboard share the .eventschedule.com cookie (a custom-domain login can't set a cookie
+        // the canonical {subdomain}.getvnt.com so the account+event flow and the post-submit
+        // dashboard share the .getvnt.com cookie (a custom-domain login can't set a cookie
         // the app subdomain reads).
         if ($request->attributes->get('custom_domain_host')) {
             return redirect(route('role.request', ['subdomain' => $subdomain]));
@@ -4860,10 +4860,10 @@ class EventController extends Controller
         // Stable UID shared with the subscription feed (FeedController) so calendar clients update the
         // existing entry rather than creating a duplicate; SEQUENCE bumps whenever a material detail
         // changes (EventRepo), and STATUS:CANCELLED marks a cancelled occurrence.
-        $domain = parse_url(config('app.url'), PHP_URL_HOST) ?: 'eventschedule.com';
+        $domain = parse_url(config('app.url'), PHP_URL_HOST) ?: 'getvnt.com';
         $uid = $date ? "event-{$event->id}-{$date}@{$domain}" : "event-{$event->id}@{$domain}";
 
-        $ical = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Event Schedule//EN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\n";
+        $ical = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Getvnt//EN\r\nMETHOD:PUBLISH\r\nBEGIN:VEVENT\r\n";
         $ical .= 'UID:'.$uid."\r\n";
         $ical .= 'SEQUENCE:'.((int) $event->ical_sequence)."\r\n";
         $ical .= 'SUMMARY:'.$this->escapeIcalText($title)."\r\n";

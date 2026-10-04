@@ -18,7 +18,7 @@ use Tests\TestCase;
  * Operator-authored legal documents (issue #116).
  *
  * The point of the feature is that a selfhost install stops sending its users to
- * eventschedule.com's privacy policy and terms, so the assertions below care as
+ * getvnt.com's privacy policy and terms, so the assertions below care as
  * much about where the CONSENT LINKS point as about the pages themselves.
  */
 class LegalPagesTest extends TestCase
@@ -58,7 +58,7 @@ class LegalPagesTest extends TestCase
      */
     private function withRemoteMarketingSite(): void
     {
-        config(['app.is_testing' => false, 'app.marketing_url' => 'https://eventschedule.com']);
+        config(['app.is_testing' => false, 'app.marketing_url' => 'https://getvnt.com']);
     }
 
     /**
@@ -183,7 +183,7 @@ class LegalPagesTest extends TestCase
     {
         $this->withRemoteMarketingSite();
 
-        $this->assertSame('https://eventschedule.com/privacy', policy_url('privacy'));
+        $this->assertSame('https://getvnt.com/privacy', policy_url('privacy'));
 
         LegalDocument::create(['type' => 'privacy', 'content' => 'Ours']);
         $this->assertSame(url('/privacy'), policy_url('privacy'));
@@ -197,7 +197,7 @@ class LegalPagesTest extends TestCase
         $this->withRemoteMarketingSite();
 
         $this->assertSame(
-            'https://eventschedule.com/self-hosting-terms-of-service',
+            'https://getvnt.com/self-hosting-terms-of-service',
             policy_url('terms', '/self-hosting-terms-of-service')
         );
 
@@ -214,7 +214,7 @@ class LegalPagesTest extends TestCase
     {
         $this->withRemoteMarketingSite();
 
-        $this->assertSame('https://eventschedule.com/privacy', policy_url('cookies'));
+        $this->assertSame('https://getvnt.com/privacy', policy_url('cookies'));
 
         LegalDocument::create(['type' => 'privacy', 'url' => 'https://example.com/p']);
         $this->assertSame('https://example.com/p', policy_url('cookies'));
@@ -367,8 +367,8 @@ class LegalPagesTest extends TestCase
         $this->selfhost();
         $this->withRemoteMarketingSite();
 
-        $this->get('/privacy')->assertRedirect('https://eventschedule.com/privacy');
-        $this->get('/terms-of-service')->assertRedirect('https://eventschedule.com/terms-of-service');
+        $this->get('/privacy')->assertRedirect('https://getvnt.com/privacy');
+        $this->get('/terms-of-service')->assertRedirect('https://getvnt.com/terms-of-service');
         $this->get('/cookie-policy')->assertNotFound();
     }
 

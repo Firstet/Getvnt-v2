@@ -1,6 +1,6 @@
 # DigitalOcean Worker Setup
 
-How the hosted install (eventschedule.com) runs its scheduled tasks, and the runbook for the
+How the hosted install (getvnt.com) runs its scheduled tasks, and the runbook for the
 cutover from the `/translate_data` HTTP cron to a DigitalOcean App Platform worker.
 
 Selfhosted installs are unaffected by everything here. They keep the single crontab entry

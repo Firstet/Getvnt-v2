@@ -1,12 +1,12 @@
 <x-marketing-layout>
-    <x-slot name="title">White Label | Remove Event Schedule Branding on Pro</x-slot>
-    <x-slot name="description">On Pro, Event Schedule branding comes off seven surfaces at once, from the foot of your page to both embeds and your newsletters. Here is what stays, too.</x-slot>
+    <x-slot name="title">White Label | Remove Getvnt Branding on Pro</x-slot>
+    <x-slot name="description">On Pro, Getvnt branding comes off seven surfaces at once, from the foot of your page to both embeds and your newsletters. Here is what stays, too.</x-slot>
     <x-slot name="breadcrumbTitle">White Label</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - White Label"
-        description="On Pro, Event Schedule branding comes off seven surfaces at once, from the foot of your page to both embeds and your newsletters, with nothing to switch on." />
+        name="Getvnt - White Label"
+        description="On Pro, Getvnt branding comes off seven surfaces at once, from the foot of your page to both embeds and your newsletters, with nothing to switch on." />
     </x-slot>
 
     {{-- Motion gate: hidden pre-reveal states only apply when this class is present,
@@ -96,7 +96,7 @@
            found out on day one.
            TWO MORE STAY OFF THE PAGE, and section 03 has a card for
            each: AbstractEventDesign::renderBranding() stamps
-           "eventschedule.com" in the bottom-right corner of every
+           "getvnt.com" in the bottom-right corner of every
            hosted event graphic, gated on config('app.hosted') alone,
            so no plan removes it; and GoogleWalletService::classPayload()
            falls back to images/logo.png, our ES mark, as the pass logo
@@ -566,7 +566,7 @@
         $register = [
             [
                 'surface' => 'The corner of your public schedule',
-                'free'    => 'A small "Event Schedule" chip in the bottom corner of your public pages, linking to eventschedule.com.',
+                'free'    => 'A small "Getvnt" chip in the bottom corner of your public pages, linking to getvnt.com.',
                 'pill'    => 'Removed',
                 'after'   => 'The chip goes, and the page ends where your last event ends. Only a plan an admin granted by hand keeps it; see What stays.',
             ],
@@ -578,25 +578,25 @@
             ],
             [
                 'surface' => 'The calendar embed you paste on your own site',
-                'free'    => 'The snippet ships with a small "Powered by Event Schedule" line under the iframe.',
+                'free'    => 'The snippet ships with a small "Powered by Getvnt" line under the iframe.',
                 'pill'    => 'Not in the snippet',
                 'after'   => 'Copy the snippet again and that line is simply not in it.',
             ],
             [
                 'surface' => 'The ticket widget on your own site',
-                'free'    => 'Twice over: a "Powered by Event Schedule" line under the purchase form inside the widget, and another under the iframe in the snippet you paste.',
+                'free'    => 'Twice over: a "Powered by Getvnt" line under the purchase form inside the widget, and another under the iframe in the snippet you paste.',
                 'pill'    => 'Both removed',
                 'after'   => 'The one inside the widget goes on its own. The one in the snippet needs the snippet copied again.',
             ],
             [
                 'surface' => 'The newsletters you send',
-                'free'    => 'A "Powered by Event Schedule" line in the email footer, under your own footer text.',
+                'free'    => 'A "Powered by Getvnt" line in the email footer, under your own footer text.',
                 'pill'    => 'Removed',
                 'after'   => 'Your footer text and unsubscribe link stay. Ours goes.',
             ],
             [
                 'surface' => 'The browser tab icon on your pages',
-                'free'    => 'The Event Schedule mark in the tab. A plain calendar glyph, never our logo, if a visitor saves the page to their home screen.',
+                'free'    => 'The Getvnt mark in the tab. A plain calendar glyph, never our logo, if a visitor saves the page to their home screen.',
                 'pill'    => 'Becomes yours',
                 'after'   => 'Your uploaded logo becomes the tab and home-screen icon.',
             ],
@@ -610,16 +610,16 @@
 
         $faqs = [
             [
-                'q' => 'How do I remove Event Schedule branding?',
+                'q' => 'How do I remove Getvnt branding?',
                 'a' => 'Upgrade the schedule to Pro or Enterprise. There is no switch to find afterwards: the check reads the plan itself, so the chip in the corner of your page is gone as soon as the plan is active, on every surface at once.',
             ],
             [
                 'q' => 'What exactly is removed?',
-                'a' => 'Seven surfaces: the small "Event Schedule" chip in the corner of your public schedule; the "Create your own event schedule!" card beside your event details; the "Powered by Event Schedule" line in the calendar embed snippet; the same line on the embedded ticket widget, which carries it twice, once inside the widget and once in the snippet; the line in the footer of the newsletters you send; the Event Schedule tab icon, which your own logo replaces; and ads or promotions, which never appear above the free tier.',
+                'a' => 'Seven surfaces: the small "Getvnt" chip in the corner of your public schedule; the "Create your own event schedule!" card beside your event details; the "Powered by Getvnt" line in the calendar embed snippet; the same line on the embedded ticket widget, which carries it twice, once inside the widget and once in the snippet; the line in the footer of the newsletters you send; the Getvnt tab icon, which your own logo replaces; and ads or promotions, which never appear above the free tier.',
             ],
             [
                 'q' => 'Is anything left?',
-                'a' => 'On a schedule hosted here, one line in the page head, and on one kind of plan the chip in the corner. First, the head: the breadcrumb data still names eventschedule.com as the site root. The title in the browser tab and the site name in a shared link preview both read your schedule\'s name on every plan, free included, the picture on that preview is one uploaded for the page - the event\'s flyer, a photo of its act or venue, or your own header, logo or background - or, failing that, whatever your page already shows, never one of ours, and the tab icon becomes your logo on Pro. Point a custom domain at the schedule and the breadcrumb roots at your own domain too, which leaves the head with nothing of ours in it. Second, if an admin granted your Enterprise plan by hand rather than you buying it, the small Event Schedule chip a free schedule carries stays in the corner of your public pages; customers who pay through Stripe lose it, and so do plans earned through the referral programme. '.($walletLive ? 'Two more things are not on your page at all: every event graphic made here carries a small eventschedule.com credit in its corner, whatever the plan, and a Google Wallet pass shows our logo if you have not uploaded one of your own.' : 'One more thing is not on your page at all: every event graphic made here carries a small eventschedule.com credit in its corner, whatever the plan.').' On any install that is not eventschedule.com the chip is the normal case rather than an exception, on every plan except a free one that is already carrying the operator\'s own strip - see the two questions below.',
+                'a' => 'On a schedule hosted here, one line in the page head, and on one kind of plan the chip in the corner. First, the head: the breadcrumb data still names getvnt.com as the site root. The title in the browser tab and the site name in a shared link preview both read your schedule\'s name on every plan, free included, the picture on that preview is one uploaded for the page - the event\'s flyer, a photo of its act or venue, or your own header, logo or background - or, failing that, whatever your page already shows, never one of ours, and the tab icon becomes your logo on Pro. Point a custom domain at the schedule and the breadcrumb roots at your own domain too, which leaves the head with nothing of ours in it. Second, if an admin granted your Enterprise plan by hand rather than you buying it, the small Getvnt chip a free schedule carries stays in the corner of your public pages; customers who pay through Stripe lose it, and so do plans earned through the referral programme. '.($walletLive ? 'Two more things are not on your page at all: every event graphic made here carries a small getvnt.com credit in its corner, whatever the plan, and a Google Wallet pass shows our logo if you have not uploaded one of your own.' : 'One more thing is not on your page at all: every event graphic made here carries a small getvnt.com credit in its corner, whatever the plan.').' On any install that is not getvnt.com the chip is the normal case rather than an exception, on every plan except a free one that is already carrying the operator\'s own strip - see the two questions below.',
             ],
             [
                 'q' => 'Do I need to change my embed after upgrading?',
@@ -627,7 +627,7 @@
             ],
             [
                 'q' => 'Is white labeling available on selfhosted installations?',
-                'a' => 'Yes, with one exception, and it is a small one. Every schedule on a selfhosted install behaves like a paid one, so there is nothing to buy: no card beside your events, no line in either embed snippet or in your newsletters, and no ads. What stays is the small "Event Schedule" chip in the corner of your public pages, the same one a free schedule carries here. Event Schedule is given away under the Attribution Assurance License, which asks for the credit in return, so that one is not a plan you can upgrade past.',
+                'a' => 'Yes, with one exception, and it is a small one. Every schedule on a selfhosted install behaves like a paid one, so there is nothing to buy: no card beside your events, no line in either embed snippet or in your newsletters, and no ads. What stays is the small "Getvnt" chip in the corner of your public pages, the same one a free schedule carries here. Getvnt is given away under the Attribution Assurance License, which asks for the credit in return, so that one is not a plan you can upgrade past.',
             ],
             [
                 'q' => 'I run my own platform on this software. Are my customers white-labeled?',
@@ -672,13 +672,13 @@
         <div class="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="es-balance mb-7 text-[2.6rem] font-black leading-[1.05] tracking-tight sm:text-6xl">
-                    <x-marketing.hero-eyebrow class="block es-slate2-tag es-fade-up es-d-1 mb-5">Remove Event Schedule branding</x-marketing.hero-eyebrow>
+                    <x-marketing.hero-eyebrow class="block es-slate2-tag es-fade-up es-d-1 mb-5">Remove Getvnt branding</x-marketing.hero-eyebrow>
                     <span class="es-mask"><span class="es-mask-line">White label takes off</span></span>
                     <span class="es-mask es-mask-2"><span class="es-mask-line">the <span class="es-slate2-grad">one chip</span> in the corner.</span></span>
                 </h1>
 
                 <p class="es-slate2-muted es-fade-up es-d-2 mx-auto mb-9 max-w-2xl text-lg sm:text-xl">
-                    On the free plan, a small "Event Schedule" chip sits in the corner of your public
+                    On the free plan, a small "Getvnt" chip sits in the corner of your public
                     pages. White-label takes it off, along with the six other surfaces in the register
                     below, the moment the plan is active. There is nothing to switch on.
                 </p>
@@ -734,7 +734,7 @@
                                     <div class="flex w-full justify-end px-4">
                                         <span class="es-slate2-chip">
                                             <span class="es-slate2-chip-mark" aria-hidden="true"></span>
-                                            <span>Event Schedule</span>
+                                            <span>Getvnt</span>
                                         </span>
                                     </div>
                                 @endif
@@ -760,7 +760,7 @@
                     Seven surfaces, <span class="es-slate2-grad">one decision</span>.
                 </h2>
                 <p class="es-slate2-muted text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    Every place the Event Schedule name comes off your pages, your embeds and your
+                    Every place the Getvnt name comes off your pages, your embeds and your
                     newsletters: what it says while you are on the free plan, and what happens to it
                     after that. All seven read the same fact, your plan. What white-label does
                     not remove, on your pages and off them, is two sections down.
@@ -770,7 +770,7 @@
             <div class="es-slate2-card overflow-hidden p-5 sm:p-7" data-reveal="panel">
                 <div class="overflow-x-auto">
                     <table class="es-slate2-reg w-full border-collapse text-left">
-                        <caption class="sr-only">Each surface that can carry Event Schedule branding, what it shows on the free plan, and what white-label does to it</caption>
+                        <caption class="sr-only">Each surface that can carry Getvnt branding, what it shows on the free plan, and what white-label does to it</caption>
                         <thead>
                             <tr class="es-slate2-tag">
                                 <th scope="col" class="pb-3 pe-4 font-bold">Surface</th>
@@ -800,7 +800,7 @@
 
             <div class="mt-6 grid gap-4 md:grid-cols-2" data-reveal-group="90">
                 <p class="es-slate2-muted text-sm" data-reveal>
-                    <span class="es-slate2-ink font-semibold">On the last row:</span> eventschedule.com
+                    <span class="es-slate2-ink font-semibold">On the last row:</span> getvnt.com
                     does not run ads on any schedule at all, so nothing there carries them on any
                     plan. That row matters if you are looking at a selfhosted install, or at an
                     operator who runs their own free tier and has switched ads on.
@@ -811,9 +811,9 @@
                     refinement is on the first row: a plan an admin granted by hand keeps the chip.
                     No row reads a second schedule - a curator
                     page answers for itself, whoever else is on the bill. So does the page the app
-                    makes for an act or venue you list who is not on Event Schedule yet: it is a free
+                    makes for an act or venue you list who is not on Getvnt yet: it is a free
                     schedule of its own, so it carries the chip until the person it names claims it
-                    and upgrades. Event Schedule is
+                    and upgrades. Getvnt is
                     <a href="{{ marketing_url('/open-source') }}" class="es-slate2-accent font-medium underline">open source</a>,
                     so you can go and read the checks rather than take our word for them.
                 </p>
@@ -874,7 +874,7 @@
 
                         <div class="es-slate2-code overflow-x-auto p-4 text-xs leading-relaxed" aria-hidden="true">
                             <p class="es-slate2-etch mb-2 text-[0.65rem] uppercase tracking-widest">What you paste, on Pro</p>
-                            <p class="es-slate2-lit">&lt;iframe src="northgate.eventschedule.com?embed=true"&gt;</p>
+                            <p class="es-slate2-lit">&lt;iframe src="northgate.getvnt.com?embed=true"&gt;</p>
                             <p class="es-slate2-lit">&lt;/iframe&gt;</p>
                         </div>
 
@@ -962,7 +962,7 @@
                             to whatever is already on your page, never to a picture of ours. The
                             icon beside it becomes your uploaded logo on Pro. One string is left, and
                             you will only ever meet it in the page source: the breadcrumb data names
-                            <span class="es-slate2-lit">eventschedule.com</span> as the site root. Point
+                            <span class="es-slate2-lit">getvnt.com</span> as the site root. Point
                             a domain of your own at the schedule and that roots at your domain too.
                         </p>
                     </div>
@@ -977,7 +977,7 @@
                         <div class="mb-5 flex justify-end" aria-hidden="true">
                             <span class="es-slate2-chip">
                                 <span class="es-slate2-chip-mark"></span>
-                                <span>Event Schedule</span>
+                                <span>Getvnt</span>
                             </span>
                         </div>
 
@@ -1005,13 +1005,13 @@
                                 @endforeach
                             </div>
                             <div class="mt-3 flex justify-end">
-                                <span class="es-slate2-etch es-slate2-num text-[0.65rem]">eventschedule.com</span>
+                                <span class="es-slate2-etch es-slate2-num text-[0.65rem]">getvnt.com</span>
                             </div>
                         </div>
 
                         <p class="es-slate2-muted mt-auto text-sm">
                             <a href="{{ marketing_url('/features/event-graphics') }}" class="es-slate2-lit font-medium underline">Event graphics</a>
-                            made on this service carry a small eventschedule.com credit in the bottom
+                            made on this service carry a small getvnt.com credit in the bottom
                             right corner, whatever the plan. White-label takes our name off your pages,
                             not off that image. A selfhosted install draws no credit on its graphics.
                         </p>
@@ -1042,7 +1042,7 @@
                 <p class="es-slate2-muted mx-auto mt-8 max-w-2xl text-center text-sm" data-reveal>
                     That is the end of the list for a schedule hosted here. Run the software somewhere
                     else and the chip above stops being an exception: on any install that is not
-                    eventschedule.com, whether you selfhost for yourself or run a platform of your own
+                    getvnt.com, whether you selfhost for yourself or run a platform of your own
                     for other people, it sits in the corner of the public pages. On a selfhost that is
                     every page. On a platform of your own it is every page you charge for, because a
                     free schedule there is already carrying your own footer strip and the two are never
@@ -1201,7 +1201,7 @@
                         <div class="mt-auto grid gap-3 sm:grid-cols-2">
                             <div class="es-slate2-sub p-4">
                                 <p class="es-slate2-tag mb-1.5">Pro</p>
-                                <p class="es-slate2-num es-slate2-ink break-all text-sm">northgate.eventschedule.com</p>
+                                <p class="es-slate2-num es-slate2-ink break-all text-sm">northgate.getvnt.com</p>
                                 <p class="es-slate2-muted mt-1 text-xs">Our name off the page, on a subdomain.</p>
                             </div>
                             <div class="es-slate2-sub p-4">
@@ -1245,7 +1245,7 @@
             <div class="grid gap-4 md:grid-cols-2" data-reveal-group="100">
                 @foreach ([
                     ['Six of the seven, gone','The branding check answers no on a single-tenant install, so the event-page card, both embed lines, the newsletter line and ads are never rendered in the first place, and an uploaded logo takes over the tab icon.', ''],
-                    ['The seventh: one credit, one corner', 'The first row of the register is the one that stays: the same small "Event Schedule" chip a free schedule carries here sits in the corner of your public pages. It is the Attribution Assurance License credit - the licence gives you the whole application and asks for the mention in return - so it is not gated on a plan and there is no setting that removes it. Nothing else on the page, and nothing in your email or your embeds, carries our name.', ''],
+                    ['The seventh: one credit, one corner', 'The first row of the register is the one that stays: the same small "Getvnt" chip a free schedule carries here sits in the corner of your public pages. It is the Attribution Assurance License credit - the licence gives you the whole application and asks for the mention in return - so it is not gated on a plan and there is no setting that removes it. Nothing else on the page, and nothing in your email or your embeds, carries our name.', ''],
                     ['Running it for other people, one credit a page', 'Switch the same install into multi-tenant mode and every schedule you charge for carries that one corner chip. The credit is owed by whoever redistributes the software, and what your customers pay you is between you and them. Your free tier keeps a footer strip instead, pointed at your marketing site rather than ours: a page shows one credit or the other, never both.', ''],
                     ['Every feature, not just this one', 'A selfhosted install resolves to the Enterprise tier throughout, so Custom CSS, custom labels and the banner come with it. The AI style generator is there too, but it calls an AI provider, so it stays hidden until you put your own API key in the environment file.', ''],
                     ['Your servers, your data', 'Run it on your own hardware for a client, a festival or a chain of rooms. The source is open, so the branding check and everything around it is there to read.', 'md:col-span-2'],
@@ -1376,7 +1376,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-slate2-card es-slate2-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-slate2-muted text-xs">Event Schedule for</div>
+                            <div class="es-slate2-muted text-xs">Getvnt for</div>
                             <div class="es-slate2-ink text-base font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-slate2-accent h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1446,7 +1446,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-slate2-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

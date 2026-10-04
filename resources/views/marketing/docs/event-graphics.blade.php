@@ -1,6 +1,6 @@
 <x-docs-page
     key="event-graphics"
-    title="How to Make Event Graphics and Text Posts - Event Schedule"
+    title="How to Make Event Graphics and Text Posts - Getvnt"
     description="Turn your upcoming events into one shareable image and ready-to-paste text, free on every plan: layouts, social sizes and every template variable."
     lede="Compose your upcoming events into one image and one block of text you can paste anywhere: a social post, a WhatsApp group, or an email."
     plan="free"
@@ -38,7 +38,7 @@
         <div class="doc-callout doc-callout-plan mb-6">
             <div class="doc-callout-title">Free on every plan</div>
             <p><x-doc-badge plan="free" /> Generating, downloading and copying event graphics is free on every plan, and so is uploading a flyer to an event. Two parts are <strong class="text-gray-900 dark:text-white">Enterprise</strong>: the <a href="#ai-prompt" class="doc-link">AI text prompt</a> and <a href="#email-scheduling" class="doc-link">scheduled graphic emails</a>. A <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install counts as Enterprise, so nothing on this page is held back by plan there.</p>
-            <p class="mt-2">On eventschedule.com every graphic carries a small eventschedule.com credit in its bottom-right corner, whatever your plan, and upgrading does not remove it. A selfhosted install adds no credit.</p>
+            <p class="mt-2">On getvnt.com every graphic carries a small getvnt.com credit in its bottom-right corner, whatever your plan, and upgrading does not remove it. A selfhosted install adds no credit.</p>
         </div>
 
         <p class="text-gray-600 dark:text-gray-300 mb-4">
@@ -873,7 +873,7 @@ https://example.com/event/summer-concert</code></pre>
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Generate Event Graphics with Event Schedule",
+            "name": "How to Generate Event Graphics with Getvnt",
             "description": "Learn how to use the Event Graphics feature to generate shareable images and text for your upcoming events.",
             "totalTime": "PT5M",
             "step": [

@@ -12,7 +12,7 @@ return new class extends Migration
      *
      * plan_type/plan_expires cannot answer this on their own: an admin grant
      * (AdminController::updateSchedule) and a referral reward (ReferralController) write identical
-     * rows, and only the former should carry the Event Schedule credit in the guest footer.
+     * rows, and only the former should carry the Getvnt credit in the guest footer.
      *
      * Null for Stripe subscribers, who are also identifiable by plan_expires being nulled on every
      * Stripe path - but the guest layout re-checks hasActiveEnterpriseSubscription() at render time

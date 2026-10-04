@@ -169,13 +169,13 @@ class FederationPromptTest extends TestCase
 
         config([
             'app.marketing_url' => 'https://white-labeled-operator.test',
-            'app.nexus_url' => 'https://eventschedule.com',
+            'app.nexus_url' => 'https://getvnt.com',
         ]);
 
         $this->actingAs($admin)
             ->get(route('home'))
             ->assertOk()
-            ->assertSee('https://eventschedule.com/docs/selfhost/federation', false)
+            ->assertSee('https://getvnt.com/docs/selfhost/federation', false)
             ->assertDontSee('https://white-labeled-operator.test/docs', false);
     }
 

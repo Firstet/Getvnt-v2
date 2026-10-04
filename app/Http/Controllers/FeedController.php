@@ -43,13 +43,13 @@ class FeedController extends Controller
             ->orderBy('starts_at')
             ->get();
 
-        $domain = parse_url(config('app.url'), PHP_URL_HOST) ?: 'eventschedule.com';
+        $domain = parse_url(config('app.url'), PHP_URL_HOST) ?: 'getvnt.com';
         $timezone = $role->timezone ?: 'UTC';
         $calName = $role->name ?: $subdomain;
 
         $ical = "BEGIN:VCALENDAR\r\n";
         $ical .= "VERSION:2.0\r\n";
-        $ical .= "PRODID:-//Event Schedule//EN\r\n";
+        $ical .= "PRODID:-//Getvnt//EN\r\n";
         $ical .= "CALSCALE:GREGORIAN\r\n";
         $ical .= "METHOD:PUBLISH\r\n";
         $ical .= 'X-WR-CALNAME:'.$this->escapeIcalText($calName)."\r\n";

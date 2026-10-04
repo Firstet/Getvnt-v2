@@ -1,8 +1,8 @@
 <x-docs-page
     key="saas/twilio"
-    title="Twilio: SMS, WhatsApp, Phone Verification - Event Schedule"
+    title="Twilio: SMS, WhatsApp, Phone Verification - Getvnt"
     description="Set up Twilio for SMS phone verification, texted invitations that let an act or venue claim its page, and WhatsApp event creation on your platform."
-    lede="Set up Twilio to enable SMS phone verification, SMS invitations and WhatsApp event creation across your Event Schedule deployment."
+    lede="Set up Twilio to enable SMS phone verification, SMS invitations and WhatsApp event creation across your Getvnt deployment."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#overview">Overview</x-doc-nav-link>
@@ -55,7 +55,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">What Twilio is not used for</div>
-            <p>Event Schedule never sends SMS or WhatsApp messages to attendees, ticket buyers or followers. Ticket confirmations, event change notices and newsletters are all email. The only outbound WhatsApp messages the app sends are replies to a message that someone has just sent to your Twilio number, so there is no broadcast or reminder channel to plan for.</p>
+            <p>Getvnt never sends SMS or WhatsApp messages to attendees, ticket buyers or followers. Ticket confirmations, event change notices and newsletters are all email. The only outbound WhatsApp messages the app sends are replies to a message that someone has just sent to your Twilio number, so there is no broadcast or reminder channel to plan for.</p>
         </div>
 
         <div class="doc-callout doc-callout-info">
@@ -78,7 +78,7 @@
             <li>From the Twilio Console dashboard, note your <strong class="text-gray-900 dark:text-white">Account SID</strong> and <strong class="text-gray-900 dark:text-white">Auth Token</strong></li>
             <li>Navigate to <strong class="text-gray-900 dark:text-white">Phone Numbers</strong> &rarr; <strong class="text-gray-900 dark:text-white">Manage</strong> &rarr; <strong class="text-gray-900 dark:text-white">Buy a number</strong></li>
             <li>Purchase a phone number with <strong class="text-gray-900 dark:text-white">SMS</strong> capability</li>
-            <li>If you want WhatsApp event creation, register that same number as a WhatsApp sender as well. Event Schedule sends WhatsApp from the number you put in <code class="doc-inline-code">TWILIO_FROM_NUMBER</code>, so it does not need a second number.</li>
+            <li>If you want WhatsApp event creation, register that same number as a WhatsApp sender as well. Getvnt sends WhatsApp from the number you put in <code class="doc-inline-code">TWILIO_FROM_NUMBER</code>, so it does not need a second number.</li>
         </ol>
 
         <div class="doc-callout doc-callout-tip">
@@ -147,7 +147,7 @@ TWILIO_FROM_NUMBER=+1234567890</code></pre>
         <h3 class="doc-subheading">How it works</h3>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>Enter the number and save. The field has a country selector and stores the number in E.164 format (e.g., <code class="doc-inline-code">+15551234567</code>); the verify link only appears once a number has been saved.</li>
-            <li>Click <strong class="text-gray-900 dark:text-white">Click here to verify your phone</strong>. A 6-digit code is sent by SMS, reading "Your Event Schedule verification code is: ...".</li>
+            <li>Click <strong class="text-gray-900 dark:text-white">Click here to verify your phone</strong>. A 6-digit code is sent by SMS, reading "Your Getvnt verification code is: ...".</li>
             <li>Type the code into the box that appears and click <strong class="text-gray-900 dark:text-white">Verify</strong>. The code is valid for 10 minutes.</li>
             <li>On success the number is marked verified and the control disappears. Editing the number later clears the verification and the control comes back.</li>
         </ol>
@@ -174,7 +174,7 @@ TWILIO_FROM_NUMBER=+1234567890</code></pre>
             </svg>
             WhatsApp Setup
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">WhatsApp on Event Schedule is inbound-first: an organizer messages your Twilio number, the app creates the event, and the confirmation goes back on the same thread. To accept those messages, your Twilio number has to be registered as a WhatsApp sender and pointed at the app's webhook.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">WhatsApp on Getvnt is inbound-first: an organizer messages your Twilio number, the app creates the event, and the confirmation goes back on the same thread. To accept those messages, your Twilio number has to be registered as a WhatsApp sender and pointed at the app's webhook.</p>
 
         <h3 class="doc-subheading">Register as a WhatsApp sender</h3>
         <ol class="doc-list doc-list-numbered mb-6">
@@ -185,7 +185,7 @@ TWILIO_FROM_NUMBER=+1234567890</code></pre>
         </ol>
 
         <h3 class="doc-subheading">Configure the webhook URL</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Set the incoming message webhook so Event Schedule can receive WhatsApp messages:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Set the incoming message webhook so Getvnt can receive WhatsApp messages:</p>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>In the Twilio Console, go to your WhatsApp Sender settings</li>
             <li>Set the webhook URL to: <code class="doc-inline-code">https://yourdomain.com/api/whatsapp/webhook</code></li>
@@ -201,7 +201,7 @@ TWILIO_FROM_NUMBER=+1234567890</code></pre>
 
         <div class="doc-callout doc-callout-tip">
             <div class="doc-callout-title">No message templates to submit</div>
-            <p>WhatsApp only allows free-form messages within 24 hours of the recipient's last message. Every message Event Schedule sends is an immediate reply to a message that has just arrived, so it is always inside that window. There are no campaigns or reminders to schedule and no message templates to get approved.</p>
+            <p>WhatsApp only allows free-form messages within 24 hours of the recipient's last message. Every message Getvnt sends is an immediate reply to a message that has just arrived, so it is always inside that window. There are no campaigns or reminders to schedule and no message templates to get approved.</p>
         </div>
 
         <h3 class="doc-subheading">Creating events by WhatsApp <x-doc-badge plan="enterprise" /></h3>

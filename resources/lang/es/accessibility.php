@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Accesibilidad - Event Schedule',
-    'meta_description' => 'Declaración de accesibilidad y opciones de visualización de Event Schedule.',
+    'page_title' => 'Accesibilidad - Getvnt',
+    'meta_description' => 'Declaración de accesibilidad y opciones de visualización de Getvnt.',
     'breadcrumb' => 'Accesibilidad',
 
     'h1' => 'Declaración de accesibilidad',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Esta página es información general de servicio, no asesoramiento legal. Las leyes varían por país. Confirme sus obligaciones con asesor cualificado.',
 
     'section_scope_title' => 'Alcance',
-    'section_scope_body' => 'Esta declaración cubre el sitio de marketing y la aplicación web de Event Schedule (herramientas con sesión iniciada y páginas públicas de calendario) bajo el dominio principal y subdominios de Event Schedule, salvo que se indique lo contrario.',
+    'section_scope_body' => 'Esta declaración cubre el sitio de marketing y la aplicación web de Getvnt (herramientas con sesión iniciada y páginas públicas de calendario) bajo el dominio principal y subdominios de Getvnt, salvo que se indique lo contrario.',
 
     'section_commitment_title' => 'Compromiso',
-    'section_commitment_body' => 'Trabajamos para que Event Schedule sea usable por personas con discapacidad. Buscamos alinear mejor con las Pautas de Accesibilidad para el Contenido Web (WCAG), documentadas como :wcag_target, y respetar la orientación asociada con la norma israelí 5568 cuando aplique.',
+    'section_commitment_body' => 'Trabajamos para que Getvnt sea usable por personas con discapacidad. Buscamos alinear mejor con las Pautas de Accesibilidad para el Contenido Web (WCAG), documentadas como :wcag_target, y respetar la orientación asociada con la norma israelí 5568 cuando aplique.',
 
     'section_commitment_is5568_note' => 'También tenemos en cuenta las prácticas habituales de accesibilidad web relacionadas con la norma israelí 5568 cuando aplican a nuestros servicios.',
 

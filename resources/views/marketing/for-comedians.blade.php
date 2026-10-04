@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Comedians | Mics, Sets & Tickets</x-slot>
+    <x-slot name="title">Free Getvnt for Comedians | Mics, Sets & Tickets</x-slot>
     <x-slot name="description">One link for every mic, guest set, and headline. Sell tickets with zero fees, email fans directly, and let clubs book you onto your schedule. Free forever.</x-slot>
     <x-slot name="breadcrumbTitle">For Comedians</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Comedians"
+        name="Getvnt for Comedians"
         description="One link for every mic, guest set, and headline. Sell tickets with zero fees, email fans directly, and let clubs book you onto your schedule. Free forever."
         audience="Comedians"
         keywords="comedian schedule, comedy show calendar, stand-up comedy booking, comedy event management, free comedian scheduling, open mic tracker, comedy tour schedule, comedian link in bio" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How comedians share their show dates with Event Schedule",
+        "name": "How comedians share their show dates with Getvnt",
         "description": "Three steps. More butts in seats.",
         "step": [
             {
@@ -425,7 +425,7 @@
                     A tight five. <span class="es-comic-neon">Allegedly.</span>
                 </h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.16s;">
-                    Five bits, some crowd work, an encore. Every bit is a thing Event Schedule does for working comedians.
+                    Five bits, some crowd work, an encore. Every bit is a thing Getvnt does for working comedians.
                 </p>
             </div>
 
@@ -617,7 +617,7 @@
                                 <span class="es-comic-beat my-3" data-reveal style="--reveal-delay: 0.15s;" aria-hidden="true"><i></i><i></i><i></i></span>
                                 <h3 class="mb-5 text-3xl font-black tracking-tight text-gray-900 dark:text-white lg:text-4xl" data-reveal style="--reveal-delay: 0.3s;">Now the club <span class="es-comic-neon">posts it for you.</span></h3>
                                 <p class="mb-4 text-lg text-gray-500 dark:text-gray-400" data-reveal style="--reveal-delay: 0.45s;">When a club adds you to their lineup, it lands in your requests. Accept it and the set is on your schedule, with the club's time and address. No copy-paste. No 'wait, what time did they say?'</p>
-                                <p class="text-gray-500 dark:text-gray-400" data-reveal style="--reveal-delay: 0.55s;">Not on Event Schedule yet? The club's listing makes a page with your name on it, credited to the club and kept out of search engines until you <a href="{{ marketing_url('/docs/creating-events#claim') }}" class="es-comic-link font-medium hover:underline">claim it</a> with the email address they entered. The event page lists the whole lineup either way.</p>
+                                <p class="text-gray-500 dark:text-gray-400" data-reveal style="--reveal-delay: 0.55s;">Not on Getvnt yet? The club's listing makes a page with your name on it, credited to the club and kept out of search engines until you <a href="{{ marketing_url('/docs/creating-events#claim') }}" class="es-comic-link font-medium hover:underline">claim it</a> with the email address they entered. The event page lists the whole lineup either way.</p>
                             </div>
 
                             <div class="flex flex-col items-center gap-4" aria-hidden="true">
@@ -632,7 +632,7 @@
                                     <svg aria-hidden="true" class="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                                     </svg>
-                                    your-name.eventschedule.com
+                                    your-name.getvnt.com
                                 </div>
                             </div>
                         </div>
@@ -831,7 +831,7 @@
                     From open mic to <span class="es-comic-neon">headliner</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Event Schedule grows with your career
+                    Getvnt grows with your career
                 </p>
             </div>
 
@@ -874,7 +874,7 @@
                     Perfect for all types of <span class="es-comic-neon">comedy</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Whether you're doing tight fives or touring theaters, Event Schedule has you sorted.
+                    Whether you're doing tight fives or touring theaters, Getvnt has you sorted.
                 </p>
             </div>
 
@@ -995,7 +995,7 @@
                 @foreach ([['/for-musicians', 'Musicians'], ['/for-magicians', 'Magicians'], ['/for-spoken-word', 'Spoken Word Artists'], ['/for-theater-performers', 'Theater Performers']] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="group es-comic-hover flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 p-5 hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                         <div>
-                            <div class="text-sm text-gray-600 dark:text-gray-400">Event Schedule for</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Getvnt for</div>
                             <div class="es-comic-hover-title text-lg font-semibold text-gray-900 transition-colors dark:text-white">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-comic-hover-arrow w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1025,18 +1025,18 @@
                     Frequently asked <span class="es-comic-neon">questions</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Everything comedians ask about Event Schedule.
+                    Everything comedians ask about Getvnt.
                 </p>
             </div>
 
             <div class="space-y-4" data-reveal-group="80">
                 @php
                     $faqs = [
-                        ['q' => 'Is Event Schedule free for comedians?', 'a' => 'Yes. Event Schedule is free forever for sharing your show dates and building a fan following, and free door lists never run out. Newsletters are free too, at 10 a month counted per recipient. Charging for a ticket is the Pro part, and Pro lifts the newsletter ceiling with it. Zero platform fees on any ticket sale, on any plan.'],
+                        ['q' => 'Is Getvnt free for comedians?', 'a' => 'Yes. Getvnt is free forever for sharing your show dates and building a fan following, and free door lists never run out. Newsletters are free too, at 10 a month counted per recipient. Charging for a ticket is the Pro part, and Pro lifts the newsletter ceiling with it. Zero platform fees on any ticket sale, on any plan.'],
                         ['q' => 'Can I sell tickets to my comedy shows?', 'a' => 'Yes. Connect your own Stripe or PayPal account, or take cash at the door, and sell tickets directly from your schedule. Create multiple ticket types like general admission, VIP, and early bird. Every ticket includes a QR code for check-in at the door. Zero platform fees - you only pay your payment provider\'s own processing fee. Refunds come with it: from the Sales page, a Stripe or PayPal sale can be refunded in full or in part, and the money goes back through the provider.'],
                         ['q' => 'Can fans get told when tickets for my show go on sale?', 'a' => 'Yes, on every plan. Switch on the "Notify me" card, announce the show before tickets exist, and a fan can leave just an email address on the event page, no account needed. They get one email when tickets go on sale, one if the show is cancelled, and a reminder shortly before it starts, plus any change notice you choose to send. Nothing else. The event\'s Tickets panel shows you how many people are waiting.'],
                         ['q' => 'How do fans hear about my new shows?', 'a' => 'Fans who sign up with their email get an automatic digest when you add new shows, batched so a run of new dates arrives as one email. You can also send newsletters with upcoming dates yourself. Fans who would rather not give an address can subscribe to your calendar feed, which updates itself when a show moves. And your schedule link goes in your social bios, on podcasts, or anywhere fans find you.'],
-                        ['q' => 'Can comedy clubs add me to their lineup?', 'a' => 'Yes. When a comedy club adds you to their event on Event Schedule, it arrives as a request on your schedule. Accept it and the show appears there too, so you never add the same gig in two places, and because both schedules share one event, a changed start time shows on both. Not on Event Schedule yet? The club\'s listing creates a page with your name on it, kept out of search engines until you claim it by signing in with the email address it carries.'],
+                        ['q' => 'Can comedy clubs add me to their lineup?', 'a' => 'Yes. When a comedy club adds you to their event on Getvnt, it arrives as a request on your schedule. Accept it and the show appears there too, so you never add the same gig in two places, and because both schedules share one event, a changed start time shows on both. Not on Getvnt yet? The club\'s listing creates a page with your name on it, kept out of search engines until you claim it by signing in with the email address it carries.'],
                         ['q' => 'Can I track open mics and bringer shows without announcing them?', 'a' => 'Yes. Save any set as a draft and it stays off your public schedule until you publish it. Drafts are free and unlimited, so you can plan a whole week of mics privately. On the Enterprise plan you can also make events internal or unlisted with an optional password for corporate and private gigs.'],
                         ['q' => 'Can I run stand-up, improv, and a podcast on one schedule?', 'a' => 'Yes. Sub-schedules let you split your calendar into separate lineups like stand-up sets, improv nights, and podcast tapings. Fans can see everything in one place, or you can share each lineup with its own link. Sub-schedules are included on the free plan.'],
                     ];
@@ -1089,7 +1089,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-600 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-600 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 px-8 py-4 text-lg font-semibold text-black shadow-xl shadow-amber-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-amber-500/40">
                             <span class="relative z-10 flex items-center gap-2">

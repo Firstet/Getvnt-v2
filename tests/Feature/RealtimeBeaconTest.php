@@ -34,7 +34,7 @@ class RealtimeBeaconTest extends TestCase
 
     public function test_a_consented_page_view_stores_an_identified_row(): void
     {
-        $this->beacon(['t' => 'pv', 'm' => 'f', 'k' => $this->key(1), 'c' => $this->context(), 'r' => 'www.google.com', 'ti' => 'Pricing | Event Schedule'])
+        $this->beacon(['t' => 'pv', 'm' => 'f', 'k' => $this->key(1), 'c' => $this->context(), 'r' => 'www.google.com', 'ti' => 'Pricing | Getvnt'])
             ->assertNoContent();
 
         $hit = RealtimeHit::sole();
@@ -59,7 +59,7 @@ class RealtimeBeaconTest extends TestCase
         $this->beacon([
             't' => 'pv', 'm' => 'c', 'k' => $this->key(1),
             'c' => $this->context(['u' => UrlUtils::encodeId($user->id), 's' => 'ap', 'p' => '/home']),
-            'r' => 'news.ycombinator.com', 'ti' => 'Dashboard | Event Schedule',
+            'r' => 'news.ycombinator.com', 'ti' => 'Dashboard | Getvnt',
         ])->assertNoContent();
 
         $hit = RealtimeHit::sole();
@@ -84,7 +84,7 @@ class RealtimeBeaconTest extends TestCase
         $this->beacon([
             't' => 'pv', 'k' => $this->key(1),
             'c' => $this->context(['u' => UrlUtils::encodeId($user->id), 's' => 'ap', 'p' => '/home']),
-            'ti' => 'Dashboard | Event Schedule',
+            'ti' => 'Dashboard | Getvnt',
         ])->assertNoContent();
 
         $hit = RealtimeHit::sole();

@@ -1,10 +1,10 @@
-# Event Schedule
+# Getvnt
 
-> Event Schedule is an open-source platform for sharing events, selling tickets, and bringing communities together. This document is a complete, self-contained reference for the Event Schedule platform and API.
+> Getvnt is an open-source platform for sharing events, selling tickets, and bringing communities together. This document is a complete, self-contained reference for the Getvnt platform and API.
 
 ## Platform Overview
 
-Event Schedule is an open-source event management platform available as hosted SaaS at eventschedule.com or as a selfhosted deployment. It provides public schedule pages, unlimited free registration on every plan, paid ticketing with zero platform fees on the Pro and Enterprise plans, refunds through Stripe and PayPal, two-way Google, Outlook and CalDAV calendar sync, AI-powered event parsing, newsletters and automatic new-event digests, analytics, and a full REST API with an OpenAPI 3.0 spec.
+Getvnt is an open-source event management platform available as hosted SaaS at getvnt.com or as a selfhosted deployment. It provides public schedule pages, unlimited free registration on every plan, paid ticketing with zero platform fees on the Pro and Enterprise plans, refunds through Stripe and PayPal, two-way Google, Outlook and CalDAV calendar sync, AI-powered event parsing, newsletters and automatic new-event digests, analytics, and a full REST API with an OpenAPI 3.0 spec.
 
 ### Schedule Types
 
@@ -16,12 +16,12 @@ Every account organizes events under one or more **schedules**. There are three 
 
 ### Deployment Modes
 
-- **Hosted** (eventschedule.com): Multi-tenant SaaS using subdomains (e.g., `my-venue.eventschedule.com`). Email verification required for registration. Each schedule owner connects their own payment account: Stripe (through Stripe Connect), PayPal, Payfast (South African rand only) or Invoice Ninja, or takes payment through a payment link or in cash.
+- **Hosted** (getvnt.com): Multi-tenant SaaS using subdomains (e.g., `my-venue.getvnt.com`). Email verification required for registration. Each schedule owner connects their own payment account: Stripe (through Stripe Connect), PayPal, Payfast (South African rand only) or Invoice Ninja, or takes payment through a payment link or in cash.
 - **Selfhosted**: Single-tenant deployment using path-based routing (e.g., `yourdomain.com/my-venue`). No email verification needed. Stripe runs on the install's own API keys; PayPal and Payfast can be supplied for the whole install or connected per owner; Invoice Ninja, payment links and cash work as on the hosted service. Every Pro and Enterprise feature is included.
 
 ### Key Differentiators
 
-- **Zero platform fees**: Event Schedule charges no percentage on ticket sales. You only pay standard payment processor fees.
+- **Zero platform fees**: Getvnt charges no percentage on ticket sales. You only pay standard payment processor fees.
 - **Unlimited free registration**: RSVPs and zero-price ticket types are uncapped on every plan, with QR scanning at the door included. Selling tickets that carry a price is a Pro or Enterprise feature.
 - **Open source**: Full source code available. Selfhost on your own infrastructure.
 - **AI-powered**: Gemini-powered event parsing from text/images, auto-translation across the 12 supported languages.
@@ -35,10 +35,10 @@ This walkthrough shows how to register, create a schedule, create an event with 
 
 ### Step 1: Send Verification Code (hosted mode only)
 
-In hosted mode (eventschedule.com), you must verify your email before registering. Skip this step for selfhosted instances.
+In hosted mode (getvnt.com), you must verify your email before registering. Skip this step for selfhosted instances.
 
 ```bash
-curl -X POST https://eventschedule.com/api/register/send-code \
+curl -X POST https://getvnt.com/api/register/send-code \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com"
@@ -57,7 +57,7 @@ Response:
 ### Step 2: Register an Account
 
 ```bash
-curl -X POST https://eventschedule.com/api/register \
+curl -X POST https://getvnt.com/api/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Jane Smith",
@@ -88,7 +88,7 @@ Store the `api_key` securely. It expires after one year.
 ### Step 3: Create a Schedule
 
 ```bash
-curl -X POST https://eventschedule.com/api/schedules \
+curl -X POST https://getvnt.com/api/schedules \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -110,7 +110,7 @@ Response (201 Created):
   "data": {
     "id": "mK7pQ2",
     "subdomain": "the-blue-note",
-    "url": "https://the-blue-note.eventschedule.com",
+    "url": "https://the-blue-note.getvnt.com",
     "type": "venue",
     "name": "The Blue Note",
     "email": "info@thebluenote.com",
@@ -131,7 +131,7 @@ The `subdomain` is auto-generated from the name and used in subsequent API calls
 ### Step 4: Create an Event with Tickets
 
 ```bash
-curl -X POST https://eventschedule.com/api/events/the-blue-note \
+curl -X POST https://getvnt.com/api/events/the-blue-note \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -165,7 +165,7 @@ Response (201 Created):
 {
   "data": {
     "id": "vN4wR8",
-    "url": "https://the-blue-note.eventschedule.com/e/vN4wR8/jazz-night-with-miles-davis-tribute",
+    "url": "https://the-blue-note.getvnt.com/e/vN4wR8/jazz-night-with-miles-davis-tribute",
     "name": "Jazz Night with Miles Davis Tribute",
     "short_description": "Classic jazz tribute night",
     "description": "An evening of classic jazz featuring a world-class tribute to Miles Davis.",
@@ -204,7 +204,7 @@ Response (201 Created):
 ### Step 5: Sell Tickets
 
 ```bash
-curl -X POST https://eventschedule.com/api/sales \
+curl -X POST https://getvnt.com/api/sales \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -260,7 +260,7 @@ Response (201 Created):
 
 ## Authentication
 
-The Event Schedule API uses API key authentication via the `X-API-Key` header.
+The Getvnt API uses API key authentication via the `X-API-Key` header.
 
 ### Obtaining an API Key
 
@@ -274,7 +274,7 @@ There are two ways to get an API key:
 Include the key in the `X-API-Key` header on all authenticated requests:
 
 ```bash
-curl -H "X-API-Key: es_abc123..." https://eventschedule.com/api/schedules
+curl -H "X-API-Key: es_abc123..." https://getvnt.com/api/schedules
 ```
 
 ### Key Details
@@ -293,7 +293,7 @@ curl -H "X-API-Key: es_abc123..." https://eventschedule.com/api/schedules
 
 ## API Reference
 
-**Base URL**: `https://eventschedule.com/api` (hosted) or `https://yourdomain.com/api` (selfhosted)
+**Base URL**: `https://getvnt.com/api` (hosted) or `https://yourdomain.com/api` (selfhosted)
 
 All request and response bodies use JSON (`Content-Type: application/json`) unless otherwise noted. All timestamps are in UTC.
 
@@ -316,7 +316,7 @@ Send a 6-digit verification code to an email address. Required before registrati
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/register/send-code \
+curl -X POST https://getvnt.com/api/register/send-code \
   -H "Content-Type: application/json" \
   -d '{"email": "user@example.com"}'
 ```
@@ -355,7 +355,7 @@ Create a new user account and receive an API key.
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/register \
+curl -X POST https://getvnt.com/api/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Jane Smith",
@@ -406,7 +406,7 @@ Authenticate with email and password to receive a new API key.
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/login \
+curl -X POST https://getvnt.com/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com",
@@ -457,7 +457,7 @@ List schedules owned or administered by the authenticated user. Only schedules o
 
 **Example**:
 ```bash
-curl https://eventschedule.com/api/schedules \
+curl https://getvnt.com/api/schedules \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -468,7 +468,7 @@ curl https://eventschedule.com/api/schedules \
     {
       "id": "mK7pQ2",
       "subdomain": "the-blue-note",
-      "url": "https://the-blue-note.eventschedule.com",
+      "url": "https://the-blue-note.getvnt.com",
       "type": "venue",
       "name": "The Blue Note",
       "email": "info@thebluenote.com",
@@ -494,7 +494,7 @@ curl https://eventschedule.com/api/schedules \
     "per_page": 100,
     "to": 1,
     "total": 1,
-    "path": "https://eventschedule.com/api/schedules"
+    "path": "https://getvnt.com/api/schedules"
   }
 }
 ```
@@ -531,7 +531,7 @@ Create a new schedule.
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/schedules \
+curl -X POST https://getvnt.com/api/schedules \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -548,7 +548,7 @@ curl -X POST https://eventschedule.com/api/schedules \
   "data": {
     "id": "mK7pQ2",
     "subdomain": "the-blue-note",
-    "url": "https://the-blue-note.eventschedule.com",
+    "url": "https://the-blue-note.getvnt.com",
     "type": "venue",
     "name": "The Blue Note",
     "email": "info@thebluenote.com",
@@ -583,7 +583,7 @@ Get details of a specific schedule.
 
 **Example**:
 ```bash
-curl https://eventschedule.com/api/schedules/the-blue-note \
+curl https://getvnt.com/api/schedules/the-blue-note \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -593,7 +593,7 @@ curl https://eventschedule.com/api/schedules/the-blue-note \
   "data": {
     "id": "mK7pQ2",
     "subdomain": "the-blue-note",
-    "url": "https://the-blue-note.eventschedule.com",
+    "url": "https://the-blue-note.getvnt.com",
     "type": "venue",
     "name": "The Blue Note",
     "email": "info@thebluenote.com",
@@ -637,7 +637,7 @@ Update an existing schedule. Only the fields provided will be updated.
 
 **Example**:
 ```bash
-curl -X PUT https://eventschedule.com/api/schedules/the-blue-note \
+curl -X PUT https://getvnt.com/api/schedules/the-blue-note \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -652,7 +652,7 @@ curl -X PUT https://eventschedule.com/api/schedules/the-blue-note \
   "data": {
     "id": "mK7pQ2",
     "subdomain": "the-blue-note",
-    "url": "https://the-blue-note.eventschedule.com",
+    "url": "https://the-blue-note.getvnt.com",
     "type": "venue",
     "name": "The Blue Note",
     "description": "New York City's premier jazz club since 1981.",
@@ -683,7 +683,7 @@ Soft-delete a schedule. The schedule will no longer appear in listings or be acc
 
 **Example**:
 ```bash
-curl -X DELETE https://eventschedule.com/api/schedules/the-blue-note \
+curl -X DELETE https://getvnt.com/api/schedules/the-blue-note \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -721,7 +721,7 @@ List all sub-schedules for a schedule.
 
 **Example**:
 ```bash
-curl https://eventschedule.com/api/schedules/the-blue-note/groups \
+curl https://getvnt.com/api/schedules/the-blue-note/groups \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -772,7 +772,7 @@ Create a new sub-schedule within a schedule.
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/schedules/the-blue-note/groups \
+curl -X POST https://getvnt.com/api/schedules/the-blue-note/groups \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -822,7 +822,7 @@ Update an existing sub-schedule. Only the fields provided will be updated.
 
 **Example**:
 ```bash
-curl -X PUT https://eventschedule.com/api/schedules/the-blue-note/groups/gP5rT7 \
+curl -X PUT https://getvnt.com/api/schedules/the-blue-note/groups/gP5rT7 \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -865,7 +865,7 @@ Permanently delete a sub-schedule.
 
 **Example**:
 ```bash
-curl -X DELETE https://eventschedule.com/api/schedules/the-blue-note/groups/gP5rT7 \
+curl -X DELETE https://getvnt.com/api/schedules/the-blue-note/groups/gP5rT7 \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -905,7 +905,7 @@ List events owned by the authenticated user. Can be filtered by schedule and dat
 
 **Example**:
 ```bash
-curl "https://eventschedule.com/api/events?subdomain=the-blue-note&starts_after=2026-03-01" \
+curl "https://getvnt.com/api/events?subdomain=the-blue-note&starts_after=2026-03-01" \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -915,7 +915,7 @@ curl "https://eventschedule.com/api/events?subdomain=the-blue-note&starts_after=
   "data": [
     {
       "id": "vN4wR8",
-      "url": "https://the-blue-note.eventschedule.com/e/vN4wR8/jazz-night",
+      "url": "https://the-blue-note.getvnt.com/e/vN4wR8/jazz-night",
       "name": "Jazz Night with Miles Davis Tribute",
       "short_description": "Classic jazz tribute night",
       "description": "An evening of classic jazz featuring a world-class tribute to Miles Davis.",
@@ -950,7 +950,7 @@ curl "https://eventschedule.com/api/events?subdomain=the-blue-note&starts_after=
     "per_page": 100,
     "to": 1,
     "total": 1,
-    "path": "https://eventschedule.com/api/events"
+    "path": "https://getvnt.com/api/events"
   }
 }
 ```
@@ -974,7 +974,7 @@ Get details of a specific event.
 
 **Example**:
 ```bash
-curl https://eventschedule.com/api/events/vN4wR8 \
+curl https://getvnt.com/api/events/vN4wR8 \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -983,7 +983,7 @@ curl https://eventschedule.com/api/events/vN4wR8 \
 {
   "data": {
     "id": "vN4wR8",
-    "url": "https://the-blue-note.eventschedule.com/e/vN4wR8/jazz-night-with-miles-davis-tribute",
+    "url": "https://the-blue-note.getvnt.com/e/vN4wR8/jazz-night-with-miles-davis-tribute",
     "name": "Jazz Night with Miles Davis Tribute",
     "short_description": "Classic jazz tribute night",
     "description": "An evening of classic jazz featuring a world-class tribute to Miles Davis.",
@@ -1089,7 +1089,7 @@ Create a new event under a schedule.
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/events/the-blue-note \
+curl -X POST https://getvnt.com/api/events/the-blue-note \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1110,7 +1110,7 @@ curl -X POST https://eventschedule.com/api/events/the-blue-note \
 {
   "data": {
     "id": "eW2xY6",
-    "url": "https://the-blue-note.eventschedule.com/e/eW2xY6/open-mic-night",
+    "url": "https://the-blue-note.getvnt.com/e/eW2xY6/open-mic-night",
     "name": "Open Mic Night",
     "starts_at": "2026-04-01 19:00:00",
     "duration": 3,
@@ -1160,7 +1160,7 @@ Update an existing event. Supports partial updates; only the fields provided wil
 
 **Example**:
 ```bash
-curl -X PUT https://eventschedule.com/api/events/vN4wR8 \
+curl -X PUT https://getvnt.com/api/events/vN4wR8 \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1206,7 +1206,7 @@ Permanently delete an event.
 
 **Example**:
 ```bash
-curl -X DELETE https://eventschedule.com/api/events/vN4wR8 \
+curl -X DELETE https://getvnt.com/api/events/vN4wR8 \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -1246,7 +1246,7 @@ Upload a flyer image for an event. Any existing flyer image will be replaced.
 
 **Example**:
 ```bash
-curl -X POST https://eventschedule.com/api/events/flyer/vN4wR8 \
+curl -X POST https://getvnt.com/api/events/flyer/vN4wR8 \
   -H "X-API-Key: es_abc123..." \
   -F "flyer_image=@/path/to/flyer.jpg"
 ```
@@ -1256,7 +1256,7 @@ curl -X POST https://eventschedule.com/api/events/flyer/vN4wR8 \
 {
   "data": {
     "id": "vN4wR8",
-    "flyer_image_url": "https://eventschedule.com/storage/flyers/abc123.jpg",
+    "flyer_image_url": "https://getvnt.com/storage/flyers/abc123.jpg",
     "...": "..."
   },
   "meta": {
@@ -1283,7 +1283,7 @@ List all available event categories.
 
 **Example**:
 ```bash
-curl https://eventschedule.com/api/categories \
+curl https://getvnt.com/api/categories \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -1316,7 +1316,7 @@ curl https://eventschedule.com/api/categories \
 
 #### POST /sales
 
-Record a ticket sale against an event, for example when someone paid at the door or through a channel Event Schedule does not handle. The event must have ticketing enabled and still be selling. Recording a sale against a ticket that carries a price needs a Pro or Enterprise schedule; a free registration or a zero-price ticket does not. Either way the sale will not appear in `GET /sales` until the schedule is on a paid plan.
+Record a ticket sale against an event, for example when someone paid at the door or through a channel Getvnt does not handle. The event must have ticketing enabled and still be selling. Recording a sale against a ticket that carries a price needs a Pro or Enterprise schedule; a free registration or a zero-price ticket does not. Either way the sale will not appear in `GET /sales` until the schedule is on a paid plan.
 
 **Authentication**: Required
 
@@ -1334,7 +1334,7 @@ The `tickets` field is an object where keys are either ticket type names (e.g., 
 
 **Example using ticket names**:
 ```bash
-curl -X POST https://eventschedule.com/api/sales \
+curl -X POST https://getvnt.com/api/sales \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1350,7 +1350,7 @@ curl -X POST https://eventschedule.com/api/sales \
 
 **Example using ticket IDs**:
 ```bash
-curl -X POST https://eventschedule.com/api/sales \
+curl -X POST https://getvnt.com/api/sales \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1366,7 +1366,7 @@ curl -X POST https://eventschedule.com/api/sales \
 
 **Example for recurring event (specific date)**:
 ```bash
-curl -X POST https://eventschedule.com/api/sales \
+curl -X POST https://getvnt.com/api/sales \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1450,7 +1450,7 @@ List sales on events you own or administer, newest order first. Deleted sales ar
 | per_page | integer | Results per page (1-500) |
 
 ```bash
-curl -X GET "https://eventschedule.com/api/sales?status=paid&subdomain=my-venue" \
+curl -X GET "https://getvnt.com/api/sales?status=paid&subdomain=my-venue" \
   -H "X-API-Key: es_abc123..."
 ```
 
@@ -1489,7 +1489,7 @@ Move a sale to a new status by sending an `action`.
 | cancel | unpaid, paid | cancelled | sale.cancelled |
 
 ```bash
-curl -X PUT https://eventschedule.com/api/sales/sA9bC1 \
+curl -X PUT https://getvnt.com/api/sales/sA9bC1 \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{"action": "refund", "amount": 25.00, "idempotency_key": "refund-sA9bC1-1"}'
@@ -1784,7 +1784,7 @@ Only used with `weekly` and `every_n_weeks` frequencies.
 ### Example: Biweekly Event
 
 ```bash
-curl -X POST https://eventschedule.com/api/events/the-blue-note \
+curl -X POST https://getvnt.com/api/events/the-blue-note \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1805,7 +1805,7 @@ curl -X POST https://eventschedule.com/api/events/the-blue-note \
 When selling tickets for a recurring event, use the `event_date` field in the sale to specify which occurrence the tickets are for:
 
 ```bash
-curl -X POST https://eventschedule.com/api/sales \
+curl -X POST https://getvnt.com/api/sales \
   -H "Content-Type: application/json" \
   -H "X-API-Key: es_abc123..." \
   -d '{
@@ -1821,7 +1821,7 @@ curl -X POST https://eventschedule.com/api/sales \
 
 ## Agent Workflows
 
-Event Schedule provides pre-defined workflows in the agents.json file for AI agents to follow. These are multi-step sequences that chain API calls together.
+Getvnt provides pre-defined workflows in the agents.json file for AI agents to follow. These are multi-step sequences that chain API calls together.
 
 ### register_and_setup
 
@@ -1863,7 +1863,7 @@ List, view, update, or delete schedules.
 
 ## Features
 
-Beyond the API endpoints documented above, Event Schedule includes these platform features:
+Beyond the API endpoints documented above, Getvnt includes these platform features:
 
 - **Ticketing**: Ticket types with their own price, quantity and sales window, free RSVPs, QR tickets scanned at the door on every plan, per-occurrence inventory for recurring events, and a multi-event cart. Free registration and zero-price ticket types are unlimited on every plan; selling a ticket that carries a price needs Pro or Enterprise. Zero platform fees.
 - **Payments and refunds**: Stripe, PayPal, Payfast (South African rand only), Invoice Ninja, a payment link or cash, chosen per event. Putting a price on a ticket is Pro, and every payment method and refunds come with it. Stripe and PayPal sales can be refunded in full or in part from the Sales page or the API; other methods record the refund without moving money.
@@ -1881,14 +1881,14 @@ Beyond the API endpoints documented above, Event Schedule includes these platfor
 - **Embedding**: Responsive iframe calendar embed for any website, with light/dark mode support; an embeddable ticket widget on Pro.
 - **AI features**: Gemini-powered event parsing from text/images (50 a day, 100 on Enterprise, 10 while a schedule is on its trial), auto-translation across the 12 supported languages, and bulk import.
 - **Recurring events**: Six frequency patterns (daily, weekly, every N weeks, monthly by date/weekday, yearly) with flexible end conditions and date exceptions.
-- **Pages for acts and venues**: Naming a performer or venue who is not on Event Schedule creates a public page for them, kept out of search engines until they claim it by signing in with the email address on it.
+- **Pages for acts and venues**: Naming a performer or venue who is not on Getvnt creates a public page for them, kept out of search engines until they claim it by signing in with the email address on it.
 - **Team collaboration**: One team member per schedule on every plan; multiple members with admin and viewer access on Enterprise.
 
 ---
 
 ## Pricing
 
-Amounts below are eventschedule.com's defaults. A selfhosted or white-label platform sets
+Amounts below are getvnt.com's defaults. A selfhosted or white-label platform sets
 its own prices and currency.
 
 ### Free Plan
@@ -1921,7 +1921,7 @@ Pro adds:
 - Unlimited appointment types, paid bookings and advanced scheduling
 - Custom fields, custom CSS, event polls, post-event feedback and carpool matching
 - Embeddable ticket widget
-- Remove Event Schedule branding
+- Remove Getvnt branding
 - Up to 100 newsletter emails per month
 
 ### Enterprise Plan
@@ -1944,7 +1944,7 @@ Selfhosted deployments get all Enterprise features.
 
 ### Zero Platform Fees
 
-Event Schedule charges no percentage-based fees on ticket sales. You only pay the standard payment processor fees (e.g., Stripe's 2.9% + $0.30 per transaction). This applies to both hosted and selfhosted deployments.
+Getvnt charges no percentage-based fees on ticket sales. You only pay the standard payment processor fees (e.g., Stripe's 2.9% + $0.30 per transaction). This applies to both hosted and selfhosted deployments.
 
 ---
 
@@ -1952,7 +1952,7 @@ Event Schedule charges no percentage-based fees on ticket sales. You only pay th
 
 ### Stripe
 
-- **Hosted mode**: Uses Stripe Connect. Event Schedule acts as the platform, schedule owners connect their Stripe accounts to receive payments directly.
+- **Hosted mode**: Uses Stripe Connect. Getvnt acts as the platform, schedule owners connect their Stripe accounts to receive payments directly.
 - **Selfhosted mode**: Direct Stripe integration using your own Stripe API keys configured in .env.
 - **Automatic settlement**: Payments are processed and settled automatically.
 - **Refunds**: Full or partial refunds from the Sales page or `PUT /api/sales/{id}` send the money back through Stripe. An installment plan is refunded in full, payment by payment.
@@ -1966,19 +1966,19 @@ Event Schedule charges no percentage-based fees on ticket sales. You only pay th
 ### Payfast
 
 - For events priced in South African rand (ZAR) only. Cannot join the multi-event cart, use installments, sell gift cards or take appointment payments.
-- Refunds are recorded in Event Schedule; return the money in Payfast.
+- Refunds are recorded in Getvnt; return the money in Payfast.
 
 ### Invoice Ninja
 
 - For B2B and invoicing use cases.
 - Configure Invoice Ninja API credentials in schedule settings.
 - Sales create invoices in Invoice Ninja that can be sent to buyers.
-- Refunds are recorded in Event Schedule; return the money in Invoice Ninja.
+- Refunds are recorded in Getvnt; return the money in Invoice Ninja.
 
 ### Google Calendar
 
 - **OAuth 2.0**: Secure authorization flow for connecting Google accounts.
-- **Bidirectional sync**: Events created/updated/deleted in Event Schedule sync to Google Calendar and vice versa.
+- **Bidirectional sync**: Events created/updated/deleted in Getvnt sync to Google Calendar and vice versa.
 - **Webhook support**: Real-time updates via Google Calendar push notifications.
 - **Multiple calendars**: Sync with specific Google Calendar calendars.
 
@@ -1989,7 +1989,7 @@ Event Schedule charges no percentage-based fees on ticket sales. You only pay th
 ### CalDAV
 
 - Connect to any CalDAV-compatible server (Nextcloud, Radicale, etc.).
-- Sync events between Event Schedule and your CalDAV calendar.
+- Sync events between Getvnt and your CalDAV calendar.
 
 ### Google Wallet
 
@@ -2005,7 +2005,7 @@ Event Schedule charges no percentage-based fees on ticket sales. You only pay th
 
 ## Localization
 
-Event Schedule supports 12 languages:
+Getvnt supports 12 languages:
 
 | Code | Language | Direction |
 |------|----------|-----------|
@@ -2032,11 +2032,11 @@ Event Schedule supports 12 languages:
 
 ## Selfhosted Deployment
 
-Event Schedule can be selfhosted on your own infrastructure. Requires PHP 8.2+, MySQL, and a web server. Install via Softaculous (one-click), Docker, or manual setup.
+Getvnt can be selfhosted on your own infrastructure. Requires PHP 8.2+, MySQL, and a web server. Install via Softaculous (one-click), Docker, or manual setup.
 
 Key differences from hosted mode: path-based routing instead of subdomains, no email verification, every Pro and Enterprise feature included, Stripe on the install's own API keys (PayPal and Payfast can also be supplied for the whole install), one-click updates, and importing events from a URL or by city.
 
-For full installation instructions, see the [Selfhost Guide](https://eventschedule.com/docs/selfhost/installation).
+For full installation instructions, see the [Selfhost Guide](https://getvnt.com/docs/selfhost/installation).
 
 ---
 
@@ -2065,16 +2065,16 @@ Use `category_id` (numeric) or `category` (name string) when creating or updatin
 
 ## Links
 
-- [OpenAPI Spec](https://eventschedule.com/api/openapi.json) - OpenAPI 3.0 specification for client generation
-- [agents.json](https://eventschedule.com/.well-known/agents.json) - Agent workflow definitions
-- [API Documentation](https://eventschedule.com/docs/developer/api) - Interactive API docs
-- [Features](https://eventschedule.com/features) - Full feature overview
-- [Pricing](https://eventschedule.com/pricing) - Plans and pricing details
-- [Use Cases](https://eventschedule.com/use-cases) - Who it is for: performers, venues, curators, communities and online events
-- [Compare](https://eventschedule.com/compare) - Side-by-side comparisons with other event platforms
-- [For AI Agents](https://eventschedule.com/for-ai-agents) - AI agent integration guide
-- [Documentation](https://eventschedule.com/docs) - User guides
-- [Selfhost](https://eventschedule.com/selfhost) - Running Event Schedule on your own server
-- [Selfhost Guide](https://eventschedule.com/docs/selfhost/installation) - Self-hosting instructions
-- [Open Source](https://eventschedule.com/open-source) - Source code and contributions
-- [Blog](https://blog.eventschedule.com) - Platform updates
+- [OpenAPI Spec](https://getvnt.com/api/openapi.json) - OpenAPI 3.0 specification for client generation
+- [agents.json](https://getvnt.com/.well-known/agents.json) - Agent workflow definitions
+- [API Documentation](https://getvnt.com/docs/developer/api) - Interactive API docs
+- [Features](https://getvnt.com/features) - Full feature overview
+- [Pricing](https://getvnt.com/pricing) - Plans and pricing details
+- [Use Cases](https://getvnt.com/use-cases) - Who it is for: performers, venues, curators, communities and online events
+- [Compare](https://getvnt.com/compare) - Side-by-side comparisons with other event platforms
+- [For AI Agents](https://getvnt.com/for-ai-agents) - AI agent integration guide
+- [Documentation](https://getvnt.com/docs) - User guides
+- [Selfhost](https://getvnt.com/selfhost) - Running Getvnt on your own server
+- [Selfhost Guide](https://getvnt.com/docs/selfhost/installation) - Self-hosting instructions
+- [Open Source](https://getvnt.com/open-source) - Source code and contributions
+- [Blog](https://blog.getvnt.com) - Platform updates

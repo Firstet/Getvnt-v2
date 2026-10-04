@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Musicians"
+        name="Getvnt for Musicians"
         description="Put every gig and tour date on one link. Sell tickets with zero platform fees, email fans directly, and let venues add you to their bills. Free forever."
         audience="Musicians"
         keywords="musician schedule, band tour dates, share gig schedule, musician event calendar, band booking platform, free musician scheduling, band website with tour dates, residency schedule" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How musicians share their gig schedule with Event Schedule",
+        "name": "How musicians share their gig schedule with Getvnt",
         "description": "Three steps from your first listed gig to a growing fanbase.",
         "step": [
             {
@@ -387,7 +387,7 @@
         </div>
 
         <div class="relative z-10 mx-auto w-full max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <p class="es-poster-eyebrow es-fade-up es-d-1 text-[11px] sm:text-xs">Event Schedule presents</p>
+            <p class="es-poster-eyebrow es-fade-up es-d-1 text-[11px] sm:text-xs">Getvnt presents</p>
             <div class="es-poster-rule es-fade-up es-d-1 mx-auto mt-4 max-w-xs" aria-hidden="true">
                 <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z" /></svg>
             </div>
@@ -502,7 +502,7 @@
                     </div>
                     <div class="es-poster-block es-poster-block-night flex flex-col items-center p-7 text-center" data-reveal="panel">
                         <div class="es-od es-poster-display mb-2 justify-center text-4xl text-[#fbbf24]" data-odometer="10-20%">10-20%</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">of ticket revenue lost to platform fees elsewhere. Event Schedule charges zero.</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">of ticket revenue lost to platform fees elsewhere. Getvnt charges zero.</p>
                         <span class="es-poster-stamp es-poster-stamp-amber mt-5" style="--stamp-rot: -3deg;">Gone</span>
                     </div>
                 </div>
@@ -618,7 +618,7 @@
                                 <svg aria-hidden="true" class="h-4 w-4 shrink-0 text-[#0e7490] dark:text-[#22d3ee]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                                 </svg>
-                                <span class="truncate font-mono text-xs font-semibold text-[color:var(--esp-ink)]">yourband.eventschedule.com</span>
+                                <span class="truncate font-mono text-xs font-semibold text-[color:var(--esp-ink)]">yourband.getvnt.com</span>
                             </div>
                             <div class="grid grid-cols-2 gap-1.5 text-center">
                                 <div class="rounded-md border-2 border-[color:var(--esp-line)] p-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[color:var(--esp-ink-soft)]">Spotify</div>
@@ -639,7 +639,7 @@
                             <div>
                                 <div class="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-[#0e7490] dark:text-[#22d3ee]">Venue bookings &middot; Team</div>
                                 <h3 class="es-poster-display mb-4 text-3xl text-[color:var(--esp-ink)]">Booked once. Printed twice.</h3>
-                                <p class="mb-5 text-lg text-[color:var(--esp-ink-soft)]">When a venue puts you on its bill on Event Schedule, the gig comes to you as a request. Accept it and it lands on your poster too. One booking, both schedules.</p>
+                                <p class="mb-5 text-lg text-[color:var(--esp-ink-soft)]">When a venue puts you on its bill on Getvnt, the gig comes to you as a request. Accept it and it lands on your poster too. One booking, both schedules.</p>
                                 <p class="mb-5 text-[color:var(--esp-ink-soft)]">Not signed up yet? The venue's listing makes a page with your name on it, each date credited to whoever added it, and kept out of search engines until you <a href="{{ marketing_url('/docs/creating-events#claim') }}" class="es-accent-link font-medium hover:underline">claim it</a> with the email address they entered.</p>
                                 <p class="mb-5 text-[color:var(--esp-ink-soft)]">On Enterprise, your band, manager, and booking agent get their own logins. And when a booking email lands, paste it in and AI turns it into a listed gig.</p>
                                 <div class="flex flex-wrap gap-3" aria-hidden="true">
@@ -801,7 +801,7 @@
                     Perfect for every kind of musician
                 </h2>
                 <p class="text-lg text-[color:var(--esp-ink-soft)]" data-reveal style="--reveal-delay: 0.1s;">
-                    Whether you're a solo artist or a touring band, Event Schedule works for you.
+                    Whether you're a solo artist or a touring band, Getvnt works for you.
                 </p>
             </div>
 
@@ -1067,7 +1067,7 @@
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" data-reveal-group="70">
                 <a href="{{ marketing_url('/for-comedians') }}" data-reveal class="group flex items-center justify-between rounded-xl border-2 border-[color:var(--esp-line)] bg-white/50 p-5 transition-all hover:-translate-y-0.5 hover:shadow-md dark:bg-white/5 es-related-card">
                     <div>
-                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Event Schedule for</div>
+                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Getvnt for</div>
                         <div class="text-lg font-semibold text-[color:var(--esp-ink)] transition-colors es-related-title">Comedians</div>
                     </div>
                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors es-related-arrow rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1076,7 +1076,7 @@
                 </a>
                 <a href="{{ marketing_url('/for-djs') }}" data-reveal class="group flex items-center justify-between rounded-xl border-2 border-[color:var(--esp-line)] bg-white/50 p-5 transition-all hover:-translate-y-0.5 hover:shadow-md dark:bg-white/5 es-related-card">
                     <div>
-                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Event Schedule for</div>
+                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Getvnt for</div>
                         <div class="text-lg font-semibold text-[color:var(--esp-ink)] transition-colors es-related-title">DJs</div>
                     </div>
                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors es-related-arrow rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1085,7 +1085,7 @@
                 </a>
                 <a href="{{ marketing_url('/for-spoken-word') }}" data-reveal class="group flex items-center justify-between rounded-xl border-2 border-[color:var(--esp-line)] bg-white/50 p-5 transition-all hover:-translate-y-0.5 hover:shadow-md dark:bg-white/5 es-related-card">
                     <div>
-                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Event Schedule for</div>
+                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Getvnt for</div>
                         <div class="text-lg font-semibold text-[color:var(--esp-ink)] transition-colors es-related-title">Spoken Word Artists</div>
                     </div>
                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors es-related-arrow rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1094,7 +1094,7 @@
                 </a>
                 <a href="{{ marketing_url('/for-dance-groups') }}" data-reveal class="group flex items-center justify-between rounded-xl border-2 border-[color:var(--esp-line)] bg-white/50 p-5 transition-all hover:-translate-y-0.5 hover:shadow-md dark:bg-white/5 es-related-card">
                     <div>
-                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Event Schedule for</div>
+                        <div class="text-sm text-[color:var(--esp-ink-soft)]">Getvnt for</div>
                         <div class="text-lg font-semibold text-[color:var(--esp-ink)] transition-colors es-related-title">Dance Groups</div>
                     </div>
                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-colors es-related-arrow rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1126,21 +1126,21 @@
                     Frequently asked questions
                 </h2>
                 <p class="text-lg text-[color:var(--esp-ink-soft)]" data-reveal style="--reveal-delay: 0.16s;">
-                    Everything musicians ask about Event Schedule.
+                    Everything musicians ask about Getvnt.
                 </p>
             </div>
 
             <div class="space-y-4" data-reveal-group="80">
                 @php
                     $faqs = [
-                        ['q' => 'Is Event Schedule free for musicians?', 'a' => 'Yes. Event Schedule is free forever for sharing your gig schedule, building a fan following, and syncing with Google Calendar. The free plan also takes unlimited free registrations and sends 10 newsletter emails a month, counted per recipient. Scanning tickets at the door is free too. Charging at the door is where Pro starts, and it brings the rest of the door kit with it: live check-in dashboard, promo codes, waitlists. Platform fees are zero on every plan.'],
+                        ['q' => 'Is Getvnt free for musicians?', 'a' => 'Yes. Getvnt is free forever for sharing your gig schedule, building a fan following, and syncing with Google Calendar. The free plan also takes unlimited free registrations and sends 10 newsletter emails a month, counted per recipient. Scanning tickets at the door is free too. Charging at the door is where Pro starts, and it brings the rest of the door kit with it: live check-in dashboard, promo codes, waitlists. Platform fees are zero on every plan.'],
                         ['q' => 'How do fans find out about my upcoming shows?', 'a' => 'A fan who leaves an email address on your page and confirms it gets a digest when you announce new shows, batched so a run of dates is one message rather than six, and never more than once every few days. Beyond that you write the newsletter yourself. Fans who would rather not give an address can subscribe to your calendar feed instead, which updates itself when a date moves. Your schedule link also goes anywhere a link goes: Spotify, Bandcamp, your EPK, any social profile.'],
-                        ['q' => 'Can I sell tickets to my own shows?', 'a' => 'Yes. Connect your own Stripe or PayPal account, or take cash or a payment link, and sell tickets directly from your schedule. Every ticket includes a QR code for check-in at the door. Event Schedule charges zero platform fees - you only pay your payment provider\'s own processing fee. Refunds are built in too: from the Sales page, a Stripe or PayPal sale can be refunded in full or in part, and the money goes back through the provider.'],
+                        ['q' => 'Can I sell tickets to my own shows?', 'a' => 'Yes. Connect your own Stripe or PayPal account, or take cash or a payment link, and sell tickets directly from your schedule. Every ticket includes a QR code for check-in at the door. Getvnt charges zero platform fees - you only pay your payment provider\'s own processing fee. Refunds are built in too: from the Sales page, a Stripe or PayPal sale can be refunded in full or in part, and the money goes back through the provider.'],
                         ['q' => 'Can fans get told when tickets go on sale?', 'a' => 'Yes, on every plan. Switch on the "Notify me" card and, on a public event page, a fan can leave just an email address, with no account, and get one email when tickets go on sale, one if the show is cancelled, and a reminder shortly before it starts, plus any change notice you choose to send. Nothing else, and every one of those emails has a one-click unsubscribe. The event\'s Tickets panel shows you how many people are waiting.'],
-                        ['q' => 'What happens when a venue books me for a show?', 'a' => 'When a venue adds you to its event on Event Schedule, the date arrives as a request on your schedule. Accept it and the gig shows on your page too, so you never enter the same show twice, and because both schedules share one event, a changed time shows on both. The event page lists the whole bill, whether or not every act on it has signed up.'],
-                        ['q' => 'A venue listed me before I joined. Is that page mine?', 'a' => 'It can be. When a venue or promoter names an act who is not on Event Schedule, a page is created for them so the name can appear on the event. It says who created it and that the act has not claimed it, credits each date to the schedule that added it, and stays out of search engines. Press Claim this page and sign in with the email address it carries, and it becomes your schedule, with the venues that already list you still listing you. If it is not you, press This is not me.'],
-                        ['q' => 'Can I list a weekly residency or recurring gigs?', 'a' => 'Yes. Recurring events are free. Set the day-of-week pattern once, like every Thursday at the same club, and Event Schedule fills in the dates. You can exclude the weeks you skip, and fans always see the next upcoming show.'],
-                        ['q' => 'Can I use Event Schedule as my band website?', 'a' => 'Many musicians do. Your schedule lives at your own link, like your-band.eventschedule.com, with your bio, photos, and streaming links, and each of those links also answers at a short address of its own, like your-band.eventschedule.com/instagram, with every click counted in your analytics. You can also embed the calendar on an existing website, and the Enterprise plan supports a fully custom domain.'],
+                        ['q' => 'What happens when a venue books me for a show?', 'a' => 'When a venue adds you to its event on Getvnt, the date arrives as a request on your schedule. Accept it and the gig shows on your page too, so you never enter the same show twice, and because both schedules share one event, a changed time shows on both. The event page lists the whole bill, whether or not every act on it has signed up.'],
+                        ['q' => 'A venue listed me before I joined. Is that page mine?', 'a' => 'It can be. When a venue or promoter names an act who is not on Getvnt, a page is created for them so the name can appear on the event. It says who created it and that the act has not claimed it, credits each date to the schedule that added it, and stays out of search engines. Press Claim this page and sign in with the email address it carries, and it becomes your schedule, with the venues that already list you still listing you. If it is not you, press This is not me.'],
+                        ['q' => 'Can I list a weekly residency or recurring gigs?', 'a' => 'Yes. Recurring events are free. Set the day-of-week pattern once, like every Thursday at the same club, and Getvnt fills in the dates. You can exclude the weeks you skip, and fans always see the next upcoming show.'],
+                        ['q' => 'Can I use Getvnt as my band website?', 'a' => 'Many musicians do. Your schedule lives at your own link, like your-band.getvnt.com, with your bio, photos, and streaming links, and each of those links also answers at a short address of its own, like your-band.getvnt.com/instagram, with every click counted in your analytics. You can also embed the calendar on an existing website, and the Enterprise plan supports a fully custom domain.'],
                     ];
                 @endphp
                 @foreach ($faqs as ['q' => $q, 'a' => $a])
@@ -1200,7 +1200,7 @@
                                 <div dir="ltr" class="es-claim flex min-w-0 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                     <input id="es-claim-input" type="text" placeholder="your-band" autocomplete="off" spellcheck="false" maxlength="30"
                                         class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                    <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                                    <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                                 </div>
                                 <a href="{{ app_url('/sign_up?type=talent') }}" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-600 to-teal-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-cyan-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-teal-500/40">
                                     <span class="relative z-10 flex items-center gap-2">

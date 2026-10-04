@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Comedy Clubs"
+        name="Getvnt for Comedy Clubs"
         description="Run a room on recurring nights, sell advance and door tickets from one link, and add the participants later so the date appears on each comic's own schedule."
         audience="Comedy Clubs"
         keywords="comedy club schedule, comedy night ticketing, open mic capacity, comedy booking requests, recurring comedy night, comedy club calendar" />
@@ -276,8 +276,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for comedy clubs?',
-                'a' => 'Running the room is free forever: the weekly nights as recurring events, date exceptions for the weeks you are dark, free registration with a capacity for open mics, booking requests from comics with an approved list for your regulars, sub-schedules, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Scanning the QR on a ticket at the door costs nothing either. Charging for a seat is Pro at '.plan_price($proMonthly).' a month, which also adds the live check-in dashboard, and Event Schedule charges zero platform fees on sales at any tier.',
+                'q' => 'Is Getvnt free for comedy clubs?',
+                'a' => 'Running the room is free forever: the weekly nights as recurring events, date exceptions for the weeks you are dark, free registration with a capacity for open mics, booking requests from comics with an approved list for your regulars, sub-schedules, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Scanning the QR on a ticket at the door costs nothing either. Charging for a seat is Pro at '.plan_price($proMonthly).' a month, which also adds the live check-in dashboard, and Getvnt charges zero platform fees on sales at any tier.',
             ],
             [
                 'q' => 'Can I put tickets on sale before I have booked the lineup?',
@@ -285,7 +285,7 @@
             ],
             [
                 'q' => 'What happens to the comics I add to a show?',
-                'a' => 'Adding someone as a participant attaches them to the show, and the night\'s page lists the whole bill, whether or not they have an account. If they already run their own schedule on Event Schedule, the date turns up there for them to accept, or straight away if they have added your club to their approved list. If they do not, adding them creates a public page that says your club made it and that they have not claimed it yet, and you can tick a box to email them a link to it. They claim it by signing in with the email address on it. Until then it stays out of search engines, and once they do, your dates stay on it and your future ones post without waiting for approval.',
+                'a' => 'Adding someone as a participant attaches them to the show, and the night\'s page lists the whole bill, whether or not they have an account. If they already run their own schedule on Getvnt, the date turns up there for them to accept, or straight away if they have added your club to their approved list. If they do not, adding them creates a public page that says your club made it and that they have not claimed it yet, and you can tick a box to email them a link to it. They claim it by signing in with the email address on it. Until then it stays out of search engines, and once they do, your dates stay on it and your future ones post without waiting for approval.',
             ],
             [
                 'q' => 'How do comics ask for a spot?',
@@ -824,7 +824,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-night-card es-night-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-night-muted text-sm">Event Schedule for</div>
+                            <div class="es-night-muted text-sm">Getvnt for</div>
                             <div class="es-night-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-night-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -902,7 +902,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-club" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-night-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

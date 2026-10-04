@@ -1,6 +1,6 @@
 <x-docs-page
     key="scan-agenda"
-    title="Scan Agenda: Photograph an Agenda with AI - Event Schedule"
+    title="Scan Agenda: Photograph an Agenda with AI - Getvnt"
     plan="enterprise"
     description="Photograph a printed agenda, program or setlist with your phone and let AI turn each line into an event part you review, reorder and save."
     lede="Photograph a printed agenda with your phone camera and let AI turn it into the event's agenda parts."
@@ -129,7 +129,7 @@
 
         <h3 class="doc-subheading">Choosing the event</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            The parts you scan always belong to one event, chosen in the selector at the top of the scan screen. Event Schedule preselects a likely candidate:
+            The parts you scan always belong to one event, chosen in the selector at the top of the scan screen. Getvnt preselects a likely candidate:
         </p>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>The most recent event that started within the past month and has no agenda parts yet</li>
@@ -311,7 +311,7 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Scan an Agenda in Event Schedule",
+            "name": "How to Scan an Agenda in Getvnt",
             "description": "Photograph a printed agenda, program or setlist with your phone and let AI turn each line into an event part you review, reorder and save.",
             "totalTime": "PT5M",
             "step": [

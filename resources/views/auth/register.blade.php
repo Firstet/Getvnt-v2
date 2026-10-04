@@ -182,14 +182,14 @@
 
 
             // Name the step, in the page and in the tab strip. This flow REQUIRES leaving the tab
-            // to read a mail, and every auth page shipped the same literal <title>Event Schedule</title>,
+            // to read a mail, and every auth page shipped the same literal <title>Getvnt</title>,
             // so finding the way back meant recognising one of several identical tabs.
             var heading = document.getElementById('signup-heading');
             var subheading = document.getElementById('signup-subheading');
             if (heading) heading.textContent = @json(__('messages.signup_check_email_heading'));
             // #code-sent-panel takes its place: "We emailed a 6-digit code to x" and the change pill.
             if (subheading) subheading.style.display = 'none';
-            document.title = @json(__('messages.signup_check_email_heading')) + ' | Event Schedule';
+            document.title = @json(__('messages.signup_check_email_heading')) + ' | Getvnt';
 
             // Hidden again on every entry: a send starts the countdown, whose end shows it; the
             // restore paths call showCodeHelp() themselves, since no countdown runs for them.
@@ -313,7 +313,7 @@
             var subheading = document.getElementById('signup-subheading');
             if (heading) heading.textContent = @json(__('messages.signup_heading'));
             if (subheading) subheading.style.display = '';
-            document.title = 'Event Schedule';
+            document.title = 'Getvnt';
 
             var helpNote = document.getElementById('code-help-note');
             if (helpNote) helpNote.style.display = 'none';
@@ -1874,7 +1874,7 @@
                     <div class="ml-3">
                         <p class="text-sm text-yellow-700 dark:text-yellow-300">
                             {{ __('messages.env_not_writable') }}
-                            <a href="https://eventschedule.com/docs/selfhost/installation#permissions" target="_blank" rel="noopener noreferrer" class="font-medium text-yellow-700 dark:text-yellow-200 underline hover:text-yellow-600 dark:hover:text-yellow-100">{{ __('messages.learn_more') }}<svg class="inline-block w-3 h-3 ml-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg></a>
+                            <a href="https://getvnt.com/docs/selfhost/installation#permissions" target="_blank" rel="noopener noreferrer" class="font-medium text-yellow-700 dark:text-yellow-200 underline hover:text-yellow-600 dark:hover:text-yellow-100">{{ __('messages.learn_more') }}<svg class="inline-block w-3 h-3 ml-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg></a>
                         </p>
                     </div>
                 </div>

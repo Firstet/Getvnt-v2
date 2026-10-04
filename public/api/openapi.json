@@ -1,16 +1,16 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Event Schedule API",
+    "title": "Getvnt API",
     "version": "1.0",
-    "description": "API for managing events, schedules, and tickets on Event Schedule. To get started, register an account, then create a schedule before adding events. Write operations require a Pro plan. New accounts get a trial period."
+    "description": "API for managing events, schedules, and tickets on Getvnt. To get started, register an account, then create a schedule before adding events. Write operations require a Pro plan. New accounts get a trial period."
   },
   "servers": [
     {
       "url": "{baseUrl}/api",
       "variables": {
         "baseUrl": {
-          "default": "https://eventschedule.com"
+          "default": "https://getvnt.com"
         }
       }
     }
@@ -26,7 +26,7 @@
         "operationId": "send_verification_code",
         "tags": ["Authentication"],
         "summary": "Send verification code",
-        "description": "Sends a 6-digit verification code to the provided email address. This is only required in hosted mode (eventschedule.com). Selfhosted instances do not require email verification. Rate limited to 5 codes per email per hour.",
+        "description": "Sends a 6-digit verification code to the provided email address. This is only required in hosted mode (getvnt.com). Selfhosted instances do not require email verification. Rate limited to 5 codes per email per hour.",
         "security": [],
         "requestBody": {
           "required": true,

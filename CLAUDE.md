@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Event Schedule is an open-source platform for sharing events, selling tickets, and bringing communities together. It supports both hosted (SaaS at eventschedule.com) and selfhosted deployments.
+Getvnt is an open-source platform for sharing events, selling tickets, and bringing communities together. It supports both hosted (SaaS at getvnt.com) and selfhosted deployments.
 
 ## Important Rules
 
@@ -35,7 +35,7 @@ Event Schedule is an open-source platform for sharing events, selling tickets, a
 - **Never add npm dependencies** - Do not use `npm install` to add new packages. Instead, download built files manually and place them in `public/vendor/`.
 - **Use `<x-link>` for inline text links** - Always use the `<x-link>` Blade component for inline text links (not navigation or buttons). It provides consistent styling, dark mode support, and an external link icon for `target="_blank"` links.
 - **Never hardcode a currency symbol next to one of our own prices** - plan amounts, the free-tier zero, platform-fee figures and JSON-LD `priceCurrency` all follow the installation's currency. Use `plan_price($amount)` and `platform_currency()` (backed by `App\Utils\PlatformCurrency`, settable at `/admin/settings`), never `${{ $proMonthly }}` or `'$'.$amount`. `tests/Feature/MarketingPriceTest.php` fails the build if one creeps back. Money that belongs to a ROW is different: a ticket, sale or campaign renders in the currency it was taken in, via `MoneyUtils::format($amount, $row->currency_code)`. Amounts that are factually someone else's USD (Stripe's `$0.30`, competitor pricing, the fee calculators) stay hardcoded.
-- **Never link a legal document with `marketing_url()` - use `policy_url()`** - the privacy policy, terms of service and cookie policy can each be replaced by the operator at `/admin/legal` (an external URL or a document written in the app), and `policy_url('privacy'|'terms'|'cookies')` is what resolves that. `marketing_url('/privacy')` hardcodes eventschedule.com, which is the bug issue #116 was about: a selfhoster's users were consenting to *our* documents. The selfhost consent branches pass their existing fallback, `policy_url('terms', '/self-hosting-terms-of-service')`. `tests/Feature/PolicyLinkTest.php` fails the build if one creeps back. The four bundled marketing pages (`marketing/privacy.blade.php` and siblings) are the allow-listed exception.
+- **Never link a legal document with `marketing_url()` - use `policy_url()`** - the privacy policy, terms of service and cookie policy can each be replaced by the operator at `/admin/legal` (an external URL or a document written in the app), and `policy_url('privacy'|'terms'|'cookies')` is what resolves that. `marketing_url('/privacy')` hardcodes getvnt.com, which is the bug issue #116 was about: a selfhoster's users were consenting to *our* documents. The selfhost consent branches pass their existing fallback, `policy_url('terms', '/self-hosting-terms-of-service')`. `tests/Feature/PolicyLinkTest.php` fails the build if one creeps back. The four bundled marketing pages (`marketing/privacy.blade.php` and siblings) are the allow-listed exception.
 - **Event dates render in the SCHEDULE's timezone, never the viewer's** - `Event::getStartDateTime()` defaults to `scheduleTimezone()` (`creatorRole?->timezone ?: config('app.timezone')`); a viewer's `users.timezone` is reachable only through an explicit `$timezoneOverride`, which exists to show a guest their own local time (`AppointmentTimeUtils`). An occurrence falls on a given day because of where it happens, not who is looking. Anything deciding which DAY a date belongs to - day bucketing (`matchesDate()`), the Vue past-event filters and `userTimezone` in `role/partials/calendar.blade.php`, a "today" highlight - must resolve the SAME zone as the dates it compares, or an event is shown on one day and filtered out as though it were on another. A narrowed `get(['events.id', ...])` must include `events.creator_role_id`, or `BelongsTo` short-circuits on the null key and the zone silently falls back to the app timezone with no query and no error. `tests/Unit/EventVenueTimeRenderingTest.php` and `tests/Feature/CalendarTimezoneTest.php` fail the build if one creeps back.
 - **Use `config('app.supported_languages')` for language lists** - Never hardcode language code arrays. Always reference the centralized list in `config/app.php`.
 - **Keep Help button mappings up-to-date** - When adding, removing, or moving doc pages, update the anchor map in `app/Utils/HelpUtils.php` so the admin panel Help button links to the correct docs for each section/tab
@@ -178,7 +178,7 @@ composer audit
 When the user asks for "release notes" (or "releasenotes"), generate the notes for the **next**
 version of the app and print the markdown in chat. Do not create a GitHub release/tag and do not
 bump version files unless explicitly asked separately. Follow the established style at
-https://github.com/eventschedule/eventschedule/releases.
+https://github.com/Firstet/Getvnt-v2/releases.
 
 **Steps:**
 
@@ -200,18 +200,18 @@ https://github.com/eventschedule/eventschedule/releases.
    - Skip internal-only commits (test-only changes, version bumps, CI, no-op refactors).
    - Merge related commits into a single bullet.
    - When a commit references an issue/PR number (e.g. `#89`), link it inline:
-     `[#89](https://github.com/eventschedule/eventschedule/issues/89)`.
+     `[#89](https://github.com/Firstet/Getvnt-v2/issues/89)`.
 
 4. **Link features to the user guide (not fixes).** Every `Added:` and `Updated:` bullet must
    include a user-guide link - the user guide is the public docs at
-   `https://eventschedule.com/docs/{slug}#{anchor}`. Do NOT add user-guide links to `Fixed:`
+   `https://getvnt.com/docs/{slug}#{anchor}`. Do NOT add user-guide links to `Fixed:`
    bullets: the docs describe features, not bug fixes, so a fix has no matching section. (Inline
    issue/PR links like `[#90](...)` are still fine on fixes.) Link each feature to its relevant
    section (e.g. a trailing `[Learn more](...)` or by hyperlinking the feature name): find the page
    slug from the `marketing.docs.*` routes in `routes/web.php`, and the section anchor from
    `MarketingController::getDocSearchIndex()` or the feature->anchor map in `app/Utils/HelpUtils.php`.
    Take slugs/anchors from those sources - never invent an anchor; if no exact section fits, link the
-   closest page (or the docs home, `https://eventschedule.com/docs`). Never ship a feature bullet
+   closest page (or the docs home, `https://getvnt.com/docs`). Never ship a feature bullet
    without a user-guide link.
 
 5. **Output.** Print the version as the title followed by the bullet body, as markdown in chat,
@@ -225,9 +225,9 @@ not "self-host".
 ```
 v1.0.112
 
-- Added: OneSignal web push notifications so guests can opt in to event reminders. [Learn more](https://eventschedule.com/docs/account-settings)
-- Updated: Custom dashboard links [#87](https://github.com/eventschedule/eventschedule/issues/87) [Learn more](https://eventschedule.com/docs/getting-started)
-- Fixed: Markdown not formatting correctly in some event descriptions [#90](https://github.com/eventschedule/eventschedule/issues/90)
+- Added: OneSignal web push notifications so guests can opt in to event reminders. [Learn more](https://getvnt.com/docs/account-settings)
+- Updated: Custom dashboard links [#87](https://github.com/Firstet/Getvnt-v2/issues/87) [Learn more](https://getvnt.com/docs/getting-started)
+- Fixed: Markdown not formatting correctly in some event descriptions [#90](https://github.com/Firstet/Getvnt-v2/issues/90)
 ```
 
 ## Growth Data
@@ -258,7 +258,7 @@ See `docs/FEATURES.md` for the complete reference of which features belong to ea
 ## Architecture
 
 ### Multi-Tenant Routing
-- **Hosted mode** (`IS_HOSTED=true`): Uses subdomains (`{subdomain}.eventschedule.com`)
+- **Hosted mode** (`IS_HOSTED=true`): Uses subdomains (`{subdomain}.getvnt.com`)
 - **Selfhosted mode** (`IS_HOSTED=false`): Uses path-based routing (`/{subdomain}/...`)
 
 Routes are defined conditionally in `routes/web.php` based on `config('app.hosted')`.
@@ -322,7 +322,7 @@ counted by a `sendBeacon` and first-touch attribution by a browser-written `es_a
 rather than by the session. Read `docs/CACHING.md` before touching either, or before adding a
 marketing page that renders anything visitor-specific.
 
-**Hosted (eventschedule.com) runs `QUEUE_CONNECTION=database` and `CACHE_STORE=database`** (set on
+**Hosted (getvnt.com) runs `QUEUE_CONNECTION=database` and `CACHE_STORE=database`** (set on
 2026-09-06, before the scheduler worker became a second container). Every scheduler mutex and every
 cross-rail lock lives in the cache, so it must stay a store all containers share: on `file`, two
 containers serialise against nothing. Laravel's database store never deletes an expired row unless

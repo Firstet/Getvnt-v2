@@ -151,7 +151,7 @@ class SelfUpdateVisibilityTest extends TestCase
             // Hosted-mode selfhost (a self-hosted SaaS): operator only.
             'hosted selfhost, non-admin' => [false, false, true, false, false],
             'hosted selfhost, admin' => [false, false, true, true, true],
-            // eventschedule.com deploys from git.
+            // getvnt.com deploys from git.
             'nexus, admin' => [true, false, true, true, false],
             'nexus, non-admin' => [true, false, false, false, false],
             // The guard that keeps the test suite from shelling out to GitHub.

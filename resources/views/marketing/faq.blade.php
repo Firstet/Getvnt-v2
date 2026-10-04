@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">Event Schedule FAQ: Free Plan, Ticketing, Payments and Sync</x-slot>
+    <x-slot name="title">Getvnt FAQ: Free Plan, Ticketing, Payments and Sync</x-slot>
     <x-slot name="description">Straight answers before you sign up: what the free plan includes, paid ticketing on Pro with zero platform fees, PayPal, refunds and calendar sync.</x-slot>
     <x-slot name="breadcrumbTitle">FAQ</x-slot>
 
@@ -516,7 +516,7 @@
         // appointment type, custom domains and multiple team members are
         // Enterprise, and the free plan has exactly ONE team member.
         // ------------------------------------------------------------------
-        $github = 'https://github.com/eventschedule/eventschedule';
+        $github = 'https://github.com/Firstet/Getvnt-v2';
 
         // The Google Wallet clause in the check-in answer reads the same predicate the button
         // itself does (GoogleWalletService::isConfigured()), so an install without an issuer
@@ -535,8 +535,8 @@
                 'note' => 'What the thing is, and what it takes to have one.',
                 'items' => [
                     [
-                        'q' => 'What is Event Schedule?',
-                        'a' => 'Event Schedule is an open-source platform for publishing a shareable event calendar and, when you want it, selling tickets from it. A musician posting gig dates, a venue publishing a lineup and a food truck posting where it will be parked all end up with the same object: one schedule at its own address, with the events on it, ready to send people to or embed in a site you already have.',
+                        'q' => 'What is Getvnt?',
+                        'a' => 'Getvnt is an open-source platform for publishing a shareable event calendar and, when you want it, selling tickets from it. A musician posting gig dates, a venue publishing a lineup and a food truck posting where it will be parked all end up with the same object: one schedule at its own address, with the events on it, ready to send people to or embed in a site you already have.',
                         'links' => [['Who uses it', marketing_url('/use-cases')]],
                     ],
                     [
@@ -545,7 +545,7 @@
                         'links' => [['How the AI import works', marketing_url('/features/ai')]],
                     ],
                     [
-                        'q' => 'Is Event Schedule really free?',
+                        'q' => 'Is Getvnt really free?',
                         'a' => 'Yes, and the free plan is not a trial that quietly expires. Unlimited events, a mobile-friendly public page at your own address, two-way Google, Outlook and CalDAV sync, sub-schedules, recurring events, free registration with a capacity limit, built-in analytics, the embeddable calendar, backup and restore, and 10 newsletter emails a month (each recipient counts as one) all cost nothing, permanently. Registration stays free however many people sign up, and so does a ticket type priced at zero. Charging for a ticket is what moves you to Pro, along with a short list of other things, and the rate card above sets out exactly which.',
                         'links' => [['Pricing', marketing_url('/pricing')]],
                     ],
@@ -564,7 +564,7 @@
                 'items' => [
                     [
                         'q' => "What's the difference between Free and Pro?",
-                        'a' => 'Free gives you the calendar: unlimited events, two-way calendar sync, sub-schedules, recurring events, built-in analytics, the embed, event graphics, and 10 newsletter emails a month, each recipient counting as one. Free also gives you unlimited registration, ticket types priced at zero, QR scanning at the door and one bookable appointment type. Pro is ' . plan_price($proMonthly) . ' a month and is what lets you charge for a ticket, through Stripe, PayPal or any other payment method, then adds the rest of the selling kit: the live check-in dashboard, passes, promo codes, gift cards, add-ons, installment payments, unlimited appointment types, the ticket waitlist, custom fields, webhooks, the REST API, custom CSS, and taking the Event Schedule branding off your public pages. It also raises newsletters to 100 emails a month.',
+                        'a' => 'Free gives you the calendar: unlimited events, two-way calendar sync, sub-schedules, recurring events, built-in analytics, the embed, event graphics, and 10 newsletter emails a month, each recipient counting as one. Free also gives you unlimited registration, ticket types priced at zero, QR scanning at the door and one bookable appointment type. Pro is ' . plan_price($proMonthly) . ' a month and is what lets you charge for a ticket, through Stripe, PayPal or any other payment method, then adds the rest of the selling kit: the live check-in dashboard, passes, promo codes, gift cards, add-ons, installment payments, unlimited appointment types, the ticket waitlist, custom fields, webhooks, the REST API, custom CSS, and taking the Getvnt branding off your public pages. It also raises newsletters to 100 emails a month.',
                         'links' => [['Compare the plans', marketing_url('/pricing')]],
                     ],
                     [
@@ -574,7 +574,7 @@
                     ],
                     [
                         'q' => 'Do you take a percentage of my ticket sales?',
-                        'a' => 'No. Event Schedule takes no cut of ticket revenue at all. Money moves through your own Stripe or PayPal account, so the only thing off the top is the processor\'s own fee: Stripe\'s is currently around 2.9% plus 30 cents a transaction in the United States. The rest is yours, and it lands in your account rather than in ours.',
+                        'a' => 'No. Getvnt takes no cut of ticket revenue at all. Money moves through your own Stripe or PayPal account, so the only thing off the top is the processor\'s own fee: Stripe\'s is currently around 2.9% plus 30 cents a transaction in the United States. The rest is yours, and it lands in your account rather than in ours.',
                         'links' => [['How Stripe connects', marketing_url('/stripe')], ['PayPal checkout', marketing_url('/paypal')]],
                     ],
                     [
@@ -671,7 +671,7 @@
                 'note' => 'Where the dates live, and what a schedule is actually made of.',
                 'items' => [
                     [
-                        'q' => 'Does Event Schedule sync with Google Calendar?',
+                        'q' => 'Does Getvnt sync with Google Calendar?',
                         'a' => 'Yes, both ways, on the free plan. Events you create here appear in the Google Calendar you connect, and events you add there come back here. Google pushes changes over a webhook rather than waiting for a nightly job. Outlook and Microsoft 365 sync the same way, and CalDAV covers the rest. You also choose, per schedule, what should happen locally when an event is deleted in the external calendar: keep it, mark it cancelled, or delete it too.',
                         'links' => [['Google Calendar sync', marketing_url('/google-calendar')], ['All calendar sync', marketing_url('/features/calendar-sync')]],
                     ],
@@ -704,7 +704,7 @@
                         'links' => [['Newsletters', marketing_url('/docs/newsletters')]],
                     ],
                     [
-                        'q' => 'Does Event Schedule have email marketing?',
+                        'q' => 'Does Getvnt have email marketing?',
                         'a' => 'The newsletter tool is the email marketing. It has reusable audience segments, imported lists, A/B tests, a scheduled send, and open and click tracking. There is no separate product to buy and no second bill for it.',
                         'links' => [['Recipients and segments', marketing_url('/docs/newsletters#recipients')]],
                     ],
@@ -766,7 +766,7 @@
                         // show-guest-unclaimed.blade.php (noindex), Role::isClaimable(),
                         // User::claimSchedule() + preserveExistingListers(), RoleController::claimNotMeSubmit().
                         'q' => 'Somebody created a page for me. How do I claim it?',
-                        'a' => 'When an organizer lists a performer or venue who is not on Event Schedule yet, a page is made for them so the dates have somewhere to point. That page says which schedule created it and that it has not been claimed, credits each date to the schedule that added it, and stays out of search engines until it is claimed. To claim it, press “Claim this page” and sign in with the email address it was made with: you become the owner, and the schedules that already list you keep listing you. If the page carries no contact details, ask the schedule that listed you to send an invitation. And if it is not you at all, “This is not me” takes the page down at once for whoever holds that address, and is recorded for review for anyone else.',
+                        'a' => 'When an organizer lists a performer or venue who is not on Getvnt yet, a page is made for them so the dates have somewhere to point. That page says which schedule created it and that it has not been claimed, credits each date to the schedule that added it, and stays out of search engines until it is claimed. To claim it, press “Claim this page” and sign in with the email address it was made with: you become the owner, and the schedules that already list you keep listing you. If the page carries no contact details, ask the schedule that listed you to send an invitation. And if it is not you at all, “This is not me” takes the page down at once for whoever holds that address, and is recorded for review for anyone else.',
                         'links' => [['Claiming a page', marketing_url('/docs/creating-events#claim')]],
                     ],
                 ],
@@ -779,15 +779,15 @@
                 'items' => [
                     [
                         'q' => "Can I customize my schedule's appearance?",
-                        'a' => 'Yes. Accent colour, font, background, header image, profile image and a grid or list layout are all on the free plan, as is a logo-wall header that shows the venues you have played. Pro adds custom CSS for anything the settings do not reach, and takes the Event Schedule branding off your public pages. Enterprise puts the whole thing on a domain of your own.',
+                        'a' => 'Yes. Accent colour, font, background, header image, profile image and a grid or list layout are all on the free plan, as is a logo-wall header that shows the venues you have played. Pro adds custom CSS for anything the settings do not reach, and takes the Getvnt branding off your public pages. Enterprise puts the whole thing on a domain of your own.',
                         'links' => [['Schedule styling', marketing_url('/docs/schedule-styling')]],
                     ],
                     [
-                        'q' => 'What languages does Event Schedule support?',
+                        'q' => 'What languages does Getvnt support?',
                         'a' => 'Twelve: Arabic, Dutch, English, Estonian, French, German, Hebrew, Italian, Portuguese, Romanian, Russian and Spanish. The right-to-left languages are laid out right to left rather than bolted onto a left-to-right page.',
                     ],
                     [
-                        'q' => 'Does Event Schedule support multiple languages?',
+                        'q' => 'Does Getvnt support multiple languages?',
                         'a' => 'Yes. Each schedule picks the language it is written in, so two schedules on one account can be in two different languages. You can also nominate one other language to translate into, and event names and descriptions are translated by AI into it with a language switch on your public page. That is free, and it is one target language at a time rather than all twelve at once.',
                         'links' => [['AI features', marketing_url('/features/ai')]],
                     ],
@@ -805,7 +805,7 @@
                         'links' => [['Analytics', marketing_url('/docs/analytics')]],
                     ],
                     [
-                        'q' => 'Does Event Schedule integrate with Google Analytics?',
+                        'q' => 'Does Getvnt integrate with Google Analytics?',
                         'a' => 'There is no Google Analytics integration, on purpose. The built-in dashboard covers views, devices, countries, referring domains and UTM campaigns first-party, so your audience does not get handed to an ad network in order for you to learn that Tuesday was busy.',
                         'links' => [['Analytics', marketing_url('/features/analytics')]],
                     ],
@@ -823,12 +823,12 @@
                 'note' => 'The part you can read, run, and take with you.',
                 'items' => [
                     [
-                        'q' => 'Is Event Schedule open source?',
+                        'q' => 'Is Getvnt open source?',
                         'a' => 'Yes, under the Attribution Assurance License. The whole application is on GitHub: read it, file an issue, send a patch, or fork it for something of your own.',
                         'links' => [['Open source', marketing_url('/open-source')], ['GitHub', $github, true]],
                     ],
                     [
-                        'q' => 'Can I selfhost Event Schedule?',
+                        'q' => 'Can I selfhost Getvnt?',
                         'a' => 'Yes. Run it on your own server and it resolves to the Enterprise feature set at no cost, with the data on your own hardware. A selfhosted install even has a couple of things the hosted one does not, such as importing events from a URL or a city search, and one-click updates.',
                         'links' => [['Selfhosting guide', marketing_url('/selfhost')], ['GitHub', $github, true]],
                     ],
@@ -879,7 +879,7 @@
             ['Appointment booking', '1 type', 'Unlimited types', 'Unlimited types'],
             ['Charge for an appointment booking', 'No', 'Yes', 'Yes'],
             ['Advanced scheduling (overrides, buffers, approvals)', 'No', 'Yes', 'Yes'],
-            ['Remove Event Schedule branding', 'No', 'Yes', 'Yes'],
+            ['Remove Getvnt branding', 'No', 'Yes', 'Yes'],
             ['Team members', '1', '1', 'Up to 5'],
             ['Reserved seating for venue schedules', 'No', 'No', 'Yes'],
             ['Custom domain, Internal and Unlisted events', 'No', 'No', 'Yes'],
@@ -947,7 +947,7 @@
                             <svg aria-hidden="true" class="h-5 w-5 es-desk-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span class="es-desk-muted text-sm font-medium tracking-wide">Event Schedule FAQ: {{ $faqCount }} questions, filed and numbered</span>
+                            <span class="es-desk-muted text-sm font-medium tracking-wide">Getvnt FAQ: {{ $faqCount }} questions, filed and numbered</span>
                         </x-marketing.hero-eyebrow>
                         <span class="es-mask"><span class="es-mask-line">Ask at the desk.</span></span>
                         <span class="es-mask es-mask-2"><span class="es-mask-line">Nobody needs your <span class="text-gradient-desk">card.</span></span></span>
@@ -1059,7 +1059,7 @@
             <div class="es-desk-card p-4 sm:p-6" data-reveal="panel">
                 <div class="es-desk-scroll">
                     <table class="es-desk-rate">
-                        <caption class="sr-only">What each Event Schedule plan includes, with monthly and yearly prices</caption>
+                        <caption class="sr-only">What each Getvnt plan includes, with monthly and yearly prices</caption>
                         <thead>
                             <tr>
                                 <th scope="col">What you asked about</th>
@@ -1248,7 +1248,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                     </div>
 

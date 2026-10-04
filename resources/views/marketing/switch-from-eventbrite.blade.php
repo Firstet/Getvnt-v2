@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">Migrate from Eventbrite to Event Schedule | Switching Guide</x-slot>
+    <x-slot name="title">Migrate from Eventbrite to Getvnt | Switching Guide</x-slot>
     <x-slot name="description">What the Eventbrite import brings across, what stays behind, and how payments and refunds work once you sell from your own page with no platform fee.</x-slot>
     <x-slot name="breadcrumbTitle">Switch from Eventbrite</x-slot>
 
@@ -8,13 +8,13 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "Move from Eventbrite to Event Schedule",
-        "description": "Import your existing Eventbrite events into Event Schedule with their venues, ticket types and images, then sell from your own page with no platform fee.",
+        "name": "Move from Eventbrite to Getvnt",
+        "description": "Import your existing Eventbrite events into Getvnt with their venues, ticket types and images, then sell from your own page with no platform fee.",
         "step": [
             {"@type": "HowToStep", "name": "Create your schedule", "text": "Sign up and create a schedule. It gets its own address straight away, and nothing is charged for it."},
-            {"@type": "HowToStep", "name": "Paste an Eventbrite token", "text": "Open the import screen on your schedule and paste an Eventbrite private token. Event Schedule finds your organization and lists the events on it."},
+            {"@type": "HowToStep", "name": "Paste an Eventbrite token", "text": "Open the import screen on your schedule and paste an Eventbrite private token. Getvnt finds your organization and lists the events on it."},
             {"@type": "HowToStep", "name": "Pick what comes across", "text": "Choose the events you want. Each one arrives with its date and duration, its description, its venue and address, its ticket types with their prices and quantities, and its image."},
-            {"@type": "HowToStep", "name": "Connect how you get paid", "text": "Connect your own Stripe or PayPal account so ticket money goes straight to you, with no platform fee taken by Event Schedule."}
+            {"@type": "HowToStep", "name": "Connect how you get paid", "text": "Connect your own Stripe or PayPal account so ticket money goes straight to you, with no platform fee taken by Getvnt."}
         ]
     }
     </script>
@@ -353,11 +353,11 @@
                 @php
                     // The third field is an optional [href, label] link for the foot of the card.
                     $moveAfter = [
-                        ['No platform fee', 'Event Schedule takes nothing from a ticket sale on any plan. The only deduction is your payment processor\'s own, and it goes to them rather than through us.', null],
+                        ['No platform fee', 'Getvnt takes nothing from a ticket sale on any plan. The only deduction is your payment processor\'s own, and it goes to them rather than through us.', null],
                         ['A page that is yours', 'Your own address, your own branding above the free tier, and a calendar people can subscribe to rather than a listing on somebody else\'s site.', null],
                         ['Your audience is yours', 'Followers and newsletter subscribers belong to the schedule, and you can email them yourself. Nothing sits between you and the people who came last time.', null],
                         ['You can leave again', 'It is open source, everything you make can be exported, and you can selfhost the whole thing at no cost. The next move, if there is one, is your decision rather than a negotiation.', null],
-                        ['Refunds leave your own account', 'A refund is a button on the Sales page. On a Stripe or PayPal sale the money goes back through them, in full or in part, and a partial refund keeps the tickets valid. Cash and other methods are marked as refunded, which moves no money. Event Schedule does not email the buyer about a refund, so tell them yourself.', [marketing_url('/docs/tickets#managing-sales'), 'Managing sales and refunds']],
+                        ['Refunds leave your own account', 'A refund is a button on the Sales page. On a Stripe or PayPal sale the money goes back through them, in full or in part, and a partial refund keeps the tickets valid. Cash and other methods are marked as refunded, which moves no money. Getvnt does not email the buyer about a refund, so tell them yourself.', [marketing_url('/docs/tickets#managing-sales'), 'Managing sales and refunds']],
                         ['Demand you can count', 'Switch on the "Notify me" card and an event with nothing on sale yet offers "Tell me when tickets go on sale". People leave an email address, with no account, and hear when tickets go on sale, if you cancel, and shortly before it starts. It is free on every plan, and the Tickets panel shows you how many are waiting.', [marketing_url('/docs/tickets#interest-list'), 'The interest list']],
                     ];
                 @endphp
@@ -379,7 +379,7 @@
                         The fee arithmetic lives on the comparison, where a calculator works it out against published rates rather than being restated here where it could go stale.
                     </p>
                     <a href="{{ marketing_url('/eventbrite-alternative') }}" class="es-move-accent mt-4 inline-block text-sm font-semibold hover:underline">
-                        Event Schedule compared with Eventbrite
+                        Getvnt compared with Eventbrite
                     </a>
                 </div>
             </div>
@@ -396,9 +396,9 @@
                 ['q' => 'What exactly comes across with an event?', 'a' => 'Its name and description, its start time and duration, its venue with the full address, its ticket types with their prices and quantities, its image, its currency and a mapped category. An online event also keeps a link back to its Eventbrite page. Discount codes, checkout questions and seat maps do not come across, and every event arrives as a one-time date.'],
                 ['q' => 'What about people who already bought a ticket?', 'a' => 'They do not come with the import. Export them from Eventbrite and use the bulk attendee import, a Pro feature that takes a CSV of up to 5,000 rows, so people who already paid end up with a ticket and a QR code here as well. Their payments stay with Eventbrite, so a refund on one of those orders is made there.'],
                 ['q' => 'Do I have to move everything at once?', 'a' => 'No. Pick the events you want, and run it again later for the ones you skipped. One way is to move the next season across and leave the current one where it is until it has finished.'],
-                ['q' => 'Where does the ticket money go?', 'a' => 'Into your own Stripe or PayPal account, which you connect once. Event Schedule adds no fee of its own on any plan, so what you receive is the ticket price minus your processor\'s charge.'],
+                ['q' => 'Where does the ticket money go?', 'a' => 'Into your own Stripe or PayPal account, which you connect once. Getvnt adds no fee of its own on any plan, so what you receive is the ticket price minus your processor\'s charge.'],
                 ['q' => 'Can buyers pay with PayPal?', 'a' => 'Yes, on Pro, which is the plan that lets a ticket carry a price at all. Connect your own PayPal account in Settings under Payment Methods and choose PayPal for the event, and the money goes to that account. Stripe is there for cards, and PayPal also works when a buyer takes tickets to several of your events in one checkout. Installment plans, a Pro feature, run on Stripe only.'],
-                ['q' => 'How do refunds work once I have moved?', 'a' => 'From the Sales page. A Stripe or PayPal sale can be refunded in full or in part: the money goes back through that provider first, and only then does the sale change, and a partial refund leaves it paid with its tickets valid. A sale taken another way, such as cash or a payment link, is marked as refunded instead, which records it without moving money. Event Schedule does not email the buyer about a refund, so let them know yourself.'],
+                ['q' => 'How do refunds work once I have moved?', 'a' => 'From the Sales page. A Stripe or PayPal sale can be refunded in full or in part: the money goes back through that provider first, and only then does the sale change, and a partial refund leaves it paid with its tickets valid. A sale taken another way, such as cash or a payment link, is marked as refunded instead, which records it without moving money. Getvnt does not email the buyer about a refund, so let them know yourself.'],
                 ['q' => 'Can people be told when tickets go on sale?', 'a' => 'Yes. Switch on the free "Notify me" card and, on an event with nothing on sale yet, a visitor can press "Tell me when tickets go on sale" and leave an email address, with no account. They get one email when tickets go on sale, one if you cancel the event and a reminder shortly before it starts, plus any notice you choose to send if the date or venue changes. It is free on every plan, it is not a subscription to your schedule, and the event\'s Tickets panel shows how many people are waiting.'],
                 ['q' => 'Do I need a paid plan to move?', 'a' => 'For the move itself, yes: the Eventbrite import and the bulk attendee import are Pro features, and so is any ticket that carries a price. Creating a schedule, publishing your events and taking free registrations are not, so you can rebuild the whole calendar and see it working before you decide about a plan. There is no platform fee on any plan.'],
                 ['q' => 'Can I take my data out again later?', 'a' => 'Yes. There is a backup and restore for everything you have created, the API and webhooks are there on Pro, and the whole application is open source and can be selfhosted at no cost. Being easy to leave is the point.'],
@@ -449,7 +449,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#0c1017] transition-colors hover:bg-gray-100">
                                 Get Started Free

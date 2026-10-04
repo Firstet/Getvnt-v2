@@ -5,8 +5,8 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Features"
-        description="Every Event Schedule feature: ticketing through Stripe or PayPal with no platform fee, two-way calendar sync, newsletters, AI event import, analytics, and an open-source codebase you can selfhost." />
+        name="Getvnt Features"
+        description="Every Getvnt feature: ticketing through Stripe or PayPal with no platform fee, two-way calendar sync, newsletters, AI event import, analytics, and an open-source codebase you can selfhost." />
     </x-slot>
 
     <style {!! nonce_attr() !!}>
@@ -168,7 +168,7 @@
         :chips="['Zero platform fees', 'QR check-ins', 'Stripe and PayPal', 'Check-in dashboard', 'Waitlist', 'Promo codes', 'Sales export', 'Free event RSVP', 'Reserved seating']"
         :lead="true"
         frame="browser"
-        frame-url="yourvenue.eventschedule.com/tickets"
+        frame-url="yourvenue.getvnt.com/tickets"
         ground="white">
         <x-slot name="badgeIcon">
             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -373,7 +373,7 @@
 
         <div class="flex items-center gap-4">
             <div class="flex-1 rounded-xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-400/30 dark:bg-blue-500/15">
-                <div class="mb-2 text-center text-xs text-blue-600 dark:text-blue-300">Event Schedule</div>
+                <div class="mb-2 text-center text-xs text-blue-600 dark:text-blue-300">Getvnt</div>
                 <div class="space-y-1.5">
                     <div class="h-2 rounded bg-blue-400/40"></div>
                     <div class="h-2 w-3/4 rounded bg-blue-400/40"></div>
@@ -440,7 +440,7 @@
         lede="Create sub-schedules to sort events by stage, series, or any way you like. Each one gets a colour, a visitor filter and its own URL."
         :chips="['Colour-coded', 'Visitor filter', 'Its own URL']"
         frame="browser"
-        frame-url="thevenue.eventschedule.com"
+        frame-url="thevenue.getvnt.com"
         ground="gray">
         <x-slot name="badgeIcon">
             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -593,7 +593,7 @@
         :lead="true"
         :flip="true"
         frame="browser"
-        frame-url="eventschedule.com/admin/newsletters"
+        frame-url="getvnt.com/admin/newsletters"
         ground="gray">
         <x-slot name="badgeIcon">
             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -852,7 +852,7 @@
         :chips="['Web, revenue, check-ins', 'UTM campaigns', 'No external services']"
         :flip="true"
         frame="browser"
-        frame-url="eventschedule.com/admin/analytics"
+        frame-url="getvnt.com/admin/analytics"
         ground="gray">
         <x-slot name="badgeIcon">
             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -883,7 +883,7 @@
         id="own-it"
         accent="amber"
         title="Make it yours"
-        lede="Your domain, your branding, your team, your server. Event Schedule is open source, so nothing here is locked behind us."
+        lede="Your domain, your branding, your team, your server. Getvnt is open source, so nothing here is locked behind us."
         ground="white" />
 
     <x-marketing.feature-banner
@@ -905,7 +905,7 @@
 
         <div class="mb-1 text-[10px] text-gray-500 dark:text-gray-400">Before</div>
         <div dir="ltr" class="mb-4 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 font-mono text-sm text-gray-600 line-through dark:border-white/10 dark:bg-white/5 dark:text-gray-400">
-            myband.eventschedule.com
+            myband.getvnt.com
         </div>
         <div class="mb-1 text-[10px] text-gray-500 dark:text-gray-400">After</div>
         <div dir="ltr" class="rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 font-mono text-sm font-medium text-teal-700 dark:border-teal-500/30 dark:bg-teal-500/15 dark:text-teal-300">
@@ -1034,7 +1034,7 @@
 
         <div dir="ltr" class="space-y-1 font-mono text-xs">
             <div class="text-gray-600 dark:text-gray-400">$ git clone</div>
-            <div class="break-all leading-tight text-cyan-700 dark:text-cyan-400">github.com/eventschedule</div>
+            <div class="break-all leading-tight text-cyan-700 dark:text-cyan-400">github.com/Firstet</div>
             <div class="pt-2 text-gray-500 dark:text-gray-400">$ composer install</div>
             <div class="text-emerald-700 dark:text-emerald-400">Done!</div>
             <div class="text-gray-600 dark:text-gray-400">$ php artisan serve</div>
@@ -1063,7 +1063,7 @@
                 'href' => route('marketing.white_label'),
                 'aria' => 'Learn more about white-label branding',
                 'title' => 'White Label',
-                'desc' => 'Remove Event Schedule branding so the schedule your guests see is entirely yours.',
+                'desc' => 'Remove Getvnt branding so the schedule your guests see is entirely yours.',
                 'chip' => 'bg-emerald-100 dark:bg-emerald-500/20',
                 'text' => 'text-emerald-600 dark:text-emerald-400',
                 'icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />',
@@ -1144,7 +1144,7 @@
                 'href' => marketing_url('/docs/developer/api#authentication'),
                 'aria' => 'Learn more about the REST API and webhooks',
                 'title' => 'API & Webhooks',
-                'desc' => 'Full CRUD REST API plus webhooks, so Event Schedule fits into whatever you already built.',
+                'desc' => 'Full CRUD REST API plus webhooks, so Getvnt fits into whatever you already built.',
                 'chip' => 'bg-gray-100 dark:bg-gray-500/20',
                 'text' => 'text-gray-600 dark:text-gray-400',
                 'icon' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />',
@@ -1272,12 +1272,12 @@
     @php
         $faqs = [
             [
-                'q' => 'Is Event Schedule really free?',
+                'q' => 'Is Getvnt really free?',
                 'a' => 'Yes. Unlimited events, unlimited schedules, calendar sync, free registration with capacity limits, analytics and QR check-in at the door are all included on the free plan, with no time limit and no credit card required. Newsletters are metered rather than unlimited, at 10 emails a month with each recipient counting as one. A free schedule is also a team of one, with one free appointment type, and a price on a ticket or a booking is where Pro begins.',
             ],
             [
                 'q' => 'Do you take a cut of ticket sales?',
-                'a' => 'No. Event Schedule charges zero platform fees on tickets, on every plan including free. You connect your own Stripe or PayPal account and payouts go straight to you, so the only deduction is what Stripe or PayPal charges to process the payment. Charging for a ticket is a Pro feature, but the fee is zero whatever you charge and whatever plan you are on.',
+                'a' => 'No. Getvnt charges zero platform fees on tickets, on every plan including free. You connect your own Stripe or PayPal account and payouts go straight to you, so the only deduction is what Stripe or PayPal charges to process the payment. Charging for a ticket is a Pro feature, but the fee is zero whatever you charge and whatever plan you are on.',
             ],
             [
                 'q' => 'Which payment methods can I accept?',
@@ -1301,7 +1301,7 @@
             ],
             [
                 'q' => 'Can I run it on my own server?',
-                'a' => 'Yes. Event Schedule is open source under the Attribution Assurance License. Selfhosted installs include every Enterprise feature at no cost, and the app updates itself with one click from the admin panel.',
+                'a' => 'Yes. Getvnt is open source under the Attribution Assurance License. Selfhosted installs include every Enterprise feature at no cost, and the app updates itself with one click from the admin panel.',
             ],
             [
                 'q' => 'Do I need a credit card to start?',
@@ -1357,7 +1357,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                             <span class="relative z-10 flex items-center gap-2">

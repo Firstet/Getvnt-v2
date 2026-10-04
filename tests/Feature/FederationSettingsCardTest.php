@@ -26,7 +26,7 @@ class FederationSettingsCardTest extends TestCase
     use CreatesScheduleData;
     use RefreshDatabase;
 
-    private const REGISTER = 'https://eventschedule.com/api/federation/register';
+    private const REGISTER = 'https://getvnt.com/api/federation/register';
 
     protected function setUp(): void
     {
@@ -311,7 +311,7 @@ class FederationSettingsCardTest extends TestCase
                     ? Http::response(['error' => 'unavailable'], 503)
                     : Http::response(['status' => 'approved', 'registered' => true]);
             },
-            'https://eventschedule.com/api/federation/*' => Http::response(['removed' => 0, 'missing' => [], 'status' => 'approved']),
+            'https://getvnt.com/api/federation/*' => Http::response(['removed' => 0, 'missing' => [], 'status' => 'approved']),
         ]);
         $this->adminActing();
         Setting::set('federation_enabled', '1');
@@ -338,7 +338,7 @@ class FederationSettingsCardTest extends TestCase
      */
     public function test_a_successful_withdraw_clears_the_sent_markers(): void
     {
-        Http::fake(['https://eventschedule.com/api/federation/*' => Http::response(['removed' => 1, 'missing' => [], 'status' => 'approved'])]);
+        Http::fake(['https://getvnt.com/api/federation/*' => Http::response(['removed' => 1, 'missing' => [], 'status' => 'approved'])]);
         $admin = $this->adminActing();
         Setting::set('federation_enabled', '1');
         Setting::set('federation_instance_id', (string) \Illuminate\Support\Str::uuid());
@@ -585,11 +585,11 @@ class FederationSettingsCardTest extends TestCase
         $role = $this->createRole($admin, 'venue', ['name' => 'Harbour Hall', 'federation_enabled' => true]);
         $event = $this->createEvent($role, ['name' => 'Already Out', 'flyer_image_url' => 'f.jpg', 'creator_role_id' => $role->id]);
 
-        $good = 'https://eventschedule.com/browse?instance=abc#network';
+        $good = 'https://getvnt.com/browse?instance=abc#network';
         $attempts = 0;
         Http::fake([
             self::REGISTER => Http::response(['status' => 'approved', 'registered' => true, 'listings_url' => 'https://evil.test/browse']),
-            'https://eventschedule.com/api/federation/*' => function () use (&$attempts, $good) {
+            'https://getvnt.com/api/federation/*' => function () use (&$attempts, $good) {
                 $attempts++;
 
                 return Http::response(['accepted' => 1, 'skipped' => 0, 'removed' => 0, 'missing' => [], 'status' => 'approved', 'listings_url' => $good]);

@@ -62,7 +62,7 @@
         @else
         <x-link href="{{ $role->getGuestUrl() }}" target="_blank">
             @if (config('app.hosted'))
-                {{ $role->subdomain . '.eventschedule.com' }}
+                {{ $role->subdomain . '.getvnt.com' }}
             @else
                 {{ config('app.url') . '/' . $role->subdomain }}
             @endif

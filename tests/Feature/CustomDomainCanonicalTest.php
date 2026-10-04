@@ -9,7 +9,7 @@ use Tests\TestCase;
 /**
  * A schedule served directly on its custom domain (DigitalOcean direct + active) must advertise
  * that custom domain as the SEO canonical even when the page is loaded on the plain
- * {subdomain}.eventschedule.com URL. Redirect-mode domains 301 to the subdomain, so they keep
+ * {subdomain}.getvnt.com URL. Redirect-mode domains 301 to the subdomain, so they keep
  * the subdomain canonical. The decision lives in Role/Event::getCanonicalUrl(), so it holds on
  * the subdomain request without the custom-domain middleware running.
  */
@@ -23,7 +23,7 @@ class CustomDomainCanonicalTest extends TestCase
         // The Payfast checkout opts out of the body rewrite (its fields are signed, so rewriting one
         // afterwards desyncs the signature). That opt-out must stay strictly opt-in: every ordinary
         // page served on a custom domain still needs its subdomain URLs rewritten, or the whole
-        // custom-domain experience silently leaks the .eventschedule.com host back into links.
+        // custom-domain experience silently leaks the .getvnt.com host back into links.
         config(['app.hosted' => true]);
 
         $owner = $this->createOwner();

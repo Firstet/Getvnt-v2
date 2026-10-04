@@ -39,7 +39,7 @@ return [
     'paypal' => [
         ['title' => 'Selling Tickets', 'path' => '/features/ticketing', 'blurb' => 'Ticket types, QR check-in and a live door dashboard, with zero platform fees.'],
         ['title' => 'Stripe', 'path' => '/stripe', 'blurb' => 'Card payments straight into your own Stripe account.'],
-        ['title' => 'Integrations', 'path' => '/features/integrations', 'blurb' => 'Every port in and out of Event Schedule, with the plan each one needs.'],
+        ['title' => 'Integrations', 'path' => '/features/integrations', 'blurb' => 'Every port in and out of Getvnt, with the plan each one needs.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -97,7 +97,7 @@ return [
     'features' => [
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
         ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Run every Enterprise feature on your own server at no cost.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Examples', 'path' => '/examples', 'blurb' => 'Real schedules built by venues, artists, and organizers.'],
     ],
 
@@ -105,18 +105,18 @@ return [
         ['title' => 'All Features', 'path' => '/features', 'blurb' => 'Every feature on one page, whatever kind of events you run.'],
         ['title' => 'Examples', 'path' => '/examples', 'blurb' => 'Explore live demo schedules built for different industries.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'Free forever, with zero platform fees on ticket sales.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
     ],
 
     'pricing' => [
         ['title' => 'All Features', 'path' => '/features', 'blurb' => 'Every feature on one page, with the plan each one needs.'],
         ['title' => 'Ticketing', 'path' => '/features/ticketing', 'blurb' => 'Sell tickets with QR check-in and zero platform fees.'],
-        ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Run Event Schedule on your own server at no cost.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Run Getvnt on your own server at no cost.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
     ],
 
     'ticket-fee-calculator' => [
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Zero platform fees instead of 3.7% + $1.79 a ticket, paid to your own Stripe or PayPal.'],
         ['title' => 'Selling Tickets', 'path' => '/features/ticketing', 'blurb' => 'Ticket types, QR check-in and a live door dashboard, with zero platform fees.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
@@ -137,10 +137,10 @@ return [
     ],
 
     'saas' => [
-        ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Install Event Schedule on your own server with Docker or Softaculous.'],
+        ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Install Getvnt on your own server with Docker or Softaculous.'],
         ['title' => 'White Label', 'path' => '/features/white-label', 'blurb' => 'Remove branding and make the platform look like your product.'],
         ['title' => 'Open Source', 'path' => '/open-source', 'blurb' => 'Read, fork, and contribute to the code you build your business on.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
     ],
 
     'features/ai' => [
@@ -335,7 +335,7 @@ return [
     'accessibility' => [
         ['title' => 'Accessibility Guide', 'path' => '/docs/selfhost/accessibility', 'blurb' => 'The accessibility options built into every schedule.'],
         ['title' => 'Privacy Policy', 'path' => '/privacy', 'blurb' => 'How we collect, use, and protect your data.'],
-        ['title' => 'About Event Schedule', 'path' => '/about', 'blurb' => 'Who builds Event Schedule, and why it is open source.'],
+        ['title' => 'About Getvnt', 'path' => '/about', 'blurb' => 'Who builds Getvnt, and why it is open source.'],
         ['title' => 'Contact Us', 'path' => '/contact', 'blurb' => 'Email support, GitHub issues, and where else to find us.'],
     ],
 
@@ -349,7 +349,7 @@ return [
     'contact' => [
         ['title' => 'FAQ', 'path' => '/faq', 'blurb' => 'Answers on pricing, ticketing, calendar sync and selfhosting.'],
         ['title' => 'Documentation', 'path' => '/docs', 'blurb' => 'The user guide, the selfhost notes and the API reference.'],
-        ['title' => 'About Event Schedule', 'path' => '/about', 'blurb' => 'Who builds Event Schedule, and why it is open source.'],
+        ['title' => 'About Getvnt', 'path' => '/about', 'blurb' => 'Who builds Getvnt, and why it is open source.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -376,14 +376,14 @@ return [
 
     'privacy' => [
         ['title' => 'Terms of Service', 'path' => '/terms-of-service', 'blurb' => 'The rules and guidelines for using the platform.'],
-        ['title' => 'About Event Schedule', 'path' => '/about', 'blurb' => 'Who builds Event Schedule, and why it is open source.'],
+        ['title' => 'About Getvnt', 'path' => '/about', 'blurb' => 'Who builds Getvnt, and why it is open source.'],
         ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Run every Enterprise feature on your own server at no cost.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'terms-of-service' => [
         ['title' => 'Privacy Policy', 'path' => '/privacy', 'blurb' => 'How we collect, use, and protect your data.'],
-        ['title' => 'About Event Schedule', 'path' => '/about', 'blurb' => 'Who builds Event Schedule, and why it is open source.'],
+        ['title' => 'About Getvnt', 'path' => '/about', 'blurb' => 'Who builds Getvnt, and why it is open source.'],
         ['title' => 'All Features', 'path' => '/features', 'blurb' => 'Every feature on one page, with the plan each one needs.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
@@ -391,7 +391,7 @@ return [
     'self-hosting-terms-of-service' => [
         ['title' => 'Selfhost', 'path' => '/selfhost', 'blurb' => 'Run every Enterprise feature on your own server at no cost.'],
         ['title' => 'Open Source', 'path' => '/open-source', 'blurb' => 'The licence, the repositories and how to contribute.'],
-        ['title' => 'Selfhost Guide', 'path' => '/docs/selfhost', 'blurb' => 'Installing and running Event Schedule on your own server.'],
+        ['title' => 'Selfhost Guide', 'path' => '/docs/selfhost', 'blurb' => 'Installing and running Getvnt on your own server.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -755,28 +755,28 @@ return [
     'accelevents-alternative' => [
         ['title' => 'Whova Alternative', 'path' => '/whova-alternative', 'blurb' => 'Transparent pricing, with no custom quotes or sales calls.'],
         ['title' => 'Splash Alternative', 'path' => '/splash-alternative', 'blurb' => 'Zero platform fees and open source, without enterprise pricing.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'addevent-alternative' => [
         ['title' => 'Google Calendar Alternative', 'path' => '/google-calendar-alternative', 'blurb' => 'When a Google Calendar link is not enough.'],
         ['title' => 'Luma Alternative', 'path' => '/luma-alternative', 'blurb' => 'Custom domains, zero platform fees, and open source flexibility.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Tockify Alternative', 'path' => '/tockify-alternative', 'blurb' => 'An embeddable calendar that also takes registrations.'],
     ],
 
     'brown-paper-tickets-alternative' => [
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Keep more of every ticket you sell.'],
         ['title' => 'TicketLeap Alternative', 'path' => '/ticketleap-alternative', 'blurb' => 'No per-ticket fees, payouts into your own account, and calendar sync.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'dice-alternative' => [
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Keep more of every ticket you sell.'],
         ['title' => 'Universe Alternative', 'path' => '/universe-alternative', 'blurb' => 'Zero platform fees instead of a service fee on every ticket.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -787,35 +787,35 @@ return [
     'eventbrite-alternative' => [
         ['title' => 'Move from Eventbrite', 'path' => '/switch-from-eventbrite', 'blurb' => 'What comes across in the import, what does not, and what to do on the first day.'],
         ['title' => 'Ticket Tailor Alternative', 'path' => '/ticket-tailor-alternative', 'blurb' => 'Zero platform fees, open source flexibility, and AI features.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'eventzilla-alternative' => [
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Keep more of every ticket you sell.'],
         ['title' => 'Humanitix Alternative', 'path' => '/humanitix-alternative', 'blurb' => 'Flat pricing instead of per-ticket fees, plus selfhosting.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'google-calendar-alternative' => [
         ['title' => 'AddEvent Alternative', 'path' => '/addevent-alternative', 'blurb' => 'Ticketing and public event pages, not just calendar buttons.'],
         ['title' => 'Meetup Alternative', 'path' => '/meetup-alternative', 'blurb' => 'Zero platform fees and custom domains, without a subscription.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Timely Alternative', 'path' => '/timely-alternative', 'blurb' => 'A free plan and ticketing with zero platform fees, not an annual add-on.'],
     ],
 
     'humanitix-alternative' => [
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Keep more of every ticket you sell.'],
         ['title' => 'Tito Alternative', 'path' => '/tito-alternative', 'blurb' => 'Flat pricing instead of a percentage of every ticket.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Zeffy Alternative', 'path' => '/zeffy-alternative', 'blurb' => 'Open source ticketing for any organizer, with zero platform fees.'],
     ],
 
     'luma-alternative' => [
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Keep more of every ticket you sell.'],
         ['title' => 'Meetup Alternative', 'path' => '/meetup-alternative', 'blurb' => 'Zero platform fees and custom domains, without a subscription.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Partiful Alternative', 'path' => '/partiful-alternative', 'blurb' => 'Free RSVPs, plus recurring events and a public schedule page.'],
     ],
 
@@ -829,49 +829,49 @@ return [
     'pretix-alternative' => [
         ['title' => 'Ticket Tailor Alternative', 'path' => '/ticket-tailor-alternative', 'blurb' => 'Zero platform fees, open source flexibility, and AI features.'],
         ['title' => 'Tito Alternative', 'path' => '/tito-alternative', 'blurb' => 'Flat pricing instead of a percentage of every ticket.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'sched-alternative' => [
         ['title' => 'Whova Alternative', 'path' => '/whova-alternative', 'blurb' => 'Transparent pricing, with no custom quotes or sales calls.'],
         ['title' => 'Accelevents Alternative', 'path' => '/accelevents-alternative', 'blurb' => 'Zero platform fees, instant setup, and open source flexibility.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'splash-alternative' => [
         ['title' => 'Accelevents Alternative', 'path' => '/accelevents-alternative', 'blurb' => 'Zero platform fees, instant setup, and open source flexibility.'],
         ['title' => 'Whova Alternative', 'path' => '/whova-alternative', 'blurb' => 'Transparent pricing, with no custom quotes or sales calls.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'ticket-tailor-alternative' => [
         ['title' => 'Eventbrite Alternative', 'path' => '/eventbrite-alternative', 'blurb' => 'Keep more of every ticket you sell.'],
         ['title' => 'Tito Alternative', 'path' => '/tito-alternative', 'blurb' => 'Flat pricing instead of a percentage of every ticket.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'tito-alternative' => [
         ['title' => 'Ticket Tailor Alternative', 'path' => '/ticket-tailor-alternative', 'blurb' => 'Zero platform fees, open source flexibility, and AI features.'],
         ['title' => 'Pretix Alternative', 'path' => '/pretix-alternative', 'blurb' => 'Flat pricing instead of per-ticket fees, plus AI features.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'whova-alternative' => [
         ['title' => 'Sched Alternative', 'path' => '/sched-alternative', 'blurb' => 'Zero platform fees, calendar sync, and open source flexibility.'],
         ['title' => 'Accelevents Alternative', 'path' => '/accelevents-alternative', 'blurb' => 'Zero platform fees, instant setup, and open source flexibility.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'timely-alternative' => [
         ['title' => 'The Events Calendar Alternative', 'path' => '/the-events-calendar-alternative', 'blurb' => 'Event pages, ticketing and calendar sync without a WordPress plugin.'],
         ['title' => 'Tockify Alternative', 'path' => '/tockify-alternative', 'blurb' => 'An embeddable calendar that also takes registrations.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -885,28 +885,28 @@ return [
     'tockify-alternative' => [
         ['title' => 'Timely Alternative', 'path' => '/timely-alternative', 'blurb' => 'A free plan and ticketing with zero platform fees, not an annual add-on.'],
         ['title' => 'The Events Calendar Alternative', 'path' => '/the-events-calendar-alternative', 'blurb' => 'Event pages, ticketing and calendar sync without a WordPress plugin.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'bandsintown-alternative' => [
         ['title' => 'Facebook Events Alternative', 'path' => '/facebook-events-alternative', 'blurb' => 'An events page you own, with ticketing and calendar sync.'],
         ['title' => 'Songkick Alternative', 'path' => '/songkick-alternative', 'blurb' => 'Tour dates on your own page, with registrations and tickets built in.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'posh-alternative' => [
         ['title' => 'Partiful Alternative', 'path' => '/partiful-alternative', 'blurb' => 'Free RSVPs, plus recurring events and a public schedule page.'],
         ['title' => 'Bandsintown Alternative', 'path' => '/bandsintown-alternative', 'blurb' => 'Your own tour-date page with ticketing and calendar sync.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
     'partiful-alternative' => [
         ['title' => 'Posh Alternative', 'path' => '/posh-alternative', 'blurb' => 'Ticketing for parties and nights out with zero platform fees.'],
         ['title' => 'Facebook Events Alternative', 'path' => '/facebook-events-alternative', 'blurb' => 'An events page you own, with ticketing and calendar sync.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -927,7 +927,7 @@ return [
     'hi-events-alternative' => [
         ['title' => 'Mobilizon Alternative', 'path' => '/mobilizon-alternative', 'blurb' => 'Open source events with ticketing and calendar sync built in.'],
         ['title' => 'Zeffy Alternative', 'path' => '/zeffy-alternative', 'blurb' => 'Open source ticketing for any organizer, with zero platform fees.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 
@@ -977,7 +977,7 @@ return [
     'replace' => [
         ['title' => 'Google Forms Replacement', 'path' => '/google-forms-replacement', 'blurb' => 'Built-in ticketing, payments, and public event pages.'],
         ['title' => 'Mailchimp Replacement', 'path' => '/mailchimp-replacement', 'blurb' => 'Built-in newsletters with A/B testing and attendee management.'],
-        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Event Schedule stacks up against other platforms.'],
+        ['title' => 'Compare Alternatives', 'path' => '/compare', 'blurb' => 'See how Getvnt stacks up against other platforms.'],
         ['title' => 'Pricing', 'path' => '/pricing', 'blurb' => 'See what is included on Free, Pro, and Enterprise plans.'],
     ],
 

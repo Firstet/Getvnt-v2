@@ -135,7 +135,7 @@ class GitHubStarsTest extends TestCase
         $response = $this->selfhostAdminPage();
 
         $response->assertOk();
-        $response->assertSee('https://github.com/eventschedule/eventschedule"', false);
+        $response->assertSee('https://github.com/Firstet/Getvnt-v2"', false);
         $response->assertSee(__('messages.star_on_github'));
 
         // The star glyph rides with the number, so its absence is what proves no count rendered.

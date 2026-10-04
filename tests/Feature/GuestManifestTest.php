@@ -11,7 +11,7 @@ use Tests\TestCase;
  * The web app manifest a guest page advertises has to be the schedule's, never the platform's.
  *
  * layouts/app.blade.php is the shell for the guest portal as well as the admin portal, and it used
- * to link one static public/manifest.webmanifest naming "Event Schedule" with our logo. That made
+ * to link one static public/manifest.webmanifest naming "Getvnt" with our logo. That made
  * every schedule's site installable as an app branded as ours, and Android shows an installed
  * app's icon as its launch splash - so a visitor who had added the schedule to their home screen
  * saw OUR logo for a couple of seconds on every link they opened. See AppController::manifest().
@@ -213,7 +213,7 @@ class GuestManifestTest extends TestCase
 
         $this->assertSame('Blue Note', $manifest['name']);
         $this->assertSame('#123456', $manifest['theme_color']);
-        $this->assertStringNotContainsString('Event Schedule', json_encode($manifest));
+        $this->assertStringNotContainsString('Getvnt', json_encode($manifest));
         $this->assertStringNotContainsString(self::PLATFORM_ICON, json_encode($manifest));
         $this->assertStringContainsString('profile_bluenote.png', $manifest['icons'][0]['src']);
     }
@@ -222,7 +222,7 @@ class GuestManifestTest extends TestCase
      * Relative, so one document is correct on a subdomain, on a custom domain and on a path-routed
      * selfhost install. ResolveCustomDomain rewrites text/html and application/json bodies but not
      * application/manifest+json, so an absolute URL here would point a custom domain's installed
-     * app back at the .eventschedule.com host.
+     * app back at the .getvnt.com host.
      */
     public function test_the_schedule_manifest_scopes_itself_relatively(): void
     {
@@ -301,7 +301,7 @@ class GuestManifestTest extends TestCase
         $this->get('/'.$role->subdomain.'/manifest.webmanifest')->assertNotFound();
     }
 
-    /** The apex keeps ours: the admin portal genuinely is the Event Schedule app. */
+    /** The apex keeps ours: the admin portal genuinely is the Getvnt app. */
     public function test_the_platform_manifest_is_still_served_at_the_root(): void
     {
         config(['app.is_nexus' => true]);
@@ -311,7 +311,7 @@ class GuestManifestTest extends TestCase
             ->assertHeader('Content-Type', 'application/manifest+json')
             ->json();
 
-        $this->assertSame('Event Schedule', $manifest['name']);
+        $this->assertSame('Getvnt', $manifest['name']);
         $this->assertSame(self::PLATFORM_ICON, $manifest['icons'][1]['src']);
     }
 

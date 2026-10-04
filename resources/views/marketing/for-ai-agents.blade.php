@@ -4,14 +4,14 @@
         // view composer - the same value /pricing renders.
     @endphp
 
-    <x-slot name="title">REST API for AI Agents & Developers - Event Schedule</x-slot>
+    <x-slot name="title">REST API for AI Agents & Developers - Getvnt</x-slot>
     <x-slot name="description">27 REST endpoints, an OpenAPI 3.0 spec, llms.txt and agents.json. One POST creates an event with its tickets; one PUT refunds a sale.</x-slot>
     <x-slot name="breadcrumbTitle">For AI Agents</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule API"
-        description="A REST API over the whole of Event Schedule: schedules, sub-schedules, events, recurrences, ticket types, sales and refunds, post-event feedback and fan content, with an OpenAPI 3.0 spec, llms.txt and agents.json so an agent can discover it and drive it without a human in the loop."
+        name="Getvnt API"
+        description="A REST API over the whole of Getvnt: schedules, sub-schedules, events, recurrences, ticket types, sales and refunds, post-event feedback and fan content, with an OpenAPI 3.0 spec, llms.txt and agents.json so an agent can discover it and drive it without a human in the loop."
         keywords="event API, scheduling API, AI agent event management, event automation API, REST API event scheduling, llms.txt, agents.json, OpenAPI" />
     </x-slot>
 
@@ -479,7 +479,7 @@
         $discovery = [
             [
                 'llms.txt', '/llms.txt', $lineCount('llms.txt'),
-                'The short one. What Event Schedule is and what each plan includes, links to the main product, audience, comparison and documentation pages, and the API essentials: the auth header, which plan the API needs, the rate limits and a getting-started sequence, so an agent can decide in one fetch whether this API is relevant at all.',
+                'The short one. What Getvnt is and what each plan includes, links to the main product, audience, comparison and documentation pages, and the API essentials: the auth header, which plan the API needs, the rate limits and a getting-started sequence, so an agent can decide in one fetch whether this API is relevant at all.',
             ],
             [
                 'llms-full.txt', '/llms-full.txt', $lineCount('llms-full.txt'),
@@ -521,7 +521,7 @@
              '<span class="es-cons-mono es-cons-key">POST /api/schedules</span> with a name and a type. The subdomain is generated from the name and the public page exists immediately.',
              '{"name": "Synth Lab", "type": "venue"}'],
             ['03', 'Create events',
-             '<span class="es-cons-mono es-cons-key">POST /api/events/{subdomain}</span>. Ticket types, agenda parts and recurrence go in the same body, so there is no second round trip. On eventschedule.com this one needs the schedule on Pro.',
+             '<span class="es-cons-mono es-cons-key">POST /api/events/{subdomain}</span>. Ticket types, agenda parts and recurrence go in the same body, so there is no second round trip. On getvnt.com this one needs the schedule on Pro.',
              '{"name": "Analog Night", "duration": 3}'],
         ];
 
@@ -532,7 +532,7 @@
             ],
             [
                 'q' => 'Which endpoints need the Pro plan, and what happens without it?',
-                'a' => 'On eventschedule.com the list endpoints for schedules, events, sales and feedback return only rows from schedules on Pro, so a free schedule\'s data is missing rather than refused: check the plan before you read an empty list as nothing there. Reading one schedule, event or sale, updating a schedule, and writing to its events, sub-schedules or sales return 403 with "API usage is limited to Pro accounts". The exception worth planning around is POST /api/sales, which has no plan check of its own: a free schedule can record a sale against a zero-price ticket, while any row with a price on it needs the schedule to be Pro and answers 422 otherwise. On a selfhosted install every one of these checks passes.',
+                'a' => 'On getvnt.com the list endpoints for schedules, events, sales and feedback return only rows from schedules on Pro, so a free schedule\'s data is missing rather than refused: check the plan before you read an empty list as nothing there. Reading one schedule, event or sale, updating a schedule, and writing to its events, sub-schedules or sales return 403 with "API usage is limited to Pro accounts". The exception worth planning around is POST /api/sales, which has no plan check of its own: a free schedule can record a sale against a zero-price ticket, while any row with a price on it needs the schedule to be Pro and answers 422 otherwise. On a selfhosted install every one of these checks passes.',
             ],
             [
                 'q' => 'How does authentication work?',
@@ -548,7 +548,7 @@
             ],
             [
                 'q' => 'What is llms.txt, and why are there two of them?',
-                'a' => 'llms.txt is an emerging convention for telling a language model what a site is and where its documentation lives. Event Schedule publishes both: llms.txt is a short routing summary an agent can read to decide whether this API is relevant, and llms-full.txt is the entire reference in one file, so an agent that has decided to proceed never needs to follow a link.',
+                'a' => 'llms.txt is an emerging convention for telling a language model what a site is and where its documentation lives. Getvnt publishes both: llms.txt is a short routing summary an agent can read to decide whether this API is relevant, and llms-full.txt is the entire reference in one file, so an agent that has decided to proceed never needs to follow a link.',
             ],
             [
                 'q' => 'What are the rate limits?',
@@ -564,7 +564,7 @@
             ],
             [
                 'q' => 'Can I run this against my own installation?',
-                'a' => 'Yes. Event Schedule is open source and the API is the same in both modes: same routes, same spec, same discovery files served from your own domain. On a selfhosted install the Pro gate returns true unconditionally, so nothing is held back.',
+                'a' => 'Yes. Getvnt is open source and the API is the same in both modes: same routes, same spec, same discovery files served from your own domain. On a selfhosted install the Pro gate returns true unconditionally, so nothing is held back.',
             ],
         ];
 
@@ -657,7 +657,7 @@
                         </div>
 <pre class="es-cons-pre"><span class="es-cons-t-pun">{ </span><span class="es-cons-t-key">"data"</span><span class="es-cons-t-pun">: {</span>
   <span class="es-cons-t-key">"id"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"Kd3Vq7"</span><span class="es-cons-t-pun">,</span>
-  <span class="es-cons-t-key">"url"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"https://synth-lab.eventschedule.com/analog-night/Kd3Vq7"</span><span class="es-cons-t-pun">,</span>
+  <span class="es-cons-t-key">"url"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"https://synth-lab.getvnt.com/analog-night/Kd3Vq7"</span><span class="es-cons-t-pun">,</span>
   <span class="es-cons-t-key">"tickets"</span><span class="es-cons-t-pun">: [{</span> <span class="es-cons-t-key">"id"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"9pR3vB"</span><span class="es-cons-t-pun">,</span> <span class="es-cons-t-key">"type"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"Advance"</span> <span class="es-cons-t-pun">}]</span>
 <span class="es-cons-t-pun">}, </span><span class="es-cons-t-key">"meta"</span><span class="es-cons-t-pun">: {</span> <span class="es-cons-t-key">"message"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"Event created successfully"</span> <span class="es-cons-t-pun">} }</span></pre>
                         <p class="es-cons-rule es-cons-dim px-4 py-3 text-xs">
@@ -774,7 +774,7 @@
             <div class="es-cons-term overflow-hidden" data-reveal="panel">
                 <div class="overflow-x-auto">
                     <table class="es-cons-table w-full border-collapse text-left">
-                        <caption class="sr-only">Every Event Schedule API endpoint, grouped by resource, with its HTTP method, path and behaviour</caption>
+                        <caption class="sr-only">Every Getvnt API endpoint, grouped by resource, with its HTTP method, path and behaviour</caption>
                         <thead>
                             <tr>
                                 <th scope="col" class="es-cons-mono es-cons-dim px-4 py-3 text-[0.625rem] font-bold uppercase tracking-[0.2em]">Method</th>
@@ -980,7 +980,7 @@
 <pre class="es-cons-pre"><span class="es-cons-t-key">X-Webhook-Event</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">sale.paid</span>
 <span class="es-cons-t-key">X-Webhook-Signature</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">sha256=&lt;hex&gt;</span>
 <span class="es-cons-t-key">X-Webhook-Timestamp</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">2026-08-14T20:11:04+00:00</span>
-<span class="es-cons-t-key">User-Agent</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">EventSchedule-Webhook/1.0</span>
+<span class="es-cons-t-key">User-Agent</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">Getvnt-Webhook/1.0</span>
 
 <span class="es-cons-t-pun">{</span> <span class="es-cons-t-key">"event"</span><span class="es-cons-t-pun">:</span> <span class="es-cons-t-str">"sale.paid"</span><span class="es-cons-t-pun">,</span> <span class="es-cons-t-key">"data"</span><span class="es-cons-t-pun">: {</span> ... <span class="es-cons-t-pun">} }</span></pre>
                         </div>
@@ -1042,7 +1042,7 @@
                         </div>
                         <h3 class="es-cons-ink mb-3 text-2xl font-bold tracking-tight lg:text-3xl">Your own install, same API</h3>
                         <p class="es-cons-muted mb-6 text-base leading-relaxed lg:text-lg">
-                            Event Schedule is open source, and the API does not change when you host it yourself: same routes, same OpenAPI spec, same discovery files, served from your own domain. On a selfhosted install the Pro gate returns true unconditionally, so no endpoint is held back and no key talks to anyone else's server.
+                            Getvnt is open source, and the API does not change when you host it yourself: same routes, same OpenAPI spec, same discovery files, served from your own domain. On a selfhosted install the Pro gate returns true unconditionally, so no endpoint is held back and no key talks to anyone else's server.
                         </p>
                         <div class="mt-auto flex flex-wrap gap-2">
                             <span class="es-cons-chip">docker or bare metal</span>
@@ -1099,7 +1099,7 @@
                         <span class="es-cons-plan es-cons-plan-pro mb-4 self-start">pro</span>
                         <h3 class="es-cons-ink mb-3 text-2xl font-bold tracking-tight lg:text-3xl">Money, without a middleman</h3>
                         <p class="es-cons-muted mb-6 text-base leading-relaxed lg:text-lg">
-                            Ticket types created through the API sell through your own Stripe or PayPal account, or through Invoice Ninja, Payfast for rand prices, a payment URL, or by hand. Event Schedule takes zero platform fees on ticket sales: the only deduction is your processor's. Sales come back through the sales endpoints and through <span class="es-cons-mono es-cons-key">sale.paid</span> webhooks, with the ticket lines attached, and a Stripe or PayPal refund goes back through the provider.
+                            Ticket types created through the API sell through your own Stripe or PayPal account, or through Invoice Ninja, Payfast for rand prices, a payment URL, or by hand. Getvnt takes zero platform fees on ticket sales: the only deduction is your processor's. Sales come back through the sales endpoints and through <span class="es-cons-mono es-cons-key">sale.paid</span> webhooks, with the ticket lines attached, and a Stripe or PayPal refund goes back through the provider.
                         </p>
                         <div class="mt-auto flex flex-wrap gap-2">
                             <span class="es-cons-chip">stripe</span>
@@ -1217,7 +1217,7 @@
 
                 <x-sub-audience-card
                     name="Booking Platforms"
-                    description="Keep your own front end and let Event Schedule hold the events, the ticket types and the sales. Webhooks push each paid sale straight back to you."
+                    description="Keep your own front end and let Getvnt hold the events, the ticket types and the sales. Webhooks push each paid sale straight back to you."
                     icon-color="sky"
                     blog-slug="for-booking-platforms"
                 >
@@ -1402,7 +1402,7 @@
                             The last call is the <span class="es-cons-lit">first one.</span>
                         </h2>
                         <p class="es-cons-dim mb-10 max-w-xl text-lg">
-                            Pick a name and start, or register straight from your code. Publishing a schedule and its dates is free forever, and so is free registration; the API and any ticket with a price on it are {{ plan_price($proMonthly) }} a month, and Event Schedule takes nothing from the door.
+                            Pick a name and start, or register straight from your code. Publishing a schedule and its dates is free forever, and so is free registration; the API and any ticket with a price on it are {{ plan_price($proMonthly) }} a month, and Getvnt takes nothing from the door.
                         </p>
 
                         <div class="flex max-w-2xl flex-col items-stretch gap-3 sm:flex-row">
@@ -1410,7 +1410,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-agent" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="es-cons-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                                 <span class="relative z-10 flex items-center gap-2">

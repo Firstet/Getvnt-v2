@@ -30,7 +30,7 @@ class GenerateDailyBlogPost extends Command
     {
         // The blog is the marketing site's, so it exists on the nexus only (see routes/web.php).
         if (! config('app.is_nexus')) {
-            $this->info('Daily blog post generation only runs on eventschedule.com.');
+            $this->info('Daily blog post generation only runs on getvnt.com.');
 
             return 0;
         }

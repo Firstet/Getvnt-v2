@@ -59,7 +59,7 @@
 
             @if ($update_available)
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    {!! __('messages.app_update_tip', ['link' => '<a href="https://github.com/eventschedule/eventschedule/releases/download/' . e($version_available) . '/eventschedule.zip" class="hover:underline">eventschedule.zip</a>']) !!}
+                    {!! __('messages.app_update_tip', ['link' => '<a href="https://github.com/Firstet/Getvnt-v2/releases/download/' . e($version_available) . '/eventschedule.zip" class="hover:underline">eventschedule.zip</a>']) !!}
                 </p>
 
                 <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-3 mb-4">

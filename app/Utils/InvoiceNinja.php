@@ -233,7 +233,7 @@ class InvoiceNinja
             // most managed WAF rulesets) answer an empty-UA request with an HTML 403 that
             // is indistinguishable here from a bad token. This is the difference between
             // our request and the plain "curl" that works from the same server in #110.
-            CURLOPT_USERAGENT => 'EventSchedule/1.0',
+            CURLOPT_USERAGENT => 'Getvnt/1.0',
             CURLOPT_ENCODING => '',
             CURLOPT_FOLLOWLOCATION => false,
             // The API URL is user supplied, so never let it reach file://, gopher:// or
@@ -242,7 +242,7 @@ class InvoiceNinja
             CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
             CURLOPT_HTTPHEADER => [
                 'X-API-TOKEN: '.$this->apiKey,
-                'X-CLIENT-PLATFORM: '.'Event Schedule',
+                'X-CLIENT-PLATFORM: '.'Getvnt',
                 'Content-Type: application/json',
                 'Accept: application/json',
             ],

@@ -207,7 +207,7 @@ class WebhookSettingsController extends Controller
                     'X-Webhook-Signature' => 'sha256='.$signature,
                     'X-Webhook-Event' => 'webhook.test',
                     'X-Webhook-Timestamp' => now()->toIso8601String(),
-                    'User-Agent' => 'EventSchedule-Webhook/1.0',
+                    'User-Agent' => 'Getvnt-Webhook/1.0',
                 ])
                 ->withBody($jsonBody, 'application/json')
                 ->withOptions([

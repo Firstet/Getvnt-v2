@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Festivals"
+        name="Getvnt for Festivals"
         description="A festival schedule where each stage is a sub-schedule with its own link, each act can be credited and offered its date, and a weekend pass covers every day on one QR code."
         audience="Music, Arts, Film and Food Festival Organizers"
         keywords="festival schedule, festival lineup, festival ticketing, weekend pass, stage schedule, festival app alternative" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to publish a festival schedule with Event Schedule",
+        "name": "How to publish a festival schedule with Getvnt",
         "description": "Stages first, then the sets, then the pass that opens every gate.",
         "step": [
             {
@@ -27,7 +27,7 @@
                 "@type": "HowToStep",
                 "position": 2,
                 "name": "Put the sets on",
-                "text": "Add each set as an event on its stage and name the act. An act on Event Schedule is offered the date; one that is not gets a page crediting the festival that it can claim."
+                "text": "Add each set as an event on its stage and name the act. An act on Getvnt is offered the date; one that is not gets a page crediting the festival that it can claim."
             },
             {
                 "@type": "HowToStep",
@@ -311,11 +311,11 @@
                 'a' => 'Each stage is a sub-schedule, and every sub-schedule has its own link and colour. Share the main festival link and people see every stage together; share the tent\'s link and they see only the tent. Sub-schedules are on the free plan, with no limit on how many stages you add.',
             ],
             [
-                'q' => 'What happens when an act is not on Event Schedule?',
+                'q' => 'What happens when an act is not on Getvnt?',
                 'a' => 'Add them by name anyway. They get a page of their own that lists the dates you gave them, says your festival listed them and that they have not claimed it yet, and stays out of search engines until they do. Add their email address and they can claim it by signing in with it. An act that already has a schedule is offered the date instead, and once they accept it shows on their own page too, which is free promotion for your lineup.',
             ],
             [
-                'q' => 'How much does Event Schedule take from ticket sales?',
+                'q' => 'How much does Getvnt take from ticket sales?',
                 'a' => 'Nothing. There is no platform fee on any plan. Once tickets carry a price, which is Pro, fans pay through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash, and the only fee is your payment provider\'s own processing charge. Free-entry days with registration cost nothing at all.',
             ],
             [
@@ -489,7 +489,7 @@
 
                         <div class="space-y-2.5">
                             @foreach ([
-                                ['Whole festival', 'riverside.eventschedule.com'],
+                                ['Whole festival', 'riverside.getvnt.com'],
                                 ['Main stage', '.../main-stage'],
                                 ['The tent', '.../the-tent'],
                                 ['Courtyard', '.../courtyard'],
@@ -532,7 +532,7 @@
 
             <div class="grid gap-4 md:grid-cols-3" data-reveal-group="90">
                 @foreach ([
-                    ['Already on Event Schedule', 'The act is offered the date for their own schedule. Once they accept, your festival shows on the page their followers watch, with a link back to you.'],
+                    ['Already on Getvnt', 'The act is offered the date for their own schedule. Once they accept, your festival shows on the page their followers watch, with a link back to you.'],
                     ['Not on it yet', 'They get a page with their name on it that lists your dates and credits your festival. It stays out of search engines until they claim it by signing in with the email you entered.'],
                     ['Booked through someone else', 'List a venue or a promoter as a source, and every event they publish is linked onto your schedule automatically, past and upcoming. Useful for a festival spread across other people\'s rooms.'],
                 ] as [$t, $d])
@@ -949,7 +949,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-fest-card es-fest-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-fest-muted text-sm">Event Schedule for</div>
+                            <div class="es-fest-muted text-sm">Getvnt for</div>
                             <div class="es-fest-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-fest-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1027,7 +1027,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-festival" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=curator') }}" class="es-fest-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

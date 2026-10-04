@@ -13,7 +13,7 @@ use Tests\TestCase;
  * escaping does not help: a value of "{{ 7*7 }}" survives it intact and is then evaluated
  * by Vue, and CSP unsafe-eval is on by design.
  *
- * The "Add to schedules" tab is the exposed part, because User::availableEventSchedules()
+ * The "Add to schedules" tab is the exposed part, because User::availableGetvnts()
  * includes schedules the viewer merely FOLLOWS when accept_requests is on - so their name,
  * request terms and sub-schedule names are written by somebody else.
  *
@@ -116,7 +116,7 @@ class EventFormTemplateInjectionTest extends TestCase
         $ownSchedule = $this->createRole($victim, 'venue');
 
         // A schedule someone else owns that the victim follows, and which takes submissions -
-        // exactly what availableEventSchedules() pulls into the form.
+        // exactly what availableGetvnts() pulls into the form.
         $attacker = $this->createOwner();
         $hostile = $this->createRole($attacker, 'curator', [
             'name' => self::PAYLOAD,

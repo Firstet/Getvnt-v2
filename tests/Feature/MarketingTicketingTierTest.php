@@ -293,7 +293,7 @@ class MarketingTicketingTierTest extends TestCase
     }
 
     /**
-     * The comparison tables said "Ticketing: Yes (Free)" for Event Schedule on all 26 competitor
+     * The comparison tables said "Ticketing: Yes (Free)" for Getvnt on all 26 competitor
      * pages and the /compare hub, which a reader takes as "paid ticketing is free". The prose
      * scan above cannot see a two-word table cell, so the rows are read from the data itself.
      *

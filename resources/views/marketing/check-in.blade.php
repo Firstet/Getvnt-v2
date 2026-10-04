@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Check-in Dashboard"
+        name="Getvnt - Check-in Dashboard"
         description="Live attendance tracking at the door: QR scanning on every plan, plus a Pro dashboard with an overall progress bar, a per-ticket-type breakdown and a recent-arrivals feed." />
     </x-slot>
 
@@ -208,7 +208,7 @@
                             Check-in: how many are <span class="es-head-accent">actually in?</span>
                         </h1>
                         <p class="es-head-muted mt-6 text-lg" data-reveal style="--reveal-delay: 0.1s;">
-                            Every other report in Event Schedule is something you read afterwards. This is the one you watch while it happens: a single figure going up against a total you already know, refreshing itself every ten seconds while you stand at the door.
+                            Every other report in Getvnt is something you read afterwards. This is the one you watch while it happens: a single figure going up against a total you already know, refreshing itself every ten seconds while you stand at the door.
                         </p>
                         <div class="mt-8 flex flex-wrap gap-3" data-reveal style="--reveal-delay: 0.15s;">
                             <a href="{{ app_url('/sign_up') }}" class="inline-flex items-center gap-2 rounded-xl bg-[#1e40af] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#1b3894]">
@@ -428,7 +428,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-venue" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#0f1318] transition-colors hover:bg-gray-100">
                                 Get Started Free

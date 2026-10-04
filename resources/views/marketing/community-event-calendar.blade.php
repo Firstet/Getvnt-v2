@@ -13,7 +13,7 @@
            counting as one; unlimited selfhosted or with the schedule's own email settings.
          - One team member on Free; more members (admins and viewers) are Enterprise. Custom
            domains are Enterprise. Removing branding is Pro.
-         - Federation is for installs that are NOT eventschedule.com, off until the operator
+         - Federation is for installs that are NOT getvnt.com, off until the operator
            enables it, opt-in per schedule.
          - The auto import from URLs is selfhost-only; this page does not claim it.
          Differentiation: /for-curators ("local events guide") is written for one person's scene
@@ -23,7 +23,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Community Event Calendars"
+        name="Getvnt for Community Event Calendars"
         description="A shared community event calendar for a town, neighbourhood, local news site or tourism board: local organizers submit events, an editor approves them, and the calendar embeds on the site readers already visit. Free forever."
         audience="Towns, Neighbourhood Associations, Local News Sites, Tourism Boards"
         keywords="community event calendar, town event calendar, local events calendar, neighbourhood calendar, community calendar software, submit local events" />
@@ -305,7 +305,7 @@
                         ['A public submission form', 'Anyone with your request link can send an event. On the AI Import form they paste the text of an announcement or upload a photo of the flyer, and the details are read out of it for them to check. Or switch to the Booking Form, a plain form with the fields you choose to require.'],
                         ['Organizers\' own schedules', 'A curator schedule can list talent and venue schedules as event sources. Everything those schedules publish, past and upcoming, appears on your calendar on its own, usually within minutes. The library keeps its own calendar, and yours stays current without anyone copying it across.'],
                         ['Venues that name you', 'A venue or performer that follows your calendar can make it a default curator, and everything they schedule then lands on yours too, in the queue or straight through if you trust them.'],
-                        ['You, in seconds', 'For the notice that arrives on paper, paste the text or drop a photo of it into the importer and the date, time, place and description are filled in for you to confirm. If an event is already on Event Schedule, you are offered the existing one, so it is listed once, not twice.'],
+                        ['You, in seconds', 'For the notice that arrives on paper, paste the text or drop a photo of it into the importer and the date, time, place and description are filled in for you to confirm. If an event is already on Getvnt, you are offered the existing one, so it is listed once, not twice.'],
                     ];
                 @endphp
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" data-reveal-group="80">
@@ -479,7 +479,7 @@
                     <div class="es-cc-panel flex flex-col p-6" data-reveal="panel">
                         <p class="es-cc-tag">Pro &middot; {{ plan_price($proMonthly) }}/mo</p>
                         <p class="es-cc-muted mt-3 text-sm leading-relaxed">
-                            Removes the Event Schedule branding, raises the newsletter allowance to 100 emails a month, and adds your own questions on the submission form, an announcement banner and sponsor logos.
+                            Removes the Getvnt branding, raises the newsletter allowance to 100 emails a month, and adds your own questions on the submission form, an announcement banner and sponsor logos.
                         </p>
                     </div>
                     <div class="es-cc-panel flex flex-col p-6" data-reveal="panel">
@@ -493,7 +493,7 @@
                 <div class="es-cc-panel mt-8 p-6" data-reveal="panel">
                     <h3 class="es-cc-ink text-base font-bold">Keep it on your own servers</h3>
                     <p class="es-cc-muted mt-2 text-sm leading-relaxed">
-                        Event Schedule is open source. A council or a newspaper with its own hosting can <x-link href="{{ marketing_url('/selfhost') }}">selfhost</x-link> it, which includes every Enterprise feature at no cost. A selfhosted install can also, once its administrator turns it on, share the public events of the schedules that opt in with the listings on eventschedule.com, each linking back to the event on your own site.
+                        Getvnt is open source. A council or a newspaper with its own hosting can <x-link href="{{ marketing_url('/selfhost') }}">selfhost</x-link> it, which includes every Enterprise feature at no cost. A selfhosted install can also, once its administrator turns it on, share the public events of the schedules that opt in with the listings on getvnt.com, each linking back to the event on your own site.
                     </p>
                 </div>
             </div>
@@ -506,14 +506,14 @@
         <!-- ============================================================ -->
         @php
             $communityFaqs = [
-                ['q' => 'Is a community event calendar on Event Schedule free?', 'a' => 'Yes. The calendar, public submissions, the approval queue, event sources, sub-schedules, embedding it on your website, the live calendar feed and email sign-up with an automatic digest are all free forever. Pro removes our branding and raises the newsletter allowance; Enterprise adds more team members and a custom domain.'],
-                ['q' => 'How do local organizers add their events?', 'a' => 'Through your public request link. On the AI Import form they paste the announcement or upload a photo of the flyer and check the details it reads out. On the Booking Form they fill in the fields you ask for. Organizers who keep their own schedule on Event Schedule can also be listed as event sources, so their events appear on yours without them submitting anything.', 'link' => [marketing_url('/docs/creating-schedules').'#engagement-requests', 'Request settings in the guide']],
+                ['q' => 'Is a community event calendar on Getvnt free?', 'a' => 'Yes. The calendar, public submissions, the approval queue, event sources, sub-schedules, embedding it on your website, the live calendar feed and email sign-up with an automatic digest are all free forever. Pro removes our branding and raises the newsletter allowance; Enterprise adds more team members and a custom domain.'],
+                ['q' => 'How do local organizers add their events?', 'a' => 'Through your public request link. On the AI Import form they paste the announcement or upload a photo of the flyer and check the details it reads out. On the Booking Form they fill in the fields you ask for. Organizers who keep their own schedule on Getvnt can also be listed as event sources, so their events appear on yours without them submitting anything.', 'link' => [marketing_url('/docs/creating-schedules').'#engagement-requests', 'Request settings in the guide']],
                 ['q' => 'Can I approve events before they appear?', 'a' => 'Yes, and it is on by default. Submitted events wait on the Requests tab until you accept or decline them. Schedules you add to your approved list skip the queue while Require Account is on, as it is by default, and event sources you picked yourself are listed straight away.'],
                 ['q' => 'Do people need an account to submit an event?', 'a' => 'On a curator schedule Require Account starts on, so every request has a name behind it, and a first-time submitter creates their account on the same page as the event. You can turn it off to take requests from guests instead.'],
                 ['q' => 'Can I put the calendar on our existing website?', 'a' => 'Yes, on every plan. Choose Embed Schedule from the Actions menu, pick a month calendar or a list, and paste the iframe code into your page. The embedded calendar updates on its own whenever an event is added or approved.', 'link' => [marketing_url('/docs/sharing').'#embed', 'Embedding in the guide']],
                 ['q' => 'Can residents get the events without visiting the site?', 'a' => 'Yes. They can subscribe to the whole calendar as a live feed in Google Calendar, Apple Calendar or Outlook, or leave an email address in the sign-up panel. Confirmed subscribers get a digest of newly published events, at most one every 72 hours.'],
                 ['q' => 'Can I split the calendar by neighbourhood or type of event?', 'a' => 'Yes, with sub-schedules. Each one has its own link and can be embedded on its own page, and visitors can filter the full calendar by them.'],
-                ['q' => 'What if the same event is submitted twice?', 'a' => 'When you import an event that is already on Event Schedule, you are offered the existing one, so a single click lists it on your calendar instead of creating a copy that would drift out of date.'],
+                ['q' => 'What if the same event is submitted twice?', 'a' => 'When you import an event that is already on Getvnt, you are offered the existing one, so a single click lists it on your calendar instead of creating a copy that would drift out of date.'],
                 ['q' => 'Can several people at the council or paper share the work?', 'a' => 'A free schedule has one team member. On Enterprise you can add more: admins who run the calendar day to day and viewers with read-only access. A selfhosted install includes it at no cost.'],
                 ['q' => 'How is this different from the page for curators?', 'a' => 'The curator page is written for someone building their own guide to a scene, such as the comedy in one city. This page is for an organization keeping the shared calendar for a place, where the work is taking submissions from many organizers and publishing on a site you already run. Both use the same curator schedule.'],
             ];
@@ -566,7 +566,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-town" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#10150b] transition-colors hover:bg-gray-100">
                                 Get Started Free

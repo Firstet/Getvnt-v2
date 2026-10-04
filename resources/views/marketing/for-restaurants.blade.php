@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Restaurants"
+        name="Getvnt for Restaurants"
         description="Ticketed dinners with a fixed covers count, a sales cutoff set before you shop, and dietary questions answered at checkout."
         audience="Restaurants"
         keywords="restaurant event ticketing, wine dinner tickets, covers count, supper club booking, private dining enquiries, chef's table tickets" />
@@ -309,8 +309,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for restaurants?',
-                'a' => 'The schedule itself is free forever: your public page and its link, sub-schedules for private dining or a supper club, enquiries for private hire, Drafts that keep an event off the public page until you announce it, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Selling covers at a price is the one part that needs Pro, at '.plan_price($proMonthly).' a month, and the cutoff and the questions on the ticket come with it. A free evening, a quiz or a tasting on the house, can take registrations up to a capacity per date on the free plan, and there is no monthly ceiling on how many names come through. Event Schedule charges zero platform fees on sales either way.',
+                'q' => 'Is Getvnt free for restaurants?',
+                'a' => 'The schedule itself is free forever: your public page and its link, sub-schedules for private dining or a supper club, enquiries for private hire, Drafts that keep an event off the public page until you announce it, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Selling covers at a price is the one part that needs Pro, at '.plan_price($proMonthly).' a month, and the cutoff and the questions on the ticket come with it. A free evening, a quiz or a tasting on the house, can take registrations up to a capacity per date on the free plan, and there is no monthly ceiling on how many names come through. Getvnt charges zero platform fees on sales either way.',
             ],
             [
                 'q' => 'How do I stop selling more covers than the kitchen can cook?',
@@ -847,7 +847,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-cover-card es-cover-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-cover-muted text-sm">Event Schedule for</div>
+                            <div class="es-cover-muted text-sm">Getvnt for</div>
                             <div class="es-cover-ink text-lg font-semibold">{!! $relName !!}</div>
                         </div>
                         <svg aria-hidden="true" class="es-cover-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -925,7 +925,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-restaurant" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-cover-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

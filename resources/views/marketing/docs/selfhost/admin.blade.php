@@ -1,7 +1,7 @@
 <x-docs-page
     key="selfhost/admin"
-    title="Admin Panel for Selfhosted Installs - Event Schedule"
-    description="Run the admin panel of a selfhosted Event Schedule: the Needs attention list, revenue and refunds, and managing, releasing or restoring any schedule."
+    title="Admin Panel for Selfhosted Installs - Getvnt"
+    description="Run the admin panel of a selfhosted Getvnt: the Needs attention list, revenue and refunds, and managing, releasing or restoring any schedule."
     lede="Monitor your install's users, revenue and analytics, manage any schedule on it, and change the settings that apply to every page."
 >
     <x-slot:toc>
@@ -58,7 +58,7 @@
                     <tr>
                         <td>Realtime</td>
                         <td>Who is on the site right now: visitors, pages, sources, countries and the last 24 hours of sign-ups and orders</td>
-                        <td>Every install (off by default except on eventschedule.com)</td>
+                        <td>Every install (off by default except on getvnt.com)</td>
                     </tr>
                     <tr>
                         <td>Insights</td>
@@ -88,7 +88,7 @@
                     <tr>
                         <td>System</td>
                         <td>App Update</td>
-                        <td>Every install except eventschedule.com</td>
+                        <td>Every install except getvnt.com</td>
                     </tr>
                     <tr>
                         <td>System</td>
@@ -98,7 +98,7 @@
                     <tr>
                         <td>System</td>
                         <td>Federation (the moderation queue for other instances)</td>
-                        <td>eventschedule.com only</td>
+                        <td>getvnt.com only</td>
                     </tr>
                 </tbody>
             </table>
@@ -261,17 +261,17 @@
                     <tr>
                         <td>Approved instances changed their address</td>
                         <td>A federated instance whose site address no longer matches what was approved.</td>
-                        <td>eventschedule.com only</td>
+                        <td>getvnt.com only</td>
                     </tr>
                     <tr>
                         <td>Instances awaiting approval</td>
                         <td>A federated instance that has registered and is waiting to be moderated.</td>
-                        <td>eventschedule.com only</td>
+                        <td>getvnt.com only</td>
                     </tr>
                     <tr>
                         <td>Translation suggestions to review</td>
                         <td>Wording shared by another installation, waiting for a decision.</td>
-                        <td>eventschedule.com only</td>
+                        <td>getvnt.com only</td>
                     </tr>
                     <tr>
                         <td>Unread support messages</td>
@@ -291,12 +291,12 @@
                     <tr>
                         <td>Translations not shared yet</td>
                         <td>Your own translation edits that have not been offered back to the community.</td>
-                        <td>Every install except eventschedule.com</td>
+                        <td>Every install except getvnt.com</td>
                     </tr>
                     <tr>
                         <td>Update available</td>
                         <td>A newer release is published on GitHub. Informational: it clears when you update, not by working through a queue. Links to App Update.</td>
-                        <td>Every install except eventschedule.com</td>
+                        <td>Every install except getvnt.com</td>
                     </tr>
                 </tbody>
             </table>
@@ -306,7 +306,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">A plain selfhost sees fewer rows</div>
-            <p>Only rows that can apply to your install are counted. With <code class="doc-inline-code">IS_HOSTED=false</code> the domain and support rows always read zero, the subscription row stays empty unless you sell plans through Stripe, and the federation and translation-review rows only ever appear on eventschedule.com itself. Schedules that have not verified an email address or phone number are not a row at all, because they are waiting on their owner rather than on you: their count is the Unverified card on the <a href="#manage-plans" class="doc-link">Schedules</a> page.</p>
+            <p>Only rows that can apply to your install are counted. With <code class="doc-inline-code">IS_HOSTED=false</code> the domain and support rows always read zero, the subscription row stays empty unless you sell plans through Stripe, and the federation and translation-review rows only ever appear on getvnt.com itself. Schedules that have not verified an email address or phone number are not a row at all, because they are waiting on their owner rather than on you: their count is the Unverified card on the <a href="#manage-plans" class="doc-link">Schedules</a> page.</p>
         </div>
     </section>
 
@@ -318,7 +318,7 @@
             </svg>
             Realtime
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Realtime shows who is on the site right now: the marketing site, schedule and event pages (custom domains included), the signed-in app, and the sign-up and log-in pages. It is switched on and off at <a href="#system-settings" class="doc-link">Settings</a>; it starts on for eventschedule.com and off on every other install. The page updates itself every ten seconds and slows to once a minute while its tab is hidden.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Realtime shows who is on the site right now: the marketing site, schedule and event pages (custom domains included), the signed-in app, and the sign-up and log-in pages. It is switched on and off at <a href="#system-settings" class="doc-link">Settings</a>; it starts on for getvnt.com and off on every other install. The page updates itself every ten seconds and slows to once a minute while its tab is hidden.</p>
         <ul class="doc-list mb-6">
             <li><strong class="text-gray-900 dark:text-white">Visitors right now</strong> - people with a page open and visible in the last couple of minutes, split into signed in and anonymous, with the last 30 minutes beneath</li>
             <li><strong class="text-gray-900 dark:text-white">Page views per minute</strong> - the last 30 minutes, with page views from visitors who have not accepted cookies shown separately</li>
@@ -351,7 +351,7 @@
         </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-6">The Users page is an aggregate report about how people arrive and whether they get their first event published. It is not a user directory: there is no search box, no per-user row to open, and no way to edit an account from here. Only confirmed accounts are counted, and the demo account is excluded.</p>
         <ul class="doc-list mb-6">
-            <li><strong class="text-gray-900 dark:text-white">Onboarding funnel</strong> - visited the site, viewed the sign-up page, created an account, reached the schedule step, saved a schedule, reached the event step, saved an event, then the ticket stages and, on hosted installs, the plan stages. Highlighted above it are the signup-to-first-event rate with its change against the previous period, the biggest single drop between stages, and, on eventschedule.com, the visitor-to-first-event rate.</li>
+            <li><strong class="text-gray-900 dark:text-white">Onboarding funnel</strong> - visited the site, viewed the sign-up page, created an account, reached the schedule step, saved a schedule, reached the event step, saved an event, then the ticket stages and, on hosted installs, the plan stages. Highlighted above it are the signup-to-first-event rate with its change against the previous period, the biggest single drop between stages, and, on getvnt.com, the visitor-to-first-event rate.</li>
             <li><strong class="text-gray-900 dark:text-white">Funnel over time</strong> - the same conversion rates per day, week or month. The most recent period is marked as still in progress, because its accounts have not had time to finish onboarding.</li>
             <li><strong class="text-gray-900 dark:text-white">Totals</strong> - total users, active users in the last 7 and 30 days, and newsletter subscribers with the number who unsubscribed.</li>
             <li><strong class="text-gray-900 dark:text-white">Signup method</strong> - email, Google, and hybrid, both all time and for the selected period.</li>
@@ -363,7 +363,7 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">The funnel starts at the sign-up page on a selfhost</div>
-            <p>Site visits come from marketing-site traffic, which is only recorded on eventschedule.com. On any other installation the funnel starts at "Viewed sign-up page", which every install counts, and the visitor-to-first-event rate is not shown. The plan stages (the paid-ticket paywall, checkout and subscribing) only appear on hosted installs, since a plain selfhost has no plans.</p>
+            <p>Site visits come from marketing-site traffic, which is only recorded on getvnt.com. On any other installation the funnel starts at "Viewed sign-up page", which every install counts, and the visitor-to-first-event rate is not shown. The plan stages (the paid-ticket paywall, checkout and subscribing) only appear on hosted installs, since a plain selfhost has no plans.</p>
         </div>
 
         <p class="text-gray-600 dark:text-gray-300">To act on a single account or schedule, use <a href="#manage-plans" class="doc-link">Manage &gt; Schedules</a>, which is where the search, filters, plan editing and manual verification live.</p>
@@ -520,7 +520,7 @@
             <li><strong class="text-gray-900 dark:text-white">Edit the schedule's details</strong> - in the <strong class="text-gray-900 dark:text-white">Schedule Details</strong> card, change its name, subdomain, email address and phone number, then choose <strong class="text-gray-900 dark:text-white">Save Changes</strong>. Changing the email address clears the verified badge and sends a fresh verification email, so the page warns you before you do. A subdomain that is reserved or already in use is refused with a message rather than quietly changed to something else, and a renamed subdomain is rewritten in every curator's approved list, so the trust a curator gave that schedule follows it to the new name.</li>
             <li><strong class="text-gray-900 dark:text-white">Mark Email as Verified</strong> - mark the schedule's email address as verified without the owner clicking the link.</li>
             <li><strong class="text-gray-900 dark:text-white">Mark Phone as Verified</strong> - the same for a phone number.</li>
-            <li><strong class="text-gray-900 dark:text-white">Assign a plan</strong> (hosted installs) - set <strong class="text-gray-900 dark:text-white">Plan Type</strong> to Free, Pro or Enterprise, set <strong class="text-gray-900 dark:text-white">Plan Term</strong> to monthly or yearly, and set <strong class="text-gray-900 dark:text-white">Plan Expires</strong>. The expiry field has <strong class="text-gray-900 dark:text-white">+30 days</strong>, <strong class="text-gray-900 dark:text-white">+90 days</strong>, <strong class="text-gray-900 dark:text-white">+1 year</strong> and <strong class="text-gray-900 dark:text-white">Clear</strong> shortcuts. A paid plan granted this way is tagged as an admin grant, which is what keeps the small Event Schedule credit on that schedule's public pages. Setting it back to Free, or editing a schedule that pays through Stripe, clears that tag. The form is not shown on a plain selfhost, because every schedule there already has the Enterprise feature set.</li>
+            <li><strong class="text-gray-900 dark:text-white">Assign a plan</strong> (hosted installs) - set <strong class="text-gray-900 dark:text-white">Plan Type</strong> to Free, Pro or Enterprise, set <strong class="text-gray-900 dark:text-white">Plan Term</strong> to monthly or yearly, and set <strong class="text-gray-900 dark:text-white">Plan Expires</strong>. The expiry field has <strong class="text-gray-900 dark:text-white">+30 days</strong>, <strong class="text-gray-900 dark:text-white">+90 days</strong>, <strong class="text-gray-900 dark:text-white">+1 year</strong> and <strong class="text-gray-900 dark:text-white">Clear</strong> shortcuts. A paid plan granted this way is tagged as an admin grant, which is what keeps the small Getvnt credit on that schedule's public pages. Setting it back to Free, or editing a schedule that pays through Stripe, clears that tag. The form is not shown on a plain selfhost, because every schedule there already has the Enterprise feature set.</li>
             <li><strong class="text-gray-900 dark:text-white">Mark as Deleted</strong> - takes the schedule's public page down and <strong class="text-gray-900 dark:text-white">releases its subdomain</strong>, so a newer schedule can use the name straight away. The schedule itself is kept, along with its events, ticket sales and statistics, and the action can be undone. For a schedule with no owner, this also takes down the claim page that invites the performer or venue to take it over. Releasing a name also removes it from every curator's approved list, so the automatic approval a curator gave the old holder does not pass to whoever takes the name next. A deleted schedule that still holds its original name, which some other ways of deleting a schedule leave behind, offers <strong class="text-gray-900 dark:text-white">Release Subdomain</strong> here instead: it frees the name and changes nothing else.</li>
             <li><strong class="text-gray-900 dark:text-white">Restore</strong> - brings a deleted schedule back. It takes its original subdomain back if nothing else has claimed it in the meantime; if something has, the schedule keeps the name it was given when it was deleted, and the page tells you which will happen before you click. Restore is also the undo for a takedown you did not start: the same release runs when someone who holds the contact address on an unclaimed page signs in and chooses <strong class="text-gray-900 dark:text-white">This is not me</strong>, and when a schedule is deleted through the API.</li>
         </ol>
@@ -549,7 +549,7 @@
         <ul class="doc-list mb-6">
             <li><strong class="text-gray-900 dark:text-white">Totals</strong> - all custom domains, how many are direct, and how many of those are active or pending</li>
             <li><strong class="text-gray-900 dark:text-white">Search and filters</strong> - by schedule, subdomain, domain or hostname, and by mode and status (pending, active or failed)</li>
-            <li><strong class="text-gray-900 dark:text-white">Status columns</strong> - the status Event Schedule recorded, alongside the live status read back from DigitalOcean when the DigitalOcean API is configured</li>
+            <li><strong class="text-gray-900 dark:text-white">Status columns</strong> - the status Getvnt recorded, alongside the live status read back from DigitalOcean when the DigitalOcean API is configured</li>
             <li><strong class="text-gray-900 dark:text-white">Listing</strong> - twenty domains per page, newest first</li>
         </ul>
 
@@ -558,7 +558,7 @@
             <li><strong class="text-gray-900 dark:text-white">Re-provision</strong> - removes the hostname from the hosting platform and adds it again, which restarts certificate issuing, and returns the domain to Pending. Direct-mode domains only, and only when the DigitalOcean API is configured.</li>
             <li><strong class="text-gray-900 dark:text-white">Remove</strong> - clears the domain from the schedule and, for a direct-mode domain, removes the hostname from the hosting platform. The schedule falls back to its subdomain.</li>
         </ul>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Certificates themselves are issued by the hosting platform, not by Event Schedule. If a domain stays pending, the usual cause is DNS that does not yet point at your install.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Certificates themselves are issued by the hosting platform, not by Getvnt. If a domain stays pending, the usual cause is DNS that does not yet point at your install.</p>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Hosted installs only</div>
@@ -709,7 +709,7 @@
             </svg>
             App Update (System)
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">The App Update page shows the version this installation is running next to the latest release published on GitHub, and applies an update in one click. It never appears on eventschedule.com, which deploys from git. The same panel is also on your own <a href="{{ route('marketing.docs.account_settings') }}#app-update" class="doc-link">Settings</a> page; the admin one is the operator's copy, and it is the one the System menu badges when a release is waiting.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">The App Update page shows the version this installation is running next to the latest release published on GitHub, and applies an update in one click. It never appears on getvnt.com, which deploys from git. The same panel is also on your own <a href="{{ route('marketing.docs.account_settings') }}#app-update" class="doc-link">Settings</a> page; the admin one is the operator's copy, and it is the one the System menu badges when a release is waiting.</p>
         <ul class="doc-list mb-6">
             <li><strong class="text-gray-900 dark:text-white">Installed Version</strong> - what <code class="doc-inline-code">config/self-update.php</code> reports, which the release you are running ships. If this stays on an old number after a successful update, you have a cached config: run <code class="doc-inline-code">php artisan config:clear</code>.</li>
             <li><strong class="text-gray-900 dark:text-white">Latest Version</strong> - the newest tag on GitHub, refreshed once a day by a scheduled check so no page load has to wait on the network. It reads <strong class="text-gray-900 dark:text-white">Unknown</strong> if GitHub could not be reached, which is never treated as an update being available.</li>
@@ -737,7 +737,7 @@
             </svg>
             Settings (System)
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">The Settings page holds the handful of settings that apply to the whole installation. It is built from separate cards, each with its own Save button, and a card is only rendered when it can do something on this install. There are seven, and a plain selfhost sees four of them: Header / Footer Code, Event Schedule network, Realtime visitors and Platform currency, plus Accommodation affiliate when it is enabled. None of these settings can be changed while the install is in demo mode.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">The Settings page holds the handful of settings that apply to the whole installation. It is built from separate cards, each with its own Save button, and a card is only rendered when it can do something on this install. There are seven, and a plain selfhost sees four of them: Header / Footer Code, Getvnt network, Realtime visitors and Platform currency, plus Accommodation affiliate when it is enabled. None of these settings can be changed while the install is in demo mode.</p>
 
         <div class="doc-table-wrap">
             <table class="doc-table">
@@ -755,9 +755,9 @@
                         <td>Always</td>
                     </tr>
                     <tr>
-                        <td>Event Schedule network</td>
-                        <td>Shares your public events with the eventschedule.com listings</td>
-                        <td>Every install except eventschedule.com</td>
+                        <td>Getvnt network</td>
+                        <td>Shares your public events with the getvnt.com listings</td>
+                        <td>Every install except getvnt.com</td>
                     </tr>
                     <tr>
                         <td>Realtime visitors</td>
@@ -821,8 +821,8 @@
             <p>The built-in analytics store daily totals only: views per device type, referrer, country and campaign tag. These totals hold no per-visitor record (Realtime, when on, is the one place that keeps a per-visitor record, for about an hour). IP address and user-agent are hashed with your <code class="doc-inline-code">APP_KEY</code> and a salt that rotates daily, purely to deduplicate and filter bots, and that hash lives in the cache until midnight rather than in the database. Nothing is read from or written to the visitor's device, so no banner is required for it.</p>
         </div>
 
-        <h3 class="doc-subheading">Event Schedule network</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">One toggle opts your installation into sharing its public events with the eventschedule.com listings, and a contact email lets the moderators reach you with their decision and the steps to get listed. Below it, <strong>Also list these schedules</strong> lists the schedules you own that have not been listed yet, each with how many of its events would be shared, so switching sharing on and choosing what to share is one save. Once the install has connected, the top of the card shows where it stands (pending review, approved with the number of events on the network and a link to them, or suspended) and when the last sync ran. The preview lists exactly which events would be sent, each marked sent, next sync, needs an image or not accepted, so nothing leaves your install unseen. Two counts under the preview explain why it may be shorter than you expect: schedules that have not verified an email address or phone number, and other owners' schedules that have not been listed yet, whose owners are asked on their dashboards. Turning the toggle off withdraws the listings again. See <a href="{{ route('marketing.docs.selfhost.federation') }}" class="doc-link">Federation</a> for the full picture.</p>
+        <h3 class="doc-subheading">Getvnt network</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">One toggle opts your installation into sharing its public events with the getvnt.com listings, and a contact email lets the moderators reach you with their decision and the steps to get listed. Below it, <strong>Also list these schedules</strong> lists the schedules you own that have not been listed yet, each with how many of its events would be shared, so switching sharing on and choosing what to share is one save. Once the install has connected, the top of the card shows where it stands (pending review, approved with the number of events on the network and a link to them, or suspended) and when the last sync ran. The preview lists exactly which events would be sent, each marked sent, next sync, needs an image or not accepted, so nothing leaves your install unseen. Two counts under the preview explain why it may be shorter than you expect: schedules that have not verified an email address or phone number, and other owners' schedules that have not been listed yet, whose owners are asked on their dashboards. Turning the toggle off withdraws the listings again. See <a href="{{ route('marketing.docs.selfhost.federation') }}" class="doc-link">Federation</a> for the full picture.</p>
 
         <h3 class="doc-subheading">Monetization</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-6">This card configures advertising on free schedules: whether to show AdSense, the publisher and ad slot IDs, whether personalized ads are allowed, whether to run your own promotions marketplace, whether promotions take priority over AdSense, and the prices you charge per thousand impressions and per click. It stays hidden unless <code class="doc-inline-code">ADS_ENABLED=true</code> and the install is a multi-tenant hosted platform, because a selfhosted install resolves every schedule to Enterprise and so has no free tier for an ad to appear on.</p>
@@ -872,10 +872,10 @@
             <p>Some strings contain placeholders such as <code class="doc-inline-code">:name</code> or plural forms separated by <code class="doc-inline-code">|</code>. Keep them in your version so dynamic values keep working - the editor warns you if one goes missing, but never blocks the save.</p>
         </div>
         <h3 class="doc-subheading">Sharing improvements with the community</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Many translation fixes are useful to every Event Schedule install. You can share yours with the community for review, and approved suggestions ship with future releases. Nothing is ever sent automatically: use the <strong class="text-gray-900 dark:text-white">Share</strong> button to pick exactly which changes to send, or enable the <strong class="text-gray-900 dark:text-white">auto-share</strong> toggle if you want saved changes submitted on their own. Keep auto-share off if your wording is specific to your business. Unshared changes are also counted on the dashboard's Needs attention list, so nothing sits forgotten.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Many translation fixes are useful to every Getvnt install. You can share yours with the community for review, and approved suggestions ship with future releases. Nothing is ever sent automatically: use the <strong class="text-gray-900 dark:text-white">Share</strong> button to pick exactly which changes to send, or enable the <strong class="text-gray-900 dark:text-white">auto-share</strong> toggle if you want saved changes submitted on their own. Keep auto-share off if your wording is specific to your business. Unshared changes are also counted on the dashboard's Needs attention list, so nothing sits forgotten.</p>
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">What sharing sends</div>
-            <p>Sharing sends the language, the file, the translation key, your suggested text and the shipped text it replaces, plus your app version and a random anonymous install identifier, to eventschedule.com. No URLs, email addresses, or other personal data are included.</p>
+            <p>Sharing sends the language, the file, the translation key, your suggested text and the shipped text it replaces, plus your app version and a random anonymous install identifier, to getvnt.com. No URLs, email addresses, or other personal data are included.</p>
         </div>
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Behind the scenes</div>
@@ -891,7 +891,7 @@
             </svg>
             Legal Pages (System)
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Your installation ships with a privacy policy and terms of service written for eventschedule.com. They are almost certainly not the documents you need: privacy law differs by country, and GDPR, PAIA and POPIA each ask for different disclosures. The Legal Pages screen lets you replace them with your own, and add a cookie policy, which the app has no page for otherwise.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Your installation ships with a privacy policy and terms of service written for getvnt.com. They are almost certainly not the documents you need: privacy law differs by country, and GDPR, PAIA and POPIA each ask for different disclosures. The Legal Pages screen lets you replace them with your own, and add a cookie policy, which the app has no page for otherwise.</p>
         <p class="text-gray-600 dark:text-gray-300 mb-6">There is a card for each of the three documents - <strong class="text-gray-900 dark:text-white">Privacy Policy</strong>, <strong class="text-gray-900 dark:text-white">Terms of Service</strong> and <strong class="text-gray-900 dark:text-white">Cookie Policy</strong> - and each one offers two ways to supply it:</p>
         <ul class="doc-list mb-6">
             <li><strong class="text-gray-900 dark:text-white">External URL</strong> - link to a policy you already publish elsewhere, for example on your main company website. Every link in the app goes straight there.</li>
@@ -900,10 +900,10 @@
         <p class="text-gray-600 dark:text-gray-300 mb-6">If you fill in both, the external URL wins. If you leave both blank, the built-in page is used, exactly as before. Nothing ships pre-filled: the editors start empty, because a template written for one jurisdiction would be wrong for most.</p>
 
         <h3 class="doc-subheading">Where your policies appear</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Saving a document changes every link to it across the whole app at once - the "I accept the terms and privacy policy" checkbox on signup, ticket checkout, RSVPs, booking requests and event submissions, the issued ticket, the admin portal's About menu, and the cookie banner's "Learn more" link, which prefers your cookie policy when you have one. Until you write one, those links continue to point at eventschedule.com.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Saving a document changes every link to it across the whole app at once - the "I accept the terms and privacy policy" checkbox on signup, ticket checkout, RSVPs, booking requests and event submissions, the issued ticket, the admin portal's About menu, and the cookie banner's "Learn more" link, which prefers your cookie policy when you have one. Until you write one, those links continue to point at getvnt.com.</p>
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">This is not legal advice</div>
-            <p>What you save here is what your users agree to when they register or buy a ticket. Event Schedule cannot tell you what your policies need to say - have a qualified professional review them for the jurisdictions you operate in.</p>
+            <p>What you save here is what your users agree to when they register or buy a ticket. Getvnt cannot tell you what your policies need to say - have a qualified professional review them for the jurisdictions you operate in.</p>
         </div>
     </section>
 </x-docs-page>

@@ -1,8 +1,8 @@
 <x-docs-page
     key="referral-program"
-    title="Referral Program: Earn Free Months - Event Schedule"
-    description="Refer other organizers to Event Schedule and earn a free month of Pro or Enterprise for each one who subscribes and stays subscribed for 30 days."
-    lede="Earn free months of Event Schedule by sharing your referral link with other event organizers."
+    title="Referral Program: Earn Free Months - Getvnt"
+    description="Refer other organizers to Getvnt and earn a free month of Pro or Enterprise for each one who subscribes and stays subscribed for 30 days."
+    lede="Earn free months of Getvnt by sharing your referral link with other event organizers."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#overview">Overview</x-doc-nav-link>
@@ -24,7 +24,7 @@
             Overview
         </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            The referral program lets you earn credit towards Event Schedule by inviting other event organizers to the platform. When someone signs up through your referral link and then pays for a Pro or Enterprise plan, you earn a credit worth one month of the plan they are on. You choose which of your schedules the credit lands on.
+            The referral program lets you earn credit towards Getvnt by inviting other event organizers to the platform. When someone signs up through your referral link and then pays for a Pro or Enterprise plan, you earn a credit worth one month of the plan they are on. You choose which of your schedules the credit lands on.
         </p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
             Open it from <strong class="text-gray-900 dark:text-white">Referrals</strong> in the admin panel sidebar. The <strong class="text-gray-900 dark:text-white">Plan</strong> tab of any schedule also carries a <strong class="text-gray-900 dark:text-white">View Referral Dashboard</strong> link to the same page.
@@ -32,7 +32,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Who can take part</div>
-            <p>Every account on eventschedule.com can refer, including accounts on the Free plan, and there is no cap on how many people you refer. The program runs on eventschedule.com only: a <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install has no subscriptions to refer anyone to, so the Referrals item does not appear in its sidebar.</p>
+            <p>Every account on getvnt.com can refer, including accounts on the Free plan, and there is no cap on how many people you refer. The program runs on getvnt.com only: a <a href="{{ route('marketing.docs.selfhost') }}" class="doc-link">selfhosted</a> install has no subscriptions to refer anyone to, so the Referrals item does not appear in its sidebar.</p>
         </div>
     </section>
 
@@ -58,9 +58,9 @@
 
         <h3 class="doc-subheading">What counts as a referral</h3>
         <ul class="doc-list mb-6">
-            <li>The visitor has to reach Event Schedule through your link and sign up in the same browsing session. The code is held only for that session, not in a long-lived cookie, so a visit today and a signup next week will not be linked.</li>
+            <li>The visitor has to reach Getvnt through your link and sign up in the same browsing session. The code is held only for that session, not in a long-lived cookie, so a visit today and a signup next week will not be linked.</li>
             <li>The first referral link counts. If they followed another organizer's link earlier in the same session, that organizer gets the referral, not you.</li>
-            <li>Each person can be referred once. If someone already has an Event Schedule account, or was already referred by another organizer, a new referral is not created for them.</li>
+            <li>Each person can be referred once. If someone already has an Getvnt account, or was already referred by another organizer, a new referral is not created for them.</li>
             <li>You cannot refer yourself. A signup that matches your own account is ignored.</li>
             <li>The 30-day clock starts when the subscription starts, and the 7-day free trial counts towards it.</li>
             <li>Statuses are recalculated once a day, so a referral that hits its 30th day shows as Qualified on the next daily run rather than to the minute.</li>
@@ -87,10 +87,10 @@
         <x-doc-screenshot id="referral-link" alt="Referral link panel" loading="eager" />
 
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            The link is the Event Schedule home page with an eight-character code on the end, in the form <code class="doc-inline-code">/?ref=a1b2c3d4</code>. The code is created the first time you open the Referrals page and never changes after that.
+            The link is the Getvnt home page with an eight-character code on the end, in the form <code class="doc-inline-code">/?ref=a1b2c3d4</code>. The code is created the first time you open the Referrals page and never changes after that.
         </p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            You are not limited to the home page. Adding <code class="doc-inline-code">?ref=yourcode</code> to any Event Schedule page works the same way, so you can point people straight at <a href="{{ marketing_url('/pricing') }}" class="doc-link">Pricing</a> or at a feature page and still get the credit.
+            You are not limited to the home page. Adding <code class="doc-inline-code">?ref=yourcode</code> to any Getvnt page works the same way, so you can point people straight at <a href="{{ marketing_url('/pricing') }}" class="doc-link">Pricing</a> or at a feature page and still get the credit.
         </p>
 
         <div class="doc-callout doc-callout-tip">
@@ -236,7 +236,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Earned plans are unbranded</div>
-            <p>A month of Pro or Enterprise you earned through a referral counts as a plan you earned, not one handed to you, so it takes the Event Schedule credit chip off your public pages like a plan you pay for, rather than keeping it the way an admin-granted plan does.</p>
+            <p>A month of Pro or Enterprise you earned through a referral counts as a plan you earned, not one handed to you, so it takes the Getvnt credit chip off your public pages like a plan you pay for, rather than keeping it the way an admin-granted plan does.</p>
         </div>
     </section>
 

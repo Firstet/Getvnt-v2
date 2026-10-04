@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Private Events"
+        name="Getvnt - Private Events"
         description="Keep events members-only with Internal visibility, or hide them from your public schedule as Unlisted with an optional password. Control who sees what, per event."
         keywords="private events, unlisted events, internal events, password protected event, members only events, event visibility" />
     </x-slot>
@@ -495,7 +495,7 @@
             ],
             [
                 'q' => 'Where exactly does a hidden event disappear from?',
-                'a' => 'Your public schedule page and its calendar, the public iCal feed (the live calendar guests can subscribe to from an event\'s Add to Calendar menu) and the RSS feed, the XML sitemap, the discovery search on eventschedule.com, the automatic digest of new events your email subscribers get, the upcoming-events block in a newsletter, and the generated event graphics. A hidden event also cannot be put behind an on-network promotion, and the "Tell me when tickets go on sale" sign-up is not offered on it. The one door left open is the direct link, and only for Unlisted.',
+                'a' => 'Your public schedule page and its calendar, the public iCal feed (the live calendar guests can subscribe to from an event\'s Add to Calendar menu) and the RSS feed, the XML sitemap, the discovery search on getvnt.com, the automatic digest of new events your email subscribers get, the upcoming-events block in a newsletter, and the generated event graphics. A hidden event also cannot be put behind an on-network promotion, and the "Tell me when tickets go on sale" sign-up is not offered on it. The one door left open is the direct link, and only for Unlisted.',
             ],
             [
                 'q' => 'Who can see an unlisted event?',
@@ -939,7 +939,7 @@
                 <p class="mt-10 text-center es-vault-band-soft" data-reveal>
                     Selfhosting? A selfhosted installation has every feature, so all four doors are open to you.
                     <a href="{{ marketing_url('/selfhost') }}" class="es-vault-lit inline-flex items-center gap-1 font-semibold transition-all hover:gap-2">
-                        Selfhost Event Schedule
+                        Selfhost Getvnt
                         <svg aria-hidden="true" class="h-4 w-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                     </a>
                 </p>
@@ -972,7 +972,7 @@
                                 <h3 class="es-vault-ink text-xl font-bold">Feeds, sitemap and discovery</h3>
                                 <span class="es-vault-plan es-vault-plan-free">Free</span>
                             </div>
-                            <p class="es-vault-muted mb-4">The public iCal feed, the RSS feed, the XML sitemap and the search on eventschedule.com all start from one filter: not a draft, not unlisted, not cancelled, accepted by the schedule, and not holding a password. The sitemap and the search narrow it further, never wider. That iCal feed is also the live calendar a guest can subscribe to from an event's Add to Calendar menu, so a hidden event cannot reach anybody's calendar through it.</p>
+                            <p class="es-vault-muted mb-4">The public iCal feed, the RSS feed, the XML sitemap and the search on getvnt.com all start from one filter: not a draft, not unlisted, not cancelled, accepted by the schedule, and not holding a password. The sitemap and the search narrow it further, never wider. That iCal feed is also the live calendar a guest can subscribe to from an event's Add to Calendar menu, so a hidden event cannot reach anybody's calendar through it.</p>
                             <p class="es-vault-muted text-sm">Four separate surfaces, one privacy rule. That is deliberate: a privacy setting that each surface interprets for itself is a privacy setting that eventually gets one of them wrong.</p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
@@ -1235,7 +1235,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-vault-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

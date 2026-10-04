@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Online & Hybrid Event Hosting, Any Platform - Event Schedule</x-slot>
+    <x-slot name="title">Online & Hybrid Event Hosting, Any Platform - Getvnt</x-slot>
     <x-slot name="description">Host virtual and hybrid events on Zoom, Google Meet or any link: paste it once and the ticket, the listing and the search markup follow. Free plan.</x-slot>
     <x-slot name="breadcrumbTitle">Online Events</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Online Events"
+        name="Getvnt - Online Events"
         description="An online event is one link field on the event. Tick Online, paste the URL people join on, and the listing, the ticket and the search-engine markup follow. Tick In person as well and the same event is a hybrid." />
     </x-slot>
 
@@ -492,7 +492,7 @@
         $faqs = [
             [
                 'q' => 'Which platforms can I use for an online event?',
-                'a' => 'Any of them, because it is a link and not an integration. Zoom, Google Meet, Microsoft Teams, YouTube Live, Twitch, Jitsi, a Discord invite or a page on your own site all work the same way: paste the URL people join on into the event\'s link field. There is no account to connect, nothing to reconnect when a token expires, and nothing read back from the platform, so Event Schedule does not show live viewer counts or who is in the room.',
+                'a' => 'Any of them, because it is a link and not an integration. Zoom, Google Meet, Microsoft Teams, YouTube Live, Twitch, Jitsi, a Discord invite or a page on your own site all work the same way: paste the URL people join on into the event\'s link field. There is no account to connect, nothing to reconnect when a token expires, and nothing read back from the platform, so Getvnt does not show live viewer counts or who is in the room.',
             ],
             [
                 'q' => 'Who can see the join link?',
@@ -504,7 +504,7 @@
             ],
             [
                 'q' => 'Can I sell tickets to an online event?',
-                'a' => 'Yes, and it works exactly the same for an online event as for a room: named ticket types with their own prices and quantities, and payment through your own Stripe or PayPal account. A ticket that carries a price is the Pro plan, '.plan_price($proMonthly).' a month, which also adds per-attendee tickets and the ticket waitlist. Event Schedule charges zero platform fees on every plan, so past the payment provider\'s own processing the money is yours. Free registration with a capacity limit is on the free plan, unlimited, and the cap is counted per date.',
+                'a' => 'Yes, and it works exactly the same for an online event as for a room: named ticket types with their own prices and quantities, and payment through your own Stripe or PayPal account. A ticket that carries a price is the Pro plan, '.plan_price($proMonthly).' a month, which also adds per-attendee tickets and the ticket waitlist. Getvnt charges zero platform fees on every plan, so past the payment provider\'s own processing the money is yours. Free registration with a capacity limit is on the free plan, unlimited, and the cap is counted per date.',
             ],
             [
                 'q' => 'What time will people in other countries see?',
@@ -516,7 +516,7 @@
             ],
             [
                 'q' => 'What happens if a session moves or is cancelled?',
-                'a' => 'When you save a new date for a one-off session, a new join link or a cancellation, Event Schedule offers to send a notice, and it goes only if you confirm it. It reaches anyone who left an email address on the event page under "Tell me if anything changes" or "Tell me when tickets go on sale" (the "Notify me" card, once you switch it on), and everyone registered too, which on eventschedule.com needs your schedule to send through its own SMTP server. The ticket shows the new link as soon as you save, and a calendar subscribed to your live feed picks up a new time on its next refresh. A Stripe or PayPal sale can be refunded in full or in part from the Sales page, with the money going back through the provider. The app does not email the buyer about a refund, so tell them yourself.',
+                'a' => 'When you save a new date for a one-off session, a new join link or a cancellation, Getvnt offers to send a notice, and it goes only if you confirm it. It reaches anyone who left an email address on the event page under "Tell me if anything changes" or "Tell me when tickets go on sale" (the "Notify me" card, once you switch it on), and everyone registered too, which on getvnt.com needs your schedule to send through its own SMTP server. The ticket shows the new link as soon as you save, and a calendar subscribed to your live feed picks up a new time on its next refresh. A Stripe or PayPal sale can be refunded in full or in part from the Sales page, with the money going back through the provider. The app does not email the buyer about a refund, so tell them yourself.',
             ],
             [
                 'q' => 'Do I need a paid plan to run online events?',
@@ -853,7 +853,7 @@
                         If you can copy the link, <span class="es-golive-accent">it works.</span>
                     </h2>
                     <p class="es-golive-muted mb-6 text-lg leading-relaxed" data-reveal style="--reveal-delay: 0.1s;">
-                        There is no platform picker on this form, and that is the feature. Event Schedule holds a URL. Whatever is on the other end of it is yours to run.
+                        There is no platform picker on this form, and that is the feature. Getvnt holds a URL. Whatever is on the other end of it is yours to run.
                     </p>
                     <ul class="es-golive-muted space-y-3" data-reveal-group="70">
                         <li class="flex gap-3" data-reveal>
@@ -934,7 +934,7 @@
                             <h3 class="text-lg font-bold es-golive-onink">Sell seats to a stream</h3>
                             <span class="es-golive-plan">Pro</span>
                         </div>
-                        <p class="text-sm es-golive-onmuted">Named ticket types with their own prices and quantities, paid through your own Stripe or PayPal account. Charging for a seat is Pro, free registration is not, and Event Schedule takes nothing from the sale either way.</p>
+                        <p class="text-sm es-golive-onmuted">Named ticket types with their own prices and quantities, paid through your own Stripe or PayPal account. Charging for a seat is Pro, free registration is not, and Getvnt takes nothing from the sale either way.</p>
                     </div>
                     <div class="es-golive-card p-6" data-reveal="panel">
                         <div class="mb-2 flex flex-wrap items-center gap-2">
@@ -1327,7 +1327,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-golive-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

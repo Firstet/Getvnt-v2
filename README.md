@@ -1,7 +1,7 @@
 <div align="center">
     <picture>
         <source srcset="public/images/dark_logo.png" media="(prefers-color-scheme: light)">
-        <img src="public/images/light_logo.png" alt="Event Schedule Logo" width="350" media="(prefers-color-scheme: dark)">
+        <img src="public/images/light_logo.png" alt="Getvnt Logo" width="350" media="(prefers-color-scheme: dark)">
     </picture>
     <p>
         An open-source platform to share events, sell tickets and bring communities together.
@@ -12,9 +12,9 @@
         <img src="https://img.shields.io/badge/Laravel-11-FF2D20?logo=laravel&logoColor=white" alt="Laravel 11">
     </p>
     <p>
-        <a href="https://eventschedule.com">Website</a> &middot;
-        <a href="https://eventschedule.com/docs">Docs</a> &middot;
-        <a href="https://github.com/eventschedule/eventschedule/issues">Issues</a>
+        <a href="https://getvnt.com">Website</a> &middot;
+        <a href="https://getvnt.com/docs">Docs</a> &middot;
+        <a href="https://github.com/Firstet/Getvnt-v2/issues">Issues</a>
     </p>
 </div>
 
@@ -28,18 +28,18 @@
 ## Screenshots
 
 <div style="display: flex; gap: 10px;">
-    <img src="https://github.com/eventschedule/eventschedule/blob/main/public/images/screenshots/screen_1.png?raw=true" width="49%" alt="Guest > Schedule">
-    <img src="https://github.com/eventschedule/eventschedule/blob/main/public/images/screenshots/screen_2.png?raw=true" width="49%" alt="Guest > Event">
+    <img src="https://github.com/Firstet/Getvnt-v2/blob/main/public/images/screenshots/screen_1.png?raw=true" width="49%" alt="Guest > Schedule">
+    <img src="https://github.com/Firstet/Getvnt-v2/blob/main/public/images/screenshots/screen_2.png?raw=true" width="49%" alt="Guest > Event">
 </div>
 
 <div style="display: flex; gap: 10px;">
-    <img src="https://github.com/eventschedule/eventschedule/blob/main/public/images/screenshots/screen_3.png?raw=true" width="49%" alt="Admin > Schedule">
-    <img src="https://github.com/eventschedule/eventschedule/blob/main/public/images/screenshots/screen_4.png?raw=true" width="49%" alt="Admin > Event">
+    <img src="https://github.com/Firstet/Getvnt-v2/blob/main/public/images/screenshots/screen_3.png?raw=true" width="49%" alt="Admin > Schedule">
+    <img src="https://github.com/Firstet/Getvnt-v2/blob/main/public/images/screenshots/screen_4.png?raw=true" width="49%" alt="Admin > Event">
 </div>
 
-## Why Event Schedule?
+## Why Getvnt?
 
-- **Free and open source** - Unlimited events and schedules. Selfhost on your own server or use the hosted version at [eventschedule.com](https://eventschedule.com).
+- **Free and open source** - Unlimited events and schedules. Selfhost on your own server or use the hosted version at [getvnt.com](https://getvnt.com).
 - **No platform fees** - Accept payments directly via Stripe. You keep 100% of ticket revenue (minus Stripe's processing fee).
 - **AI-powered** - Create events from text, images, or WhatsApp messages. Generate flyers, translate your schedule, and more.
 - **All-in-one** - Ticketing, QR check-ins, newsletters, analytics, Google Calendar sync, and a REST API, all built in.
@@ -90,14 +90,14 @@
 
 ### Integrations
 - 📅 **Calendar Integration:** Enable attendees to add events directly to Google, Apple, or Microsoft calendars.
-- 🔄 **Google Calendar Sync:** Automatically sync events between Event Schedule and Google Calendar, with real-time updates via webhooks.
+- 🔄 **Google Calendar Sync:** Automatically sync events between Getvnt and Google Calendar, with real-time updates via webhooks.
 - 📅 **CalDAV Sync:** Sync events with any CalDAV-compatible calendar server including Nextcloud, Radicale, and Fastmail.
 - 🔗 **Third-Party Event Import:** Automatically import events from third-party websites to expand your calendar offerings.
 - 🖥️ **Website Embedding:** Embed your schedule on any website using a simple iframe widget.
 - 🔐 **Social Login:** Sign in quickly using Google or Facebook accounts.
 - 🎪 **Eventbrite Import:** Import events from Eventbrite into your schedule.
 - 🔔 **Webhooks:** Receive POST notifications for sales, events, and check-ins.
-- 🌐 **Federation:** Optionally share your public events with the eventschedule.com listings, with every listing linking back to the event on your own site.
+- 🌐 **Federation:** Optionally share your public events with the getvnt.com listings, with every listing linking back to the event on your own site.
 - 💬 **WhatsApp Event Creation:** Create events by sending messages or images via WhatsApp with AI parsing.
 
 ### AI-Powered
@@ -125,13 +125,13 @@
 - 🎨 **Custom CSS Styling:** Personalize your schedule's appearance with custom CSS to match your brand identity.
 - 🌐 **Multi-Language Interface:** App available in 11 languages (English, Spanish, German, French, Italian, Portuguese, Hebrew, Dutch, Arabic, Estonian, Russian).
 - 🎨 **Profile Themes:** Customize header images, background gradients, and fonts.
-- 🏷️ **White-label Branding:** Remove Event Schedule branding for a fully branded experience.
+- 🏷️ **White-label Branding:** Remove Getvnt branding for a fully branded experience.
 - 🌐 **Custom Domains:** Use your own domain name for your schedule with automatic SSL support.
 - 📍 **Venue Location Maps:** Show event venues on Google Maps.
 - 📅 **iCal Download:** Download .ics files for individual events and recurring event dates.
 
 ### Developer Tools
-- 🤖 **AI Agent Support:** Manage events programmatically with [AI agent workflows](https://eventschedule.com/.well-known/agents.json), an [OpenAPI 3.0 spec](https://eventschedule.com/api/openapi.json), [llms.txt](https://eventschedule.com/llms.txt), and [llms-full.txt](https://eventschedule.com/llms-full.txt) for seamless integration with AI agents and developer tools.
+- 🤖 **AI Agent Support:** Manage events programmatically with [AI agent workflows](https://getvnt.com/.well-known/agents.json), an [OpenAPI 3.0 spec](https://getvnt.com/api/openapi.json), [llms.txt](https://getvnt.com/llms.txt), and [llms-full.txt](https://getvnt.com/llms-full.txt) for seamless integration with AI agents and developer tools.
 - 🔌 **REST API:** Access and manage your events programmatically through a REST API.
 - 🚀 **Automatic App Updates:** Keep the platform up to date effortlessly with one-click automatic updates.
 
@@ -141,7 +141,7 @@
 
 | | Hosted | Selfhosted |
 |---|---|---|
-| **Setup** | [Up and running in under 5 minutes](https://www.eventschedule.com) | [Full control over your infrastructure](https://eventschedule.com/docs/installation) |
+| **Setup** | [Up and running in under 5 minutes](https://www.getvnt.com) | [Full control over your infrastructure](https://getvnt.com/docs/installation) |
 | **Infrastructure** | We handle hosting and servers | You manage your own servers |
 | **Updates** | Automatic | One-click updates |
 
@@ -150,12 +150,12 @@
 
 ## Installation
 
-For detailed installation instructions, see the [Installation Guide](https://eventschedule.com/docs/installation).
+For detailed installation instructions, see the [Installation Guide](https://getvnt.com/docs/installation).
 
 Quick start options:
 - **[Softaculous](https://www.softaculous.com/apps/calendars/Event_Schedule)**: One-click automated installation
-- **[Docker](https://github.com/eventschedule/dockerfiles)**: Containerized deployment
-- **[Manual Installation](https://eventschedule.com/docs/installation)**: Step-by-step guide
+- **[Docker](https://github.com/Firstet/dockerfiles)**: Containerized deployment
+- **[Manual Installation](https://getvnt.com/docs/installation)**: Step-by-step guide
 
 ## Tech Stack
 
@@ -163,16 +163,16 @@ Quick start options:
 
 ## Documentation
 
-- [SaaS Setup](https://eventschedule.com/docs/saas) - Configure Event Schedule for multi-tenant SaaS deployment with subdomain routing
-- [Stripe Setup](https://eventschedule.com/docs/stripe) - Set up Stripe Connect for ticket sales and Cashier for subscription billing
-- [Google Calendar Setup](https://eventschedule.com/docs/google-calendar) - Enable bidirectional sync with Google Calendar
-- [Google Wallet Setup](https://eventschedule.com/docs/selfhost/google-wallet) - Let ticket buyers save their ticket to Google Wallet
+- [SaaS Setup](https://getvnt.com/docs/saas) - Configure Getvnt for multi-tenant SaaS deployment with subdomain routing
+- [Stripe Setup](https://getvnt.com/docs/stripe) - Set up Stripe Connect for ticket sales and Cashier for subscription billing
+- [Google Calendar Setup](https://getvnt.com/docs/google-calendar) - Enable bidirectional sync with Google Calendar
+- [Google Wallet Setup](https://getvnt.com/docs/selfhost/google-wallet) - Let ticket buyers save their ticket to Google Wallet
 
 ## Contributing
 
-Contributions are welcome! Please open an [issue](https://github.com/eventschedule/eventschedule/issues) to report bugs or suggest features, or submit a pull request.
+Contributions are welcome! Please open an [issue](https://github.com/Firstet/Getvnt-v2/issues) to report bugs or suggest features, or submit a pull request.
 
 ## License
 
-Event Schedule is licensed under the [Attribution Assurance License (AAL)](LICENSE).
+Getvnt is licensed under the [Attribution Assurance License (AAL)](LICENSE).
 

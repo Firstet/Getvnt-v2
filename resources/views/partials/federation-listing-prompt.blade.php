@@ -1,4 +1,4 @@
-{{-- Asks a schedule owner to list their schedules on the Event Schedule network, once the
+{{-- Asks a schedule owner to list their schedules on the Getvnt network, once the
      install has joined it. Every schedule starts undecided and nothing is shared until someone
      says yes, so without this an approved install sends nothing at all.
 

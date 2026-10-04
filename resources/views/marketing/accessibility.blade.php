@@ -14,7 +14,7 @@
         "dateModified": @json(config('accessibility.declaration_last_reviewed')),
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         },
         "about": {
@@ -588,7 +588,7 @@
 
         $related = [
             ['/privacy', 'Privacy Policy', 'What we collect, who can see it, and how to have it erased.'],
-            ['/terms-of-service', 'Terms of Service', 'The agreement that covers your use of Event Schedule.'],
+            ['/terms-of-service', 'Terms of Service', 'The agreement that covers your use of Getvnt.'],
             ['/docs/selfhost/accessibility', 'Accessibility when you selfhost', 'Operators who run their own installation publish their own declaration. The configuration keys are here.'],
             ['/contact', 'Contact', 'A form, if you would rather report a barrier that way, and everything else besides.'],
         ];

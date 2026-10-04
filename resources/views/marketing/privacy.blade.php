@@ -1,6 +1,6 @@
 <x-marketing-layout>
-    <x-slot name="title">Privacy Policy - Event Schedule</x-slot>
-    <x-slot name="description">Privacy Policy for Event Schedule - how we collect, use, and protect your data, who can access it, the cookies we set, and how to have your data erased.</x-slot>
+    <x-slot name="title">Privacy Policy - Getvnt</x-slot>
+    <x-slot name="description">Privacy Policy for Getvnt - how we collect, use, and protect your data, who can access it, the cookies we set, and how to have your data erased.</x-slot>
     <x-slot name="breadcrumbTitle">Privacy Policy</x-slot>
 
     <x-slot name="structuredData">
@@ -8,12 +8,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Privacy Policy - Event Schedule",
-        "description": "Privacy Policy for Event Schedule - how we collect, use, and protect your data, who can access it, the cookies we set, and how to have your data erased.",
+        "name": "Privacy Policy - Getvnt",
+        "description": "Privacy Policy for Getvnt - how we collect, use, and protect your data, who can access it, the cookies we set, and how to have your data erased.",
         "url": "{{ url()->current() }}",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Event Schedule",
+            "name": "Getvnt",
             "url": "{{ config('app.url') }}"
         },
         "about": {
@@ -847,7 +847,7 @@
         $companions = [
             ['/terms-of-service', 'Terms of Service', 'The agreement you accept when you use the hosted service.'],
             ['/accessibility', 'Accessibility statement', 'The standard we work to, and how to tell us where we fall short.'],
-            ['/self-hosting-terms-of-service', 'Selfhosting Terms of Service', 'The terms that apply when you run Event Schedule on your own server.'],
+            ['/self-hosting-terms-of-service', 'Selfhosting Terms of Service', 'The terms that apply when you run Getvnt on your own server.'],
             ['/docs', 'Documentation', 'How the product actually works, section by section.'],
         ];
 
@@ -878,7 +878,7 @@
                     </span>
                 </p>
                 <h1 class="es-fine-title es-balance es-fade-up es-d-2 mt-4">Privacy <span class="es-fine-accent">Policy</span></h1>
-                <p class="es-fine-lede es-fade-up es-d-3 mt-3">Event Schedule LLC</p>
+                <p class="es-fine-lede es-fade-up es-d-3 mt-3">Getvnt LLC</p>
                 <p class="es-fine-intro es-fade-up es-d-3 mt-4">
                     Set out in {{ $partCount }} parts and {{ $clauseCount }} numbered clauses. Every section
                     number is a link of its own, so a single line of this policy can be cited
@@ -893,7 +893,7 @@
                 <div>
                     <dt class="es-fine-docket-key">Scope</dt>
                     <dd class="es-fine-docket-val">
-                        EventSchedule.com, its subdomains, and the schedules it serves on their owners' own domains
+                        Getvnt.com, its subdomains, and the schedules it serves on their owners' own domains
                         <a href="#who-we-are" class="es-fine-cite" aria-label="Clause 1, Who We Are and What This Covers">&sect;&nbsp;01</a>
                     </dd>
                 </div>
@@ -907,7 +907,7 @@
                 <div>
                     <dt class="es-fine-docket-key">Privacy contact</dt>
                     <dd class="es-fine-docket-val">
-                        <a href="mailto:privacy@eventschedule.com" class="es-fine-link">privacy@eventschedule.com</a>
+                        <a href="mailto:privacy@getvnt.com" class="es-fine-link">privacy@getvnt.com</a>
                         <a href="#contact" class="es-fine-cite" aria-label="Clause 21, Communication and Resolution">&sect;&nbsp;21</a>
                     </dd>
                 </div>
@@ -968,13 +968,13 @@
 
                                             @case('who-we-are')
                                                 <p>
-                                                    This policy explains how Event Schedule LLC ("Event Schedule", "we") handles personal data on EventSchedule.com, its subdomains, and the schedules it serves on their owners' own domains. <dfn class="es-fine-dfn">PII</dfn> (Personally Identifiable Information) means anything that identifies you, directly or together with other details.
+                                                    This policy explains how Getvnt LLC ("Getvnt", "we") handles personal data on Getvnt.com, its subdomains, and the schedules it serves on their owners' own domains. <dfn class="es-fine-dfn">PII</dfn> (Personally Identifiable Information) means anything that identifies you, directly or together with other details.
                                                 </p>
                                                 <p>
                                                     For the data of the people who create accounts and visit the site, we decide what is collected and why, so we are its <strong>controller</strong>. The details an organizer collects through their schedule are different: the people who buy tickets, RSVP, book an appointment, follow, or sign up for its emails are that organizer's customers and audience. The organizer is the controller of those details, and we process them on the organizer's behalf to run the service. Questions about them are best put to the organizer; we help organizers answer them, and you can always write to us.
                                                 </p>
                                                 <p>
-                                                    A selfhosted Event Schedule is run by whoever installed it, on their own servers. This policy does not cover it, and we have no access to it.
+                                                    A selfhosted Getvnt is run by whoever installed it, on their own servers. This policy does not cover it, and we have no access to it.
                                                 </p>
                                                 @break
 
@@ -1016,7 +1016,7 @@
                                                     An address left for event updates ("Tell me when tickets go on sale" or "Tell me if anything changes") belongs to that one event and date. It does not create an account and is not a subscription to the schedule. It is used to email you about that event: when its tickets go on sale, a reminder shortly before it starts, a notice if it is cancelled, and any notice the organizer chooses to send if its date or venue changes. Every one of those emails has an unsubscribe link, and unsubscribing deletes the address. It is also deleted along with the event, and 30 days after the event at the latest.
                                                 </p>
                                                 <p>
-                                                    A page an organizer creates for a performer or venue that is not on Event Schedule shows the name and the dates listed for it, says that it has not been claimed, and stays out of search engines until it is. If the organizer asks us to, we send the email address or phone number they entered an invitation to claim the page. Claiming it means signing in with that same address or number.
+                                                    A page an organizer creates for a performer or venue that is not on Getvnt shows the name and the dates listed for it, says that it has not been claimed, and stays out of search engines until it is. If the organizer asks us to, we send the email address or phone number they entered an invitation to claim the page. Claiming it means signing in with that same address or number.
                                                 </p>
                                                 @break
 
@@ -1096,7 +1096,7 @@
                                                 </p>
                                                 <ul class="es-fine-list">
                                                     <li>Viewing, creating, updating, or deleting calendar events as requested by the user</li>
-                                                    <li>Synchronizing events between the user's calendar and Event Schedule</li>
+                                                    <li>Synchronizing events between the user's calendar and Getvnt</li>
                                                     <li>Sending notifications and reminders related to calendar events</li>
                                                 </ul>
                                                 <p>
@@ -1146,7 +1146,7 @@
 
                                             @case('transfers')
                                                 <p>
-                                                    Event Schedule is run from the United States, and the service and its data are hosted there. Most of the providers above are based there too. If you use the service from the European Economic Area, the United Kingdom or Switzerland, your data is therefore transferred to the United States. Write to <a href="mailto:privacy@eventschedule.com" class="es-fine-link">privacy@eventschedule.com</a> for a copy of the safeguards that apply to those transfers.
+                                                    Getvnt is run from the United States, and the service and its data are hosted there. Most of the providers above are based there too. If you use the service from the European Economic Area, the United Kingdom or Switzerland, your data is therefore transferred to the United States. Write to <a href="mailto:privacy@getvnt.com" class="es-fine-link">privacy@getvnt.com</a> for a copy of the safeguards that apply to those transfers.
                                                 </p>
                                                 @break
 
@@ -1183,7 +1183,7 @@
                                                     We honor the <a href="https://globalprivacycontrol.org/" target="_blank" rel="noopener" class="es-fine-link">Global Privacy Control<svg class="es-fine-ext" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5h6v6M19 5L9 15M15 19H5V9" /></svg></a> signal: if your browser sends GPC, we treat it as declining both categories, and the banner does not appear.
                                                 </p>
                                                 <p>
-                                                    Your choice is stored in a cookie named <code class="es-fine-code">cookie_consent</code>, with the categories you allowed and when, so one choice holds across EventSchedule.com and its subdomains and our server can honor it too; your browser keeps a copy in <code class="es-fine-code">localStorage</code> under the same name. A schedule on its own domain asks separately. It records nothing but the choice itself, and we do not store it against any account.
+                                                    Your choice is stored in a cookie named <code class="es-fine-code">cookie_consent</code>, with the categories you allowed and when, so one choice holds across Getvnt.com and its subdomains and our server can honor it too; your browser keeps a copy in <code class="es-fine-code">localStorage</code> under the same name. A schedule on its own domain asks separately. It records nothing but the choice itself, and we do not store it against any account.
                                                 </p>
 
                                                 <div class="es-fine-scroll">
@@ -1335,13 +1335,13 @@
                                                     <li><strong>Withdraw consent</strong> you gave, such as for cookies, at any time, without affecting what was done before.</li>
                                                 </ul>
                                                 <p>
-                                                    Write to <a href="mailto:privacy@eventschedule.com" class="es-fine-link">privacy@eventschedule.com</a> for anything you cannot do in Settings. We answer within one month, and may ask you to confirm it is you. For details an organizer holds, such as a ticket you bought, write to the organizer, or to us and we will pass it on. If you are in the European Economic Area, the United Kingdom or Switzerland, you also have the right to complain to your data protection authority.
+                                                    Write to <a href="mailto:privacy@getvnt.com" class="es-fine-link">privacy@getvnt.com</a> for anything you cannot do in Settings. We answer within one month, and may ask you to confirm it is you. For details an organizer holds, such as a ticket you bought, write to the organizer, or to us and we will pass it on. If you are in the European Economic Area, the United Kingdom or Switzerland, you also have the right to complain to your data protection authority.
                                                 </p>
                                                 @break
 
                                             @case('newsletter')
                                                 <p>
-                                                    We send account holders occasional product news, tips, and digests about their own schedules to the email address on the account. You can say no on the sign-up page, switch them off under Settings, or use the "unsubscribe" link in any of them, which your email app may also show as a button; you can also write to <a href="mailto:privacy@eventschedule.com" class="es-fine-link">privacy@eventschedule.com</a>. Note that we may still send legally required notifications, and the emails your account needs, such as receipts, password resets and security notices, to your registered email.
+                                                    We send account holders occasional product news, tips, and digests about their own schedules to the email address on the account. You can say no on the sign-up page, switch them off under Settings, or use the "unsubscribe" link in any of them, which your email app may also show as a button; you can also write to <a href="mailto:privacy@getvnt.com" class="es-fine-link">privacy@getvnt.com</a>. Note that we may still send legally required notifications, and the emails your account needs, such as receipts, password resets and security notices, to your registered email.
                                                 </p>
                                                 @break
 
@@ -1365,7 +1365,7 @@
 
                                             @case('contact')
                                                 <p>
-                                                    If you have any questions about your privacy, data usage, or how to purge your data, please contact us at <a href="mailto:privacy@eventschedule.com" class="es-fine-link">privacy@eventschedule.com</a>
+                                                    If you have any questions about your privacy, data usage, or how to purge your data, please contact us at <a href="mailto:privacy@getvnt.com" class="es-fine-link">privacy@getvnt.com</a>
                                                 </p>
                                                 @break
 
@@ -1397,7 +1397,7 @@
             <p class="es-fine-muted mb-6 max-w-2xl text-sm">
                 Three more instruments sit beside this one: the Terms of Service cover the
                 agreement, the accessibility statement covers the interface, and the selfhosting
-                terms cover running Event Schedule on your own server. The documentation covers
+                terms cover running Getvnt on your own server. The documentation covers
                 what the features named above actually do.
             </p>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -1416,7 +1416,7 @@
             </div>
             <p class="es-fine-muted mt-9 max-w-2xl text-sm">
                 Anything in this policy you want explained, or think is wrong, goes to
-                <a href="mailto:privacy@eventschedule.com" class="es-fine-link">privacy@eventschedule.com</a>.
+                <a href="mailto:privacy@getvnt.com" class="es-fine-link">privacy@getvnt.com</a>.
                 A real person reads it.
             </p>
         </div>

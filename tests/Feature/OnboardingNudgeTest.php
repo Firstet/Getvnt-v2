@@ -475,17 +475,17 @@ class OnboardingNudgeTest extends TestCase
         $this->assertStringContainsString('Hello Sam,', $html);
     }
 
-    /** The founder's note, the reply invitation and our inbox, on eventschedule.com. */
+    /** The founder's note, the reply invitation and our inbox, on getvnt.com. */
     public function test_the_personal_parts_appear_on_the_nexus(): void
     {
-        config(['app.is_nexus' => true, 'app.support_email' => 'contact@eventschedule.com']);
+        config(['app.is_nexus' => true, 'app.support_email' => 'contact@getvnt.com']);
         $user = $this->stalled(2);
 
         $first = $this->mail($user, 1);
         $html = $first->render();
         $this->assertStringContainsString('/examples', $html);
         $this->assertStringContainsString('Hillel', $html);
-        $this->assertSame('contact@eventschedule.com', $first->envelope()->replyTo[0]->address);
+        $this->assertSame('contact@getvnt.com', $first->envelope()->replyTo[0]->address);
 
         $this->assertStringContainsString(e(__('messages.onboarding_nudge_reply_2')), $this->mail($user, 2)->render());
 

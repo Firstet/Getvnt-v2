@@ -8,7 +8,7 @@ use Illuminate\View\View;
 class AppLayout extends Component
 {
     public function __construct(
-        public string $title = 'Event Schedule',
+        public string $title = 'Getvnt',
         /**
          * Opt in to the six theme palettes (Sand/Mist/Paper, Espresso/Midnight/
          * Carbon). Off by default because this layout is the shell for BOTH the

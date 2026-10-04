@@ -51,7 +51,7 @@ class LegalController extends Controller
             return view(LegalDocument::BUILTIN_VIEWS[$type]);
         }
 
-        // Off the marketing instance these documents belong to eventschedule.com,
+        // Off the marketing instance these documents belong to getvnt.com,
         // which is exactly where every consent link already points. Serve the
         // bundled page rather than redirecting when marketing_url() resolves back
         // to this same route (it returns a local URL in testing), which would loop.

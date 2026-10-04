@@ -64,7 +64,7 @@ class RoleGuestSurfaceCharacterizationTest extends TestCase
         // A schedule with rotted share links therefore presented as broken analytics.
         //
         // The body must be the schedule's own 404, not errors/404.blade.php, whose every link is
-        // a marketing_url() to eventschedule.com - a customer's custom domain must not hand its
+        // a marketing_url() to getvnt.com - a customer's custom domain must not hand its
         // visitors to us.
         $owner = $this->createOwner();
         $role = $this->createRole($owner, 'venue', ['name' => 'Fallback Venue']);

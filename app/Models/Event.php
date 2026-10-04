@@ -5092,7 +5092,7 @@ class Event extends Model
     {
         return $this->is_cancelled
             ? 'https://schema.org/EventCancelled'
-            : 'https://schema.org/EventScheduled';
+            : 'https://schema.org/Getvntd';
     }
 
     /**

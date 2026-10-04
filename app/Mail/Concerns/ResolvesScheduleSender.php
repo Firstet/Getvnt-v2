@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
  * Every mailable in this app resolves the From line the same way (see NewsletterEmail::envelope(),
  * WaitlistNotification, EventChanged): the platform address and the platform display name,
  * overridden only when the schedule has configured its own SMTP. About 1.9% of schedules have. So
- * in practice a fan who handed their address to one venue receives mail from "Event Schedule", a
+ * in practice a fan who handed their address to one venue receives mail from "Getvnt", a
  * name they have never seen, and the reflex is Report spam - which lands on the shared sending
  * reputation carrying every other schedule's ticket receipts.
  *

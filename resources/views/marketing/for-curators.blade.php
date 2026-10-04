@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Curators | Local Events Guide</x-slot>
+    <x-slot name="title">Free Getvnt for Curators | Local Events Guide</x-slot>
     <x-slot name="description">Build a local events guide that fills itself. Follow venue and talent schedules as sources, take submissions, and import flyers with AI. Free forever.</x-slot>
     <x-slot name="breadcrumbTitle">For Curators</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Curators"
+        name="Getvnt for Curators"
         description="Build a local events guide. Follow the venues and performers you cover as event sources, review what gets submitted, and grow your following. Zero platform fees."
         audience="Event Curators"
         keywords="event curator schedule, event promoter calendar, multi-venue event management, curator booking platform, free curator scheduling" />
@@ -454,12 +454,12 @@
         $curListings = [
             ['Follow the venues and acts you cover', 'Free', 'Add their schedules as event sources and everything they publish, past and upcoming, lands on your guide on its own.'],
             ['Venues publish straight to your guide', 'Free', 'A venue that follows your guide can name it a default curator. Everything they post then lands in your queue.'],
-            ['Never list the same thing twice', 'Free', 'When something you paste in is already on Event Schedule, one click lists that event instead of a second copy.'],
+            ['Never list the same thing twice', 'Free', 'When something you paste in is already on Getvnt, one click lists that event instead of a second copy.'],
             ['A submission inbox you control', 'Free', 'Readers send you events through the form on your page. Nothing reaches the public page until you accept it.'],
             ['Trusted sources skip the queue', 'Free', 'Approve a venue once and everything they send after that publishes straight through.'],
             ['File every event under a section', 'Free', 'Sort what arrives into sub-schedules: music, markets, kids, whatever your guide needs.'],
             ['Merge duplicate venues', 'Free', 'Ten submitters spell the same room ten ways. Merge them back into one in a single place.'],
-            ['Every act you name gets a page', 'Free', 'Name a performer or venue who is not on Event Schedule yet and they get a page crediting your guide, which they can claim.'],
+            ['Every act you name gets a page', 'Free', 'Name a performer or venue who is not on Getvnt yet and they get a page crediting your guide, which they can claim.'],
             ['Email the week to your readers', 'Free', 'Following the guide is permission to email. You write the newsletter and send it: ten emails a month free and a hundred on Pro, each recipient counting as one.'],
             ['Embed it on the site you have', 'Free', 'Drop the calendar straight into your blog or your organisation page.'],
             ['Schedule graphics', 'Free', 'Build one shareable image out of what is coming up. Events need their own flyer to appear, and twenty of them fit.'],
@@ -467,11 +467,11 @@
         ];
 
         $curFaqs = [
-            ['q' => 'Is Event Schedule free for event curators?', 'a' => 'Yes. Following venues and acts as event sources, running the approval inbox, building a following and syncing with Google, Outlook or CalDAV are all free forever. Schedule graphics are free too. Removing our branding is on the Pro plan, and your own domain is on Enterprise.'],
+            ['q' => 'Is Getvnt free for event curators?', 'a' => 'Yes. Following venues and acts as event sources, running the approval inbox, building a following and syncing with Google, Outlook or CalDAV are all free forever. Schedule graphics are free too. Removing our branding is on the Pro plan, and your own domain is on Enterprise.'],
             ['q' => 'How do events get onto my guide?', 'a' => 'Four ways. List the talent and venue schedules you cover as event sources, and everything they publish, past and upcoming, appears on your guide automatically. A venue or performer who follows your guide can name it a default curator, and everything they schedule then lands in your queue. Visitors can submit an event through the form on your page, signed in by default. And you can add events yourself, by hand or by pasting in text or a photo of a flyer.'],
             ['q' => 'Can I control which events appear on my schedule?', 'a' => 'Yes. Submitted events wait in your inbox until you accept or decline them, so nothing reaches the public page without your say-so. A signed-in submitter hears by email which way you decided. If you trust a schedule, add it to your approved list and its events publish straight through, as long as you ask submitters for an account, which a curator schedule does by default. The event sources you picked yourself skip the queue too.'],
-            ['q' => 'What happens when an event is already on Event Schedule?', 'a' => 'You are offered the existing one. Paste in something the site already knows about and the importer flags the match, so a single click lists that event on your guide instead of creating a second copy, and the listing keeps pointing back at the schedule that owns it. Draft and private events are never offered, so nothing unpublished can end up on your page.'],
-            ['q' => 'What happens when I list an act or venue that is not on Event Schedule?', 'a' => 'They get a page of their own the moment you save the event. It says who created it and that they have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. On eventschedule.com you can tick a box to email them an invitation. When they claim it by signing in with the email address you entered, your guide goes on their approved list, so the events you list them on keep appearing without waiting for their approval.'],
+            ['q' => 'What happens when an event is already on Getvnt?', 'a' => 'You are offered the existing one. Paste in something the site already knows about and the importer flags the match, so a single click lists that event on your guide instead of creating a second copy, and the listing keeps pointing back at the schedule that owns it. Draft and private events are never offered, so nothing unpublished can end up on your page.'],
+            ['q' => 'What happens when I list an act or venue that is not on Getvnt?', 'a' => 'They get a page of their own the moment you save the event. It says who created it and that they have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. On getvnt.com you can tick a box to email them an invitation. When they claim it by signing in with the email address you entered, your guide goes on their approved list, so the events you list them on keep appearing without waiting for their approval.'],
             ['q' => 'How do people discover my curated schedule?', 'a' => 'Share your schedule link on social media, embed the calendar on your blog or website, and let search engines index the page. Readers can subscribe to the whole guide as a live calendar from the sign-up panel on your page, so a moved date updates itself. Readers who follow the guide are giving you permission to email them, so a newsletter with the highlights of the week is yours to send whenever you like.'],
         ];
     @endphp
@@ -619,7 +619,7 @@
                         somebody's Friday.
                     </p>
                     <p class="es-cur-serif text-lg leading-relaxed" data-reveal style="color: var(--esc-muted);">
-                        Event Schedule is built that way on purpose. Events arrive from the talent and venue
+                        Getvnt is built that way on purpose. Events arrive from the talent and venue
                         schedules you follow as sources, from the ones that name your guide as their curator,
                         from the submission form on your page, and from whatever you paste in yourself. You
                         accept, you file, you publish. After that the guide keeps filling itself while you get
@@ -1072,7 +1072,7 @@
                     @foreach ([['/for-talent', 'Talent'], ['/for-venues', 'Venues'], ['/for-community-centers', 'Community Centers'], ['/for-watch-parties', 'Watch Parties']] as [$relHref, $relName])
                         <a href="{{ marketing_url($relHref) }}" data-reveal class="es-cur-box group flex items-center justify-between gap-4 p-4">
                             <span>
-                                <span class="es-cur-agate es-cur-faint block">Event Schedule for</span>
+                                <span class="es-cur-agate es-cur-faint block">Getvnt for</span>
                                 <span class="es-cur-serif es-cur-relname block text-lg font-bold transition-colors">{{ $relName }}</span>
                             </span>
                             <svg aria-hidden="true" class="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" style="color: var(--esc-spot);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
@@ -1150,7 +1150,7 @@
                             <input id="es-claim-input" type="text" placeholder="your-city" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold focus:outline-none focus:ring-0 sm:text-base"
                                 style="color: var(--esc-ink);">
-                            <span class="es-cur-faint shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-cur-faint shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=curator') }}" class="es-cur-btn es-cur-btn-solid shrink-0 px-7 py-3.5 text-base">
                             Get started free

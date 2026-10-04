@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Event Newsletter Builder, Free to Start - Event Schedule</x-slot>
+    <x-slot name="title">Event Newsletter Builder, Free to Start - Getvnt</x-slot>
     <x-slot name="description">Write newsletters to subscribers, followers and ticket buyers, and let new events reach subscribers as a digest. Free for 10 emails a month, counted per recipient.</x-slot>
     <x-slot name="breadcrumbTitle">Newsletters</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Newsletters"
+        name="Getvnt Newsletters"
         description="Send newsletters to email subscribers, followers and ticket buyers, while new public events reach confirmed subscribers as an automatic digest. Drag-and-drop editor, templates, audience segments, A/B testing and delivery analytics." />
     </x-slot>
 
@@ -611,7 +611,7 @@
             ],
             [
                 'q' => 'How does email deliverability work?',
-                'a' => 'Event Schedule handles email delivery infrastructure for you, and every message carries one-click unsubscribe headers, a bulk precedence header and a reply-to address pointing at your schedule. Any schedule can also configure its own SMTP server for maximum deliverability and branding control, which removes the monthly recipient limit.',
+                'a' => 'Getvnt handles email delivery infrastructure for you, and every message carries one-click unsubscribe headers, a bulk precedence header and a reply-to address pointing at your schedule. Any schedule can also configure its own SMTP server for maximum deliverability and branding control, which removes the monthly recipient limit.',
             ],
             [
                 'q' => 'Can I see who opened it?',
@@ -799,7 +799,7 @@
                 </p>
                 <p class="es-send-muted mt-3 text-sm">
                     Two more emails run the other way. When you move a one-off event's date, change
-                    its venue or join link, or cancel it, Event Schedule offers to send a notice,
+                    its venue or join link, or cancel it, Getvnt offers to send a notice,
                     and it goes only if you confirm: to that list, and to the event's ticket holders
                     if the schedule sends through its own SMTP server. And you are emailed when a
                     booking request lands on your schedule. None of it is a newsletter, and none of
@@ -1337,7 +1337,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-send-card es-send-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-send-muted text-sm">Event Schedule for</div>
+                            <div class="es-send-muted text-sm">Getvnt for</div>
                             <div class="es-send-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-send-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1415,7 +1415,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="es-send-dim shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-send-dim shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-send-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

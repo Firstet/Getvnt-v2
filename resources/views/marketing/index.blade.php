@@ -383,7 +383,7 @@
         description="Get your event schedule live and shared with your audience in three simple steps."
         :steps="[
             ['name' => 'Create your schedule', 'text' => 'Sign up free, then fill it however suits you: type an event in, connect a calendar, or paste a poster and let the AI read the details off it.'],
-            ['name' => 'Share your link', 'text' => 'You get yourname.eventschedule.com. Put it in your bio, print the QR code on a poster, embed the calendar in your own site, or let guests subscribe to it from their own calendar app.'],
+            ['name' => 'Share your link', 'text' => 'You get yourname.getvnt.com. Put it in your bio, print the QR code on a poster, embed the calendar in your own site, or let guests subscribe to it from their own calendar app.'],
             ['name' => 'Grow your audience', 'text' => 'Visitors leave an email address and get a digest automatically when you publish new events. Write a newsletter yourself whenever there is more to say.'],
         ]"
     />
@@ -410,7 +410,7 @@
     {!! \App\Utils\SeoUtils::jsonLd([
         '@context' => 'https://schema.org',
         '@type' => 'ItemList',
-        'name' => 'Upcoming events on Event Schedule',
+        'name' => 'Upcoming events on Getvnt',
         'url' => url('/'),
         'itemListElement' => $eventListItems,
     ]) !!}
@@ -676,8 +676,8 @@
             ],
         ];
     @endphp
-    <section class="relative overflow-hidden border-y border-gray-200 bg-white py-10 dark:border-white/10 dark:bg-[#0a0a0f]" aria-label="Who uses Event Schedule">
-        <h2 class="sr-only">Who uses Event Schedule</h2>
+    <section class="relative overflow-hidden border-y border-gray-200 bg-white py-10 dark:border-white/10 dark:bg-[#0a0a0f]" aria-label="Who uses Getvnt">
+        <h2 class="sr-only">Who uses Getvnt</h2>
         <div class="es-marquee-mask space-y-4">
             @foreach ($marqueeRows as $rowIndex => $row)
                 <div class="es-marquee" data-marquee="{{ $rowIndex === 0 ? '1' : '-1' }}">
@@ -728,7 +728,7 @@
                             </span>
                             <span class="mx-auto flex items-center gap-1.5 rounded-lg bg-white px-4 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-slate-200 dark:bg-white/10 dark:text-gray-300 dark:ring-0" aria-hidden="true">
                                 <svg aria-hidden="true" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                                eventschedule.com
+                                getvnt.com
                             </span>
                             {{-- An auto-looping reel needs a way to stop it (WCAG 2.2.2). It sits up here,
                                  outside the facade link that covers the whole picture, and stays hidden
@@ -779,9 +779,9 @@
                            rel="noopener"
                            data-video-facade
                            data-video-src="https://www.youtube-nocookie.com/embed/w1JLIvGmIjQ"
-                           data-video-title="Event Schedule Overview"
+                           data-video-title="Getvnt Overview"
                            class="group absolute inset-0 block transition-colors duration-200 hover:bg-black/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#0284C7] dark:focus-visible:ring-[#22D3EE]"
-                           aria-label="Play the 3-minute Event Schedule overview video">
+                           aria-label="Play the 3-minute Getvnt overview video">
                             <span class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-slate-900/15 to-transparent dark:from-black/35" aria-hidden="true"></span>
                             {{-- Compact on phones, where the full label covered most of the picture. --}}
                             <span class="absolute bottom-2 left-1/2 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white/95 py-1 pe-3.5 ps-1 text-xs font-semibold text-gray-900 shadow-xl shadow-black/30 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:bg-white group-hover:shadow-2xl sm:bottom-6 sm:gap-2.5 sm:py-2 sm:pe-5 sm:ps-2 sm:text-base" aria-hidden="true">
@@ -836,7 +836,7 @@
                             <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/5 via-transparent to-cyan-500/10"></div>
                             <div class="relative w-56 -rotate-3 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl transition-transform duration-300 group-hover:rotate-0 dark:border-white/10 dark:bg-[#15151c]">
                                 <div class="bg-gradient-to-r from-[#4E81FA] to-[#0EA5E9] px-4 py-3">
-                                    <div class="text-[9px] font-bold uppercase tracking-[0.2em] text-white/70">Event Schedule</div>
+                                    <div class="text-[9px] font-bold uppercase tracking-[0.2em] text-white/70">Getvnt</div>
                                     <div class="text-sm font-bold text-white">Jazz Night</div>
                                 </div>
                                 <div class="relative border-b border-dashed border-gray-300 dark:border-white/15">
@@ -1171,7 +1171,7 @@
                                     <span class="h-3 w-3 rounded-full bg-[#FEBC2E]"></span>
                                     <span class="h-3 w-3 rounded-full bg-[#28C840]"></span>
                                 </span>
-                                <span class="mx-auto rounded-lg bg-white px-4 py-1 text-xs font-medium text-gray-500 shadow-sm dark:bg-white/10 dark:text-gray-400">blue-note.eventschedule.com/book</span>
+                                <span class="mx-auto rounded-lg bg-white px-4 py-1 text-xs font-medium text-gray-500 shadow-sm dark:bg-white/10 dark:text-gray-400">blue-note.getvnt.com/book</span>
                                 <span class="w-14"></span>
                             </div>
                             <div class="grid gap-6 p-6 sm:grid-cols-[1.2fr,1fr]" aria-hidden="true">
@@ -1521,7 +1521,7 @@
                     <span class="es-pulse" aria-hidden="true"></span>
                     <span class="es-pulse" style="animation-delay: 1.6s;" aria-hidden="true"></span>
                     <span class="glass relative flex h-24 w-24 items-center justify-center rounded-3xl shadow-xl shadow-blue-500/20">
-                        <img src="{{ asset('images/apple-touch-icon.png') }}" alt="Event Schedule" class="h-14 w-14 rounded-2xl" width="56" height="56" loading="lazy" decoding="async">
+                        <img src="{{ asset('images/apple-touch-icon.png') }}" alt="Getvnt" class="h-14 w-14 rounded-2xl" width="56" height="56" loading="lazy" decoding="async">
                     </span>
                 </div>
                 <!-- Inner ring -->
@@ -1717,7 +1717,7 @@
                             <div class="es-step es-step-1 relative ltr:pl-20 rtl:pr-20">
                                 <span class="absolute top-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 text-xl font-bold text-white shadow-lg shadow-sky-500/30 ltr:left-0 rtl:right-0">2</span>
                                 <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Share your link</h3>
-                                <p class="text-gray-600 dark:text-gray-400">You get yourname.eventschedule.com. Put it in your bio, print the QR code on a poster, embed the calendar in your own site, or let guests subscribe to it from their own calendar app.</p>
+                                <p class="text-gray-600 dark:text-gray-400">You get yourname.getvnt.com. Put it in your bio, print the QR code on a poster, embed the calendar in your own site, or let guests subscribe to it from their own calendar app.</p>
                             </div>
                             <div class="es-step es-step-2 relative ltr:pl-20 rtl:pr-20">
                                 <span class="absolute top-0 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 text-xl font-bold text-white shadow-lg shadow-emerald-500/30 ltr:left-0 rtl:right-0">3</span>
@@ -1742,7 +1742,7 @@
                                     <span class="h-3 w-3 rounded-full bg-[#28C840]"></span>
                                 </span>
                                 <span class="mx-auto rounded-lg bg-white px-4 py-1 text-xs font-medium text-gray-500 shadow-sm dark:bg-white/10 dark:text-gray-400">
-                                    <span class="es-type-url" data-full="blue-note.eventschedule.com">blue-note.eventschedule.com</span><span class="es-caret"></span>
+                                    <span class="es-type-url" data-full="blue-note.getvnt.com">blue-note.getvnt.com</span><span class="es-caret"></span>
                                 </span>
                                 <span class="w-14"></span>
                             </div>
@@ -1779,7 +1779,7 @@
                                 <div class="es-scene es-scene-1 flex flex-col items-center justify-center gap-5 p-6">
                                     <div class="es-pop flex items-center gap-3 rounded-2xl border border-blue-200 bg-blue-50 px-6 py-4 dark:border-blue-500/30 dark:bg-blue-500/10" style="--i: 0;">
                                         <svg aria-hidden="true" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
-                                        <span class="font-mono text-sm font-semibold text-gray-900 dark:text-white">blue-note.eventschedule.com</span>
+                                        <span class="font-mono text-sm font-semibold text-gray-900 dark:text-white">blue-note.getvnt.com</span>
                                         <span class="rounded-lg bg-white px-2.5 py-1 text-xs font-semibold text-gray-600 shadow-sm dark:bg-white/10 dark:text-gray-300">Copy</span>
                                     </div>
                                     <div class="flex flex-wrap justify-center gap-2">
@@ -1841,20 +1841,20 @@
             // The interest list (EventInterestController) carries no plan check either. CalDAV has no inbound
             // delete sync - applyInboundDeletion() is called only by the Google and Microsoft
             // services - so the deletion choice is stated for those two only.
-            ['q' => 'Is Event Schedule free?', 'a' => 'Yes, Event Schedule is free to use with unlimited events, unlimited schedules and unlimited free registration. Pro and Enterprise plans add paid ticket sales, event boosting, custom branding, and AI image generation.'],
-            ['q' => 'Can I sell tickets with Event Schedule?', 'a' => 'Yes, with zero platform fees. A ticket that carries a price needs the Pro plan, while free registration stays unlimited on every plan. Create as many ticket types as you need and scan the QR code on every ticket at the door, on any plan. Pro also adds extras like parking or merchandise, promo codes and a waitlist for sold-out tickets.'],
+            ['q' => 'Is Getvnt free?', 'a' => 'Yes, Getvnt is free to use with unlimited events, unlimited schedules and unlimited free registration. Pro and Enterprise plans add paid ticket sales, event boosting, custom branding, and AI image generation.'],
+            ['q' => 'Can I sell tickets with Getvnt?', 'a' => 'Yes, with zero platform fees. A ticket that carries a price needs the Pro plan, while free registration stays unlimited on every plan. Create as many ticket types as you need and scan the QR code on every ticket at the door, on any plan. Pro also adds extras like parking or merchandise, promo codes and a waitlist for sold-out tickets.'],
             ['q' => 'Can people get notified when tickets go on sale?', 'a' => 'Yes, on every plan. Switch on the "Notify me" card and, until tickets go on sale, an event page offers "Tell me when tickets go on sale". A visitor leaves an email address, with no account, and gets one email when tickets go on sale, one if it is cancelled, a reminder shortly before it starts, and any notice you choose to send if the date or venue changes. Every email has a one-click unsubscribe, and the event editor shows you how many people are waiting.'],
             ['q' => 'How do I get paid?', 'a' => 'Straight into your own account. You connect your Stripe or PayPal account and payments land there directly, so we never hold your money and never take a cut. Payfast (for events priced in South African rand), Invoice Ninja, a payment link of your own and cash at the door work too. Taking money for a ticket is the Pro plan, and it opens all six.'],
             ['q' => 'Can I refund a ticket?', 'a' => 'Yes, in full or in part, from the Sales page. Refunds come with paid ticketing on Pro, because that is where the money is taken in the first place. Refund a Stripe or PayPal sale and the money goes back to the buyer through that provider. A partial refund leaves the tickets valid, and a full refund puts them back on sale. A sale paid any other way, cash included, can be marked as refunded so your records match.'],
-            ['q' => 'Does Event Schedule sync with my calendar?', 'a' => 'Yes. Google Calendar and Microsoft 365 both sync two ways, with webhook updates so a change made in either place shows up in the other, and you choose whether an event deleted there is kept, marked cancelled or deleted here. Any CalDAV server works as well. Guests can add a single event to Apple, Google or Outlook from the event page, or subscribe to your whole schedule as a live calendar feed that updates itself when a date changes.'],
-            ['q' => 'Can I use my own domain?', 'a' => 'Yes. Every schedule gets a free subdomain such as yourname.eventschedule.com, and Enterprise schedules can serve the whole guest portal from a domain you own, with the certificate issued automatically. Selfhosted installs run on your own domain from day one.'],
-            ['q' => 'Can I selfhost Event Schedule?', 'a' => 'Yes, Event Schedule is 100% open source. Selfhost it on your own server for full control over your data and every paid feature is included, or use the hosted platform at eventschedule.com.'],
-            ['q' => 'Who is Event Schedule for?', 'a' => 'Anyone who keeps a schedule other people need to see: musicians, DJs, comedians, venues, bars, theaters, galleries, studios, markets, libraries and the curators who list them all in one place.'],
+            ['q' => 'Does Getvnt sync with my calendar?', 'a' => 'Yes. Google Calendar and Microsoft 365 both sync two ways, with webhook updates so a change made in either place shows up in the other, and you choose whether an event deleted there is kept, marked cancelled or deleted here. Any CalDAV server works as well. Guests can add a single event to Apple, Google or Outlook from the event page, or subscribe to your whole schedule as a live calendar feed that updates itself when a date changes.'],
+            ['q' => 'Can I use my own domain?', 'a' => 'Yes. Every schedule gets a free subdomain such as yourname.getvnt.com, and Enterprise schedules can serve the whole guest portal from a domain you own, with the certificate issued automatically. Selfhosted installs run on your own domain from day one.'],
+            ['q' => 'Can I selfhost Getvnt?', 'a' => 'Yes, Getvnt is 100% open source. Selfhost it on your own server for full control over your data and every paid feature is included, or use the hosted platform at getvnt.com.'],
+            ['q' => 'Who is Getvnt for?', 'a' => 'Anyone who keeps a schedule other people need to see: musicians, DJs, comedians, venues, bars, theaters, galleries, studios, markets, libraries and the curators who list them all in one place.'],
             // EventRepo::saveEvent() creates a Role for a typed-in act or venue; RoleController
             // renders it through role/show-guest-unclaimed (noindex) until User::claimSchedule(),
             // which needs a verified email or phone matching the row (userHoldsContactFor()), and
             // preserveExistingListers() keeps the schedules that listed them.
-            ['q' => 'Do the performers and venues I list need an account?', 'a' => 'No. Name a performer or venue who is not on Event Schedule and the event page still shows them, and they get a page of their own that says who created it and that they have not claimed it yet. It stays out of search engines until they claim it by signing in with the email address or phone number you entered for them, and the schedules that already list them keep listing them.'],
+            ['q' => 'Do the performers and venues I list need an account?', 'a' => 'No. Name a performer or venue who is not on Getvnt and the event page still shows them, and they get a page of their own that says who created it and that they have not claimed it yet. It stays out of search engines until they claim it by signing in with the email address or phone number you entered for them, and the schedules that already list them keep listing them.'],
         ];
     @endphp
     <x-seo.faq-schema :items="$homeFaqs" />
@@ -1865,7 +1865,7 @@
                     Frequently asked <span class="text-gradient es-gradient-anim">questions</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Everything you need to know about sharing your events and selling tickets with Event Schedule.
+                    Everything you need to know about sharing your events and selling tickets with Getvnt.
                 </p>
             </div>
             <div class="space-y-4" data-reveal-group="80">
@@ -1909,7 +1909,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#4E81FA] via-[#0EA5E9] to-[#22D3EE] px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/40">
                             <span class="relative z-10 flex items-center gap-2">

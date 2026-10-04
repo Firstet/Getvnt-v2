@@ -28,7 +28,7 @@ class DemoService
     /**
      * Demo user email
      */
-    public const DEMO_EMAIL = 'contact@eventschedule.com';
+    public const DEMO_EMAIL = 'contact@getvnt.com';
 
     /**
      * Demo subdomain (auto-login trigger)
@@ -41,12 +41,12 @@ class DemoService
     public const DEMO_ROLE_SUBDOMAIN = 'simpsons';
 
     /**
-     * Demo social links (Event Schedule social media accounts)
+     * Demo social links (Getvnt social media accounts)
      */
     public const DEMO_SOCIAL_LINKS_ALL = [
         '{"url":"https://www.facebook.com/appeventschedule"}',
         '{"url":"https://www.instagram.com/eventschedule/"}',
-        '{"url":"https://youtube.com/@EventSchedule"}',
+        '{"url":"https://youtube.com/@Getvnt"}',
         '{"url":"https://x.com/ScheduleEvent"}',
         '{"url":"https://www.linkedin.com/company/eventschedule/"}',
     ];
@@ -158,7 +158,7 @@ From Duff-fueled nights at Moe\'s to cultural enlightenment at the Aztec Theater
 
 ---
 
-✨ **Mmm... free events page.** Create your own schedule at [eventschedule.com](https://eventschedule.com) - no donuts required (but encouraged).';
+✨ **Mmm... free events page.** Create your own schedule at [getvnt.com](https://getvnt.com) - no donuts required (but encouraged).';
             $role->accept_requests = false;
             $role->social_links = self::getRandomDemoSocialLinks();
             $role->header_image_url = 'demo_header_town.jpg';
@@ -226,7 +226,7 @@ From Duff-fueled nights at Moe\'s to cultural enlightenment at the Aztec Theater
 
 ---
 
-✨ **Mmm... free events page.** Create your own schedule at [eventschedule.com](https://eventschedule.com) - no donuts required (but encouraged).';
+✨ **Mmm... free events page.** Create your own schedule at [getvnt.com](https://getvnt.com) - no donuts required (but encouraged).';
         $role->header_image_url = 'demo_header_town.jpg';
         $role->profile_image_url = 'demo_profile_donuts.jpg';
         $role->font_family = 'Bangers';
@@ -395,7 +395,7 @@ From Duff-fueled nights at Moe\'s to cultural enlightenment at the Aztec Theater
                     $context = stream_context_create([
                         'http' => [
                             'timeout' => 10,
-                            'user_agent' => 'EventSchedule/1.0',
+                            'user_agent' => 'Getvnt/1.0',
                         ],
                     ]);
                     $imageContent = @file_get_contents($url, false, $context);
@@ -948,7 +948,7 @@ Hosting town halls, talent shows, AA meetings, and everything in between since t
         // (the demo's own demo-* roles are dropped and recreated on every run) a concurrent
         // guest view of that same schedule needs an FK shared lock on the very same roles row
         // to insert its analytics_daily counter, while already holding the counter row. That
-        // cycle is the 1213 reported in Sentry as a 500 on demo-troymcclure.eventschedule.com.
+        // cycle is the 1213 reported in Sentry as a 500 on demo-troymcclure.getvnt.com.
         //
         // Wiping first and seeding after the commit keeps each analytics lock to a single
         // autocommit statement, so there is no long-lived lock for a page view to cycle with.
@@ -1820,7 +1820,7 @@ Hosting town halls, talent shows, AA meetings, and everything in between since t
             ],
             [
                 'name' => '🐕 "Two Dozen and One Greyhounds" Dog Show',
-                'description' => "## See My Vest! See My Vest! 🐕\n\nA celebration of dogs! (Not the kind Mr. Burns had in mind.)\n\n> \"See my vest! See my vest! Made from real gorilla chest!\" - Mr. Burns (NOT invited)\n\n### Event Schedule\n- **Greyhound Racing** - No gambling... officially\n- **Santa's Little Helper Agility Course** - Can he do it? (Probably not)\n- **\"Good Dog\" vs \"Bad Dog\" Competition** - Who's a good boy?\n- **Best-Dressed Pet Contest** - Costumes encouraged!\n\n---\n\n### Rules & Regulations\n- All dogs welcome (except robotic ones)\n- Treats allowed\n- Mr. Burns NOT allowed as a judge\n- No discussion of greyhound fur applications\n\n⚠️ *Warning: Do not leave puppies unattended near wealthy industrialists.*\n\n*\"Smithers, release the hounds!\" - NOT happening here.*",
+                'description' => "## See My Vest! See My Vest! 🐕\n\nA celebration of dogs! (Not the kind Mr. Burns had in mind.)\n\n> \"See my vest! See my vest! Made from real gorilla chest!\" - Mr. Burns (NOT invited)\n\n### Getvnt\n- **Greyhound Racing** - No gambling... officially\n- **Santa's Little Helper Agility Course** - Can he do it? (Probably not)\n- **\"Good Dog\" vs \"Bad Dog\" Competition** - Who's a good boy?\n- **Best-Dressed Pet Contest** - Costumes encouraged!\n\n---\n\n### Rules & Regulations\n- All dogs welcome (except robotic ones)\n- Treats allowed\n- Mr. Burns NOT allowed as a judge\n- No discussion of greyhound fur applications\n\n⚠️ *Warning: Do not leave puppies unattended near wealthy industrialists.*\n\n*\"Smithers, release the hounds!\" - NOT happening here.*",
                 'duration' => 3,
                 'group' => 'Special Events',
                 'category_id' => 3,

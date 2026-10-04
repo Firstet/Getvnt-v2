@@ -40,7 +40,7 @@
         <x-primary-button>{{ __('messages.update') }}</x-primary-button>
 
         <div class="text-gray-600 dark:text-gray-400 pt-6"> 
-            {!! __('messages.app_update_tip', ['link' => '<a href="https://github.com/eventschedule/eventschedule/releases/download/' . $version_available . '/eventschedule.zip" class="hover:underline">eventschedule.zip</a>']) !!}
+            {!! __('messages.app_update_tip', ['link' => '<a href="https://github.com/Firstet/Getvnt-v2/releases/download/' . $version_available . '/eventschedule.zip" class="hover:underline">eventschedule.zip</a>']) !!}
         </div>
     @elseif ($version_available === null)
         <div class="text-gray-600 dark:text-gray-400 pb-4">

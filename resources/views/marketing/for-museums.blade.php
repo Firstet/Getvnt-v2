@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Museums"
+        name="Getvnt for Museums"
         description="A museum event calendar for the programme on top of opening hours: recurring guided tours, lecture series, family sessions and late openings, each with its own capacity per date."
         audience="Museums, Science Centers, Heritage Sites & Historic Houses"
         keywords="museum event calendar, museum tour booking, museum programme calendar, lecture series registration, museum membership pass, heritage site events" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a museum's programme online with Event Schedule",
+        "name": "How to put a museum's programme online with Getvnt",
         "description": "The galleries are open every day. The tours, talks and family sessions are the events, and each one is set up once.",
         "step": [
             {
@@ -319,8 +319,8 @@
 
         $faqs = [
             [
-                'q' => 'Does Event Schedule sell general admission to the museum?',
-                'a' => 'It is built for the programme, not the front door. Tours, talks, family sessions, lates and special events are what it handles well: each one is an event with its own date, its own place count and its own page. If your galleries are free to walk into, that is the whole job. If you charge for admission, keep doing that the way you do now and use Event Schedule for everything that happens on top of it.',
+                'q' => 'Does Getvnt sell general admission to the museum?',
+                'a' => 'It is built for the programme, not the front door. Tours, talks, family sessions, lates and special events are what it handles well: each one is an event with its own date, its own place count and its own page. If your galleries are free to walk into, that is the whole job. If you charge for admission, keep doing that the way you do now and use Getvnt for everything that happens on top of it.',
             ],
             [
                 'q' => 'We run the same tour at 11am and 2pm. Is that one event?',
@@ -1005,7 +1005,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-muse-card es-muse-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-muse-muted text-sm">Event Schedule for</div>
+                            <div class="es-muse-muted text-sm">Getvnt for</div>
                             <div class="es-muse-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-muse-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1084,7 +1084,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-museum" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-muse-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

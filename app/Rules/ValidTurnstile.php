@@ -32,7 +32,7 @@ class ValidTurnstile implements ImplicitRule
             return true;
         }
 
-        // Skip validation on custom domains (site key only works on eventschedule.com)
+        // Skip validation on custom domains (site key only works on getvnt.com)
         if (request()->attributes->get('custom_domain_host')) {
             return true;
         }

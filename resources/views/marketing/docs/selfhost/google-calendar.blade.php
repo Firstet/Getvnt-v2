@@ -1,8 +1,8 @@
 <x-docs-page
     key="selfhost/google-calendar"
-    title="Google Calendar Sync Setup for Selfhost - Event Schedule"
-    description="Set up two-way Google Calendar sync on a selfhosted Event Schedule install: OAuth credentials, the webhook secret, the scheduler cron and the queue."
-    lede="Set up and use the Google Calendar integration for two-way sync between Event Schedule and Google Calendar."
+    title="Google Calendar Sync Setup for Selfhost - Getvnt"
+    description="Set up two-way Google Calendar sync on a selfhosted Getvnt install: OAuth credentials, the webhook secret, the scheduler cron and the queue."
+    lede="Set up and use the Google Calendar integration for two-way sync between Getvnt and Google Calendar."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#prerequisites">Prerequisites</x-doc-nav-link>
@@ -65,13 +65,13 @@
         </ol>
 
         <h3 class="doc-subheading">2. OAuth Consent Screen and Scopes</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">Configure the consent screen and add the scopes Event Schedule requests. Anything missing here shows up later as a failed sync rather than a failed sign-in.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Configure the consent screen and add the scopes Getvnt requests. Anything missing here shows up later as a failed sync rather than a failed sign-in.</p>
         <ul class="doc-list mb-6">
             <li><code class="doc-inline-code">https://www.googleapis.com/auth/calendar.events</code> to create, update and delete events</li>
             <li><code class="doc-inline-code">https://www.googleapis.com/auth/calendar.readonly</code> to list calendars and read events for inbound sync</li>
             <li><code class="doc-inline-code">openid</code>, <code class="doc-inline-code">email</code> and <code class="doc-inline-code">profile</code> to identify the connecting account</li>
         </ul>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">While the project is in testing mode, add each account that will connect a calendar as a test user. Event Schedule always requests offline access and forces the consent prompt, so a refresh token is issued on every connect.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">While the project is in testing mode, add each account that will connect a calendar as a test user. Getvnt always requests offline access and forces the consent prompt, so a refresh token is issued on every connect.</p>
 
         <h3 class="doc-subheading">3. OAuth 2.0 Credentials</h3>
         <ol class="doc-list doc-list-numbered mb-6">
@@ -138,7 +138,7 @@
 
         <div class="doc-callout doc-callout-warning mt-6">
             <div class="doc-callout-title">Webhook secret is required for real-time inbound sync</div>
-            <p>Set <code class="doc-inline-code">GOOGLE_WEBHOOK_SECRET</code> to a long random value. Google echoes it back as the <code class="doc-inline-code">X-Goog-Channel-Token</code> header on every change notification, and Event Schedule rejects any notification whose value does not match. Leave it empty and inbound changes only arrive on the 15-minute poll.</p>
+            <p>Set <code class="doc-inline-code">GOOGLE_WEBHOOK_SECRET</code> to a long random value. Google echoes it back as the <code class="doc-inline-code">X-Goog-Channel-Token</code> header on every change notification, and Getvnt rejects any notification whose value does not match. Leave it empty and inbound changes only arrive on the 15-minute poll.</p>
         </div>
 
         <h3 class="doc-subheading">5. Scheduler Cron</h3>
@@ -166,7 +166,7 @@
             <li><strong class="text-gray-900 dark:text-white">Connect an account:</strong> Each user connects their own Google account from <strong class="text-gray-900 dark:text-white">Settings</strong> &rarr; <strong class="text-gray-900 dark:text-white">Google Settings</strong>, in the <strong class="text-gray-900 dark:text-white">Google Calendar</strong> block. The tokens are stored on that user record</li>
             <li><strong class="text-gray-900 dark:text-white">Pick a calendar and a direction:</strong> The schedule owner chooses one of the connected account's calendars and a sync direction on <strong class="text-gray-900 dark:text-white">Integrations</strong> &rarr; <strong class="text-gray-900 dark:text-white">Google Calendar</strong> of the schedule edit page. The setting belongs to the schedule, so two schedules on the same account can behave differently</li>
             <li><strong class="text-gray-900 dark:text-white">Outbound:</strong> Publishing, editing, cancelling or deleting an event pushes the change to the selected calendar, with no extra step</li>
-            <li><strong class="text-gray-900 dark:text-white">Inbound:</strong> Google change notifications post to the webhook endpoint, and Event Schedule reads the changes with an incremental sync</li>
+            <li><strong class="text-gray-900 dark:text-white">Inbound:</strong> Google change notifications post to the webhook endpoint, and Getvnt reads the changes with an incremental sync</li>
             <li><strong class="text-gray-900 dark:text-white">Polling fallback:</strong> The 15-minute <code class="doc-inline-code">google:sync</code> command catches anything the notifications miss, and is the only inbound path on installs without a public URL</li>
             <li><strong class="text-gray-900 dark:text-white">Channel renewal:</strong> The daily <code class="doc-inline-code">google:refresh-webhooks</code> command replaces change channels within three days of expiring</li>
         </ol>
@@ -185,12 +185,12 @@
                 <tbody>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">To Google Calendar</span></td>
-                        <td>Published Event Schedule events appear in Google Calendar</td>
+                        <td>Published Getvnt events appear in Google Calendar</td>
                         <td>Not needed, and an existing one is removed</td>
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">From Google Calendar</span></td>
-                        <td>Events from Google Calendar are imported into Event Schedule</td>
+                        <td>Events from Google Calendar are imported into Getvnt</td>
                         <td>Created, so edits arrive quickly</td>
                     </tr>
                     <tr>
@@ -208,7 +208,7 @@
         </div>
 
         <h3 class="doc-subheading">Event Information Synced</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">A Google Calendar entry created by Event Schedule carries:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">A Google Calendar entry created by Getvnt carries:</p>
         <ul class="doc-list mb-6">
             <li>The event name, as the Google event title</li>
             <li>The event description. If the schedule has a <strong class="text-gray-900 dark:text-white">Calendar Description Template</strong> set on <strong class="text-gray-900 dark:text-white">Integrations</strong> &rarr; <strong class="text-gray-900 dark:text-white">Advanced</strong>, the rendered template is sent instead (see the <a href="{{ route('marketing.docs.creating_schedules') }}#available-variables" class="doc-link">available variables</a>). On an update with no template and an empty description, no description is sent, so notes you typed on the Google copy survive</li>
@@ -219,7 +219,7 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">What is not sent</div>
-            <p>Only the fields above leave Event Schedule: images, ticket types, prices and attendees stay here. Draft events are never pushed, so an event first appears on the calendar when you publish it. Event Schedule also does not send a recurrence rule, so a recurring event becomes a single Google entry on the series start date rather than a repeating series. Use the schedule's iCal feed or the .ics download when you need every date of a series in a calendar app.</p>
+            <p>Only the fields above leave Getvnt: images, ticket types, prices and attendees stay here. Draft events are never pushed, so an event first appears on the calendar when you publish it. Getvnt also does not send a recurrence rule, so a recurring event becomes a single Google entry on the series start date rather than a repeating series. Use the schedule's iCal feed or the .ics download when you need every date of a series in a calendar app.</p>
         </div>
 
         <h3 class="doc-subheading">Importing From Google</h3>
@@ -233,7 +233,7 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Appointment bookings are protected</div>
-            <p>An event created by an appointment booking is owned by Event Schedule. Inbound sync never rewrites its name, description or time, so moving the Google copy will not move a customer's booking.</p>
+            <p>An event created by an appointment booking is owned by Getvnt. Inbound sync never rewrites its name, description or time, so moving the Google copy will not move a customer's booking.</p>
         </div>
 
         <h3 class="doc-subheading">Per-Event Sync Status</h3>
@@ -253,7 +253,7 @@
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Synced to Google Calendar</span></td>
-                        <td>The event has a copy on the calendar, and Event Schedule remembers which calendar it lives on. The button reads "Remove from Google Calendar"</td>
+                        <td>The event has a copy on the calendar, and Getvnt remembers which calendar it lives on. The button reads "Remove from Google Calendar"</td>
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Section hidden</span></td>
@@ -270,7 +270,7 @@
                 <thead>
                     <tr>
                         <th>Setting</th>
-                        <th>What happens in Event Schedule</th>
+                        <th>What happens in Getvnt</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -301,7 +301,7 @@
             <li>Saving a schedule with an inbound direction creates a Google change channel that posts to the webhook endpoint, so calendar edits show up within moments. If the channel cannot be created the save still succeeds, the failure is logged, and inbound changes fall back to the poll</li>
             <li>The 15-minute <code class="doc-inline-code">google:sync</code> command polls for changes as a fallback, and is the main path on installs with no public URL. It uses the schedule owner's connected account</li>
             <li>The daily <code class="doc-inline-code">google:refresh-webhooks</code> command replaces channels that are within three days of expiring</li>
-            <li>Inbound sync is incremental: Event Schedule stores Google's sync cursor, so each run fetches only what changed. If Google rejects the stored cursor, which happens after a long gap or a calendar switch, one full sync runs to rebuild it</li>
+            <li>Inbound sync is incremental: Getvnt stores Google's sync cursor, so each run fetches only what changed. If Google rejects the stored cursor, which happens after a long gap or a calendar switch, one full sync runs to rebuild it</li>
             <li>The first full sync covers a window from 30 days ago to 365 days ahead</li>
             <li>Inbound work is serialized per schedule, so the webhook and the poll cannot import the same event twice</li>
         </ul>
@@ -585,7 +585,7 @@
             </div>
 
             <div class="doc-field">
-                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Google Calendar changes do not reach Event Schedule</h4>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Google Calendar changes do not reach Getvnt</h4>
                 <ul class="doc-list text-sm">
                     <li>Inbound sync needs From Google Calendar or Bidirectional Sync</li>
                     <li>For real-time notifications, the app needs a public HTTPS URL on a domain verified with Google, and <code class="doc-inline-code">GOOGLE_WEBHOOK_SECRET</code> must be set; notifications with a mismatched token are rejected. When Google refuses the channel the save still succeeds and the error is only visible in the log</li>
@@ -616,7 +616,7 @@
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Leftover events after switching calendars or accounts</h4>
                 <ul class="doc-list text-sm">
                     <li>Save the schedule with the new calendar selected, then run "Resync to Google Calendar" so old copies are removed and fresh ones are created</li>
-                    <li>Events synced before Event Schedule started recording which calendar each copy lived on cannot be cleaned up automatically. Delete those few leftovers in Google Calendar by hand</li>
+                    <li>Events synced before Getvnt started recording which calendar each copy lived on cannot be cleaned up automatically. Delete those few leftovers in Google Calendar by hand</li>
                     <li>Nothing is removed from the calendar of an account that has already been disconnected, because the app no longer holds a token for it</li>
                 </ul>
             </div>

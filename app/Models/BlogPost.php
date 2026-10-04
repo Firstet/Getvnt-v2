@@ -214,7 +214,7 @@ class BlogPost extends Model
     /**
      * Undo the old prompt's markdown-inside-an-attribute links.
      *
-     * config/ai_prompts.php used to show the model `href="[https://www.eventschedule.com/x](https://www.eventschedule.com/x)"`,
+     * config/ai_prompts.php used to show the model `href="[https://www.getvnt.com/x](https://www.getvnt.com/x)"`,
      * a markdown link pasted into an HTML attribute, and the model copied it faithfully. The
      * purifier then percent-encodes the brackets into a RELATIVE path, so on blog.{domain} the
      * link 404s. The first URL is the one that was meant. Stored bodies are never rewritten.
@@ -313,12 +313,12 @@ class BlogPost extends Model
      * The document <title>: the brand suffix only when it still fits in 60 characters.
      *
      * The AI generator writes a 50 to 60 character meta_title of its own, so a blanket
-     * " | Event Schedule" pushed most posts to 70 to 80 characters and Google truncated them.
+     * " | Getvnt" pushed most posts to 70 to 80 characters and Google truncated them.
      */
     public function pageTitle(): string
     {
         $title = trim((string) $this->meta_title);
-        $suffix = ' | Event Schedule';
+        $suffix = ' | Getvnt';
 
         if (mb_strlen($title.$suffix) <= 60) {
             return $title.$suffix;

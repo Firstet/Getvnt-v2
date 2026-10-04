@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Open Mic and Reading Schedules for Poets | Event Schedule</x-slot>
+    <x-slot name="title">Open Mic and Reading Schedules for Poets | Getvnt</x-slot>
     <x-slot name="description">Run open mic sign-ups, reading series, and workshops from one link. Free registration with a capacity limit, and recurring dates that skip the holidays.</x-slot>
     <x-slot name="breadcrumbTitle">For Spoken Word</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Spoken Word"
+        name="Getvnt for Spoken Word"
         description="Run open mic sign-ups, reading series, and workshops from one link. Free registration with a capacity limit, recurring dates, and zero platform fees on tickets."
         audience="Poets, Storytellers, and Open Mic Hosts"
         keywords="open mic schedule, poetry reading calendar, open mic sign up sheet, spoken word event management, poetry slam scheduling, storytelling event calendar, free open mic software" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to run an open mic sign-up list with Event Schedule",
+        "name": "How to run an open mic sign-up list with Getvnt",
         "description": "Put your open mic list online in three steps.",
         "step": [
             {
@@ -429,8 +429,8 @@
     @php
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for open mics and readings?',
-                'a' => 'Yes. Sharing your schedule, running recurring nights, taking free registrations with a capacity limit, generating a flyer for each night, and syncing with Google, Outlook, or CalDAV are all free forever, and no ceiling sits on the sign-ups. Charging at the door is the Pro plan at '.plan_price($proMonthly).' a month, which also adds custom questions on the sign-up form. Event Schedule charges zero platform fees on tickets either way.',
+                'q' => 'Is Getvnt free for open mics and readings?',
+                'a' => 'Yes. Sharing your schedule, running recurring nights, taking free registrations with a capacity limit, generating a flyer for each night, and syncing with Google, Outlook, or CalDAV are all free forever, and no ceiling sits on the sign-ups. Charging at the door is the Pro plan at '.plan_price($proMonthly).' a month, which also adds custom questions on the sign-up form. Getvnt charges zero platform fees on tickets either way.',
             ],
             [
                 'q' => 'Can poets sign up for a slot themselves?',
@@ -450,7 +450,7 @@
             ],
             [
                 'q' => 'Can I sell tickets to a featured reading?',
-                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a ticket carry a price. Take the money through your own Stripe or PayPal account, or by payment link or cash, with the QR code scanned at the door like any other. Pro adds the live check-in dashboard as well, and it is also what a season pass across the whole series needs. A night you run for nothing takes free registrations on any plan. Event Schedule takes zero platform fees on any of it, so the only deduction is your payment provider\'s own, and a Stripe or PayPal sale can be refunded in full or in part from the Sales page.',
+                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a ticket carry a price. Take the money through your own Stripe or PayPal account, or by payment link or cash, with the QR code scanned at the door like any other. Pro adds the live check-in dashboard as well, and it is also what a season pass across the whole series needs. A night you run for nothing takes free registrations on any plan. Getvnt takes zero platform fees on any of it, so the only deduction is your payment provider\'s own, and a Stripe or PayPal sale can be refunded in full or in part from the Sales page.',
             ],
             [
                 'q' => 'Can people ask to hear about a night before sign-up opens?',
@@ -458,7 +458,7 @@
             ],
             [
                 'q' => 'A bookstore listed me as its feature. Is there a page for me already?',
-                'a' => 'There may be. When a bookstore, venue or series names a reader who is not on Event Schedule, its event page still shows that reader by name, and the app creates a page for them. That page says which schedule created it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. If it carries your email address, create an account or sign in with that address and press Claim this page: it becomes your schedule, and the series that already listed you keep listing you without asking again, while anyone new sends a request you accept. If it is not you, This is not me takes it down.',
+                'a' => 'There may be. When a bookstore, venue or series names a reader who is not on Getvnt, its event page still shows that reader by name, and the app creates a page for them. That page says which schedule created it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. If it carries your email address, create an account or sign in with that address and press Claim this page: it becomes your schedule, and the series that already listed you keep listing you without asking again, while anyone new sends a request you accept. If it is not you, This is not me takes it down.',
             ],
         ];
 
@@ -901,7 +901,7 @@
                                 <span class="es-sheet-plan es-sheet-plan-pro">Pro</span>
                             </div>
                             <p class="mb-4 text-gray-600 dark:text-gray-400">
-                                Take payment through Stripe or PayPal, or cash on the night, and sell straight from the schedule with QR check-in at the door. Putting a price on the night is the Pro plan, and Event Schedule takes zero platform fees, so what is left after processing is yours.
+                                Take payment through Stripe or PayPal, or cash on the night, and sell straight from the schedule with QR check-in at the door. Putting a price on the night is the Pro plan, and Getvnt takes zero platform fees, so what is left after processing is yours.
                             </p>
                             <p class="text-sm text-gray-600 dark:text-gray-400">
                                 Announce the feature before tickets are on sale, switch on the "Notify me" card, and people can leave just an email address to hear when they go on sale. Pro adds discount codes for the regulars and a pass that covers a whole season of the series.
@@ -1252,7 +1252,7 @@
                                 <span class="es-sheet-num">01</span>
                                 <span class="es-sheet-hand text-2xl" id="es-sheet-signtext">your-name</span>
                             </div>
-                            <p class="mt-2 font-mono text-[0.7rem] text-[#6b6459]">.eventschedule.com</p>
+                            <p class="mt-2 font-mono text-[0.7rem] text-[#6b6459]">.getvnt.com</p>
                         </div>
                     </div>
 
@@ -1261,7 +1261,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-sheet-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

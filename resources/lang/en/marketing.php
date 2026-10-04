@@ -8,25 +8,25 @@
  */
 
 return [
-    'home_title' => 'Event Schedule - Free Event Calendar, Ticketing & Booking',
+    'home_title' => 'Getvnt - Free Event Calendar, Ticketing & Booking',
     'home_description' => 'Publish your events on one calendar page, take unlimited free registrations and sell tickets with zero platform fees. Paid ticketing is on the Pro plan.',
 
-    'pricing_title' => 'Event Schedule Pricing: Free Plan, Zero Platform Fees',
+    'pricing_title' => 'Getvnt Pricing: Free Plan, Zero Platform Fees',
     'pricing_description' => 'Start free with unlimited events and unlimited free registration. Pro adds paid ticketing, Enterprise adds reserved seating. Zero platform fees on every plan.',
 
     'features_title' => 'Event Management Software: Every Feature, No Platform Fees',
     'features_description' => 'Every feature in five chapters: tickets through Stripe or PayPal with no platform fee, two-way calendar sync, newsletters, AI import and analytics.',
 
-    'about_title' => 'About Event Schedule | Open Source Event Management Platform',
-    'about_description' => 'Who builds Event Schedule, the license it ships under, where the source lives, and a list of what it does not do. Open source, with zero platform fees.',
+    'about_title' => 'About Getvnt | Open Source Event Management Platform',
+    'about_description' => 'Who builds Getvnt, the license it ships under, where the source lives, and a list of what it does not do. Open source, with zero platform fees.',
 
     'selfhost_title' => 'Selfhosted Event Calendar: Every Feature Free on Your Server',
-    'selfhost_description' => 'Selfhost Event Schedule on your own server and every Pro and Enterprise feature is included free. Open source, one-click installs, no platform fees.',
+    'selfhost_description' => 'Selfhost Getvnt on your own server and every Pro and Enterprise feature is included free. Open source, one-click installs, no platform fees.',
 
-    'ticketing_title' => 'Event Ticketing Software, No Platform Fees - Event Schedule',
+    'ticketing_title' => 'Event Ticketing Software, No Platform Fees - Getvnt',
     'ticketing_description' => 'Sell tickets from your own event page with zero platform fees. Stripe or PayPal checkout, full or partial refunds, and QR check-in from any phone.',
 
-    'ai_title' => 'AI Event Import: Turn a Flyer into an Event | Event Schedule',
+    'ai_title' => 'AI Event Import: Turn a Flyer into an Event | Getvnt',
     'ai_description' => 'Paste the text or drop a flyer and AI fills in the event: date, venue, performers, price. Free on every plan, with translation into 12 languages.',
 
     'calendar_sync_title' => 'Two-Way Calendar Sync for Google, Outlook & CalDAV',

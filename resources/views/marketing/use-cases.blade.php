@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">Event Scheduling Software for Any Industry | Event Schedule</x-slot>
+    <x-slot name="title">Event Scheduling Software for Any Industry | Getvnt</x-slot>
     <x-slot name="description">Event scheduling software for musicians, venues, curators, theaters and online events. Sell tickets with zero platform fees. Free forever, open source.</x-slot>
     <x-slot name="breadcrumbTitle">Use Cases</x-slot>
 
@@ -33,15 +33,15 @@
             ['url' => '/for-live-concerts', 'name' => 'Live Concerts', 'blurb' => 'List a hybrid show once, with the room and the join link on one event, and email fans directly.', 'tags' => ['Acoustic Sets', 'Rock Shows', 'Jazz Nights', 'Festival Streams', 'Album Release Shows', 'DJ Sets'], 'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />'],
         ];
         $faqs = [
-            ['q' => 'Is Event Schedule free?', 'a' => 'Yes. Event Schedule is free forever for creating and sharing your event calendar, and free registration is unlimited on it, scanned at the door like any other ticket. Charging for a ticket is a Pro feature, and Pro adds the API and the live check-in dashboard too; Enterprise adds custom domains and extra team members. There are no platform fees on ticket sales, so the only fee is your payment provider\'s own, such as Stripe\'s or PayPal\'s.'],
-            ['q' => 'What types of events can I manage?', 'a' => 'Any kind. Musicians share gig schedules, bars list their weekly lineups, theaters manage their season calendars, fitness instructors schedule classes, and conference organizers run multi-day programs. Event Schedule works for in-person events, online events, and hybrid events across every industry.'],
+            ['q' => 'Is Getvnt free?', 'a' => 'Yes. Getvnt is free forever for creating and sharing your event calendar, and free registration is unlimited on it, scanned at the door like any other ticket. Charging for a ticket is a Pro feature, and Pro adds the API and the live check-in dashboard too; Enterprise adds custom domains and extra team members. There are no platform fees on ticket sales, so the only fee is your payment provider\'s own, such as Stripe\'s or PayPal\'s.'],
+            ['q' => 'What types of events can I manage?', 'a' => 'Any kind. Musicians share gig schedules, bars list their weekly lineups, theaters manage their season calendars, fitness instructors schedule classes, and conference organizers run multi-day programs. Getvnt works for in-person events, online events, and hybrid events across every industry.'],
             // No gateway is gated by tier - there is no isPro() anywhere in app/Services/Payments/.
             // What is gated is the PRICE on the ticket: Event::canSellPaidTickets() is Pro/Enterprise.
             // Payfast settles in rand only (PayfastGateway), so it is offered on ZAR events only.
-            ['q' => 'Can I sell tickets with Event Schedule?', 'a' => 'Yes, on Pro. Sell them on your event page and take payment through Stripe, PayPal, Invoice Ninja, Payfast (South African rand only), a payment link or cash. A ticket that carries a price needs Pro; a ticket type at no charge, and free registration with a capacity, run on every plan with no monthly ceiling. Buyers get a QR code ticket, and scanning it at the door is free on every plan; the live check-in dashboard is part of Pro. There are no platform fees, so you pay only your payment provider\'s own processing fee.'],
-            ['q' => 'What if a performer or venue I list is not on Event Schedule?', 'a' => 'Their name still shows on your event, and Event Schedule creates a page for them that says which schedule listed them and that they have not claimed it yet. The page stays out of search engines until it is claimed. They claim it by signing in with the email address you entered for them, which makes the page theirs, and the dates you already listed them on stay where they are.'],
-            ['q' => 'Does Event Schedule work for online events?', 'a' => 'Yes. Paste the link people join on into any event and the whole link is printed on their ticket, while the public listing shows only the domain. It is a link and not an integration, so Zoom, Google Meet, YouTube Live, Twitch or a page on your own site all work the same way. You can sell tickets for virtual events, run webinars, schedule online classes, and manage virtual conferences.'],
-            ['q' => 'Is Event Schedule open source?', 'a' => 'Yes. Event Schedule is fully open source. You can use the hosted version at eventschedule.com or selfhost it on your own server for complete control over your data and branding. The selfhosted version includes all features with no limits.'],
+            ['q' => 'Can I sell tickets with Getvnt?', 'a' => 'Yes, on Pro. Sell them on your event page and take payment through Stripe, PayPal, Invoice Ninja, Payfast (South African rand only), a payment link or cash. A ticket that carries a price needs Pro; a ticket type at no charge, and free registration with a capacity, run on every plan with no monthly ceiling. Buyers get a QR code ticket, and scanning it at the door is free on every plan; the live check-in dashboard is part of Pro. There are no platform fees, so you pay only your payment provider\'s own processing fee.'],
+            ['q' => 'What if a performer or venue I list is not on Getvnt?', 'a' => 'Their name still shows on your event, and Getvnt creates a page for them that says which schedule listed them and that they have not claimed it yet. The page stays out of search engines until it is claimed. They claim it by signing in with the email address you entered for them, which makes the page theirs, and the dates you already listed them on stay where they are.'],
+            ['q' => 'Does Getvnt work for online events?', 'a' => 'Yes. Paste the link people join on into any event and the whole link is printed on their ticket, while the public listing shows only the domain. It is a link and not an integration, so Zoom, Google Meet, YouTube Live, Twitch or a page on your own site all work the same way. You can sell tickets for virtual events, run webinars, schedule online classes, and manage virtual conferences.'],
+            ['q' => 'Is Getvnt open source?', 'a' => 'Yes. Getvnt is fully open source. You can use the hosted version at getvnt.com or selfhost it on your own server for complete control over your data and branding. The selfhosted version includes all features with no limits.'],
         ];
 
         // The three schedule-type hubs and the developer page are not cards in the
@@ -400,7 +400,7 @@
                     <span class="h-2.5 w-2.5 rounded-full" style="background-color: #28C840;"></span>
                     <span dir="ltr" class="ms-3 font-mono text-[11px] text-gray-400">GET /api/events</span>
                 </div>
-                <pre dir="ltr" class="overflow-x-auto font-mono text-[12px] leading-relaxed text-gray-300 sm:text-[13px]"><code><span class="text-emerald-400">$ curl https://eventschedule.com/api/events \
+                <pre dir="ltr" class="overflow-x-auto font-mono text-[12px] leading-relaxed text-gray-300 sm:text-[13px]"><code><span class="text-emerald-400">$ curl https://getvnt.com/api/events \
     -H "X-API-Key: $EVENTSCHEDULE_KEY"</span>
 
 {
@@ -410,7 +410,7 @@
       "name": "Jazz Night",
       "starts_at": "2026-03-15 20:00:00",
       "venue_name": "Blue Note",
-      "url": "https://bluenote.eventschedule.com/jazz-night/8Q2Kx"
+      "url": "https://bluenote.getvnt.com/jazz-night/8Q2Kx"
     }
   ],
   "meta": { "per_page": 100, "total": 42 }
@@ -487,7 +487,7 @@
                     Frequently asked <span class="text-gradient-usecases">questions</span>
                 </h2>
                 <p class="text-lg text-gray-500 dark:text-gray-400" data-reveal>
-                    Common questions about Event Schedule.
+                    Common questions about Getvnt.
                 </p>
             </div>
 
@@ -533,7 +533,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                             <span class="relative z-10 flex items-center gap-2">

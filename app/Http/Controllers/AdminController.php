@@ -1902,7 +1902,7 @@ class AdminController extends Controller
         $role->plan_expires = $validated['plan_expires'];
 
         // Record that this paid plan was granted by hand rather than bought, which is what makes
-        // the guest footer carry the Event Schedule credit.
+        // the guest footer carry the Getvnt credit.
         //
         // Two guards. The subscription check keeps editing a paying customer's plan_term from
         // labelling them as comped. The isDirty check keeps a re-save that leaves the plan alone

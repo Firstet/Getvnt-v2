@@ -49,7 +49,7 @@ class RegisteredUserController extends Controller
             session(['signup_role_type' => $requestedType]);
         }
 
-        // The name typed into the homepage's "your-name.eventschedule.com" box, kept the same way
+        // The name typed into the homepage's "your-name.getvnt.com" box, kept the same way
         // so RoleController::create() can start the new schedule with it. Only the shape that box
         // produces (resources/js/marketing-home.js initClaim()); anything else is ignored.
         $requestedName = request('schedule');

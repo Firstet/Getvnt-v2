@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Dance Groups"
+        name="Getvnt for Dance Groups"
         description="One schedule for the class, the rehearsal and the show. Weekly classes run as recurring events with per-class capacity, rehearsal calls stay members-only, and passes cover a set number of visits."
         audience="Dance Groups"
         keywords="dance studio schedule, dance class calendar, class card, dance company rehearsal schedule, recital ticketing, dance recurring classes" />
@@ -412,8 +412,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for dance groups?',
-                'a' => 'The parts you use every week are free forever: weekly classes as recurring events, date exceptions for the weeks you are closed, free registration with a capacity per class, sub-schedules, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. A free class takes as many names as it has places for, every month, with nothing counting them. What Pro buys at '.plan_price($proMonthly).' a month is charging for a place at all, and the pass, which is the part a studio actually needs: a 10-visit card, a membership or a season pass. Event Schedule charges zero platform fees on any of it.',
+                'q' => 'Is Getvnt free for dance groups?',
+                'a' => 'The parts you use every week are free forever: weekly classes as recurring events, date exceptions for the weeks you are closed, free registration with a capacity per class, sub-schedules, two-way calendar sync, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. A free class takes as many names as it has places for, every month, with nothing counting them. What Pro buys at '.plan_price($proMonthly).' a month is charging for a place at all, and the pass, which is the part a studio actually needs: a 10-visit card, a membership or a season pass. Getvnt charges zero platform fees on any of it.',
             ],
             [
                 'q' => 'How do I set up a weekly class?',
@@ -667,7 +667,7 @@
                         <div class="p-6 sm:p-8">
                             <div class="mb-5 flex items-center justify-between gap-3">
                                 <p class="es-barre-tag">Your public page</p>
-                                <span class="es-barre-muted font-mono text-xs">yourstudio.eventschedule.com</span>
+                                <span class="es-barre-muted font-mono text-xs">yourstudio.getvnt.com</span>
                             </div>
                             <div class="space-y-2.5">
                                 @foreach ([
@@ -834,7 +834,7 @@
                     </div>
 
                     <p class="es-barre-muted mt-5 border-t border-[rgba(15,26,24,0.1)] pt-4 text-xs dark:border-[rgba(230,237,235,0.12)]">
-                        Payment goes through your own Stripe or PayPal account, Invoice Ninja, Payfast (in rand), a payment link or cash at the door. Event Schedule takes no cut of it.
+                        Payment goes through your own Stripe or PayPal account, Invoice Ninja, Payfast (in rand), a payment link or cash at the door. Getvnt takes no cut of it.
                     </p>
                 </div>
 
@@ -1148,7 +1148,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-barre-card es-barre-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-barre-muted text-sm">Event Schedule for</div>
+                            <div class="es-barre-muted text-sm">Getvnt for</div>
                             <div class="es-barre-ink text-lg font-semibold">{!! $relName !!}</div>
                         </div>
                         <svg aria-hidden="true" class="es-barre-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1231,7 +1231,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-studio" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-barre-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

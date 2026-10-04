@@ -1,4 +1,4 @@
-/* Event Schedule first-party accessibility widget (classes on <html>) */
+/* Getvnt first-party accessibility widget (classes on <html>) */
 
 html.es-a11y-font-step-1 {
     font-size: 106.25%;
@@ -62,7 +62,7 @@ html.es-a11y-cta-offset .es-credit-chip {
     padding-bottom: calc(var(--es-a11y-cta-clearance, 0px) + 1rem);
 }
 
-/* Keep the "Powered by Event Schedule" credit chip clear of the widget. The chip is the last
+/* Keep the "Powered by Getvnt" credit chip clear of the widget. The chip is the last
    in-flow element on a guest page (layouts/app-guest.blade.php), so at full scroll the fixed
    widget lands on top of it. Reserve room underneath: 1.5rem for the widget's own bottom
    offset + 3rem launcher pill + 0.75rem gap. padding, not margin - a bottom margin on the

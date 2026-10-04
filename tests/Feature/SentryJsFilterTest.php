@@ -36,7 +36,7 @@ class SentryJsFilterTest extends TestCase
         .'/Contents/Resources/Honey.safariextension/h0.js';
 
     /** A frame in our own Vite output, for the stacks that mix ours with a third party's. */
-    private const OUR_FRAME = 'https://app.eventschedule.com/build/assets/app-abc123.js';
+    private const OUR_FRAME = 'https://app.getvnt.com/build/assets/app-abc123.js';
 
     /**
      * Run each payload through one stage of the rendered partial, in Node.
@@ -186,10 +186,10 @@ class SentryJsFilterTest extends TestCase
                 'type' => 'TypeError',
                 'value' => "Cannot read properties of null (reading 'dataset')",
                 'stacktrace' => ['frames' => [[
-                    'filename' => 'https://house-show.eventschedule.com/build/assets/app-abc123.js',
+                    'filename' => 'https://house-show.getvnt.com/build/assets/app-abc123.js',
                 ]]],
             ]]],
-            'request' => ['url' => 'https://house-show.eventschedule.com/a-very-star-shaped-back-to-school-bash'],
+            'request' => ['url' => 'https://house-show.getvnt.com/a-very-star-shaped-back-to-school-bash'],
         ], $overrides);
     }
 
@@ -214,7 +214,7 @@ class SentryJsFilterTest extends TestCase
                 ]]],
             ]]],
             'contexts' => ['browser' => ['name' => 'Safari', 'version' => '27.0']],
-            'request' => ['url' => 'https://app.eventschedule.com/loom/schedule?year=2026&month=9'],
+            'request' => ['url' => 'https://app.getvnt.com/loom/schedule?year=2026&month=9'],
         ];
     }
 
@@ -250,7 +250,7 @@ class SentryJsFilterTest extends TestCase
      */
     private function injectedError(array $functions): array
     {
-        $url = 'https://house-show.eventschedule.com/a-very-star-shaped-back-to-school-bash/9V8YDn';
+        $url = 'https://house-show.getvnt.com/a-very-star-shaped-back-to-school-bash/9V8YDn';
 
         return [
             'exception' => ['values' => [[
@@ -284,7 +284,7 @@ class SentryJsFilterTest extends TestCase
                     .'{"availWidth":440,"availHeight":956,"width":440,"height":956} for key screen.',
                 'mechanism' => ['type' => 'onunhandledrejection', 'handled' => false],
             ]]],
-            'request' => ['url' => 'https://house-show.eventschedule.com/a-very-star-shaped-back-to-school-bash'],
+            'request' => ['url' => 'https://house-show.getvnt.com/a-very-star-shaped-back-to-school-bash'],
         ]));
     }
 
@@ -345,7 +345,7 @@ class SentryJsFilterTest extends TestCase
                 'type' => 'TypeError',
                 'value' => "Cannot read properties of undefined (reading 'push')",
                 'stacktrace' => ['frames' => [[
-                    'filename' => 'https://house-show.eventschedule.com/cdn-cgi/scripts/'
+                    'filename' => 'https://house-show.getvnt.com/cdn-cgi/scripts/'
                         .'7d0fa10a/cloudflare-static/rocket-loader.min.js',
                 ]]],
             ]]],
@@ -410,7 +410,7 @@ class SentryJsFilterTest extends TestCase
                 'type' => 'TypeError',
                 'value' => "Cannot read properties of null (reading 'postMessage')",
                 'stacktrace' => ['frames' => [[
-                    'filename' => 'https://house-show.eventschedule.com/build/assets/app-abc123.js',
+                    'filename' => 'https://house-show.getvnt.com/build/assets/app-abc123.js',
                     'function' => 'sendPostMessage',
                 ]]],
             ]]],
@@ -455,7 +455,7 @@ class SentryJsFilterTest extends TestCase
                 'type' => 'InvalidAccessError',
                 'value' => 'The object does not support the operation or argument.',
                 'stacktrace' => ['frames' => [[
-                    'filename' => 'https://house-show.eventschedule.com/build/assets/app-abc123.js',
+                    'filename' => 'https://house-show.getvnt.com/build/assets/app-abc123.js',
                     'function' => 'openSeatMap',
                 ]]],
             ]]],
@@ -573,7 +573,7 @@ class SentryJsFilterTest extends TestCase
     {
         $denied = [
             'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015',
-            'https://house-show.eventschedule.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js',
+            'https://house-show.getvnt.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js',
             'https://static.cloudflareinsights.com/rum.js',
             'chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/content.js',
             'moz-extension://a1b2c3d4-e5f6-4789-abcd-ef0123456789/content.js',
@@ -593,10 +593,10 @@ class SentryJsFilterTest extends TestCase
 
         $kept = [
             self::OUR_FRAME,
-            'https://app.eventschedule.com/loom/schedule?year=2026&month=9',
+            'https://app.getvnt.com/loom/schedule?year=2026&month=9',
             // Near misses on the unanchored entries above.
-            'https://app.eventschedule.com/js/vendor/beacon-loader.js',
-            'https://app.eventschedule.com/build/assets/appex-calendar-abc123.js',
+            'https://app.getvnt.com/js/vendor/beacon-loader.js',
+            'https://app.getvnt.com/build/assets/appex-calendar-abc123.js',
         ];
 
         $this->assertSame(

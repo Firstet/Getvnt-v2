@@ -13,7 +13,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Passes and Subscriptions"
+        name="Getvnt - Passes and Subscriptions"
         description="Multi-use passes redeemable across events: visit passes, memberships, festival passes and season passes, each on a single QR code with its own visit counter." />
     </x-slot>
 
@@ -479,7 +479,7 @@
         <!-- ============================================================ -->
         @php
             $passFaqs = [
-                ['q' => 'Is a pass an auto-renewing subscription?', 'a' => 'No. The buyer pays once and Event Schedule never bills them again. A pass here is a multi-use ticket, not a card kept on file, so when it runs out of visits or reaches its expiry the holder simply buys another. The word subscription is also used for your own Pro or Enterprise plan, which is a different thing entirely and is managed on the Plan tab.'],
+                ['q' => 'Is a pass an auto-renewing subscription?', 'a' => 'No. The buyer pays once and Getvnt never bills them again. A pass here is a multi-use ticket, not a card kept on file, so when it runs out of visits or reaches its expiry the holder simply buys another. The word subscription is also used for your own Pro or Enterprise plan, which is a different thing entirely and is managed on the Plan tab.'],
                 ['q' => 'How many QR codes does a holder get?', 'a' => 'One. A pass is a single redeemable unit - one code with one visit counter - which is why the maximum per order is fixed at one and you never have to set that yourself.'.($walletLive ? ' Saved to Google Wallet it is still one pass, not one per date; on a selfhosted install that button appears once the operator has set up Google Wallet.' : '').' Buying passes as gifts means a separate order for each, and a pass cannot share an order with ordinary single-date tickets.'],
                 ['q' => 'Does a guest use up one of the visits?', 'a' => 'No. Admissions per event is the number of people who may enter at each event, the holder included, and it is counted separately from the visits. A ten-visit pass that admits two is still ten visits, each of which lets two people in. Extra people do count against the event capacity, so an extra admission is only granted while the date still has a free seat.'],
                 ['q' => 'What happens if my schedule drops back to the free plan?', 'a' => 'Passes you already sold keep every setting and the scanner still checks holders in, because taking a sold pass away from the person holding it would be indefensible. What stops is booking dates in advance. The plan is checked when the pass is used, not only when it was sold.'],
@@ -539,7 +539,7 @@
                             <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                                 <input id="es-claim-input" type="text" placeholder="your-studio" autocomplete="off" spellcheck="false" maxlength="30"
                                     class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                                <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                             </div>
                             <a href="{{ app_url('/sign_up') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#0d1418] transition-colors hover:bg-gray-100">
                                 Get Started Free

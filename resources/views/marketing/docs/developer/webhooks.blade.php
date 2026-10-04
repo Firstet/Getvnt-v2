@@ -1,6 +1,6 @@
 <x-docs-page
     key="developer/webhooks"
-    title="Webhooks: Signed Sale and Event Alerts - Event Schedule"
+    title="Webhooks: Signed Sale and Event Alerts - Getvnt"
     description="Signed POST notifications for sales, refunds, installments, events, check-ins and feedback: fourteen event types, HMAC-SHA256 signatures, a delivery log."
     lede="Receive real-time HTTP POST notifications when events happen in your schedules."
     article-description="Signed HTTP POST notifications for sales, refunds, installments, events, check-ins and feedback, with the payload format, signature checks and delivery rules."
@@ -31,7 +31,7 @@
             Webhooks let you receive automatic POST notifications on your own server when something happens in your schedules: a ticket is sold or refunded, an event changes, a ticket is scanned at the door. Instead of polling the API, your application is notified as it happens.
         </p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Each delivery carries an HMAC-SHA256 signature so you can verify the payload really came from Event Schedule, and every delivery is written to a delivery log you can open from your settings.
+            Each delivery carries an HMAC-SHA256 signature so you can verify the payload really came from Getvnt, and every delivery is written to a delivery log you can open from your settings.
         </p>
 
         <div class="doc-callout doc-callout-plan">
@@ -238,7 +238,7 @@
                     <tr><td class="font-mono text-sm">X-Webhook-Event</td><td>The event type (e.g. <code class="doc-inline-code">sale.paid</code>), matching <code class="doc-inline-code">event</code> in the body</td></tr>
                     <tr><td class="font-mono text-sm">X-Webhook-Timestamp</td><td>ISO 8601 time this attempt was sent. The <code class="doc-inline-code">timestamp</code> in the body is fixed when the payload is built and stays the same on every attempt, so this header can be a moment later than it, and on a retry a minute or more later.</td></tr>
                     <tr><td class="font-mono text-sm">Content-Type</td><td><code class="doc-inline-code">application/json</code></td></tr>
-                    <tr><td class="font-mono text-sm">User-Agent</td><td><code class="doc-inline-code">EventSchedule-Webhook/1.0</code></td></tr>
+                    <tr><td class="font-mono text-sm">User-Agent</td><td><code class="doc-inline-code">Getvnt-Webhook/1.0</code></td></tr>
                 </tbody>
             </table>
         </div>

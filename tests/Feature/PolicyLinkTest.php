@@ -9,7 +9,7 @@ use Tests\TestCase;
  * Keeps every link to a legal document going through policy_url().
  *
  * The whole point of issue #116 is that a selfhost install stops sending its users
- * to eventschedule.com's privacy policy and terms. Every consent checkbox in the
+ * to getvnt.com's privacy policy and terms. Every consent checkbox in the
  * app is a copy of its neighbour, so the next one will be pasted from an existing
  * view - and a stray marketing_url('/terms-of-service') silently re-breaks the
  * feature with nothing failing. This test is the thing that fails.

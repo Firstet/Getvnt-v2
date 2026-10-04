@@ -1,6 +1,6 @@
 # Branding Matrix
 
-Which Event Schedule branding a guest page shows, for every combination of deployment mode and
+Which Getvnt branding a guest page shows, for every combination of deployment mode and
 plan tier. Four inputs decide it, read at sixteen render sites, so this file is the single place
 they are written down together. Keep it in sync when any of those sites change.
 
@@ -9,13 +9,13 @@ they are written down together. Keep it in sync when any of those sites change.
 | Input | Source | Meaning |
 |---|---|---|
 | `config('app.hosted')` | `IS_HOSTED`, `config/app.php` | A multi-tenant platform with live plan tiers and Stripe |
-| `config('app.is_nexus')` | `IS_NEXUS`, `config/app.php` | This install *is* eventschedule.com. Independent of `hosted` |
+| `config('app.is_nexus')` | `IS_NEXUS`, `config/app.php` | This install *is* getvnt.com. Independent of `hosted` |
 | `Role::actualPlanTier()` | `app/Models/Role.php` | `'free' \| 'pro' \| 'enterprise'`; short-circuits to `'enterprise'` when not hosted |
 | `Role::servesOnCustomDomain()` | `app/Models/Role.php` | The schedule *is* the site: `custom_domain` + `direct` + `active`. Head metadata only |
 
 The three deployment modes those combine into:
 
-- **nexus** - `IS_HOSTED=true`, `IS_NEXUS=true`. eventschedule.com itself. Ad-free, and no footer
+- **nexus** - `IS_HOSTED=true`, `IS_NEXUS=true`. getvnt.com itself. Ad-free, and no footer
   strip: its free tier carries the chip.
 - **selfhosted SaaS** - `IS_HOSTED=true`, `IS_NEXUS=false`. An operator running their own
   multi-tenant platform, with their own tiers, Stripe and `APP_MARKETING_URL`.
@@ -37,12 +37,12 @@ renders:
 
 - **The strip turns on the tenant's tier, and only on an operator's platform.** It is a growth CTA
   belonging to whoever runs the platform, so it is a free-tier thing and a paid tenant loses it.
-  eventschedule.com does not run one: its free tier carries the chip instead, so
+  getvnt.com does not run one: its free tier carries the chip instead, so
   `showFooterStrip()` is false on the nexus whatever the plan.
 - **The chip turns on the deployment.** It is the license credit, owed by whoever redistributes the
   software, so off the nexus every schedule is owed it whatever its plan. An operator's paying
   tenant is as much a part of that redistribution as their free one, and that tenant's subscription
-  is between them and the operator. eventschedule.com is the only install that sells white-label,
+  is between them and the operator. getvnt.com is the only install that sells white-label,
   so it is the only install where the chip depends on a plan: its free tier carries it, a paid
   plan takes it off, and an Enterprise plan an admin granted by hand keeps it.
 - **The strip wins where the two would meet.** A page carries one credit, so `creditChipReason()`
@@ -80,7 +80,7 @@ Enterprise Stripe subscription.
 | Head metadata: `og:image` | the owner's, or none | the owner's, or none | the owner's, or none | the owner's, or none | the owner's, or none | the owner's, or none |
 | Head metadata: web app manifest | the schedule's own | the schedule's own | the schedule's own | the schedule's own | the schedule's own | the schedule's own |
 | Head metadata: `theme-color` | the accent, or nothing | the accent, or nothing | the accent, or nothing | the accent, or nothing | the accent, or nothing | the accent, or nothing |
-| AP footer (not a guest surface) | support email | support email | support email | support email | support email | "Powered by eventschedule.com" + version |
+| AP footer (not a guest surface) | support email | support email | support email | support email | support email | "Powered by getvnt.com" + version |
 
 The first two rows are mutually exclusive column by column, and that is the invariant a reader
 should be able to check by eye: no cell has a `yes` in both. `GuestBrandingTest::test_no_guest_page_ever_carries_both_credits`
@@ -118,7 +118,7 @@ the head, and `servesOnCustomDomain()` removes that one too.
 
 1. **`marketing_url()` vs the hardcoded domain is a meaningful distinction.** A `marketing_url()`
    link is the *operator's* growth CTA and follows `APP_MARKETING_URL`. A hardcoded
-   `https://eventschedule.com` link is the license attribution and is not the operator's to
+   `https://getvnt.com` link is the license attribution and is not the operator's to
    rebrand. Do not "fix" the chip to use `marketing_url()`.
 2. **The strip and the chip are alternatives, and the strip wins.** `creditChipReason()` answers
    null wherever `showFooterStrip()` is true, so no guest page carries both. The strip exists only
@@ -126,9 +126,9 @@ the head, and `servesOnCustomDomain()` removes that one too.
    asymmetry underneath: off the nexus the chip is owed by the deployment rather than the tier, so
    an operator's *paid* tenants carry it and only their free tier is covered by the strip instead.
    Two consequences that read like bugs and are not. Upgrading a tenant on an operator's platform
-   *adds* the chip rather than removing it. And an operator's free tier carries no Event Schedule
+   *adds* the chip rather than removing it. And an operator's free tier carries no Getvnt
    attribution at all, because their strip links `marketing_url()`, which is their own site: the
-   credit on that page is theirs, not ours. On eventschedule.com the opposite holds: a free
+   credit on that page is theirs, not ours. On getvnt.com the opposite holds: a free
    schedule carries the chip, and upgrading *removes* it.
 3. **`request()->embed` suppresses both layout blocks.** Embeds carry attribution through the
    snippet line and the ticket-frame footer instead, never inside the calendar iframe.
@@ -153,7 +153,7 @@ the head, and `servesOnCustomDomain()` removes that one too.
    while a fallback fires only when the tenant *has* no asset - exactly the free, unfinished
    schedule least able to notice. `og:image` fell back to `/images/social/home.png`, our 1200x630
    marketing card, on five branches of `app-guest.blade.php`, so a logo-less schedule's WhatsApp
-   preview was an Event Schedule advert next to an `og:site_name` bearing their name. Four more
+   preview was an Getvnt advert next to an `og:site_name` bearing their name. Four more
    views (`ticket/view`, `ticket/order`, `installment/pay`, `payments/payfast/redirect`) set no
    `meta` slot at all and inherited the shell's default, which names us outright. **The correct
    fallback in the head is nothing.** Note what that does and does not promise: X with a
@@ -203,7 +203,7 @@ the head, and `servesOnCustomDomain()` removes that one too.
 
 ## SEO note
 
-Nexus tenant pages live on `*.eventschedule.com`, so the free-tier chip's link is an *internal*
+Nexus tenant pages live on `*.getvnt.com`, so the free-tier chip's link is an *internal*
 link - a conversion path, worth nothing as a backlink. Its `utm_source=free-plan` tag is what lets
 the /admin traffic sources report count it; the strip it replaced carried no tag. Genuine external
 dofollow links come from three places only: embed snippets pasted on third-party sites,

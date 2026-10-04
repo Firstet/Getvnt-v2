@@ -17,7 +17,7 @@ use Illuminate\Http\Response;
  * schedule whose analytics were broken - which is exactly how it was reported.
  *
  * Not abort(404): that renders errors/404.blade.php, the PLATFORM page, whose every link is a
- * marketing_url() to eventschedule.com. Serving that on a customer's custom domain hands their
+ * marketing_url() to getvnt.com. Serving that on a customer's custom domain hands their
  * visitors to us. ResolveCustomDomain::isHtmlResponse() now permits 404 so this body still gets
  * host-rewritten onto the custom domain.
  *

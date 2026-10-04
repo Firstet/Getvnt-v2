@@ -1,6 +1,6 @@
 <x-docs-page
     key="managing-schedules"
-    title="Manage Schedules: Team, Requests, Followers - Event Schedule"
+    title="Manage Schedules: Team, Requests, Followers - Getvnt"
     description="Run a schedule day to day: the calendar, templates, appointments, event requests, followers and email subscribers, team access levels and the audit log."
     lede="Everything on the day-to-day side of a schedule: the calendar and its Actions menu, event requests, followers, team access, your plan, and the audit log."
 >
@@ -84,7 +84,7 @@
                     <tr>
                         <td><a href="#followers" class="doc-link">Followers</a></td>
                         <td>People who follow the schedule or signed up by email, and your QR follow code</td>
-                        <td>Always on eventschedule.com; on a selfhosted install, once someone has subscribed</td>
+                        <td>Always on getvnt.com; on a selfhosted install, once someone has subscribed</td>
                     </tr>
                     <tr>
                         <td><a href="#team" class="doc-link">Team</a></td>
@@ -94,7 +94,7 @@
                     <tr>
                         <td><a href="#plan" class="doc-link">Plan</a></td>
                         <td>Subscription, usage allowances, and billing</td>
-                        <td>eventschedule.com only</td>
+                        <td>getvnt.com only</td>
                     </tr>
                 </tbody>
             </table>
@@ -332,7 +332,7 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Free plans get one appointment type</div>
-            <p>Appointment booking itself is free. On eventschedule.com a free schedule can have <strong>one</strong> active appointment type; Pro removes the cap, and also adds paid bookings and the advanced scheduling rules. Selfhosted installs have no cap and no gate.</p>
+            <p>Appointment booking itself is free. On getvnt.com a free schedule can have <strong>one</strong> active appointment type; Pro removes the cap, and also adds paid bookings and the advanced scheduling rules. Selfhosted installs have no cap and no gate.</p>
         </div>
 
         <div class="doc-callout doc-callout-info">
@@ -366,8 +366,8 @@
         <h3 class="doc-subheading">Working through the list</h3>
         <ol class="doc-list doc-list-numbered mb-6">
             <li><strong>View</strong> opens the public page for an event request so you can see the whole thing, and <strong>Edit</strong> opens it in the event form if you want to tidy it up before publishing.</li>
-            <li><strong>Accept</strong> publishes the event on your schedule, or confirms the booking. The person who submitted it is emailed, and a guest who booked an appointment gets their confirmation and calendar invite. On eventschedule.com every email about a booking, to the guest or to you, needs the schedule's own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>.</li>
-            <li><strong>Decline</strong> asks you to confirm, then removes it from your schedule and emails the submitter. Declining a booking also cancels it and frees the slot, but it does not return a payment. If the booking was paid, the email telling you it was cancelled gives the amount and payment reference, so you can return the money in Stripe or your payment provider. To refund from Event Schedule instead, use <strong>Refund Ticket</strong> on the <a href="{{ route('marketing.docs.tickets') }}#managing-sales" class="doc-link">Sales page</a> before you decline: it is only offered while the sale is still paid.</li>
+            <li><strong>Accept</strong> publishes the event on your schedule, or confirms the booking. The person who submitted it is emailed, and a guest who booked an appointment gets their confirmation and calendar invite. On getvnt.com every email about a booking, to the guest or to you, needs the schedule's own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>.</li>
+            <li><strong>Decline</strong> asks you to confirm, then removes it from your schedule and emails the submitter. Declining a booking also cancels it and frees the slot, but it does not return a payment. If the booking was paid, the email telling you it was cancelled gives the amount and payment reference, so you can return the money in Stripe or your payment provider. To refund from Getvnt instead, use <strong>Refund Ticket</strong> on the <a href="{{ route('marketing.docs.tickets') }}#managing-sales" class="doc-link">Sales page</a> before you decline: it is only offered while the sale is still paid.</li>
             <li><strong>Accept All</strong> at the top of the list takes everything in one go, after a confirmation that names the count. There is no bulk decline: declining is one at a time, on purpose.</li>
         </ol>
 
@@ -378,7 +378,7 @@
 
         <h3 class="doc-subheading">Being told about them</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Event Schedule emails owners and admins when new requests arrive. The setting is <strong class="text-gray-900 dark:text-white">New event requests</strong> under <a href="{{ route('marketing.docs.creating_schedules') }}#settings-notifications" class="doc-link">Settings &rarr; Notifications</a>, it is on unless you turn it off, and it is per person rather than per schedule. Viewers are never notified. A team that works from a shared mailbox can add it as the schedule's <a href="{{ route('marketing.docs.creating_schedules') }}#notification-email" class="doc-link">shared notification address</a>, which gets a copy of each request email. If the schedule does not require approval there is nothing to notify about, and no email is sent.
+            Getvnt emails owners and admins when new requests arrive. The setting is <strong class="text-gray-900 dark:text-white">New event requests</strong> under <a href="{{ route('marketing.docs.creating_schedules') }}#settings-notifications" class="doc-link">Settings &rarr; Notifications</a>, it is on unless you turn it off, and it is per person rather than per schedule. Viewers are never notified. A team that works from a shared mailbox can add it as the schedule's <a href="{{ route('marketing.docs.creating_schedules') }}#notification-email" class="doc-link">shared notification address</a>, which gets a copy of each request email. If the schedule does not require approval there is nothing to notify about, and no email is sent.
         </p>
 
         <p class="text-gray-600 dark:text-gray-300 mb-4">
@@ -428,7 +428,7 @@
         </p>
         @else
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            The <strong class="text-gray-900 dark:text-white">Follow</strong> button is part of the hosted version of Event Schedule (eventschedule.com). <a href="{{ route('marketing.docs.newsletters') }}#email-subscribers" class="doc-link">Email subscribers</a> work on every installation, though: the sign-up panel on your schedule and event pages is the capture surface here, and the <strong class="text-gray-900 dark:text-white">Followers</strong> tab appears as soon as you have your first subscriber, listing each address with its status and sign-up date. If your install lets people create accounts, confirming a sign-up also sets up one that follows the schedule, marked with an <strong class="text-gray-900 dark:text-white">Account</strong> badge.
+            The <strong class="text-gray-900 dark:text-white">Follow</strong> button is part of the hosted version of Getvnt (getvnt.com). <a href="{{ route('marketing.docs.newsletters') }}#email-subscribers" class="doc-link">Email subscribers</a> work on every installation, though: the sign-up panel on your schedule and event pages is the capture surface here, and the <strong class="text-gray-900 dark:text-white">Followers</strong> tab appears as soon as you have your first subscriber, listing each address with its status and sign-up date. If your install lets people create accounts, confirming a sign-up also sets up one that follows the schedule, marked with an <strong class="text-gray-900 dark:text-white">Account</strong> badge.
         </p>
         @endif
     </section>
@@ -486,7 +486,7 @@
         <h3 class="doc-subheading">Managing Members</h3>
         <ol class="doc-list doc-list-numbered mb-6">
             <li>Click <strong>Add Member</strong> and give their name and email address. A phone number is optional, and the level defaults to Admin.</li>
-            <li>They are emailed an invitation. If they have not accepted yet, the level column shows a <strong>Resend Invite</strong> button in place of a level, and, on eventschedule.com, a second <strong>SMS</strong> button when you gave a phone number and text messaging is configured.</li>
+            <li>They are emailed an invitation. If they have not accepted yet, the level column shows a <strong>Resend Invite</strong> button in place of a level, and, on getvnt.com, a second <strong>SMS</strong> button when you gave a phone number and text messaging is configured.</li>
             <li>Once they have signed up, the owner can change their level between <strong>Admin</strong> and <strong>Viewer</strong> from the dropdown in that row. It saves as soon as you pick.</li>
             <li><strong>Remove</strong> revokes access. Only the owner can remove someone else; anyone can remove themselves. The owner's own row has no Remove button.</li>
             <li>Sort the list by name or email by clicking the column heading.</li>
@@ -494,12 +494,12 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Team size by plan</div>
-            <p>On the <strong>Free</strong> and <strong>Pro</strong> plans a schedule has a single member: you. Adding anyone else needs the <strong>Enterprise</strong> plan, where the Add Member button becomes active. On eventschedule.com a team is capped at <strong>5 members</strong> in total. Selfhosted installs count as Enterprise, so the button is available there without a subscription.</p>
+            <p>On the <strong>Free</strong> and <strong>Pro</strong> plans a schedule has a single member: you. Adding anyone else needs the <strong>Enterprise</strong> plan, where the Add Member button becomes active. On getvnt.com a team is capped at <strong>5 members</strong> in total. Selfhosted installs count as Enterprise, so the button is available there without a subscription.</p>
         </div>
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">If the plan lapses</div>
-            <p>On eventschedule.com, invited members can only open the admin panel while the schedule is on Enterprise. If it drops to a lower plan they are turned away with a message asking the owner to upgrade, and the owner keeps full access on their own. Nobody is removed, so restoring Enterprise restores their access.</p>
+            <p>On getvnt.com, invited members can only open the admin panel while the schedule is on Enterprise. If it drops to a lower plan they are turned away with a message asking the owner to upgrade, and the owner keeps full access on their own. Nobody is removed, so restoring Enterprise restores their access.</p>
         </div>
 
         <h3 id="transfer-ownership" class="doc-subheading">Transferring Ownership</h3>
@@ -520,7 +520,7 @@
         </div>
 
         <div class="doc-callout doc-callout-info">
-            <div class="doc-callout-title">Billing on eventschedule.com</div>
+            <div class="doc-callout-title">Billing on getvnt.com</div>
             <p>The previous owner is never charged for the schedule again: their subscription is cancelled at the end of the billing period already paid for and their saved card is removed. The schedule keeps its plan until that period ends. Before then the new owner adds their own billing details to keep it, otherwise the schedule moves to the free plan. Selfhosted installs have no billing step at all.</p>
         </div>
     </section>
@@ -566,7 +566,7 @@
 
         <h3 class="doc-subheading">Ads on free schedules</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Some Event Schedule sites cover their costs by showing ads at the bottom of free schedules' public pages. Where that is switched on, upgrading to Pro removes them, in the same way it removes the "Powered by Event Schedule" credit. Paid schedules never carry ads.
+            Some Getvnt sites cover their costs by showing ads at the bottom of free schedules' public pages. Where that is switched on, upgrading to Pro removes them, in the same way it removes the "Powered by Getvnt" credit. Paid schedules never carry ads.
         </p>
         <p class="text-gray-600 dark:text-gray-300 mb-4">
             Even on a site that does show them, ads stay off your embedded calendars, your shareable event graphics, password-protected pages, custom domains, any event page that is actively selling tickets, and any page you or your team members are viewing while signed in.
@@ -575,12 +575,12 @@
             You do not have to upgrade to be rid of them. <strong class="text-gray-900 dark:text-white">Do not show other schedules' promotions</strong> under <a href="{{ route('marketing.docs.creating_schedules') }}#settings-advanced" class="doc-link">Settings &rarr; Advanced</a> turns off ads as well as <a href="{{ route('marketing.docs.boost') }}#on-network" class="doc-link">promotions</a>, and it is free on every plan.
         </p>
         <div class="doc-callout doc-callout-info mb-6">
-            <div class="doc-callout-title">Not enabled on eventschedule.com</div>
-            <p>This is a per-site choice made by whoever runs the Event Schedule installation you are on, and it is off unless they turn it on. eventschedule.com does not show ads on free schedules, so if that is where your schedule lives, none of this applies to you.</p>
+            <div class="doc-callout-title">Not enabled on getvnt.com</div>
+            <p>This is a per-site choice made by whoever runs the Getvnt installation you are on, and it is off unless they turn it on. getvnt.com does not show ads on free schedules, so if that is where your schedule lives, none of this applies to you.</p>
         </div>
         @else
         <p class="text-gray-600 dark:text-gray-300 mb-4">
-            The <strong class="text-gray-900 dark:text-white">Plan</strong> tab is part of the hosted version of Event Schedule (eventschedule.com), where it shows your subscription, your usage allowances and your billing. A selfhosted install has no subscription: every schedule already has the full Enterprise feature set, with no ticket, newsletter or photo caps.
+            The <strong class="text-gray-900 dark:text-white">Plan</strong> tab is part of the hosted version of Getvnt (getvnt.com), where it shows your subscription, your usage allowances and your billing. A selfhosted install has no subscription: every schedule already has the full Enterprise feature set, with no ticket, newsletter or photo caps.
         </p>
         @endif
     </section>

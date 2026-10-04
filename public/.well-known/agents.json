@@ -1,11 +1,11 @@
 {
   "version": "0.1.0",
-  "name": "Event Schedule API",
+  "name": "Getvnt API",
   "description": "API for creating and managing events, schedules, tickets, and sales. Supports venue, talent, and curator schedule types with automatic translation to 11 languages.",
-  "url": "https://eventschedule.com",
+  "url": "https://getvnt.com",
   "source": {
     "type": "openapi",
-    "url": "https://eventschedule.com/api/openapi.json"
+    "url": "https://getvnt.com/api/openapi.json"
   },
   "flows": [
     {

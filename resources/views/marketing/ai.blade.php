@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule AI Features"
+        name="Getvnt AI Features"
         description="Paste the text or drop the image and AI fills the event form: name, date, duration, venue, address, performers, price, currency and registration link. Agenda scanning, description writing, flyer and style generation, WhatsApp event creation and whole-schedule translation."
         keywords="AI event import, parse event from flyer, event data extraction, AI agenda scanning, AI event flyer, schedule translation" />
     </x-slot>
@@ -674,7 +674,7 @@
             [
                 // EventRepo::saveEvent creates the schedule, RoleController::viewGuestUnclaimed renders
                 // it noindex, User::claimSchedule hands it over and claimNotMeSubmit takes it down.
-                'q' => 'What happens to a performer or venue that is not on Event Schedule?',
+                'q' => 'What happens to a performer or venue that is not on Getvnt?',
                 'a' => 'Saving the event creates a schedule for them, carrying the name and any contact details in the row you saved. Its page is public but kept out of search engines: it says which schedule created it and that it has not been claimed, and credits each date to the schedule that added it. On your event page, a performer\'s name links to it. Whoever signs in with the email address or phone number on it can claim the page and run it from then on, and the dates you already listed stay where they are. Somebody holding that address who says it is not them takes the page down at once; anyone else\'s request is recorded for review. If the address already belongs to an account, the page is theirs from the start.',
             ],
             [
@@ -1209,7 +1209,7 @@
                     <ol class="space-y-4">
                         @foreach ([
                             ['01', 'Verify your phone number once, in your account settings. That number is how the message is matched to you, so it is your phone that is authorised, not a number of ours that you share around.'],
-                            ['02', 'Message the Event Schedule number on WhatsApp. Type the details, or just send the photo of the flyer.'],
+                            ['02', 'Message the Getvnt number on WhatsApp. Type the details, or just send the photo of the flyer.'],
                             ['03', 'The event is created on your default schedule, or on your only schedule if you have one. The photo you sent becomes the event image.'],
                             ['04', 'You get a reply with the name, the date and a link, so the first thing you can do is open it and fix whatever the poster got wrong.'],
                         ] as [$wn, $wtext])
@@ -1408,7 +1408,7 @@
                         Paste the mess. <span class="es-spark-lit">Keep the listing.</span>
                     </h2>
                     <p class="es-spark-bmuted mx-auto mb-8 max-w-2xl text-lg sm:text-xl">
-                        Parsing and translation are included on the free plan, and Event Schedule takes zero platform fees on ticket sales.
+                        Parsing and translation are included on the free plan, and Getvnt takes zero platform fees on ticket sales.
                     </p>
 
                     {{-- The gap one last time, at the smallest scale the page uses:
@@ -1425,7 +1425,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-spark-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

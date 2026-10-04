@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Privacy-First Event Analytics, Built In | Event Schedule</x-slot>
+    <x-slot name="title">Privacy-First Event Analytics, Built In | Getvnt</x-slot>
     <x-slot name="description">Free built-in event analytics: views, devices, traffic sources, UTM tags, countries and clicks on every link. No third-party analytics and no visitor log.</x-slot>
     <x-slot name="breadcrumbTitle">Analytics</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Analytics"
+        name="Getvnt Analytics"
         description="Free built-in event analytics: page views, devices, traffic sources, UTM tags, countries and clicks on every link on a schedule. No third-party analytics service and no visitor log." />
     </x-slot>
 
@@ -492,7 +492,7 @@
             ],
             [
                 'q' => 'Do you send my visitors to Google Analytics or any other tracker?',
-                'a' => 'Not for these numbers. The app counts views itself, into its own tables in its own database, and counting a view does not set a tracking cookie. Separately, eventschedule.com runs Google Analytics on its own pages, schedule pages included, and only for a visitor who allows analytics cookies in the banner: until then not even the script is loaded. On a selfhosted install the numbers never leave your own server, including the country lookup, which reads a database file that ships with the app, and Google Analytics runs only if you add your own ID.',
+                'a' => 'Not for these numbers. The app counts views itself, into its own tables in its own database, and counting a view does not set a tracking cookie. Separately, getvnt.com runs Google Analytics on its own pages, schedule pages included, and only for a visitor who allows analytics cookies in the banner: until then not even the script is loaded. On a selfhosted install the numbers never leave your own server, including the country lookup, which reads a database file that ships with the app, and Google Analytics runs only if you add your own ID.',
             ],
             [
                 'q' => 'Can I see who visited my schedule?',
@@ -1294,7 +1294,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-dash-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

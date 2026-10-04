@@ -74,7 +74,7 @@ class DocsPage extends Component
 
     public function pageTitle(): string
     {
-        return $this->title ?? $this->page['title'].' - Event Schedule';
+        return $this->title ?? $this->page['title'].' - Getvnt';
     }
 
     public function metaDescription(): string
@@ -130,7 +130,7 @@ class DocsPage extends Component
     }
 
     /**
-     * The article's own headline: the page title without the " - Event Schedule" brand suffix
+     * The article's own headline: the page title without the " - Getvnt" brand suffix
      * every docs <title> carries. The suffix is for a search result, where the site name has to
      * be spelled out; in the TechArticle the publisher already says who wrote it, and every one of
      * the 39 headlines ending in the same two words made them read as one site-name repeated.
@@ -143,7 +143,7 @@ class DocsPage extends Component
 
         $title = $this->pageTitle();
 
-        return preg_replace('/\s+[-|]\s+Event Schedule$/u', '', $title) ?: $title;
+        return preg_replace('/\s+[-|]\s+Getvnt$/u', '', $title) ?: $title;
     }
 
     /**
@@ -231,7 +231,7 @@ class DocsPage extends Component
             return null;
         }
 
-        return 'https://github.com/eventschedule/eventschedule/blob/main/'.$relative;
+        return 'https://github.com/Firstet/Getvnt-v2/blob/main/'.$relative;
     }
 
     public function render(): View

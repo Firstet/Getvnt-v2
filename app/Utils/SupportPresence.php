@@ -199,9 +199,9 @@ class SupportPresence
         }
 
         // firstName() answers 'there' for a nameless account, which is a greeting, not a name.
-        $name = $user->name ? $user->firstName() : 'Event Schedule';
+        $name = $user->name ? $user->firstName() : 'Getvnt';
 
-        $initials = collect(preg_split('/\s+/u', trim((string) ($user->name ?: 'Event Schedule'))))
+        $initials = collect(preg_split('/\s+/u', trim((string) ($user->name ?: 'Getvnt'))))
             ->filter()
             ->take(2)
             ->map(fn ($part) => mb_strtoupper(mb_substr($part, 0, 1)))

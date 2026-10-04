@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Sports Leagues"
+        name="Getvnt for Sports Leagues"
         description="A season calendar for a league or club: each team or age group as a sub-schedule with its own link, weekly training as recurring events, match days at their grounds, and a live calendar feed families subscribe to once."
         audience="Sports Leagues, Amateur Sports Clubs & Youth Sports Organizations"
         keywords="sports league schedule, fixture list, youth sports calendar, club fixtures, season pass, sports club events" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to publish a sports league schedule with Event Schedule",
+        "name": "How to publish a sports league schedule with Getvnt",
         "description": "One schedule for the league, a sub-schedule for each team, and a season that mostly sets itself.",
         "step": [
             {
@@ -312,7 +312,7 @@
                 'a' => 'No. The league page and every team link are public, so a parent can read them on a phone without signing in. To keep the fixtures in their own calendar they subscribe to the live feed from the sign-up panel or any event\'s Add to Calendar menu, which costs them no email address at all. A parent who leaves an email address and confirms it gets a short digest when you put new dates up, at most one every few days.',
             ],
             [
-                'q' => 'Can we collect season fees through Event Schedule?',
+                'q' => 'Can we collect season fees through Getvnt?',
                 'a' => 'Yes, as a season pass on the Pro plan, at '.plan_price($proMonthly).' a month. A pass is a multi-use ticket on one QR code, and you can point it at a single sub-schedule, so an Under-14 season pass covers every Under-14 home game, including the ones you add later. The money goes to your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, with no platform fee on top. It is paid once rather than billed monthly, so there is no card on file to chase.',
             ],
             [
@@ -324,7 +324,7 @@
                 'a' => 'On the free plan a schedule has one team member. Adding more people, with admins who run the schedule day to day and viewers who can only look and scan tickets at the gate, is part of Enterprise. For a league of separate clubs there is another way that works on every plan: each club runs its own schedule for its home ground with its own login, and the league\'s curator schedule lists those clubs as sources, so every fixture a club publishes appears on the league page without the league secretary entering it.',
             ],
             [
-                'q' => 'Is Event Schedule free for a sports league?',
+                'q' => 'Is Getvnt free for a sports league?',
                 'a' => 'The parts a league uses every week are free forever: sub-schedules for every team, recurring training, match days with a map to each ground, free sign-ups with a capacity for trials, two-way calendar sync, the live feed, the embeddable calendar and QR scanning at the gate. Pro adds the parts that involve money or extras: priced match-day tickets and season passes, carpool matching, sponsor logos, polls and post-match feedback. There are zero platform fees on every plan.',
             ],
             [
@@ -1067,7 +1067,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-league-card es-league-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-league-muted text-sm">Event Schedule for</div>
+                            <div class="es-league-muted text-sm">Getvnt for</div>
                             <div class="es-league-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-league-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1146,7 +1146,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-league" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=curator') }}" class="es-league-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

@@ -13,7 +13,7 @@ return [
     | Contact for accessibility feedback
     |--------------------------------------------------------------------------
     */
-    'contact_email' => env('ACCESSIBILITY_CONTACT_EMAIL', 'contact@eventschedule.com'),
+    'contact_email' => env('ACCESSIBILITY_CONTACT_EMAIL', 'contact@getvnt.com'),
 
     /*
     |--------------------------------------------------------------------------

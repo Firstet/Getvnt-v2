@@ -1342,7 +1342,7 @@
                                 <x-input-error class="mt-2" :messages="$errors->get('translation_language_code')" />
 
                                 <p class="mt-2 text-xs">
-                                    <x-link href="https://eventschedule.com/features/ai" target="_blank">{{ __('messages.learn_more') }}</x-link>
+                                    <x-link href="https://getvnt.com/features/ai" target="_blank">{{ __('messages.learn_more') }}</x-link>
                                 </p>
 
                                 <div class="mt-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-3 flex items-start gap-2">
@@ -6242,7 +6242,7 @@ function setupSubdomainAutocomplete(inputEl) {
                     const nameText = item.name || item.subdomain;
                     const cityText = item.city ? ' <span class="text-xs text-gray-400">' + escapeHtml(item.city) + '</span>' : '';
                     row.innerHTML = '<div class="font-medium text-sm text-gray-900 dark:text-gray-100">' + escapeHtml(nameText) + cityText + '</div>'
-                        + '<div class="text-xs text-gray-500 dark:text-gray-400">' + escapeHtml(item.subdomain) + '.eventschedule.com</div>';
+                        + '<div class="text-xs text-gray-500 dark:text-gray-400">' + escapeHtml(item.subdomain) + '.getvnt.com</div>';
                     row.addEventListener('click', function() {
                         hiddenInput.value = item.subdomain;
                         inputEl.value = nameText + ' (' + item.subdomain + ')';

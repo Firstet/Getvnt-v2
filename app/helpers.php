@@ -669,7 +669,7 @@ if (! function_exists('marketing_url')) {
     /**
      * Generate a URL for marketing pages
      * Returns configured marketing URL for white-labeled instances
-     * Returns eventschedule.com for nexus, local URLs for testing
+     * Returns getvnt.com for nexus, local URLs for testing
      */
     function marketing_url(string $path = '/'): string
     {
@@ -687,7 +687,7 @@ if (! function_exists('marketing_url')) {
             return url($path);
         }
 
-        $baseUrl = config('app.marketing_url', 'https://eventschedule.com');
+        $baseUrl = config('app.marketing_url', 'https://getvnt.com');
 
         return $baseUrl.($path === '/' ? '' : $path);
     }
@@ -769,7 +769,7 @@ if (! function_exists('marketing_domain')) {
      */
     function marketing_domain(): string
     {
-        $url = config('app.marketing_url', 'https://eventschedule.com');
+        $url = config('app.marketing_url', 'https://getvnt.com');
 
         return preg_replace('#^https?://(www\.)?#', '', $url);
     }
@@ -778,8 +778,8 @@ if (! function_exists('marketing_domain')) {
 if (! function_exists('_base_domain')) {
     /**
      * Extract the base domain from APP_URL or current request host by stripping known subdomain prefixes.
-     * e.g. "https://app.eventschedule.com" -> "eventschedule.com"
-     * e.g. "https://eventschedule.com" -> "eventschedule.com"
+     * e.g. "https://app.getvnt.com" -> "getvnt.com"
+     * e.g. "https://getvnt.com" -> "getvnt.com"
      */
     function _base_domain(): string
     {
@@ -909,7 +909,7 @@ if (! function_exists('redirect_with_pending_action')) {
     /**
      * Store pending action data in session and redirect.
      * On custom domains, also bridges the data via cache so it survives the
-     * cross-domain redirect to app.eventschedule.com for sign-up/login.
+     * cross-domain redirect to app.getvnt.com for sign-up/login.
      */
     function redirect_with_pending_action(string $url, array $sessionData): \Illuminate\Http\RedirectResponse
     {
@@ -1088,7 +1088,7 @@ if (! function_exists('can_self_update')) {
     /**
      * Whether the self-updater UI/route is available to the given user.
      *
-     * Disabled on nexus (eventschedule.com deploys via git/CI) and in testing.
+     * Disabled on nexus (getvnt.com deploys via git/CI) and in testing.
      * On a multi-tenant self-hosted SaaS (hosted) it is operator-only (admin),
      * so a tenant can't trigger a global update. On a plain selfhost it is
      * available to any authenticated user.

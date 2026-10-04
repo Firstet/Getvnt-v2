@@ -24,7 +24,7 @@ class PullGrowthTest extends TestCase
         parent::setUp();
 
         $this->dir = sys_get_temp_dir().'/pull-growth-test-'.Str::random(8);
-        config(['app.growth_data_token' => self::TOKEN, 'app.growth_data_url' => 'https://eventschedule.com']);
+        config(['app.growth_data_token' => self::TOKEN, 'app.growth_data_url' => 'https://getvnt.com']);
         Http::preventStrayRequests();
     }
 
@@ -64,13 +64,13 @@ class PullGrowthTest extends TestCase
 
     public function test_a_pull_saves_the_payload_and_prints_the_summary(): void
     {
-        Http::fake(['eventschedule.com/api/internal/growth*' => Http::response($this->payload())]);
+        Http::fake(['getvnt.com/api/internal/growth*' => Http::response($this->payload())]);
 
         [$code, $output] = $this->pullCommand(['--range' => 'last_90_days']);
 
         $this->assertSame(0, $code, $output);
         Http::assertSent(fn ($request) => $request->hasHeader('Authorization', 'Bearer '.self::TOKEN)
-            && $request->url() === 'https://eventschedule.com/api/internal/growth?range=last_90_days');
+            && $request->url() === 'https://getvnt.com/api/internal/growth?range=last_90_days');
 
         $files = $this->savedFiles();
         $this->assertContains('latest.json', $files);
@@ -134,7 +134,7 @@ class PullGrowthTest extends TestCase
             'busy' => [fn () => Http::response(['error' => 'busy'], 429, ['Retry-After' => '30']), 'Retry in 30 seconds'],
             // Guzzle would drop the Authorization header on a cross-origin redirect, turning a wrong
             // URL into a baffling 401, so redirects are not followed - they are named.
-            'redirect' => [fn () => Http::response('', 301, ['Location' => 'https://www.eventschedule.com/api/internal/growth']), 'Redirected (301)'],
+            'redirect' => [fn () => Http::response('', 301, ['Location' => 'https://www.getvnt.com/api/internal/growth']), 'Redirected (301)'],
             'cloudflare challenge' => [fn () => Http::response('<html>Just a moment...</html>', 403, ['Content-Type' => 'text/html', 'cf-mitigated' => 'challenge']), 'Cloudflare challenge'],
             'server error' => [fn () => Http::response('<html>boom</html>', 502, ['Content-Type' => 'text/html']), 'answered 502'],
             'not json' => [fn () => Http::response('<html>hello</html>', 200, ['Content-Type' => 'text/html']), 'not JSON'],
@@ -175,7 +175,7 @@ class PullGrowthTest extends TestCase
     {
         Http::fake(['*' => Http::response($this->payload())]);
 
-        [$code, $output] = $this->pullCommand(['--url' => 'http://eventschedule.com']);
+        [$code, $output] = $this->pullCommand(['--url' => 'https://getvnt.com']);
         $this->assertSame(1, $code);
         $this->assertStringContainsString('cleartext', $output);
         Http::assertNothingSent();

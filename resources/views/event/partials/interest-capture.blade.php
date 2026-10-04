@@ -45,7 +45,7 @@
             {{ __('messages.event_interest_help') }}
             {{-- policy_url(), never marketing_url(): the privacy policy can be replaced by the
                  operator at /admin/legal, and a selfhoster's visitors must not be pointed at
-                 eventschedule.com's document. The subscribe panel on this same page and the follow
+                 getvnt.com's document. The subscribe panel on this same page and the follow
                  modal both carry this link; this form did not, and it is the one capture surface
                  with no confirmation step - so it IS the consent record. --}}
             <x-link href="{{ policy_url('privacy') }}" target="_blank">{{ __('messages.privacy_policy') }}</x-link>

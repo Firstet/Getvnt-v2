@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Circus & Acrobatics | Tours, Tickets</x-slot>
+    <x-slot name="title">Free Getvnt for Circus & Acrobatics | Tours, Tickets</x-slot>
     <x-slot name="description">Every circus show, aerial class and festival stop on one link. Zero platform fees on tickets, rigging specs for bookers, and a calendar fans subscribe to.</x-slot>
     <x-slot name="breadcrumbTitle">For Circus & Acrobatics</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Circus & Acrobatics"
+        name="Getvnt for Circus & Acrobatics"
         description="Every circus show, aerial class and festival stop on one link. Zero platform fees on tickets, rigging specs for bookers, and a calendar fans subscribe to."
         audience="Circus & Acrobatic Performers"
         keywords="circus schedule, acrobat show calendar, circus performer booking, circus event management, free circus scheduling, aerial class passes, circus troupe schedule" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How circus performers share their schedule with Event Schedule",
+        "name": "How circus performers share their schedule with Getvnt",
         "description": "Get your performance schedule online in three steps.",
         "step": [
             {
@@ -606,7 +606,7 @@
                                 <div class="rounded-2xl border border-gray-200 bg-gray-50 p-5 dark:border-white/10 dark:bg-black/40">
                                     <div dir="ltr" class="mb-3 flex items-center gap-2 rounded-xl border border-amber-300/60 bg-amber-50 px-4 py-2.5 dark:border-amber-400/30 dark:bg-amber-500/10">
                                         <svg aria-hidden="true" class="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-                                        <span class="truncate font-mono text-sm font-semibold text-gray-900 dark:text-white">your-troupe.eventschedule.com</span>
+                                        <span class="truncate font-mono text-sm font-semibold text-gray-900 dark:text-white">your-troupe.getvnt.com</span>
                                     </div>
                                     <div class="mb-3 flex flex-wrap gap-1.5">
                                         <span class="rounded bg-gray-200 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-gray-600 dark:bg-white/10 dark:text-gray-300">Dates</span>
@@ -686,7 +686,7 @@
                     A ring the size of <span class="es-circus-gold">one link</span>
                 </h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.14s;">
-                    Event Schedule does not host the stream. Tick Online, paste the URL people join on, and the date, the running order and the tickets work exactly as they do for a room with a floor.
+                    Getvnt does not host the stream. Tick Online, paste the URL people join on, and the date, the running order and the tickets work exactly as they do for a room with a floor.
                 </p>
             </div>
 
@@ -810,7 +810,7 @@
                     Perfect for all types of <span class="es-circus-gold">circus performers</span>
                 </h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Whether you're a solo aerialist or a touring troupe, Event Schedule works for you.
+                    Whether you're a solo aerialist or a touring troupe, Getvnt works for you.
                 </p>
             </div>
 
@@ -1043,7 +1043,7 @@
                 @foreach ([['/for-magicians', 'Magicians'], ['/for-dance-groups', 'Dance Groups'], ['/for-theater-performers', 'Theater Performers'], ['/for-visual-artists', 'Visual Artists']] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-circus-hover group flex items-center justify-between rounded-2xl border border-gray-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-white/5">
                         <div>
-                            <div class="text-sm text-gray-500 dark:text-gray-400">Event Schedule for</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Getvnt for</div>
                             <div class="es-circus-hover-title text-lg font-semibold text-gray-900 transition-colors dark:text-white">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-circus-hover-arrow w-5 h-5 text-gray-400 transition-colors rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1073,14 +1073,14 @@
                     Frequently asked <span class="es-circus-gold">questions</span>
                 </h2>
                 <p class="text-lg text-gray-600 dark:text-gray-400 sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Everything circus performers ask about Event Schedule.
+                    Everything circus performers ask about Getvnt.
                 </p>
             </div>
 
             @php
                 $faqs = [
                     [
-                        'q' => 'Is Event Schedule free for circus performers?',
+                        'q' => 'Is Getvnt free for circus performers?',
                         'a' => 'Yes, for most of it. Sharing your performance schedule, sub-schedules, two-way calendar sync, an embeddable calendar, free registration with a capacity, a calendar feed fans subscribe to, the booking request form and one bookable appointment type are all free forever, with no ceiling on how many people register. Putting a price on a ticket is the part that needs Pro. Newsletters are free up to 10 emails a month, counted per recipient rather than per send, with 100 on Pro and 1,000 on Enterprise.',
                     ],
                     [
@@ -1105,7 +1105,7 @@
                     ],
                     [
                         'q' => 'A festival listed my act before I joined. Is there already a page for me?',
-                        'a' => 'There may be. When a festival or venue names an act that is not on Event Schedule, its event page still shows that act in the lineup by name, and the app creates a page for the act. That page says which schedule created it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. If it carries your email address, create an account or sign in with that address and press Claim this page: it becomes your schedule, and the festivals that already listed you keep listing you without asking again, while anyone new sends a request you accept. If it is not you, This is not me takes it down.',
+                        'a' => 'There may be. When a festival or venue names an act that is not on Getvnt, its event page still shows that act in the lineup by name, and the app creates a page for the act. That page says which schedule created it and that you have not claimed it, credits each date to the schedule that added it, and stays out of search engines until it is claimed. If it carries your email address, create an account or sign in with that address and press Claim this page: it becomes your schedule, and the festivals that already listed you keep listing you without asking again, while anyone new sends a request you accept. If it is not you, This is not me takes it down.',
                     ],
                 ];
             @endphp
@@ -1160,7 +1160,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-troupe" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-amber-700 to-orange-700 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-amber-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-500/40">
                             <span class="relative z-10 flex items-center gap-2">

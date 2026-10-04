@@ -1,9 +1,9 @@
 <x-docs-page
     key="selfhost/email"
-    title="Email Setup for a Selfhosted Install - Event Schedule"
-    description="Set up SMTP, Amazon SES or sendmail for a selfhosted Event Schedule, and see which emails it sends on its own, from ticket confirmations to on-sale alerts."
-    lede="Configure email delivery so your Event Schedule install can send ticket confirmations, newsletters, subscriber digests, on-sale alerts, account emails and owner notifications."
-    article-description="Configure email sending for your selfhosted Event Schedule instance. Set up SMTP, Amazon SES or another mail driver, and see which emails go out automatically and what each one needs."
+    title="Email Setup for a Selfhosted Install - Getvnt"
+    description="Set up SMTP, Amazon SES or sendmail for a selfhosted Getvnt, and see which emails it sends on its own, from ticket confirmations to on-sale alerts."
+    lede="Configure email delivery so your Getvnt install can send ticket confirmations, newsletters, subscriber digests, on-sale alerts, account emails and owner notifications."
+    article-description="Configure email sending for your selfhosted Getvnt instance. Set up SMTP, Amazon SES or another mail driver, and see which emails go out automatically and what each one needs."
 >
     <x-slot:toc>
         <x-doc-nav-link href="#overview">Overview</x-doc-nav-link>
@@ -47,7 +47,7 @@
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">The default is not a real mail transport</div>
-            <p>Out of the box <code class="doc-inline-code">MAIL_MAILER=log</code>. Event Schedule treats <code class="doc-inline-code">log</code> and <code class="doc-inline-code">array</code> as "no mail transport", so ticket and pass confirmations, appointment emails, gift card emails, sale alerts, feedback requests, carpool messages, poll suggestion notices, the new-event digest and the interest list's on-sale and reminder emails are <strong class="text-gray-900 dark:text-white">skipped entirely</strong> rather than delivered. Mail that is not gated this way, such as password resets, verification emails, team invitations, waitlist openings, newsletters, sign-up confirmations and the interest list's cancellation and change notices, is written into <code class="doc-inline-code">storage/logs/laravel.log</code> instead of being sent. The sign-up panel and the <strong class="text-gray-900 dark:text-white">Tell me when tickets go on sale</strong> form keep collecting addresses on an install left like this, and nobody who uses them hears back. Configure a real driver before you take a single booking.</p>
+            <p>Out of the box <code class="doc-inline-code">MAIL_MAILER=log</code>. Getvnt treats <code class="doc-inline-code">log</code> and <code class="doc-inline-code">array</code> as "no mail transport", so ticket and pass confirmations, appointment emails, gift card emails, sale alerts, feedback requests, carpool messages, poll suggestion notices, the new-event digest and the interest list's on-sale and reminder emails are <strong class="text-gray-900 dark:text-white">skipped entirely</strong> rather than delivered. Mail that is not gated this way, such as password resets, verification emails, team invitations, waitlist openings, newsletters, sign-up confirmations and the interest list's cancellation and change notices, is written into <code class="doc-inline-code">storage/logs/laravel.log</code> instead of being sent. The sign-up panel and the <strong class="text-gray-900 dark:text-white">Tell me when tickets go on sale</strong> form keep collecting addresses on an install left like this, and nobody who uses them hears back. Configure a real driver before you take a single booking.</p>
         </div>
 
         <div class="doc-callout doc-callout-info mt-6">
@@ -281,7 +281,7 @@
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Mailgun</h4>
                 <div class="text-gray-600 dark:text-gray-400 text-sm space-y-1">
                     <p>Host: <code class="doc-inline-code">smtp.mailgun.org</code> | Port: <code class="doc-inline-code">587</code> | Encryption: <code class="doc-inline-code">tls</code></p>
-                    <p>Username is usually <code class="doc-inline-code">postmaster@yourdomain.com</code>. Mailgun is supported through SMTP; there is no <code class="doc-inline-code">mailgun</code> API driver in Event Schedule.</p>
+                    <p>Username is usually <code class="doc-inline-code">postmaster@yourdomain.com</code>. Mailgun is supported through SMTP; there is no <code class="doc-inline-code">mailgun</code> API driver in Getvnt.</p>
                 </div>
             </div>
         </div>
@@ -295,7 +295,7 @@
             </svg>
             Other Mail Drivers
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Besides SMTP, Event Schedule ships with the mailers listed below. Set the one you want as <code class="doc-inline-code">MAIL_MAILER</code>. Anything not in this table has to be added to <code class="doc-inline-code">config/mail.php</code> yourself, and the app will fail with "Mailer is not defined" until it is.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Besides SMTP, Getvnt ships with the mailers listed below. Set the one you want as <code class="doc-inline-code">MAIL_MAILER</code>. Anything not in this table has to be added to <code class="doc-inline-code">config/mail.php</code> yourself, and the app will fail with "Mailer is not defined" until it is.</p>
 
         <div class="doc-table-wrap">
             <table class="doc-table">
@@ -383,12 +383,12 @@
                 <button class="doc-copy-btn">Copy</button>
             </div>
             <pre><code><span class="code-variable">MAIL_FROM_ADDRESS</span>=<span class="code-string">events@yourdomain.com</span>
-<span class="code-variable">MAIL_FROM_NAME</span>=<span class="code-string">"My Event Schedule"</span></code></pre>
+<span class="code-variable">MAIL_FROM_NAME</span>=<span class="code-string">"My Getvnt"</span></code></pre>
         </div>
 
         <h3 class="doc-subheading">One sender for every schedule</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-6">On a selfhosted install this is the From address for all outgoing mail, whichever schedule triggered it. There is no per-schedule sender to configure: the Email Settings tab that lets an owner supply their own SMTP credentials is part of the hosted service and is not rendered when the app runs selfhosted, so mail that a hosted schedule may only send from its own address, such as change and cancellation notices to ticket buyers, goes out from this one (see <a href="#what-is-sent" class="doc-link">What Is Sent Automatically</a>). Pick an address that reads sensibly for every schedule on the instance, and one you can actually receive replies at.</p>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Three emails also name the schedule. The sign-up confirmation, the new-event digest and the interest list's emails keep your address but put the schedule in the sender name, for example "The Blue Note via My Event Schedule" with the settings above, and send replies to the schedule's own email address when it has one.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Three emails also name the schedule. The sign-up confirmation, the new-event digest and the interest list's emails keep your address but put the schedule in the sender name, for example "The Blue Note via My Getvnt" with the settings above, and send replies to the schedule's own email address when it has one.</p>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">DNS Records</div>
@@ -431,7 +431,7 @@
                 <span>bash</span>
                 <button class="doc-copy-btn">Copy</button>
             </div>
-            <pre><code>php artisan tinker --execute="Mail::raw('Test email from Event Schedule', function(\$m) { \$m->to('your@email.com')->subject('Test'); });"</code></pre>
+            <pre><code>php artisan tinker --execute="Mail::raw('Test email from Getvnt', function(\$m) { \$m->to('your@email.com')->subject('Test'); });"</code></pre>
         </div>
 
         <p class="text-gray-600 dark:text-gray-300 mb-6 mt-4">Send it to a real mailbox you can open. Addresses on the reserved test domains (<code class="doc-inline-code">example.com</code>, <code class="doc-inline-code">example.org</code>, <code class="doc-inline-code">example.net</code>, <code class="doc-inline-code">test.com</code>, <code class="doc-inline-code">test.org</code>, <code class="doc-inline-code">test.net</code>) and anything at <code class="doc-inline-code">@localhost</code> are deliberately never emailed by the app's own notifications.</p>
@@ -440,7 +440,7 @@
         <p class="text-gray-600 dark:text-gray-300 mb-4">Ticket confirmations, sale alerts and newsletter batches are dispatched as background jobs rather than sent inline. Which means:</p>
         <ul class="doc-list mb-6">
             <li>With the default <code class="doc-inline-code">QUEUE_CONNECTION=sync</code> they run immediately, in the same request. Nothing extra is needed.</li>
-            <li>With <code class="doc-inline-code">database</code> or <code class="doc-inline-code">redis</code> they wait for a worker. Event Schedule's scheduler runs <code class="doc-inline-code">queue:work --stop-when-empty</code> every minute and retries failed jobs every five minutes, so the <code class="doc-inline-code">schedule:run</code> cron job from the <a href="{{ route('marketing.docs.selfhost.installation') }}#cron" class="doc-link">installation guide</a> is what actually drains the mail queue. No cron, no email.</li>
+            <li>With <code class="doc-inline-code">database</code> or <code class="doc-inline-code">redis</code> they wait for a worker. Getvnt's scheduler runs <code class="doc-inline-code">queue:work --stop-when-empty</code> every minute and retries failed jobs every five minutes, so the <code class="doc-inline-code">schedule:run</code> cron job from the <a href="{{ route('marketing.docs.selfhost.installation') }}#cron" class="doc-link">installation guide</a> is what actually drains the mail queue. No cron, no email.</li>
             <li>Scheduled newsletters are also released by that same cron, once a minute.</li>
             <li>The new-event digest and the interest list's on-sale and reminder emails are sent by hourly tasks on that same cron, whatever the queue connection.</li>
         </ul>

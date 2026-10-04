@@ -145,7 +145,7 @@ class ImportCuratorEvents extends Command
             }
 
             // Fetch robots.txt (SSRF-safe: validated + IP-pinned, redirects re-checked)
-            $response = UrlUtils::safeHttpGet($robotsUrl, ['User-Agent' => 'Event Schedule Bot/1.0 (+https://www.eventschedule.com)'], 10);
+            $response = UrlUtils::safeHttpGet($robotsUrl, ['User-Agent' => 'Getvnt Bot/1.0 (+https://www.getvnt.com)'], 10);
 
             if ($response === null || ! $response->successful()) {
                 if ($debug) {
@@ -297,7 +297,7 @@ class ImportCuratorEvents extends Command
         }
 
         // Fetch the webpage content (SSRF-safe: validated + IP-pinned, redirects re-checked)
-        $response = UrlUtils::safeHttpGet($url, ['User-Agent' => 'Event Schedule Bot/1.0 (+https://www.eventschedule.com)'], 30);
+        $response = UrlUtils::safeHttpGet($url, ['User-Agent' => 'Getvnt Bot/1.0 (+https://www.getvnt.com)'], 30);
 
         if ($response === null) {
             throw new \Exception('Failed to fetch URL: blocked by SSRF check');
@@ -486,7 +486,7 @@ class ImportCuratorEvents extends Command
         }
 
         // Fetch event page content (SSRF-safe: validated + IP-pinned, redirects re-checked)
-        $response = UrlUtils::safeHttpGet($eventUrl, ['User-Agent' => 'Event Schedule Bot/1.0 (+https://www.eventschedule.com)'], 30);
+        $response = UrlUtils::safeHttpGet($eventUrl, ['User-Agent' => 'Getvnt Bot/1.0 (+https://www.getvnt.com)'], 30);
 
         if ($response === null) {
             throw new \Exception('Failed to fetch event URL: blocked by SSRF check');

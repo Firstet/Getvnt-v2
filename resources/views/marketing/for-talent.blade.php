@@ -1,5 +1,5 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Performers & Artists | Gig Calendar</x-slot>
+    <x-slot name="title">Free Getvnt for Performers & Artists | Gig Calendar</x-slot>
     <x-slot name="description">Free event schedule for performers and artists. Share your shows, sell tickets with zero platform fees, and claim the page a venue made in your name.</x-slot>
     <x-slot name="breadcrumbTitle">For Talent</x-slot>
 
@@ -23,7 +23,7 @@
         $feeTickets = \App\Utils\TicketFees::EXAMPLE_TICKETS;
         $feePrice = \App\Utils\TicketFees::EXAMPLE_PRICE;
         $feeRevenue = $feeTickets * $feePrice;
-        $feeEs = \App\Utils\TicketFees::cost('eventschedule', $feeTickets, $feePrice, $feeRates);
+        $feeEs = \App\Utils\TicketFees::cost('getvnt', $feeTickets, $feePrice, $feeRates);
         $feeEb = \App\Utils\TicketFees::cost('eventbrite', $feeTickets, $feePrice, $feeRates);
         $feeKeep = $feeEb - $feeEs;
 
@@ -31,10 +31,10 @@
         $performerTypes = ['Musicians', 'DJs', 'Comedians', 'Dancers', 'Magicians', 'Poets', 'Acrobats', 'Actors', 'Bands', 'Instructors', 'Artists', 'Vendors'];
 
         $faqs = [
-            ['q' => 'Is Event Schedule free for performers?', 'a' => 'Yes. Sharing your show schedule, syncing your calendar, taking booking requests from venues, letting fans follow you and taking free registrations with no monthly ceiling are all free forever, and so is a newsletter allowance of 10 emails each month, counted per recipient rather than per send. Selling a ticket that carries a price is on the Pro plan at ' . plan_price($proMonthly) . '/month, along with the larger newsletter allowance, and there are still no platform fees on ticket sales.'],
+            ['q' => 'Is Getvnt free for performers?', 'a' => 'Yes. Sharing your show schedule, syncing your calendar, taking booking requests from venues, letting fans follow you and taking free registrations with no monthly ceiling are all free forever, and so is a newsletter allowance of 10 emails each month, counted per recipient rather than per send. Selling a ticket that carries a price is on the Pro plan at ' . plan_price($proMonthly) . '/month, along with the larger newsletter allowance, and there are still no platform fees on ticket sales.'],
             ['q' => 'What happens when a venue books me for a show?', 'a' => 'The venue adds you to their event and you get a request. Accept it and the gig appears on your schedule automatically, with the venue listed on it. You never type the same date into two calendars, and both schedules stay in sync from then on.'],
-            ['q' => 'A venue or curator made a page for me. How do I claim it?', 'a' => 'When a schedule lists you on an event before you are on Event Schedule, a page is created in your name so their lineup can show you. It says who created it and that you have not claimed it yet, credits each date to the schedule that added it, and stays out of search engines until it is claimed. To take it over, press Claim this page and sign in with the email address on it, the one that schedule entered for you. It becomes your schedule, and the schedules already listing you keep listing you without asking again. If the page is not about you, press This is not me: when you hold the address on it the page comes down at once, and otherwise your report is recorded for review.'],
-            ['q' => 'I already have a Linktree. Why would I need this?', 'a' => 'A link page shows buttons. A schedule shows dates. Your Event Schedule page lists your actual upcoming shows with venues, times and ticket links, updates itself as you add dates, and lets fans follow you so you can email them when a new show lands. You can keep your link page and point it here, or replace it entirely.'],
+            ['q' => 'A venue or curator made a page for me. How do I claim it?', 'a' => 'When a schedule lists you on an event before you are on Getvnt, a page is created in your name so their lineup can show you. It says who created it and that you have not claimed it yet, credits each date to the schedule that added it, and stays out of search engines until it is claimed. To take it over, press Claim this page and sign in with the email address on it, the one that schedule entered for you. It becomes your schedule, and the schedules already listing you keep listing you without asking again. If the page is not about you, press This is not me: when you hold the address on it the page comes down at once, and otherwise your report is recorded for review.'],
+            ['q' => 'I already have a Linktree. Why would I need this?', 'a' => 'A link page shows buttons. A schedule shows dates. Your Getvnt page lists your actual upcoming shows with venues, times and ticket links, updates itself as you add dates, and lets fans follow you so you can email them when a new show lands. You can keep your link page and point it here, or replace it entirely.'],
             ['q' => 'Can I put my dates on my own website and social profiles?', 'a' => 'Yes. Embed your schedule on any website with a single iframe, or share your schedule URL on social profiles, EPKs and booking platforms. There are also iCal and RSS feeds, so your dates can flow into other calendars and sites automatically. Everything updates the moment you add a show.'],
             ['q' => 'How do fans find out about my upcoming shows?', 'a' => 'Your dates are public the moment you add them, on your schedule page and in your iCal and RSS feeds, and a fan can subscribe to your calendar from the sign-up panel on your page so a moved date updates itself. Switch on the "Notify me" card and, on a show that is not on sale yet, a fan can leave an email address to hear when tickets go on sale. A fan who signs up on your page and confirms their address gets a digest automatically when you announce new shows, at most one every few days, and it does not draw on your newsletter allowance. Beyond that you write the newsletter yourself: 10 newsletter emails a month on the free plan and 100 on Pro, counted per recipient. Any plan can also generate a shareable graphic of your upcoming shows, and Pro lets you boost events with Meta Ads.'],
         ];
@@ -42,7 +42,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Performers & Artists"
+        name="Getvnt for Performers & Artists"
         description="Free event scheduling for performers and artists of every kind. Share your shows, sell tickets through Stripe or PayPal, sync with Google Calendar, let venues add you to their schedule, and claim the page a venue or curator made in your name. Zero platform fees."
         audience="Performers & Artists"
         keywords="performer schedule, share tour dates, artist event calendar, performer booking, gig management, free event scheduling" />
@@ -50,7 +50,7 @@
     {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Event Schedule for every kind of performer",
+        "name": "Getvnt for every kind of performer",
         "numberOfItems": {{ count($performers) }},
         "itemListElement": [
             @foreach ($performers as $i => $p)
@@ -175,7 +175,7 @@
                         <h2 class="es-balance mb-3 text-3xl font-black tracking-tight text-gray-900 dark:text-white md:text-4xl">
                             Shows performers are <span class="text-gradient-talent">listing today</span>
                         </h2>
-                        <p class="text-lg text-gray-600 dark:text-gray-400">Real upcoming dates from talent schedules on Event Schedule. Every one of these is somebody's page, running on the free plan or better.</p>
+                        <p class="text-lg text-gray-600 dark:text-gray-400">Real upcoming dates from talent schedules on Getvnt. Every one of these is somebody's page, running on the free plan or better.</p>
                     </div>
                     <a href="{{ url('/browse') }}" class="group inline-flex shrink-0 items-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 transition-all hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4E81FA] dark:text-blue-300 dark:ring-blue-400/30 dark:hover:bg-blue-500/10">
                         Browse all events
@@ -232,7 +232,7 @@
         accent="blue"
         badge="Get booked"
         heading="Venues add you. You just say yes."
-        lede="A venue building their lineup adds you to the bill and you get a request. Accept it and the gig lands on your schedule with the venue attached. No double entry, no chasing anyone for the details. Not on Event Schedule yet? The listing still creates a page in your name, and it is yours once you claim it with the email address they entered."
+        lede="A venue building their lineup adds you to the bill and you get a request. Accept it and the gig lands on your schedule with the venue attached. No double entry, no chasing anyone for the details. Not on Getvnt yet? The listing still creates a page in your name, and it is yours once you claim it with the email address they entered."
         :chips="['Booking requests, free', 'Both schedules stay in sync', 'Claim a page made for you', 'Custom request fields, Pro']"
         :lead="true"
         ground="white"
@@ -334,7 +334,7 @@
         accent="emerald"
         badge="Fill the room"
         heading="Tell the people who already said yes."
-        lede="A fan who signs up on your page gets a digest automatically the next time you announce dates. Switch on the “Notify me” card and, on a show that is not on sale yet, fans can leave an email address to hear when tickets go on sale. Write a newsletter yourself when there is more to say, and Event Schedule builds a graphic of your upcoming shows so you have something to post the same afternoon."
+        lede="A fan who signs up on your page gets a digest automatically the next time you announce dates. Switch on the “Notify me” card and, on a show that is not on sale yet, fans can leave an email address to hear when tickets go on sale. Write a newsletter yourself when there is more to say, and Getvnt builds a graphic of your upcoming shows so you have something to post the same afternoon."
         :chips="['Followers, free', '10 emails a month free', '100 on Pro', 'Schedule graphics, free', 'Interest list, free']"
         :flip="true"
         ground="gray"
@@ -434,8 +434,8 @@
                     </div>
 
                     <div class="rounded-2xl border border-cyan-400/30 bg-cyan-500/10 p-6 text-center backdrop-blur-sm" data-reveal="panel">
-                        <div class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Event Schedule</div>
-                        <div data-fee-total="eventschedule" class="mb-2 text-4xl font-black text-white">${{ number_format($feeEs, 2) }}</div>
+                        <div class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Getvnt</div>
+                        <div data-fee-total="getvnt" class="mb-2 text-4xl font-black text-white">${{ number_format($feeEs, 2) }}</div>
                         <p class="text-sm text-gray-500 dark:text-gray-400">{{ plan_price($proMonthly) }} for Pro plus Stripe's {{ $feeRates['stripe']['label'] }}. Our platform fee is {{ plan_price(0) }}.</p>
                     </div>
 
@@ -509,7 +509,7 @@
                             'Season passes, visit passes and promo codes',
                             '100 newsletter emails a month, up from 10',
                             'Unlimited fan photos, downloaded in one zip',
-                            'Remove Event Schedule branding',
+                            'Remove Getvnt branding',
                             'Boost events with Meta Ads',
                         ] as $proItem)
                             <li class="flex gap-2.5">
@@ -653,7 +653,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-name" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-sky-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/40">
                             <span class="relative z-10 flex items-center gap-2">

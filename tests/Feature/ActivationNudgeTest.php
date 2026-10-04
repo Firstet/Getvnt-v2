@@ -1588,14 +1588,14 @@ class ActivationNudgeTest extends TestCase
         $this->assertStringContainsString('/'.$venue->subdomain.'/schedule', $mails[0]->render());
     }
 
-    /** Replies reach a person on eventschedule.com, and never our inbox from an operator platform. */
+    /** Replies reach a person on getvnt.com, and never our inbox from an operator platform. */
     public function test_replies_go_to_support_only_on_the_nexus(): void
     {
         $role = $this->createRole($this->owner());
-        config(['app.support_email' => 'contact@eventschedule.com']);
+        config(['app.support_email' => 'contact@getvnt.com']);
 
         config(['app.is_nexus' => true]);
-        $this->assertSame('contact@eventschedule.com', (new ActivationNudge($role, 'no_event'))->envelope()->replyTo[0]->address);
+        $this->assertSame('contact@getvnt.com', (new ActivationNudge($role, 'no_event'))->envelope()->replyTo[0]->address);
 
         config(['app.is_nexus' => false]);
         $this->assertSame([], (new ActivationNudge($role, 'no_event'))->envelope()->replyTo);

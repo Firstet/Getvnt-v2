@@ -101,7 +101,7 @@ class SendSupportReplyEmail implements ShouldBeUniqueUntilProcessing, ShouldQueu
 
             Mail::to($email)->send(new SupportMessageNotification(
                 $unread->pluck('body')->all(),
-                $author['name'] ?? 'Event Schedule',
+                $author['name'] ?? 'Getvnt',
                 true,
                 self::guestResumeUrl($conversation),
                 true
@@ -112,7 +112,7 @@ class SendSupportReplyEmail implements ShouldBeUniqueUntilProcessing, ShouldQueu
             $locale = $conversation->user?->language_code;
             Mail::to($email)->locale(is_valid_language_code($locale) ? $locale : 'en')->send(new SupportMessageNotification(
                 $unread->pluck('body')->all(),
-                'Event Schedule Support',
+                'Getvnt Support',
                 true,
                 app_url('/dashboard')
             ));

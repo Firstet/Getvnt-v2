@@ -1,7 +1,7 @@
 {{--
     The tenant 404. Deliberately NOT errors/404.blade.php: that one is the PLATFORM page and links
     to marketing_url('/'), /features, /pricing, /docs - which on a customer's custom domain sends
-    their visitors to eventschedule.com. This page offers exactly one way out, back into the
+    their visitors to getvnt.com. This page offers exactly one way out, back into the
     schedule the visitor was already looking at.
 
     Self-contained (inline, nonce'd CSS, no @vite) so it cannot depend on a built manifest or on

@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Venues"
+        name="Getvnt for Venues"
         description="Run your venue calendar front to back. Accept booking requests, sell tickets through Stripe or PayPal with QR check-in, take private hire bookings, and give every room and stage its own sub-schedule. Zero platform fees."
         audience="Event Venues"
         keywords="venue event calendar, venue booking management, venue schedule software, event space calendar, free venue scheduling" />
@@ -158,7 +158,7 @@
                 'price' => plan_price($proMonthly),
                 'note' => 'per month',
                 'lede' => 'Adds the box office and the things that make it look like yours.',
-                'items' => ['Everything in Free', 'Selling tickets that carry a price, unlimited', 'Live check-in dashboard', 'Promo codes, gift cards and waitlists', 'Unlimited bookable spaces', 'No Event Schedule branding'],
+                'items' => ['Everything in Free', 'Selling tickets that carry a price, unlimited', 'Live check-in dashboard', 'Promo codes, gift cards and waitlists', 'Unlimited bookable spaces', 'No Getvnt branding'],
                 'featured' => true,
             ],
             [
@@ -187,8 +187,8 @@
                 'a' => 'Enable the booking inbox on your schedule, and musicians, DJs, and other performers can submit requests to play at your venue. You review each request and approve or decline from your dashboard. Approved events are automatically added to your calendar.',
             ],
             [
-                'q' => 'What if an act I book is not on Event Schedule?',
-                'a' => 'List them by name anyway. The event page shows the whole lineup, and every act you name gets a page of its own that says who created it, credits the date to you and stays out of search engines until they claim it. On eventschedule.com you can tick a box to email them an invitation. They claim the page by signing in with the email address you entered for them, and from then on your dates keep appearing on it without waiting for their approval.',
+                'q' => 'What if an act I book is not on Getvnt?',
+                'a' => 'List them by name anyway. The event page shows the whole lineup, and every act you name gets a page of its own that says who created it, credits the date to you and stays out of search engines until they claim it. On getvnt.com you can tick a box to email them an invitation. They claim the page by signing in with the email address you entered for them, and from then on your dates keep appearing on it without waiting for their approval.',
             ],
             [
                 'q' => 'Can I embed the calendar on my venue\'s website?',
@@ -203,12 +203,12 @@
                 'a' => 'Yes. Create a bookable type for the space you rent out, set the hours you are available, add per-date overrides for holidays, and charge for it through Stripe, a payment link or cash if you want to. The free plan carries one bookable type and Pro removes the cap. Guests pick a time on your public booking page, and you can require approval before anything is confirmed.',
             ],
             [
-                'q' => 'Can we use our own domain and remove Event Schedule branding?',
-                'a' => 'Removing the Event Schedule branding is part of the Pro plan, along with custom CSS, sponsor logos, an announcement banner and your own favicon. Serving the schedule from your own address, like events.yourvenue.com, is an Enterprise feature and the SSL certificate is issued automatically.',
+                'q' => 'Can we use our own domain and remove Getvnt branding?',
+                'a' => 'Removing the Getvnt branding is part of the Pro plan, along with custom CSS, sponsor logos, an announcement banner and your own favicon. Serving the schedule from your own address, like events.yourvenue.com, is an Enterprise feature and the SSL certificate is issued automatically.',
             ],
             [
                 'q' => 'What does it cost to sell tickets?',
-                'a' => 'Putting a price on a ticket needs Pro or Enterprise. Free RSVPs are unlimited at every tier. Event Schedule charges no platform fee on ticket sales at any tier, so the only deduction is your payment processor\'s standard fee. Connect your own Stripe or PayPal account and payouts go straight to you, or take cash at the door.',
+                'a' => 'Putting a price on a ticket needs Pro or Enterprise. Free RSVPs are unlimited at every tier. Getvnt charges no platform fee on ticket sales at any tier, so the only deduction is your payment processor\'s standard fee. Connect your own Stripe or PayPal account and payouts go straight to you, or take cash at the door.',
             ],
             [
                 'q' => 'Can I refund a ticket?',
@@ -378,7 +378,7 @@
         :chips="['Mobile-friendly', 'One link', 'Follow button', 'iCal and RSS feeds', 'Embed anywhere', 'Interest list']"
         :lead="true"
         frame="browser"
-        frame-url="thebluenote.eventschedule.com"
+        frame-url="thebluenote.getvnt.com"
         ground="white">
         <x-slot name="badgeIcon">
             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
@@ -412,7 +412,7 @@
         accent="cyan"
         badge="Box office"
         heading="Sell tickets without giving away the door"
-        lede="Set your ticket types, connect your own Stripe or PayPal account, and keep every cent of the face value. Event Schedule takes no platform fee, so the only deduction is the processor's charge. Refund a Stripe or PayPal sale from the Sales page, in full or in part, and the money goes back the way it came."
+        lede="Set your ticket types, connect your own Stripe or PayPal account, and keep every cent of the face value. Getvnt takes no platform fee, so the only deduction is the processor's charge. Refund a Stripe or PayPal sale from the Sales page, in full or in part, and the money goes back the way it came."
         :chips="['Zero platform fees', 'Stripe or PayPal', 'Full or partial refunds', 'Reserved seating', 'Promo codes', 'Gift cards', 'Waitlists', 'Free RSVPs']"
         :flip="true"
         frame="phone"
@@ -454,7 +454,7 @@
         badge="Your brand"
         heading="Your name on the door, not ours"
         lede="Put the calendar on your own address, drop our branding entirely, and dress the page to match the room. Regulars should not be able to tell where your site ends and the calendar begins."
-        :chips="['Custom domain', 'No Event Schedule branding', 'Custom CSS', 'Sponsor logos', 'Your favicon', 'Announcement banner']"
+        :chips="['Custom domain', 'No Getvnt branding', 'Custom CSS', 'Sponsor logos', 'Your favicon', 'Announcement banner']"
         frame="browser"
         frame-url="events.thebluenote.com"
         ground="white">
@@ -759,7 +759,7 @@
         :chips="['Page views', 'Traffic sources', 'Appearance views', 'Sales CSV export', 'Post-event feedback']"
         :flip="true"
         frame="browser"
-        frame-url="thebluenote.eventschedule.com/analytics"
+        frame-url="thebluenote.getvnt.com/analytics"
         ground="dark">
         <x-slot name="badgeIcon">
             <svg aria-hidden="true" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
@@ -1060,7 +1060,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-venue" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-500 dark:text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-sky-600 to-cyan-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-sky-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/40">
                             <span class="relative z-10 flex items-center gap-2">

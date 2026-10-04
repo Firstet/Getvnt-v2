@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Workshop Instructors"
+        name="Getvnt for Workshop Instructors"
         description="Set a class up once as a weekly series, cap the bench per session, and sell the spots from one link with zero platform fees."
         audience="Workshop Instructors & Educators"
         keywords="workshop scheduling, class registration software, workshop calendar, teaching class management, free workshop scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a workshop series online with Event Schedule",
+        "name": "How to put a workshop series online with Getvnt",
         "description": "Set the class up once, cap the bench, and let students book the session they want.",
         "step": [
             {
@@ -500,8 +500,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for workshop instructors?',
-                'a' => 'Yes. Publishing your classes, running one as a weekly series, capping the seats with free registration, sorting strands into sub-schedules, emailing the students who follow you and syncing two ways with Google, Outlook or CalDAV are all free forever, with no limit on how many students sign up. So is scanning the QR at the door, on every plan. Putting a price on a spot is the Pro plan at '.plan_price($proMonthly).' a month, along with multi-class cards, custom questions at checkout and the live check-in screen, and Event Schedule charges zero platform fees on what you sell.',
+                'q' => 'Is Getvnt free for workshop instructors?',
+                'a' => 'Yes. Publishing your classes, running one as a weekly series, capping the seats with free registration, sorting strands into sub-schedules, emailing the students who follow you and syncing two ways with Google, Outlook or CalDAV are all free forever, with no limit on how many students sign up. So is scanning the QR at the door, on every plan. Putting a price on a spot is the Pro plan at '.plan_price($proMonthly).' a month, along with multi-class cards, custom questions at checkout and the live check-in screen, and Getvnt charges zero platform fees on what you sell.',
             ],
             [
                 'q' => 'Can I run different kinds of workshops on one schedule?',
@@ -521,7 +521,7 @@
             ],
             [
                 'q' => 'Can I refund a student?',
-                'a' => 'Yes, on Pro, from the Sales page, for a student who drops out or a class you call off. A Stripe or PayPal payment goes back through the provider, in full or in part, and a partial refund leaves the spot booked. A spot paid in cash, through a payment link, Payfast or Invoice Ninja is marked as refunded instead, which records it without moving any money. Event Schedule does not email the student about a refund, so that message is yours to send.',
+                'a' => 'Yes, on Pro, from the Sales page, for a student who drops out or a class you call off. A Stripe or PayPal payment goes back through the provider, in full or in part, and a partial refund leaves the spot booked. A spot paid in cash, through a payment link, Payfast or Invoice Ninja is marked as refunded instead, which records it without moving any money. Getvnt does not email the student about a refund, so that message is yours to send.',
             ],
             [
                 'q' => 'How does a multi-class card work?',
@@ -941,7 +941,7 @@
                     What the bench earns is <span class="es-shop-accent">what you keep.</span>
                 </h2>
                 <p class="es-shop-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    Spots are sold through your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-shop-link font-medium hover:underline">PayPal</a> account, or paid in cash on the day. Event Schedule charges zero platform fees on every plan, so past the processor's own fee the money is yours. Putting a price on a spot is the Pro plan; a class you run for nothing takes registrations on any plan.
+                    Spots are sold through your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-shop-link font-medium hover:underline">PayPal</a> account, or paid in cash on the day. Getvnt charges zero platform fees on every plan, so past the processor's own fee the money is yours. Putting a price on a spot is the Pro plan; a class you run for nothing takes registrations on any plan.
                 </p>
             </div>
 
@@ -1385,7 +1385,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-workshop" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm es-shop-wall-muted sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm es-shop-wall-muted sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-shop-btn-lit group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

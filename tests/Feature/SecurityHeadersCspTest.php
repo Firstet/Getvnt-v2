@@ -41,7 +41,7 @@ class SecurityHeadersCspTest extends TestCase
         ."connect-src 'self' *.googleapis.com *.google-analytics.com *.googletagmanager.com *.jsdelivr.net *.stripe.com *.sentry.io *.sentry-cdn.com ipapi.co *.onesignal.com *.os.tc; "
         ."worker-src 'self' cdn.onesignal.com *.onesignal.com; "
         ."manifest-src 'self'; "
-        ."frame-src 'self' *.eventschedule.com *.stripe.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.google.com challenges.cloudflare.com; "
+        ."frame-src 'self' *.getvnt.com *.stripe.com *.youtube.com *.youtube-nocookie.com *.googletagmanager.com *.google.com challenges.cloudflare.com; "
         ."object-src 'none'; "
         ."base-uri 'self'; "
         .'upgrade-insecure-requests; '

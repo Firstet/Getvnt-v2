@@ -1,7 +1,7 @@
 ---
 name: growth-review
 version: 1.0.0
-description: "Pull and analyse Event Schedule's growth data to decide what to build or change. Use whenever the user asks how to grow, improve conversion or retention, get more organizers selling tickets or paying, what to build next, how a release or experiment did, or mentions signups, the funnel, MRR, churn, sellers, comps, traffic, acquisition channels, the hero test, or 'pull the growth data'."
+description: "Pull and analyse Getvnt's growth data to decide what to build or change. Use whenever the user asks how to grow, improve conversion or retention, get more organizers selling tickets or paying, what to build next, how a release or experiment did, or mentions signups, the funnel, MRR, churn, sellers, comps, traffic, acquisition channels, the hero test, or 'pull the growth data'."
 ---
 
 # Growth review

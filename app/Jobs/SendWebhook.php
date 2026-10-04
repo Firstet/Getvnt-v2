@@ -108,7 +108,7 @@ class SendWebhook implements ShouldQueue
                     'X-Webhook-Signature' => 'sha256='.$signature,
                     'X-Webhook-Event' => $this->eventType,
                     'X-Webhook-Timestamp' => $timestamp,
-                    'User-Agent' => 'EventSchedule-Webhook/1.0',
+                    'User-Agent' => 'Getvnt-Webhook/1.0',
                 ])
                 ->withBody($jsonBody, 'application/json')
                 ->withOptions([

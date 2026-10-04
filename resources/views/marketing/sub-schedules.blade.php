@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Sub-Schedules"
+        name="Getvnt - Sub-Schedules"
         description="Sort one schedule into named sections. A sub-schedule carries a name, an English name, a URL slug and a colour, and gives visitors a filter and a direct link. It organises and colour-codes; it cannot hide an event. Free on every plan."
         keywords="sub-schedules, event categories, filter events, schedule sections, colour coded calendar" />
     </x-slot>
@@ -564,7 +564,7 @@
             ],
             [
                 'q' => 'Can I link straight to one sub-schedule?',
-                'a' => 'Yes. Each one gets its own address at your-schedule.eventschedule.com/its-slug, and the page loads already filtered to that section. There is also a schedule query parameter, which is what the filter adds to event links so a visitor who clicks through and comes back is still looking at the section they chose.',
+                'a' => 'Yes. Each one gets its own address at your-schedule.getvnt.com/its-slug, and the page loads already filtered to that section. There is also a schedule query parameter, which is what the filter adds to event links so a visitor who clicks through and comes back is still looking at the section they chose.',
             ],
             [
                 'q' => 'Can visitors subscribe to one sub-schedule in their calendar app?',
@@ -955,7 +955,7 @@
                     </p>
                     <div class="mt-auto space-y-2">
                         @foreach (['live-music', 'workshops', 'film-club'] as $uSlug)
-                            <span class="es-sort-url es-sort-mono es-sort-muted">riverside-arts.eventschedule.com/<span class="es-sort-accent font-bold">{{ $uSlug }}</span></span>
+                            <span class="es-sort-url es-sort-mono es-sort-muted">riverside-arts.getvnt.com/<span class="es-sort-accent font-bold">{{ $uSlug }}</span></span>
                         @endforeach
                     </div>
                 </div>
@@ -969,7 +969,7 @@
                         When somebody has a section selected, every event link on the page carries a schedule parameter. Share that URL and whoever opens it sees the same filtered view you were looking at.
                     </p>
                     <div class="mt-auto space-y-2">
-                        <span class="es-sort-url es-sort-mono es-sort-muted">riverside-arts.eventschedule.com/<span class="es-sort-ink">ember-and-ash</span>?<span class="es-sort-accent font-bold">schedule=live-music</span></span>
+                        <span class="es-sort-url es-sort-mono es-sort-muted">riverside-arts.getvnt.com/<span class="es-sort-ink">ember-and-ash</span>?<span class="es-sort-accent font-bold">schedule=live-music</span></span>
                         <p class="es-sort-muted text-xs">The parameter is read on the way in, so the visitor lands with the section already chosen rather than back at the full drawer.</p>
                     </div>
                 </div>
@@ -1027,7 +1027,7 @@
                                 <span class="es-sort-band-muted flex-1">Events you pick by hand</span>
                             </div>
                         </div>
-                        <p class="es-sort-band-muted mt-4 text-xs">Passes are sold alongside single tickets, and Event Schedule charges zero platform fees on either. <a href="{{ route('marketing.passes') }}" class="es-sort-lit font-semibold hover:underline">How passes work</a></p>
+                        <p class="es-sort-band-muted mt-4 text-xs">Passes are sold alongside single tickets, and Getvnt charges zero platform fees on either. <a href="{{ route('marketing.passes') }}" class="es-sort-lit font-semibold hover:underline">How passes work</a></p>
                     </div>
 
                     <div class="es-sort-card p-6 sm:p-7" data-reveal="panel">
@@ -1388,7 +1388,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-sort-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Live Concerts | Tours & Livestreams</x-slot>
+    <x-slot name="title">Free Getvnt for Live Concerts | Tours & Livestreams</x-slot>
     <x-slot name="description">Put a whole tour online at once: a room, a door time and an on-sale in every city, livestream tickets beside room tickets, and zero platform fees.</x-slot>
     <x-slot name="breadcrumbTitle">For Live Concerts</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Live Concerts"
+        name="Getvnt for Live Concerts"
         description="Put a whole tour routing online at once: a room, a door time and an on-sale in every city, sold from one address with zero platform fees."
         audience="Concert Promoters and Touring Shows"
         keywords="live concert streaming, virtual concert tickets, livestream concerts, tour routing, concert promoter calendar, gig schedule" />
@@ -560,23 +560,23 @@
         $faqs = [
             [
                 'q' => 'Do I need special equipment to stream a live concert?',
-                'a' => 'No, and there is nothing to install. Event Schedule does not stream anything itself: it holds the date, the room, the running order and the tickets, and an online date carries one link to wherever the stream actually lives. Phone straight to Instagram Live, OBS into YouTube Live or Twitch, or a multi-camera truck - all Event Schedule needs is the URL.',
+                'a' => 'No, and there is nothing to install. Getvnt does not stream anything itself: it holds the date, the room, the running order and the tickets, and an online date carries one link to wherever the stream actually lives. Phone straight to Instagram Live, OBS into YouTube Live or Twitch, or a multi-camera truck - all Getvnt needs is the URL.',
             ],
             [
                 'q' => 'Can I sell virtual tickets and venue tickets for the same show?',
-                'a' => 'Yes. They are two named ticket types on the same date, so one can be "Standing" at thirty and the other "Livestream" at twelve, each with its own price, quantity and sales window. A ticket type with a price on it needs Pro, at '.plan_price($proMonthly).' a month, and Event Schedule charges zero platform fees on the sale at every tier. The full stream link lives on the buyer\'s own ticket page: the public event page shows the room, or the domain you are streaming on when the date has no room at all.',
+                'a' => 'Yes. They are two named ticket types on the same date, so one can be "Standing" at thirty and the other "Livestream" at twelve, each with its own price, quantity and sales window. A ticket type with a price on it needs Pro, at '.plan_price($proMonthly).' a month, and Getvnt charges zero platform fees on the sale at every tier. The full stream link lives on the buyer\'s own ticket page: the public event page shows the room, or the domain you are streaming on when the date has no room at all.',
             ],
             [
-                'q' => 'What streaming platforms does Event Schedule work with?',
+                'q' => 'What streaming platforms does Getvnt work with?',
                 'a' => 'Any platform that gives you a URL: YouTube Live, Twitch, Instagram Live, Facebook Live, Vimeo, a custom RTMP front end. To be exact about what this is, it is one link field on the event rather than an integration - no accounts are connected and no viewer numbers come back. That is also why it never breaks when you change platforms.',
             ],
             [
-                'q' => 'Is Event Schedule really free for streaming concerts?',
+                'q' => 'Is Getvnt really free for streaming concerts?',
                 'a' => 'Yes. Unlimited dates, the whole routing on one address, recurring residencies with date exceptions, sub-schedules, two-way Google, Outlook and CalDAV sync, the embeddable calendar, free registration with a capacity limit and no monthly ceiling, built-in analytics, ten newsletter emails a month (each recipient counts as one) and scanning a ticket at the door are all free forever. Selling a ticket that carries a price is '.plan_price($proMonthly).' a month on Pro, along with passes and the live check-in dashboard. There are zero platform fees on ticket sales at every tier, whether a date sells through your own Stripe or PayPal account, Invoice Ninja, a payment link or cash, so past the provider\'s own fee the money is yours.',
             ],
             [
                 'q' => 'What happens when a date moves or gets pulled?',
-                'a' => 'On a one-off date you change the date on the event, and saving asks whether to email its ticket buyers and anyone who asked to hear about that date; on eventschedule.com the buyers get it when your schedule sends through its own email settings. Cancelling a one-off date sends that email as part of cancelling. On a residency, a date exception takes a single night out of the pattern and guests simply see the day absent rather than crossed out, but it emails nobody, so tell that night\'s buyers yourself. Refunds go out from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part, and only a full refund returns the ticket to stock. Being straight with you: there is no conflict detection anywhere in Event Schedule, so nothing will warn you that you have booked two shows on the same night. The routing table is where you catch that, which is why it is the first thing on this page.',
+                'a' => 'On a one-off date you change the date on the event, and saving asks whether to email its ticket buyers and anyone who asked to hear about that date; on getvnt.com the buyers get it when your schedule sends through its own email settings. Cancelling a one-off date sends that email as part of cancelling. On a residency, a date exception takes a single night out of the pattern and guests simply see the day absent rather than crossed out, but it emails nobody, so tell that night\'s buyers yourself. Refunds go out from the Sales page: a Stripe or PayPal sale goes back through the provider, in full or in part, and only a full refund returns the ticket to stock. Being straight with you: there is no conflict detection anywhere in Getvnt, so nothing will warn you that you have booked two shows on the same night. The routing table is where you catch that, which is why it is the first thing on this page.',
             ],
             [
                 'q' => 'Can fans get an email when tickets go on sale?',
@@ -629,7 +629,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-stage-muted mb-6 max-w-xl text-lg sm:text-xl">
-                        Every live concert on the run has its own room, its own door time and its own on-sale. Put the whole routing up once, sell every night from a single address, and keep the takings: Event Schedule charges zero platform fees on ticket sales.
+                        Every live concert on the run has its own room, its own door time and its own on-sale. Put the whole routing up once, sell every night from a single address, and keep the takings: Getvnt charges zero platform fees on ticket sales.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -875,7 +875,7 @@
                     Name the tickets. <span class="es-stage-accent">Keep the door.</span>
                 </h2>
                 <p class="es-stage-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    Sales run through your own <a href="{{ marketing_url('/stripe') }}" class="es-stage-link font-semibold hover:underline">Stripe</a> or <a href="{{ marketing_url('/paypal') }}" class="es-stage-link font-semibold hover:underline">PayPal</a> account, or Invoice Ninja, a payment link or cash, and Event Schedule takes nothing from them. Being clear about the shape of it: these are named ticket types with prices and quantities, sold by the number. A reserved-seating room is an Enterprise thing, where you draw the venue once and the buyer picks their own seat off it.
+                    Sales run through your own <a href="{{ marketing_url('/stripe') }}" class="es-stage-link font-semibold hover:underline">Stripe</a> or <a href="{{ marketing_url('/paypal') }}" class="es-stage-link font-semibold hover:underline">PayPal</a> account, or Invoice Ninja, a payment link or cash, and Getvnt takes nothing from them. Being clear about the shape of it: these are named ticket types with prices and quantities, sold by the number. A reserved-seating room is an Enterprise thing, where you draw the venue once and the buyer picks their own seat off it.
                 </p>
             </div>
 
@@ -1013,7 +1013,7 @@
                             <h3 class="es-stage-onink text-lg font-bold">What sends itself, and what does not</h3>
                             <span class="es-stage-plan">Free</span>
                         </div>
-                        <p class="es-stage-onmuted text-sm">Worth knowing before you plan around it: fans who gave you their email on your schedule page get an automatic digest when you add dates, at most one every few days, and a fan who asked about one date hears when it goes on sale and again two days before. Account followers are not auto-notified, so reaching them means writing the email and pressing send. A moved date reaches its ticket buyers only if you send the notice offered on saving, a cancelled one as part of cancelling, and on eventschedule.com either way only when your schedule sends through its own email settings.</p>
+                        <p class="es-stage-onmuted text-sm">Worth knowing before you plan around it: fans who gave you their email on your schedule page get an automatic digest when you add dates, at most one every few days, and a fan who asked about one date hears when it goes on sale and again two days before. Account followers are not auto-notified, so reaching them means writing the email and pressing send. A moved date reaches its ticket buyers only if you send the notice offered on saving, a cancelled one as part of cancelling, and on getvnt.com either way only when your schedule sends through its own email settings.</p>
                     </div>
                 </div>
 
@@ -1171,7 +1171,7 @@
                     Perfect for every <span class="es-stage-accent">genre and stage</span>
                 </h2>
                 <p class="es-stage-muted text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    Whether it is an intimate acoustic set or a festival stream, Event Schedule works for you. Also see <a href="{{ marketing_url('/for-musicians') }}" class="es-stage-link font-semibold hover:underline">Event Schedule for Musicians</a>.
+                    Whether it is an intimate acoustic set or a festival stream, Getvnt works for you. Also see <a href="{{ marketing_url('/for-musicians') }}" class="es-stage-link font-semibold hover:underline">Getvnt for Musicians</a>.
                 </p>
             </div>
 
@@ -1417,7 +1417,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-band" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="es-stage-onmuted shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-stage-onmuted shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-stage-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

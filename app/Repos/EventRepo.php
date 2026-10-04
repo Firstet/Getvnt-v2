@@ -1342,7 +1342,7 @@ class EventRepo
             ? $event->roles()->pluck('roles.id')->toArray()
             : [];
 
-        $availableSchedules = $user->availableEventSchedules();
+        $availableSchedules = $user->availableGetvnts();
         $userVisibleIds = $availableSchedules->pluck('id')->toArray();
 
         // Roles owned by the dedicated venue field / members section. Empty for a brand-new

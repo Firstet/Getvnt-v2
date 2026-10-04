@@ -1,9 +1,9 @@
 {{-- theme-variants opts this layout in to the six palettes. The guest portal
      renders through the same <x-app-layout> shell and deliberately does not. --}}
-<x-app-layout :theme-variants="true" realtime-surface="ap" :title="(request()->path() != '/' ? implode(' > ', array_map('ucwords', array_slice(explode('/', str_replace(['-', '_'], ' ', request()->path())), 0, 2))) : '') . ' | Event Schedule'">
+<x-app-layout :theme-variants="true" realtime-surface="ap" :title="(request()->path() != '/' ? implode(' > ', array_map('ucwords', array_slice(explode('/', str_replace(['-', '_'], ' ', request()->path())), 0, 2))) : '') . ' | Getvnt'">
 
     <x-slot name="head">
-        {{-- The admin portal is the one surface that genuinely is the Event Schedule app, so it
+        {{-- The admin portal is the one surface that genuinely is the Getvnt app, so it
              is the one that carries the platform manifest and brand colour. The guest portal
              renders through the same shell and supplies its schedule's own. --}}
         @include('partials.web-app-manifest', ['platformApp' => true])
@@ -225,10 +225,10 @@
                 @else
                     <div class="flex items-center justify-between w-full">
                         <span>
-                            <!-- Per the AAL license, please do not remove the link to Event Schedule -->
-                            {!! str_replace(':link', '<bdi dir="ltr"><a href="https://www.eventschedule.com" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">eventschedule.com</a></bdi>', __('messages.powered_by_eventschedule')) !!}
+                            <!-- Per the AAL license, please do not remove the link to Getvnt -->
+                            {!! str_replace(':link', '<bdi dir="ltr"><a href="https://www.getvnt.com" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">getvnt.com</a></bdi>', __('messages.powered_by_eventschedule')) !!}
                             •
-                            <x-link href="https://github.com/eventschedule/eventschedule/releases" target="_blank" hideIcon>{{ config('self-update.version_installed') }}</x-link>
+                            <x-link href="https://github.com/Firstet/Getvnt-v2/releases" target="_blank" hideIcon>{{ config('self-update.version_installed') }}</x-link>
                         </span>
                         {{-- The link renders whether or not we have a count, and the count is the
                              only conditional part. This footer is the selfhost branch, and since
@@ -240,7 +240,7 @@
                              announce as its own star count and nothing else - the same trap
                              marketing/partials/header.blade.php documents for its copy of this
                              badge. --}}
-                        <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer"
                             title="{{ __('messages.star_on_github') }}"
                             aria-label="{{ __('messages.star_on_github') }}"
                             class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-200 no-underline">
@@ -288,7 +288,7 @@
             .' focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--brand-blue)]';
         $aboutIcon = 'h-5 w-5 flex-shrink-0 text-gray-400 dark:text-gray-500';
         // Terms and privacy are hosted-only on purpose. marketing_url() falls back to
-        // eventschedule.com, and those documents do not govern somebody else's selfhost install.
+        // getvnt.com, and those documents do not govern somebody else's selfhost install.
         // Never route('marketing.*') here - those routes are nexus-gated.
         $aboutHosted = config('app.hosted');
     @endphp
@@ -316,7 +316,7 @@
                      without this the leading "v" jumps to the wrong end. --}}
                 <div class="mt-4">
                     <bdi dir="ltr">
-                        <a href="https://github.com/eventschedule/eventschedule/releases" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/Firstet/Getvnt-v2/releases" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 no-underline transition-colors hover:bg-gray-200 hover:text-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue)]">
                             {{ config('self-update.version_installed') }}
                         </a>
@@ -343,7 +343,7 @@
                      the row carries no count by design, not because a fetch failed. It used to
                      fetch inline from nine call sites, which put a blocking five-second request
                      on nearly every admin and marketing page. --}}
-                <a href="https://github.com/eventschedule/eventschedule" target="_blank" rel="noopener noreferrer" class="{{ $aboutRow }}">
+                <a href="https://github.com/Firstet/Getvnt-v2" target="_blank" rel="noopener noreferrer" class="{{ $aboutRow }}">
                     <svg class="{{ $aboutIcon }}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
@@ -411,7 +411,7 @@
             <div class="flex items-center justify-between gap-3 border-t border-gray-200 dark:border-gray-700 px-6 py-4">
                 {{-- bdi, like the version badge: "©" is bidi-neutral, so on an RTL page the
                      algorithm resolves it to the far end and the line renders as
-                     "Event Schedule 2026 ©". --}}
+                     "Getvnt 2026 ©". --}}
                 <bdi dir="ltr" class="text-xs text-gray-500 dark:text-gray-400">&copy; {{ date('Y') }} {{ config('app.name') }}</bdi>
                 {{-- A plain button carrying x-secondary-link's classes: this is a standalone
                      action, so it takes that sizing rather than x-secondary-button's small

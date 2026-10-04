@@ -13,13 +13,13 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Ticketing"
+        name="Getvnt Ticketing"
         description="Sell tickets from your own event page with named ticket types, promo codes, add-ons and passes, take payment through your own Stripe or PayPal account, then scan the QR code at the door. Zero platform fees on ticket sales." />
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to sell tickets with Event Schedule",
+        "name": "How to sell tickets with Getvnt",
         "description": "Three steps from a published event to a scanned ticket at the door.",
         "step": [
             {
@@ -59,7 +59,7 @@
            machine in the building that touches BOTH halves of a ticket:
            it will not turn until the ticket is valid, it turns once per
            ticket, and it keeps a count. That is the whole argument of
-           this page - Event Schedule is that turnstile with an empty
+           this page - Getvnt is that turnstile with an empty
            coin slot. So the page is built as sale side / turn / door
            side, and the mid-page moment is a gate log of the real
            verdicts the scanner returns.
@@ -623,12 +623,12 @@
 
         $faqs = [
             [
-                'q' => 'Can I sell tickets online with Event Schedule?',
+                'q' => 'Can I sell tickets online with Getvnt?',
                 'a' => 'Yes. It is an online ticketing platform built around your own event page: the buyer picks a ticket type there, pays by card, Apple Pay or Google Pay through your own Stripe account or with PayPal, and gets the ticket by email with a QR code for the door. On Pro the checkout can also sit on your own website, through the ticket embed. Putting a price on a ticket is the Pro plan; free registration works on every plan, and no plan adds a platform fee.',
             ],
             [
                 'q' => 'What are the fees for selling tickets?',
-                'a' => 'Event Schedule charges zero platform fees on ticket sales. Card payments run through your own connected Stripe or PayPal account, so the provider charges you its standard processing rate directly and the rest of the ticket price is yours. Nothing is deducted by us, on any plan, at any volume.',
+                'a' => 'Getvnt charges zero platform fees on ticket sales. Card payments run through your own connected Stripe or PayPal account, so the provider charges you its standard processing rate directly and the rest of the ticket price is yours. Nothing is deducted by us, on any plan, at any volume.',
             ],
             [
                 'q' => 'Do I need a paid plan to sell tickets?',
@@ -673,7 +673,7 @@
             ],
             [
                 'q' => 'Can I get notified when tickets sell, and export the data?',
-                'a' => 'Both. Turn on New ticket sale under Schedule, Settings, Notifications to get an email when a ticket sells, with the buyer, the ticket type, the amount, the payment status and any code applied: the first paid sale on each event on any plan, every sale on Pro. On eventschedule.com that email goes out once your schedule has its own email settings. And the Sales list exports to CSV with buyer details, amounts, promo codes, payment method, check-in status and every custom field answer, ready for a spreadsheet.',
+                'a' => 'Both. Turn on New ticket sale under Schedule, Settings, Notifications to get an email when a ticket sells, with the buyer, the ticket type, the amount, the payment status and any code applied: the first paid sale on each event on any plan, every sale on Pro. On getvnt.com that email goes out once your schedule has its own email settings. And the Sales list exports to CSV with buyer details, amounts, promo codes, payment method, check-in status and every custom field answer, ready for a spreadsheet.',
             ],
         ];
 
@@ -718,7 +718,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-turn-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        Event Schedule sells the ticket, mails the QR code, refuses it at the door if it is not valid, admits it once, and keeps the count. What it takes out of the ticket price: nothing.
+                        Getvnt sells the ticket, mails the QR code, refuses it at the door if it is not valid, admits it once, and keeps the count. What it takes out of the ticket price: nothing.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -1045,7 +1045,7 @@
                             <dd class="es-turn-ink es-turn-read">25.00</dd>
                         </div>
                         <div class="es-turn-reg">
-                            <dt class="es-turn-muted">Event Schedule platform fee</dt>
+                            <dt class="es-turn-muted">Getvnt platform fee</dt>
                             <dd class="es-turn-accent es-turn-read text-base">0.00</dd>
                         </div>
                         <div class="es-turn-reg">
@@ -1202,7 +1202,7 @@
                 @endforeach
             </div>
             <p class="es-turn-muted mx-auto mt-8 max-w-3xl text-center text-sm" data-reveal>
-                On eventschedule.com, sale notification emails and feedback requests go out, and gift cards go on sale, once your schedule has its own email settings.
+                On getvnt.com, sale notification emails and feedback requests go out, and gift cards go on sale, once your schedule has its own email settings.
             </p>
         </div>
     </section>
@@ -1382,7 +1382,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-turn-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

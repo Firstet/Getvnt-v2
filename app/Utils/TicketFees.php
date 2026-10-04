@@ -45,11 +45,11 @@ final class TicketFees
     public const EXAMPLE_PRICE = 25;
 
     /** The platforms /compare's calculator shows, in the order it shows them. Ours comes first. */
-    public const COMPARE_PLATFORMS = ['eventschedule', 'eventbrite', 'luma', 'ticket-tailor'];
+    public const COMPARE_PLATFORMS = ['getvnt', 'eventbrite', 'luma', 'ticket-tailor'];
 
     /** Every platform with a rate here, for /ticket-fee-calculator: eight, so two full rows of four. */
     public const CALCULATOR_PLATFORMS = [
-        'eventschedule', 'eventbrite', 'luma', 'ticket-tailor',
+        'getvnt', 'eventbrite', 'luma', 'ticket-tailor',
         'ticketleap', 'universe', 'allevents', 'hi-events',
     ];
 
@@ -68,8 +68,8 @@ final class TicketFees
             // No platform fee on any plan. A ticket with a price on it is Pro, so the subscription is
             // counted; an event that only takes free registrations costs nothing at all. From the same
             // PlatformPricing reader /pricing uses, so the two cannot quote different plans.
-            'eventschedule' => [
-                'name' => 'Event Schedule',
+            'getvnt' => [
+                'name' => 'Getvnt',
                 'monthly' => PlatformPricing::proMonthly(),
                 'label' => '0% platform fee',
                 'basis' => 'Our own figure includes the Pro subscription, because that is what a priced ticket takes; an event that only collects free registrations carries no monthly cost at all.',

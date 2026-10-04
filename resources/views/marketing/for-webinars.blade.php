@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Webinars | Registration & Join Links</x-slot>
+    <x-slot name="title">Free Getvnt for Webinars | Registration & Join Links</x-slot>
     <x-slot name="description">Run webinars with free registration or paid tickets at zero platform fees, and send the join link only to registrants. Works with Zoom, Meet or any link.</x-slot>
     <x-slot name="breadcrumbTitle">For Webinars</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Webinars"
+        name="Getvnt for Webinars"
         description="Publish a webinar on a public schedule, take free registrations or sell tickets with zero platform fees, and hand the join link only to the people who registered. One Event URL field, so any meeting or streaming platform works."
         audience="Webinar Hosts"
         keywords="webinar hosting, webinar scheduling, webinar registration, paid webinars, recurring webinar series" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to run a webinar with Event Schedule",
+        "name": "How to run a webinar with Getvnt",
         "description": "Publish the session, take the registrations, and send the join link only to the people who registered.",
         "step": [
             {
@@ -33,7 +33,7 @@
                 "@type": "HowToStep",
                 "position": 3,
                 "name": "Go on air",
-                "text": "Everyone who registered gets their own registration page carrying the join link. Swap the link and Event Schedule offers to email them all before it saves (on eventschedule.com, once your schedule has its own email settings)."
+                "text": "Everyone who registered gets their own registration page carrying the join link. Swap the link and Getvnt offers to email them all before it saves (on getvnt.com, once your schedule has its own email settings)."
             }
         ]
     }
@@ -57,7 +57,7 @@
            PREVIEW is the public listing: the title, the time, and the
            bare domain of the platform. PROGRAM is what a person who
            registered gets: their own registration page, carrying the
-           actual join link. Event Schedule is the switcher between the
+           actual join link. Getvnt is the switcher between the
            two, and both come off ONE `event_url` field - there is no
            platform account connected, so there is nothing to
            reconnect. That is the argument and the metaphor in one
@@ -590,7 +590,7 @@
 
         // Twelve labels, one field. The LED is each platform's own brand
         // colour; the label is page ink, so the colour never has to carry
-        // any text contrast. Event Schedule holds no account on any of them.
+        // any text contrast. Getvnt holds no account on any of them.
         $jacks = [
             ['Zoom', '#2D8CFF'],
             ['Google Meet', '#00832D'],
@@ -622,8 +622,8 @@
 
         $faqs = [
             [
-                'q' => 'What video platforms does Event Schedule work with?',
-                'a' => 'Any platform that gives you a meeting or streaming link. Zoom, Google Meet, Microsoft Teams, Webex, YouTube Live, Twitch, Vimeo, something you host yourself. An online event carries one Event URL field, and Event Schedule stores whatever you paste into it. To be plain about what that means: there is no account connected to a platform, nothing signs in on your behalf and no meeting is started for you, so there is also nothing to reconnect and nothing that breaks when a platform changes its API. The one exception runs the other way: if you sync a Microsoft 365 calendar you can ask it to create a Teams meeting for online events, and the join link it returns is written back into the field for you.',
+                'q' => 'What video platforms does Getvnt work with?',
+                'a' => 'Any platform that gives you a meeting or streaming link. Zoom, Google Meet, Microsoft Teams, Webex, YouTube Live, Twitch, Vimeo, something you host yourself. An online event carries one Event URL field, and Getvnt stores whatever you paste into it. To be plain about what that means: there is no account connected to a platform, nothing signs in on your behalf and no meeting is started for you, so there is also nothing to reconnect and nothing that breaks when a platform changes its API. The one exception runs the other way: if you sync a Microsoft 365 calendar you can ask it to create a Teams meeting for online events, and the join link it returns is written back into the field for you.',
             ],
             [
                 'q' => 'Is the join link visible to the public?',
@@ -631,7 +631,7 @@
             ],
             [
                 'q' => 'Can I charge for webinars?',
-                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a ticket carry a price. Take payment through your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, add as many named ticket types as the session needs, each with its own price, quantity and sales window, and Event Schedule charges zero platform fees on every plan. The provider charges its own processing fee; Stripe\'s standard rate is approximately 2.9% plus $0.30 a transaction. Scanning a ticket\'s QR code is free on every plan, for the sessions you also run in a room. Pro brings the rest of the door tooling with it: the live check-in dashboard, the sold-out ticket waitlist, promo codes and add-ons. Free registration with a capacity limit is unlimited on every plan, including free.',
+                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month, which is what lets a ticket carry a price. Take payment through your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, add as many named ticket types as the session needs, each with its own price, quantity and sales window, and Getvnt charges zero platform fees on every plan. The provider charges its own processing fee; Stripe\'s standard rate is approximately 2.9% plus $0.30 a transaction. Scanning a ticket\'s QR code is free on every plan, for the sessions you also run in a room. Pro brings the rest of the door tooling with it: the live check-in dashboard, the sold-out ticket waitlist, promo codes and add-ons. Free registration with a capacity limit is unlimited on every plan, including free.',
             ],
             [
                 'q' => 'Can I schedule a recurring webinar series?',
@@ -639,7 +639,7 @@
             ],
             [
                 'q' => 'Do people who registered find out if I move the session?',
-                'a' => 'Yes, once you say so. Change the join link or the venue and Event Schedule stops on the way to saving and asks whether to email everyone who registered, with a short note you can write into it; cancelling a session emails them as part of cancelling, with the same kind of note, and on eventschedule.com registrants get both when your schedule sends through its own email settings. On a one-off session moving the date or the time asks too, though on a recurring series the prompt covers the link and the venue rather than the weekly time. Free registrations are on the list either way, and so is anyone who left only an email address on the event page to hear about it, whose copy never carries the join link. Followers are different, and there are two of them. Somebody signed in who pressed Follow is on a list only a newsletter you write reaches; pressing Follow on its own sends nothing to an account follower automatically when you add a session. Somebody who left an email address on your page and confirmed it is on the other list, and a new session does reach them on its own, as a digest rather than a message per webinar.',
+                'a' => 'Yes, once you say so. Change the join link or the venue and Getvnt stops on the way to saving and asks whether to email everyone who registered, with a short note you can write into it; cancelling a session emails them as part of cancelling, with the same kind of note, and on getvnt.com registrants get both when your schedule sends through its own email settings. On a one-off session moving the date or the time asks too, though on a recurring series the prompt covers the link and the venue rather than the weekly time. Free registrations are on the list either way, and so is anyone who left only an email address on the event page to hear about it, whose copy never carries the join link. Followers are different, and there are two of them. Somebody signed in who pressed Follow is on a list only a newsletter you write reaches; pressing Follow on its own sends nothing to an account follower automatically when you add a session. Somebody who left an email address on your page and confirmed it is on the other list, and a new session does reach them on its own, as a digest rather than a message per webinar.',
             ],
             [
                 'q' => 'Can people get a reminder without registering?',
@@ -650,7 +650,7 @@
                 'a' => 'Yes, from the Sales page, on Pro. A Stripe or PayPal sale goes back through the provider, in full or in part, and its status changes only once the money has moved. A partial refund leaves the ticket valid, so the attendee\'s page and its join link keep working; only a full refund cancels it and returns the place to the session. Sales taken by Invoice Ninja, a payment link or cash are marked as refunded instead, which records the refund without moving any money.',
             ],
             [
-                'q' => 'Is Event Schedule free for hosting webinars?',
+                'q' => 'Is Getvnt free for hosting webinars?',
                 'a' => 'Yes. Unlimited webinars, the running order on each one, recurring series, free registration with a capacity limit, two-way calendar sync, the embeddable calendar and built-in analytics are all free forever, with no monthly ceiling, and so is scanning a ticket in at the door. Charging for a seat is Pro at '.plan_price($proMonthly).' a month, which also adds the live check-in dashboard, custom questions on the registration form and the sold-out ticket waitlist, extra team members are on Enterprise, and there are zero platform fees on ticket sales at every plan level. On the hosted service, attendee email goes out through your own SMTP details, which you add once in the integrations tab on any plan.',
             ],
         ];
@@ -839,7 +839,7 @@
                     <div class="es-air-card p-6" data-reveal="panel">
                         <p class="es-air-label mb-3">03 &middot; Changed</p>
                         <h3 class="mb-2 text-lg font-bold es-air-rack-ink">When you move it</h3>
-                        <p class="es-air-rack-note text-sm">Change the join link or the venue and Event Schedule stops on the way to saving to ask whether to email everyone who registered. Free registrations count, and cancelling emails them as part of cancelling. People who only left an email address to hear about the session get the notice too, still without the link.</p>
+                        <p class="es-air-rack-note text-sm">Change the join link or the venue and Getvnt stops on the way to saving to ask whether to email everyone who registered. Free registrations count, and cancelling emails them as part of cancelling. People who only left an email address to hear about the session get the notice too, still without the link.</p>
                     </div>
                 </div>
 
@@ -882,7 +882,7 @@
                     Twelve labels. <span class="es-air-accent">One field.</span>
                 </h2>
                 <p class="es-air-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    Everything below terminates in the same place: the Event URL box on your webinar. Which is another way of saying Event Schedule does not hold an account on any of them.
+                    Everything below terminates in the same place: the Event URL box on your webinar. Which is another way of saying Getvnt does not hold an account on any of them.
                 </p>
             </div>
 
@@ -917,7 +917,7 @@
                 <div class="space-y-4">
                     <div class="es-air-card p-6" data-reveal="panel">
                         <h3 class="es-air-ink mb-2 text-lg font-bold">Nothing to reconnect</h3>
-                        <p class="es-air-muted text-sm">No sign-in, no token, no account linked to your meeting provider. Event Schedule stores the string you paste and hands it to the people who registered, which means a platform changing its API cannot break your schedule.</p>
+                        <p class="es-air-muted text-sm">No sign-in, no token, no account linked to your meeting provider. Getvnt stores the string you paste and hands it to the people who registered, which means a platform changing its API cannot break your schedule.</p>
                     </div>
                     <div class="es-air-card p-6" data-reveal="panel">
                         <div class="mb-2 flex flex-wrap items-center gap-2">
@@ -1010,7 +1010,7 @@
                             <h3 class="text-lg font-bold es-air-rack-ink">Let the room vote</h3>
                             <span class="es-air-plan es-air-plan-pro">Pro</span>
                         </div>
-                        <p class="es-air-rack-note text-sm">Add a poll to the session and let people pick which of two walkthroughs the second half should be. One thing to know before you plan around it: casting a vote needs the voter signed in to Event Schedule, so a name and an email at registration is not enough.</p>
+                        <p class="es-air-rack-note text-sm">Add a poll to the session and let people pick which of two walkthroughs the second half should be. One thing to know before you plan around it: casting a vote needs the voter signed in to Getvnt, so a name and an email at registration is not enough.</p>
                     </div>
                     <div class="es-air-card p-6" data-reveal="panel">
                         <div class="mb-2 flex flex-wrap items-center gap-2">
@@ -1144,14 +1144,14 @@
                             <h3 class="es-air-ink text-lg font-bold">Free registration with a cap</h3>
                             <span class="es-air-plan">Free</span>
                         </div>
-                        <p class="es-air-muted text-sm">Turn it on, set the limit, and Event Schedule stops taking names when the date is full. No plan, no card, no platform fee, because nothing changed hands.</p>
+                        <p class="es-air-muted text-sm">Turn it on, set the limit, and Getvnt stops taking names when the date is full. No plan, no card, no platform fee, because nothing changed hands.</p>
                     </div>
                     <div class="es-air-card p-6" data-reveal="panel">
                         <div class="mb-2 flex flex-wrap items-center gap-2">
                             <h3 class="es-air-ink text-lg font-bold">Charging for the session</h3>
                             <span class="es-air-plan es-air-plan-pro">Pro</span>
                         </div>
-                        <p class="es-air-muted text-sm">Take payment through your own <a href="{{ marketing_url('/stripe') }}" class="es-air-link font-medium hover:underline">Stripe</a> or <a href="{{ marketing_url('/paypal') }}" class="es-air-link font-medium hover:underline">PayPal</a> account, or Invoice Ninja, a payment link or cash, and add named ticket types, each with its own price, quantity and sales window. A ticket with a price on it is Pro; scanning its QR code is free on any plan if the session also has a room, and Pro adds the live check-in dashboard. Event Schedule takes zero platform fees either way, so past the provider's own processing the money is yours. See <a href="{{ marketing_url('/features/ticketing') }}" class="es-air-link font-medium hover:underline">how ticketing works</a>.</p>
+                        <p class="es-air-muted text-sm">Take payment through your own <a href="{{ marketing_url('/stripe') }}" class="es-air-link font-medium hover:underline">Stripe</a> or <a href="{{ marketing_url('/paypal') }}" class="es-air-link font-medium hover:underline">PayPal</a> account, or Invoice Ninja, a payment link or cash, and add named ticket types, each with its own price, quantity and sales window. A ticket with a price on it is Pro; scanning its QR code is free on any plan if the session also has a room, and Pro adds the live check-in dashboard. Getvnt takes zero platform fees either way, so past the provider's own processing the money is yours. See <a href="{{ marketing_url('/features/ticketing') }}" class="es-air-link font-medium hover:underline">how ticketing works</a>.</p>
                     </div>
                     <div class="es-air-card p-6" data-reveal="panel">
                         <div class="mb-2 flex flex-wrap items-center gap-2">
@@ -1296,7 +1296,7 @@
                     Perfect for all types of <span class="es-air-accent">webinars</span>
                 </h2>
                 <p class="es-air-muted text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    A product demo and a company all-hands are the same shape: a time, a link, and a list of people who said they were coming. Running a whole multi-day programme? See Event Schedule for <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-air-link font-medium hover:underline">virtual conferences</a>.
+                    A product demo and a company all-hands are the same shape: a time, a link, and a list of people who said they were coming. Running a whole multi-day programme? See Getvnt for <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-air-link font-medium hover:underline">virtual conferences</a>.
                 </p>
             </div>
 
@@ -1398,7 +1398,7 @@
                 @foreach ([
                     ['03', 'Paste the link', 'Create the session, paste your meeting or streaming link into the Event URL field, and type the running order if it has segments.'],
                     ['02', 'Open registration', 'Free registration with a capacity limit, or named ticket types through your own Stripe or PayPal account. Either way the platform fee is zero.'],
-                    ['01', 'Go on air', 'Everyone who registered has their own page with the join link. Swap the link and you are asked whether to email them all, which on eventschedule.com needs your schedule to have its own email settings.'],
+                    ['01', 'Go on air', 'Everyone who registered has their own page with the join link. Swap the link and you are asked whether to email them all, which on getvnt.com needs your schedule to have its own email settings.'],
                 ] as [$stepNum, $stepTitle, $stepBody])
                     <div class="es-air-card p-7" data-reveal="panel">
                         <div class="es-air-accent es-air-num mb-3 text-3xl font-black">{{ $stepNum }}</div>
@@ -1538,7 +1538,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-webinars" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="es-air-rack-note shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-air-rack-note shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-air-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

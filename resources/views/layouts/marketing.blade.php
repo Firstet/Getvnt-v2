@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ in_array(request()->get('lang'), ['he', 'ar']) ? 'rtl' : 'ltr' }}">
 <head>
     <meta charset="utf-8">
-    <title>{{ $title ?? 'Event Schedule - The simple way to share your event schedule' }}</title>
+    <title>{{ $title ?? 'Getvnt - The simple way to share your event schedule' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -40,14 +40,14 @@
     @endunless
     <meta name="description" content="{{ $description ?? 'Free, open-source event calendar and ticketing platform. Publish your events on one page, sell tickets with zero platform fees and grow your audience.' }}">
     <meta name="robots" content="{{ $robots ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }}">
-    <meta name="author" content="Event Schedule">
+    <meta name="author" content="Getvnt">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{{ $ogType ?? 'website' }}">
     @unless ($errorPage ?? false)
     <meta property="og:url" content="{{ $canonical ?? $basePath }}">
     @endunless
-    <meta property="og:title" content="{{ $title ?? 'Event Schedule' }}">
+    <meta property="og:title" content="{{ $title ?? 'Getvnt' }}">
     <meta property="og:description" content="{{ $description ?? 'Free, open-source event calendar and ticketing platform. Publish your events on one page, sell tickets with zero platform fees and grow your audience.' }}">
     @php
         if (isset($socialImage) && str_starts_with($socialImage, 'http')) {
@@ -98,8 +98,8 @@
     <meta property="og:image:type" content="{{ $ogImageType }}">
     <meta property="og:image:width" content="{{ $ogImageWidth }}">
     <meta property="og:image:height" content="{{ $ogImageHeight }}">
-    <meta property="og:image:alt" content="{{ $title ?? 'Event Schedule' }}">
-    <meta property="og:site_name" content="Event Schedule">
+    <meta property="og:image:alt" content="{{ $title ?? 'Getvnt' }}">
+    <meta property="og:site_name" content="Getvnt">
     @php
         $ogLocaleMap = [
             'en' => 'en_US', 'es' => 'es_ES', 'de' => 'de_DE',
@@ -115,10 +115,10 @@
     @unless ($errorPage ?? false)
     <meta name="twitter:url" content="{{ $canonical ?? $basePath }}">
     @endunless
-    <meta name="twitter:title" content="{{ $title ?? 'Event Schedule' }}">
+    <meta name="twitter:title" content="{{ $title ?? 'Getvnt' }}">
     <meta name="twitter:description" content="{{ $description ?? 'Free, open-source event calendar and ticketing platform. Publish your events on one page, sell tickets with zero platform fees and grow your audience.' }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
-    <meta name="twitter:image:alt" content="{{ $title ?? 'Event Schedule' }}">
+    <meta name="twitter:image:alt" content="{{ $title ?? 'Getvnt' }}">
     <meta name="twitter:site" content="@ScheduleEvent">
 
     <!-- Structured Data -->
@@ -127,7 +127,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "@id": "{{ \App\Utils\SeoUtils::siteUrl() }}/#website",
-        "name": "Event Schedule",
+        "name": "Getvnt",
         "url": "{{ \App\Utils\SeoUtils::siteUrl() }}",
         "description": "A free, open-source event calendar and ticketing platform for performers, venues and curators: one page for every event, tickets with zero platform fees, and newsletters to the people who follow you.",
         "publisher": {
@@ -147,19 +147,19 @@
          plus the site-wide facts only this top-level copy carries. --}}
     <script type="application/ld+json" {!! nonce_attr() !!}>
     {!! \App\Utils\SeoUtils::jsonLd(['@context' => 'https://schema.org'] + \App\Utils\SeoUtils::organization() + [
-        'description' => 'Event Schedule is an open-source platform for sharing events, selling tickets, and bringing communities together.',
+        'description' => 'Getvnt is an open-source platform for sharing events, selling tickets, and bringing communities together.',
         'sameAs' => [
-            'https://github.com/eventschedule/eventschedule',
+            'https://github.com/Firstet/Getvnt-v2',
             'https://www.facebook.com/appeventschedule',
             'https://www.instagram.com/eventschedule/',
-            'https://youtube.com/@EventSchedule',
+            'https://youtube.com/@Getvnt',
             'https://x.com/ScheduleEvent',
             'https://www.linkedin.com/company/eventschedule/',
         ],
         'foundingDate' => '2024',
         'contactPoint' => [
             '@type' => 'ContactPoint',
-            'email' => 'support@eventschedule.com',
+            'email' => 'support@getvnt.com',
             'contactType' => 'customer service',
         ],
     ]) !!}
@@ -193,7 +193,7 @@
         $pageName = $crumbName($breadcrumbTitle ?? $title ?? 'Page');
 
         // The section crumbs are absolute on config('app.url'), never url(): the blog is a second
-        // host, and url('/use-cases') built on blog.eventschedule.com named a page that does not
+        // host, and url('/use-cases') built on blog.getvnt.com named a page that does not
         // exist there. That is how 144 of 213 posts shipped a 404 in their BreadcrumbList.
         // One spelling of the site root, SeoUtils::siteUrl(), the one every @id in the graph uses:
         // a raw config('app.url') with a trailing slash would name a second website and a second
@@ -302,7 +302,7 @@
     {{-- The blog exists on the nexus only, but this layout also renders the legal pages and the
          404 off it, so the feed is linked only where the route is registered. --}}
     @if (Route::has('blog.feed'))
-    <link rel="alternate" type="application/rss+xml" title="Event Schedule Blog" href="{{ route('blog.feed') }}">
+    <link rel="alternate" type="application/rss+xml" title="Getvnt Blog" href="{{ route('blog.feed') }}">
     @endif
 
     {{ $headMeta ?? '' }}

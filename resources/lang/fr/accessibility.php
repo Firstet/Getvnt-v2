@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Accessibilité - Event Schedule',
-    'meta_description' => 'Déclaration d\'accessibilité et options d\'affichage pour Event Schedule.',
+    'page_title' => 'Accessibilité - Getvnt',
+    'meta_description' => 'Déclaration d\'accessibilité et options d\'affichage pour Getvnt.',
     'breadcrumb' => 'Accessibilité',
 
     'h1' => 'Déclaration d\'accessibilité',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'Cette page est une information de service générale, pas un conseil juridique. Les lois varient selon les pays. Confirmez vos obligations avec un conseil qualifié.',
 
     'section_scope_title' => 'Portée',
-    'section_scope_body' => 'Cette déclaration couvre le site marketing et l\'application web Event Schedule (outils connectés et pages publiques de calendrier) exploités sous le domaine principal et les sous-domaines d\'Event Schedule, sauf indication contraire.',
+    'section_scope_body' => 'Cette déclaration couvre le site marketing et l\'application web Getvnt (outils connectés et pages publiques de calendrier) exploités sous le domaine principal et les sous-domaines d\'Getvnt, sauf indication contraire.',
 
     'section_commitment_title' => 'Engagement',
-    'section_commitment_body' => 'Nous travaillons à rendre Event Schedule utilisable par les personnes en situation de handicap. Nous visons une meilleure conformité aux WCAG, documentées comme :wcag_target, et le respect des orientations liées à la norme israélienne 5568 lorsqu\'elles s\'appliquent.',
+    'section_commitment_body' => 'Nous travaillons à rendre Getvnt utilisable par les personnes en situation de handicap. Nous visons une meilleure conformité aux WCAG, documentées comme :wcag_target, et le respect des orientations liées à la norme israélienne 5568 lorsqu\'elles s\'appliquent.',
 
     'section_commitment_is5568_note' => 'Nous tenons également compte des pratiques courantes d\'accessibilité web liées à la norme israélienne 5568 lorsqu\'elles s\'appliquent à nos services.',
 

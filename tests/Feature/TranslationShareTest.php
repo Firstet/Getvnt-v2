@@ -18,7 +18,7 @@ class TranslationShareTest extends TestCase
     use RefreshDatabase;
     use ResetsTranslationOverrides;
 
-    private const NEXUS_ENDPOINT = 'https://eventschedule.com/api/translations/suggestions';
+    private const NEXUS_ENDPOINT = 'https://getvnt.com/api/translations/suggestions';
 
     private function adminActing(User $admin)
     {

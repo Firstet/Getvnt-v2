@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Calendar Sync"
+        name="Getvnt Calendar Sync"
         description="Two-way calendar sync with Google Calendar, Outlook and Microsoft 365, or any CalDAV server. Events leave when you save them, and edits made in your calendar app come back. Free on every plan." />
     </x-slot>
 
@@ -349,7 +349,7 @@
             background: rgba(232, 237, 242, 0.04);
         }
         /* The left cell happened in the calendar app, so it carries the
-           return colour; the right cell is what Event Schedule did. */
+           return colour; the right cell is what Getvnt did. */
         /* The rule runs the full height of the row, so the label is centred
            against it rather than pinned to the top of an empty cell. */
         .es-trip-ledger-there {
@@ -557,7 +557,7 @@
         ];
 
         // The return-leg ledger: what you did in the calendar app, and what
-        // Event Schedule did about it.
+        // Getvnt did about it.
         $ledger = [
             [
                 'there' => 'You added an event',
@@ -678,7 +678,7 @@
                         <div class="mb-5 flex flex-wrap items-baseline justify-between gap-2">
                             <div>
                                 <p class="es-trip-stub-tag mb-1">Round trip &middot; calendar sync</p>
-                                <h2 class="es-trip-stub-ink text-lg font-bold">your-schedule.eventschedule.com</h2>
+                                <h2 class="es-trip-stub-ink text-lg font-bold">your-schedule.getvnt.com</h2>
                             </div>
                             <span class="es-trip-stub-pill">Fare: free</span>
                         </div>
@@ -687,7 +687,7 @@
                             <div class="es-trip-stub-leg">
                                 <div class="es-trip-stub-marker">Leg 01</div>
                                 <div>
-                                    <p class="es-trip-stub-out text-sm font-bold">Event Schedule &rarr; your calendar</p>
+                                    <p class="es-trip-stub-out text-sm font-bold">Getvnt &rarr; your calendar</p>
                                     <div class="es-trip-stub-track es-trip-stub-track-out my-2"></div>
                                     <p class="es-trip-stub-muted text-xs">On save. Created, edited and deleted events all go out.</p>
                                 </div>
@@ -696,7 +696,7 @@
                             <div class="es-trip-stub-leg">
                                 <div class="es-trip-stub-marker">Leg 02</div>
                                 <div>
-                                    <p class="es-trip-stub-back text-sm font-bold">Your calendar &rarr; Event Schedule</p>
+                                    <p class="es-trip-stub-back text-sm font-bold">Your calendar &rarr; Getvnt</p>
                                     <div class="es-trip-stub-track es-trip-stub-track-back my-2"></div>
                                     <p class="es-trip-stub-muted text-xs">On a push notification, or on the fifteen-minute sweep.</p>
                                 </div>
@@ -1345,7 +1345,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-trip-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

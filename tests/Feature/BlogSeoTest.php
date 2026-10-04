@@ -173,8 +173,8 @@ class BlogSeoTest extends TestCase
         $pageOne = $this->get('/blog')->assertOk()->getContent();
         $pageTwo = $this->get('/blog?page=2')->assertOk()->getContent();
 
-        $this->assertStringContainsString('<title>Blog | Event Schedule</title>', $pageOne);
-        $this->assertStringContainsString('<title>Blog - Page 2 | Event Schedule</title>', $pageTwo);
+        $this->assertStringContainsString('<title>Blog | Getvnt</title>', $pageOne);
+        $this->assertStringContainsString('<title>Blog - Page 2 | Getvnt</title>', $pageTwo);
 
         preg_match('~<meta name="description" content="(.*?)">~s', $pageOne, $one);
         preg_match('~<meta name="description" content="(.*?)">~s', $pageTwo, $two);
@@ -259,7 +259,7 @@ class BlogSeoTest extends TestCase
         $this->assertNotNull($node, 'the BlogPosting block did not decode');
         $this->assertSame('The "Best" Way to Sell Tickets', $node['headline']);
         $this->assertSame('Organization', $node['author']['@type']);
-        $this->assertSame('Event Schedule', $node['author']['name']);
+        $this->assertSame('Getvnt', $node['author']['name']);
         $this->assertSame('Organization', $node['publisher']['@type']);
         $this->assertSame(route('blog.show', $post->slug), $node['mainEntityOfPage']['@id']);
         $this->assertSame('ticketing, venues', $node['keywords']);
@@ -396,12 +396,12 @@ class BlogSeoTest extends TestCase
         $base = _base_domain();
 
         $post = $this->makePost([
-            'content' => '<p><a href="[https://www.'.$base.'/for-y](https://www.'.$base.'/for-y)">Event Schedule</a></p>',
+            'content' => '<p><a href="[https://www.'.$base.'/for-y](https://www.'.$base.'/for-y)">Getvnt</a></p>',
         ]);
 
         $body = $this->get('/blog/'.$post->slug)->assertOk()->getContent();
 
-        $this->assertStringContainsString('<a href="https://'.$base.'/for-y">Event Schedule</a>', $body);
+        $this->assertStringContainsString('<a href="https://'.$base.'/for-y">Getvnt</a>', $body);
         $this->assertStringNotContainsString('%5B', $body);
 
         // Stored bodies are never rewritten.
@@ -426,10 +426,10 @@ class BlogSeoTest extends TestCase
 
         $title = $this->titleOf($this->get('/blog/'.$long->slug)->assertOk()->getContent());
         $this->assertLessThanOrEqual(60, mb_strlen($title), 'title is '.mb_strlen($title).' chars: '.$title);
-        $this->assertStringNotContainsString('| Event Schedule', $title);
+        $this->assertStringNotContainsString('| Getvnt', $title);
 
         $this->assertSame(
-            'Selling Tickets Online | Event Schedule',
+            'Selling Tickets Online | Getvnt',
             $this->titleOf($this->get('/blog/'.$short->slug)->assertOk()->getContent())
         );
     }

@@ -205,10 +205,10 @@ class UtmConsentCookieTest extends TestCase
      */
     public function test_withdrawal_clears_on_the_same_domain_the_cookie_was_set_on(): void
     {
-        config(['session.domain' => '.eventschedule.com']);
+        config(['session.domain' => '.getvnt.com']);
 
         // The CookieJar takes its defaults at resolve time, which already happened.
-        app('cookie')->setDefaultPathAndDomain('/', '.eventschedule.com', true, 'Lax');
+        app('cookie')->setDefaultPathAndDomain('/', '.getvnt.com', true, 'Lax');
 
         // No consent cookie, so this request is a withdrawal: the stale attribution cookie must
         // be expired. withCookie, not withUnencryptedCookie - EncryptCookies drops a cookie it
@@ -217,28 +217,28 @@ class UtmConsentCookieTest extends TestCase
         $cleared = $this->cookie($response, 'utm_params');
 
         $this->assertExpired($cleared, 'utm_params');
-        $this->assertSame('.eventschedule.com', $cleared->getDomain(),
+        $this->assertSame('.getvnt.com', $cleared->getDomain(),
             'the delete has to name the same domain the jar wrote the cookie on, or it matches nothing');
     }
 
     /** The other half of the pair: what the jar actually writes it on. */
     public function test_the_attribution_cookie_is_written_on_the_session_domain(): void
     {
-        config(['session.domain' => '.eventschedule.com']);
-        app('cookie')->setDefaultPathAndDomain('/', '.eventschedule.com', true, 'Lax');
+        config(['session.domain' => '.getvnt.com']);
+        app('cookie')->setDefaultPathAndDomain('/', '.getvnt.com', true, 'Lax');
 
         $response = $this->withUnencryptedCookie('cookie_consent', 'analytics.marketing.'.time())->get('/?utm_source=news');
 
-        $this->assertSame('.eventschedule.com', $this->cookie($response, 'utm_params')?->getDomain());
+        $this->assertSame('.getvnt.com', $this->cookie($response, 'utm_params')?->getDomain());
     }
 
     /** The consent cookie itself has to span the install the same way, or the server never sees it. */
     public function test_the_page_publishes_the_domain_the_consent_cookie_belongs_on(): void
     {
-        config(['app.cookie_consent_banner' => true, 'session.domain' => '.eventschedule.com']);
+        config(['app.cookie_consent_banner' => true, 'session.domain' => '.getvnt.com']);
 
         $this->get('/')->assertOk()
-            ->assertSee('<meta name="cookie-domain" content=".eventschedule.com">', false);
+            ->assertSee('<meta name="cookie-domain" content=".getvnt.com">', false);
     }
 
     /**
@@ -249,12 +249,12 @@ class UtmConsentCookieTest extends TestCase
      */
     public function test_the_domain_is_published_even_when_the_banner_is_hidden(): void
     {
-        config(['app.cookie_consent_banner' => false, 'services.meta.pixel_id' => null, 'session.domain' => '.eventschedule.com']);
+        config(['app.cookie_consent_banner' => false, 'services.meta.pixel_id' => null, 'session.domain' => '.getvnt.com']);
         \App\Models\Setting::set('realtime_enabled', '0');
 
         $this->get('/')->assertOk()
             ->assertDontSee('data-cookie-consent', false)
-            ->assertSee('<meta name="cookie-domain" content=".eventschedule.com">', false);
+            ->assertSee('<meta name="cookie-domain" content=".getvnt.com">', false);
     }
 
     private function assertExpired(?Cookie $cookie, string $name): void

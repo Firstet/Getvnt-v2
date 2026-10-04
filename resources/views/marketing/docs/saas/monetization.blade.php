@@ -1,6 +1,6 @@
 <x-docs-page
     key="saas/monetization"
-    title="SaaS Monetization: Ads, Promotions, Stay22 - Event Schedule"
+    title="SaaS Monetization: Ads, Promotions, Stay22 - Getvnt"
     description="Earn from your free tier: Google AdSense on free schedules' pages, prepaid promotions your paid schedules buy, and a Stay22 accommodation affiliate."
     lede="Cover your hosting costs by monetizing the free tier, and give your paying customers somewhere to advertise."
 >
@@ -72,8 +72,8 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">One credit is not an upsell</div>
-            <p>The small "Event Schedule" chip in the corner of public pages is the Attribution
-            Assurance License credit, and on any install other than eventschedule.com it stays on
+            <p>The small "Getvnt" chip in the corner of public pages is the Attribution
+            Assurance License credit, and on any install other than getvnt.com it stays on
             every schedule you charge for. Do not sell its removal as a paid feature: there is no
             setting that takes it off, and upgrading a customer does not either. Worth knowing which
             way round it runs: a free schedule shows your footer strip and no chip, so an upgrade
@@ -86,7 +86,7 @@
             <p>Nothing is enabled until you set <code class="doc-inline-code">ADS_ENABLED=true</code>
             and configure it in the admin panel. The Monetization card is shown only when that
             variable is set <em>and</em> the install runs in hosted mode
-            (<code class="doc-inline-code">IS_HOSTED=true</code>) and is not eventschedule.com
+            (<code class="doc-inline-code">IS_HOSTED=true</code>) and is not getvnt.com
             itself. A single-tenant selfhost resolves every schedule to Enterprise, so it has no
             free tier and nothing could ever render.</p>
         </div>
@@ -100,7 +100,7 @@
             <div class="doc-callout-title">Read this before enabling AdSense</div>
             <p>Visitors in the EEA, the UK and Switzerland must be asked for consent before they
             are shown personalized ads, and Google requires that this is done through a certified
-            Consent Management Platform. <strong>Event Schedule does not ship a CMP and does not
+            Consent Management Platform. <strong>Getvnt does not ship a CMP and does not
             detect visitors' regions for consent purposes.</strong></p>
         </div>
 
@@ -111,7 +111,7 @@
             Google's ad and consent domains, so no header changes are needed either.
         </p>
         <p>
-            Event Schedule defaults to <strong>non-personalized ads</strong>, which is the safer
+            Getvnt defaults to <strong>non-personalized ads</strong>, which is the safer
             setting and the one that requires the least of you. The <strong>Allow personalized
             ads</strong> toggle in the Monetization card is off until you turn it on, and doing so
             is your decision and your legal responsibility. Even non-personalized ads use cookies, so the
@@ -346,7 +346,7 @@
             <div class="doc-callout-title">This is not part of the monetization feature above</div>
             <p>It has its own switch, it is unaffected by
             <code class="doc-inline-code">ADS_ENABLED</code>, it works on a single-tenant selfhost
-            and on eventschedule.com, and it applies to <strong>paid schedules as well as free
+            and on getvnt.com, and it applies to <strong>paid schedules as well as free
             ones</strong>. Most importantly, each schedule owner can supply their own affiliate ID
             and keep the commission themselves.</p>
         </div>

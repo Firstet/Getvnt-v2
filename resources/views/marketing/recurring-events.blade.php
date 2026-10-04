@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Recurring Events | Weekly, Monthly & Yearly - Event Schedule</x-slot>
+    <x-slot name="title">Recurring Events | Weekly, Monthly & Yearly - Getvnt</x-slot>
     <x-slot name="description">Repeat events daily, weekly, biweekly, monthly or yearly. Skip or add dates, count tickets per date, and give guests a calendar feed that updates itself.</x-slot>
     <x-slot name="breadcrumbTitle">Recurring Events</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Recurring Events"
+        name="Getvnt Recurring Events"
         description="Repeat events daily, weekly, biweekly, monthly or yearly. Skip or add dates, count tickets per date, and give guests a calendar feed that updates itself." />
     </x-slot>
 
@@ -1161,7 +1161,7 @@
             </div>
 
             <p class="es-loop-muted mx-auto mt-8 max-w-2xl text-center text-sm" data-reveal>
-                Registration with a capacity limit is free on every plan, counted afresh for every date of the loop, and scanning at the door is free too. Charging for a seat is what {{ plan_price($proMonthly) }} a month opens, along with the live check-in dashboard and the ticket waitlist, and Event Schedule takes zero platform fees on ticket sales on every plan.
+                Registration with a capacity limit is free on every plan, counted afresh for every date of the loop, and scanning at the door is free too. Charging for a seat is what {{ plan_price($proMonthly) }} a month opens, along with the live check-in dashboard and the ticket waitlist, and Getvnt takes zero platform fees on ticket sales on every plan.
             </p>
         </div>
     </section>
@@ -1587,7 +1587,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-loop-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

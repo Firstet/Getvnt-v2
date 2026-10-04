@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Live Q&A Sessions | Hosting Software</x-slot>
+    <x-slot name="title">Free Getvnt for Live Q&A Sessions | Hosting Software</x-slot>
     <x-slot name="description">Schedule live Q&As and office hours for free: registration with a place limit per date, one join link for Zoom or YouTube Live, and zero platform fees.</x-slot>
     <x-slot name="breadcrumbTitle">For Live Q&A Sessions</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Live Q&A Sessions"
+        name="Getvnt for Live Q&A Sessions"
         description="Schedule live Q&A sessions and office hours for free: registration with a place limit per date, one join link for Zoom, YouTube Live or any platform, and zero platform fees."
         audience="Q&A Session Hosts"
         keywords="live Q&A platform, Q&A session scheduling, interactive Q&A events, paid Q&A sessions, office hours scheduling, AMA scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to host a live Q&A session with Event Schedule",
+        "name": "How to host a live Q&A session with Getvnt",
         "description": "Three steps to schedule a live Q&A session, open registration, and collect what your audience wants to ask.",
         "step": [
             {
@@ -563,15 +563,15 @@
                 'a' => 'Yes, three ways, and it is worth knowing exactly what each one is. A poll on the session lets people vote between your options and, if you allow it, suggest their own, which you approve before anyone sees them; polls are on the Pro plan. Comments are free: your audience can leave one on the session, or on a single agenda segment, and nothing appears until you approve it. And the note you attach to registration goes out with every confirmation email, so you can simply ask people to reply with what they want covered.',
             ],
             [
-                'q' => 'What streaming platforms work with Event Schedule?',
+                'q' => 'What streaming platforms work with Getvnt?',
                 'a' => 'Any platform that gives you a meeting or streaming link. Zoom, Google Meet, Microsoft Teams, YouTube Live, or whatever you move to next year. Mark the session as online and paste the link: it shows on the session page and on each attendee\'s own registration page. To be straight with you, this is one link field rather than a streaming integration, and there is no embedded player.',
             ],
             [
                 'q' => 'Can I charge for live Q&A sessions?',
-                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month. Connect your own Stripe or PayPal account and sell named ticket types for a premium AMA or a paid deep dive, each with its own price, quantity and sales window. Pro is what puts a price on a ticket, and it brings the rest of the door tooling with it: the live check-in dashboard, discount codes, add-ons and a waitlist on a sold-out ticket type. Scanning a ticket\'s QR code at the door is free on every plan. Event Schedule charges zero platform fees at every plan level, free included, so past your processor\'s own fee the money is yours. Free sessions do not need any of this: registration with a place limit is free and unlimited.',
+                'a' => 'Yes, on the Pro plan at '.plan_price($proMonthly).' a month. Connect your own Stripe or PayPal account and sell named ticket types for a premium AMA or a paid deep dive, each with its own price, quantity and sales window. Pro is what puts a price on a ticket, and it brings the rest of the door tooling with it: the live check-in dashboard, discount codes, add-ons and a waitlist on a sold-out ticket type. Scanning a ticket\'s QR code at the door is free on every plan. Getvnt charges zero platform fees at every plan level, free included, so past your processor\'s own fee the money is yours. Free sessions do not need any of this: registration with a place limit is free and unlimited.',
             ],
             [
-                'q' => 'Is Event Schedule free for hosting Q&A sessions?',
+                'q' => 'Is Getvnt free for hosting Q&A sessions?',
                 'a' => 'Yes. Unlimited sessions, registration with a capacity limit, the agenda, recurring office hours, the embeddable calendar, the embeddable registration widget, two-way Google, Outlook and CalDAV sync, built-in analytics and newsletters are all free forever, and there is no ceiling on how many people register. Polls, custom questions on the registration form and charging for a seat are on the Pro plan at '.plan_price($proMonthly).' a month. There are zero platform fees on ticket sales on every plan.',
             ],
             [
@@ -907,7 +907,7 @@
                         </div>
 
                         <p class="mt-10 max-w-3xl es-conv-onband" data-reveal>
-                            What Event Schedule does not have, so you are not surprised on day one: an upvoting question queue with a moderation console. A poll is a poll. Your question, up to ten options, one vote each, and a small approve or reject on any option the room suggests.
+                            What Getvnt does not have, so you are not surprised on day one: an upvoting question queue with a moderation console. A poll is a poll. Your question, up to ten options, one vote each, and a small approve or reject on any option the room suggests.
                         </p>
                     </div>
                 </div>
@@ -1078,7 +1078,7 @@
                     <div class="es-conv-card p-5 sm:p-7" data-reveal="panel">
                         <div class="overflow-x-auto">
                             <table class="w-full border-collapse text-left">
-                                <caption class="sr-only">What a live Q&A audience asks for, the Event Schedule setting that answers it, where that setting lives, and the plan it is on</caption>
+                                <caption class="sr-only">What a live Q&A audience asks for, the Getvnt setting that answers it, where that setting lives, and the plan it is on</caption>
                                 <thead>
                                     <tr class="es-conv-tag">
                                         <th scope="col" class="pb-3 pe-4 font-bold">They ask</th>
@@ -1197,7 +1197,7 @@
                                 <span class="es-conv-plan es-conv-plan-pro">Pro</span>
                             </div>
                             <p class="es-conv-muted mb-4">Connect your own Stripe or PayPal account and sell named ticket types for a paid AMA or a small-group deep dive, each with its own price, quantity and sales window. Putting a price on a ticket is the Pro plan.</p>
-                            <p class="es-conv-muted text-sm">Scanning a ticket's QR code at the door is free on every plan. Pro brings the rest of the door tooling with it: the live check-in dashboard, discount codes for the people you want back, add-ons and a waitlist on a sold-out ticket type. Quantities count per date, the same way places do. Event Schedule takes zero platform fees on every plan, so past your processor's own fee the money is yours, and a refund from the Sales page sends a Stripe or PayPal payment back, in full or in part. See all <a href="{{ marketing_url('/features/ticketing') }}" class="es-conv-link font-medium hover:underline">ticketing features</a>.</p>
+                            <p class="es-conv-muted text-sm">Scanning a ticket's QR code at the door is free on every plan. Pro brings the rest of the door tooling with it: the live check-in dashboard, discount codes for the people you want back, add-ons and a waitlist on a sold-out ticket type. Quantities count per date, the same way places do. Getvnt takes zero platform fees on every plan, so past your processor's own fee the money is yours, and a refund from the Sales page sends a Stripe or PayPal payment back, in full or in part. See all <a href="{{ marketing_url('/features/ticketing') }}" class="es-conv-link font-medium hover:underline">ticketing features</a>.</p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
                         <div class="es-ring-glow" aria-hidden="true"></div>
@@ -1232,7 +1232,7 @@
                     Perfect for every type of <span class="es-conv-accent">live Q&amp;A</span>
                 </h2>
                 <p class="es-conv-muted text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    A product AMA or a Thursday office hour, it is the same hour of turns. Also see Event Schedule for <a href="{{ marketing_url('/for-webinars') }}" class="es-conv-link font-medium hover:underline">Webinars</a> and <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-conv-link font-medium hover:underline">Virtual Conferences</a>.
+                    A product AMA or a Thursday office hour, it is the same hour of turns. Also see Getvnt for <a href="{{ marketing_url('/for-webinars') }}" class="es-conv-link font-medium hover:underline">Webinars</a> and <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-conv-link font-medium hover:underline">Virtual Conferences</a>.
                 </p>
             </div>
 
@@ -1484,7 +1484,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="office-hours" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm es-conv-ondim sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm es-conv-ondim sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-conv-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

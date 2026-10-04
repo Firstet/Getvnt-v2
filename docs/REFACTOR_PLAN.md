@@ -1,4 +1,4 @@
-# Event Schedule Refactoring Playbook
+# Getvnt Refactoring Playbook
 
 **Audience:** a Claude (Opus) session executing one phase per session.
 **Prime directive:** after every phase, the app behaves EXACTLY as it did before - bug-for-bug. This campaign changes structure, never behavior.

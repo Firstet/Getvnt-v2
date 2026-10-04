@@ -37,7 +37,7 @@ class IcsUtils
      */
     public static function buildInvite(Event $event, ?Role $role = null, ?Sale $sale = null, string $method = 'PUBLISH'): string
     {
-        $domain = parse_url(config('app.url'), PHP_URL_HOST) ?: 'eventschedule.com';
+        $domain = parse_url(config('app.url'), PHP_URL_HOST) ?: 'getvnt.com';
         $uid = 'appointment-'.$event->id.'@'.$domain;
 
         $title = $event->name;
@@ -56,7 +56,7 @@ class IcsUtils
 
         $ics = "BEGIN:VCALENDAR\r\n";
         $ics .= "VERSION:2.0\r\n";
-        $ics .= "PRODID:-//Event Schedule//Appointments//EN\r\n";
+        $ics .= "PRODID:-//Getvnt//Appointments//EN\r\n";
         $ics .= 'METHOD:'.$method."\r\n";
         $ics .= "BEGIN:VEVENT\r\n";
         $ics .= 'UID:'.$uid."\r\n";
@@ -173,7 +173,7 @@ class IcsUtils
             }
         }
 
-        return [$email, $name ?: ($role->name ?? 'Event Schedule')];
+        return [$email, $name ?: ($role->name ?? 'Getvnt')];
     }
 
     /**

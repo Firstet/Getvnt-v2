@@ -49,7 +49,7 @@ class RedirectIfAuthenticated
                 }
 
                 // Custom-domain bounce: a guest hit /request on a custom domain (where
-                // the .eventschedule.com session cookie did not apply), got redirected
+                // the .getvnt.com session cookie did not apply), got redirected
                 // here via redirect_with_pending_action(). Now that the cookie applies
                 // and we can see the user is already authenticated, restore the cached
                 // pending action and bounce to the subdomain /request URL so

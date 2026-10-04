@@ -20,7 +20,7 @@ class UpdateApp extends Command
      *
      * @var string
      */
-    protected $description = 'Download and install the latest Event Schedule release, then run migrations';
+    protected $description = 'Download and install the latest Getvnt release, then run migrations';
 
     /**
      * Execute the console command.

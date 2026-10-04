@@ -2,7 +2,7 @@
 
     <noscript>
       <div class="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 p-4 text-center text-base">
-        JavaScript is required to use Event Schedule. Please enable JavaScript in your browser.
+        JavaScript is required to use Getvnt. Please enable JavaScript in your browser.
       </div>
     </noscript>
 
@@ -137,7 +137,7 @@
             @php
                 // The schedule's own logo, never the event's flyer: this page is password gated,
                 // so its imagery is precisely what the owner chose not to make public. And never
-                // /images/social/home.jpg, which put an Event Schedule advert in the WhatsApp
+                // /images/social/home.jpg, which put an Getvnt advert in the WhatsApp
                 // preview of somebody else's private event.
                 $gateOgImage = $role->profile_image_url ?: null;
             @endphp
@@ -667,12 +667,12 @@
     @endif
 
     {{-- The dark footer strip: an operator's free-tier growth CTA, linking their own
-         marketing_url(). eventschedule.com has none - its free tier carries the corner chip
+         marketing_url(). getvnt.com has none - its free tier carries the corner chip
          below instead - so Role::showFooterStrip() is false on the nexus whatever the plan. --}}
     @if (! request()->embed && $role->showFooterStrip())
     <footer class="bg-gray-800">
       <div class="container mx-auto relative flex flex-row justify-center items-center py-5 px-5">
-        <!-- Per the AAL license, please do not remove the link to Event Schedule -->
+        <!-- Per the AAL license, please do not remove the link to Getvnt -->
         <p class="text-[#F5F9FE] text-base text-center" dir="{{ $isRtl ? 'rtl' : 'ltr' }}">
             {!! str_replace(':link', '<bdi dir="ltr"><a href="' . marketing_url() . '" target="_blank" rel="noopener" class="text-white hover:underline">' . marketing_domain() . '</a></bdi>',  __('messages.try_event_schedule')) !!}
         </p>
@@ -691,7 +691,7 @@
         // Tagged per reason so the /admin traffic sources report can tell an operator's own
         // platform apart from a selfhost install apart from our own free tier apart from a
         // granted plan. The marketing layout builds its canonical from request()->path(), so the
-        // query string self-canonicalizes away. The chip always points at eventschedule.com
+        // query string self-canonicalizes away. The chip always points at getvnt.com
         // rather than marketing_url(): it is the license attribution, and that is not the
         // operator's to rebrand.
         $creditUtm = [
@@ -700,7 +700,7 @@
             'free_plan' => '?utm_source=free-plan&utm_medium=footer',
             'granted_plan' => '?utm_source=granted-plan&utm_medium=footer',
         ];
-        $creditUrl = 'https://eventschedule.com'.($creditUtm[$creditReason] ?? '');
+        $creditUrl = 'https://getvnt.com'.($creditUtm[$creditReason] ?? '');
     @endphp
 
     {{-- The privacy policy that covers this page, and the way back into the cookie banner (GDPR
@@ -721,11 +721,11 @@
     {{-- es-credit-chip: lifted clear of the mobile CTA bar by accessibility-widget.css. --}}
     @if (! request()->embed && $creditReason)
     <div class="es-credit-chip flex justify-{{ $isRtl ? 'start' : 'end' }} p-4 {{ $role->show_accessibility_widget ? 'es-a11y-credit-clear' : '' }}">
-        {{-- Per the AAL license, please do not remove the link to Event Schedule --}}
+        {{-- Per the AAL license, please do not remove the link to Getvnt --}}
         <a href="{{ $creditUrl }}" target="_blank" rel="noopener" title="{{ __('messages.powered_by_event_schedule') }}"
            class="inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-medium text-gray-600 shadow-sm ring-1 ring-black/5 backdrop-blur transition-colors hover:bg-white hover:text-gray-900">
             <span aria-hidden="true" class="flex h-4 w-4 items-center justify-center rounded-[5px] bg-gradient-to-br from-[#4E81FA] to-[#22D3EE] text-[8px] font-black leading-none text-white">ES</span>
-            <span>Event Schedule</span>
+            <span>Getvnt</span>
         </a>
     </div>
     @endif

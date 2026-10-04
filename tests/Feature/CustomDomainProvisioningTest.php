@@ -53,7 +53,7 @@ class CustomDomainProvisioningTest extends TestCase
      */
     private function fakeDigitalOceanApp(array $domains = [], int $putStatus = 200, array $putBody = []): void
     {
-        $this->domains = $domains ?: [['domain' => 'eventschedule.com', 'type' => 'PRIMARY', 'zone' => '']];
+        $this->domains = $domains ?: [['domain' => 'getvnt.com', 'type' => 'PRIMARY', 'zone' => '']];
 
         Http::fake([
             'api.digitalocean.com/v2/apps/*' => function ($request) use ($putStatus, $putBody) {
@@ -130,7 +130,7 @@ class CustomDomainProvisioningTest extends TestCase
 
         $hosts = array_column($this->lastWrittenDomains(), 'domain');
         $this->assertContains('tenant-domain.test', $hosts);
-        $this->assertContains('eventschedule.com', $hosts, 'The app\'s own domain must survive the rewrite.');
+        $this->assertContains('getvnt.com', $hosts, 'The app\'s own domain must survive the rewrite.');
 
         $role->refresh();
         $this->assertSame('pending', $role->custom_domain_status);
@@ -140,7 +140,7 @@ class CustomDomainProvisioningTest extends TestCase
     public function test_reprovisioning_an_already_registered_domain_writes_nothing(): void
     {
         $this->fakeDigitalOceanApp([
-            ['domain' => 'eventschedule.com', 'type' => 'PRIMARY', 'zone' => ''],
+            ['domain' => 'getvnt.com', 'type' => 'PRIMARY', 'zone' => ''],
             ['domain' => 'tenant-domain.test', 'type' => 'PRIMARY', 'zone' => ''],
         ]);
         $role = $this->createDirectDomainRole();
@@ -199,7 +199,7 @@ class CustomDomainProvisioningTest extends TestCase
     public function test_a_domain_change_removes_and_adds_in_a_single_write(): void
     {
         $this->fakeDigitalOceanApp([
-            ['domain' => 'eventschedule.com', 'type' => 'PRIMARY', 'zone' => ''],
+            ['domain' => 'getvnt.com', 'type' => 'PRIMARY', 'zone' => ''],
             ['domain' => 'old-domain.test', 'type' => 'PRIMARY', 'zone' => ''],
         ]);
 
@@ -227,7 +227,7 @@ class CustomDomainProvisioningTest extends TestCase
         $hosts = array_column($this->domains, 'domain');
         $this->assertContains('first-tenant.test', $hosts);
         $this->assertContains('second-tenant.test', $hosts);
-        $this->assertContains('eventschedule.com', $hosts);
+        $this->assertContains('getvnt.com', $hosts);
     }
 
     public function test_re_adding_the_same_domain_does_not_duplicate_it(): void
@@ -275,7 +275,7 @@ class CustomDomainProvisioningTest extends TestCase
     public function test_a_failed_removal_keeps_the_domain_on_the_role(): void
     {
         $this->fakeDigitalOceanApp([
-            ['domain' => 'eventschedule.com', 'type' => 'PRIMARY', 'zone' => ''],
+            ['domain' => 'getvnt.com', 'type' => 'PRIMARY', 'zone' => ''],
             ['domain' => 'tenant-domain.test', 'type' => 'PRIMARY', 'zone' => ''],
         ], putStatus: 422, putBody: ['message' => 'spec is invalid']);
 
@@ -349,7 +349,7 @@ class CustomDomainProvisioningTest extends TestCase
 
     /**
      * And the rule the form applies refuses it up front, on ANY base domain rather than just
-     * eventschedule.com - which is the whole gap for an operator running their own platform.
+     * getvnt.com - which is the whole gap for an operator running their own platform.
      */
     public function test_the_platform_hostname_is_reserved_on_any_install(): void
     {
@@ -360,7 +360,7 @@ class CustomDomainProvisioningTest extends TestCase
         $this->assertTrue(Role::isReservedCustomDomainHost('tenant.myschedules.io'));
 
         // Still ours, whatever app.url says.
-        $this->assertTrue(Role::isReservedCustomDomainHost('foo.eventschedule.com'));
+        $this->assertTrue(Role::isReservedCustomDomainHost('foo.getvnt.com'));
 
         // A genuine tenant domain is untouched.
         $this->assertFalse(Role::isReservedCustomDomainHost('gigs.example.org'));

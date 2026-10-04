@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Food Trucks & Vendors"
+        name="Getvnt for Food Trucks & Vendors"
         description="A public schedule that always carries today's stop, with the regular pitches set up once as recurring events, a QR code for the serving window and a live calendar feed customers subscribe to once."
         audience="Food Trucks, Vendors & Mobile Kitchens"
         keywords="food truck schedule, food truck locations, mobile vendor calendar, where is the food truck, catering booking requests, street food route" />
@@ -301,7 +301,7 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for food trucks?',
+                'q' => 'Is Getvnt free for food trucks?',
                 'a' => 'The parts you use every week are free forever: your public schedule and its list layout, the regular pitches as recurring events, date exceptions for the weeks you lose a spot, an address and map on every stop, a QR code for the serving window, booking requests for catering, sub-schedules, two-way calendar sync, a calendar feed your customers can subscribe to, an embeddable calendar and up to 10 newsletter emails a month, counted per recipient rather than per send. Free registration with a capacity is free as well, for a supper club you are not charging for. Putting a price on a seat, at a supper club or a collaboration night, is Pro at '.plan_price($proMonthly).' a month. Zero platform fees on sales either way.',
             ],
             [
@@ -807,7 +807,7 @@
                 ] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-stop-card es-stop-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-stop-muted text-sm">Event Schedule for</div>
+                            <div class="es-stop-muted text-sm">Getvnt for</div>
                             <div class="es-stop-ink text-lg font-semibold">{!! $relName !!}</div>
                         </div>
                         <svg aria-hidden="true" class="es-stop-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -885,7 +885,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-truck" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-stop-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

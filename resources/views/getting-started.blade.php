@@ -1,6 +1,6 @@
 {{-- theme-variants: see admin/newsletters/templates.blade.php. A brand-new user lands here
      and then on the dashboard, so the two must not disagree about the palette. --}}
-<x-app-layout :theme-variants="true" :title="__('messages.get_started') . ' | Event Schedule'">
+<x-app-layout :theme-variants="true" :title="__('messages.get_started') . ' | Getvnt'">
 
     {{-- This view renders through the shared shell without going via app-admin, so it carries the
          platform manifest itself. --}}

@@ -1,12 +1,12 @@
 <x-marketing-layout>
-    <x-slot name="title">Event Schedule Integrations: Calendars, Stripe, PayPal, API</x-slot>
+    <x-slot name="title">Getvnt Integrations: Calendars, Stripe, PayPal, API</x-slot>
     <x-slot name="description">Fifteen real integrations, each labelled with its direction, trigger and plan: Google Calendar, Outlook, CalDAV, Stripe, PayPal, webhooks and more.</x-slot>
     <x-slot name="breadcrumbTitle">Integrations</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Integrations"
-        description="Event Schedule connects directly to the services you already run: two-way calendar sync with Google Calendar, Outlook and CalDAV, payments through your own Stripe, PayPal or Payfast account or Invoice Ninja, refunds sent back through Stripe and PayPal, signed outbound webhooks, a REST API, OneSignal web push, Google Wallet ticket passes, a nearby-accommodation map, Eventbrite import, Facebook and Instagram ad boosting, and event creation over WhatsApp." />
+        name="Getvnt - Integrations"
+        description="Getvnt connects directly to the services you already run: two-way calendar sync with Google Calendar, Outlook and CalDAV, payments through your own Stripe, PayPal or Payfast account or Invoice Ninja, refunds sent back through Stripe and PayPal, signed outbound webhooks, a REST API, OneSignal web push, Google Wallet ticket passes, a nearby-accommodation map, Eventbrite import, Facebook and Instagram ad boosting, and event creation over WhatsApp." />
     </x-slot>
 
     {{-- Motion gate: hidden pre-reveal states only apply when this class is present,
@@ -634,7 +634,7 @@
             ],
             [
                 'Meta ads', 'out', 'Pro',
-                'Your event becomes a Facebook and Instagram campaign: you choose budget, dates, audience and placements. The ads run on the ad account of whoever operates your Event Schedule site.',
+                'Your event becomes a Facebook and Instagram campaign: you choose budget, dates, audience and placements. The ads run on the ad account of whoever operates your Getvnt site.',
             ],
             [
                 'WhatsApp', 'in', 'Ent',
@@ -671,7 +671,7 @@
             ],
             [
                 'q' => 'Where does the ticket money actually go?',
-                'a' => 'Into an account you own. With Stripe on the hosted platform the charge is created on your own connected account, so payouts land on your Stripe schedule and you pay Stripe its processing fee and nothing else; a selfhosted install uses your own Stripe keys directly. PayPal and Payfast pay into the account you connect, and Invoice Ninja into the gateway behind your Invoice Ninja company. Event Schedule takes zero platform fees on any of them.',
+                'a' => 'Into an account you own. With Stripe on the hosted platform the charge is created on your own connected account, so payouts land on your Stripe schedule and you pay Stripe its processing fee and nothing else; a selfhosted install uses your own Stripe keys directly. PayPal and Payfast pay into the account you connect, and Invoice Ninja into the gateway behind your Invoice Ninja company. Getvnt takes zero platform fees on any of them.',
             ],
             [
                 'q' => 'Can I refund through an integration?',
@@ -687,7 +687,7 @@
             ],
             [
                 'q' => 'What happens if I delete an event in my calendar?',
-                'a' => 'You decide, per schedule. An event deleted in the calendar you import from can be kept in Event Schedule, marked as cancelled so it is hidden but reversible, or deleted outright. Events that have ticket sales or a running ad boost are hidden instead of deleted, so a stray drag in a calendar app cannot take a sold show with it.',
+                'a' => 'You decide, per schedule. An event deleted in the calendar you import from can be kept in Getvnt, marked as cancelled so it is hidden but reversible, or deleted outright. Events that have ticket sales or a running ad boost are hidden instead of deleted, so a stray drag in a calendar app cannot take a sold show with it.',
             ],
         ];
 
@@ -726,14 +726,14 @@
                             <svg aria-hidden="true" class="es-wire-accent h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                             </svg>
-                            <span class="es-wire-muted text-sm font-medium tracking-wide">Fifteen Event Schedule integrations</span>
+                            <span class="es-wire-muted text-sm font-medium tracking-wide">Fifteen Getvnt integrations</span>
                         </x-marketing.hero-eyebrow>
                         <span class="es-mask"><span class="es-mask-line">No middle layer.</span></span>
                         <span class="es-mask es-mask-2"><span class="es-mask-line">Just <span class="es-wire-accent">wires.</span></span></span>
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-wire-muted mb-8 max-w-xl text-lg sm:text-xl">
-                        Every Event Schedule integration talks straight to the services you already run: your calendar or your own CalDAV server, your own Stripe or PayPal account, your own endpoint. Fifteen ports, each labelled with which way it runs, what makes data move, and which plan it is on.
+                        Every Getvnt integration talks straight to the services you already run: your calendar or your own CalDAV server, your own Stripe or PayPal account, your own endpoint. Fifteen ports, each labelled with which way it runs, what makes data move, and which plan it is on.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -878,7 +878,7 @@
             <div class="es-wire-card p-5 sm:p-7" data-reveal="panel">
                 <div class="es-wire-scroll">
                     <table class="es-wire-reg">
-                        <caption class="sr-only">The fifteen Event Schedule integration ports, with the direction each one runs, what makes data move along it, and the plan it is on</caption>
+                        <caption class="sr-only">The fifteen Getvnt integration ports, with the direction each one runs, what makes data move along it, and the plan it is on</caption>
                         <thead>
                             <tr class="es-wire-tag">
                                 <th scope="col" class="font-bold">Port</th>
@@ -1004,7 +1004,7 @@
                 </p>
                 <div class="es-wire-spec">
                     <span class="es-wire-spec-k">Keep it</span>
-                    <span class="es-wire-spec-v es-wire-muted">The default. The event stays in Event Schedule and your calendar is simply tidier than your schedule.</span>
+                    <span class="es-wire-spec-v es-wire-muted">The default. The event stays in Getvnt and your calendar is simply tidier than your schedule.</span>
                     <span class="es-wire-spec-k">Mark cancelled</span>
                     <span class="es-wire-spec-v es-wire-muted">Hidden from the public schedule, still there for you, and reversible.</span>
                     <span class="es-wire-spec-k">Delete it</span>
@@ -1032,7 +1032,7 @@
                     The money never <span class="es-wire-accent">lands here.</span>
                 </h2>
                 <p class="es-wire-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    All four payment ports terminate in an account you own, and all four come with Pro, which is what lets a ticket carry a price in the first place. Event Schedule charges zero platform fees on ticket sales on every plan, which is only possible because it is not in the middle of the transaction.
+                    All four payment ports terminate in an account you own, and all four come with Pro, which is what lets a ticket carry a price in the first place. Getvnt charges zero platform fees on ticket sales on every plan, which is only possible because it is not in the middle of the transaction.
                 </p>
             </div>
 
@@ -1066,7 +1066,7 @@
                         <h3 class="es-wire-ink text-xl font-bold">Invoice Ninja</h3>
                         <span class="es-wire-plan">Free</span>
                     </div>
-                    <p class="es-wire-muted mb-5 text-sm">Point Event Schedule at your Invoice Ninja install with an API token and URL. Useful when the buyer is an organisation that needs a document rather than a receipt.</p>
+                    <p class="es-wire-muted mb-5 text-sm">Point Getvnt at your Invoice Ninja install with an API token and URL. Useful when the buyer is an organisation that needs a document rather than a receipt.</p>
                     <div class="es-wire-spec mb-5">
                         <span class="es-wire-spec-k">Invoice mode</span>
                         <span class="es-wire-spec-v es-wire-muted">An invoice is raised per sale and the buyer pays it.</span>
@@ -1144,7 +1144,7 @@
                     <span class="es-wire-spec-v es-wire-muted">Past orders and attendees. Sold tickets stay where they were sold, so run the two in parallel until the last one is scanned.</span>
                 </div>
                 <p class="es-wire-muted mt-5 text-sm">
-                    <a href="{{ marketing_url('/eventbrite-alternative') }}" class="es-wire-link font-semibold hover:underline">Event Schedule compared with Eventbrite</a>
+                    <a href="{{ marketing_url('/eventbrite-alternative') }}" class="es-wire-link font-semibold hover:underline">Getvnt compared with Eventbrite</a>
                     goes through the rest of the move.
                 </p>
             </div>
@@ -1248,7 +1248,7 @@
                     Five ports the site operator <span class="es-wire-accent">holds the key to.</span>
                 </h2>
                 <p class="es-wire-muted mt-5 text-lg" data-reveal style="--reveal-delay: 0.15s;">
-                    These five need a credential that belongs to whoever runs the Event Schedule site, not to your schedule. If one of them is missing, that is why.
+                    These five need a credential that belongs to whoever runs the Getvnt site, not to your schedule. If one of them is missing, that is why.
                 </p>
             </div>
 
@@ -1346,7 +1346,7 @@
             <div class="es-wire-card mx-auto mt-6 max-w-4xl p-7" data-reveal="panel">
                 <p class="es-wire-tag mb-4">Or hold the keys yourself</p>
                 <h3 class="es-wire-ink mb-3 text-lg font-bold">Selfhosting? You are the operator</h3>
-                <p class="es-wire-muted mb-4 text-sm">Run your own install and all five of those keys are yours to add, alongside your own Google, Microsoft and Stripe credentials. Every port in the register is on, because a selfhosted install resolves to the top tier. An install that is not eventschedule.com can also share its public events with the eventschedule.com listings, which an admin switches on and each schedule's team then chooses to join.</p>
+                <p class="es-wire-muted mb-4 text-sm">Run your own install and all five of those keys are yours to add, alongside your own Google, Microsoft and Stripe credentials. Every port in the register is on, because a selfhosted install resolves to the top tier. An install that is not getvnt.com can also share its public events with the getvnt.com listings, which an admin switches on and each schedule's team then chooses to join.</p>
                 <p class="es-wire-muted text-sm">
                     <a href="{{ route('marketing.docs.selfhost.installation') }}" class="es-wire-link font-semibold hover:underline">Selfhost installation guide</a>
                 </p>
@@ -1552,7 +1552,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm es-wire-onband-muted sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm es-wire-onband-muted sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-wire-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

@@ -954,7 +954,7 @@ class UrlUtils
             CURLOPT_TIMEOUT => 10,
             CURLOPT_CONNECTTIMEOUT => 5,
             CURLOPT_MAXREDIRS => 3,
-            CURLOPT_USERAGENT => 'EventSchedule/1.0',
+            CURLOPT_USERAGENT => 'Getvnt/1.0',
             CURLOPT_SSL_VERIFYPEER => true,
             CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
@@ -1361,7 +1361,7 @@ class UrlUtils
     public static function safeFetch($url, int $timeout = 15)
     {
         try {
-            $response = self::safeHttpGet($url, ['User-Agent' => 'EventSchedule/1.0'], $timeout);
+            $response = self::safeHttpGet($url, ['User-Agent' => 'Getvnt/1.0'], $timeout);
 
             if ($response === null || ! $response->successful()) {
                 return null;
@@ -1503,7 +1503,7 @@ class UrlUtils
             // Follow redirects safely (each hop re-validated + IP-pinned) so the
             // og:image is read from the final page rather than a 3xx body.
             $followed = self::safeHttpGetFollowing($url, [
-                'User-Agent' => 'EventSchedule/1.0',
+                'User-Agent' => 'Getvnt/1.0',
                 'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                 'Accept-Language' => 'en-US,en;q=0.5',
             ], 15, 4);
@@ -1576,7 +1576,7 @@ class UrlUtils
             CURLOPT_FOLLOWLOCATION => false,
             CURLOPT_TIMEOUT => 10,
             CURLOPT_CONNECTTIMEOUT => 5,
-            CURLOPT_USERAGENT => 'EventSchedule/1.0',
+            CURLOPT_USERAGENT => 'Getvnt/1.0',
             CURLOPT_SSL_VERIFYPEER => true,
             CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,

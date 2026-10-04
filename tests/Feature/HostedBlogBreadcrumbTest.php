@@ -14,7 +14,7 @@ use Tests\TestCase;
  * The marketing layout used to infer its BreadcrumbList from the path. On the blog host that meant a
  * post never reached the blog branch, and a post slugged for-* or *-alternative took a marketing
  * branch instead, whose url('/use-cases') was built on the BLOG host: 144 of 213 live posts put
- * https://blog.eventschedule.com/use-cases, a 404, into their structured data.
+ * https://blog.getvnt.com/use-cases, a 404, into their structured data.
  *
  * BlogSeoTest cannot see that, because in the test env the blog is registered path-based at /blog:
  * routes/web.php registers the blog host only for `hosted && is_nexus && ! is_testing` outside local. So the

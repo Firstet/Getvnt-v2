@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'Event Schedule',
+    'name' => 'Getvnt',
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     'growth_data_token' => trim((string) env('GROWTH_DATA_TOKEN', '')),
 
     // Where app:pull-growth fetches from. `?:` so a present-but-blank variable still gets the default.
-    'growth_data_url' => env('GROWTH_DATA_URL') ?: 'https://eventschedule.com',
+    'growth_data_url' => env('GROWTH_DATA_URL') ?: 'https://getvnt.com',
 
     /*
      * How stale the scheduler heartbeat may get before /admin raises "scheduler stalled".
@@ -97,7 +97,7 @@ return [
     // (partials/sentry-sdk.blade.php). SENTRY_JS_DSN, a Sentry CDN loader URL, is the old way and
     // still overrides it when set.
     //
-    // Event Schedule's own project is the default only on eventschedule.com and on an install that
+    // Getvnt's own project is the default only on getvnt.com and on an install that
     // opted in with REPORT_ERRORS. Any other install, a selfhosted SaaS running IS_HOSTED among
     // them, reports nowhere unless it names its own SENTRY_BROWSER_DSN: its visitors' errors are
     // not ours to receive (self-hosting terms, "what crosses the line").
@@ -137,7 +137,7 @@ return [
     // The upstream nexus app: receives shared translation suggestions AND federated
     // events. Separate from marketing_url, which operators may point at their own site -
     // anything that must reach the real upstream belongs here, not there.
-    'nexus_url' => env('NEXUS_URL', 'https://eventschedule.com'),
+    'nexus_url' => env('NEXUS_URL', 'https://getvnt.com'),
     // Where published translation-override files live. Env-overridable so tests
     // never write into storage/app/lang of the working checkout. A relative env
     // value resolves under the app base path; an absolute value is used as-is
@@ -147,8 +147,8 @@ return [
         : storage_path('app/lang'),
     'logo_dark' => env('APP_LOGO_DARK', '/images/dark_logo.png'),
     'logo_light' => env('APP_LOGO_LIGHT', '/images/light_logo.png'),
-    'marketing_url' => env('APP_MARKETING_URL', 'https://eventschedule.com'),
-    'support_email' => env('SUPPORT_EMAIL', 'contact@eventschedule.com'),
+    'marketing_url' => env('APP_MARKETING_URL', 'https://getvnt.com'),
+    'support_email' => env('SUPPORT_EMAIL', 'contact@getvnt.com'),
     'trial_days' => (int) env('TRIAL_DAYS', 7),
     'search_exclude_country' => env('SEARCH_EXCLUDE_COUNTRY', ''),
 

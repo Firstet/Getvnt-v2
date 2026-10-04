@@ -1,4 +1,4 @@
-# Booked Solid: the Event Schedule showreel
+# Booked Solid: the Getvnt showreel
 
 A 34-second motion piece built as one HTML page, so every frame is code: no After Effects project, no
 stock footage, nothing to license. It renders in two cuts on one timeline, dark and light, and plays in

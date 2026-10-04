@@ -74,7 +74,7 @@
                                 </p>
                                 @if (!empty($showBranding))
                                 <p style="margin: 10px 0 0 0; font-size: {{ $template === 'compact' ? '10px' : '11px' }}; color: {{ $footerTextColor }}; font-family: '{{ $style['fontFamily'] }}', sans-serif;">
-                                    <a href="https://eventschedule.com" style="color: {{ $footerLinkColor }}; text-decoration: none;">{{ __('messages.powered_by_event_schedule') }}</a>
+                                    <a href="https://getvnt.com" style="color: {{ $footerLinkColor }}; text-decoration: none;">{{ __('messages.powered_by_event_schedule') }}</a>
                                 </p>
                                 @endif
                         </td>

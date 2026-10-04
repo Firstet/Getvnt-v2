@@ -319,7 +319,7 @@ class CaptureUtmParameters
             return $host;
         }
 
-        // Extract last two segments (e.g., eventschedule.com from sub.eventschedule.com)
+        // Extract last two segments (e.g., getvnt.com from sub.getvnt.com)
         $parts = explode('.', $host);
         if (count($parts) >= 2) {
             return implode('.', array_slice($parts, -2));

@@ -12,7 +12,7 @@ use Tests\TestCase;
  * public/llms.txt and public/llms-full.txt are what an AI crawler reads instead of the site, and
  * they are static files: nothing renders them, so nothing about them breaks loudly. They drifted
  * the quiet way - a Free plan listing every payment method and refunds (both Pro), a Blog link
- * to eventschedule.com/blog, which only redirects, and no product overview at all in llms.txt.
+ * to getvnt.com/blog, which only redirects, and no product overview at all in llms.txt.
  *
  * So every link has to land, every price has to be the one the site quotes, and the Free plan
  * may not claim what Pro sells. The newsletter allowance has to be stated in the unit it is
@@ -58,14 +58,14 @@ class LlmsTxtTest extends TestCase
                 $host = parse_url($url, PHP_URL_HOST);
                 $path = parse_url($url, PHP_URL_PATH) ?: '/';
 
-                if ($host === 'blog.eventschedule.com') {
+                if ($host === 'blog.getvnt.com') {
                     $this->assertSame('/', $path, "public/{$file} links {$url}; link the blog's front page");
                     $checked++;
 
                     continue;
                 }
 
-                if ($host !== 'eventschedule.com') {
+                if ($host !== 'getvnt.com') {
                     continue;
                 }
 
@@ -89,8 +89,8 @@ class LlmsTxtTest extends TestCase
     public function test_neither_file_links_the_blog_redirect(): void
     {
         foreach (self::FILES as $file) {
-            $this->assertStringNotContainsString('eventschedule.com/blog', $this->contents($file), "public/{$file}");
-            $this->assertStringContainsString('(https://blog.eventschedule.com)', $this->contents($file), "public/{$file} links no blog");
+            $this->assertStringNotContainsString('getvnt.com/blog', $this->contents($file), "public/{$file}");
+            $this->assertStringContainsString('(https://blog.getvnt.com)', $this->contents($file), "public/{$file} links no blog");
         }
     }
 

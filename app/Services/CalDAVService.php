@@ -758,7 +758,7 @@ class CalDAVService
     }
 
     /**
-     * Update an existing EventSchedule event from a CalDAV event.
+     * Update an existing Getvnt event from a CalDAV event.
      * Returns true if the event's own fields changed and were saved.
      */
     protected function updateEventFromCalDAV(array $eventData, Role $role): bool
@@ -1064,7 +1064,7 @@ class CalDAVService
      */
     protected function generateUid(): string
     {
-        return Str::uuid()->toString().'@eventschedule';
+        return Str::uuid()->toString().'@getvnt';
     }
 
     /**

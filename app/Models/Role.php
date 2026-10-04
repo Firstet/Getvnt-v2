@@ -3898,7 +3898,7 @@ class Role extends Model implements MustVerifyEmail
      * schedule at ..." linking marketing_url().
      *
      * The strip is the growth CTA of whoever runs the platform, so it is a free-tier thing on an
-     * operator's own platform and nowhere else. eventschedule.com credits its free tier with the
+     * operator's own platform and nowhere else. getvnt.com credits its free tier with the
      * small corner chip instead (creditChipReason() answers 'free_plan'), which is why this is
      * false on the nexus whatever the plan. It is the strip's one predicate: the layout gates on
      * it and creditChipReason() stands down on it, so a page never carries both credits.
@@ -3909,13 +3909,13 @@ class Role extends Model implements MustVerifyEmail
     }
 
     /**
-     * Why this schedule's guest pages carry the small "Event Schedule" credit chip, or null when
+     * Why this schedule's guest pages carry the small "Getvnt" credit chip, or null when
      * they do not - either because none is owed, or because the footer strip is already carrying
      * one:
      *
      *  - 'selfhost'     the Attribution Assurance License credit on a single-tenant install.
      *  - 'saas'         the same credit on an operator's own multi-tenant platform.
-     *  - 'free_plan'    a free schedule on eventschedule.com. The nexus runs no footer strip, so
+     *  - 'free_plan'    a free schedule on getvnt.com. The nexus runs no footer strip, so
      *                   the chip is its free tier's page credit, and a paid plan takes it off.
      *  - 'granted_plan' an Enterprise plan a nexus admin handed out by hand. Customers paying
      *                   through Stripe buy white-label and never carry it, and neither do
@@ -3933,8 +3933,8 @@ class Role extends Model implements MustVerifyEmail
      * On an operator's platform that lands the chip on the tiers they charge for and leaves their
      * free tier showing their own strip alone. Two consequences that read like bugs and are not:
      * upgrading a tenant there ADDS the chip rather than removing it, and an operator's free tier
-     * carries no Event Schedule attribution at all, because their strip links marketing_url().
-     * eventschedule.com is still the one install that sells white-label, so it is the one install
+     * carries no Getvnt attribution at all, because their strip links marketing_url().
+     * getvnt.com is still the one install that sells white-label, so it is the one install
      * where the chip turns on the plan: its free tier carries it, a paid plan takes it off, and an
      * admin-granted one keeps it.
      *
@@ -4101,7 +4101,7 @@ class Role extends Model implements MustVerifyEmail
     /**
      * Hostnames a tenant may never claim as a custom domain.
      *
-     * The old check was the literal string 'eventschedule.com', which left an operator running
+     * The old check was the literal string 'getvnt.com', which left an operator running
      * their own SaaS with no guard at all. ResolveCustomDomain already refuses to SERVE the base
      * domain, so the traffic was never at risk - but nothing stopped a tenant storing it, and
      * deleting that schedule later called removeDomain() on it and dropped the operator's own
@@ -4116,7 +4116,7 @@ class Role extends Model implements MustVerifyEmail
             return false;
         }
 
-        if (str_contains($host, 'eventschedule.com')) {
+        if (str_contains($host, 'getvnt.com')) {
             return true;
         }
 

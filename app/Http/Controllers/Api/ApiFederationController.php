@@ -14,7 +14,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 /**
- * Intake endpoints on the nexus app (eventschedule.com) for events federated by
+ * Intake endpoints on the nexus app (getvnt.com) for events federated by
  * other installs. An instance registers once, an admin approves it once, and its
  * events publish automatically from then on.
  *

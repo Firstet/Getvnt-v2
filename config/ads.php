@@ -8,7 +8,7 @@
  *  - 'enabled' below is a HARD env gate and is deliberately NOT overridable from the
  *    settings table. Everything else in this feature is a runtime toggle a super-admin
  *    can flip at /admin/settings, and a single mistaken click would otherwise put ads on
- *    every free-tier public page on the instance. eventschedule.com ships with this off
+ *    every free-tier public page on the instance. getvnt.com ships with this off
  *    and leaves it off.
  *
  *  - Every other value here is only a DEFAULT. The settings table is the source of

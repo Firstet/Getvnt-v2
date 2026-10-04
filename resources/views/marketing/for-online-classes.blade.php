@@ -1,11 +1,11 @@
 <x-marketing-layout>
-    <x-slot name="title">Free Event Schedule for Online Classes | Terms & Class Cards</x-slot>
+    <x-slot name="title">Free Getvnt for Online Classes | Terms & Class Cards</x-slot>
     <x-slot name="description">Set an online course up once as a term, cap the seats per session, and sell single classes or class cards at zero platform fees. Any video platform works.</x-slot>
     <x-slot name="breadcrumbTitle">For Online Classes</x-slot>
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Online Classes"
+        name="Getvnt for Online Classes"
         description="Set a course up once as a term: the night it meets, the weeks you skip, and the session it ends on. Sell the whole term from one link with zero platform fees."
         audience="Online Instructors"
         keywords="online class scheduling, virtual class platform, sell online classes, online teaching, class registration software" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a term of online classes online with Event Schedule",
+        "name": "How to put a term of online classes online with Getvnt",
         "description": "Set the term up once and take registrations for every session from one link.",
         "step": [
             {
@@ -57,7 +57,7 @@
            many sessions it runs, which weeks are off, how many seats
            there are, and what a seat costs. That sheet IS the product
            argument: a course is not an event, it is a TERM, and in
-           Event Schedule a term is one recurring event whose
+           Getvnt a term is one recurring event whose
            recurrence ends after a set number of sessions
            (Event::$recurring_end_type = 'after_events'), whose holiday
            weeks are date exceptions (recurring_exclude_dates), whose
@@ -465,8 +465,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for teaching online classes?',
-                'a' => 'Yes. Setting a course up as a term, skipping holiday weeks, ending the recurrence after a set number of sessions, taking free registrations with a seat cap per session date, publishing one link, embedding your schedule, syncing two ways with Google, Outlook or CalDAV, sending newsletters to the students who follow you and reading your analytics are all on the free plan. Charging for a seat is not: paid ticket types, plus class cards and custom checkout questions, are the Pro plan at '.plan_price($proMonthly).' a month, and Event Schedule charges zero platform fees on payments at any plan level.',
+                'q' => 'Is Getvnt free for teaching online classes?',
+                'a' => 'Yes. Setting a course up as a term, skipping holiday weeks, ending the recurrence after a set number of sessions, taking free registrations with a seat cap per session date, publishing one link, embedding your schedule, syncing two ways with Google, Outlook or CalDAV, sending newsletters to the students who follow you and reading your analytics are all on the free plan. Charging for a seat is not: paid ticket types, plus class cards and custom checkout questions, are the Pro plan at '.plan_price($proMonthly).' a month, and Getvnt charges zero platform fees on payments at any plan level.',
             ],
             [
                 'q' => 'How do I set up a twelve-week term?',
@@ -474,7 +474,7 @@
             ],
             [
                 'q' => 'What video platforms can I use to teach?',
-                'a' => 'Any platform that gives you a link. Zoom, Google Meet, Microsoft Teams, YouTube Live, or your own streaming setup. Being straight with you: this is one link field on the course, not an integration, and because the term is one recurring event that link is the same for all twelve sessions, the way a recurring meeting room already is. Event Schedule does not create the meeting, count who is in the room, or record anything. It publishes the sessions, takes the registrations, and puts your link in front of the people who signed up. If each week genuinely needs a different room, those weeks are separate events.',
+                'a' => 'Any platform that gives you a link. Zoom, Google Meet, Microsoft Teams, YouTube Live, or your own streaming setup. Being straight with you: this is one link field on the course, not an integration, and because the term is one recurring event that link is the same for all twelve sessions, the way a recurring meeting room already is. Getvnt does not create the meeting, count who is in the room, or record anything. It publishes the sessions, takes the registrations, and puts your link in front of the people who signed up. If each week genuinely needs a different room, those weeks are separate events.',
             ],
             [
                 'q' => 'Can I cap how many students join each session?',
@@ -486,11 +486,11 @@
             ],
             [
                 'q' => 'Can I charge for individual sessions?',
-                'a' => 'Yes, on the Pro plan, which is what lets a seat carry a price. Create as many named ticket types as the course needs, each with its own price and quantity: a drop-in seat, a concession rate, a free trial session that stays free on any plan. Payments run through your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, so you keep everything except the provider\'s own processing fee. Event Schedule takes nothing.',
+                'a' => 'Yes, on the Pro plan, which is what lets a seat carry a price. Create as many named ticket types as the course needs, each with its own price and quantity: a drop-in seat, a concession rate, a free trial session that stays free on any plan. Payments run through your own Stripe or PayPal account, or through Invoice Ninja, a payment link or cash, so you keep everything except the provider\'s own processing fee. Getvnt takes nothing.',
             ],
             [
                 'q' => 'Do my students get an email when I add a class?',
-                'a' => 'Some do. A student who left an email address in the sign-up panel on your schedule page and confirmed it gets a digest of the new classes you publish, at most one every 72 hours, outside your newsletter allowance. Pressing Follow on its own sends nothing to an account follower automatically, so a student who did only that hears about a new class through a newsletter you write and send yourself: ten emails a month on the free plan, a hundred on Pro, a thousand on Enterprise, each recipient counting as one. Changes are a separate email. Change the class link and saving asks whether to tell everyone holding a seat on an upcoming session, and cancelling the course tells them as part of cancelling; those reach anyone who left an address on a session\'s page to hear about it, and registered students too, on eventschedule.com when your schedule sends through its own email settings. A new start time on a term does not trigger that question, because a term is one recurring event, so say it in a newsletter.',
+                'a' => 'Some do. A student who left an email address in the sign-up panel on your schedule page and confirmed it gets a digest of the new classes you publish, at most one every 72 hours, outside your newsletter allowance. Pressing Follow on its own sends nothing to an account follower automatically, so a student who did only that hears about a new class through a newsletter you write and send yourself: ten emails a month on the free plan, a hundred on Pro, a thousand on Enterprise, each recipient counting as one. Changes are a separate email. Change the class link and saving asks whether to tell everyone holding a seat on an upcoming session, and cancelling the course tells them as part of cancelling; those reach anyone who left an address on a session\'s page to hear about it, and registered students too, on getvnt.com when your schedule sends through its own email settings. A new start time on a term does not trigger that question, because a term is one recurring event, so say it in a newsletter.',
             ],
             [
                 'q' => 'Can students ask to hear when a course goes on sale?',
@@ -926,7 +926,7 @@
                             @endforeach
                         </div>
                         <p class="es-syl-muted mt-4 border-t pt-3 text-xs es-syl-hair">
-                            Cards are sold next to single seats, not instead of them. Both need the Pro plan, because both carry a price; a free trial session does not. Payments run through your own Stripe or PayPal account, or Invoice Ninja, a payment link or cash, and Event Schedule takes <span class="es-syl-accent font-semibold">zero platform fees</span> at every plan level.
+                            Cards are sold next to single seats, not instead of them. Both need the Pro plan, because both carry a price; a free trial session does not. Payments run through your own Stripe or PayPal account, or Invoice Ninja, a payment link or cash, and Getvnt takes <span class="es-syl-accent font-semibold">zero platform fees</span> at every plan level.
                         </p>
                     </div>
                 </div>
@@ -959,7 +959,7 @@
                     <p class="es-syl-muted text-sm">Your schedule lives at its own address. Put it in a bio, a signature, a course page, and it keeps being right when the term rolls over.</p>
                     <div class="mt-auto pt-5">
                         <div class="es-syl-card p-3">
-                            <span class="es-syl-ink block truncate font-mono text-xs">your-classes.eventschedule.com</span>
+                            <span class="es-syl-ink block truncate font-mono text-xs">your-classes.getvnt.com</span>
                         </div>
                     </div>
                 </div>
@@ -975,7 +975,7 @@
                     <div class="mb-3 flex flex-wrap items-center gap-2">
                         <h3 class="es-syl-ink text-lg font-bold">What this is not</h3>
                     </div>
-                    <p class="es-syl-muted text-sm">It is not a video platform and does not pretend to be. Event Schedule does not create the meeting, count who is in the room, take attendance from it, or hold recordings. It publishes the sessions, takes the registrations, and hands over your link. One link, for the whole term: if week four genuinely needs its own room, week four is a separate event.</p>
+                    <p class="es-syl-muted text-sm">It is not a video platform and does not pretend to be. Getvnt does not create the meeting, count who is in the room, take attendance from it, or hold recordings. It publishes the sessions, takes the registrations, and hands over your link. One link, for the whole term: if week four genuinely needs its own room, week four is a separate event.</p>
                     <p class="mt-auto pt-5 text-xs">
                         <a href="{{ marketing_url('/features/online-events') }}" class="es-syl-link font-semibold underline hover:no-underline">How online events work</a>
                     </p>
@@ -1041,7 +1041,7 @@
                     Every kind of <span class="es-syl-accent">online class</span>
                 </h2>
                 <p class="es-syl-muted text-lg sm:text-xl" data-reveal style="--reveal-delay: 0.1s;">
-                    A term is a term whether it is verbs or knife skills. Also see Event Schedule for <a href="{{ marketing_url('/for-webinars') }}" class="es-syl-link underline hover:no-underline">Webinars</a> and <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-syl-link underline hover:no-underline">Virtual Conferences</a>.
+                    A term is a term whether it is verbs or knife skills. Also see Getvnt for <a href="{{ marketing_url('/for-webinars') }}" class="es-syl-link underline hover:no-underline">Webinars</a> and <a href="{{ marketing_url('/for-virtual-conferences') }}" class="es-syl-link underline hover:no-underline">Virtual Conferences</a>.
                 </p>
             </div>
 
@@ -1288,7 +1288,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-classes" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=talent') }}" class="es-syl-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

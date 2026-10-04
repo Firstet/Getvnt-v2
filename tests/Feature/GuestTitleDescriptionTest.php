@@ -307,7 +307,7 @@ class GuestTitleDescriptionTest extends TestCase
         $this->assertSame($titles[1], $titles[3], 'the schedule title does not depend on the domain');
 
         foreach ($titles as $title) {
-            $this->assertStringNotContainsString('Event Schedule', $title);
+            $this->assertStringNotContainsString('Getvnt', $title);
             $this->assertStringNotContainsString('late-show.test', $title);
         }
     }

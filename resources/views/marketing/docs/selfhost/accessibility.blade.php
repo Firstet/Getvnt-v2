@@ -1,8 +1,8 @@
 <x-docs-page
     key="selfhost/accessibility"
-    title="Web accessibility (selfhost) - Event Schedule"
+    title="Web accessibility (selfhost) - Getvnt"
     description="What the skip link and accessibility panel actually do, the ACCESSIBILITY_* configuration keys, and how to publish your own declaration on your own domain."
-    lede="Event Schedule ships a skip link on every page and an opt-in accessibility panel for public schedules. When you selfhost on your own domain, the declaration that covers those pages is yours to write and yours to publish."
+    lede="Getvnt ships a skip link on every page and an opt-in accessibility panel for public schedules. When you selfhost on your own domain, the declaration that covers those pages is yours to write and yours to publish."
     article-headline="Web accessibility for selfhost operators"
 >
     <x-slot:toc>
@@ -106,7 +106,7 @@
             Your declaration on your domain
         </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-6">
-            The <a href="{{ marketing_url('/accessibility') }}" class="doc-link">accessibility statement on eventschedule.com</a> applies to Event Schedule's own marketing and product URLs. It does not cover <strong class="text-gray-900 dark:text-white">your</strong> hostname, your configuration, or the events your users publish. If you offer services to the public in a jurisdiction with web accessibility rules (for example Israel, the EU, or the UK), work with qualified counsel and publish a declaration that matches your deployment, your languages, and your contact channels.
+            The <a href="{{ marketing_url('/accessibility') }}" class="doc-link">accessibility statement on getvnt.com</a> applies to Getvnt's own marketing and product URLs. It does not cover <strong class="text-gray-900 dark:text-white">your</strong> hostname, your configuration, or the events your users publish. If you offer services to the public in a jurisdiction with web accessibility rules (for example Israel, the EU, or the UK), work with qualified counsel and publish a declaration that matches your deployment, your languages, and your contact channels.
         </p>
 
         <div class="doc-callout doc-callout-warning">
@@ -115,7 +115,7 @@
         </div>
 
         <p class="text-gray-600 dark:text-gray-300 mb-6">
-            The accessibility panel carries an <strong class="text-gray-900 dark:text-white">{{ __('accessibility.toolbar_declaration') }}</strong> link at the bottom, and that link is built from your marketing URL setting. Until you change it, the link sends your visitors to Event Schedule's statement rather than yours. See <a href="#configuration" class="doc-link">Environment variables</a> below.
+            The accessibility panel carries an <strong class="text-gray-900 dark:text-white">{{ __('accessibility.toolbar_declaration') }}</strong> link at the bottom, and that link is built from your marketing URL setting. Until you change it, the link sends your visitors to Getvnt's statement rather than yours. See <a href="#configuration" class="doc-link">Environment variables</a> below.
         </p>
     </section>
 
@@ -141,7 +141,7 @@
                 <tbody>
                     <tr>
                         <td><code class="doc-inline-code">ACCESSIBILITY_CONTACT_EMAIL</code></td>
-                        <td><code class="doc-inline-code">contact@eventschedule.com</code></td>
+                        <td><code class="doc-inline-code">contact@getvnt.com</code></td>
                         <td>The inbox the declaration tells people to write to. Set it to an address you actually watch.</td>
                     </tr>
                     <tr>
@@ -167,7 +167,7 @@
                     <tr>
                         <td><code class="doc-inline-code">ACCESSIBILITY_PUBLIC_PAGES_MEASURED</code></td>
                         <td><code class="doc-inline-code">{{ config('accessibility.public_pages_measured') }}</code></td>
-                        <td>How many public pages the conformance status says were measured. The shipped figure describes Event Schedule's own sweep of eventschedule.com, so change it only when you have measured your own pages and reuse that clause.</td>
+                        <td>How many public pages the conformance status says were measured. The shipped figure describes Getvnt's own sweep of getvnt.com, so change it only when you have measured your own pages and reuse that clause.</td>
                     </tr>
                     <tr>
                         <td><code class="doc-inline-code">ACCESSIBILITY_PUBLIC_MEASUREMENT_DATE</code></td>
@@ -185,7 +185,7 @@
 
         <h3 class="doc-subheading">Point the panel's statement link at your site</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-6">
-            The <strong class="text-gray-900 dark:text-white">{{ __('accessibility.toolbar_declaration') }}</strong> link inside the panel is built from <code class="doc-inline-code">APP_MARKETING_URL</code>, which defaults to <code class="doc-inline-code">https://eventschedule.com</code>. Set it to your own site and the link resolves against your domain instead:
+            The <strong class="text-gray-900 dark:text-white">{{ __('accessibility.toolbar_declaration') }}</strong> link inside the panel is built from <code class="doc-inline-code">APP_MARKETING_URL</code>, which defaults to <code class="doc-inline-code">https://getvnt.com</code>. Set it to your own site and the link resolves against your domain instead:
         </p>
 
         <div class="doc-code-block">

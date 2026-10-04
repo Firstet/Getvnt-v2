@@ -9,7 +9,7 @@ use Tests\Feature\Concerns\CreatesScheduleData;
 use Tests\TestCase;
 
 /**
- * invalid_custom_domain used to read "Cannot use an eventschedule.com domain as a custom domain",
+ * invalid_custom_domain used to read "Cannot use an getvnt.com domain as a custom domain",
  * untranslated in most locales, and it said so even when the host being refused was the install's
  * OWN base domain - so a white-label platform told its customers about a product they had never
  * heard of. The message now names the host that was refused, and nothing else.
@@ -23,9 +23,9 @@ class ReservedCustomDomainMessageTest extends TestCase
     {
         $role = $this->createRole($this->createOwner());
 
-        $this->putCustomDomain($role, 'https://tickets.eventschedule.com')
+        $this->putCustomDomain($role, 'https://tickets.getvnt.com')
             ->assertSessionHasErrors([
-                'custom_domain' => __('messages.invalid_custom_domain', ['domain' => 'tickets.eventschedule.com']),
+                'custom_domain' => __('messages.invalid_custom_domain', ['domain' => 'tickets.getvnt.com']),
             ]);
 
         $this->assertNull($role->fresh()->custom_domain);
@@ -45,9 +45,9 @@ class ReservedCustomDomainMessageTest extends TestCase
             'custom_domain' => __('messages.invalid_custom_domain', ['domain' => $host]),
         ]);
 
-        if (! str_contains($base, 'eventschedule.com')) {
+        if (! str_contains($base, 'getvnt.com')) {
             $this->assertStringNotContainsString(
-                'eventschedule.com',
+                'getvnt.com',
                 (string) session('errors')->first('custom_domain'),
                 'An operator\'s own domain must not be refused in our name.'
             );

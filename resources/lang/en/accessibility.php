@@ -2,20 +2,20 @@
 
 return [
 
-    'page_title' => 'Accessibility - Event Schedule',
-    'meta_description' => 'Accessibility statement and options for Event Schedule websites and apps: conformance status, the measures we take, and how to send feedback.',
+    'page_title' => 'Accessibility - Getvnt',
+    'meta_description' => 'Accessibility statement and options for Getvnt websites and apps: conformance status, the measures we take, and how to send feedback.',
     'breadcrumb' => 'Accessibility',
 
     'h1' => 'Accessibility statement',
-    'company_lead' => 'Event Schedule LLC',
+    'company_lead' => 'Getvnt LLC',
 
     'counsel_notice' => 'This page is general service information, not legal advice. Laws and standards differ by country. Confirm your obligations with qualified counsel (for example Israel, EU, UK, or US).',
 
     'section_scope_title' => 'Scope',
-    'section_scope_body' => 'This statement covers the marketing site and the Event Schedule web application (including logged-in tools and public schedule pages) operated under the primary Event Schedule domain and subdomains, unless stated otherwise.',
+    'section_scope_body' => 'This statement covers the marketing site and the Getvnt web application (including logged-in tools and public schedule pages) operated under the primary Getvnt domain and subdomains, unless stated otherwise.',
 
     'section_commitment_title' => 'Commitment',
-    'section_commitment_body' => 'We are working to make Event Schedule usable for people with disabilities. We aim to improve alignment with the Web Content Accessibility Guidelines (WCAG), currently documented as :wcag_target, and to respect guidance commonly associated with Israeli Standard 5568 where it applies to our services.',
+    'section_commitment_body' => 'We are working to make Getvnt usable for people with disabilities. We aim to improve alignment with the Web Content Accessibility Guidelines (WCAG), currently documented as :wcag_target, and to respect guidance commonly associated with Israeli Standard 5568 where it applies to our services.',
 
     'section_commitment_is5568_note' => 'We also take into account common web accessibility practice associated with Israeli Standard 5568 where it applies to services we operate.',
 

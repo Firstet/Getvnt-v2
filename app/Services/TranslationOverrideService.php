@@ -17,7 +17,7 @@ use Illuminate\Support\Str;
  * config('app.lang_overrides_path'), where the translator loader merges
  * them over the shipped resources/lang files (later loader paths win).
  *
- * Also handles sharing improvements with the nexus app (eventschedule.com),
+ * Also handles sharing improvements with the nexus app (getvnt.com),
  * which only ever happens on explicit admin action or opt-in.
  */
 class TranslationOverrideService

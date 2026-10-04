@@ -126,7 +126,7 @@ class GenerateMarketingScreenshots extends Command
 
         $this->line("  Generating {$baseName} ({$name} - list view)...");
 
-        $url = "https://{$subdomain}.eventschedule.com/";
+        $url = "https://{$subdomain}.getvnt.com/";
         $browser->visit($url);
         $browser->pause(3000);
 
@@ -163,7 +163,7 @@ class GenerateMarketingScreenshots extends Command
         $this->line("  Generating {$baseName} ({$name} - event detail)...");
 
         // Visit the graphic view to get all events via Vue app
-        $url = "https://{$subdomain}.eventschedule.com/?graphic=1";
+        $url = "https://{$subdomain}.getvnt.com/?graphic=1";
         $browser->visit($url);
         $browser->pause(3000);
 

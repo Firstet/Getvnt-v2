@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Libraries"
+        name="Getvnt for Libraries"
         description="Set a library program up once as a recurring event, exclude the dates the branch is closed, and take free registrations with a place limit counted separately for every date."
         audience="Libraries"
         keywords="library program calendar, library event schedule, story time scheduling, author event management, free library scheduling" />
@@ -14,7 +14,7 @@
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to put a library program calendar online with Event Schedule",
+        "name": "How to put a library program calendar online with Getvnt",
         "description": "Catalogue the program once and every date looks after itself.",
         "step": [
             {
@@ -579,8 +579,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for libraries?',
-                'a' => 'Yes. Publishing your program calendar, setting programs up as recurring, organising them into sub-schedules, taking free registrations with a place limit, embedding the calendar on your library site, syncing two ways with Google, Outlook or CalDAV, and the built-in analytics are all free forever. Newsletters are free too, with 10 emails a month counted per recipient; Pro raises that to 100 and Enterprise to 1,000. Free registration has no ceiling on any plan. Charging for a program is the Pro plan at '.plan_price($proMonthly).' a month, which also adds the live check-in count at the door. Event Schedule charges zero platform fees on ticket sales, on every plan.',
+                'q' => 'Is Getvnt free for libraries?',
+                'a' => 'Yes. Publishing your program calendar, setting programs up as recurring, organising them into sub-schedules, taking free registrations with a place limit, embedding the calendar on your library site, syncing two ways with Google, Outlook or CalDAV, and the built-in analytics are all free forever. Newsletters are free too, with 10 emails a month counted per recipient; Pro raises that to 100 and Enterprise to 1,000. Free registration has no ceiling on any plan. Charging for a program is the Pro plan at '.plan_price($proMonthly).' a month, which also adds the live check-in count at the door. Getvnt charges zero platform fees on ticket sales, on every plan.',
             ],
             [
                 'q' => 'Can I manage story times, author events, and workshops together?',
@@ -1009,7 +1009,7 @@
                         </li>
                         <li class="flex gap-3" data-reveal>
                             <svg aria-hidden="true" class="es-cat-accent mt-0.5 h-5 w-5 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-                            <span>Event Schedule emails you when requests are waiting, so the queue is not something you have to remember to open.</span>
+                            <span>Getvnt emails you when requests are waiting, so the queue is not something you have to remember to open.</span>
                         </li>
                         <li class="flex gap-3" data-reveal>
                             <svg aria-hidden="true" class="es-cat-accent mt-0.5 h-5 w-5 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1017,7 +1017,7 @@
                         </li>
                     </ul>
                     <p class="es-cat-muted mt-6 text-sm">
-                        One thing this is not: room booking. Event Schedule does not hold an inventory of rooms and will not warn you that two groups asked for the same afternoon. The queue is where you catch that, with your own eyes.
+                        One thing this is not: room booking. Getvnt does not hold an inventory of rooms and will not warn you that two groups asked for the same afternoon. The queue is where you catch that, with your own eyes.
                     </p>
                 </div>
 
@@ -1219,7 +1219,7 @@
                                 <h3 class="es-cat-ink text-xl font-bold">When a program costs money</h3>
                                 <span class="es-cat-plan es-cat-plan-pro">Pro</span>
                             </div>
-                            <p class="es-cat-muted mb-4">An author evening, a paid workshop, a Friends of the Library fundraiser. Named ticket types with their own prices and quantities, sold on the Pro plan through your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-cat-link font-medium hover:underline">PayPal</a> account, a payment link or cash at the desk, and Event Schedule takes zero platform fees: past the provider's own processing, the money is yours. Announce it before tickets open, switch on the "Notify me" card, and patrons can leave an email address to hear when they do. If it is called off, Stripe and PayPal sales can be refunded from the Sales page, in full or in part, and the money goes back to the patron.</p>
+                            <p class="es-cat-muted mb-4">An author evening, a paid workshop, a Friends of the Library fundraiser. Named ticket types with their own prices and quantities, sold on the Pro plan through your own Stripe or <a href="{{ marketing_url('/paypal') }}" class="es-cat-link font-medium hover:underline">PayPal</a> account, a payment link or cash at the desk, and Getvnt takes zero platform fees: past the provider's own processing, the money is yours. Announce it before tickets open, switch on the "Notify me" card, and patrons can leave an email address to hear when they do. If it is called off, Stripe and PayPal sales can be refunded from the Sales page, in full or in part, and the money goes back to the patron.</p>
                             <p class="es-cat-muted text-sm">Pro at {{ plan_price($proMonthly) }} a month is what lets a ticket carry a price, and it brings the desk work with it: extra questions at checkout for access needs or a child's age, a waitlist once a ticket type sells out, and a live count as patrons check in. Scanning the QR on a ticket is free on every plan; it is the running total that is Pro. Free registration for free programs needs none of it, on any plan.</p>
                         </div>
                         <div class="es-glare" aria-hidden="true"></div>
@@ -1524,7 +1524,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-library" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm es-cat-band-muted sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm es-cat-band-muted sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-cat-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

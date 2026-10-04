@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule Boost"
+        name="Getvnt Boost"
         description="Turn your event details into live Facebook and Instagram ads. Automated targeting, a prepaid budget, and campaign numbers while it runs, with no ad manager experience required." />
     </x-slot>
 
@@ -471,7 +471,7 @@
         // draft check, and the trust-based budget ceiling.
         $clearance = [
             ['Schedule on Pro', 'Boost is a Pro feature. Publishing the event it advertises is free.', true],
-            ['Phone verified', 'A verified phone number on the account, on eventschedule.com. It is a spend gate, not a marketing list.', true],
+            ['Phone verified', 'A verified phone number on the account, on getvnt.com. It is a spend gate, not a marketing list.', true],
             ['Event published', 'A draft cannot be boosted: the ad needs somewhere real to land. An on-network promotion needs the event to be fully public, so unlisted is out too.', true],
             ['Budget inside your ceiling', 'Every schedule has a per-campaign ceiling. A brand new one starts at $10.', false],
             ['Card or boost credit', 'One prepayment covers the whole campaign. Nothing is billed later.', false],
@@ -508,15 +508,15 @@
             ],
             [
                 'q' => 'Do I need a paid plan to boost an event?',
-                'a' => 'Yes. Boost is a Pro feature, and on eventschedule.com the account also needs a verified phone number before it can spend. Publishing the event, sharing the link, taking RSVPs and emailing your own followers are all free.',
+                'a' => 'Yes. Boost is a Pro feature, and on getvnt.com the account also needs a verified phone number before it can spend. Publishing the event, sharing the link, taking RSVPs and emailing your own followers are all free.',
             ],
             [
                 'q' => 'How much does Boost cost?',
-                'a' => 'You choose the ad budget, starting at $10, and Event Schedule adds a 20% service fee on top. The full breakdown is on screen before you launch. Your per-campaign ceiling starts at $10 for a brand new schedule and rises to $1,000 as campaigns complete, so the first one is deliberately small.',
+                'a' => 'You choose the ad budget, starting at $10, and Getvnt adds a 20% service fee on top. The full breakdown is on screen before you launch. Your per-campaign ceiling starts at $10 for a brand new schedule and rises to $1,000 as campaigns complete, so the first one is deliberately small.',
             ],
             [
                 'q' => 'Which platforms do Boost ads run on?',
-                'a' => 'Facebook and Instagram, and you can restrict a campaign to just one of them. Which surface it appears on inside a platform, whether that is the feed, Stories or Reels, is Meta\'s delivery decision rather than a setting here. Separately, where the Event Schedule site you are on runs a promotions network, your event can also run as a promoted card on other schedules\' pages on that same site.',
+                'a' => 'Facebook and Instagram, and you can restrict a campaign to just one of them. Which surface it appears on inside a platform, whether that is the feed, Stories or Reels, is Meta\'s delivery decision rather than a setting here. Separately, where the Getvnt site you are on runs a promotions network, your event can also run as a promoted card on other schedules\' pages on that same site.',
             ],
             [
                 'q' => 'How does targeting work?',
@@ -536,7 +536,7 @@
             ],
             [
                 'q' => 'Do I need a Meta Ads account?',
-                'a' => 'No. Event Schedule holds the ad account, builds the creative from your event and handles delivery. You never touch Ads Manager, and you do not connect a Facebook Page of your own.',
+                'a' => 'No. Getvnt holds the ad account, builds the creative from your event and handles delivery. You never touch Ads Manager, and you do not connect a Facebook Page of your own.',
             ],
             [
                 'q' => 'What are on-network promotions?',
@@ -739,7 +739,7 @@
                             <span class="es-launch-plan">Pro</span>
                         </div>
                         <h3 class="es-launch-onband mb-2 text-2xl font-bold">Meta ads</h3>
-                        <p class="es-launch-onband-muted mb-5 text-sm">Facebook and Instagram, bought through Event Schedule's ad account.</p>
+                        <p class="es-launch-onband-muted mb-5 text-sm">Facebook and Instagram, bought through Getvnt's ad account.</p>
                         <dl class="mb-6">
                             <div class="es-launch-spec">
                                 <dt>Placements</dt>
@@ -794,7 +794,7 @@
                             </div>
                             <div class="es-launch-spec">
                                 <dt>Availability</dt>
-                                <dd>Per site. You will only see it where the operator runs a promotions network, and eventschedule.com itself does not carry one.</dd>
+                                <dd>Per site. You will only see it where the operator runs a promotions network, and getvnt.com itself does not carry one.</dd>
                             </div>
                         </dl>
                         <a href="{{ route('marketing.docs.boost') }}#on-network" class="es-launch-link mt-auto inline-flex items-center gap-1 text-sm font-semibold">
@@ -1345,7 +1345,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="es-launch-onband-muted shrink-0 select-none font-mono text-sm sm:text-base">.eventschedule.com</span>
+                            <span class="es-launch-onband-muted shrink-0 select-none font-mono text-sm sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-launch-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

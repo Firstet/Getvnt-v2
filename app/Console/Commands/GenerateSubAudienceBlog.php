@@ -35,7 +35,7 @@ class GenerateSubAudienceBlog extends Command
     {
         // The blog is the marketing site's, so it exists on the nexus only (see routes/web.php).
         if (! config('app.is_nexus')) {
-            $this->info('Sub-audience blog generation only runs on eventschedule.com.');
+            $this->info('Sub-audience blog generation only runs on getvnt.com.');
 
             return 0;
         }
@@ -169,7 +169,7 @@ class GenerateSubAudienceBlog extends Command
                     'meta_title' => $result['meta_title'] ?? $result['title'],
                     'meta_description' => $result['meta_description'] ?? ($result['excerpt'] ?? null),
                     'featured_image' => $result['featured_image'] ?? null,
-                    'author_name' => 'Event Schedule Team',
+                    'author_name' => 'Getvnt Team',
                     'is_published' => true,
                     'published_at' => now()->subSeconds(rand(0, 6 * 60 * 60)),
                 ]);

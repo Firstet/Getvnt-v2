@@ -5,7 +5,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule for Community Centers"
+        name="Getvnt for Community Centers"
         description="The lobby timetable, online: recurring programs, free sign-ups with a capacity, hall-hire requests you approve, a live calendar feed and email to members who sign up. Free forever."
         audience="Community Centers & Recreation Facilities"
         keywords="community center calendar, recreation program schedule, facility booking software, community events, free community center scheduling" />
@@ -576,8 +576,8 @@
 
         $faqs = [
             [
-                'q' => 'Is Event Schedule free for community centers?',
-                'a' => 'Yes, and most of what a center needs is on the free plan: the public program calendar and its own link, recurring programs with date exceptions, sub-schedules, free RSVP sign-up with an optional capacity, the embeddable calendar, two-way Google, Outlook and CalDAV sync, a live calendar feed, iCal downloads, the downloadable QR code, built-in analytics, member photos and comments with an approval queue (25 photos on the free plan), and 10 newsletter emails a month. Newsletter allowances count each recipient as one email, so ten emails means ten people; Pro raises it to 100 a month and Enterprise to 1,000. Charging for a class is the part that needs Pro at '.plan_price($proMonthly).' a month, and Event Schedule charges zero platform fees on the sale whatever plan you are on.',
+                'q' => 'Is Getvnt free for community centers?',
+                'a' => 'Yes, and most of what a center needs is on the free plan: the public program calendar and its own link, recurring programs with date exceptions, sub-schedules, free RSVP sign-up with an optional capacity, the embeddable calendar, two-way Google, Outlook and CalDAV sync, a live calendar feed, iCal downloads, the downloadable QR code, built-in analytics, member photos and comments with an approval queue (25 photos on the free plan), and 10 newsletter emails a month. Newsletter allowances count each recipient as one email, so ten emails means ten people; Pro raises it to 100 a month and Enterprise to 1,000. Charging for a class is the part that needs Pro at '.plan_price($proMonthly).' a month, and Getvnt charges zero platform fees on the sale whatever plan you are on.',
             ],
             [
                 'q' => 'Can I organize classes, meetings, and events by category?',
@@ -589,11 +589,11 @@
             ],
             [
                 'q' => 'Can we handle event registration and payments?',
-                'a' => 'Yes. Free sign-up with an optional capacity is on the free plan, and the capacity is counted per date, so a full Monday session does not stop the following Monday filling up. For a paid class, take payment through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash at the desk: the money goes to you, Event Schedule takes no cut, and every ticket carries a QR code you can scan at the door on any plan. Charging for a place is a Pro feature; free sign-up stays free however many people come. Pro adds the rest of the paid-class kit too: asking your own questions at checkout, and selling one pass that covers a whole term of a class.',
+                'a' => 'Yes. Free sign-up with an optional capacity is on the free plan, and the capacity is counted per date, so a full Monday session does not stop the following Monday filling up. For a paid class, take payment through your own Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash at the desk: the money goes to you, Getvnt takes no cut, and every ticket carries a QR code you can scan at the door on any plan. Charging for a place is a Pro feature; free sign-up stays free however many people come. Pro adds the rest of the paid-class kit too: asking your own questions at checkout, and selling one pass that covers a whole term of a class.',
             ],
             [
                 'q' => 'Can we refund a class?',
-                'a' => 'Yes, from the Sales page, on Pro. A Stripe or PayPal sale is refunded through the provider, in full or in part, and its status only changes once the money has gone back; a partial refund leaves the ticket valid. Every other method (cash, a payment link, Invoice Ninja or Payfast) shows Mark as Refunded instead, which records the refund without moving money, so you hand that one back yourself. Event Schedule does not email the buyer about a refund, so let them know.',
+                'a' => 'Yes, from the Sales page, on Pro. A Stripe or PayPal sale is refunded through the provider, in full or in part, and its status only changes once the money has gone back; a partial refund leaves the ticket valid. Every other method (cash, a payment link, Invoice Ninja or Payfast) shows Mark as Refunded instead, which records the refund without moving money, so you hand that one back yourself. Getvnt does not email the buyer about a refund, so let them know.',
             ],
             [
                 'q' => 'Can people ask to hear when a class opens for booking?',
@@ -677,7 +677,7 @@
                             <div class="es-gather-slip es-gather-sway relative flex flex-col justify-center px-3 pb-3 pt-5">
                                 <span class="es-gather-pin absolute left-1/2 top-1.5 -translate-x-1/2"></span>
                                 <span class="es-gather-slip-day mb-1">And the newest card</span>
-                                <span class="es-gather-slip-url block">riverside.eventschedule.com</span>
+                                <span class="es-gather-slip-url block">riverside.getvnt.com</span>
                             </div>
                         </div>
                     </div>
@@ -987,7 +987,7 @@
                     <p class="es-gather-muted mb-6">
                         Pottery costs money to run, so it costs money to join. Take it through your own
                         Stripe or PayPal account, an Invoice Ninja invoice, a payment link or cash at the
-                        desk, and the money lands with you. Event Schedule charges zero platform fees, so
+                        desk, and the money lands with you. Getvnt charges zero platform fees, so
                         past what the processor takes, the fee is yours. Charging for a place is the one
                         part that needs Pro; free sign-up never does.
                     </p>
@@ -1222,7 +1222,7 @@
                 @foreach ([['/for-libraries', 'Libraries'], ['/for-churches', 'Churches'], ['/for-workshop-instructors', 'Workshop Instructors'], ['/for-fitness-and-yoga', 'Fitness & Yoga']] as [$relHref, $relName])
                     <a href="{{ marketing_url($relHref) }}" data-reveal class="es-gather-card es-gather-hover group flex items-center justify-between p-5">
                         <div>
-                            <div class="es-gather-muted text-sm">Event Schedule for</div>
+                            <div class="es-gather-muted text-sm">Getvnt for</div>
                             <div class="es-gather-ink text-lg font-semibold">{{ $relName }}</div>
                         </div>
                         <svg aria-hidden="true" class="es-gather-accent h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1290,7 +1290,7 @@
                         <div class="es-gather-slip es-gather-ruled es-gather-sway relative px-3 pb-3 pt-5 text-left" aria-hidden="true">
                             <span class="es-gather-pin absolute left-1/2 top-1.5 -translate-x-1/2"></span>
                             <span class="es-gather-slip-day mb-1">Pin this one up</span>
-                            <span class="es-gather-slip-url block">your-center.eventschedule.com</span>
+                            <span class="es-gather-slip-url block">your-center.getvnt.com</span>
                         </div>
                     </div>
 
@@ -1308,7 +1308,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-center" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up?type=venue') }}" class="es-gather-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg px-8 py-4 text-lg font-semibold">
                             <span class="relative z-10 flex items-center gap-2">

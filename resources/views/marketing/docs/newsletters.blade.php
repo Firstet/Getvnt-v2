@@ -1,6 +1,6 @@
 <x-docs-page
     key="newsletters"
-    title="Newsletters Guide: Segments and A/B Tests - Event Schedule"
+    title="Newsletters Guide: Segments and A/B Tests - Getvnt"
     description="Build and send newsletters to followers, email subscribers and ticket buyers, with segments, CSV import, A/B tests and an allowance counted per recipient."
     lede="Compose branded emails and send them to your followers, email subscribers and ticket buyers. Newsletters are included on every plan, and you decide what goes out and when."
 >
@@ -394,7 +394,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Note</div>
-            <p>Email clients have varying CSS support, so the builder renders to table-based, inline-styled HTML with a small set of email-safe fonts. That is why the font list is short and why there is no free-form CSS here. Free schedules also carry a small "Powered by Event Schedule" line under the unsubscribe link; upgrading to Pro removes it.</p>
+            <p>Email clients have varying CSS support, so the builder renders to table-based, inline-styled HTML with a small set of email-safe fonts. That is why the font list is short and why there is no free-form CSS here. Free schedules also carry a small "Powered by Getvnt" line under the unsubscribe link; upgrading to Pro removes it.</p>
         </div>
     </section>
 
@@ -423,7 +423,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">The Follow button</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">On eventschedule.com, a signed-out visitor who presses Follow gets the same short form in a pop-up, asking for a name and an email address. It sends the same confirmation email as the sign-up panel.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">On getvnt.com, a signed-out visitor who presses Follow gets the same short form in a pop-up, asking for a name and an email address. It sends the same confirmation email as the sign-up panel.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Your sign-up link</h4>
@@ -448,7 +448,7 @@
             <li>Every digest carries a one-click unsubscribe link</li>
         </ul>
         <p class="text-gray-600 dark:text-gray-300 mb-6">
-            Turn it off per schedule with <strong class="text-gray-900 dark:text-white">Email subscribers about new events</strong> under <strong class="text-gray-900 dark:text-white">Settings &rarr; Notifications</strong>. Account followers are not included: they are reached by a newsletter you compose and send. On eventschedule.com the digest follows the same <a href="#sending" class="doc-link">verification rule</a> as newsletters, so a schedule with more than 50 confirmed subscribers needs its own email settings or a verified phone number, or those events are not announced.
+            Turn it off per schedule with <strong class="text-gray-900 dark:text-white">Email subscribers about new events</strong> under <strong class="text-gray-900 dark:text-white">Settings &rarr; Notifications</strong>. Account followers are not included: they are reached by a newsletter you compose and send. On getvnt.com the digest follows the same <a href="#sending" class="doc-link">verification rule</a> as newsletters, so a schedule with more than 50 confirmed subscribers needs its own email settings or a verified phone number, or those events are not announced.
         </p>
 
         <div class="doc-callout doc-callout-info">
@@ -492,7 +492,7 @@
                     </tr>
                     <tr>
                         <td><span class="font-semibold text-gray-900 dark:text-white">Account followers</span></td>
-                        <td>Presses Follow while signed in on eventschedule.com, or submits an event through your curator submission form (the form says so)</td>
+                        <td>Presses Follow while signed in on getvnt.com, or submits an event through your curator submission form (the form says so)</td>
                         <td>Nothing</td>
                         <td>Yes, through the All Followers segment or the default send</td>
                     </tr>
@@ -652,7 +652,7 @@
 
         <div class="doc-callout doc-callout-warning">
             <div class="doc-callout-title">Verification above 50 recipients</div>
-            <p>On eventschedule.com, a newsletter going to more than 50 recipients needs either <a href="{{ route('marketing.docs.creating_schedules') }}#integrations" class="doc-link">your own email settings</a> on the schedule or a verified phone number in your profile. Up to 50 recipients it goes out without either, and so does a test. Until you have one, the Newsletters page shows a warning, and a larger send, whether now or scheduled, is refused. The automatic new-event digest follows the same rule. Selfhosted installs are not affected.</p>
+            <p>On getvnt.com, a newsletter going to more than 50 recipients needs either <a href="{{ route('marketing.docs.creating_schedules') }}#integrations" class="doc-link">your own email settings</a> on the schedule or a verified phone number in your profile. Up to 50 recipients it goes out without either, and so does a test. Until you have one, the Newsletters page shows a warning, and a larger send, whether now or scheduled, is refused. The automatic new-event digest follows the same rule. Selfhosted installs are not affected.</p>
         </div>
 
         <div class="doc-callout doc-callout-tip">
@@ -837,8 +837,8 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Send Newsletters with Event Schedule",
-            "description": "Create, design, and send newsletters to your followers, email subscribers and ticket buyers with Event Schedule's built-in newsletter builder.",
+            "name": "How to Send Newsletters with Getvnt",
+            "description": "Create, design, and send newsletters to your followers, email subscribers and ticket buyers with Getvnt's built-in newsletter builder.",
             "totalTime": "PT10M",
             "step": [
                 {

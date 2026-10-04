@@ -2,7 +2,7 @@
     Standalone shell for an operator-authored legal document (issue #116).
 
     Deliberately NOT <x-marketing-layout>: that shell's header and footer link out
-    to eventschedule.com's Features / Pricing / Docs, which is wrong on a selfhost
+    to getvnt.com's Features / Pricing / Docs, which is wrong on a selfhost
     policy page, and marketing.css does not define the `custom-content` rules the
     rendered markdown needs. Using one shell on every install keeps the prose
     styling in a single place. The trade-off is that a white-label nexus operator

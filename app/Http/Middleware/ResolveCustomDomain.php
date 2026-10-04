@@ -68,7 +68,7 @@ class ResolveCustomDomain
         $request->server->set('HTTP_X_FORWARDED_HOST', $newHost);
 
         // Clear session domain so the cookie is scoped to the custom domain origin
-        // (otherwise it would be scoped to .eventschedule.com which the browser rejects)
+        // (otherwise it would be scoped to .getvnt.com which the browser rejects)
         config(['session.domain' => null]);
 
         $response = $next($request);
@@ -121,8 +121,8 @@ class ResolveCustomDomain
 
         // Rewrite Location header on redirect responses. A controller can set the
         // skip_location_rewrite request attribute to opt out - used to redirect off the custom
-        // domain onto the canonical {subdomain}.eventschedule.com page (e.g. the structured
-        // guest-submit flow, which needs the .eventschedule.com session cookie).
+        // domain onto the canonical {subdomain}.getvnt.com page (e.g. the structured
+        // guest-submit flow, which needs the .getvnt.com session cookie).
         if ($response->isRedirection() && $response->headers->has('Location')
             && ! $request->attributes->get('skip_location_rewrite')) {
             $location = $response->headers->get('Location');
@@ -140,7 +140,7 @@ class ResolveCustomDomain
 
         // 404 is included on purpose. The tenant not-found page (role/not-found.blade.php) links
         // back to the schedule, and that link is built from the subdomain route, so without the
-        // rewrite a visitor on a custom domain is thrown onto {subdomain}.eventschedule.com by the
+        // rewrite a visitor on a custom domain is thrown onto {subdomain}.getvnt.com by the
         // one control the page offers. Other 4xx/5xx bodies are the platform's own error pages and
         // are left alone.
         return str_contains($contentType, 'text/html')

@@ -307,7 +307,7 @@ class GenerateSocialImages extends Command
         // Dusk can only write PNG, and the deliverable is a JPEG, so captures land in a scratch
         // directory and never in public/images/social - which is also what keeps the pre-JPEG
         // .png files there intact for links that were already shared.
-        $captureDir = sys_get_temp_dir().'/eventschedule-social-'.getmypid();
+        $captureDir = sys_get_temp_dir().'/getvnt-social-'.getmypid();
 
         if (! is_dir($captureDir)) {
             mkdir($captureDir, 0755, true);

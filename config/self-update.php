@@ -42,13 +42,13 @@ return [
     'repository_types' => [
         'github' => [
             'type' => 'github',
-            'repository_vendor' => env('SELF_UPDATER_REPO_VENDOR', 'eventschedule'),
-            'repository_name' => env('SELF_UPDATER_REPO_NAME', 'eventschedule'),
-            'repository_url' => 'https://github.com/eventschedule/eventschedule',
+            'repository_vendor' => env('SELF_UPDATER_REPO_VENDOR', 'Firstet'),
+            'repository_name' => env('SELF_UPDATER_REPO_NAME', 'Getvnt-v2'),
+            'repository_url' => 'https://github.com/Firstet/Getvnt-v2',
             'download_path' => env('SELF_UPDATER_DOWNLOAD_PATH', '/tmp'),
             'private_access_token' => env('SELF_UPDATER_GITHUB_PRIVATE_ACCESS_TOKEN', ''),
             'use_branch' => env('SELF_UPDATER_USE_BRANCH', ''),
-            'package_file_name' => env('SELF_UPDATER_PACKAGE_FILE_NAME', 'eventschedule.zip'),
+            'package_file_name' => env('SELF_UPDATER_PACKAGE_FILE_NAME', 'getvnt.zip'),
         ],
         'gitlab' => [
             'base_url' => '',

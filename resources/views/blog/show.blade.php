@@ -43,7 +43,7 @@
         // Built as an array and emitted with SeoUtils::jsonLd: a Blade echo tag HTML-escapes but does
         // NOT JSON-escape, so a double quote in a post title used to invalidate the whole block.
         //
-        // author is the Organization, not a Person: "Event Schedule Team" was never a real byline,
+        // author is the Organization, not a Person: "Getvnt Team" was never a real byline,
         // and sharing the layout's Organization @id lets the two nodes merge.
         $postingPayload = [
             '@context' => 'https://schema.org',
@@ -236,10 +236,10 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                                 <div class="flex-1">
                                     <h3 class="text-xl md:text-2xl font-bold text-white mb-2">
-                                        Learn more about Event Schedule for {{ $subAudienceInfo->parent_title }}
+                                        Learn more about Getvnt for {{ $subAudienceInfo->parent_title }}
                                     </h3>
                                     <p class="text-white/90 text-base md:text-lg">
-                                        See how {{ $subAudienceInfo->sub_audience_name }} and others are using Event Schedule
+                                        See how {{ $subAudienceInfo->sub_audience_name }} and others are using Getvnt
                                     </p>
                                 </div>
                                 <div class="flex-shrink-0">
@@ -258,7 +258,7 @@
                         <div class="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 rounded-2xl p-6 shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:shadow-violet-500/25 group-hover:scale-[1.02]">
                             <div class="text-center">
                                 <p class="text-white text-lg font-medium">
-                                    {!! str_replace(':link', '<span class="font-bold underline">eventschedule.com</span>',  __('messages.try_event_schedule')) !!}
+                                    {!! str_replace(':link', '<span class="font-bold underline">getvnt.com</span>',  __('messages.try_event_schedule')) !!}
                                 </p>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 <x-docs-page
     key="tickets"
-    title="Sell Tickets: Payments, Refunds, Check-In - Event Schedule"
+    title="Sell Tickets: Payments, Refunds, Check-In - Getvnt"
     description="Sell tickets or run free registration: connect Stripe or PayPal, build ticket types, refund from the Sales page and scan QR codes at the door."
     lede="Free registration on every plan, paid ticketing on Pro, and zero platform fees either way. Connect payment processing and create ticket types; only your processor's fee comes off a paid ticket."
     article-description="How to sell tickets and run free registration: payment methods, ticket types, refunds, check-in at the door and the interest list."
@@ -49,7 +49,7 @@
             </svg>
             General
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Sell tickets directly from your event pages with secure payment processing, automatic confirmation emails, and a QR code on every ticket. <strong class="text-gray-900 dark:text-white">Free registration is unlimited on every plan, charging for a ticket is a Pro feature, and Event Schedule takes no cut of a sale on any plan.</strong></p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Sell tickets directly from your event pages with secure payment processing, automatic confirmation emails, and a QR code on every ticket. <strong class="text-gray-900 dark:text-white">Free registration is unlimited on every plan, charging for a ticket is a Pro feature, and Getvnt takes no cut of a sale on any plan.</strong></p>
 
         <x-doc-screenshot id="tickets--sales" alt="Sales management page" loading="eager" />
 
@@ -132,13 +132,13 @@
     <!-- External -->
     <section id="external" class="doc-section">
         <h3 class="doc-subheading">External</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">The default mode. Use it when tickets are sold somewhere else (Eventbrite, Ticketmaster, a box office of your own) or when the event needs no ticketing at all. Event Schedule handles no money in this mode.</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">The default mode. Use it when tickets are sold somewhere else (Eventbrite, Ticketmaster, a box office of your own) or when the event needs no ticketing at all. Getvnt handles no money in this mode.</p>
 
         <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-4">Fields</h4>
         <ul class="doc-list mb-6">
             <li><strong class="text-gray-900 dark:text-white">Registration URL:</strong> the external ticketing page. It becomes a <strong class="text-gray-900 dark:text-white">View Event</strong> button on your event page, opening in a new tab.</li>
             <li><strong class="text-gray-900 dark:text-white">Price:</strong> a display-only price with a currency. Leave it blank if you do not know it; enter <code class="doc-inline-code">0</code> and the event page reads "Free entry".</li>
-            <li><strong class="text-gray-900 dark:text-white">Coupon Code:</strong> shown under the price so attendees can use it on the external platform. Event Schedule never validates it.</li>
+            <li><strong class="text-gray-900 dark:text-white">Coupon Code:</strong> shown under the price so attendees can use it on the external platform. Getvnt never validates it.</li>
             <li><strong class="text-gray-900 dark:text-white">Discount:</strong> what the coupon is worth, as a percentage or an amount in the event's currency. Shown beside the code, so the event page can read <code class="doc-inline-code">SAVE20 &bull; 15% off</code> rather than sending guests to the external site to find out. Leave it blank if the coupon has no fixed value.</li>
         </ul>
 
@@ -482,7 +482,7 @@
             </svg>
             Payment
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6">Before you can take money online you need to connect a payment method. Payment methods belong to your account, not to a single event, so you connect one once and pick it per event. Event Schedule supports six options:</p>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">Before you can take money online you need to connect a payment method. Payment methods belong to your account, not to a single event, so you connect one once and pick it per event. Getvnt supports six options:</p>
 
         <div class="doc-fields" id="payment-setup">
             <div class="doc-field">
@@ -495,7 +495,7 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Payment Link</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Send buyers to a link you already use, such as a Venmo, Cash App or bank transfer page. Event Schedule never hears from that provider, so any refund happens there too.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Send buyers to a link you already use, such as a Venmo, Cash App or bank transfer page. Getvnt never hears from that provider, so any refund happens there too.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">PayPal</h4>
@@ -619,11 +619,11 @@
         <div class="doc-fields">
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Invoice Mode</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Ticket selection and promo codes are handled in Event Schedule. An invoice is created in Invoice Ninja for each purchase. Supports multiple promo codes and per-ticket promo targeting. Buyers can optionally create an Event Schedule account during checkout.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Ticket selection and promo codes are handled in Getvnt. An invoice is created in Invoice Ninja for each purchase. Supports multiple promo codes and per-ticket promo targeting. Buyers can optionally create an Getvnt account during checkout.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Payment Link Mode</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Buyers select tickets and enter promo codes on the Invoice Ninja purchase page. Invoices are grouped in Invoice Ninja, making bulk management easier. Supports one promo code per event (applied to all tickets). Buyers can optionally create an Event Schedule account during checkout. See the <x-link href="https://invoiceninja.github.io/docs/user-guide/subscriptions" target="_blank">Invoice Ninja payment link docs</x-link> for more details.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Buyers select tickets and enter promo codes on the Invoice Ninja purchase page. Invoices are grouped in Invoice Ninja, making bulk management easier. Supports one promo code per event (applied to all tickets). Buyers can optionally create an Getvnt account during checkout. See the <x-link href="https://invoiceninja.github.io/docs/user-guide/subscriptions" target="_blank">Invoice Ninja payment link docs</x-link> for more details.</p>
             </div>
         </div>
 
@@ -639,12 +639,12 @@
                 <tbody>
                     <tr>
                         <td>Ticket selection</td>
-                        <td>Event Schedule</td>
+                        <td>Getvnt</td>
                         <td>Invoice Ninja</td>
                     </tr>
                     <tr>
                         <td>Promo code entry</td>
-                        <td>Event Schedule</td>
+                        <td>Getvnt</td>
                         <td>Invoice Ninja</td>
                     </tr>
                     <tr>
@@ -981,14 +981,14 @@
 
         <div class="doc-callout doc-callout-warning mb-6">
             <div class="doc-callout-title">Refund here, not in your Stripe or PayPal dashboard</div>
-            <p>A refund you make in Stripe or PayPal directly is not reported back to Event Schedule. The sale stays paid, its revenue stays counted and its ticket keeps scanning at the door. Refund Stripe and PayPal sales from this page instead.</p>
+            <p>A refund you make in Stripe or PayPal directly is not reported back to Getvnt. The sale stays paid, its revenue stays counted and its ticket keeps scanning at the door. Refund Stripe and PayPal sales from this page instead.</p>
         </div>
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Good to know</div>
             <p>If a refund cannot be confirmed, nothing is retried automatically and the sale is left for you to check against your provider's dashboard, because retrying a refund that may already have gone through is how one refund becomes two. A refund the provider actively rejects is different: nothing moved, so the amount is released and you can try again.</p>
             <p>Refund only appears while a sale is still paid, so refund first and cancel after. <strong class="text-gray-900 dark:text-white">Cancel Ticket</strong> and <strong class="text-gray-900 dark:text-white">Delete</strong> never move money, and once a sale is cancelled the money has to go back in your provider's own dashboard.</p>
-            <p>Event Schedule does not email the buyer about a refund, so tell them yourself if you want them to know.</p>
+            <p>Getvnt does not email the buyer about a refund, so tell them yourself if you want them to know.</p>
             <p>An event's currency locks once it has taken money, meaning a sale that is paid, refunded or awaiting payment review. A sale records no currency of its own, so changing the event's currency afterwards would relabel its past sales and work a later refund out in the new currency. The event editor greys out the <strong class="text-gray-900 dark:text-white">Currency</strong> selector with a note saying why, and the <x-link href="{{ route('marketing.docs.developer.api') }}">API</x-link> refuses the change too. Unpaid, cancelled and expired sales took no money, so they leave the currency open.</p>
             <p>These actions fire the matching <x-link href="{{ route('marketing.docs.developer.webhooks') }}">webhook</x-link>: <code class="doc-inline-code">sale.paid</code>, <code class="doc-inline-code">sale.refunded</code> or <code class="doc-inline-code">sale.cancelled</code>. A partial refund does not fire one, because the sale is still paid.</p>
         </div>
@@ -1017,7 +1017,7 @@
 
         <div class="doc-callout doc-callout-info">
             <div class="doc-callout-title">Sender &amp; Compliance</div>
-            <p>On eventschedule.com, sale notification emails go out only once the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>, and they are sent from that address. Until then the <strong class="text-gray-900 dark:text-white">New ticket sale</strong> toggle stays greyed out, unless the schedule is on Pro and push notifications are set up: the push goes out without email settings, so the toggle stays usable for it. A selfhosted install only needs a working mailer. All notification emails include an unsubscribe link for compliance.</p>
+            <p>On getvnt.com, sale notification emails go out only once the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>, and they are sent from that address. Until then the <strong class="text-gray-900 dark:text-white">New ticket sale</strong> toggle stays greyed out, unless the schedule is on Pro and push notifications are set up: the push goes out without email settings, so the toggle stays usable for it. A selfhosted install only needs a working mailer. All notification emails include an unsubscribe link for compliance.</p>
         </div>
     </section>
 
@@ -1086,7 +1086,7 @@
 
         <div class="doc-callout doc-callout-tip">
             <div class="doc-callout-title">Imports never take money</div>
-            <p>Imported attendees are recorded with their own payment method, so nothing is charged through Stripe or PayPal on the way in - the row is a record of a sale that already happened somewhere else. With <strong class="text-gray-900 dark:text-white">Send Email</strong> on, each imported attendee gets the same confirmation email a checkout sends. On eventschedule.com it comes from our address until the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>, then from yours. A selfhosted install needs a working mailer, and without one the save button stays disabled while Send Email is on.</p>
+            <p>Imported attendees are recorded with their own payment method, so nothing is charged through Stripe or PayPal on the way in - the row is a record of a sale that already happened somewhere else. With <strong class="text-gray-900 dark:text-white">Send Email</strong> on, each imported attendee gets the same confirmation email a checkout sends. On getvnt.com it comes from our address until the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a>, then from yours. A selfhosted install needs a working mailer, and without one the save button stays disabled while Send Email is on.</p>
         </div>
     </section>
 
@@ -1227,7 +1227,7 @@
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Free on every plan</div>
             <p>The interest list is not a paid feature and is not counted against your <a href="{{ route('marketing.docs.newsletters') }}" class="doc-link">newsletter allowance</a>. It exists to help you find out whether anyone wants tickets before you go to the trouble of selling them.</p>
-            <p>On eventschedule.com, once more than 50 people are waiting, these emails go out only if the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a> or its owner has verified a phone number. A selfhosted install needs a working mailer.</p>
+            <p>On getvnt.com, once more than 50 people are waiting, these emails go out only if the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a> or its owner has verified a phone number. A selfhosted install needs a working mailer.</p>
         </div>
 
         <h3 class="doc-subheading">Seeing Who Is Waiting</h3>
@@ -1260,7 +1260,7 @@
 
         <div class="doc-callout doc-callout-info mb-6">
             <div class="doc-callout-title">Needs a sender address</div>
-            <p>On eventschedule.com the toggle stays disabled until the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a> configured, since feedback requests are sent from your address rather than ours. A selfhosted install only needs a working mailer.</p>
+            <p>On getvnt.com the toggle stays disabled until the schedule has its own <a href="{{ route('marketing.docs.creating_schedules') }}#integrations-email" class="doc-link">email settings</a> configured, since feedback requests are sent from your address rather than ours. A selfhosted install only needs a working mailer.</p>
         </div>
 
         <div class="doc-callout doc-callout-info">
@@ -1308,15 +1308,15 @@
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Taxes</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Event Schedule does not automatically calculate or collect sales tax. Set your ticket prices inclusive of any applicable taxes. For tax reporting, export your sales data from the Sales page. Consult a tax professional for your specific obligations.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Getvnt does not automatically calculate or collect sales tax. Set your ticket prices inclusive of any applicable taxes. For tax reporting, export your sales data from the Sales page. Consult a tax professional for your specific obligations.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Payment Processing Fees</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Stripe charges their standard processing fees (typically 2.9% + $0.30 per transaction in the US). These fees are deducted from your payouts. Event Schedule adds no platform fee on any plan, Free included.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Stripe charges their standard processing fees (typically 2.9% + $0.30 per transaction in the US). These fees are deducted from your payouts. Getvnt adds no platform fee on any plan, Free included.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Cancelled or Deleted Events</h4>
-                <p class="text-sm text-gray-500 dark:text-gray-400">An event with any sales cannot be deleted: the app asks you to cancel it instead, so buyers keep their records. <strong class="text-gray-900 dark:text-white">Cancel event</strong> keeps every sale and refund record, stops any remaining installment payments, and emails the people there are to tell: ticket holders and registrants (on eventschedule.com, only when the schedule has its own email settings) and anyone on the <a href="#interest-list" class="doc-link">interest list</a>. It does not refund anyone, and the sales stay paid, so refund them from the Sales page. A cancelled event can be restored later.</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">An event with any sales cannot be deleted: the app asks you to cancel it instead, so buyers keep their records. <strong class="text-gray-900 dark:text-white">Cancel event</strong> keeps every sale and refund record, stops any remaining installment payments, and emails the people there are to tell: ticket holders and registrants (on getvnt.com, only when the schedule has its own email settings) and anyone on the <a href="#interest-list" class="doc-link">interest list</a>. It does not refund anyone, and the sales stay paid, so refund them from the Sales page. A cancelled event can be restored later.</p>
             </div>
             <div class="doc-field">
                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Payout Schedule</h4>
@@ -1433,7 +1433,7 @@
         {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Sell Tickets with Event Schedule",
+            "name": "How to Sell Tickets with Getvnt",
             "description": "Set up ticketing for your events with payment processing, ticket types, and QR code check-ins.",
             "totalTime": "PT10M",
             "step": [

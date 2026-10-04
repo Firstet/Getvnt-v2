@@ -178,7 +178,7 @@
                         <a href="{{ route('admin.logs') }}" class="{{ $active === 'logs' ? $dropdownItemActive : $dropdownItem }}">
                             Logs
                         </a>
-                        {{-- Selfhost only. eventschedule.com deploys from git, so there is nothing
+                        {{-- Selfhost only. getvnt.com deploys from git, so there is nothing
                              here to update; the route is registered everywhere and 404s at runtime. --}}
                         @if (! config('app.is_nexus'))
                         <a href="{{ route('admin.app_update') }}" class="{{ $active === 'app-update' ? $dropdownItemActive : $dropdownItem }}">

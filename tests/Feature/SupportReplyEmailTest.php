@@ -207,7 +207,7 @@ class SupportReplyEmailTest extends TestCase
 
             return $mail->hasTo('visitor@example.com')
                 && $mail->hasReplyTo(config('app.support_email'))
-                && $mail->envelope()->subject === 'New reply from Hillel at Event Schedule'
+                && $mail->envelope()->subject === 'New reply from Hillel at Getvnt'
                 && str_contains($html, 'First answer')
                 && str_contains($html, 'Second answer')
                 && str_contains($html, '/features#support-chat='.$conversation->guest_token);

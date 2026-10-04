@@ -1,7 +1,7 @@
 <x-marketing-layout>
     {{-- SEO Slots --}}
-    <x-slot name="title">Event Schedule Examples | Live Demo Schedules to Explore</x-slot>
-    <x-slot name="description">Open {{ $scheduleCount }} live Event Schedule demos, from a yoga retreat and a pub lineup to woodworking classes and a model town, and see what visitors can do on each.</x-slot>
+    <x-slot name="title">Getvnt Examples | Live Demo Schedules to Explore</x-slot>
+    <x-slot name="description">Open {{ $scheduleCount }} live Getvnt demos, from a yoga retreat and a pub lineup to woodworking classes and a model town, and see what visitors can do on each.</x-slot>
     <x-slot name="breadcrumbTitle">Examples</x-slot>
 
     {{-- Structured Data for Rich Results. Built with SeoUtils::jsonLd so the payload
@@ -12,21 +12,21 @@
         $collectionPayload = [
             '@context' => 'https://schema.org',
             '@type' => 'CollectionPage',
-            'name' => 'Event Schedule Examples',
-            'description' => 'A gallery of ' . $scheduleCount . ' live demo schedules showcasing Event Schedule features for various industries',
+            'name' => 'Getvnt Examples',
+            'description' => 'A gallery of ' . $scheduleCount . ' live demo schedules showcasing Getvnt features for various industries',
             'url' => url('/examples'),
             'numberOfItems' => $scheduleCount,
             'isPartOf' => [
                 '@type' => 'WebSite',
-                'name' => 'Event Schedule',
+                'name' => 'Getvnt',
                 'url' => config('app.url'),
             ],
         ];
         $itemListPayload = [
             '@context' => 'https://schema.org',
             '@type' => 'ItemList',
-            'name' => 'Live Event Schedule Demos',
-            'description' => 'Explore real examples of Event Schedule in action',
+            'name' => 'Live Getvnt Demos',
+            'description' => 'Explore real examples of Getvnt in action',
             'numberOfItems' => $scheduleCount,
             'itemListElement' => array_values(array_map(function ($index, $schedule) {
                 return [
@@ -268,7 +268,7 @@
 
         /* The unit number, stamped on the glass rather than sharing the name
            row. It moved here because the row could not hold both a stamp and
-           a full address: two of three cards truncated ".eventschedule.com"
+           a full address: two of three cards truncated ".getvnt.com"
            to an ellipsis, and the address IS the argument of this page.
            The fill must stay fully opaque - it sits over a photograph, so a
            translucent plate would score the type against whatever is behind
@@ -561,21 +561,21 @@
         ];
 
         // The spec sheet: what is visible on any of these pages, what that
-        // part is called in Event Schedule, and what it costs to build.
+        // part is called in Getvnt, and what it costs to build.
         // Every row is checked against docs/FEATURES.md.
         $spec = [
-            ['The address in the bar, like hikingclub.eventschedule.com', 'A schedule of your own on a subdomain, with nothing to install or host', 'Free'],
+            ['The address in the bar, like hikingclub.getvnt.com', 'A schedule of your own on a subdomain, with nothing to install or host', 'Free'],
             ['A month grid, or a plain list of what is coming up', 'The calendar or list layout, set once per schedule', 'Free'],
             ['A class every Tuesday that nobody retyped fifty times', 'Recurring dates, with exceptions for the days you skip', 'Free'],
             ['Color-coded strands inside one schedule', 'Sub-schedules', 'Free'],
-            ['Every act on the bill, including the ones with no account', 'The lineup on each event. A performer or venue you name who is not on Event Schedule gets a page of its own that says you listed them, and they can claim it with the email address on it', 'Free'],
+            ['Every act on the bill, including the ones with no account', 'The lineup on each event. A performer or venue you name who is not on Getvnt gets a page of its own that says you listed them, and they can claim it with the email address on it', 'Free'],
             ['Add to Google, Apple or Outlook, or subscribe to every event on the schedule', 'A calendar file per date, plus a live calendar feed of the whole schedule that updates itself when a date moves', 'Free'],
             ['Tell me when tickets go on sale, on a date that is not selling yet', 'The interest list, once you switch on the "Notify me" card: an email address and nothing else, then a message when tickets go on sale, if it is cancelled and shortly before it starts, plus any notice you choose to send if the date or venue changes. It does not use your newsletter allowance', 'Free'],
             ['The Follow button under the schedule name', 'An audience you can reach. A visitor who signs up with a name and email address and confirms it gets a digest of your new events automatically, plus any newsletter you write: 10 emails a month on Free, counted per recipient', 'Free'],
             ['Save me a place, and the count of places left', 'Free registration with an optional capacity, per date', 'Free'],
             ['Buy a ticket without leaving the page', 'Ticket types and checkout through Stripe or PayPal, with zero platform fees on every plan. A ticket type set at no charge goes out on Free; one with a price on it is Pro', 'Pro'],
             ['Photos and comments from the people who came', 'Fan photos, video and comments, held in an approval queue. Free covers 25 photos per schedule', 'Free'],
-            ['The small "Event Schedule" chip in the corner of a free schedule', 'The free-plan credit, a small link back to eventschedule.com. Removing it is part of Pro', 'Pro'],
+            ['The small "Getvnt" chip in the corner of a free schedule', 'The free-plan credit, a small link back to getvnt.com. Removing it is part of Pro', 'Pro'],
             ['A code shown at the door, and scanned on the way in', 'QR scanning, on every plan, whether the place was paid for or simply kept. The live check-in dashboard is the Pro half', 'Free'],
             ['A schedule on its own domain rather than a subdomain', 'Custom domains', 'Enterprise'],
         ];
@@ -598,11 +598,11 @@
         $faqs = [
             [
                 'q' => 'Can I create a schedule like these?',
-                'a' => 'Yes. Everything it takes to publish a schedule like the ones on this page is free forever: unlimited events, recurring dates, sub-schedules, your own colors and header image, free registration with a capacity and no ceiling on it, two-way calendar sync and an embeddable calendar. Scanning those codes at the door is free on every plan too. Putting a price on a ticket is what '.plan_price($proMonthly).' a month buys, along with the live check-in dashboard. Event Schedule charges no platform fees on ticket sales, on any plan.',
+                'a' => 'Yes. Everything it takes to publish a schedule like the ones on this page is free forever: unlimited events, recurring dates, sub-schedules, your own colors and header image, free registration with a capacity and no ceiling on it, two-way calendar sync and an embeddable calendar. Scanning those codes at the door is free on every plan too. Putting a price on a ticket is what '.plan_price($proMonthly).' a month buys, along with the live check-in dashboard. Getvnt charges no platform fees on ticket sales, on any plan.',
             ],
             [
                 'q' => 'Are these real schedules?',
-                'a' => 'They are real published pages, and they are demos. Event Schedule built them to show different kinds of programming side by side, from fitness and music to community groups and workshops, and each one is live at its own address rather than a screenshot or a video.',
+                'a' => 'They are real published pages, and they are demos. Getvnt built them to show different kinds of programming side by side, from fitness and music to community groups and workshops, and each one is live at its own address rather than a screenshot or a video.',
             ],
             [
                 'q' => 'How long does it take to set up?',
@@ -672,7 +672,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
                             <span class="es-show-muted text-sm font-medium tracking-wide">
-                                Event Schedule examples: <span data-count-to="{{ $scheduleCount }}">{{ $scheduleCount }}</span> live demo schedules
+                                Getvnt examples: <span data-count-to="{{ $scheduleCount }}">{{ $scheduleCount }}</span> live demo schedules
                             </span>
                         </x-marketing.hero-eyebrow>
                         <span class="es-mask"><span class="es-mask-line">Nothing on this floor</span></span>
@@ -680,7 +680,7 @@
                     </h1>
 
                     <p class="es-fade-up es-d-2 es-show-muted mb-10 max-w-xl text-lg sm:text-xl">
-                        Every unit below is a published Event Schedule page at its own address. Open one, click a date, read it on your phone, follow it. Then build yours out of the same parts.
+                        Every unit below is a published Getvnt page at its own address. Open one, click a date, read it on your phone, follow it. Then build yours out of the same parts.
                     </p>
 
                     <div class="es-fade-up es-d-3 flex flex-col items-start gap-4 sm:flex-row">
@@ -708,7 +708,7 @@
                             <dl class="space-y-4">
                                 <div>
                                     <dt class="es-show-tag mb-1">Address</dt>
-                                    <dd class="es-show-asset">your-name.eventschedule.com</dd>
+                                    <dd class="es-show-asset">your-name.getvnt.com</dd>
                                 </div>
                                 <div class="es-show-hair border-t pt-4">
                                     <dt class="es-show-tag mb-1">The parts</dt>
@@ -885,7 +885,7 @@
                                         </span>
                                         <div class="min-w-0 flex-1">
                                             <h3 class="es-show-hover-title es-show-ink text-lg font-bold leading-tight transition-colors">{{ $schedule['name'] }}</h3>
-                                            <p class="es-show-asset mt-1">{{ $schedule['subdomain'] }}.eventschedule.com</p>
+                                            <p class="es-show-asset mt-1">{{ $schedule['subdomain'] }}.getvnt.com</p>
                                         </div>
                                     </div>
 
@@ -935,7 +935,7 @@
                         Look closer. <span class="es-show-lit">These are the parts.</span>
                     </h2>
                     <p class="es-show-muted text-lg" data-reveal style="--reveal-delay: 0.14s;">
-                        No mystery, no mockups. Here is what a page like the ones above can show you, what that part is called in Event Schedule, and what it costs to build.
+                        No mystery, no mockups. Here is what a page like the ones above can show you, what that part is called in Getvnt, and what it costs to build.
                     </p>
                 </div>
 
@@ -976,7 +976,7 @@
                 </div>
 
                 <p class="es-show-muted mt-10 text-center" data-reveal>
-                    {{ $specFree }} of those {{ count($spec) }} parts cost nothing. The {{ count($spec) - $specFree }} that cost something are putting a price on a ticket, dropping the credit chip and a domain of your own. Free registration and scanning at the door are neither capped nor charged for, and Event Schedule takes nothing from the door on any plan.
+                    {{ $specFree }} of those {{ count($spec) }} parts cost nothing. The {{ count($spec) - $specFree }} that cost something are putting a price on a ticket, dropping the credit chip and a domain of your own. Free registration and scanning at the door are neither capped nor charged for, and Getvnt takes nothing from the door on any plan.
                     <a href="{{ marketing_url('/pricing') }}" class="es-show-lit inline-flex items-center gap-1 font-semibold transition-all hover:gap-2">
                         See the plans
                         <svg aria-hidden="true" class="h-4 w-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
@@ -1106,7 +1106,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-2xl border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-500 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-400 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-show-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]">
                             <span class="relative z-10 flex items-center gap-2">

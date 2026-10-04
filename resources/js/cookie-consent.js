@@ -100,7 +100,7 @@ const TRACKING_SESSION_KEYS = {
 /**
  * Expired host-only and on the host itself, and on the hosted service also on every parent domain
  * up to the install's cookie domain: gtag and Meta's pixel write on the registrable domain
- * (".eventschedule.com" for a schedule subdomain), which a host-only expiry would miss.
+ * (".getvnt.com" for a schedule subdomain), which a host-only expiry would miss.
  *
  * Never above the host where there is no cookie domain (a custom domain, a bare selfhost): there
  * the parent belongs to someone else, and "events.venue.com" must not delete the _ga that

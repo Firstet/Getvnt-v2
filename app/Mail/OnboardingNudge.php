@@ -25,7 +25,7 @@ use Illuminate\Support\Str;
  * claimed name (users.pending_schedule_name) is named in the stage 1 subject.
  *
  * The personal parts - the founder sign-off, the reply invitation, the Reply-To and the example
- * schedules link - are eventschedule.com's alone, so they are gated on is_nexus. This command runs
+ * schedules link - are getvnt.com's alone, so they are gated on is_nexus. This command runs
  * on every hosted install, and an operator platform (IS_HOSTED=true, IS_NEXUS=false) has neither
  * our founder nor our inbox, and no /examples route.
  */

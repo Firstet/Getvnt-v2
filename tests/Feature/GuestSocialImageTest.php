@@ -15,7 +15,7 @@ use Tests\TestCase;
  * 1200x630 marketing card, which renders whatever the homepage hero currently says (at the time of
  * writing "Everything you have on. Booked solid.") - whenever the event
  * and the schedule had no image between them. None of the five was plan-gated, so a free
- * schedule's own link preview was an Event Schedule advert, on the surface a visitor sees BEFORE
+ * schedule's own link preview was an Getvnt advert, on the surface a visitor sees BEFORE
  * they decide whether to tap. og:site_name already named the schedule, which made it worse: the
  * words were theirs and the picture was ours.
  *
@@ -193,7 +193,7 @@ class GuestSocialImageTest extends TestCase
     /**
      * FAILS before the change. The JSON-LD block was already @if-guarded, so dropping the
      * fallback is enough - but the assertion matters: this one told Google, not just a chat app,
-     * that somebody else's event looks like an Event Schedule advert.
+     * that somebody else's event looks like an Getvnt advert.
      */
     public function test_the_event_json_ld_omits_its_image_rather_than_advertising_us(): void
     {
@@ -432,7 +432,7 @@ class GuestSocialImageTest extends TestCase
 
     /**
      * FAILS before the change: ticket/view.blade.php set no `meta` slot, so it fell through to
-     * layouts/app.blade.php's default block - which names "Event Schedule" in og:title and
+     * layouts/app.blade.php's default block - which names "Getvnt" in og:title and
      * og:site_name and offers PLATFORM_AD as og:image.
      *
      * A ticket belongs to the schedule that sold it, and buyers forward these links. The page is
@@ -452,7 +452,7 @@ class GuestSocialImageTest extends TestCase
 
         $this->assertStringNotContainsString(self::PLATFORM_AD, $content);
         $this->assertStringNotContainsString('property="og:image"', $content);
-        $this->assertStringNotContainsString('content="Event Schedule"', $content);
+        $this->assertStringNotContainsString('content="Getvnt"', $content);
         $this->assertStringContainsString('name="robots" content="noindex, nofollow"', $content);
     }
 }

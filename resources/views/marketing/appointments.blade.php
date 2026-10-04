@@ -223,7 +223,7 @@
             ],
             [
                 'q' => 'Can I charge for appointments?',
-                'a' => 'Yes, on the Pro plan. A type can be free or priced; every plan carries a free type, and putting a price on one is the Pro line, the same line that applies to tickets. Paid types take payment by Stripe, a payment link, or cash. PayPal, Payfast and Invoice Ninja are not offered for appointments, even when they are connected. Free bookings are confirmed at once, a paid type stays hidden from guests until a payment method it can use is connected, and Event Schedule takes no cut of what you charge.',
+                'a' => 'Yes, on the Pro plan. A type can be free or priced; every plan carries a free type, and putting a price on one is the Pro line, the same line that applies to tickets. Paid types take payment by Stripe, a payment link, or cash. PayPal, Payfast and Invoice Ninja are not offered for appointments, even when they are connected. Free bookings are confirmed at once, a paid type stays hidden from guests until a payment method it can use is connected, and Getvnt takes no cut of what you charge.',
             ],
             [
                 'q' => 'How do I refund a paid booking?',
@@ -271,7 +271,7 @@
 
     <x-slot name="structuredData">
     <x-seo.webpage
-        name="Event Schedule - Appointments"
+        name="Getvnt - Appointments"
         description="Appointment booking built into your schedule. Set weekly hours and start-time intervals, take free bookings on any plan, and never offer a time you are already busy." />
     <x-seo.faq-schema :items="$faqs" />
     </x-slot>
@@ -1496,7 +1496,7 @@
                 </h2>
                 <p class="es-book-muted text-lg" data-reveal style="--reveal-delay: 0.1s;">
                     A free intro call and a paid session can sit side by side with their own hours,
-                    prices and rules. What you charge is yours: Event Schedule takes no cut of it.
+                    prices and rules. What you charge is yours: Getvnt takes no cut of it.
                 </p>
             </div>
 
@@ -1675,7 +1675,7 @@
                         <div dir="ltr" class="es-claim flex min-w-0 flex-1 items-center rounded-lg border border-white/15 bg-white/[0.07] px-5 py-4 backdrop-blur-md transition-all">
                             <input id="es-claim-input" type="text" placeholder="your-schedule" autocomplete="off" spellcheck="false" maxlength="30"
                                 class="min-w-0 flex-1 border-0 bg-transparent p-0 text-right font-mono text-sm font-semibold text-white placeholder-gray-400 focus:outline-none focus:ring-0 sm:text-base">
-                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.eventschedule.com</span>
+                            <span class="shrink-0 select-none font-mono text-sm text-gray-300 sm:text-base">.getvnt.com</span>
                         </div>
                         <a href="{{ app_url('/sign_up') }}" class="es-book-btn group relative inline-flex shrink-0 items-center justify-center gap-2 overflow-hidden px-8 py-4 text-lg font-bold">
                             <span class="relative z-10 flex items-center gap-2">

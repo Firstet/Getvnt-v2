@@ -2,9 +2,9 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Event Schedule Blog</title>
+        <title>Getvnt Blog</title>
         <link>{{ route('blog.index') }}</link>
-        <description>News, tips, and insights about event scheduling and ticketing from the Event Schedule team.</description>
+        <description>News, tips, and insights about event scheduling and ticketing from the Getvnt team.</description>
         <language>{{ app()->getLocale() }}</language>
         @if($posts->first()?->published_at)
         <lastBuildDate>{{ $posts->first()->published_at->toRssString() }}</lastBuildDate>
@@ -12,7 +12,7 @@
         <atom:link href="{{ route('blog.feed') }}" rel="self" type="application/rss+xml" />
         <image>
             <url>{{ config('app.url') }}/images/dark_logo.png</url>
-            <title>Event Schedule Blog</title>
+            <title>Getvnt Blog</title>
             <link>{{ route('blog.index') }}</link>
         </image>
         @foreach($posts as $post)

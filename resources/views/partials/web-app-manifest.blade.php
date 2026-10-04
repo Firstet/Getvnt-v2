@@ -6,7 +6,7 @@
     app-admin.blade.php does - so a single value there brands every schedule's site as ours. A
     manifest names the app a browser installs, and once installed Android hands it every link a
     visitor opens on that host and shows its icon as the launch splash first. One static
-    public/manifest.webmanifest naming "Event Schedule" therefore put our logo full screen in
+    public/manifest.webmanifest naming "Getvnt" therefore put our logo full screen in
     front of every schedule's audience. See AppController::manifest().
 
     Include one of two ways:

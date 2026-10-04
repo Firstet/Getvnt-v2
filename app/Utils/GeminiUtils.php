@@ -1470,7 +1470,7 @@ class GeminiUtils
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 10,
             CURLOPT_CONNECTTIMEOUT => 5,
-            CURLOPT_USERAGENT => 'EventSchedule/1.0',
+            CURLOPT_USERAGENT => 'Getvnt/1.0',
             CURLOPT_SSL_VERIFYPEER => true,
             CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_PROTOCOLS => CURLPROTO_HTTPS, // Only HTTPS for Google API
@@ -1545,7 +1545,7 @@ class GeminiUtils
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_TIMEOUT => 10,
                 CURLOPT_CONNECTTIMEOUT => 5,
-                CURLOPT_USERAGENT => 'EventSchedule/1.0',
+                CURLOPT_USERAGENT => 'Getvnt/1.0',
                 CURLOPT_SSL_VERIFYPEER => true,
                 CURLOPT_SSL_VERIFYHOST => 2,
                 CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,

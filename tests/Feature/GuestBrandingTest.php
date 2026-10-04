@@ -18,7 +18,7 @@ use Tests\TestCase;
  *
  * The grid has one invariant across every cell: a page carries the strip or the chip, never both.
  * Only an operator's own platform has a strip at all: there the chip lands on the tiers they
- * charge for and the free tier keeps the strip alone. eventschedule.com has no strip, so its free
+ * charge for and the free tier keeps the strip alone. getvnt.com has no strip, so its free
  * tier carries the chip instead.
  *
  * Routes are registered at boot from the environment's IS_HOSTED, so overriding app.hosted here
@@ -82,7 +82,7 @@ class GuestBrandingTest extends TestCase
 
     public function test_nexus_free_gets_the_chip_instead_of_the_strip(): void
     {
-        // eventschedule.com runs no footer strip. Its free tier carries the same small corner chip
+        // getvnt.com runs no footer strip. Its free tier carries the same small corner chip
         // as every other install, pointing at the hardcoded domain (BRANDING_MATRIX rule 1) and
         // tagged apart so the traffic report can tell it from a granted plan's.
         $this->deploy('nexus');
@@ -90,7 +90,7 @@ class GuestBrandingTest extends TestCase
         $content = $this->guestPage($this->freeRole());
 
         $this->assertStringContainsString(
-            'href="https://eventschedule.com?'.self::CHIP_FREE.'&amp;utm_medium=footer"',
+            'href="https://getvnt.com?'.self::CHIP_FREE.'&amp;utm_medium=footer"',
             $content
         );
         $this->assertStringNotContainsString(self::STRIP, $content);
@@ -124,7 +124,7 @@ class GuestBrandingTest extends TestCase
     {
         // A page carries one credit. The strip is already on this one, so the chip stands down,
         // and on an operator's install the strip promotes the operator through marketing_url() -
-        // so a free schedule there carries no Event Schedule attribution at all. Deliberate; the
+        // so a free schedule there carries no Getvnt attribution at all. Deliberate; the
         // white-label and SaaS pages say so.
         $this->deploy('saas');
 
@@ -139,7 +139,7 @@ class GuestBrandingTest extends TestCase
     {
         // The tenant's subscription is between them and the operator. Our credit is owed by
         // whoever redistributes the software, so it does not come off when a tenant upgrades -
-        // only eventschedule.com sells white-label. The strip does come off: it is the
+        // only getvnt.com sells white-label. The strip does come off: it is the
         // operator's growth CTA and belongs to the free tier. Which means the chip renders here
         // BECAUSE the strip does not, and this test plus the one above are the whole rule for an
         // operator's platform: upgrading a tenant swaps their strip for our chip.
@@ -160,7 +160,7 @@ class GuestBrandingTest extends TestCase
         $content = $this->guestPage($this->paidRole());
 
         $this->assertStringContainsString(self::CHIP_SELFHOST, $content);
-        $this->assertStringContainsString('https://eventschedule.com?'.self::CHIP_SELFHOST, $content);
+        $this->assertStringContainsString('https://getvnt.com?'.self::CHIP_SELFHOST, $content);
         // Everything the free tier carries on a hosted platform is absent here.
         $this->assertStringNotContainsString(self::STRIP, $content);
     }
@@ -399,7 +399,7 @@ class GuestBrandingTest extends TestCase
 
     public function test_footer_strip_belongs_to_an_operators_free_tier_only(): void
     {
-        // The strip is the growth CTA of whoever runs the platform. eventschedule.com credits its
+        // The strip is the growth CTA of whoever runs the platform. getvnt.com credits its
         // own free tier with the chip instead, and a selfhost has no tiers to promote.
         $free = $this->freeRole();
         $paid = $this->paidRole();
@@ -456,7 +456,7 @@ class GuestBrandingTest extends TestCase
             'plan_source' => 'admin',
         ]);
 
-        // eventschedule.com has no strip, so its free tier is named here too. A paid plan takes
+        // getvnt.com has no strip, so its free tier is named here too. A paid plan takes
         // the chip off unless an admin granted it by hand.
         $this->deploy('nexus');
         $this->assertSame('free_plan', $free->creditChipReason());
