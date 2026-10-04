@@ -14,11 +14,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ marketing_url('/pricing') }}" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                            Pricing
-                        </a>
-                    </li>
-                    <li>
                         <a href="{{ marketing_url('/use-cases') }}" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                             Use Cases
                         </a>
@@ -72,16 +67,11 @@
 
             <!-- Deploy -->
             <div>
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Deploy</h3>
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Platform</h3>
                 <ul class="space-y-3">
                     <li>
                         <a href="{{ marketing_url('/saas') }}" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                             SaaS
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ marketing_url('/selfhost') }}" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                            Selfhost
                         </a>
                     </li>
                     <li>
@@ -124,11 +114,6 @@
                     <li>
                         <a href="{{ policy_url('terms') }}" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                             Terms of Service
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ marketing_url('/self-hosting-terms-of-service') }}" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                            Self-Hosting Terms
                         </a>
                     </li>
                     {{-- GDPR Art. 7(3): withdrawing consent must be as easy as giving it, so the

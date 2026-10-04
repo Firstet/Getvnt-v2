@@ -1,43 +1,62 @@
 version: "3.8"
 
 services:
+  mysql:
+    image: mysql:8.0
+    container_name: getvnt-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Chimapaul2019@@
+      MYSQL_DATABASE: getvnt
+      MYSQL_USER: getvnt
+      MYSQL_PASSWORD: Chimapaul2019@@
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - default
+
   app:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: getvnt-app
     restart: always
+    depends_on:
+      - mysql
     expose:
       - "80"
     ports:
       - "80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.getvnt-http.rule=Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
-      - "traefik.http.routers.getvnt-http.entrypoints=web"
-      - "traefik.http.routers.getvnt-http.service=getvnt-service"
-      - "traefik.http.routers.getvnt-https.rule=Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
-      - "traefik.http.routers.getvnt-https.entrypoints=websecure"
-      - "traefik.http.routers.getvnt-https.service=getvnt-service"
+      - "traefik.docker.network=dokploy-network"
+      - "traefik.http.routers.getvnt-web.rule=Host(`getvnt.com`) || Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
+      - "traefik.http.routers.getvnt-web.entrypoints=web"
+      - "traefik.http.routers.getvnt-web.service=getvnt-service"
+      - "traefik.http.routers.getvnt-websecure.rule=Host(`getvnt.com`) || Host(`getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io`) || Host(`getvnt-getvnt20-ymzioo-a4b7d0-169-58-52-97.sslip.io`)"
+      - "traefik.http.routers.getvnt-websecure.entrypoints=websecure"
+      - "traefik.http.routers.getvnt-websecure.service=getvnt-service"
+      - "traefik.http.routers.getvnt-websecure.tls.certresolver=letsencrypt"
       - "traefik.http.services.getvnt-service.loadbalancer.server.port=80"
+    env_file:
+      - .env
     environment:
-      - APP_NAME=${APP_NAME:-Getvnt}
-      - APP_ENV=${APP_ENV:-local}
-      - APP_DEBUG=${APP_DEBUG:-true}
-      - APP_KEY=${APP_KEY:-base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=}
-      - APP_URL=${APP_URL:-https://getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io}
-      - IS_HOSTED=${IS_HOSTED:-false}
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=getvnt
+      - DB_USERNAME=getvnt
+      - DB_PASSWORD=Chimapaul2019@@
       - IS_NEXUS=true
-      - DB_CONNECTION=sqlite
-      - DB_DATABASE=/var/www/html/database/database.sqlite
-      - DB_HOST=127.0.0.1
-      - QUEUE_CONNECTION=sync
-      - SESSION_DOMAIN=
-      - SESSION_SECURE_COOKIE=false
+      - IS_HOSTED=true
     networks:
       - default
       - dokploy-network
 
+volumes:
+  mysql_data:
+
 networks:
   dokploy-network:
     external: true
+

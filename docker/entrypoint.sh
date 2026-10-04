@@ -1,59 +1,34 @@
 #!/bin/sh
 set -e
 
-# Force default DB_CONNECTION to sqlite and sanitize session config
-export DB_CONNECTION=sqlite
-export DB_DATABASE=/var/www/html/database/database.sqlite
-export DB_HOST=127.0.0.1
-export QUEUE_CONNECTION=sync
-export APP_KEY="${APP_KEY:-base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=}"
-export SESSION_DOMAIN=""
-export SESSION_SECURE_COOKIE=false
-export IS_NEXUS=true
+# Default DB configuration to MySQL if unset
+export DB_CONNECTION="${DB_CONNECTION:-mysql}"
+export DB_HOST="${DB_HOST:-mysql}"
+export DB_PORT="${DB_PORT:-3306}"
+export DB_DATABASE="${DB_DATABASE:-getvnt}"
+export DB_USERNAME="${DB_USERNAME:-getvnt}"
+export DB_PASSWORD="${DB_PASSWORD:-Chimapaul2019@@}"
 
-# Ensure .env file exists for self-hosted setup check in public/index.php
+# Ensure .env file exists for setup check
 if [ ! -f .env ]; then
-    cp .env.example .env
-fi
-
-# Sanitize .env file
-if grep -q 'DB_CONNECTION="mysql"' .env || grep -q 'DB_CONNECTION=mysql' .env; then
-    sed -i 's/DB_CONNECTION="mysql"/DB_CONNECTION="sqlite"/g' .env
-    sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/g' .env
-    sed -i 's/DB_HOST="mysql"/DB_HOST="127.0.0.1"/g' .env
-    sed -i 's/DB_HOST=mysql/DB_HOST=127.0.0.1/g' .env
-    sed -i 's|DB_DATABASE="getvnt"|DB_DATABASE="/var/www/html/database/database.sqlite"|g' .env
-    sed -i 's|DB_DATABASE=getvnt|DB_DATABASE=/var/www/html/database/database.sqlite|g' .env
-    sed -i 's/QUEUE_CONNECTION="database"/QUEUE_CONNECTION="sync"/g' .env
-    sed -i 's/QUEUE_CONNECTION=database/QUEUE_CONNECTION=sync/g' .env
-fi
-
-# Clear placeholder SESSION_DOMAIN, enforce SESSION_SECURE_COOKIE=false, and enable IS_NEXUS=true
-sed -i 's/SESSION_DOMAIN=.*/SESSION_DOMAIN=/g' .env || true
-sed -i 's/SESSION_SECURE_COOKIE=.*/SESSION_SECURE_COOKIE=false/g' .env || true
-sed -i 's|APP_URL=.*|APP_URL=https://getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io|g' .env || true
-if grep -q 'IS_NEXUS=' .env; then
-    sed -i 's/IS_NEXUS=.*/IS_NEXUS=true/g' .env || true
-else
-    echo "IS_NEXUS=true" >> .env
-fi
-
-# Ensure APP_KEY is valid base64 key
-if ! grep -q 'APP_KEY=base64:' .env; then
-    sed -i 's/APP_KEY=.*/APP_KEY=base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=/g' .env
+    if [ -f .env.example ]; then
+        cp .env.example .env
+    fi
 fi
 
 # Ensure storage and database directories exist
 mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache database storage/logs
-touch database/database.sqlite
-touch storage/logs/laravel.log
+touch database/database.sqlite 2>/dev/null || true
+touch storage/logs/laravel.log 2>/dev/null || true
 
-# Initial permission set for setup commands
-chown -R www-data:www-data storage bootstrap/cache database .env
-chmod -R 777 storage bootstrap/cache database database/database.sqlite storage/logs/laravel.log .env
+# Permission set
+chown -R www-data:www-data storage bootstrap/cache database 2>/dev/null || true
+chmod -R 777 storage bootstrap/cache database storage/logs 2>/dev/null || true
 
-# Generate application key if missing
-php artisan key:generate --force || true
+# Generate application key if missing in .env and not set in environment
+if [ -f .env ] && ! grep -q 'APP_KEY=base64:' .env && [ -z "$APP_KEY" ]; then
+    php artisan key:generate --force || true
+fi
 
 # Run database migrations
 php artisan migrate --force || true
@@ -64,10 +39,10 @@ php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
 
-# Re-apply full write permissions to storage, logs, and database after artisan commands
-touch storage/logs/laravel.log
-chown -R www-data:www-data storage bootstrap/cache database .env
-chmod -R 777 storage bootstrap/cache database database/database.sqlite storage/logs/laravel.log .env
+# Re-apply write permissions
+chown -R www-data:www-data storage bootstrap/cache database 2>/dev/null || true
+chmod -R 777 storage bootstrap/cache database storage/logs 2>/dev/null || true
 
 # Execute Supervisord
 exec /usr/bin/supervisord -c /etc/supervisord.conf
+

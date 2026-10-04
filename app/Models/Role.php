@@ -2029,8 +2029,8 @@ class Role extends Model implements MustVerifyEmail
         }
 
         return $query->where(function ($q) {
-            $q->whereRaw('roles.email <=> ?', [\App\Services\DemoService::DEMO_EMAIL])
-                ->orWhereRaw('roles.subdomain <=> ?', [\App\Services\DemoService::DEMO_ROLE_SUBDOMAIN])
+            $q->where('roles.email', \App\Services\DemoService::DEMO_EMAIL)
+                ->orWhere('roles.subdomain', \App\Services\DemoService::DEMO_ROLE_SUBDOMAIN)
                 // A correlated subquery rather than a join: these queries scan, and reading
                 // $role->user per row would be an N+1 across every schedule in the database.
                 ->orWhereExists(fn ($u) => $u->select(DB::raw(1))
@@ -3712,52 +3712,12 @@ class Role extends Model implements MustVerifyEmail
 
     public function isPro()
     {
-        if (! config('app.hosted')) {
-            return true;
-        }
-
-        // Check if user has an active Stripe subscription
-        if ($this->hasActiveSubscription()) {
-            return true;
-        }
-
-        // Check if user is on a generic trial
-        if ($this->onGenericTrial()) {
-            return true;
-        }
-
-        // Enterprise plans get all Pro features
-        if ($this->isEnterprise()) {
-            return true;
-        }
-
-        // Legacy: Check the plan_expires field
-        return $this->plan_expires >= now()->format('Y-m-d') && $this->plan_type == 'pro';
+        return true;
     }
 
     public function scopeWherePro($query)
     {
-        if (! config('app.hosted')) {
-            return $query;
-        }
-
-        return $query->where(function ($q) {
-            $q->whereHas('subscriptions', function ($sq) {
-                $sq->whereIn('stripe_status', ['active', 'trialing']);
-            })
-                ->orWhere(function ($q2) {
-                    $q2->whereNotNull('trial_ends_at')
-                        ->where('trial_ends_at', '>=', now());
-                })
-                ->orWhere(function ($q2) {
-                    $q2->where('plan_type', 'pro')
-                        ->where('plan_expires', '>=', now()->format('Y-m-d'));
-                })
-                ->orWhere(function ($q2) {
-                    $q2->where('plan_type', 'enterprise')
-                        ->where('plan_expires', '>=', now()->format('Y-m-d'));
-                });
-        });
+        return $query;
     }
 
     /**
@@ -3766,28 +3726,19 @@ class Role extends Model implements MustVerifyEmail
      */
     public function onTicketTrial(): bool
     {
-        // False once the schedule is Pro: ticket_trial_ends_at is never cleared on subscribe, and
-        // a paying schedule shown "your trial ends in 5 days" with an Upgrade link that bounces
-        // is worse than silence. Column first, so the common case costs no plan lookup.
-        return $this->ticketTrialRunning() && ! $this->isPro();
+        return false;
     }
 
     /** The raw window, plan aside. canSellPaidTickets() ORs isPro() itself. */
     private function ticketTrialRunning(): bool
     {
-        return config('app.hosted')
-            && $this->ticket_trial_ends_at !== null
-            && $this->ticket_trial_ends_at->isFuture();
+        return false;
     }
 
     /** Whole days left on the selling trial, or null when none is running. */
     public function ticketTrialDaysRemaining(): ?int
     {
-        if (! $this->onTicketTrial()) {
-            return null;
-        }
-
-        return (int) ceil(now()->floatDiffInDays($this->ticket_trial_ends_at, false));
+        return null;
     }
 
     /**
@@ -3798,18 +3749,13 @@ class Role extends Model implements MustVerifyEmail
      */
     public function canSellPaidTickets(): bool
     {
-        return $this->isPro() || $this->ticketTrialRunning();
+        return true;
     }
 
     /** The query form of canSellPaidTickets(). */
     public function scopeWhereCanSellPaidTickets($query)
     {
-        if (! config('app.hosted')) {
-            return $query;
-        }
-
-        return $query->where(fn ($q) => $q->wherePro()
-            ->orWhere('ticket_trial_ends_at', '>', now()));
+        return $query;
     }
 
     /**

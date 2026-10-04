@@ -1193,7 +1193,7 @@ if (config('app.is_nexus')) {
     if (config('app.is_testing')) {
         Route::get('/', [MarketingController::class, 'index'])->name('marketing.index');
         Route::get('/features', [MarketingController::class, 'features'])->name('marketing.features');
-        Route::get('/pricing', [MarketingController::class, 'pricing'])->name('marketing.pricing');
+        Route::get('/pricing', fn () => redirect('/', 301))->name('marketing.pricing');
         Route::get('/about', [MarketingController::class, 'about'])->name('marketing.about');
         Route::get('/examples', [MarketingController::class, 'demos'])->name('marketing.demos');
         Route::get('/search', [MarketingController::class, 'search'])->name('marketing.search');
@@ -1402,10 +1402,10 @@ if (config('app.is_nexus')) {
         Route::get('/accessibility', [MarketingController::class, 'accessibility'])->name('marketing.accessibility');
         Route::get('/terms-of-service', [LegalController::class, 'show'])->defaults('type', 'terms')->name('marketing.terms');
         Route::get('/cookie-policy', [LegalController::class, 'show'])->defaults('type', 'cookies')->name('marketing.cookie_policy');
-        Route::get('/self-hosting-terms-of-service', [MarketingController::class, 'selfHostingTerms'])->name('marketing.self_hosting_terms');
-        Route::get('/selfhost', [MarketingController::class, 'selfHost'])->name('marketing.selfhost');
-        Route::get('/self-host-event-schedule', fn () => redirect()->route('marketing.selfhost', [], 301));
-        Route::get('/self-host-event-schedule/', fn () => redirect()->route('marketing.selfhost', [], 301));
+        Route::get('/self-hosting-terms-of-service', fn () => redirect('/', 301))->name('marketing.self_hosting_terms');
+        Route::get('/selfhost', fn () => redirect('/', 301))->name('marketing.selfhost');
+        Route::get('/self-host-event-schedule', fn () => redirect('/', 301));
+        Route::get('/self-host-event-schedule/', fn () => redirect('/', 301));
         Route::get('/saas', [MarketingController::class, 'saas'])->name('marketing.saas');
         Route::get('/docs', [MarketingController::class, 'docsIndex'])->name('marketing.docs');
         // Fetched lazily by the docs search on first focus. Kept under /docs/ so the
@@ -1473,7 +1473,7 @@ if (config('app.is_nexus')) {
         Route::domain(_base_domain())->group(function () {
             Route::get('/', [MarketingController::class, 'index'])->name('marketing.index');
             Route::get('/features', [MarketingController::class, 'features'])->name('marketing.features');
-            Route::get('/pricing', [MarketingController::class, 'pricing'])->name('marketing.pricing');
+            Route::get('/pricing', fn () => redirect('/', 301))->name('marketing.pricing');
             Route::get('/about', [MarketingController::class, 'about'])->name('marketing.about');
             Route::get('/examples', [MarketingController::class, 'demos'])->name('marketing.demos');
             Route::get('/search', [MarketingController::class, 'search'])->name('marketing.search');
@@ -1684,10 +1684,10 @@ if (config('app.is_nexus')) {
             Route::get('/accessibility', [MarketingController::class, 'accessibility'])->name('marketing.accessibility');
             Route::get('/terms-of-service', [LegalController::class, 'show'])->defaults('type', 'terms')->name('marketing.terms');
             Route::get('/cookie-policy', [LegalController::class, 'show'])->defaults('type', 'cookies')->name('marketing.cookie_policy');
-            Route::get('/self-hosting-terms-of-service', [MarketingController::class, 'selfHostingTerms'])->name('marketing.self_hosting_terms');
-            Route::get('/selfhost', [MarketingController::class, 'selfHost'])->name('marketing.selfhost');
-            Route::get('/self-host-event-schedule', fn () => redirect()->route('marketing.selfhost', [], 301));
-            Route::get('/self-host-event-schedule/', fn () => redirect()->route('marketing.selfhost', [], 301));
+            Route::get('/self-hosting-terms-of-service', fn () => redirect('/', 301))->name('marketing.self_hosting_terms');
+            Route::get('/selfhost', fn () => redirect('/', 301))->name('marketing.selfhost');
+            Route::get('/self-host-event-schedule', fn () => redirect('/', 301));
+            Route::get('/self-host-event-schedule/', fn () => redirect('/', 301));
             Route::get('/saas', [MarketingController::class, 'saas'])->name('marketing.saas');
             Route::get('/docs', [MarketingController::class, 'docsIndex'])->name('marketing.docs');
             // Fetched lazily by the docs search on first focus. Kept under /docs/ so the

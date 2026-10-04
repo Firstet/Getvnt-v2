@@ -90,6 +90,7 @@ return [
         'key' => env('STRIPE_PLATFORM_KEY'),
         'secret' => env('STRIPE_PLATFORM_SECRET'),
         'webhook_secret' => env('STRIPE_PLATFORM_WEBHOOK_SECRET'),
+        'ticket_fee_percent' => env('PLATFORM_TICKET_FEE_PERCENT', 5.0),
         'price_monthly' => env('STRIPE_PRICE_MONTHLY'),
         'price_yearly' => env('STRIPE_PRICE_YEARLY'),
         // ?: not a second arg: .env.example ships these present-but-empty, and env() returns

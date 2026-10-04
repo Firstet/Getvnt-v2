@@ -317,7 +317,7 @@ class StripeGateway extends PaymentGatewayDriver
         $useConnect = config('app.hosted') && $event->user->stripe_account_id;
 
         try {
-            $session = $this->createStripeSession($useConnect, $lineItems, $sale, $event, $data, $isEmbed, $plan);
+            $session = $this->createStripeSession($useConnect, $lineItems, $sale, $event, $data, $isEmbed, $plan, $expectedTotal);
         } catch (\Exception $e) {
             // The sale rows, the seat holds and any promo times_used are already committed by
             // now, so an uncaught throw here answered a paid checkout with a 500 and left the
@@ -335,7 +335,7 @@ class StripeGateway extends PaymentGatewayDriver
      * the platform account otherwise. Split out of stripeCheckout() only so the call has one
      * catchable seam; the two payloads are unchanged.
      */
-    private function createStripeSession(bool $useConnect, array $lineItems, $sale, $event, array $data, bool $isEmbed, $plan = null)
+    private function createStripeSession(bool $useConnect, array $lineItems, $sale, $event, array $data, bool $isEmbed, $plan = null, float $expectedTotal = 0)
     {
         // An installment session has to leave a REUSABLE payment method behind on the connected
         // account, or there is nothing for app:charge-installments to charge next month. Nothing
@@ -348,18 +348,34 @@ class StripeGateway extends PaymentGatewayDriver
         // ourselves, which is the part we actually keep a record of.
         $installmentExtras = [];
 
+        $ticketFeePercent = (float) config('services.stripe_platform.ticket_fee_percent', 5.0);
+        $currency = $event->ticket_currency_code ?: 'USD';
+        $applicationFeeAmount = 0;
+        if ($ticketFeePercent > 0 && $expectedTotal > 0) {
+            $applicationFeeAmount = (int) round(($expectedTotal * ($ticketFeePercent / 100.0)) * MoneyUtils::getSmallestUnitMultiplier($currency));
+        }
+
+        $paymentIntentData = [
+            'metadata' => [
+                'sale_id' => UrlUtils::encodeId($sale->id),
+            ],
+        ];
+        if ($applicationFeeAmount > 0) {
+            $paymentIntentData['application_fee_amount'] = $applicationFeeAmount;
+        }
+
         if ($plan) {
             $first = $plan->installments()->where('sequence', 1)->first();
 
             $installmentExtras = [
                 'customer_creation' => 'always',
-                'payment_intent_data' => [
+                'payment_intent_data' => array_merge($paymentIntentData, [
                     'setup_future_usage' => 'off_session',
                     'metadata' => [
                         'sale_id' => UrlUtils::encodeId($sale->id),
                         'installment_id' => UrlUtils::encodeId($first->id),
                     ],
-                ],
+                ]),
                 'custom_text' => [
                     'submit' => [
                         'message' => __('messages.installments_stripe_mandate', [
@@ -388,11 +404,7 @@ class StripeGateway extends PaymentGatewayDriver
                         'sale_id' => UrlUtils::encodeId($sale->id),
                         'installment_id' => $plan ? UrlUtils::encodeId($plan->installments()->where('sequence', 1)->value('id')) : null,
                     ], fn ($v) => $v !== null),
-                    'payment_intent_data' => [
-                        'metadata' => [
-                            'sale_id' => UrlUtils::encodeId($sale->id),
-                        ],
-                    ],
+                    'payment_intent_data' => $paymentIntentData,
                     'success_url' => custom_domain_url(route('checkout.success', $data).(str_contains(route('checkout.success', $data), '?') ? '&' : '?').'session_id={CHECKOUT_SESSION_ID}'.($isEmbed ? '&embed=true' : '')),
                     'cancel_url' => custom_domain_url(route('checkout.cancel', $data).(str_contains(route('checkout.cancel', $data), '?') ? '&' : '?').'secret='.$sale->secret),
                 ], $installmentExtras),
