@@ -969,8 +969,7 @@
 
                     <p class="es-news-muted mt-6 text-sm">
                         No credit card required &middot;
-                        <a href="{{ marketing_url('/features') }}" class="es-news-lit font-semibold">Features</a> &middot;
-                        <a href="{{ marketing_url('/pricing') }}" class="es-news-lit font-semibold">Pricing</a>
+                        <a href="{{ marketing_url('/features') }}" class="es-news-lit font-semibold">Features</a>
                     </p>
                 </div>
             </div>

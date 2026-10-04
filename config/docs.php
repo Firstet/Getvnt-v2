@@ -73,14 +73,6 @@ return [
             'index_route' => null,
         ],
 
-        'selfhost' => [
-            'title' => 'Selfhost',
-            'category' => 'Selfhost',
-            'blurb' => 'Deploy Getvnt on your own server.',
-            'icon' => 'server',
-            'accent' => 'selfhost',
-            'index_route' => 'marketing.docs.selfhost',
-        ],
 
         'saas' => [
             'title' => 'SaaS',
