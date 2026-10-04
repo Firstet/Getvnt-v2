@@ -673,6 +673,16 @@ if (! function_exists('marketing_url')) {
      */
     function marketing_url(string $path = '/'): string
     {
+        try {
+            if (request()->hasHeader('Host')) {
+                $host = request()->getHost();
+                if (str_contains($host, 'sslip.io') || filter_var($host, FILTER_VALIDATE_IP)) {
+                    return url($path);
+                }
+            }
+        } catch (\Throwable $e) {
+        }
+
         if (config('app.is_testing')) {
             return url($path);
         }
@@ -767,12 +777,23 @@ if (! function_exists('marketing_domain')) {
 
 if (! function_exists('_base_domain')) {
     /**
-     * Extract the base domain from APP_URL by stripping known subdomain prefixes.
+     * Extract the base domain from APP_URL or current request host by stripping known subdomain prefixes.
      * e.g. "https://app.eventschedule.com" -> "eventschedule.com"
      * e.g. "https://eventschedule.com" -> "eventschedule.com"
      */
     function _base_domain(): string
     {
+        try {
+            if (request()->hasHeader('Host')) {
+                $requestHost = request()->getHost();
+                if (str_contains($requestHost, 'sslip.io') || filter_var($requestHost, FILTER_VALIDATE_IP)) {
+                    return preg_replace('/^(app|www|blog|demo)\./', '', $requestHost);
+                }
+            }
+        } catch (\Throwable $e) {
+            // Fall back to config app.url when outside HTTP context
+        }
+
         $host = parse_url(config('app.url'), PHP_URL_HOST) ?? 'localhost';
 
         // Strip known subdomain prefixes
