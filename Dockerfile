@@ -47,9 +47,9 @@ COPY docker/nginx.conf /etc/nginx/http.d/default.conf
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY docker/supervisord.conf /etc/supervisord.conf
 
-# Set permissions for Laravel storage & bootstrap/cache
-RUN chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
+# Create storage and cache folders if missing & set full permissions
+RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache \
+    && chmod -R 777 storage bootstrap/cache
 
 EXPOSE 80
 
