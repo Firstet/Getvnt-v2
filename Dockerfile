@@ -42,11 +42,11 @@ COPY --from=node-builder /app/public/build ./public/build
 # Optimize Autoloader
 RUN composer dump-autoload --optimize
 
-# Remove default nginx configs to prevent duplicate default server conflicts
-RUN rm -rf /etc/nginx/http.d/* /etc/nginx/conf.d/*
+# Ensure required run & configuration directories exist
+RUN mkdir -p /run/nginx /etc/nginx/http.d /etc/nginx/conf.d
 
 # Copy custom Nginx & Supervisor Configs
-COPY docker/nginx.conf /etc/nginx/http.d/default.conf
+COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/supervisord.conf /etc/supervisord.conf
 
 # Verify Nginx configuration syntax at build time
