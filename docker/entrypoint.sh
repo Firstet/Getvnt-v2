@@ -6,6 +6,22 @@ if [ ! -f .env ]; then
     cp .env.example .env
 fi
 
+# Sanitize .env file to fallback to sqlite if mysql is unreachable or unconfigured
+if grep -q 'DB_CONNECTION="mysql"' .env || grep -q 'DB_CONNECTION=mysql' .env; then
+    sed -i 's/DB_CONNECTION="mysql"/DB_CONNECTION="sqlite"/g' .env
+    sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/g' .env
+    sed -i 's/DB_HOST="mysql"/DB_HOST="127.0.0.1"/g' .env
+    sed -i 's/DB_HOST=mysql/DB_HOST=127.0.0.1/g' .env
+    sed -i 's|DB_DATABASE="getvnt"|DB_DATABASE="/var/www/html/database/database.sqlite"|g' .env
+    sed -i 's|DB_DATABASE=getvnt|DB_DATABASE=/var/www/html/database/database.sqlite|g' .env
+    sed -i 's/QUEUE_CONNECTION="database"/QUEUE_CONNECTION="sync"/g' .env
+    sed -i 's/QUEUE_CONNECTION=database/QUEUE_CONNECTION=sync/g' .env
+fi
+
+if grep -q 'APP_KEY=""' .env || grep -q 'APP_KEY=$' .env; then
+    sed -i 's/APP_KEY=""/APP_KEY="base64:dXBkYXRlZGFwcGtleWZvcmdldnZudGxhcmF2ZWwxMTIzNA=="/g' .env
+fi
+
 # Ensure storage and database directories exist
 mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache database storage/logs
 touch database/database.sqlite
