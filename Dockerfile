@@ -23,7 +23,7 @@ RUN apk add --no-cache \
     unzip \
     oniguruma-dev
 
-# Install PHP extensions required by Laravel & Getvnt (gd, intl, pdo_sqlite, pdo_mysql, bcmath, zip, opcache)
+# Install PHP extensions required by Laravel & Getvnt
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd intl pdo pdo_sqlite pdo_mysql bcmath zip opcache
 
@@ -50,6 +50,9 @@ RUN mkdir -p /run/nginx /etc/nginx/http.d /etc/nginx/conf.d database
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/supervisord.conf /etc/supervisord.conf
 
+# Make entrypoint script executable
+RUN chmod +x docker/entrypoint.sh
+
 # Verify Nginx configuration syntax at build time
 RUN nginx -t
 
@@ -60,5 +63,5 @@ RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/s
 
 EXPOSE 80
 
-# Start Supervisor (manages both PHP-FPM and Nginx)
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+# Start Container via Entrypoint script
+CMD ["/var/www/html/docker/entrypoint.sh"]
