@@ -71,6 +71,7 @@ class AppServiceProvider extends ServiceProvider
             && ! config('app.is_testing')
             && ! config('session.domain')
             && str_contains(_base_domain(), '.')
+            && ! str_contains(_base_domain(), 'sslip.io')
             && ! filter_var(_base_domain(), FILTER_VALIDATE_IP)) {
             config(['session.domain' => '.'._base_domain()]);
         }
