@@ -30,6 +30,7 @@ fi
 # Clear placeholder SESSION_DOMAIN and enforce SESSION_SECURE_COOKIE=false
 sed -i 's/SESSION_DOMAIN=.*/SESSION_DOMAIN=/g' .env || true
 sed -i 's/SESSION_SECURE_COOKIE=.*/SESSION_SECURE_COOKIE=false/g' .env || true
+sed -i 's|APP_URL=.*|APP_URL=https://getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io|g' .env || true
 
 # Ensure APP_KEY is valid base64 key
 if ! grep -q 'APP_KEY=base64:' .env; then

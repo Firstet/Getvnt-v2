@@ -66,14 +66,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public static function defaultHostedSessionDomain(): void
     {
+        $requestHost = request()->getHost();
+        $baseDomain = _base_domain();
+
         if (config('app.hosted')
             && config('app.env') !== 'local'
             && ! config('app.is_testing')
             && ! config('session.domain')
-            && str_contains(_base_domain(), '.')
-            && ! str_contains(_base_domain(), 'sslip.io')
-            && ! filter_var(_base_domain(), FILTER_VALIDATE_IP)) {
-            config(['session.domain' => '.'._base_domain()]);
+            && str_contains($baseDomain, '.')
+            && ! str_contains($baseDomain, 'sslip.io')
+            && ! filter_var($baseDomain, FILTER_VALIDATE_IP)
+            && (str_ends_with($requestHost, '.'.$baseDomain) || $requestHost === $baseDomain)) {
+            config(['session.domain' => '.'.$baseDomain]);
         }
     }
 
