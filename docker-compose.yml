@@ -24,7 +24,7 @@ services:
       - APP_NAME=${APP_NAME:-Getvnt}
       - APP_ENV=${APP_ENV:-local}
       - APP_DEBUG=${APP_DEBUG:-true}
-      - APP_KEY=${APP_KEY:-base64:dXBkYXRlZGFwcGtleWZvcmdldnZudGxhcmF2ZWwxMTIzNA==}
+      - APP_KEY=${APP_KEY:-base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=}
       - APP_URL=${APP_URL:-https://getvnt-x9t6pu-92d7c6-169-58-52-97.sslip.io}
       - IS_HOSTED=${IS_HOSTED:-false}
       - DB_CONNECTION=sqlite

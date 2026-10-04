@@ -6,7 +6,7 @@ export DB_CONNECTION=sqlite
 export DB_DATABASE=/var/www/html/database/database.sqlite
 export DB_HOST=127.0.0.1
 export QUEUE_CONNECTION=sync
-export APP_KEY="${APP_KEY:-base64:dXBkYXRlZGFwcGtleWZvcmdldnZudGxhcmF2ZWwxMTIzNA==}"
+export APP_KEY="${APP_KEY:-base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=}"
 
 # Ensure .env file exists for self-hosted setup check in public/index.php
 if [ ! -f .env ]; then
@@ -25,8 +25,9 @@ if grep -q 'DB_CONNECTION="mysql"' .env || grep -q 'DB_CONNECTION=mysql' .env; t
     sed -i 's/QUEUE_CONNECTION=database/QUEUE_CONNECTION=sync/g' .env
 fi
 
-if grep -q 'APP_KEY=""' .env || grep -q 'APP_KEY=$' .env; then
-    sed -i 's/APP_KEY=""/APP_KEY="base64:dXBkYXRlZGFwcGtleWZvcmdldnZudGxhcmF2ZWwxMTIzNA=="/g' .env
+# Ensure APP_KEY is valid base64 key
+if ! grep -q 'APP_KEY=base64:' .env; then
+    sed -i 's/APP_KEY=.*/APP_KEY=base64:c1hSM1lhUjhZNm5OdnBRTHBTM2s5S1RKN2d4TzRFR1k=/g' .env
 fi
 
 # Ensure storage and database directories exist
