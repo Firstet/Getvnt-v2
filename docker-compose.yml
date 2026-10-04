@@ -31,6 +31,8 @@ services:
       - DB_DATABASE=/var/www/html/database/database.sqlite
       - DB_HOST=127.0.0.1
       - QUEUE_CONNECTION=sync
+      - SESSION_DOMAIN=
+      - SESSION_SECURE_COOKIE=false
     networks:
       - default
       - dokploy-network
