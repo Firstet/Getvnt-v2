@@ -20,8 +20,8 @@ class ResolveCustomDomain
         $host = $request->getHost();
         $baseDomain = _base_domain();
 
-        // Skip if this is a normal eventschedule.com request
-        if ($host === $baseDomain || str_ends_with($host, '.'.$baseDomain)) {
+        // Skip if this is a normal base domain request or deployment preview host (sslip.io / IP)
+        if ($host === $baseDomain || str_ends_with($host, '.'.$baseDomain) || str_contains($host, 'sslip.io') || filter_var($host, FILTER_VALIDATE_IP)) {
             return $next($request);
         }
 
