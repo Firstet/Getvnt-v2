@@ -9,10 +9,11 @@ RUN npm run build
 # Step 2: Production PHP 8.2 + Nginx Image
 FROM php:8.2-fpm-alpine
 
-# Install Nginx, Supervisor, and required system libraries
+# Install Nginx, Supervisor, SQLite and required system libraries
 RUN apk add --no-cache \
     nginx \
     supervisor \
+    sqlite \
     freetype-dev \
     libjpeg-turbo-dev \
     libpng-dev \
@@ -22,9 +23,9 @@ RUN apk add --no-cache \
     unzip \
     oniguruma-dev
 
-# Install PHP extensions required by Laravel & Getvnt
+# Install PHP extensions required by Laravel & Getvnt (gd, intl, pdo_sqlite, pdo_mysql, bcmath, zip, opcache)
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd intl pdo pdo_mysql bcmath zip opcache
+    && docker-php-ext-install -j$(nproc) gd intl pdo pdo_sqlite pdo_mysql bcmath zip opcache
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -43,7 +44,7 @@ COPY --from=node-builder /app/public/build ./public/build
 RUN composer dump-autoload --optimize
 
 # Ensure required run & configuration directories exist
-RUN mkdir -p /run/nginx /etc/nginx/http.d /etc/nginx/conf.d
+RUN mkdir -p /run/nginx /etc/nginx/http.d /etc/nginx/conf.d database
 
 # Copy custom Nginx & Supervisor Configs
 COPY docker/nginx.conf /etc/nginx/nginx.conf
@@ -52,9 +53,10 @@ COPY docker/supervisord.conf /etc/supervisord.conf
 # Verify Nginx configuration syntax at build time
 RUN nginx -t
 
-# Create storage and cache folders if missing & set full permissions
+# Create storage, cache folders, and sqlite DB if missing & set full permissions
 RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache \
-    && chmod -R 777 storage bootstrap/cache
+    && touch database/database.sqlite \
+    && chmod -R 777 storage bootstrap/cache database/database.sqlite
 
 EXPOSE 80
 
