@@ -7404,7 +7404,7 @@ class MarketingController extends Controller
                     ->orWhereNotNull('days_of_week')
                     ->orWhere(function ($q2) {
                         $q2->where('duration', '>=', 24)
-                            ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [Carbon::today()]);
+                            ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [Carbon::today()]);
                     });
             })
             ->where('is_private', false)

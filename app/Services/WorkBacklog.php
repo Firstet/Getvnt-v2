@@ -111,7 +111,7 @@ class WorkBacklog
                         // before the watermark and published after it is exactly the case this
                         // is meant to catch.
                         ->whereRaw('COALESCE(events.published_at, events.created_at) > roles.last_announced_at')
-                        ->whereRaw('(events.starts_at >= NOW() OR (events.duration >= 24 AND DATE_ADD(events.starts_at, INTERVAL events.duration HOUR) >= NOW()))'))
+                        ->whereRaw('(events.starts_at >= ' . (\Illuminate\Support\Facades\DB::connection()->getDriverName() === 'sqlite' ? "datetime('now')" : 'NOW()') . ' OR (events.duration >= 24 AND ' . sql_date_add('events.starts_at', 'events.duration', 'HOUR') . ' >= ' . (\Illuminate\Support\Facades\DB::connection()->getDriverName() === 'sqlite' ? "datetime('now')" : 'NOW()') . '))'))
                     ->count(),
             ],
 

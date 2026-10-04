@@ -74,7 +74,7 @@ class TicketController extends Controller
             })
                 ->whereDoesntHave('event', function ($eq) {
                     $eq->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                 });
             $defaultDir = 'desc';
             $sortDir = $sortDir ? (strtolower($sortDir) === 'asc' ? 'asc' : 'desc') : $defaultDir;
@@ -96,7 +96,7 @@ class TicketController extends Controller
                         });
                 })->orWhereHas('event', function ($eq) {
                     $eq->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                 });
             });
             $defaultDir = 'asc';
@@ -121,7 +121,7 @@ class TicketController extends Controller
                 })
                 ->whereDoesntHave('event', function ($eq) {
                     $eq->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                 })
                 ->exists();
         }
@@ -471,7 +471,7 @@ class TicketController extends Controller
                         });
                 })->orWhereHas('event', function ($eq) {
                     $eq->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                 });
             });
         }

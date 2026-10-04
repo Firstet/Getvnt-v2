@@ -26,7 +26,7 @@ class FeedController extends Controller
                 ->orWhereNotNull('days_of_week')
                 ->orWhere(function ($q) use ($now) {
                     $q->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$now]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$now]);
                 });
         })
             ->whereIn('id', function ($query) use ($role) {

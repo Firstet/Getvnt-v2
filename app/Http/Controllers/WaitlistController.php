@@ -144,7 +144,7 @@ class WaitlistController extends Controller
                         });
                 })->orWhereHas('event', function ($eq) {
                     $eq->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                 });
             });
         }

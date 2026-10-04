@@ -155,7 +155,7 @@ class TranslationQueue
                         // Multi-day events that started earlier but are still running. The
                         // duration >= 24 guard mirrors Event::getIsMultiDayAttribute().
                         $q2->where('duration', '>=', 24)
-                            ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$cutoff]);
+                            ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$cutoff]);
                     });
             });
     }

@@ -1802,7 +1802,7 @@ class Event extends Model
                 ->orWhereNotNull('days_of_week')
                 ->orWhere(function ($q2) use ($gridStartUtc) {
                     $q2->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$gridStartUtc]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$gridStartUtc]);
                 });
         });
     }
@@ -1815,7 +1815,7 @@ class Event extends Model
             $q->where('starts_at', '>=', $date)
                 ->orWhere(function ($q2) use ($date) {
                     $q2->where('duration', '>=', 24)
-                        ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$date]);
+                        ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$date]);
                 });
         });
     }
@@ -1828,7 +1828,7 @@ class Event extends Model
             ->where(function ($q) use ($date) {
                 $q->whereNull('duration')
                     ->orWhere('duration', '<', 24)
-                    ->orWhereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) < ?', [$date]);
+                    ->orWhereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' < ?', [$date]);
             });
     }
 
@@ -1914,7 +1914,7 @@ class Event extends Model
             ->where(fn ($oneOff) => $oneOff->whereNull($c('days_of_week'))
                 ->where(fn ($ends) => $ends->where($c('starts_at'), '>=', $cutAt)
                     ->orWhere(fn ($long) => $long->where($c('duration'), '>=', 24)
-                        ->whereRaw("DATE_ADD({$table}.starts_at, INTERVAL {$table}.duration HOUR) >= ?", [$cutAt]))))
+                        ->whereRaw(sql_date_add("{$table}.starts_at", "{$table}.duration", 'HOUR').' >= ?', [$cutAt]))))
             // A series: while it has an occurrence to come, or had one within the grace period.
             ->orWhere(fn ($series) => $series->whereNotNull($c('days_of_week'))
                 ->where(fn ($running) => $running
@@ -1964,8 +1964,9 @@ class Event extends Model
         $occurrences = "LEAST(GREATEST(CAST({$table}.recurring_end_value AS DECIMAL(65,0)), 0), 100000)"
             ." + COALESCE(FLOOR(CHAR_LENGTH({$table}.recurring_exclude_dates) / 13), 0)";
 
-        $fifthWeekday = "GREATEST(DAY(DATE_SUB({$table}.starts_at, INTERVAL 12 HOUR)), DAY({$table}.starts_at),"
-            ." DAY(DATE_ADD({$table}.starts_at, INTERVAL 14 HOUR))) >= 29";
+        $sub12 = sql_date_sub("{$table}.starts_at", 12, 'HOUR');
+        $add14 = sql_date_add("{$table}.starts_at", 14, 'HOUR');
+        $fifthWeekday = "GREATEST(DAY({$sub12}), DAY({$table}.starts_at), DAY({$add14})) >= 29";
 
         $period = "CASE {$table}.recurring_frequency"
             ." WHEN 'daily' THEN 1"
@@ -1975,7 +1976,7 @@ class Event extends Model
             ." WHEN 'every_n_weeks' THEN 7 * GREATEST(COALESCE({$table}.recurring_interval, 2), 1)"
             .' ELSE 7 END';
 
-        return "DATE_ADD({$table}.starts_at, INTERVAL LEAST(({$occurrences}) * ({$period}), 36600) DAY)";
+        return sql_date_add("{$table}.starts_at", "LEAST(({$occurrences}) * ({$period}), 36600)", 'DAY');
     }
 
     /**

@@ -77,7 +77,11 @@ class SitemapController extends Controller
      * EventRepo::getEvent()'s "upcoming" test for a bare slug, bound to [now less a day, now]: the
      * instance a bare /{slug} shows is the next one it passes, else the latest. See collapseWinners().
      */
-    private const UPCOMING = '(events.starts_at >= ? OR (events.duration >= 24 AND DATE_ADD(events.starts_at, INTERVAL events.duration HOUR) >= ?))';
+    private static function upcomingSql(string $table = 'events'): string
+    {
+        $dateAdd = sql_date_add("{$table}.starts_at", "{$table}.duration", 'HOUR');
+        return "({$table}.starts_at >= ? OR ({$table}.duration >= 24 AND {$dateAdd} >= ?))";
+    }
 
     /** Per-request memo of the section list. */
     private ?array $sections = null;
@@ -750,9 +754,10 @@ class SitemapController extends Controller
     private function collapseWinners(callable $eligible, callable $homeAllowed): array
     {
         $now = $this->now();
-        $upcoming = self::UPCOMING;
+        $upcoming = self::upcomingSql('events');
         $bindings = [$now->copy()->subDay()->format('Y-m-d H:i:s'), $now->format('Y-m-d H:i:s')];
-        $packed = "CONCAT(events.starts_at, LPAD(events.id, 20, '0'))";
+        $isSqlite = DB::connection()->getDriverName() === 'sqlite';
+        $packed = $isSqlite ? "(events.starts_at || printf('%020d', events.id))" : "CONCAT(events.starts_at, LPAD(events.id, 20, '0'))";
 
         $rows = $eligible()
             ->whereNull('events.days_of_week')

@@ -519,7 +519,7 @@ class AnalyticsService
                     // Multi-day event that started before the window and is still running.
                     ->orWhere(function ($q2) use ($cutoff) {
                         $q2->where('duration', '>=', 24)
-                            ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$cutoff]);
+                            ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$cutoff]);
                     });
             });
 

@@ -216,7 +216,7 @@ class PromotionService
                 ->where(function ($q) {
                     $q->whereNotNull('e.days_of_week')
                         ->orWhere('e.starts_at', '>=', now())
-                        ->orWhereRaw('DATE_ADD(e.starts_at, INTERVAL COALESCE(e.duration, 0) HOUR) >= ?', [now()]);
+                        ->orWhereRaw(sql_date_add('e.starts_at', 'e.duration', 'HOUR').' >= ?', [now()]);
                 })
                 // is_accepted on the pivot is the universal visibility gate in this app.
                 ->whereExists(function ($q) {

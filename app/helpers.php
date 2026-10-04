@@ -1350,3 +1350,92 @@ if (! function_exists('selfhost_needs_setup')) {
         return $needsSetup;
     }
 }
+
+if (! function_exists('sql_date_add')) {
+    /**
+     * Return a SQL expression for adding an interval to a datetime column/expression.
+     * Compatible with MySQL/MariaDB and SQLite.
+     *
+     * @param string $column The datetime column name (e.g. 'starts_at' or 'events.starts_at')
+     * @param string|int $value Column name, expression, or integer value representing interval amount
+     * @param string $unit Unit of interval: 'HOUR', 'DAY', 'MINUTE', etc. (default 'HOUR')
+     * @return string
+     */
+    function sql_date_add(string $column, $value, string $unit = 'HOUR'): string
+    {
+        $driver = \Illuminate\Support\Facades\DB::connection()->getDriverName();
+        $unitUpper = strtoupper(trim($unit));
+
+        if ($driver === 'sqlite') {
+            $unitLower = strtolower($unitUpper);
+            if (in_array($unitLower, ['hour', 'hours'])) {
+                $unitStr = 'hours';
+            } elseif (in_array($unitLower, ['day', 'days'])) {
+                $unitStr = 'days';
+            } elseif (in_array($unitLower, ['minute', 'minutes'])) {
+                $unitStr = 'minutes';
+            } elseif (in_array($unitLower, ['second', 'seconds'])) {
+                $unitStr = 'seconds';
+            } else {
+                $unitStr = 'hours';
+            }
+
+            if (is_numeric($value)) {
+                return "datetime({$column}, '+{$value} {$unitStr}')";
+            } else {
+                return "datetime({$column}, '+' || COALESCE({$value}, 0) || ' {$unitStr}')";
+            }
+        }
+
+        if (is_numeric($value)) {
+            return "DATE_ADD({$column}, INTERVAL {$value} {$unitUpper})";
+        } else {
+            return "DATE_ADD({$column}, INTERVAL COALESCE({$value}, 0) {$unitUpper})";
+        }
+    }
+}
+
+if (! function_exists('sql_date_sub')) {
+    /**
+     * Return a SQL expression for subtracting an interval from a datetime column/expression.
+     * Compatible with MySQL/MariaDB and SQLite.
+     *
+     * @param string $column The datetime column name (e.g. 'starts_at' or 'events.starts_at')
+     * @param string|int $value Column name, expression, or integer value representing interval amount
+     * @param string $unit Unit of interval: 'HOUR', 'DAY', 'MINUTE', etc. (default 'HOUR')
+     * @return string
+     */
+    function sql_date_sub(string $column, $value, string $unit = 'HOUR'): string
+    {
+        $driver = \Illuminate\Support\Facades\DB::connection()->getDriverName();
+        $unitUpper = strtoupper(trim($unit));
+
+        if ($driver === 'sqlite') {
+            $unitLower = strtolower($unitUpper);
+            if (in_array($unitLower, ['hour', 'hours'])) {
+                $unitStr = 'hours';
+            } elseif (in_array($unitLower, ['day', 'days'])) {
+                $unitStr = 'days';
+            } elseif (in_array($unitLower, ['minute', 'minutes'])) {
+                $unitStr = 'minutes';
+            } elseif (in_array($unitLower, ['second', 'seconds'])) {
+                $unitStr = 'seconds';
+            } else {
+                $unitStr = 'hours';
+            }
+
+            if (is_numeric($value)) {
+                return "datetime({$column}, '-{$value} {$unitStr}')";
+            } else {
+                return "datetime({$column}, '-' || COALESCE({$value}, 0) || ' {$unitStr}')";
+            }
+        }
+
+        if (is_numeric($value)) {
+            return "DATE_SUB({$column}, INTERVAL {$value} {$unitUpper})";
+        } else {
+            return "DATE_SUB({$column}, INTERVAL COALESCE({$value}, 0) {$unitUpper})";
+        }
+    }
+}
+

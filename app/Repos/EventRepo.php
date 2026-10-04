@@ -209,7 +209,7 @@ class EventRepo
                     ->orWhere(function ($query) use ($startOfDay, $endOfDay) {
                         $query->where('duration', '>=', 24)
                             ->where('starts_at', '<', $endOfDay)
-                            ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$startOfDay]);
+                            ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$startOfDay]);
                     });
             })
             ->orderBy('starts_at')
@@ -235,7 +235,7 @@ class EventRepo
                     ->orWhere(function ($query) use ($startOfDay, $endOfDay) {
                         $query->where('duration', '>=', 24)
                             ->where('starts_at', '<', $endOfDay)
-                            ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$startOfDay]);
+                            ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$startOfDay]);
                     });
             })
             ->where(function ($query) use ($subdomain) {
@@ -261,7 +261,7 @@ class EventRepo
                     ->orWhere(function ($query) use ($startOfDay, $endOfDay) {
                         $query->where('duration', '>=', 24)
                             ->where('starts_at', '<', $endOfDay)
-                            ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [$startOfDay]);
+                            ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [$startOfDay]);
                     });
             })
             ->where(function ($query) use ($subdomain) {
@@ -2852,7 +2852,7 @@ class EventRepo
                         $q->where('starts_at', '>=', now()->subDay())
                             ->orWhere(function ($q2) {
                                 $q2->where('duration', '>=', 24)
-                                    ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                                    ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                             });
                     })
                     ->orderBy('starts_at')
@@ -2907,7 +2907,7 @@ class EventRepo
                         })
                         ->orWhere(function ($q2) {
                             $q2->where('duration', '>=', 24)
-                                ->whereRaw('DATE_ADD(starts_at, INTERVAL duration HOUR) >= ?', [now()]);
+                                ->whereRaw(sql_date_add('starts_at', 'duration', 'HOUR').' >= ?', [now()]);
                         });
                 })
                 ->where(function ($query) use ($subdomain) {

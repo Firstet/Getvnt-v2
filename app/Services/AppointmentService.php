@@ -654,11 +654,14 @@ class AppointmentService
         $intervals = [];
 
         // Concrete (non-recurring) events overlapping the padded UTC window.
+        $durationExpr = DB::connection()->getDriverName() === 'sqlite'
+            ? 'MAX(COALESCE(duration, 0), 2)'
+            : 'GREATEST(COALESCE(duration, 0), 2)';
         $concrete = (clone $base)
             ->whereNull('days_of_week')
             ->whereNotNull('starts_at')
             ->where('starts_at', '<=', $padEnd->format('Y-m-d H:i:s'))
-            ->whereRaw('DATE_ADD(starts_at, INTERVAL GREATEST(COALESCE(duration, 0), 2) HOUR) >= ?', [$padStart->format('Y-m-d H:i:s')])
+            ->whereRaw(sql_date_add('starts_at', $durationExpr, 'HOUR').' >= ?', [$padStart->format('Y-m-d H:i:s')])
             ->with('appointmentType')
             ->get();
 
