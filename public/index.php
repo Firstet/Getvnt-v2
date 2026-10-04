@@ -113,5 +113,14 @@ if (! $isHosted && ! file_exists(__DIR__.'/../.env')) {
 require __DIR__.'/../vendor/autoload.php';
 
 // Bootstrap Laravel and handle the request...
-(require_once __DIR__.'/../bootstrap/app.php')
-    ->handleRequest(Request::capture());
+try {
+    (require_once __DIR__.'/../bootstrap/app.php')
+        ->handleRequest(Request::capture());
+} catch (\Throwable $e) {
+    http_response_code(500);
+    echo '<h1>Laravel Runtime Error</h1>';
+    echo '<h3>Message: ' . htmlspecialchars($e->getMessage()) . '</h3>';
+    echo '<h4>File: ' . htmlspecialchars($e->getFile()) . ':' . $e->getLine() . '</h4>';
+    echo '<pre>' . htmlspecialchars($e->getTraceAsString()) . '</pre>';
+}
+
