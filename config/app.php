@@ -229,7 +229,7 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY') ?: (file_exists(base_path('.env')) ? (preg_match('/^APP_KEY=(base64:.+)/m', file_get_contents(base_path('.env')), $m) ? trim($m[1], "\"'\r\n") : 'base64:I/xCAteSAjvqLDRS/ZT6aFc/OsQ+nvM5r41EBknVt4Q=') : 'base64:I/xCAteSAjvqLDRS/ZT6aFc/OsQ+nvM5r41EBknVt4Q='),
 
     'previous_keys' => [
         ...array_filter(

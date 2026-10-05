@@ -14,7 +14,9 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'log'),
+    'default' => (env('MAIL_MAILER') === 'smtp' && (env('MAIL_HOST') === 'mail.getvnt.com' || empty(env('MAIL_HOST'))))
+        ? 'log'
+        : (env('MAIL_MAILER') ?: 'log'),
 
     /*
     |--------------------------------------------------------------------------
