@@ -195,13 +195,19 @@ class RegisteredUserController extends Controller
                 : null;
 
             Notification::route('mail', $email)->notifyNow(new SignupVerificationCode($code, $continueUrl));
+            \Log::info("Signup verification code for {$email}: {$code}");
         } catch (\Throwable $e) {
             report($e);
+            \Log::warning("Signup verification code for {$email}: {$code} (Mail delivery error: {$e->getMessage()})");
 
-            return response()->json([
-                'success' => false,
-                'message' => __('messages.error_sending_code'),
-            ], 500);
+            if (config('mail.default') === 'log' || config('app.debug')) {
+                // Code logged to file when mailer is set to log or debug mode
+            } else {
+                return response()->json([
+                    'success' => false,
+                    'message' => __('messages.error_sending_code'),
+                ], 500);
+            }
         }
 
         // Increment attempts counter (expires in 1 hour)
