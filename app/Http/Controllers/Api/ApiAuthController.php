@@ -69,7 +69,13 @@ class ApiAuthController extends Controller
         Cache::put($attemptsKey, $attempts + 1, now()->addHour());
 
         // Send notification
-        Notification::route('mail', $email)->notify(new SignupVerificationCode($code));
+        try {
+            Notification::route('mail', $email)->notify(new SignupVerificationCode($code));
+            \Log::info("API Signup verification code for {$email}: {$code}");
+        } catch (\Throwable $e) {
+            report($e);
+            \Log::warning("API Signup verification code for {$email}: {$code} (Mail delivery error: {$e->getMessage()})");
+        }
 
         return response()->json([
             'data' => [

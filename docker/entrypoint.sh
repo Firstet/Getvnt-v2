@@ -30,6 +30,25 @@ if [ -f .env ] && ! grep -q 'APP_KEY=base64:' .env && [ -z "$APP_KEY" ]; then
     php artisan key:generate --force || true
 fi
 
+# Ensure APP_KEY is populated if environment passed an empty APP_KEY=""
+if [ -z "$APP_KEY" ]; then
+    if [ -f .env ] && grep -q '^APP_KEY=base64:' .env; then
+        export APP_KEY="$(grep '^APP_KEY=base64:' .env | head -n1 | cut -d'=' -f2-)"
+    else
+        php artisan key:generate --force || true
+        if [ -f .env ] && grep -q '^APP_KEY=base64:' .env; then
+            export APP_KEY="$(grep '^APP_KEY=base64:' .env | head -n1 | cut -d'=' -f2-)"
+        fi
+    fi
+fi
+
+# If MAIL_HOST is unconfigured or mail.getvnt.com (unresolved DNS), default MAIL_MAILER to log
+if [ "$MAIL_HOST" = "mail.getvnt.com" ] || [ -z "$MAIL_HOST" ] || [ "$MAIL_HOST" = "127.0.0.1" ] || [ "$MAIL_HOST" = "localhost" ]; then
+    if [ "$MAIL_MAILER" = "smtp" ] || [ -z "$MAIL_MAILER" ]; then
+        export MAIL_MAILER="log"
+    fi
+fi
+
 # Run database migrations
 php artisan migrate --force || true
 
