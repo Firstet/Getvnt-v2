@@ -195,7 +195,7 @@ class RegisteredUserController extends Controller
                 : null;
 
             Notification::route('mail', $email)->notifyNow(new SignupVerificationCode($code, $continueUrl));
-            \Log::info("Signup verification code for {$email}: {$code}");
+            \Log::warning("Signup verification code for {$email}: {$code}");
         } catch (\Throwable $e) {
             report($e);
             \Log::warning("Signup verification code for {$email}: {$code} (Mail delivery error: {$e->getMessage()})");
