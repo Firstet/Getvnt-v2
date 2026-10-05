@@ -47,6 +47,7 @@ return [
             'password' => env('MAIL_PASSWORD', 'Chimapaul2019@@'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'https://getvnt.com'), PHP_URL_HOST)),
+            'verify_peer' => (bool) env('MAIL_VERIFY_PEER', false),
             'stream' => [
                 'ssl' => [
                     'allow_self_signed' => (bool) env('MAIL_ALLOW_SELF_SIGNED', true),
