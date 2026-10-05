@@ -1028,6 +1028,9 @@ Route::middleware(['auth', 'verified', 'app_subdomain'])->group(function () {
         Route::post('/admin/settings/accommodation', [AdminController::class, 'updateStay22Settings'])->name('admin.settings.update_stay22');
         Route::post('/admin/settings/currency', [AdminController::class, 'updateCurrencySettings'])->name('admin.settings.update_currency');
         Route::post('/admin/settings/plan-pricing', [AdminController::class, 'updatePlanPricingSettings'])->name('admin.settings.update_plan_pricing');
+        Route::post('/admin/settings/gateways', [AdminController::class, 'updateGatewaysSettings'])->name('admin.settings.update_gateways');
+        Route::post('/admin/settings/ai', [AdminController::class, 'updateAiSettings'])->name('admin.settings.update_ai');
+        Route::post('/admin/settings/cms', [AdminController::class, 'updateCmsSettings'])->name('admin.settings.update_cms');
 
         // Operator-authored privacy policy / terms / cookie policy. One endpoint per
         // document, for the reason given above.

@@ -3278,6 +3278,29 @@ class AdminController extends Controller
             'stay22Available' => \App\Services\Stay22Service::isEnabled(),
             'stay22Aid' => \App\Services\Stay22Service::operatorAid(),
             'realtimeEnabled' => \App\Utils\RealtimeTracker::enabled(),
+
+            // Platform Payment Gateway Credentials & Fee
+            'gatewayStripePublicKey' => Setting::get('gateway_stripe_public_key', env('STRIPE_KEY')),
+            'gatewayStripeSecretKey' => Setting::get('gateway_stripe_secret_key', env('STRIPE_SECRET')),
+            'gatewayStripeWebhookSecret' => Setting::get('gateway_stripe_webhook_secret', env('STRIPE_WEBHOOK_SECRET')),
+            'gatewayPaystackPublicKey' => Setting::get('gateway_paystack_public_key', env('PAYSTACK_PUBLIC_KEY')),
+            'gatewayPaystackSecretKey' => Setting::get('gateway_paystack_secret_key', env('PAYSTACK_SECRET_KEY')),
+            'gatewayPaypalClientId' => Setting::get('gateway_paypal_client_id', env('PAYPAL_CLIENT_ID')),
+            'gatewayPaypalSecretKey' => Setting::get('gateway_paypal_secret_key', env('PAYPAL_CLIENT_SECRET')),
+            'gatewayPaypalSandbox' => (bool) Setting::get('gateway_paypal_sandbox', env('PAYPAL_SANDBOX', true)),
+            'platformFeePercent' => Setting::get('platform_fee_percent', '5.0'),
+
+            // AI API Credentials & Feature Controls
+            'aiEnabled' => (bool) Setting::get('ai_enabled', true),
+            'aiGeminiApiKey' => Setting::get('ai_gemini_api_key', env('GEMINI_API_KEY')),
+            'aiOpenaiApiKey' => Setting::get('ai_openai_api_key', env('OPENAI_API_KEY')),
+            'aiDefaultModel' => Setting::get('ai_default_model', 'gemini-1.5-flash'),
+
+            // CMS & Landing Page Controls
+            'siteAnnouncementBanner' => Setting::get('site_announcement_banner'),
+            'siteHeroHeadline' => Setting::get('site_hero_headline'),
+            'siteHeroSubheadline' => Setting::get('site_hero_subheadline'),
+            'supportContactEmail' => Setting::get('support_contact_email', env('MAIL_FROM_ADDRESS', 'noreply@getvnt.com')),
         ]);
     }
 
@@ -3683,6 +3706,172 @@ class AdminController extends Controller
         );
 
         return redirect()->route('admin.settings')->with('success', __('messages.settings_saved'));
+    }
+
+    /**
+     * Persist platform payment gateway credentials & platform fee %.
+     */
+    public function updateGatewaysSettings(Request $request): RedirectResponse
+    {
+        if (! auth()->user()->isAdmin()) {
+            return redirect()->back()->with('error', __('messages.not_authorized'));
+        }
+
+        $request->validate([
+            'gateway_stripe_public_key' => ['nullable', 'string', 'max:255'],
+            'gateway_stripe_secret_key' => ['nullable', 'string', 'max:255'],
+            'gateway_stripe_webhook_secret' => ['nullable', 'string', 'max:255'],
+            'gateway_paystack_public_key' => ['nullable', 'string', 'max:255'],
+            'gateway_paystack_secret_key' => ['nullable', 'string', 'max:255'],
+            'gateway_paypal_client_id' => ['nullable', 'string', 'max:255'],
+            'gateway_paypal_secret_key' => ['nullable', 'string', 'max:255'],
+            'gateway_paypal_sandbox' => ['nullable', 'boolean'],
+            'platform_fee_percent' => ['nullable', 'numeric', 'min:0', 'max:100'],
+        ]);
+
+        if (is_demo_mode()) {
+            return redirect()->route('admin.settings')->with('error', __('messages.demo_mode_settings_disabled'));
+        }
+
+        $keys = [
+            'gateway_stripe_public_key',
+            'gateway_stripe_secret_key',
+            'gateway_stripe_webhook_secret',
+            'gateway_paystack_public_key',
+            'gateway_paystack_secret_key',
+            'gateway_paypal_client_id',
+            'gateway_paypal_secret_key',
+            'platform_fee_percent',
+        ];
+
+        $old = [];
+        $new = [];
+
+        foreach ($keys as $key) {
+            $old[$key] = Setting::get($key);
+            $new[$key] = trim((string) $request->input($key));
+            Setting::set($key, $new[$key] === '' ? null : $new[$key]);
+        }
+
+        $old['gateway_paypal_sandbox'] = Setting::get('gateway_paypal_sandbox');
+        $new['gateway_paypal_sandbox'] = $request->boolean('gateway_paypal_sandbox') ? '1' : '0';
+        Setting::set('gateway_paypal_sandbox', $new['gateway_paypal_sandbox']);
+
+        AuditService::log(
+            AuditService::ADMIN_SETTINGS_UPDATE,
+            auth()->id(),
+            null,
+            null,
+            $old,
+            $new,
+            'Updated platform payment gateways & fee settings',
+        );
+
+        return redirect()->to(route('admin.settings').'#gateways')->with('success', __('messages.settings_saved'));
+    }
+
+    /**
+     * Persist AI assistance configuration & API keys.
+     */
+    public function updateAiSettings(Request $request): RedirectResponse
+    {
+        if (! auth()->user()->isAdmin()) {
+            return redirect()->back()->with('error', __('messages.not_authorized'));
+        }
+
+        $request->validate([
+            'ai_enabled' => ['nullable', 'boolean'],
+            'ai_gemini_api_key' => ['nullable', 'string', 'max:255'],
+            'ai_openai_api_key' => ['nullable', 'string', 'max:255'],
+            'ai_default_model' => ['nullable', 'string', 'max:100'],
+        ]);
+
+        if (is_demo_mode()) {
+            return redirect()->route('admin.settings')->with('error', __('messages.demo_mode_settings_disabled'));
+        }
+
+        $old = [
+            'ai_enabled' => Setting::get('ai_enabled'),
+            'ai_gemini_api_key' => Setting::get('ai_gemini_api_key'),
+            'ai_openai_api_key' => Setting::get('ai_openai_api_key'),
+            'ai_default_model' => Setting::get('ai_default_model'),
+        ];
+
+        $new = [
+            'ai_enabled' => $request->boolean('ai_enabled') ? '1' : '0',
+            'ai_gemini_api_key' => trim((string) $request->input('ai_gemini_api_key')),
+            'ai_openai_api_key' => trim((string) $request->input('ai_openai_api_key')),
+            'ai_default_model' => trim((string) $request->input('ai_default_model', 'gemini-1.5-flash')),
+        ];
+
+        Setting::set('ai_enabled', $new['ai_enabled']);
+        Setting::set('ai_gemini_api_key', $new['ai_gemini_api_key'] === '' ? null : $new['ai_gemini_api_key']);
+        Setting::set('ai_openai_api_key', $new['ai_openai_api_key'] === '' ? null : $new['ai_openai_api_key']);
+        Setting::set('ai_default_model', $new['ai_default_model']);
+
+        AuditService::log(
+            AuditService::ADMIN_SETTINGS_UPDATE,
+            auth()->id(),
+            null,
+            null,
+            $old,
+            $new,
+            'Updated AI configuration and API keys',
+        );
+
+        return redirect()->to(route('admin.settings').'#ai')->with('success', __('messages.settings_saved'));
+    }
+
+    /**
+     * Persist platform CMS & landing page text controls.
+     */
+    public function updateCmsSettings(Request $request): RedirectResponse
+    {
+        if (! auth()->user()->isAdmin()) {
+            return redirect()->back()->with('error', __('messages.not_authorized'));
+        }
+
+        $request->validate([
+            'site_announcement_banner' => ['nullable', 'string', 'max:500'],
+            'site_hero_headline' => ['nullable', 'string', 'max:255'],
+            'site_hero_subheadline' => ['nullable', 'string', 'max:500'],
+            'support_contact_email' => ['nullable', 'email', 'max:255'],
+        ]);
+
+        if (is_demo_mode()) {
+            return redirect()->route('admin.settings')->with('error', __('messages.demo_mode_settings_disabled'));
+        }
+
+        $old = [
+            'site_announcement_banner' => Setting::get('site_announcement_banner'),
+            'site_hero_headline' => Setting::get('site_hero_headline'),
+            'site_hero_subheadline' => Setting::get('site_hero_subheadline'),
+            'support_contact_email' => Setting::get('support_contact_email'),
+        ];
+
+        $new = [
+            'site_announcement_banner' => trim((string) $request->input('site_announcement_banner')),
+            'site_hero_headline' => trim((string) $request->input('site_hero_headline')),
+            'site_hero_subheadline' => trim((string) $request->input('site_hero_subheadline')),
+            'support_contact_email' => trim((string) $request->input('support_contact_email')),
+        ];
+
+        Setting::set('site_announcement_banner', $new['site_announcement_banner'] === '' ? null : $new['site_announcement_banner']);
+        Setting::set('site_hero_headline', $new['site_hero_headline'] === '' ? null : $new['site_hero_headline']);
+        Setting::set('site_hero_subheadline', $new['site_hero_subheadline'] === '' ? null : $new['site_hero_subheadline']);
+        Setting::set('support_contact_email', $new['support_contact_email'] === '' ? null : $new['support_contact_email']);
+
+        AuditService::log(
+            AuditService::ADMIN_SETTINGS_UPDATE,
+            auth()->id(),
+            null,
+            null,
+            $old,
+            $new,
+            'Updated platform CMS & landing page settings',
+        );
+
+        return redirect()->to(route('admin.settings').'#cms')->with('success', __('messages.settings_saved'));
     }
 
     /**

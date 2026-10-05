@@ -66,6 +66,236 @@
             </form>
         </div>
 
+        {{-- Platform Payment Gateways & Fee Percentage --}}
+        <div id="gateways" class="ap-card rounded-xl p-6 scroll-mt-24">
+            <div class="mb-4">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Platform Payment Gateways & Credentials</h2>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Configure global API credentials for Stripe, Paystack, PayPal, and set your SaaS platform fee percentage.</p>
+            </div>
+
+            <form method="POST" action="{{ route('admin.settings.update_gateways') }}" class="{{ is_demo_mode() ? 'opacity-50 pointer-events-none' : '' }}">
+                @csrf
+
+                {{-- Platform Fee --}}
+                <div class="mb-6 p-4 rounded-lg bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/40">
+                    <x-input-label for="platform_fee_percent" value="SaaS Platform Fee (%)" />
+                    <x-text-input id="platform_fee_percent" name="platform_fee_percent" type="number" step="0.1" min="0" max="100"
+                        class="mt-1 block w-full max-w-xs"
+                        :value="old('platform_fee_percent', $platformFeePercent)"
+                        :disabled="is_demo_mode()" />
+                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Percentage deducted from host ticket sales for platform usage.</p>
+                    <x-input-error class="mt-2" :messages="$errors->get('platform_fee_percent')" />
+                </div>
+
+                {{-- Stripe --}}
+                <div class="mb-6 border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <h3 class="text-md font-medium text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Stripe Integration
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <x-input-label for="gateway_stripe_public_key" value="Stripe Public Key" />
+                            <x-text-input id="gateway_stripe_public_key" name="gateway_stripe_public_key" type="text"
+                                class="mt-1 block w-full font-mono text-sm" placeholder="pk_live_..."
+                                :value="old('gateway_stripe_public_key', $gatewayStripePublicKey)"
+                                :disabled="is_demo_mode()" />
+                            <x-input-error class="mt-2" :messages="$errors->get('gateway_stripe_public_key')" />
+                        </div>
+                        <div>
+                            <x-input-label for="gateway_stripe_secret_key" value="Stripe Secret Key" />
+                            <x-text-input id="gateway_stripe_secret_key" name="gateway_stripe_secret_key" type="password"
+                                class="mt-1 block w-full font-mono text-sm" placeholder="sk_live_..."
+                                :value="old('gateway_stripe_secret_key', $gatewayStripeSecretKey)"
+                                :disabled="is_demo_mode()" />
+                            <x-input-error class="mt-2" :messages="$errors->get('gateway_stripe_secret_key')" />
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <x-input-label for="gateway_stripe_webhook_secret" value="Stripe Webhook Secret" />
+                        <x-text-input id="gateway_stripe_webhook_secret" name="gateway_stripe_webhook_secret" type="password"
+                            class="mt-1 block w-full font-mono text-sm" placeholder="whsec_..."
+                            :value="old('gateway_stripe_webhook_secret', $gatewayStripeWebhookSecret)"
+                            :disabled="is_demo_mode()" />
+                        <x-input-error class="mt-2" :messages="$errors->get('gateway_stripe_webhook_secret')" />
+                    </div>
+                </div>
+
+                {{-- Paystack --}}
+                <div class="mb-6 border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <h3 class="text-md font-medium text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Paystack Integration
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <x-input-label for="gateway_paystack_public_key" value="Paystack Public Key" />
+                            <x-text-input id="gateway_paystack_public_key" name="gateway_paystack_public_key" type="text"
+                                class="mt-1 block w-full font-mono text-sm" placeholder="pk_live_..."
+                                :value="old('gateway_paystack_public_key', $gatewayPaystackPublicKey)"
+                                :disabled="is_demo_mode()" />
+                            <x-input-error class="mt-2" :messages="$errors->get('gateway_paystack_public_key')" />
+                        </div>
+                        <div>
+                            <x-input-label for="gateway_paystack_secret_key" value="Paystack Secret Key" />
+                            <x-text-input id="gateway_paystack_secret_key" name="gateway_paystack_secret_key" type="password"
+                                class="mt-1 block w-full font-mono text-sm" placeholder="sk_live_..."
+                                :value="old('gateway_paystack_secret_key', $gatewayPaystackSecretKey)"
+                                :disabled="is_demo_mode()" />
+                            <x-input-error class="mt-2" :messages="$errors->get('gateway_paystack_secret_key')" />
+                        </div>
+                    </div>
+                </div>
+
+                {{-- PayPal --}}
+                <div class="mb-6 border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <h3 class="text-md font-medium text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        PayPal Integration
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <x-input-label for="gateway_paypal_client_id" value="PayPal Client ID" />
+                            <x-text-input id="gateway_paypal_client_id" name="gateway_paypal_client_id" type="text"
+                                class="mt-1 block w-full font-mono text-sm"
+                                :value="old('gateway_paypal_client_id', $gatewayPaypalClientId)"
+                                :disabled="is_demo_mode()" />
+                            <x-input-error class="mt-2" :messages="$errors->get('gateway_paypal_client_id')" />
+                        </div>
+                        <div>
+                            <x-input-label for="gateway_paypal_secret_key" value="PayPal Secret Key" />
+                            <x-text-input id="gateway_paypal_secret_key" name="gateway_paypal_secret_key" type="password"
+                                class="mt-1 block w-full font-mono text-sm"
+                                :value="old('gateway_paypal_secret_key', $gatewayPaypalSecretKey)"
+                                :disabled="is_demo_mode()" />
+                            <x-input-error class="mt-2" :messages="$errors->get('gateway_paypal_secret_key')" />
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <x-toggle
+                            id="gateway_paypal_sandbox"
+                            name="gateway_paypal_sandbox"
+                            :checked="old('gateway_paypal_sandbox', $gatewayPaypalSandbox)"
+                            label="Enable PayPal Sandbox Mode"
+                            :disabled="is_demo_mode()" />
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <x-brand-button type="submit">@lang('messages.save')</x-brand-button>
+                </div>
+            </form>
+        </div>
+
+        {{-- AI Assistance Configuration & API Keys --}}
+        <div id="ai" class="ap-card rounded-xl p-6 scroll-mt-24">
+            <div class="mb-4">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100">AI Assistance Configuration</h2>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Configure AI providers (Google Gemini, OpenAI) and API keys for AI-assisted event creation, schedule suggestions, and platform content generation.</p>
+            </div>
+
+            <form method="POST" action="{{ route('admin.settings.update_ai') }}" class="{{ is_demo_mode() ? 'opacity-50 pointer-events-none' : '' }}">
+                @csrf
+
+                <div class="mb-6">
+                    <x-toggle
+                        id="ai_enabled"
+                        name="ai_enabled"
+                        :checked="old('ai_enabled', $aiEnabled)"
+                        label="Enable AI Features Platform-Wide"
+                        :disabled="is_demo_mode()" />
+                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Allows hosts and users to generate descriptions and schedule insights with AI.</p>
+                </div>
+
+                <div class="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <x-input-label for="ai_gemini_api_key" value="Google Gemini API Key" />
+                        <x-text-input id="ai_gemini_api_key" name="ai_gemini_api_key" type="password"
+                            class="mt-1 block w-full font-mono text-sm" placeholder="AIzaSy..."
+                            :value="old('ai_gemini_api_key', $aiGeminiApiKey)"
+                            :disabled="is_demo_mode()" />
+                        <x-input-error class="mt-2" :messages="$errors->get('ai_gemini_api_key')" />
+                    </div>
+                    <div>
+                        <x-input-label for="ai_openai_api_key" value="OpenAI API Key" />
+                        <x-text-input id="ai_openai_api_key" name="ai_openai_api_key" type="password"
+                            class="mt-1 block w-full font-mono text-sm" placeholder="sk-proj-..."
+                            :value="old('ai_openai_api_key', $aiOpenaiApiKey)"
+                            :disabled="is_demo_mode()" />
+                        <x-input-error class="mt-2" :messages="$errors->get('ai_openai_api_key')" />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <x-input-label for="ai_default_model" value="Default AI Model" />
+                    <select id="ai_default_model" name="ai_default_model" {{ is_demo_mode() ? 'disabled' : '' }}
+                        class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-[var(--brand-blue)] focus:ring-[var(--brand-blue)] rounded-lg shadow-sm">
+                        <option value="gemini-1.5-flash" {{ old('ai_default_model', $aiDefaultModel) === 'gemini-1.5-flash' ? 'selected' : '' }}>Google Gemini 1.5 Flash (Fast & Efficient)</option>
+                        <option value="gemini-1.5-pro" {{ old('ai_default_model', $aiDefaultModel) === 'gemini-1.5-pro' ? 'selected' : '' }}>Google Gemini 1.5 Pro (Advanced Reasoning)</option>
+                        <option value="gpt-4o-mini" {{ old('ai_default_model', $aiDefaultModel) === 'gpt-4o-mini' ? 'selected' : '' }}>OpenAI GPT-4o Mini</option>
+                        <option value="gpt-4o" {{ old('ai_default_model', $aiDefaultModel) === 'gpt-4o' ? 'selected' : '' }}>OpenAI GPT-4o</option>
+                    </select>
+                    <x-input-error class="mt-2" :messages="$errors->get('ai_default_model')" />
+                </div>
+
+                <div class="flex justify-end">
+                    <x-brand-button type="submit">@lang('messages.save')</x-brand-button>
+                </div>
+            </form>
+        </div>
+
+        {{-- Platform CMS & Landing Page Content Controls --}}
+        <div id="cms" class="ap-card rounded-xl p-6 scroll-mt-24">
+            <div class="mb-4">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Platform Content & Announcement Controls</h2>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Customize main landing page headlines, announcement banner, and platform support email.</p>
+            </div>
+
+            <form method="POST" action="{{ route('admin.settings.update_cms') }}" class="{{ is_demo_mode() ? 'opacity-50 pointer-events-none' : '' }}">
+                @csrf
+
+                <div class="mb-6">
+                    <x-input-label for="site_announcement_banner" value="Site Announcement Banner (HTML/Text)" />
+                    <textarea id="site_announcement_banner" name="site_announcement_banner" rows="2" {{ is_demo_mode() ? 'disabled' : '' }}
+                        class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-[var(--brand-blue)] focus:ring-[var(--brand-blue)] rounded-lg shadow-sm text-sm"
+                        placeholder="🔥 Getvnt v2 is live! Upgrade your event experience.">{{ old('site_announcement_banner', $siteAnnouncementBanner) }}</textarea>
+                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Displayed at the top of the main landing page. Leave blank to disable banner.</p>
+                    <x-input-error class="mt-2" :messages="$errors->get('site_announcement_banner')" />
+                </div>
+
+                <div class="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <x-input-label for="site_hero_headline" value="Hero Headline" />
+                        <x-text-input id="site_hero_headline" name="site_hero_headline" type="text"
+                            class="mt-1 block w-full" placeholder="Everything you need to host events"
+                            :value="old('site_hero_headline', $siteHeroHeadline)"
+                            :disabled="is_demo_mode()" />
+                        <x-input-error class="mt-2" :messages="$errors->get('site_hero_headline')" />
+                    </div>
+                    <div>
+                        <x-input-label for="support_contact_email" value="Platform Support Contact Email" />
+                        <x-text-input id="support_contact_email" name="support_contact_email" type="email"
+                            class="mt-1 block w-full" placeholder="support@getvnt.com"
+                            :value="old('support_contact_email', $supportContactEmail)"
+                            :disabled="is_demo_mode()" />
+                        <x-input-error class="mt-2" :messages="$errors->get('support_contact_email')" />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <x-input-label for="site_hero_subheadline" value="Hero Subheadline" />
+                    <textarea id="site_hero_subheadline" name="site_hero_subheadline" rows="3" {{ is_demo_mode() ? 'disabled' : '' }}
+                        class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-[var(--brand-blue)] focus:ring-[var(--brand-blue)] rounded-lg shadow-sm text-sm"
+                        placeholder="Create your custom calendar, sell tickets with 0% platform fees, and build your audience.">{{ old('site_hero_subheadline', $siteHeroSubheadline) }}</textarea>
+                    <x-input-error class="mt-2" :messages="$errors->get('site_hero_subheadline')" />
+                </div>
+
+                <div class="flex justify-end">
+                    <x-brand-button type="submit">@lang('messages.save')</x-brand-button>
+                </div>
+            </form>
+        </div>
+
         @if ($federationAvailable)
         {{-- Anchor target for the dashboard adoption prompt's "Open settings" link. --}}
         <div id="federation" class="ap-card rounded-xl p-6 scroll-mt-24">

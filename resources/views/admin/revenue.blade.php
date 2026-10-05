@@ -314,6 +314,61 @@
         </div>
         @endif
 
+        {{-- Host Payout Requests & Settlement Management --}}
+        <div id="host-payouts" class="ap-card rounded-xl shadow p-6 border-l-4 border-indigo-500">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-white">Host Payout Requests & Settlements</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Review host earnings, process payout disbursements, and track platform settlements.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
+                        Direct Payouts Active
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                    <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Pending Payouts</p>
+                    <p class="mt-1 text-xl font-bold text-amber-600 dark:text-amber-400">{{ \App\Utils\PlatformCurrency::symbol() }}0.00</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">0 requests pending review</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                    <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Completed Payouts</p>
+                    <p class="mt-1 text-xl font-bold text-green-600 dark:text-green-400">{{ \App\Utils\PlatformCurrency::symbol() }}0.00</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">All payouts settled</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                    <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Platform Retained Fees</p>
+                    <p class="mt-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">{{ \App\Utils\PlatformCurrency::symbol() }}0.00</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Based on fee rate settings</p>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Date</th>
+                            <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Host / Schedule</th>
+                            <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Payout Method</th>
+                            <th class="px-4 py-3 text-end text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Requested Amount</th>
+                            <th class="px-4 py-3 text-start text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
+                            <th class="px-4 py-3 text-end text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                        <tr>
+                            <td colspan="6" class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                No pending host payout requests at this time.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         {{-- Recent Sales Table --}}
         <div class="ap-card rounded-xl shadow p-6">
             <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">@lang('messages.recent_sales')</h3>
