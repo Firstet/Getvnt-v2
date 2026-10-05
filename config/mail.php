@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'log'),
+    'default' => env('MAIL_MAILER') ?: 'smtp',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,13 +40,13 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', '127.0.0.1'),
-            'port' => env('MAIL_PORT', 2525),
+            'host' => env('MAIL_HOST', 'mail.getvnt.com'),
+            'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => (env('MAIL_USERNAME') && env('MAIL_USERNAME') !== 'hello@getvnt.com.com') ? env('MAIL_USERNAME') : 'noreply@getvnt.com',
+            'password' => env('MAIL_PASSWORD', 'Chimapaul2019@@'),
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+            'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'https://getvnt.com'), PHP_URL_HOST)),
             'stream' => [
                 'ssl' => [
                     'allow_self_signed' => (bool) env('MAIL_ALLOW_SELF_SIGNED', true),
@@ -116,8 +116,10 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => (env('MAIL_FROM_ADDRESS') && ! in_array(env('MAIL_FROM_ADDRESS'), ['noreply@getvnt.com.com', 'hello@getvnt.com.com'], true))
+            ? env('MAIL_FROM_ADDRESS')
+            : 'noreply@getvnt.com',
+        'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Getvnt')),
     ],
 
 ];
