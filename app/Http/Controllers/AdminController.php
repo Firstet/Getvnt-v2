@@ -4416,4 +4416,73 @@ class AdminController extends Controller
             ->with($available === null ? 'error' : 'success',
                 $available === null ? __('messages.version_check_failed') : __('messages.version_checked'));
     }
+
+    /**
+     * Impersonate a tenant organization / schedule owner.
+     */
+    public function impersonateTenant(Request $request, $roleId): RedirectResponse
+    {
+        if (! auth()->user()->isAdmin()) {
+            return redirect()->back()->with('error', __('messages.not_authorized'));
+        }
+
+        $decodedId = UrlUtils::decodeId($roleId);
+        $role = Role::with('users')->findOrFail($decodedId);
+
+        // Find primary owner
+        $tenantUser = $role->user ?: $role->users()->first();
+
+        if (! $tenantUser) {
+            return redirect()->back()->with('error', 'This tenant schedule does not have an associated owner user account.');
+        }
+
+        $originalAdminId = auth()->id();
+
+        // Session variables to preserve original admin state
+        session([
+            'impersonator_user_id' => $originalAdminId,
+            'impersonated_role_id' => $role->id,
+            'impersonated_role_subdomain' => $role->subdomain,
+        ]);
+
+        Auth::login($tenantUser);
+
+        AuditService::log(
+            AuditService::ADMIN_PASSWORD_CONFIRMED,
+            $originalAdminId,
+            'App\\Models\\Role',
+            $role->id,
+            null,
+            ['subdomain' => $role->subdomain, 'user_id' => $tenantUser->id],
+            "Super Admin impersonated tenant owner for '{$role->name}' ({$role->subdomain})"
+        );
+
+        return redirect()->route('role.view_admin', ['subdomain' => $role->subdomain])
+            ->with('message', "SaaS Owner Mode: Now managing tenant '{$role->name}' ({$role->subdomain}).");
+    }
+
+    /**
+     * Exit tenant impersonation and return to SaaS Super Admin dashboard.
+     */
+    public function stopImpersonating(Request $request): RedirectResponse
+    {
+        if (! session()->has('impersonator_user_id')) {
+            return redirect()->route('home');
+        }
+
+        $adminId = session('impersonator_user_id');
+        $impersonatedSubdomain = session('impersonated_role_subdomain');
+
+        session()->forget(['impersonator_user_id', 'impersonated_role_id', 'impersonated_role_subdomain']);
+
+        $adminUser = User::find($adminId);
+        if ($adminUser && $adminUser->isAdmin()) {
+            Auth::login($adminUser);
+            return redirect()->route('admin.schedules')
+                ->with('success', "Exited impersonation of {$impersonatedSubdomain}. Welcome back to SaaS Owner Console.");
+        }
+
+        Auth::logout();
+        return redirect()->route('login');
+    }
 }

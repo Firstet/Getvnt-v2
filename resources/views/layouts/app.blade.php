@@ -766,6 +766,7 @@
 
 </head> 
 <body class="font-sans antialiased h-full bg-gray-50 dark:bg-gray-900 overflow-x-clip">
+    <x-impersonation-banner />
 
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-[var(--brand-button-bg)] focus:px-4 focus:py-3 focus:text-base focus:text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-blue)] ltr:focus:left-4 rtl:focus:right-4">
         {{ __('accessibility.skip_to_main') }}

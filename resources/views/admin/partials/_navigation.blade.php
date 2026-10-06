@@ -124,7 +124,7 @@
                              API delete) is registered on selfhost too. Domains and Referrals stay
                              hosted - both are platform-only machinery. --}}
                         <a href="{{ route('admin.schedules') }}" class="{{ $active === 'schedules' ? $dropdownItemActive : $dropdownItem }}">
-                            @lang('messages.schedules')
+                            Tenants &amp; Organizations
                         </a>
                         @if (config('app.hosted'))
                         <a href="{{ route('admin.domains') }}" class="{{ $active === 'domains' ? $dropdownItemActive : $dropdownItem }}">

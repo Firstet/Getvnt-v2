@@ -33,6 +33,26 @@
             </div>
         @endif
 
+        {{-- Impersonate & Multi-Tenant Control Card --}}
+        @if(!$role->is_deleted && $role->user_id)
+        <div class="ap-card rounded-xl p-5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white border border-indigo-500/30 flex flex-wrap items-center justify-between gap-4">
+            <div>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">SaaS Owner Control</span>
+                <h3 class="text-lg font-bold text-white mt-1">Tenant Organization Console</h3>
+                <p class="text-xs text-gray-300 mt-0.5">Impersonate this tenant's admin dashboard as Super Admin to manage schedules, events, or troubleshoot.</p>
+            </div>
+            <form method="POST" action="{{ route('admin.tenants.impersonate', ['role' => $role->encodeId()]) }}">
+                @csrf
+                <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                    Switch to Tenant Dashboard
+                </button>
+            </form>
+        </div>
+        @endif
+
         {{-- The subscription box and the plan form are hosted only. On a plain selfhost every
              schedule is enterprise whatever plan_type says (Role::actualPlanTier()), so the form
              saved values nothing read, and updateSchedule() 404s there. --}}

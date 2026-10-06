@@ -1071,6 +1071,9 @@ Route::middleware(['auth', 'verified', 'app_subdomain'])->group(function () {
         // the controller owning the authorization. AdminController::schedules() counts Stripe
         // subscriptions and granted plans, which simply read zero off-platform.
         Route::get('/admin/schedules', [AdminController::class, 'schedules'])->name('admin.schedules');
+        Route::get('/admin/tenants', [AdminController::class, 'schedules'])->name('admin.tenants');
+        Route::post('/admin/tenants/{role}/impersonate', [AdminController::class, 'impersonateTenant'])->name('admin.tenants.impersonate');
+        Route::post('/admin/impersonate/stop', [AdminController::class, 'stopImpersonating'])->name('admin.impersonate.stop');
         Route::get('/admin/schedules/{role}/edit', [AdminController::class, 'editSchedule'])->name('admin.schedules.edit');
         Route::put('/admin/schedules/{role}', [AdminController::class, 'updateSchedule'])->name('admin.schedules.update');
         Route::post('/admin/schedules/{role}/verify-email', [AdminController::class, 'verifyScheduleEmail'])->name('admin.schedules.verify_email');

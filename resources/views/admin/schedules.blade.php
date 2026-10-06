@@ -3,6 +3,24 @@
     <div class="space-y-4">
         @include('admin.partials._navigation', ['active' => 'schedules'])
 
+        {{-- SaaS Multi-Tenant Owner Console Banner --}}
+        <div class="ap-card rounded-xl p-6 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white border border-indigo-500/30">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">
+                            SaaS Platform Control
+                        </span>
+                        <span class="text-xs text-gray-400">&bull; Multi-Tenant Engine</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white">Multi-Tenant Management Console</h2>
+                    <p class="mt-1 text-sm text-gray-300 max-w-2xl">
+                        Manage all tenant organizations, active host subdomains, subscription tier limits, and impersonate tenant dashboards directly as the SaaS Super Admin.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         {{-- Plans, their status and their source exist only on a hosted install. A plain selfhost
              has none (actualPlanTier() is enterprise for every schedule), so it gets the
              verification split and the columns that apply to it. --}}
@@ -387,6 +405,17 @@
                                          widest on the page, and the full set (with the copy that
                                          explains what a release does) lives on the edit page. --}}
                                     <div class="flex items-center justify-end gap-3">
+                                        @if(!$role->is_deleted && $role->user_id)
+                                            <form method="POST" action="{{ route('admin.tenants.impersonate', ['role' => $role->encodeId()]) }}" class="inline">
+                                                @csrf
+                                                <button type="submit" class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors" title="Impersonate Tenant Admin Dashboard">
+                                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                                                    </svg>
+                                                    Impersonate
+                                                </button>
+                                            </form>
+                                        @endif
                                         <a href="{{ route('admin.schedules.edit', ['role' => $role->encodeId()]) }}" class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-300">
                                             @lang('messages.edit')
                                         </a>
