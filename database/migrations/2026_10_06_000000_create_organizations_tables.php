@@ -45,6 +45,12 @@ return new class extends Migration
         }
 
         if (! Schema::hasColumn('roles', 'organization_id')) {
+            try {
+                \Illuminate\Support\Facades\DB::statement('ALTER TABLE roles MODIFY subdomain_before_delete TEXT NULL, MODIFY notification_email TEXT NULL, MODIFY microsoft_webhook_id TEXT NULL, MODIFY stay22_aid TEXT NULL, MODIFY list_animation TEXT NULL, MODIFY sponsor_background_color TEXT NULL;');
+            } catch (\Throwable $e) {
+                // Ignore if DB driver does not support or if columns differ
+            }
+
             Schema::table('roles', function (Blueprint $table) {
                 $table->foreignId('organization_id')->nullable()->after('id')
                     ->constrained('organizations')->nullOnDelete();
