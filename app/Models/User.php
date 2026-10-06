@@ -938,6 +938,12 @@ class User extends Authenticatable implements MustVerifyEmail
         return (bool) $this->is_admin;
     }
 
+    /** The organizations this user belongs to, with their level in each on the pivot. */
+    public function organizations()
+    {
+        return $this->belongsToMany(Organization::class)->withPivot('level')->withTimestamps();
+    }
+
     public function hasVerifiedPhone(): bool
     {
         return ! is_null($this->phone_verified_at);

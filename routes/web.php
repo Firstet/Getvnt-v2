@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminFederationController;
 use App\Http\Controllers\AdminLegalController;
 use App\Http\Controllers\AdminNewsletterController;
+use App\Http\Controllers\AdminOrganizationController;
 use App\Http\Controllers\AdminRealtimeController;
 use App\Http\Controllers\AdminTranslationController;
 use App\Http\Controllers\AnalyticsController;
@@ -41,6 +42,7 @@ use App\Http\Controllers\MicrosoftCalendarWebhookController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\NewsletterTrackingController;
 use App\Http\Controllers\NotificationEmailController;
+use App\Http\Controllers\OrganizationConsoleController;
 use App\Http\Controllers\PaymentGatewayController;
 use App\Http\Controllers\PaymentWebhookController;
 use App\Http\Controllers\ProfileController;
@@ -975,6 +977,24 @@ Route::middleware(['auth', 'verified', 'app_subdomain'])->group(function () {
         });
     }
 
+    // Organization console: the tenant layer above schedules. `org` puts the request inside one
+    // organization (OrganizationScope then narrows every organization-owned model), `org.admin`
+    // limits the mutating routes to that organization's owner and admins. Registered here, ahead
+    // of the selfhost /{subdomain}/... catch-alls, and 'organization' is a reserved schedule name.
+    Route::post('/organization/switch/{organization}', [OrganizationConsoleController::class, 'switch'])
+        ->name('organization.switch')
+        ->middleware('throttle:30,1');
+    Route::middleware(['org', 'throttle:60,1'])->group(function () {
+        Route::get('/organization', [OrganizationConsoleController::class, 'show'])->name('organization.console');
+
+        Route::middleware('org.admin')->group(function () {
+            Route::put('/organization', [OrganizationConsoleController::class, 'update'])->name('organization.update');
+            Route::post('/organization/members', [OrganizationConsoleController::class, 'addMember'])->name('organization.members.add');
+            Route::put('/organization/members/{user}', [OrganizationConsoleController::class, 'updateMember'])->name('organization.members.update');
+            Route::delete('/organization/members/{user}', [OrganizationConsoleController::class, 'removeMember'])->name('organization.members.remove');
+        });
+    });
+
     // Admin password confirmation (outside admin middleware - the admin middleware redirects here)
     Route::get('/admin/confirm-password', [AdminController::class, 'showConfirmPassword'])
         ->name('admin.password.confirm.show');
@@ -1074,6 +1094,17 @@ Route::middleware(['auth', 'verified', 'app_subdomain'])->group(function () {
         Route::get('/admin/tenants', [AdminController::class, 'schedules'])->name('admin.tenants');
         Route::post('/admin/tenants/{role}/impersonate', [AdminController::class, 'impersonateTenant'])->name('admin.tenants.impersonate');
         Route::post('/admin/impersonate/stop', [AdminController::class, 'stopImpersonating'])->name('admin.impersonate.stop');
+
+        // Organizations: the platform owner's control over every tenant organization. Named
+        // admin.organizations* because admin.tenants* above already means "a schedule".
+        Route::get('/admin/organizations', [AdminOrganizationController::class, 'index'])->name('admin.organizations');
+        Route::post('/admin/organizations', [AdminOrganizationController::class, 'store'])->name('admin.organizations.store');
+        Route::get('/admin/organizations/{organization}', [AdminOrganizationController::class, 'show'])->name('admin.organizations.show');
+        Route::put('/admin/organizations/{organization}', [AdminOrganizationController::class, 'update'])->name('admin.organizations.update');
+        Route::post('/admin/organizations/{organization}/suspend', [AdminOrganizationController::class, 'suspend'])->name('admin.organizations.suspend');
+        Route::post('/admin/organizations/{organization}/resume', [AdminOrganizationController::class, 'resume'])->name('admin.organizations.resume');
+        Route::post('/admin/organizations/{organization}/assign-schedule', [AdminOrganizationController::class, 'assignSchedule'])->name('admin.organizations.assign_schedule');
+        Route::post('/admin/organizations/{organization}/switch', [AdminOrganizationController::class, 'switch'])->name('admin.organizations.switch');
         Route::get('/admin/schedules/{role}/edit', [AdminController::class, 'editSchedule'])->name('admin.schedules.edit');
         Route::put('/admin/schedules/{role}', [AdminController::class, 'updateSchedule'])->name('admin.schedules.update');
         Route::post('/admin/schedules/{role}/verify-email', [AdminController::class, 'verifyScheduleEmail'])->name('admin.schedules.verify_email');

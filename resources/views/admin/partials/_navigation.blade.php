@@ -6,7 +6,7 @@
     // Schedules is on every install (it is the only way back from a takedown), so it lights the
     // Manage tab everywhere; domains and referrals are hosted-only, and blog is the marketing
     // site's, so nexus-only.
-    $manageKeys = ['boost', 'schedules', 'newsletters'];
+    $manageKeys = ['boost', 'schedules', 'organizations', 'newsletters'];
     if (config('app.hosted')) {
         $manageKeys = array_merge($manageKeys, ['domains', 'referrals']);
     }
@@ -123,6 +123,9 @@
                              takedown, and the takedown itself (role.claim.not_me.submit, and the
                              API delete) is registered on selfhost too. Domains and Referrals stay
                              hosted - both are platform-only machinery. --}}
+                        <a href="{{ route('admin.organizations') }}" class="{{ $active === 'organizations' ? $dropdownItemActive : $dropdownItem }}">
+                            @lang('messages.organizations')
+                        </a>
                         <a href="{{ route('admin.schedules') }}" class="{{ $active === 'schedules' ? $dropdownItemActive : $dropdownItem }}">
                             Tenants &amp; Organizations
                         </a>

@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Http\Controllers\MarketingController;
 use App\Jobs\GenerateRoleImageVariants;
 use App\Notifications\VerifyEmail as CustomVerifyEmail;
+use App\Traits\BelongsToOrganization;
 use App\Traits\HasImageVariants;
 use App\Traits\RoleBillable;
 use App\Utils\CssUtils;
@@ -25,7 +26,7 @@ use Illuminate\Support\Str;
 
 class Role extends Model implements MustVerifyEmail
 {
-    use HasImageVariants, MustVerifyEmailTrait, Notifiable, RoleBillable;
+    use BelongsToOrganization, HasImageVariants, MustVerifyEmailTrait, Notifiable, RoleBillable;
 
     protected $fillable = [
         'type',
@@ -398,6 +399,8 @@ class Role extends Model implements MustVerifyEmail
         'appointments',
         'checkout',
         'payments',
+        'organization',
+        'organizations',
         'settings',
         'promo',
         'promotions',

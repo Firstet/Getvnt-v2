@@ -6,6 +6,7 @@ use App\Http\Middleware\CaptureUtmParameters;
 use App\Http\Middleware\DemoAutoLogin;
 use App\Http\Middleware\DetectTrailingSlash;
 use App\Http\Middleware\EnsureEmailIsVerified;
+use App\Http\Middleware\EnsureOrganizationAdmin;
 use App\Http\Middleware\EnsureSelfhostSetup;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use App\Http\Middleware\HandleBotTraffic;
@@ -13,6 +14,7 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\ResolveCustomDomain;
 use App\Http\Middleware\SanitizeUserAgent;
 use App\Http\Middleware\SecurityHeaders;
+use App\Http\Middleware\SetOrganizationContext;
 use App\Http\Middleware\SetUserLanguage;
 use App\Http\Middleware\TrackMarketingVisit;
 use App\Models\Role;
@@ -127,6 +129,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'guest' => RedirectIfAuthenticated::class,
             'admin' => EnsureUserIsAdmin::class,
+            'org' => SetOrganizationContext::class,
+            'org.admin' => EnsureOrganizationAdmin::class,
             'throttle' => \App\Http\Middleware\ThrottleRequests::class,
             'app_subdomain' => \App\Http\Middleware\RedirectToAppSubdomain::class,
         ]);

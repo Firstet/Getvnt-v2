@@ -163,6 +163,22 @@ class AuditService
 
     const ADMIN_QUEUE_ACTION = 'admin.queue_action';
 
+    const ORGANIZATION_CREATE = 'organization.create';
+
+    const ORGANIZATION_UPDATE = 'organization.update';
+
+    const ORGANIZATION_SUSPEND = 'organization.suspend';
+
+    const ORGANIZATION_RESUME = 'organization.resume';
+
+    const ORGANIZATION_ASSIGN_SCHEDULE = 'organization.assign_schedule';
+
+    const ORGANIZATION_MEMBER_ADD = 'organization.member_add';
+
+    const ORGANIZATION_MEMBER_UPDATE = 'organization.member_update';
+
+    const ORGANIZATION_MEMBER_REMOVE = 'organization.member_remove';
+
     const ADMIN_PASSWORD_CONFIRMED = 'admin.password_confirmed';
 
     const ADMIN_PASSWORD_FAILED = 'admin.password_failed';
